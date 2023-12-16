@@ -1,0 +1,35 @@
+services:
+  redis:
+    build: ./redis
+    restart: always
+    hostname: miner-redis
+    container_name: miner-redis
+    ports:
+      - '6379:6379'
+
+  rabbitmq:
+    build: ./rabbitmq
+    restart: always
+    container_name: miner-rabbitmq
+    hostname: miner-rabbitmq
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+
+  miner:
+    build: ./miner
+    restart: always
+    container_name: minerservice
+    depends_on:
+      - redis
+      - rabbitmq
+    ports:
+      - '80:80'
+      - '27017:27017'
+      - '2222:2222'
+      - '6666:6666'
+    privileged: true
+    volumes:
+      - '/dev/bus/usb:/dev/bus/usb'
+      - '${HOME}/.miner/mongogo:/data/db'
+      - '${PWD}/../:/minerdev'
