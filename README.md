@@ -37,3 +37,5 @@ open http://localhost/docs, you'll see.
 ## TODO
 
 - [ ] add russell index tickers bootstrap, getting history tickers record
+- [ ] make mongodb run in seperated container
+- [ ] config proxy from environment variable or command line

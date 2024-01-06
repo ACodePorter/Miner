@@ -1,11 +1,11 @@
-from minerworkers import app
-
 from detonator import get_logger
+from minerworkers import app
 
 from . import MarketDataShovel
 from ._ishares_shovel import IsharesShovel
 
 _logger = get_logger('DataMiner.Tasks')
+
 
 @app.task
 def update_russell1000_tickers_task() -> bool:
