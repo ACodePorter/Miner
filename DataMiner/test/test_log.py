@@ -1,6 +1,6 @@
 import unittest
 
-from russell1000miner.utils import get_logger
+from detonator import get_logger
 
 
 class LogTestCase(unittest.TestCase):

@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from russell1000miner.utils import Config
+from detonator import Config
 
 _CONFIG_JSON_STR = '''{
 "a":"A",

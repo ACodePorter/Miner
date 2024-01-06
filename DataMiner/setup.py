@@ -1,4 +1,5 @@
 import os
+import ast
 
 from setuptools import find_packages, setup
 
@@ -8,12 +9,13 @@ def read_file(file: str):
         return f.read()
 
 
-exec(read_file(os.path.join(os.path.dirname(__file__), 'minerworkers', '_version.py')))
+exec(read_file(os.path.join(os.path.dirname(
+    __file__), 'dataminer', '_version.py')))
 
 setup(
-    name='minerworkers',
+    name='dataminer',
     version=version,
-    description='Russell 1000 Miner',
+    description='US Stock Data Miner',
     # author='',
     # author_email='',
     license='Apache License v2',

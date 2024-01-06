@@ -17,7 +17,8 @@ else
 fi
 
 pip install $mydir/Detonator
-pip install $mydir/Russell1000-Miner
+pip install $mydir/DataMiner
+pip install $mydir/MarketBreadth
 pip install $mydir/MinerWorkers
 pip install $mydir/MinerService
 

@@ -1,5 +1,4 @@
 import os
-import ast
 
 from setuptools import find_packages, setup
 
@@ -9,13 +8,12 @@ def read_file(file: str):
         return f.read()
 
 
-exec(read_file(os.path.join(os.path.dirname(
-    __file__), 'russell1000miner', '_version.py')))
+exec(read_file(os.path.join(os.path.dirname(__file__), 'marketbreadth', '_version.py')))
 
 setup(
-    name='russell1000miner',
+    name='marketbreadth',
     version=version,
-    description='Russell 1000 Miner',
+    description='Market Breadth',
     # author='',
     # author_email='',
     license='Apache License v2',
@@ -26,4 +24,7 @@ setup(
     test_suite='test'
     # include_package_data=True,
     # package_data={}
+    # entry_pointes={
+    #    'console_scripts':['xxx = pack.module:func']
+    # }
 )

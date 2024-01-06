@@ -10,9 +10,9 @@ app.config_from_object('minerworkers.celeryconfig')
 app.autodiscover_tasks(['minerworkers'], force=True)
 
 
-@app.task
-def test_task_a():
-    _logger.error('This is test task a')
+# @app.task
+# def test_task_a():
+#     _logger.error('This is test task a')
 
 
 __all__ = [

@@ -1,5 +1,6 @@
 import contextlib
 import logging
+from functools import wraps
 from logging.handlers import RotatingFileHandler
 
 from rich.console import Console
@@ -48,3 +49,21 @@ class _Manager:
 
 def get_logger(name: str, level=logging.DEBUG, storage_path=None) -> logging.Logger:
     return _Manager.get_logger(name, level, storage_path)
+
+
+def log_in_out(logger: logging.Logger):
+    """
+    Decorator to log input and output of function to specified logger
+    """
+
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            if logger: logger.debug(f'{func.__name__}: {args} {kwargs}')
+            result = func(*args, **kwargs)
+            if logger: logger.debug(f'{func.__name__}-> {result}')
+            return result
+
+        return wrapper
+
+    return decorator

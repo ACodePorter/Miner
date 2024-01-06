@@ -39,7 +39,7 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
 COPY --chown=miner:miner release/ /miner_release/
-RUN chmod a+x /miner_release/docker_entry.sh
+RUN chmod a+x /miner_release/*.sh
 # RUN chmod a+x /miner_release/run_service_as_prod_uds.sh
 
 
@@ -65,21 +65,26 @@ RUN bash $HOME/bin/Miniconda3.sh -b -p $CONDA_INS_DIR && \
         rm -rfv $HOME/bin/Miniconda3*
 
 RUN pip install /miner_release/Detonator
-RUN pip install /miner_release/Russell1000-Miner
+RUN pip install /miner_release/DataMiner
+RUN pip install /miner_release/MarketBreadth
 RUN pip install /miner_release/MinerWorkers
 RUN pip install /miner_release/MinerService
 
 RUN mkdir -p $HOME/.miner
 COPY --chown=miner:miner miner.json $HOME/.miner/miner.json
+RUN touch $HOME/.miner/miner.log
 
 RUN mkdir $HOME/.ssh && \
-        ssh-keyscan -H github.com >> $HOME/.ssh/known_hosts
+        ssh-keyscan -H github.com >> $HOME/.ssh/known_hosts \
+        ssh-keyscan -H 54.153.40.36 >> $HOME/.ssh/known_hosts
 #         ssh-keyscan -H  -p 29418 github.com >> $HOME/.ssh/known_hosts
 
 RUN ssh-keygen -q -t rsa -N '' -f $HOME/.ssh/id_rsa <<<y >/dev/null 2>&1 && \
         echo "ssh key generated" && \
         cat $HOME/.ssh/id_rsa.pub && \
         echo "##############################################"
+
+COPY --chown=miner:miner .ssh/config $HOME/.ssh/
 
 # Install jdk
 # RUN tar xvf $HOME/bin/jdk-17.0.9_linux-x64_bin.tar.gz -C $HOME/bin
