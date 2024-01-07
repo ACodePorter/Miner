@@ -14,9 +14,10 @@ celery --broker=amqp://miner:12qw@rabbitmq:5672 --result-backend=redis://miner:1
 # celery -A miner.app worker --loglevel DEBUG --detach --logfile ~/.miner.log
 celery --app=dataminer worker --loglevel DEBUG --detach --logfile ~/.miner.log
 
-tail -f ~/.miner.log &
-
 $MY_DIR/run_service_as_prod_uds.sh 2>&1 &
+
+sleep 3
+tail -f ~/.miner.log &
 
 catch_kill() {
   echo "Caught SIGKILL signal!"

@@ -2,15 +2,16 @@ import os
 import time
 from functools import reduce
 from random import random
+from typing import List
 
 import pandas as pd
 import requests
-from detonator import SingletonParent, get_logger, md5_iterable, make_db_connection
+from detonator import SingletonParent, get_logger, md5_iterable, make_db_connection, df_2_mongo, add_minus_to_YYYYmmdd
 from pandas import DataFrame
-from yfinance import Ticker as YTicker
+from yfinance import Ticker as YTicker, ticker
 
 from ._trade_cal import TradeCalendarShovel
-from .models import IndexTickers, Ticker
+from .models import IndexTickers, Ticker, TickerDailyInfo, regulate_ticker_daily_info
 
 _logger = get_logger('MarketDataShovel')
 _tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()
@@ -163,4 +164,86 @@ class MarketDataShovel(SingletonParent):
                 return False
         except Exception as e:
             _logger.error('Failed to update spx tickers info', exc_info=e)
+            return False
+
+    def update_ticker_daily_info(self, ticker: str | YTicker) -> bool:
+        if isinstance(ticker, str):
+            ticker = ticker.upper()
+            yticker: YTicker = YTicker(ticker.replace('.', '-'))
+        elif isinstance(ticker, Ticker):
+            yticker = ticker
+            ticker = yticker.ticker.replace('-', '.')
+        else:
+            _logger.error(f'Illegal argument for update_ticker_daily_info: {ticker}')
+            return False
+        tdi = TickerDailyInfo.objects(ticker__iexact=ticker).order_by('-trade_date').first()
+        if trade_dates := _tcs.us_trade_dates_since(tdi.trade_date.strftime('%Y%m%d') if tdi else '00000000'):
+            earliest_gap_trade_date = trade_dates[-1]
+            _logger.info(f'Update ticker daily info for {ticker}')
+            return self.fetch_ticker_daily_info_to_db(yticker=yticker, start_date=earliest_gap_trade_date)
+        else:
+            _logger.info(f'No update ticker daily info for {ticker} since {tdi.trade_date}')
+        return True
+
+    def fetch_ticker_daily_info_to_db(self, yticker: YTicker, start_date: str = None, end_date: str = None,
+                                      interval='1d',
+                                      period='max') -> bool:
+        try:
+            start_date = add_minus_to_YYYYmmdd(start_date) if start_date else start_date
+            end_date = add_minus_to_YYYYmmdd(end_date) if end_date else end_date
+            his: DataFrame = yticker.history(start=start_date, end=end_date, interval=interval, period=period)
+            if his.empty:
+                _logger.error(f'Failed to get history for {yticker} from yahoo')
+                return False
+            his.rename(columns={'Open': 'open', 'High': 'high', 'Low': 'low', 'Close': 'close', 'Volume': 'volume',
+                                'Dividends': 'dividends',
+                                'Stock Splits': 'stock_splits'}, inplace=True)
+            his['trade_date'] = his.index.strftime('%Y,%m,%d,%H,%M,%S,%f')
+            his['ticker'] = yticker.ticker.replace('-', '.')
+            his['interval'] = interval
+            make_db_connection()
+            df_2_mongo(his, TickerDailyInfo)
+            info = yticker.info
+            regulated_info = regulate_ticker_daily_info(info)
+            tdi: TickerDailyInfo = TickerDailyInfo.objects.order_by('-trade_date').first()
+            tdi.update(**regulated_info)
+            tdi.save()
+            return True
+        except Exception as e:
+            _logger.error(f'Failed _update_ticker_daily_info for {ticker}', exc_info=e)
+            return False
+
+    def update_spx_tickers_daily_info(self):
+        try:
+            make_db_connection()
+            if tickers := self.get_latest_index_tickers(index_name='spx'):
+                results = {}
+                for ticker in tickers.tickers:
+                    results[ticker] = self.update_ticker_daily_info(ticker)
+                    _logger.info('sleeping ......')
+                    time.sleep(random() * 30)
+                _logger.info(f'update_spx_tickers_daily_info results:{results}')
+                return all(results.values())
+            else:
+                return False
+        except Exception as e:
+            _logger.error('Failed to update spx tickers info', exc_info=e)
+            return False
+
+    def update_tickers_daily_info(self, tickers: List[str]) -> bool:
+        try:
+            make_db_connection()
+            if tickers:
+                results = {}
+                for ticker in tickers:
+                    results[ticker] = self.update_ticker_daily_info(ticker)
+                    _logger.info('sleeping ......')
+                    time.sleep(random() * 30)
+                _logger.info(f'update_spx_tickers_daily_info results:{results}')
+                return all(results.values())
+            else:
+                _logger.error(f'Illegal argument{tickers}')
+                return False
+        except Exception as e:
+            _logger.error(f'Failed to update_tickers_daily_info for {tickers}', exc_info=e)
             return False

@@ -40,7 +40,7 @@ mkdir -p $MINER_DATA
 cd $MY_DIR
 
 mkdir -p $MY_DIR/miner/bin/
-wget -c https://repo.anaconda.com/miniconda/Miniconda3-py311_23.10.0-1-Linux-x86_64.sh -O $MY_DIR/miner/bin/Miniconda3.sh
+wget -d -c https://repo.anaconda.com/miniconda/Miniconda3-py311_23.10.0-1-Linux-x86_64.sh -O $MY_DIR/miner/bin/Miniconda3.sh
 
 RELEASE_DIR=$MY_DIR/miner/release
 rm -rf $RELEASE_DIR
