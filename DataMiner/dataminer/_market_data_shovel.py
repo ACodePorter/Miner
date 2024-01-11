@@ -157,7 +157,7 @@ class MarketDataShovel(SingletonParent):
                 for ticker in tickers.tickers:
                     results[ticker] = self.update_ticker_info(ticker)
                     _logger.info('sleeping ......')
-                    time.sleep(random() * 20)
+                    time.sleep(random() * 25)
                 _logger.info(f'update_ticker_info results:{results}')
                 return all(results.values())
             else:
@@ -213,24 +213,23 @@ class MarketDataShovel(SingletonParent):
             _logger.error(f'Failed _update_ticker_daily_info for {ticker}', exc_info=e)
             return False
 
-    def update_spx_tickers_daily_info(self):
+    def update_spx_tickers_daily_info(self) -> bool:
         try:
             make_db_connection()
-            if tickers := self.get_latest_index_tickers(index_name='spx'):
-                results = {}
-                for ticker in tickers.tickers:
-                    results[ticker] = self.update_ticker_daily_info(ticker)
-                    _logger.info('sleeping ......')
-                    time.sleep(random() * 30)
-                _logger.info(f'update_spx_tickers_daily_info results:{results}')
-                return all(results.values())
-            else:
+            if not (tickers := self.get_latest_index_tickers(index_name='spx')):
                 return False
+            to_update = tickers.tickers
+            for _ in range(6):
+                to_update = self.update_tickers_daily_info(to_update)
+                if not  to_update:
+                    return True
+                else:
+                    _logger.info(f'Re-Update failed tickers: {to_update}')
         except Exception as e:
             _logger.error('Failed to update spx tickers info', exc_info=e)
             return False
 
-    def update_tickers_daily_info(self, tickers: List[str]) -> bool:
+    def update_tickers_daily_info(self, tickers: List[str]) -> List[str]:
         try:
             make_db_connection()
             if tickers:
@@ -238,12 +237,14 @@ class MarketDataShovel(SingletonParent):
                 for ticker in tickers:
                     results[ticker] = self.update_ticker_daily_info(ticker)
                     _logger.info('sleeping ......')
-                    time.sleep(random() * 30)
+                    time.sleep(random() * 20)
                 _logger.info(f'update_spx_tickers_daily_info results:{results}')
-                return all(results.values())
+                filtered_dict = {key: value for key, value in results.items() if not value}
+                return list(filtered_dict.keys())
+
             else:
                 _logger.error(f'Illegal argument{tickers}')
-                return False
+                return tickers
         except Exception as e:
             _logger.error(f'Failed to update_tickers_daily_info for {tickers}', exc_info=e)
-            return False
+            return tickers

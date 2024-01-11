@@ -4,6 +4,7 @@ from detonator import get_logger
 from minerworkers import app
 
 from . import MarketDataShovel
+from ._indicators import Indicators
 from ._ishares_shovel import IsharesShovel
 from ._trade_cal import TradeCalendarShovel
 
@@ -49,4 +50,11 @@ def update_us_trade_calendar_task() -> bool:
 def update_tickers_daily_info_task(tickers: List[str]) -> bool:
     _logger.debug('update_us_trade_calendar_task')
     mds: MarketDataShovel = MarketDataShovel.get_instance()
-    return mds.update_tickers_daily_info(tickers)
+    return not mds.update_tickers_daily_info(tickers)
+
+
+@app.task
+def update_spx_daily_sma_task() -> bool:
+    _logger.debug('update_spx_daily_sma_task')
+    indicators: Indicators = Indicators.get_instance()
+    return indicators.update_spx_daily_sma()

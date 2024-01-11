@@ -2,8 +2,10 @@ import os
 
 import tushare as ts
 from minerworkers import app
+from detonator import get_logger
 
 from ._financial_shovel import FinancialShovel
+from ._indicators import Indicators
 from ._ishares_shovel import IsharesShovel
 from ._market_data_shovel import MarketDataShovel
 from ._ticker_manager import TickerManager
@@ -13,6 +15,7 @@ from .models import Ticker, Balancesheet, CashflowTable, Financials, TradeCalend
 
 __all__ = [
     'version',
+    'Indicators',
     'IsharesShovel',
     'FinancialShovel',
     'MarketDataShovel',
@@ -22,6 +25,16 @@ __all__ = [
     'TradeCalendarShovel'
 ]
 
-ts.set_token(os.environ['TUSHARE_KEY'])
+if 'TUSHARE_KEY' in os.environ:
+    ts.set_token(os.environ['TUSHARE_KEY'])
+else:
+    get_logger('DataMiner').warning('TUSHARE_KEY not available')
+    get_logger('DataMiner').warning('TUSHARE_KEY not available')
+    get_logger('DataMiner').warning('TUSHARE_KEY not available')
+    get_logger('DataMiner').warning('TUSHARE_KEY not available')
+    get_logger('DataMiner').warning('TUSHARE_KEY not available')
+    get_logger('DataMiner').warning('TUSHARE_KEY not available')
+    get_logger('DataMiner').warning('TUSHARE_KEY not available')
+
 
 app.autodiscover_tasks(['dataminer'])

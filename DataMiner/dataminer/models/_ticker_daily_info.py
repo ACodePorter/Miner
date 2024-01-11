@@ -15,6 +15,9 @@ class TickerDailyInfo(Document):
     volume = FloatField(required=True)
     dividends = FloatField()
     stock_splits = FloatField()
+    sma20 = FloatField()
+    sma50 = FloatField()
+    sma200 = FloatField()
     governanceEpochDate = LongField()
     compensationAsOfEpochDate = LongField()
     dividendRate = FloatField()
@@ -106,10 +109,17 @@ class TickerDailyInfo(Document):
     financialCurrency = StringField()
     trailingPegRatio = FloatField()
     meta = {
+        'ordering': ['trade_date', 'ticker'],
+        'index_background': True,
+        'auto_create_index': True,
+        'auto_create_index_on_save': False,
         'indexes': [
             {
                 'fields': ['ticker', 'trade_date', 'interval'],
-            }
+            },
+            {'fields': ['trade_date']},
+            {'fields': ['trade_date', 'ticker']},
+            {'fields': ['ticker']}
         ]
     }
 
