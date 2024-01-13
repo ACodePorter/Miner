@@ -29,7 +29,7 @@ RUN echo miner:12qw | chpasswd
 RUN mkdir -p -m 775 /data/db && \
         chown miner:miner /data/db
 
-EXPOSE 80 27017 2222 6666
+EXPOSE 80 27017 2222 6666 8001
 
 RUN locale-gen en_US.UTF-8
 

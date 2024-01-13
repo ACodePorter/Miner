@@ -28,6 +28,12 @@ class TradeCalTestCase(unittest.TestCase):
         tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()
         tcs.update_us_trade_calendar()
 
+    def test_last_closed_us_trade_date(self):
+        tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()
+        _logger.info(tcs.last_closed_us_trade_date())
+        from datetime import datetime
+        _logger.info(f'{datetime.now().hour}')
+
 
 if __name__ == '__main__':
     unittest.main()

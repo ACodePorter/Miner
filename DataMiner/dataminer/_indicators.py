@@ -25,6 +25,7 @@ class Indicators(SingletonParent):
         # _logger.debug(tickers_df)
         sma = tickers_df['close'].rolling(window=period).mean()
         for i, t in enumerate(tickers):
+            # TODO: 优化这里的循环，使用正确的数据顺序+dropna 代替现在的完整遍历
             if not numpy.isnan(sma[i]):
                 xp = f't.sma{period} = {sma[i]}'
                 exec(xp)
@@ -42,8 +43,16 @@ class Indicators(SingletonParent):
         if infos.count() == 0:
             # 对应的均线从来没有计算过，从头开始计算，返回 None
             return None
-        info: TickerDailyInfo = infos.order_by('-trade_date').skip(period).first()
-        _logger.debug(f'type:{type(info.trade_date)}')
+        info: TickerDailyInfo = infos.order_by('-trade_date').first()  # latest info with sma
+
+        query = {'ticker__iexact': ticker,
+                 'interval__iexact': interval,
+                 'trade_date__lte': info.trade_date}
+        info = TickerDailyInfo.objects(**query).order_by('-trade_date').skip(period).first()
+        if info is None:
+            _logger.warning(f'Illegal state _get_since_trade_date_for_sma for {ticker}')
+            return None
+        _logger.debug(f'since {info.trade_date} of {ticker} for sma{period}')
         return info.trade_date
 
     def update_sma(self, ticker: str, interval: str = '1d', period: int = 20) -> bool:

@@ -28,6 +28,7 @@ services:
       - '27017:27017'
       - '2222:2222'
       - '6666:6666'
+      - '8001:8001'
     environment:
       - RUNTIME_ENV=${RUNTIME_ENV}
       - TUSHARE_KEY=${TUSHARE_KEY}

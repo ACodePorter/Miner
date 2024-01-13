@@ -31,6 +31,12 @@ class MarketDataShvelTestCase(unittest.TestCase):
         md: MarketDataShovel = MarketDataShovel.get_instance()
         md.update_ticker_daily_info('AAPL')
 
+    def test_get_latest_index_tickers(self):
+        md: MarketDataShovel = MarketDataShovel.get_instance()
+        tickers = md.get_latest_index_tickers('spx')
+        print(f'1tickers:{tickers}')
+        print(f'2tickers:{list(tickers.tickers)}')
+
 
 if __name__ == '__main__':
     unittest.main()

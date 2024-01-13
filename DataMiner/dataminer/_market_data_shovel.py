@@ -6,7 +6,8 @@ from typing import List
 
 import pandas as pd
 import requests
-from detonator import SingletonParent, get_logger, md5_iterable, make_db_connection, df_2_mongo, add_minus_to_YYYYmmdd
+from detonator import SingletonParent, get_logger, md5_iterable, make_db_connection, df_2_mongo, add_minus_to_YYYYmmdd, \
+    tomorrow_of
 from pandas import DataFrame
 from yfinance import Ticker as YTicker, ticker
 
@@ -45,10 +46,10 @@ class MarketDataShovel(SingletonParent):
             return DataFrame()
 
     def update_spx_tickers(self) -> bool:
+        make_db_connection()
         if self._is_index_tickers_latest('spx'):
             _logger.info('spx index already latest, skip updating')
             return True
-        make_db_connection()
         tickers = self._fetch_spx_tickers()
         if tickers.empty:
             _logger.error('Got Empty tickers for spx')
@@ -157,7 +158,7 @@ class MarketDataShovel(SingletonParent):
                 for ticker in tickers.tickers:
                     results[ticker] = self.update_ticker_info(ticker)
                     _logger.info('sleeping ......')
-                    time.sleep(random() * 25)
+                    time.sleep(random() * 15)
                 _logger.info(f'update_ticker_info results:{results}')
                 return all(results.values())
             else:
@@ -180,7 +181,9 @@ class MarketDataShovel(SingletonParent):
         if trade_dates := _tcs.us_trade_dates_since(tdi.trade_date.strftime('%Y%m%d') if tdi else '00000000'):
             earliest_gap_trade_date = trade_dates[-1]
             _logger.info(f'Update ticker daily info for {ticker}')
-            return self.fetch_ticker_daily_info_to_db(yticker=yticker, start_date=earliest_gap_trade_date)
+            return self.fetch_ticker_daily_info_to_db(yticker=yticker, start_date=earliest_gap_trade_date,
+                                                      end_date=tomorrow_of(_tcs.last_closed_us_trade_date()).strftime(
+                                                          '%Y%m%d'))
         else:
             _logger.info(f'No update ticker daily info for {ticker} since {tdi.trade_date}')
         return True
@@ -188,7 +191,13 @@ class MarketDataShovel(SingletonParent):
     def fetch_ticker_daily_info_to_db(self, yticker: YTicker, start_date: str = None, end_date: str = None,
                                       interval='1d',
                                       period='max') -> bool:
+        """
+        更新指定日期期间日线/股票基本数据
+        start_date:inclusive
+        end_date:inclusive
+        """
         try:
+            _logger.info(f'Daily info from yfinance: {yticker.ticker}:{start_date}->{end_date} {interval} {period}')
             start_date = add_minus_to_YYYYmmdd(start_date) if start_date else start_date
             end_date = add_minus_to_YYYYmmdd(end_date) if end_date else end_date
             his: DataFrame = yticker.history(start=start_date, end=end_date, interval=interval, period=period)
@@ -218,10 +227,12 @@ class MarketDataShovel(SingletonParent):
             make_db_connection()
             if not (tickers := self.get_latest_index_tickers(index_name='spx')):
                 return False
-            to_update = tickers.tickers
-            for _ in range(6):
+            _logger.debug(f'full:{tickers.tickers}')
+            to_update = list(tickers.tickers)
+            for i in range(6):
+                _logger.info(f'update_spx_tickers_daily_info:{i}:{to_update}')
                 to_update = self.update_tickers_daily_info(to_update)
-                if not  to_update:
+                if not to_update:
                     return True
                 else:
                     _logger.info(f'Re-Update failed tickers: {to_update}')
@@ -230,6 +241,7 @@ class MarketDataShovel(SingletonParent):
             return False
 
     def update_tickers_daily_info(self, tickers: List[str]) -> List[str]:
+        _logger.debug(f'update_tickers_daily_info:{tickers}')
         try:
             make_db_connection()
             if tickers:
