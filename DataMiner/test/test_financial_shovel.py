@@ -1,3 +1,4 @@
+import os
 from unittest import TestCase
 
 from detonator import get_logger, make_db_connection
@@ -5,8 +6,6 @@ from detonator import get_logger, make_db_connection
 from dataminer import FinancialShovel
 
 _logger = get_logger('FinancialShovelTestCase')
-
-import os
 
 
 class FinancialShovelTestCase(TestCase):

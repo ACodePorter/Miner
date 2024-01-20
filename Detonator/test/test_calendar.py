@@ -1,5 +1,5 @@
 import unittest
-from detonator import  add_minus_to_YYYYmmdd, remove_minus_in_YYYYmmdd
+from detonator import add_minus_to_YYYYmmdd, remove_minus_in_YYYYmmdd
 
 
 class CalendarTestCase(unittest.TestCase):

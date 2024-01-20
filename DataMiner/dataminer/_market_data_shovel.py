@@ -34,9 +34,11 @@ class MarketDataShovel(SingletonParent):
             request = requests.get(url, headers=headers)
             if datas := pd.read_html(request.text):
                 data = datas[0]
-                data.sort_values(by=['Symbol'], ascending=True, inplace=True, ignore_index=True)
+                data.sort_values(by=['Symbol'], ascending=True,
+                                 inplace=True, ignore_index=True)
                 data = data[['Company', 'Symbol']]
-                data.rename({'Symbol': 'ticker', 'Company': 'name'}, axis='columns', inplace=True)
+                data.rename({'Symbol': 'ticker', 'Company': 'name'},
+                            axis='columns', inplace=True)
                 _logger.debug(f'spx tickers:{data}')
                 return data
             else:
@@ -60,7 +62,8 @@ class MarketDataShovel(SingletonParent):
             l.append(i)
             return l
 
-        ticker_list = reduce(lambda x, y: _accamulte(x, y), tickers['ticker'].values, [])
+        ticker_list = reduce(lambda x, y: _accamulte(
+            x, y), tickers['ticker'].values, [])
         _logger.debug(f'ticker list:\n{ticker_list}')
         as_of_date = _tcs.last_us_trade_day_before_today()
         if local_latest_tickers := self.get_latest_index_tickers(
@@ -69,15 +72,18 @@ class MarketDataShovel(SingletonParent):
             local_md5 = md5_iterable(local_latest_tickers.tickers)
             fetched_md5 = md5_iterable(ticker_list)
             if local_md5 and fetched_md5 and local_md5 == fetched_md5:
-                _logger.info('Same local and fetched md5 for spx update, update as of date')
+                _logger.info(
+                    'Same local and fetched md5 for spx update, update as of date')
                 local_latest_tickers.update(as_of_date=as_of_date)
                 local_latest_tickers.save()
             elif fetched_md5 and not local_md5:
                 _logger.info('No local md5 for spx update, save new ones')
-                IndexTickers(index_name='spx', tickers=local_latest_tickers, as_of_date=as_of_date).save()
+                IndexTickers(
+                    index_name='spx', tickers=local_latest_tickers, as_of_date=as_of_date).save()
         else:
             _logger.info('No local spx index, save new ones')
-            IndexTickers(index_name='spx', tickers=ticker_list, as_of_date=as_of_date).save()
+            IndexTickers(index_name='spx', tickers=ticker_list,
+                         as_of_date=as_of_date).save()
 
     def _is_index_tickers_latest(self, index_name: str) -> bool:
         as_of_date = _tcs.last_us_trade_day_before_today()
@@ -115,7 +121,8 @@ class MarketDataShovel(SingletonParent):
                     yticker = ticker
                     ticker = ticker.ticker.replace('-', '.').upper()
                 else:
-                    _logger.error(f'Illegal argument ticker:{ticker} typeof {type(ticker)}')
+                    _logger.error(
+                        f'Illegal argument ticker:{ticker} typeof {type(ticker)}')
                     return False
 
                 local_ticker: Ticker = Ticker.objects(ticker__iexact=ticker).order_by('-as_of_date').first() or Ticker(
@@ -176,9 +183,11 @@ class MarketDataShovel(SingletonParent):
             yticker = ticker
             ticker = yticker.ticker.replace('-', '.')
         else:
-            _logger.error(f'Illegal argument for update_ticker_daily_info: {ticker}')
+            _logger.error(
+                f'Illegal argument for update_ticker_daily_info: {ticker}')
             return False
-        tdi = TickerDailyInfo.objects(ticker__iexact=ticker).order_by('-trade_date').first()
+        tdi = TickerDailyInfo.objects(
+            ticker__iexact=ticker).order_by('-trade_date').first()
         if trade_dates := _tcs.us_trade_dates_since(tdi.trade_date.strftime('%Y%m%d') if tdi else '00000000'):
             earliest_gap_trade_date = trade_dates[-1]
             _logger.info(f'Update ticker daily info for {ticker}')
@@ -186,7 +195,8 @@ class MarketDataShovel(SingletonParent):
                                                       end_date=tomorrow_of(_tcs.last_closed_us_trade_date()).strftime(
                                                           '%Y%m%d'))
         else:
-            _logger.info(f'No update ticker daily info for {ticker} since {tdi.trade_date}')
+            _logger.info(
+                f'No update ticker daily info for {ticker} since {tdi.trade_date}')
         return True
 
     def fetch_ticker_daily_info_to_db(self, yticker: YTicker, start_date: str = None, end_date: str = None,
@@ -198,12 +208,17 @@ class MarketDataShovel(SingletonParent):
         end_date:inclusive
         """
         try:
-            _logger.info(f'Daily info from yfinance: {yticker.ticker}:{start_date}->{end_date} {interval} {period}')
-            start_date = add_minus_to_YYYYmmdd(start_date) if start_date else start_date
-            end_date = add_minus_to_YYYYmmdd(end_date) if end_date else end_date
-            his: DataFrame = yticker.history(start=start_date, end=end_date, interval=interval, period=period)
+            _logger.info(
+                f'Daily info from yfinance: {yticker.ticker}:{start_date}->{end_date} {interval} {period}')
+            start_date = add_minus_to_YYYYmmdd(
+                start_date) if start_date else start_date
+            end_date = add_minus_to_YYYYmmdd(
+                end_date) if end_date else end_date
+            his: DataFrame = yticker.history(
+                start=start_date, end=end_date, interval=interval, period=period)
             if his.empty:
-                _logger.error(f'Failed to get history for {yticker} from yahoo')
+                _logger.error(
+                    f'Failed to get history for {yticker} from yahoo')
                 return False
             his.rename(columns={'Open': 'open', 'High': 'high', 'Low': 'low', 'Close': 'close', 'Volume': 'volume',
                                 'Dividends': 'dividends',
@@ -215,12 +230,14 @@ class MarketDataShovel(SingletonParent):
             df_2_mongo(his, TickerDailyInfo)
             info = yticker.info
             regulated_info = regulate_ticker_daily_info(info)
-            tdi: TickerDailyInfo = TickerDailyInfo.objects.order_by('-trade_date').first()
+            tdi: TickerDailyInfo = TickerDailyInfo.objects.order_by(
+                '-trade_date').first()
             tdi.update(**regulated_info)
             tdi.save()
             return True
         except Exception as e:
-            _logger.error(f'Failed _update_ticker_daily_info for {ticker}', exc_info=e)
+            _logger.error(
+                f'Failed _update_ticker_daily_info for {ticker}', exc_info=e)
             return False
 
     def update_spx_tickers_daily_info(self) -> bool:
@@ -251,15 +268,18 @@ class MarketDataShovel(SingletonParent):
                     results[ticker] = self.update_ticker_daily_info(ticker)
                     _logger.info('sleeping ......')
                     time.sleep(random() * 15)
-                _logger.info(f'update_spx_tickers_daily_info results:{results}')
-                filtered_dict = {key: value for key, value in results.items() if not value}
+                _logger.info(
+                    f'update_spx_tickers_daily_info results:{results}')
+                filtered_dict = {key: value for key,
+                                 value in results.items() if not value}
                 return list(filtered_dict.keys())
 
             else:
                 _logger.error(f'Illegal argument{tickers}')
                 return tickers
         except Exception as e:
-            _logger.error(f'Failed to update_tickers_daily_info for {tickers}', exc_info=e)
+            _logger.error(
+                f'Failed to update_tickers_daily_info for {tickers}', exc_info=e)
             return tickers
 
     def get_tickers_daily_info_on(self, tickers: str | List[str], trade_date: str | datetime,

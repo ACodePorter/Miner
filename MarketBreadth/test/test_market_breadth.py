@@ -9,7 +9,8 @@ from marketbreadth import MarketBreadth
 
 make_db_connection(db='mongogo-test')
 
-_default_start_date = datetime.now(timezone('America/New_York')) - timedelta(days=365)
+_default_start_date = datetime.now(
+    timezone('America/New_York')) - timedelta(days=365)
 
 _tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()
 _mds: MarketDataShovel = MarketDataShovel.get_instance()

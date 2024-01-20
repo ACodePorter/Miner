@@ -59,9 +59,11 @@ def log_in_out(logger: logging.Logger):
     def decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
-            if logger: logger.debug(f'{func.__name__}: {args} {kwargs}')
+            if logger:
+                logger.debug(f'{func.__name__}: {args} {kwargs}')
             result = func(*args, **kwargs)
-            if logger: logger.debug(f'{func.__name__}-> {result}')
+            if logger:
+                logger.debug(f'{func.__name__}-> {result}')
             return result
 
         return wrapper

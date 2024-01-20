@@ -9,9 +9,9 @@ class TickerManager(SingletonParent):
     def get_latest_as_of_date_before(self, as_of_date: str = '30001231', inclusive=False) -> str:
         if (
                 as_of_dates := Ticker.objects()
-                        .only('as_of_date')
-                        .order_by('-as_of_date')
-                        .distinct(field='as_of_date')
+            .only('as_of_date')
+            .order_by('-as_of_date')
+            .distinct(field='as_of_date')
         ):
             _logger.debug(f'as_of_dates: {as_of_dates}')
             as_of_dates = sorted(as_of_dates, reverse=True)

@@ -18,20 +18,21 @@ class TradeCalendarShovel(SingletonParent):
     def update_us_trade_calendar(self):
         try:
             make_db_connection()
-            end_date = datetime.datetime.now(pytz.timezone('America/New_York')).strftime('%Y%m%d')
+            end_date = datetime.datetime.now(
+                pytz.timezone('America/New_York')).strftime('%Y%m%d')
             args = {
                 'end_date': end_date
             }
             if (
                     latest_cal_date := TradeCalendar.objects(country='us')
-                            .order_by('-cal_date')
-                            .only('cal_date')
-                            .first()
+                .order_by('-cal_date')
+                .only('cal_date')
+                .first()
             ):
                 _logger.debug(f'latest_cal_date: {latest_cal_date.cal_date}')
                 args['start_date'] = (
-                        datetime.datetime.strptime(latest_cal_date.cal_date, '%Y%m%d') + datetime.timedelta(
-                    days=1)).strftime(
+                    datetime.datetime.strptime(latest_cal_date.cal_date, '%Y%m%d') + datetime.timedelta(
+                        days=1)).strftime(
                     '%Y%m%d')
                 _logger.debug(f'update_us_trade_calendar args: {args}')
                 if args['start_date'] > args['end_date']:
@@ -49,7 +50,8 @@ class TradeCalendarShovel(SingletonParent):
         try:
             make_db_connection()
             self.update_us_trade_calendar()
-            today_date = datetime.datetime.now(pytz.timezone('America/New_York')).strftime('%Y%m%d')
+            today_date = datetime.datetime.now(
+                pytz.timezone('America/New_York')).strftime('%Y%m%d')
             _logger.debug(f'today_date: {today_date}')
             return TradeCalendar.objects(country='us', cal_date=today_date).first().is_open == True
         except Exception as e:
@@ -60,22 +62,26 @@ class TradeCalendarShovel(SingletonParent):
         try:
             make_db_connection()
             self.update_us_trade_calendar()
-            today_date = datetime.datetime.now(pytz.timezone('America/New_York')).strftime('%Y%m%d')
+            today_date = datetime.datetime.now(
+                pytz.timezone('America/New_York')).strftime('%Y%m%d')
             _logger.debug(f'today_date: {today_date}')
             return TradeCalendar.objects(country='us', cal_date=today_date).first().pretrade_date
         except Exception as e:
-            _logger.error(f'last_trade_day_before_today failed:{e}', stack_info=True)
+            _logger.error(
+                f'last_trade_day_before_today failed:{e}', stack_info=True)
 
     def us_trade_dates_since(self, start_date: str | datetime.date | datetime.datetime,
                              end_date: str | datetime.date | datetime.datetime = '') -> List[str] | None:
         if not isinstance(start_date, (str, datetime.date, datetime.datetime)):
             _logger.error(f'Illegal argument trade_date_since: {start_date}')
             return None
-        start_date = start_date if isinstance(start_date, str) else start_date.strftime('%Y%m%d')
+        start_date = start_date if isinstance(
+            start_date, str) else start_date.strftime('%Y%m%d')
         make_db_connection()
         if not end_date:
             end_date = self.last_closed_us_trade_date()
-        end_date = end_date if isinstance(end_date, str) else end_date.strftime('%Y%m%d')
+        end_date = end_date if isinstance(
+            end_date, str) else end_date.strftime('%Y%m%d')
         try:
             self.update_us_trade_calendar()
             _logger.debug(f'us_trade_dates_since:{start_date}->{end_date}')
@@ -84,7 +90,8 @@ class TradeCalendarShovel(SingletonParent):
                                                 is_open=True).order_by('-cal_date')
             return [t.cal_date for t in trade_dates]
         except Exception as e:
-            _logger.error(f'Failed to us_trade_dates_since:{start_date} -> {end_date}', exc_info=e)
+            _logger.error(
+                f'Failed to us_trade_dates_since:{start_date} -> {end_date}', exc_info=e)
             return None
 
     def last_closed_us_trade_date(self) -> str | None:
@@ -94,13 +101,16 @@ class TradeCalendarShovel(SingletonParent):
         try:
             make_db_connection()
             self.update_us_trade_calendar()
-            today_date = datetime.datetime.now(pytz.timezone('America/New_York'))
+            today_date = datetime.datetime.now(
+                pytz.timezone('America/New_York'))
             this_cal_date: TradeCalendar = TradeCalendar.objects(country='us',
                                                                  cal_date=today_date.strftime('%Y%m%d')).first()
-            _logger.debug(f'last_closed_us_trade_date:{this_cal_date.is_open} {today_date.hour}')
+            _logger.debug(
+                f'last_closed_us_trade_date:{this_cal_date.is_open} {today_date.hour}')
             if this_cal_date.is_open and today_date.hour > 16:
                 return this_cal_date.cal_date
             return this_cal_date.pretrade_date
         except Exception as e:
-            _logger.error('Failed to get last_closed_us_trade_date', exc_info=e)
+            _logger.error(
+                'Failed to get last_closed_us_trade_date', exc_info=e)
             return None

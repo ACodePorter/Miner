@@ -34,7 +34,8 @@ class SingletonTestCase(unittest.TestCase):
         _logger.info(instance1.value)  # Output: ChildSingleton1
         _logger.info(instance2.value)  # Output: ChildSingleton2
 
-        _logger.info(instance1 is instance2)  # Output: True (both instances are the same)
+        # Output: True (both instances are the same)
+        _logger.info(instance1 is instance2)
         _logger.info(instance11 is instance1)
 
         self.assertIs(instance1, instance11)
