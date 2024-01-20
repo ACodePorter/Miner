@@ -30,8 +30,8 @@ class Indicators(SingletonParent):
                 xp = f't.sma{period} = {sma[i]}'
                 exec(xp)
                 t.save()
-            else:
-                _logger.warning(f'Skip nan: {t.ticker} @{t.trade_date}')
+            # else:
+            #     _logger.warning(f'Skip nan: {t.ticker} @{t.trade_date}')
 
     def _get_since_trade_date_for_sma(self, ticker: str, interval: str = '1d', period: int = 20) -> datetime | None:
         ticker = ticker.upper()

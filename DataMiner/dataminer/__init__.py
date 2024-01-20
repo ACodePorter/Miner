@@ -1,7 +1,7 @@
 import os
 
 import tushare as ts
-from minerworkers import app
+# from minerworkers import app
 from detonator import get_logger
 
 from ._financial_shovel import FinancialShovel
@@ -37,4 +37,4 @@ else:
     get_logger('DataMiner').warning('TUSHARE_KEY not available')
 
 
-app.autodiscover_tasks(['dataminer'])
+# app.autodiscover_tasks(['dataminer'])

@@ -4,6 +4,7 @@ from celery import chain
 from dataminer.tasks import update_spx_tickers_task, update_spx_tickers_info_task, update_spx_tickers_daily_info_task, \
     update_us_trade_calendar_task, update_tickers_daily_info_task, update_spx_daily_sma_task
 from fastapi import FastAPI
+from marketbreadth.tasks import update_spx_market_breadth_task
 
 app = FastAPI()
 
@@ -36,7 +37,14 @@ async def update_tickers_daily_info(tickers: List[str]) -> str:
     update_tickers_daily_info_task.delay(tickers=tickers)
     return 'GOOD'
 
+
 @app.get('/update_spx_daily_sma')
-async def update_spx_daily_sma() ->str:
+async def update_spx_daily_sma() -> str:
     update_spx_daily_sma_task.delay()
+    return 'GOOD'
+
+
+@app.get('/update_spx_market_breadth')
+async def update_spx_market_breadth() -> str:
+    update_spx_market_breadth_task.delay()
     return 'GOOD'

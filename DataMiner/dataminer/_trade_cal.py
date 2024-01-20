@@ -72,18 +72,19 @@ class TradeCalendarShovel(SingletonParent):
             _logger.error(f'Illegal argument trade_date_since: {start_date}')
             return None
         start_date = start_date if isinstance(start_date, str) else start_date.strftime('%Y%m%d')
+        make_db_connection()
         if not end_date:
-            end_date = self.last_us_trade_day_before_today()
+            end_date = self.last_closed_us_trade_date()
         end_date = end_date if isinstance(end_date, str) else end_date.strftime('%Y%m%d')
         try:
-            make_db_connection()
             self.update_us_trade_calendar()
+            _logger.debug(f'us_trade_dates_since:{start_date}->{end_date}')
             trade_dates = TradeCalendar.objects(cal_date__gt=start_date,
                                                 cal_date__lte=end_date, country='us',
                                                 is_open=True).order_by('-cal_date')
             return [t.cal_date for t in trade_dates]
         except Exception as e:
-            _logger.error(f'Failed to us_trade_dates_since:{start_date}', exc_info=e)
+            _logger.error(f'Failed to us_trade_dates_since:{start_date} -> {end_date}', exc_info=e)
             return None
 
     def last_closed_us_trade_date(self) -> str | None:

@@ -1,5 +1,6 @@
 import os
 import time
+from datetime import datetime
 from functools import reduce
 from random import random
 from typing import List
@@ -7,7 +8,7 @@ from typing import List
 import pandas as pd
 import requests
 from detonator import SingletonParent, get_logger, md5_iterable, make_db_connection, df_2_mongo, add_minus_to_YYYYmmdd, \
-    tomorrow_of
+    tomorrow_of, datetime_from_str, mongo_2_df
 from pandas import DataFrame
 from yfinance import Ticker as YTicker, ticker
 
@@ -82,18 +83,18 @@ class MarketDataShovel(SingletonParent):
         as_of_date = _tcs.last_us_trade_day_before_today()
         return IndexTickers.objects(index_name=index_name, as_of_date=as_of_date).count() > 0
 
-    def get_latest_index_tickers_before(self, index_name: str, as_of_date: str = '',
-                                        inclusive=False) -> IndexTickers:
+    def get_index_tickers_on(self, index_name: str, as_of_date: str = '') -> IndexTickers:
+        """
+        获取指定日期的指数成分股
+        """
         make_db_connection()
         as_of_date = as_of_date or _tcs.last_us_trade_day_before_today()
         queries = {
-            'index_name': index_name
+            'index_name': index_name,
+            'as_of_date__gte': as_of_date
         }
-        if inclusive:
-            queries['as_of_date__lte'] = as_of_date
-        else:
-            queries['as_of_date__lt'] = as_of_date
-        return IndexTickers.objects(__raw__=queries).order_by('-as_of_date').first()
+        _logger.debug(f'get_index_tickers_on:{queries}')
+        return IndexTickers.objects(**queries).order_by('as_of_date').first()
 
     def get_latest_index_tickers(self, index_name: str) -> IndexTickers:
         make_db_connection()
@@ -249,7 +250,7 @@ class MarketDataShovel(SingletonParent):
                 for ticker in tickers:
                     results[ticker] = self.update_ticker_daily_info(ticker)
                     _logger.info('sleeping ......')
-                    time.sleep(random() * 20)
+                    time.sleep(random() * 15)
                 _logger.info(f'update_spx_tickers_daily_info results:{results}')
                 filtered_dict = {key: value for key, value in results.items() if not value}
                 return list(filtered_dict.keys())
@@ -260,3 +261,14 @@ class MarketDataShovel(SingletonParent):
         except Exception as e:
             _logger.error(f'Failed to update_tickers_daily_info for {tickers}', exc_info=e)
             return tickers
+
+    def get_tickers_daily_info_on(self, tickers: str | List[str], trade_date: str | datetime,
+                                  interval: str = '1d') -> DataFrame:
+        if isinstance(tickers, str):
+            tickers = [tickers]
+        if isinstance(trade_date, str):
+            trade_date = datetime_from_str(trade_date)
+        if not trade_date:
+            _logger.error(f'Illegal trade_date: {trade_date}')
+            return pd.DataFrame()
+        return mongo_2_df(TickerDailyInfo.objects(ticker__in=tickers, trade_date=trade_date, interval=interval))

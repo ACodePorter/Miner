@@ -10,3 +10,4 @@ Get US stock market datas to local db.
   - daily 信息更新后整体检查除权，整体更新数据
   - 更新单只股票daily信息时直接处理
 - [ ] 时间日期处理，全部使用美国东部时间，避免可能的时间混乱
+- [ ] 获取 spx 指定日志的 spx 成分股
