@@ -15,13 +15,13 @@ class Indicators(SingletonParent):
 
     def _calculate_sma(self, ticker: str, since: str | datetime = None, interval='1d', period: int = 20):
         _logger.info(
-            f'Calculating sma for {ticker} since {since} @ interval:{interval} period:{period}')
+            'Calculating sma for %s since %s @ interval:%s period:%d', ticker, since, interval, period)
         ticker = ticker.upper()
         query = {'ticker__iexact': ticker, 'interval__iexact': interval}
         if since:
             query['trade_date__gte'] = since if isinstance(
                 since, datetime) else datetime.strptime(since, '%Y%m%d')
-        _logger.debug(f'query:{query}')
+        _logger.debug('query:%s', query)
         tickers = TickerDailyInfo.objects(**query).order_by('trade_date')
         tickers_df = mongo_2_df(tickers)
         # _logger.debug(tickers_df)
@@ -55,9 +55,9 @@ class Indicators(SingletonParent):
             **query).order_by('-trade_date').skip(period).first()
         if info is None:
             _logger.warning(
-                f'Illegal state _get_since_trade_date_for_sma for {ticker}')
+                'Illegal state _get_since_trade_date_for_sma for %s', ticker)
             return None
-        _logger.debug(f'since {info.trade_date} of {ticker} for sma{period}')
+        _logger.debug('since %s of %s for sma%d', info.trade_date, ticker, period)
         return info.trade_date
 
     def update_sma(self, ticker: str, interval: str = '1d', period: int = 20) -> bool:
@@ -71,7 +71,7 @@ class Indicators(SingletonParent):
                                 interval=interval, period=period)
             return True
         except Exception as e:
-            _logger.error(f'Failed to update_sma for {ticker}', exc_info=e)
+            _logger.error('Failed to update_sma for %s', ticker, exc_info=e)
             return False
 
     def update_spx_daily_sma(self) -> bool:
@@ -101,7 +101,7 @@ class Indicators(SingletonParent):
                 if not to_update:
                     return True
                 else:
-                    _logger.info(f'Re-Updating spx daily sma:{to_update}')
+                    _logger.info('Re-Updating spx daily sma: %s', to_update)
         except Exception as e:
             _logger.error('Failed to update spx sma', exc_info=e)
             return False

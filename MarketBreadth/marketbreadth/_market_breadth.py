@@ -1,12 +1,12 @@
 from datetime import datetime, timedelta
 from typing import Optional
 
-import modin.pandas as pd
+import pandas as pd
 import pytz
 from dataminer import MarketDataShovel, TradeCalendarShovel
 from dataminer.models import IndexTickers, Ticker
 from detonator import SingletonParent, make_db_connection, mongo_2_df, get_logger
-from modin.pandas import DataFrame
+from pandas import DataFrame
 
 from .models import MarketBreadthScore, MarketBreadthSectorScore
 

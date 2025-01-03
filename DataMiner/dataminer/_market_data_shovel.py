@@ -8,7 +8,7 @@ import pandas as pd
 import requests
 from detonator import SingletonParent, get_logger, md5_iterable, make_db_connection, df_2_mongo, add_minus_to_YYYYmmdd, \
     tomorrow_of, datetime_from_str, mongo_2_df
-from modin.pandas import DataFrame
+from pandas import DataFrame
 from yfinance import Ticker as YTicker
 
 from ._trade_cal import TradeCalendarShovel
@@ -64,7 +64,7 @@ class MarketDataShovel(SingletonParent):
         ticker_list = reduce(lambda x, y: _accamulte(
             x, y), tickers['ticker'].values, [])
         _logger.debug('ticker list:\n%s', ticker_list)
-        as_of_date = _tcs.last_us_trade_day_before_today()
+        as_of_date = _tcs.last_closed_us_trade_date()
         _logger.debug('as_of_date:%s', as_of_date)
         if local_latest_tickers := self.get_latest_index_tickers(
                 index_name='spx'
@@ -86,7 +86,7 @@ class MarketDataShovel(SingletonParent):
         return True
 
     def _is_index_tickers_latest(self, index_name: str) -> bool:
-        as_of_date = _tcs.last_us_trade_day_before_today()
+        as_of_date = _tcs.last_closed_us_trade_date()
         return IndexTickers.objects(index_name=index_name, as_of_date=as_of_date).count() > 0
 
     def get_index_tickers_on(self, index_name: str, as_of_date: str = '') -> IndexTickers:

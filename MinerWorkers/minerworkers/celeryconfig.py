@@ -11,3 +11,4 @@ result_backend = f'redis://miner:12qw@{redis_host}:6379/0'
 timezone = 'America/Toronto'
 
 worker_redirect_stdouts = False
+worker_log_format = '[%(asctime)s: %(levelname)s/%(processName)s] %(name)s->%(message)s'
