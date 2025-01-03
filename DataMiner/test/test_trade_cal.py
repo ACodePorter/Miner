@@ -23,6 +23,7 @@ class TradeCalTestCase(unittest.TestCase):
     def test_us_trade_dates_since(self):
         tcs = TradeCalendarShovel.get_instance()
         _logger.info(tcs.us_trade_dates_since('20231223', '20240102'))
+        _logger.info(tcs.us_trade_dates_since('20241230'))
 
     def test_update_us_trade_calendar(self):
         tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()

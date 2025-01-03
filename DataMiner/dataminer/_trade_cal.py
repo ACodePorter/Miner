@@ -65,7 +65,7 @@ class TradeCalendarShovel(SingletonParent):
             today_date = datetime.datetime.now(
                 pytz.timezone('America/New_York')).strftime('%Y%m%d')
             _logger.debug(f'today_date: {today_date}')
-            return TradeCalendar.objects(country='us', cal_date=today_date).first().pretrade_date
+            return TradeCalendar.objects(country='us', cal_date__lt=today_date, is_open=True).order_by('-cal_date') .first().cal_date
         except Exception as e:
             _logger.error(
                 f'last_trade_day_before_today failed:{e}', stack_info=True)
@@ -106,10 +106,10 @@ class TradeCalendarShovel(SingletonParent):
             this_cal_date: TradeCalendar = TradeCalendar.objects(country='us',
                                                                  cal_date=today_date.strftime('%Y%m%d')).first()
             _logger.debug(
-                f'last_closed_us_trade_date:{this_cal_date.is_open} {today_date.hour}')
+                'last_closed_us_trade_date:%s %s', this_cal_date.is_open, today_date.hour)
             if this_cal_date.is_open and today_date.hour > 16:
                 return this_cal_date.cal_date
-            return this_cal_date.pretrade_date
+            return self.last_us_trade_day_before_today()
         except Exception as e:
             _logger.error(
                 'Failed to get last_closed_us_trade_date', exc_info=e)

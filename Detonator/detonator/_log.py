@@ -12,8 +12,8 @@ _DEFAULT_LOG_FORMAT = '%(asctime)s.%(msecs)d:%(name)s:%(levelname)s: %(message)s
 _DEFAULT_LOG_DATE_FORMAT = '%Y%m%d %H%M%S'
 
 logging.basicConfig(format=_DEFAULT_LOG_FORMAT, datefmt=_DEFAULT_LOG_DATE_FORMAT,
-                    force=True, level=logging.DEBUG,
-                    handlers=[RichHandler(rich_tracebacks=True, locals_max_string=1024, console=Console(width=240),
+                    force=True, level=logging.INFO,
+                    handlers=[RichHandler(rich_tracebacks=False, locals_max_string=1024, console=Console(width=240),
                                           show_level=False, show_time=False, show_path=False)])
 
 with contextlib.suppress(Exception):

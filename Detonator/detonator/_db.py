@@ -4,7 +4,7 @@ from mongoengine.connection import DEFAULT_CONNECTION_NAME
 
 def make_db_connection(db: str = 'mongogo', host: str = 'localhost', port=27017, alias: str = DEFAULT_CONNECTION_NAME):
     try:
-        get_connection()
+        get_connection(alias=alias)
     except Exception:
         connect(db=db, host=host, port=port, alias=alias)
 

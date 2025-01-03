@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import Highcharts from 'highcharts/highstock'
 import HighchartsReact from 'highcharts-react-official'
@@ -11,10 +13,10 @@ const options = {
     }]
 }
 
-const MyStockChart = () => <HighchartsReact
+const MarketBreadthChart = () => <HighchartsReact
     highcharts={Highcharts}
     constructorType={'stockChart'}
     options={options}
 />
 
-export default MyStockChart
+export default MarketBreadthChart

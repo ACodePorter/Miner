@@ -11,9 +11,7 @@ from dataminer import MarketDataShovel
 class MarketDataShvelTestCase(unittest.TestCase):
 
     def setUp(self):
-        connect('mongogo')
-        os.environ['http_proxy'] = 'socks5://localhost:8001'
-        os.environ['https_proxy'] = 'socks5://localhost:8001'
+        connect('mongogo-test')
 
     def test_spx_tickers(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()

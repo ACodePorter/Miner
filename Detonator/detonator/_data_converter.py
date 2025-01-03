@@ -2,7 +2,7 @@ import json
 from typing import Type
 
 from mongoengine import Document, QuerySet, NotUniqueError
-from pandas import DataFrame
+from modin.pandas import DataFrame
 
 from ._log import get_logger
 

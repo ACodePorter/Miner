@@ -4,7 +4,7 @@ set -e
 
 MY_DIR=$(realpath $(dirname $0))
 
-$MY_DIR/run_socks5_proxy.sh &
+# $MY_DIR/run_socks5_proxy.sh &
 
 echo 12qw | sudo -S nginx -g "daemon on; master_process off;"
 mongod --fork --syslog --bind_ip_all
@@ -12,7 +12,7 @@ mongod --fork --syslog --bind_ip_all
 celery --broker=amqp://miner:12qw@rabbitmq:5672 --result-backend=redis://miner:12qw@redis/0 flower --port=6666 --auto_refresh=True --url_prefix=flower --broker_api=http://admin:12qw@rabbitmq:15672/api &
 
 # celery -A miner.app worker --loglevel DEBUG --detach --logfile ~/.miner.log
-celery --app=minerservice worker -c 2 --loglevel DEBUG --detach --logfile ~/.miner.log
+celery --app=minerservice worker -c 2 --loglevel INFO --detach --logfile ~/.miner.log
 
 $MY_DIR/run_service_as_prod_uds.sh 2>&1 &
 

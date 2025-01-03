@@ -38,5 +38,10 @@ open http://localhost/docs, you'll see.
 
 - [ ] add russell index tickers bootstrap, getting history tickers record
 - [ ] make mongodb run in seperated container
-- [ ] config proxy from environment variable or command line
+- [ ] ~~config proxy from environment variable or command line~~
 - [ ] 增加日线数据获取失败处理(偶尔,无法从yahoo获取某些股票的日线数据,需要第二天重新获取更新)
+- [X] update miniconda to Python 3.12
+- [ ] update Ubuntu to 24.04
+- [X] 优化获取 yahoo 数据时间间隔管理,减少等待时间
+- [X] reduce logs of celery
+

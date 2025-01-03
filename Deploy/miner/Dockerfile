@@ -1,6 +1,6 @@
 FROM --platform=linux/amd64 ubuntu:20.04
 
-ENV TZ=Asia/Shanghai
+ENV TZ=America/Toronto
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 ENV AM_I_IN_DOCKER_CONTAINER=Yes
@@ -11,11 +11,11 @@ RUN echo "dash dash/sh boolean false" | debconf-set-selections
 RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure dash
 
 RUN apt-get update && \
-        apt-get install -y ca-certificates
-RUN echo 'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse' > /etc/apt/sources.list && \
-        echo 'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse' >> /etc/apt/sources.list && \
-        echo 'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse' >> /etc/apt/sources.list && \
-        echo 'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse' >> /etc/apt/sources.list
+        apt-get install -y ca-certificates gnupg curl
+# RUN echo 'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse' > /etc/apt/sources.list && \
+#         echo 'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse' >> /etc/apt/sources.list && \
+#         echo 'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse' >> /etc/apt/sources.list && \
+#         echo 'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse' >> /etc/apt/sources.list
 
 RUN apt-get update && apt upgrade -y && apt-get install -y apt-utils && \
         apt-get install -y wget locales sudo nginx mongodb android-sdk-platform-tools-common unzip git openssh-client curl jq libmagic-dev
@@ -60,9 +60,9 @@ RUN bash $HOME/bin/Miniconda3.sh -b -p $CONDA_INS_DIR && \
         conda init bash && \
         source $HOME/.bashrc && \
         . $CONDA_INS_DIR/etc/profile.d/conda.sh && \
-        conda activate base && \
-        pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple && \
-        rm -rfv $HOME/bin/Miniconda3*
+        conda activate base
+        # pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple && \
+        # rm -rfv $HOME/bin/Miniconda3*
 
 RUN pip install /miner_release/Detonator
 RUN pip install /miner_release/DataMiner

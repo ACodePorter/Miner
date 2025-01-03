@@ -1,12 +1,12 @@
 from datetime import datetime, timedelta
 from typing import Optional
 
-import pandas as pd
+import modin.pandas as pd
 import pytz
 from dataminer import MarketDataShovel, TradeCalendarShovel
 from dataminer.models import IndexTickers, Ticker
 from detonator import SingletonParent, make_db_connection, mongo_2_df, get_logger
-from pandas import DataFrame
+from modin.pandas import DataFrame
 
 from .models import MarketBreadthScore, MarketBreadthSectorScore
 
@@ -105,3 +105,18 @@ class MarketBreadth(SingletonParent):
                 _logger.error(
                     f'Failed to update index score for {index_name} on {trade_date}')
         return True
+
+    def get_market_breath(self, market_index: str = 'spx', start_date: Optional[str] = None,
+                          end_date: Optional[str] = None) -> DataFrame:
+        # TODO: update timezone by market_index
+        # TODO: add pagination
+        end_date = end_date or datetime.now(
+            tz=pytz.timezone('America/New_York'))
+        start_date = start_date or datetime.now(
+            tz=pytz.timezone('America/New_York')) - timedelta(days=356)
+        query = {
+            'index_name': market_index,
+            'trade_date__gte': start_date,
+            'trade_date__lte': end_date
+        }
+        return mongo_2_df(MarketBreadthScore.objects(**query).order_by('trade_date'))
