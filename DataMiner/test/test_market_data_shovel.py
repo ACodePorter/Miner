@@ -49,6 +49,13 @@ class MarketDataShvelTestCase(unittest.TestCase):
         print(md.get_tickers_daily_info_on(
             ['AAPL', 'GOOGL'], datetime(year=2024, month=1, day=12)))
 
+    def test_update_spx_tickers_info(self):
+        md: MarketDataShovel = MarketDataShovel.get_instance()
+        md.update_spx_tickers_info()
+
+    def test_update_spx_tickers_daily_info(self):
+        md: MarketDataShovel = MarketDataShovel.get_instance()
+        md.update_spx_tickers_daily_info()
 
 if __name__ == '__main__':
     unittest.main()

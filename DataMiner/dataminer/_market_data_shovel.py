@@ -110,6 +110,7 @@ class MarketDataShovel(SingletonParent):
         if not isinstance(ticker, (str, YTicker)):
             _logger.error(f'update_ticker_info: invalid arg: {ticker}')
             return False
+        _logger.info('update_ticker_info:%s', ticker)
         try:
             make_db_connection()
             if ticker:
@@ -136,8 +137,9 @@ class MarketDataShovel(SingletonParent):
                         return False
 
                 if is_info_full():
-                    _logger.info(f'Tikcer({ticker}) already full, skip')
+                    _logger.info('Tikcer(%s) already full, skip', ticker)
                     return True
+                _logger.info('Fetching info for %s from yahoo', ticker)
                 info = yticker.get_info()
                 self._last_yahoo_fetch_time = datetime.now()
 
@@ -165,6 +167,7 @@ class MarketDataShovel(SingletonParent):
             if tickers := self.get_latest_index_tickers(index_name='spx'):
                 results = {}
                 for ticker in tickers.tickers:
+                    _logger.info('update_spx_tickers_info:%s', ticker)
                     results[ticker] = self.update_ticker_info(ticker)
                     if (datetime.now() - self._last_yahoo_fetch_time).total_seconds() < 2:
                         _logger.info('sleeping ......')

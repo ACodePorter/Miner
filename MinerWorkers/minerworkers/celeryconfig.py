@@ -12,3 +12,5 @@ timezone = 'America/Toronto'
 
 worker_redirect_stdouts = False
 worker_log_format = '[%(asctime)s: %(levelname)s/%(processName)s] %(name)s->%(message)s'
+
+broker_connection_retry_on_startup = True
