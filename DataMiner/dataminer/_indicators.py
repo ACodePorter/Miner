@@ -1,8 +1,5 @@
 from datetime import datetime
 
-
-from concurrent.futures import ProcessPoolExecutor
-
 import os
 from multiprocessing import Pool
 
@@ -105,7 +102,7 @@ def update_spx_daily_sma() -> bool:
             # retry for max 3 times
             temp_results: list = None
             with Pool(processes=os.cpu_count()) as p:
-                temp_results:list = p.map(_update_sma_for_ticker, to_update)
+                temp_results: list = p.map(_update_sma_for_ticker, to_update)
             results = {}
             for r in temp_results:
                 results.update(r)

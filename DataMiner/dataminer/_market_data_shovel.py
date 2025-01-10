@@ -243,7 +243,7 @@ class MarketDataShovel(SingletonParent):
             return True
         except Exception as e:
             _logger.error(
-                'Failed _update_ticker_daily_info for %s', ticker, exc_info=e)
+                'Failed _update_ticker_daily_info for %s', yticker.ticker, exc_info=e)
             return False
 
     def update_spx_tickers_daily_info(self) -> bool:
@@ -273,7 +273,7 @@ class MarketDataShovel(SingletonParent):
                 results = {}
                 for ticker in tickers:
                     results[ticker] = self.update_ticker_daily_info(ticker)
-                    if (datetime.now() - self._last_yahoo_fetch_time).total_seconds()< 2:
+                    if (datetime.now() - self._last_yahoo_fetch_time).total_seconds() < 2:
                         _logger.info('sleeping ......')
                         time.sleep(random() * 6)
                 _logger.info(

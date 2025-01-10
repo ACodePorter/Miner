@@ -1,7 +1,6 @@
 from detonator import is_in_docker
 result_serializer = 'json'
 
-
 rmq_host = 'rabbitmq' if is_in_docker() else '127.0.0.1'
 redis_host = 'redis' if is_in_docker() else '127.0.0.1'
 

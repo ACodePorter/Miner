@@ -57,5 +57,6 @@ class MarketDataShvelTestCase(unittest.TestCase):
         md: MarketDataShovel = MarketDataShovel.get_instance()
         md.update_spx_tickers_daily_info()
 
+
 if __name__ == '__main__':
     unittest.main()
