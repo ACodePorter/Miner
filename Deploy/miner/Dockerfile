@@ -12,21 +12,13 @@ RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure dash
 
 RUN apt-get update && \
         apt-get install -y ca-certificates gnupg curl apt-utils
-# RUN echo 'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse' > /etc/apt/sources.list && \
-#         echo 'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse' >> /etc/apt/sources.list && \
-#         echo 'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse' >> /etc/apt/sources.list && \
-#         echo 'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse' >> /etc/apt/sources.list
 
-RUN curl -fsSL https://www.mongodb.org/static/pgp/server-8.0.asc | gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg --dearmor
-RUN echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/ubuntu noble/mongodb-org/8.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-8.0.list
 RUN apt-get update && apt upgrade -y && \
-        apt-get install -y wget locales sudo nginx mongodb-org unzip git openssh-client curl jq libmagic-dev openssh-client
-# RUN systemctl daemon-reload
-# RUN systemctl start mongod
+        apt-get install -y wget locales sudo nginx unzip git openssh-client curl jq libmagic-dev openssh-client
 
 COPY --chown=root:root nginx.conf /etc/nginx/nginx.conf
 
-RUN useradd miner -G sudo,www-data,plugdev,mongodb -s /bin/bash -m
+RUN useradd miner -G sudo,www-data,plugdev -s /bin/bash -m
 RUN usermod -aG www-data miner
 RUN echo miner:12qw | chpasswd
 
@@ -90,16 +82,4 @@ RUN ssh-keygen -t rsa -b 4096 -f $HOME/.ssh/id_rsa -N ""
 
 COPY --chown=miner:miner .ssh/config $HOME/.ssh/
 
-# Install jdk
-# RUN tar xvf $HOME/bin/jdk-17.0.9_linux-x64_bin.tar.gz -C $HOME/bin
-# ENV JAVA_HOME="$HOME/bin/jdk-17.0.9"
-# ENV PATH="$JAVA_HOME/bin:$PATH"
-# RUN rm -rfv $HOME/bin/jdk-17.0.9_linux-x64_bin.tar.gz
-
-
-# Install nodejs
-# RUN tar xzvf $HOME/bin/node-v16.20.2-linux-x64.tar.gz -C $HOME/bin
-# ENV PATH="$HOME/bin/node-v16.20.2-linux-x64/bin:$PATH"
-
 ENTRYPOINT /miner_release/docker_entry.sh
-# ENTRYPOINT bash

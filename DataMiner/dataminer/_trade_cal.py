@@ -107,7 +107,7 @@ class TradeCalendarShovel(SingletonParent):
                                                                  cal_date=today_date.strftime('%Y%m%d')).first()
             _logger.debug(
                 'last_closed_us_trade_date:%s %s', this_cal_date.is_open, today_date.hour)
-            if this_cal_date.is_open and today_date.hour > 16:
+            if this_cal_date.is_open and today_date.hour >= 16:
                 return this_cal_date.cal_date
             return self.last_us_trade_day_before_today()
         except Exception as e:

@@ -219,6 +219,8 @@ _ticker_info_keys = [
 ]
 
 _logger = get_logger('TickerDailyInfo')
+
+
 def regulate_ticker_daily_info(orig_info: Dict[str, Any]) -> Dict[str, Any]:
     if not '52WeekChange' in orig_info:
         _logger.warning('52WeekChange not found for: %s', orig_info['symbol'])

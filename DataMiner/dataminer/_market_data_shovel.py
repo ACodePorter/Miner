@@ -19,6 +19,7 @@ _tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()
 
 _DEFAULT_SLEEP_TIME = 8
 
+
 class MarketDataShovel(SingletonParent):
     def __init__(self):
         self._last_yahoo_fetch_time = datetime.now()
@@ -144,13 +145,13 @@ class MarketDataShovel(SingletonParent):
                 info = yticker.get_info()
                 self._last_yahoo_fetch_time = datetime.now()
 
-                local_ticker.name = info['shortName']
-                local_ticker.industry = info['industry']
-                local_ticker.industryKey = info['industryKey']
-                local_ticker.industryDisp = info['industryDisp']
-                local_ticker.sector = info['sector']
-                local_ticker.sectorKey = info['sectorKey']
-                local_ticker.sectorDisp = info['sectorDisp']
+                local_ticker.name = info['shortName'] if 'shortName' in info else 'N/A'
+                local_ticker.industry = info['industry'] if 'industry' in info else 'N/A'
+                local_ticker.industryKey = info['industryKey'] if 'industryKey' in info else 'N/A'
+                local_ticker.industryDisp = info['industryDisp'] if 'industryDisp' in info else 'N/A'
+                local_ticker.sector = info['sector'] if 'sector' in info else 'N/A'
+                local_ticker.sectorKey = info['sectorKey'] if 'sectorKey' in info else 'N/A'
+                local_ticker.sectorDisp = info['sectorDisp'] if 'sectorDisp' in info else 'N/A'
                 local_ticker.save()
                 # for k, v in info.items():
                 #     _logger.debug(f'{k}:{v}')
