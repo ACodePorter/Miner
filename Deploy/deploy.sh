@@ -37,6 +37,15 @@ echo $TUSHARE_KEY
 echo $MINER_DATA
 mkdir -p $MINER_DATA
 
+export MONGO_INITDB_ROOT_USERNAME=root
+export MONGO_INITDB_ROOT_PASSWORD=12qw
+if [ -n "$3" ]; then
+    export MONGO_INITDB_ROOT_USERNAME=$3
+fi
+if [ -n "$4" ]; then
+    export MONGO_INITDB_ROOT_PASSWORD=$4
+fi
+
 cd $MY_DIR
 
 mkdir -p $MY_DIR/miner/bin/
@@ -70,7 +79,7 @@ cp -av $MY_DIR/../MinerService/run_service_as_prod_uds.sh $RELEASE_DIR/
 cp -av $MY_DIR/miner/run_socks5_proxy.sh $RELEASE_DIR/
 cp -av $MY_DIR/miner/docker_entry.sh $RELEASE_DIR/
 
-docker compose --project-name miner up --build -d
+docker -D compose --project-name miner up --build -d
 
 cleanup
 

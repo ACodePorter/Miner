@@ -2,9 +2,10 @@ from datetime import datetime
 
 import os
 from multiprocessing import Pool
+from concurrent.futures import ThreadPoolExecutor
 
 import numpy
-from detonator import make_db_connection, get_logger, mongo_2_df, SingletonParent
+from detonator import is_in_daemon, make_db_connection, get_logger, mongo_2_df, SingletonParent
 from mongoengine import QuerySet
 
 from .models import TickerDailyInfo, IndexTickers
@@ -65,6 +66,8 @@ def _update_sma_with_details(ticker: str, interval: str = '1d', period: int = 20
     """
     Before calling this function, you should call update_tikers_daily_info
     """
+    _logger.info('Updating sma for %s @ interval:%s period:%d',
+                 ticker, interval, period)
     try:
         since = _get_since_trade_date_for_sma(
             ticker, interval=interval, period=period)
@@ -77,6 +80,7 @@ def _update_sma_with_details(ticker: str, interval: str = '1d', period: int = 20
 
 
 def _update_sma_for_ticker(ticker: str) -> bool:
+    _logger.info('Updating sma for %s', ticker)
     make_db_connection()
     result = all(
         [
@@ -85,7 +89,7 @@ def _update_sma_for_ticker(ticker: str) -> bool:
             _update_sma_with_details(ticker, interval='1d', period=200),
         ]
     )
-    _logger.warning('Update sma for %s:%s', ticker, result)
+    _logger.info('Updated sma for %s:%s', ticker, result)
     return {ticker: result}
 
 
@@ -98,11 +102,20 @@ def update_spx_daily_sma() -> bool:
             _logger.error('No index tickers found for spx')
             return False
         to_update = index_tickers.tickers
-        for _ in range(3):
+        for i in range(3):
             # retry for max 3 times
+            _logger.info('Updating spx daily sma: %d -> %s', i, to_update)
             temp_results: list = None
-            with Pool(processes=os.cpu_count()) as p:
-                temp_results: list = p.map(_update_sma_for_ticker, to_update)
+            if is_in_daemon():
+                _logger.info('Using ThreadPoolExecutor')
+                with ThreadPoolExecutor() as executor:
+                    temp_results = list(executor.map(
+                        _update_sma_for_ticker, to_update))
+            else:
+                _logger.info('Using Process Pool')
+                with Pool(processes=os.cpu_count()) as p:
+                    temp_results: list = p.map(
+                        _update_sma_for_ticker, to_update)
             results = {}
             for r in temp_results:
                 results.update(r)

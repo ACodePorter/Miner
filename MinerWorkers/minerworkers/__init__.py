@@ -15,5 +15,5 @@ app.autodiscover_tasks(['minerworkers'], force=True)
 
 
 __all__ = [
-    'version'
+    'version',
 ]

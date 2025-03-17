@@ -1,6 +1,6 @@
 from typing import Dict, Any
 
-from detonator import subdict, common_in_list
+from detonator import subdict, common_in_list, get_logger
 from mongoengine import Document, ComplexDateTimeField, StringField, FloatField, LongField
 
 
@@ -218,7 +218,9 @@ _ticker_info_keys = [
     'trailingPegRatio'
 ]
 
-
+_logger = get_logger('TickerDailyInfo')
 def regulate_ticker_daily_info(orig_info: Dict[str, Any]) -> Dict[str, Any]:
-    orig_info['fiftyTwoWeekChange'] = orig_info['52WeekChange']
+    if not '52WeekChange' in orig_info:
+        _logger.warning('52WeekChange not found for: %s', orig_info['symbol'])
+    orig_info['fiftyTwoWeekChange'] = orig_info['52WeekChange'] if '52WeekChange' in orig_info else 0
     return subdict(common_in_list(_ticker_info_keys, list(orig_info.keys())), orig_info)

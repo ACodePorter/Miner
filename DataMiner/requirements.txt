@@ -4,6 +4,7 @@ pycryptodomex
 mongoengine
 pandas
 pandas-datareader
+pymongo
 pysocks
 requests
 requests_html

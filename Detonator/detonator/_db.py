@@ -1,15 +1,19 @@
 from mongoengine import connect, get_connection
 from mongoengine.connection import DEFAULT_CONNECTION_NAME
 
+DEF_MONGO_HOST = 'miner-mongodb'
+DEF_MONGO_PORT = 27017
+DEF_MONGO_DB = 'mongogo'
 
-def make_db_connection(db: str = 'mongogo', host: str = 'localhost', port=27017, alias: str = DEFAULT_CONNECTION_NAME):
+def make_db_connection(db: str = DEF_MONGO_DB, host: str = DEF_MONGO_HOST, port=DEF_MONGO_PORT,
+                        alias: str = DEFAULT_CONNECTION_NAME):
     try:
         get_connection(alias=alias)
     except Exception:
         connect(db=db, host=host, port=port, alias=alias)
 
 
-def ensure_db_connection(db: str = 'mongogo', host: str = 'localhost', port=27017,
+def ensure_db_connection(db: str = DEF_MONGO_DB, host: str = DEF_MONGO_HOST, port=DEF_MONGO_PORT,
                          alias: str = DEFAULT_CONNECTION_NAME):
     def decorator(func):
         def wrapper(*args, **kwargs):

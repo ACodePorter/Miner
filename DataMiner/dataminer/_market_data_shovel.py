@@ -17,6 +17,7 @@ from .models import IndexTickers, Ticker, TickerDailyInfo, regulate_ticker_daily
 _logger = get_logger('MarketDataShovel')
 _tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()
 
+_DEFAULT_SLEEP_TIME = 8
 
 class MarketDataShovel(SingletonParent):
     def __init__(self):
@@ -171,7 +172,7 @@ class MarketDataShovel(SingletonParent):
                     results[ticker] = self.update_ticker_info(ticker)
                     if (datetime.now() - self._last_yahoo_fetch_time).total_seconds() < 2:
                         _logger.info('sleeping ......')
-                        time.sleep(random() * 6)
+                        time.sleep(random() * _DEFAULT_SLEEP_TIME)
                 _logger.info('update_ticker_info results: %s', results)
                 return all(results.values())
             else:
@@ -275,7 +276,7 @@ class MarketDataShovel(SingletonParent):
                     results[ticker] = self.update_ticker_daily_info(ticker)
                     if (datetime.now() - self._last_yahoo_fetch_time).total_seconds() < 2:
                         _logger.info('sleeping ......')
-                        time.sleep(random() * 6)
+                        time.sleep(random() * _DEFAULT_SLEEP_TIME)
                 _logger.info(
                     'update_spx_tickers_daily_info results: %s', results)
                 filtered_dict = {key: value for key,

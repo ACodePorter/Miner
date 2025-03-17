@@ -13,7 +13,7 @@ exec(read_file(os.path.join(os.path.dirname(__file__), 'minerworkers', '_version
 setup(
     name='minerworkers',
     version=version,
-    description='Russell 1000 Miner',
+    description='MinerWorkers',
     # author='',
     # author_email='',
     license='Apache License v2',
