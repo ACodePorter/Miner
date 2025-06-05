@@ -16,11 +16,14 @@ else
     cp $mydir/Deploy/miner/miner.json $HOME/.miner/
 fi
 
-pip install $mydir/Detonator
-pip install $mydir/DataMiner
-pip install $mydir/MarketBreadth
-pip install $mydir/MinerWorkers
-pip install $mydir/MinerService
+
+find "$mydir" -name requirements.txt -exec python -m pip install -q -U -r {} \;
+
+pip install -q $mydir/Detonator
+pip install -q $mydir/DataMiner
+pip install -q $mydir/MarketBreadth
+pip install -q $mydir/MinerWorkers
+pip install -q $mydir/MinerService
 
 set +x
 set +e

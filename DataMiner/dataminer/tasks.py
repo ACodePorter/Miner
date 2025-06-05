@@ -88,6 +88,27 @@ def update_spx_tickers_daily_info_task() -> bool:
 
 
 @app.task
+def update_iwd_tickers_daily_info_task() -> bool:
+    _logger.debug('update_iwd_tickers_daily_info')
+    mds: MarketDataShovel = MarketDataShovel.get_instance()
+    return mds.update_iwd_tickers_daily_info()
+
+
+@app.task
+def update_iwg_tickers_daily_info_task() -> bool:
+    _logger.debug('update_iwg_tickers_daily_info')
+    mds: MarketDataShovel = MarketDataShovel.get_instance()
+    return mds.update_iwg_tickers_daily_info()
+
+
+@app.task
+def update_iwm_tickers_daily_info_task() -> bool:
+    _logger.debug('update_iwm_tickers_daily_info')
+    mds: MarketDataShovel = MarketDataShovel.get_instance()
+    return mds.update_iwm_tickers_daily_info()
+
+
+@app.task
 def update_us_trade_calendar_task() -> bool:
     _logger.debug('update_us_trade_calendar_task')
     tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()

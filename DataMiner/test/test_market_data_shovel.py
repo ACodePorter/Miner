@@ -1,4 +1,3 @@
-import os
 import unittest
 from datetime import datetime
 
@@ -72,6 +71,18 @@ class MarketDataShvelTestCase(unittest.TestCase):
     def test_update_spx_tickers_daily_info(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()
         md.update_spx_tickers_daily_info()
+
+    def test_update_iwd_tickers_daily_info(self):
+        md: MarketDataShovel = MarketDataShovel.get_instance()
+        self.assertTrue(md.update_iwd_tickers_daily_info(), 'Failed to update IWD tickers daily info')
+
+    def test_update_iwg_tickers_daily_info(self):
+        md: MarketDataShovel = MarketDataShovel.get_instance()
+        self.assertTrue(md.update_iwg_tickers_daily_info(), 'Failed to update IWG tickers daily info')
+
+    def test_update_iwm_tickers_daily_info(self):
+        md: MarketDataShovel = MarketDataShovel.get_instance()
+        self.assertTrue(md.update_iwm_tickers_daily_info(), 'Failed to update IWM tickers daily info')
 
 
 if __name__ == '__main__':

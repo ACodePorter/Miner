@@ -1,7 +1,8 @@
 from typing import List
 
 from celery import chain
-from dataminer.tasks import update_iwm_tickers_info_task, update_iwd_tickers_task, update_iwd_tickers_info_task
+from dataminer.tasks import update_iwm_tickers_info_task, update_iwd_tickers_task, update_iwd_tickers_info_task, \
+    update_iwd_tickers_daily_info_task, update_iwg_tickers_daily_info_task, update_iwm_tickers_daily_info_task
 from dataminer.tasks import update_spx_tickers_task, update_iwg_tickers_task, \
     update_spx_tickers_info_task, update_spx_tickers_daily_info_task, \
     update_us_trade_calendar_task, update_tickers_daily_info_task, update_spx_daily_sma_task, update_iwm_tickers_task, \
@@ -52,6 +53,24 @@ async def update_iwm_tickers_info() -> str:
 @app.get('/update_spx_tickers_daily_info')
 async def update_spx_tickers_daily_info() -> str:
     update_spx_tickers_daily_info_task.delay()
+    return 'GOOD'
+
+
+@app.get('/update_iwd_tickers_daily_info')
+async def update_iwd_tickers_daily_info() -> str:
+    update_iwd_tickers_daily_info_task.delay()
+    return 'GOOD'
+
+
+@app.get('/update_iwg_tickers_daily_info')
+async def update_iwg_tickers_daily_info() -> str:
+    update_iwg_tickers_daily_info_task.delay()
+    return 'GOOD'
+
+
+@app.get('/update_iwm_tickers_daily_info')
+async def update_iwm_tickers_daily_info() -> str:
+    update_iwm_tickers_daily_info_task.delay()
     return 'GOOD'
 
 

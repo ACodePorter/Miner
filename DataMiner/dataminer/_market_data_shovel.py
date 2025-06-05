@@ -26,6 +26,7 @@ class MarketDataShovel(SingletonParent):
     A class to fetch and manage market data, including index tickers and ticker information.
     TODO: move spx fetching to separate scraper
     """
+
     def __init__(self):
         self._last_yahoo_fetch_time = datetime.now()
         self._ishares_shovel: IsharesScraper = IsharesScraper.get_instance()
@@ -303,24 +304,38 @@ class MarketDataShovel(SingletonParent):
                 'Failed _update_ticker_daily_info for %s', yticker.ticker, exc_info=e)
             return False
 
-    def update_spx_tickers_daily_info(self) -> bool:
+    def update_tickers_daily_info_by_idx(self, index_name: str = 'spx') -> bool:
         try:
             make_db_connection()
-            if not (tickers := self.get_latest_index_tickers(index_name='spx')):
+            if not (tickers := self.get_latest_index_tickers(index_name=index_name)):
                 return False
             _logger.debug('full: %s', tickers.tickers)
             to_update = list(tickers.tickers)
             for i in range(6):
                 _logger.info(
-                    'update_spx_tickers_daily_info:%s:%s', i, to_update)
+                    'update_tickers_daily_info_by_idx:%s->%s:%s', index_name, i, to_update)
                 to_update = self.update_tickers_daily_info(to_update)
                 if not to_update:
                     return True
                 else:
-                    _logger.info('Re-Update failed tickers: %s', to_update)
-        except Exception as e:
-            _logger.error('Failed to update spx tickers info', exc_info=e)
+                    _logger.warning('Re-Update failed %s tickers: %s', index_name, to_update)
+            _logger.error('Failed to update %s tickers info after 6 attempts', index_name)
             return False
+        except Exception as e:
+            _logger.error('Failed to update %s tickers info', index_name, exc_info=e)
+            return False
+
+    def update_spx_tickers_daily_info(self) -> bool:
+        return self.update_tickers_daily_info_by_idx('spx')
+
+    def update_iwd_tickers_daily_info(self) -> bool:
+        return self.update_tickers_daily_info_by_idx('iwd')
+
+    def update_iwg_tickers_daily_info(self) -> bool:
+        return self.update_tickers_daily_info_by_idx('iwg')
+
+    def update_iwm_tickers_daily_info(self) -> bool:
+        return self.update_tickers_daily_info_by_idx('iwm')
 
     def update_tickers_daily_info(self, tickers: List[str]) -> List[str]:
         _logger.debug('update_tickers_daily_info:%s', tickers)
@@ -336,7 +351,7 @@ class MarketDataShovel(SingletonParent):
                 _logger.info(
                     'update_spx_tickers_daily_info results: %s', results)
                 filtered_dict = {key: value for key,
-                                 value in results.items() if not value}
+                value in results.items() if not value}
                 return list(filtered_dict.keys())
 
             else:
