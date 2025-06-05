@@ -11,7 +11,8 @@ def make_db_connection(db: str = DEF_MONGO_DB, host: str = DEF_MONGO_HOST, port=
     try:
         get_connection(alias=alias)
     except Exception:
-        connect(db=db, host=host, port=port, alias=alias)
+        connect(db=db, host=host, port=port, alias=alias,
+                uuidRepresentation='standard')
 
 
 def ensure_db_connection(db: str = DEF_MONGO_DB, host: str = DEF_MONGO_HOST, port=DEF_MONGO_PORT,

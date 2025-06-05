@@ -1,8 +1,5 @@
 FROM --platform=linux/amd64 ubuntu:24.04
 
-ENV TZ=America/Toronto
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
 ENV AM_I_IN_DOCKER_CONTAINER=Yes
 
 ENV DEBIAN_FRONTEND=noninteractive
@@ -14,7 +11,12 @@ RUN apt-get update && \
         apt-get install -y ca-certificates gnupg curl apt-utils
 
 RUN apt-get update && apt upgrade -y && \
-        apt-get install -y wget locales sudo nginx unzip git openssh-client curl jq libmagic-dev openssh-client
+        apt-get install -y wget locales sudo nginx unzip git openssh-client curl jq libmagic-dev openssh-client \
+        tzdata
+
+# ENV TZ=America/Toronto
+# RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata
+RUN dpkg-reconfigure -f noninteractive tzdata
 
 COPY --chown=root:root nginx.conf /etc/nginx/nginx.conf
 

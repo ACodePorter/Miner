@@ -6,7 +6,7 @@ from detonator import get_logger
 
 from ._financial_shovel import FinancialShovel
 from ._indicators import Indicators
-from ._ishares_shovel import IsharesShovel
+from ._ishares_scraper import IsharesScraper
 from ._market_data_shovel import MarketDataShovel
 from ._ticker_manager import TickerManager
 from ._trade_cal import TradeCalendarShovel
@@ -16,7 +16,7 @@ from .models import Ticker, Balancesheet, CashflowTable, Financials, TradeCalend
 __all__ = [
     'version',
     'Indicators',
-    'IsharesShovel',
+    'IsharesScraper',
     'FinancialShovel',
     'MarketDataShovel',
     'Ticker',

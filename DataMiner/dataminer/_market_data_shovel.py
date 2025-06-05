@@ -2,7 +2,7 @@ import time
 from datetime import datetime
 from functools import reduce
 from random import random
-from typing import List
+from typing import List, Literal
 
 import pandas as pd
 import requests
@@ -11,6 +11,7 @@ from detonator import SingletonParent, get_logger, md5_iterable, make_db_connect
 from pandas import DataFrame
 from yfinance import Ticker as YTicker
 
+from ._ishares_scraper import IsharesScraper
 from ._trade_cal import TradeCalendarShovel
 from .models import IndexTickers, Ticker, TickerDailyInfo, regulate_ticker_daily_info
 
@@ -21,8 +22,13 @@ _DEFAULT_SLEEP_TIME = 8
 
 
 class MarketDataShovel(SingletonParent):
+    """
+    A class to fetch and manage market data, including index tickers and ticker information.
+    TODO: move spx fetching to separate scraper
+    """
     def __init__(self):
         self._last_yahoo_fetch_time = datetime.now()
+        self._ishares_shovel: IsharesScraper = IsharesScraper.get_instance()
 
     def _fetch_spx_tickers(self) -> pd.DataFrame:
         # sourcery skip: extract-method, remove-unnecessary-else
@@ -49,12 +55,29 @@ class MarketDataShovel(SingletonParent):
             _logger.error('Failed to get data from %s', url, exc_info=e)
             return DataFrame()
 
-    def update_spx_tickers(self) -> bool:
+    def _fetch_tickers_by_idx(self, index_name: Literal['spx', 'iwd', 'iwg', 'iwm'] = 'spx') -> pd.DataFrame:
+        """
+        fetch component tickers by index name
+        spx: S&P 500 Index
+        iwd: iShares Russell 1000 Value ETF
+        iwg: iShares Russell 1000 Growth ETF
+        iwm: iShares Russell 2000 ETF
+        """
+        if index_name == 'spx':
+            return self._fetch_spx_tickers()
+        elif index_name in ['iwd', 'iwg', 'iwm']:
+            _logger.info('Fetching %s tickers from ishares_shovel', index_name)
+            return self._ishares_shovel.fetch_tickers_by_idx(index_name=index_name)
+        _logger.warning(
+            'Unknown index: %s, returning empty DataFrame', index_name)
+        return DataFrame()
+
+    def update_tickers_by_idx(self, idx: Literal['spx', 'iwd', 'iwg', 'iwm'] = 'spx') -> bool:
         make_db_connection()
-        if self._is_index_tickers_latest('spx'):
-            _logger.info('spx index already latest, skip updating')
+        if self._is_index_tickers_latest(idx):
+            _logger.info(f'{idx} index already latest, skip updating')
             return True
-        tickers = self._fetch_spx_tickers()
+        tickers = self._fetch_tickers_by_idx(index_name=idx)
         if tickers.empty:
             _logger.error('Got Empty tickers for spx')
             return False
@@ -69,7 +92,7 @@ class MarketDataShovel(SingletonParent):
         as_of_date = _tcs.last_closed_us_trade_date()
         _logger.debug('as_of_date:%s', as_of_date)
         if local_latest_tickers := self.get_latest_index_tickers(
-                index_name='spx'
+                index_name=idx
         ):
             _logger.debug('local_latest_tickers:%s', local_latest_tickers)
             local_md5 = md5_iterable(local_latest_tickers.tickers)
@@ -83,9 +106,21 @@ class MarketDataShovel(SingletonParent):
                 local_latest_tickers.save()
                 return True
         _logger.info('Save new tickers for spx')
-        IndexTickers(index_name='spx', tickers=ticker_list,
+        IndexTickers(index_name=idx, tickers=ticker_list,
                      as_of_date=as_of_date).save()
         return True
+
+    def update_spx_tickers(self) -> bool:
+        return self.update_tickers_by_idx(idx='spx')
+
+    def update_iwd_tickers(self) -> bool:
+        return self.update_tickers_by_idx(idx='iwd')
+
+    def update_iwg_tickers(self) -> bool:
+        return self.update_tickers_by_idx(idx='iwg')
+
+    def update_iwm_tickers(self) -> bool:
+        return self.update_tickers_by_idx(idx='iwm')
 
     def _is_index_tickers_latest(self, index_name: str) -> bool:
         as_of_date = _tcs.last_closed_us_trade_date()
@@ -163,13 +198,21 @@ class MarketDataShovel(SingletonParent):
             _logger.error(f'Failed to update ticker:{ticker}', exc_info=e)
             return False
 
-    def update_spx_tickers_info(self) -> bool:
+    def update_tickers_info(self, tickers: List[str | YTicker]) -> bool:
+        if tickers:
+            return all([self.update_ticker_info(ticker) for ticker in tickers])
+        else:
+            _logger.warning('no tickers provided')
+            return False
+
+    def update_tickers_info_by_idx(self, index_name: str) -> bool:
         try:
             make_db_connection()
-            if tickers := self.get_latest_index_tickers(index_name='spx'):
+            if tickers := self.get_latest_index_tickers(index_name=index_name):
                 results = {}
                 for ticker in tickers.tickers:
-                    _logger.info('update_spx_tickers_info:%s', ticker)
+                    _logger.info('update_tickers_info:%s:%s',
+                                 index_name, ticker)
                     results[ticker] = self.update_ticker_info(ticker)
                     if (datetime.now() - self._last_yahoo_fetch_time).total_seconds() < 2:
                         _logger.info('sleeping ......')
@@ -182,11 +225,23 @@ class MarketDataShovel(SingletonParent):
             _logger.error('Failed to update spx tickers info', exc_info=e)
             return False
 
+    def update_spx_tickers_info(self) -> bool:
+        return self.update_tickers_info_by_idx('spx')
+
+    def update_iwd_tickers_info(self) -> bool:
+        return self.update_tickers_info_by_idx('iwd')
+
+    def update_iwg_tickers_info(self) -> bool:
+        return self.update_tickers_info_by_idx('iwg')
+
+    def update_iwm_tickers_info(self) -> bool:
+        return self.update_tickers_info_by_idx('iwm')
+
     def update_ticker_daily_info(self, ticker: str | YTicker) -> bool:
         if isinstance(ticker, str):
             ticker = ticker.upper()
             yticker: YTicker = YTicker(ticker.replace('.', '-'))
-        elif isinstance(ticker, Ticker):
+        elif isinstance(ticker, YTicker):
             yticker = ticker
             ticker = yticker.ticker.replace('-', '.')
         else:

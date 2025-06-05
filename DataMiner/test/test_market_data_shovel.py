@@ -11,11 +11,27 @@ from dataminer import MarketDataShovel
 class MarketDataShvelTestCase(unittest.TestCase):
 
     def setUp(self):
-        connect('mongogo-test')
+        connect('mongogo-test', uuidRepresentation='standard')
 
-    def test_spx_tickers(self):
+    def test_update_spx_tickers(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()
-        md.update_spx_tickers()
+        self.assertTrue(md.update_spx_tickers(),
+                        'Failed to update SPX tickers')
+
+    def test_update_iwd_tickers(self):
+        md: MarketDataShovel = MarketDataShovel.get_instance()
+        self.assertTrue(md.update_iwd_tickers(),
+                        'Failed to update IWD tickers')
+
+    def test_update_iwg_tickers(self):
+        md: MarketDataShovel = MarketDataShovel.get_instance()
+        self.assertTrue(md.update_iwg_tickers(),
+                        'Failed to update IWG tickers')
+
+    def test_update_iwm_tickers(self):
+        md: MarketDataShovel = MarketDataShovel.get_instance()
+        self.assertTrue(md.update_iwm_tickers(),
+                        'Failed to update IWM tickers')
 
     def test_update_ticker_info(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()

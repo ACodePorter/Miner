@@ -5,7 +5,7 @@ from minerworkers import app
 
 from . import MarketDataShovel
 from ._indicators import Indicators
-from ._ishares_shovel import IsharesShovel
+from ._ishares_scraper import IsharesScraper
 from ._trade_cal import TradeCalendarShovel
 
 _logger = get_logger('DataMiner.Tasks')
@@ -13,7 +13,7 @@ _logger = get_logger('DataMiner.Tasks')
 
 @app.task
 def update_russell1000_tickers_task() -> bool:
-    shovel: IsharesShovel = IsharesShovel.get_instance()
+    shovel: IsharesScraper = IsharesScraper.get_instance()
     return shovel.update_russell1000_tickers_from_ishare_2_db()
 
 
@@ -25,10 +25,59 @@ def update_spx_tickers_task() -> bool:
 
 
 @app.task
+def update_iwd_tickers_task() -> bool:
+    _logger.debug('update_iwd_tickers_task')
+    mds: MarketDataShovel = MarketDataShovel.get_instance()
+    return mds.update_iwd_tickers()
+
+
+@app.task
+def update_iwg_tickers_task() -> bool:
+    _logger.debug('update_iwg_tickers_task')
+    mds: MarketDataShovel = MarketDataShovel.get_instance()
+    return mds.update_iwg_tickers()
+
+
+@app.task
+def update_iwm_tickers_task() -> bool:
+    _logger.debug('update_iwm_tickers_task')
+    mds: MarketDataShovel = MarketDataShovel.get_instance()
+    return mds.update_iwm_tickers()
+
+
+@app.task
 def update_spx_tickers_info_task() -> bool:
     _logger.debug('update_spx_tickers_info_task')
     mds: MarketDataShovel = MarketDataShovel.get_instance()
     return mds.update_spx_tickers_info()
+
+
+@app.task
+def update_iwd_tickers_info_task() -> bool:
+    _logger.debug('update_iwd_tickers_info_task')
+    mds: MarketDataShovel = MarketDataShovel.get_instance()
+    return mds.update_iwd_tickers_info()
+
+
+@app.task
+def update_iwg_tickers_info_task() -> bool:
+    _logger.debug('update_iwg_tickers_info_task')
+    mds: MarketDataShovel = MarketDataShovel.get_instance()
+    return mds.update_iwg_tickers_info()
+
+
+@app.task
+def update_iwm_tickers_info_task() -> bool:
+    _logger.debug('update_iwm_tickers_info_task')
+    mds: MarketDataShovel = MarketDataShovel.get_instance()
+    return mds.update_iwm_tickers_info()
+
+
+@app.task
+def update_tickers_info_task(tickers: List[str]) -> bool:
+    _logger.debug('update_tickers_info_task')
+    mds: MarketDataShovel = MarketDataShovel.get_instance()
+    return mds.update_tickers_info(tickers)
 
 
 @app.task
