@@ -120,6 +120,7 @@ class TickerDailyInfo(Document):
             {'fields': ['trade_date']},
             {'fields': ['trade_date', 'ticker']},
             {'fields': ['ticker', 'trade_date']},
+            {'fields': ['ticker', '-trade_date']},
             {'fields': ['ticker']}
         ]
     }
