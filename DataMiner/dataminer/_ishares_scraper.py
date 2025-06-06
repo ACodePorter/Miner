@@ -18,11 +18,11 @@ _tm: TickerManager = TickerManager.get_instance()
 
 class IsharesScraper(SingletonParent):
     """
-    A class to fetch iwd, iwg, and iwm component tickers from iShares ETF pages.
+    A class to fetch iwd, iwf, and iwm component tickers from iShares ETF pages.
     """
     IDX_URL_MAP = {
         'iwd': 'https://www.ishares.com/us/products/239708/ishares-russell-1000-value-etf',
-        'iwg': 'https://www.ishares.com/us/products/239706/ishares-russell-1000-growth-etf',
+        'iwf': 'https://www.ishares.com/us/products/239706/ishares-russell-1000-growth-etf',
         'iwm': 'https://www.ishares.com/us/products/239710/ishares-russell-2000-etf'
     }
 
@@ -80,7 +80,7 @@ class IsharesScraper(SingletonParent):
                 "Link 'Detailed Holdings and Analytics' not found on the page.")
             return None, None
 
-    def _fetch_tickers_by_idx(self, idx: Literal['iwd', 'iwg', 'iwm']) -> DataFrame:
+    def _fetch_tickers_by_idx(self, idx: Literal['iwd', 'iwf', 'iwm']) -> DataFrame:
         """
         get the component tickers of the specified index, and return a DataFrame with columns ['ticker', 'name'].
         """
@@ -107,7 +107,7 @@ class IsharesScraper(SingletonParent):
                 f'Failed to fetch tickers for index {idx}, href is not found')
             return DataFrame()
 
-    def fetch_tickers_by_idx(self, index_name: Literal['iwd', 'iwg', 'iwm']) -> DataFrame:
+    def fetch_tickers_by_idx(self, index_name: Literal['iwd', 'iwf', 'iwm']) -> DataFrame:
         """
         get the component tickers of the specified index, and return a DataFrame with columns ['ticker', 'name'].
         """
@@ -119,11 +119,11 @@ class IsharesScraper(SingletonParent):
         """
         return self._fetch_tickers_by_idx('iwd')
 
-    def fetch_iwg_tickers(self) -> DataFrame:
+    def fetch_iwf_tickers(self) -> DataFrame:
         """
-        get the component tickers of iwg (iShares Russell 1000 Growth ETF), and return a DataFrame with columns ['ticker', 'name'].
+        get the component tickers of iwf (iShares Russell 1000 Growth ETF), and return a DataFrame with columns ['ticker', 'name'].
         """
-        return self._fetch_tickers_by_idx('iwg')
+        return self._fetch_tickers_by_idx('iwf')
 
     def fetch_iwm_tickers(self) -> DataFrame:
         """

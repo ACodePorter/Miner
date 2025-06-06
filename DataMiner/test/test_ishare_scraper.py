@@ -17,8 +17,8 @@ class IsharesScraperTestCase(unittest.TestCase):
                          'Failed to fetch iwm tickers')
         self.assertFalse(ishare.fetch_iwd_tickers().empty,
                          'Failed to fetch iwd tickers')
-        self.assertFalse(ishare.fetch_iwg_tickers().empty,
-                         'Failed to fetch iwg tickers')
+        self.assertFalse(ishare.fetch_iwf_tickers().empty,
+                         'Failed to fetch iwf tickers')
 
 
 if __name__ == '__main__':

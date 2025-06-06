@@ -9,3 +9,7 @@ def is_in_docker() -> bool:
 
 def is_in_daemon() -> bool:
     return current_process().daemon
+
+
+def is_prod() -> bool:
+    return os.getenv('RUNTIME_ENV', 'DEV') == 'PROD'

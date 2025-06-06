@@ -32,10 +32,10 @@ def update_iwd_tickers_task() -> bool:
 
 
 @app.task
-def update_iwg_tickers_task() -> bool:
-    _logger.debug('update_iwg_tickers_task')
+def update_iwf_tickers_task() -> bool:
+    _logger.debug('update_iwf_tickers_task')
     mds: MarketDataShovel = MarketDataShovel.get_instance()
-    return mds.update_iwg_tickers()
+    return mds.update_iwf_tickers()
 
 
 @app.task
@@ -60,10 +60,10 @@ def update_iwd_tickers_info_task() -> bool:
 
 
 @app.task
-def update_iwg_tickers_info_task() -> bool:
-    _logger.debug('update_iwg_tickers_info_task')
+def update_iwf_tickers_info_task() -> bool:
+    _logger.debug('update_iwf_tickers_info_task')
     mds: MarketDataShovel = MarketDataShovel.get_instance()
-    return mds.update_iwg_tickers_info()
+    return mds.update_iwf_tickers_info()
 
 
 @app.task
@@ -95,10 +95,10 @@ def update_iwd_tickers_daily_info_task() -> bool:
 
 
 @app.task
-def update_iwg_tickers_daily_info_task() -> bool:
-    _logger.debug('update_iwg_tickers_daily_info')
+def update_iwf_tickers_daily_info_task() -> bool:
+    _logger.debug('update_iwf_tickers_daily_info')
     mds: MarketDataShovel = MarketDataShovel.get_instance()
-    return mds.update_iwg_tickers_daily_info()
+    return mds.update_iwf_tickers_daily_info()
 
 
 @app.task

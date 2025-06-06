@@ -1,9 +1,13 @@
 from mongoengine import connect, get_connection
 from mongoengine.connection import DEFAULT_CONNECTION_NAME
 
+from ._env import is_prod
+from ._log import get_logger
+
 DEF_MONGO_HOST = 'miner-mongodb'
 DEF_MONGO_PORT = 27017
 DEF_MONGO_DB = 'mongogo'
+_logger = get_logger('db')
 
 
 def make_db_connection(db: str = DEF_MONGO_DB, host: str = DEF_MONGO_HOST, port=DEF_MONGO_PORT,
@@ -11,7 +15,9 @@ def make_db_connection(db: str = DEF_MONGO_DB, host: str = DEF_MONGO_HOST, port=
     try:
         get_connection(alias=alias)
     except Exception:
-        connect(db=db, host=host, port=port, alias=alias,
+        prod = is_prod()
+        _logger.info('Connecting to mongodb database prod: %s', prod)
+        connect(db=db if prod else 'mongogo-test', host=host if prod else 'localhost', port=port, alias=alias,
                 uuidRepresentation='standard')
 
 

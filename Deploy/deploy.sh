@@ -19,17 +19,29 @@ trap catcher_user_signal SIGKILL
 trap catcher_user_signal SIGQUIT
 trap catcher_user_signal INT
 
+usage() {
+    echo "Usage: $0 <tushare_key> <runtime_env[PROD|TEST|DEV]> [miner_data_dir]"
+    exit 1
+}
+
 if [ -n "$1" ]; then
     export TUSHARE_KEY=$1
 else
-    echo "$0 <tushare_key> [minder_data_dir]"
+    usage
+    exit 1
+fi
+
+if [ -n "$2" ]; then
+    export RUNTIME_ENV=$2
+else
+    usage
     exit 1
 fi
 
 mkdir -p $HOME/.miner/mongogo
 
 export MINER_DATA=$HOME/.miner/data
-if [ -n "$2" ];then
+if [ -n "$3" ];then
     export MINER_DATA=$2
 fi
 

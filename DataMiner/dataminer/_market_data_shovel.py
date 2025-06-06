@@ -56,24 +56,24 @@ class MarketDataShovel(SingletonParent):
             _logger.error('Failed to get data from %s', url, exc_info=e)
             return DataFrame()
 
-    def _fetch_tickers_by_idx(self, index_name: Literal['spx', 'iwd', 'iwg', 'iwm'] = 'spx') -> pd.DataFrame:
+    def _fetch_tickers_by_idx(self, index_name: Literal['spx', 'iwd', 'iwf', 'iwm'] = 'spx') -> pd.DataFrame:
         """
         fetch component tickers by index name
         spx: S&P 500 Index
         iwd: iShares Russell 1000 Value ETF
-        iwg: iShares Russell 1000 Growth ETF
+        iwf: iShares Russell 1000 Growth ETF
         iwm: iShares Russell 2000 ETF
         """
         if index_name == 'spx':
             return self._fetch_spx_tickers()
-        elif index_name in ['iwd', 'iwg', 'iwm']:
+        elif index_name in ['iwd', 'iwf', 'iwm']:
             _logger.info('Fetching %s tickers from ishares_shovel', index_name)
             return self._ishares_shovel.fetch_tickers_by_idx(index_name=index_name)
         _logger.warning(
             'Unknown index: %s, returning empty DataFrame', index_name)
         return DataFrame()
 
-    def update_tickers_by_idx(self, idx: Literal['spx', 'iwd', 'iwg', 'iwm'] = 'spx') -> bool:
+    def update_tickers_by_idx(self, idx: Literal['spx', 'iwd', 'iwf', 'iwm'] = 'spx') -> bool:
         make_db_connection()
         if self._is_index_tickers_latest(idx):
             _logger.info(f'{idx} index already latest, skip updating')
@@ -117,8 +117,8 @@ class MarketDataShovel(SingletonParent):
     def update_iwd_tickers(self) -> bool:
         return self.update_tickers_by_idx(idx='iwd')
 
-    def update_iwg_tickers(self) -> bool:
-        return self.update_tickers_by_idx(idx='iwg')
+    def update_iwf_tickers(self) -> bool:
+        return self.update_tickers_by_idx(idx='iwf')
 
     def update_iwm_tickers(self) -> bool:
         return self.update_tickers_by_idx(idx='iwm')
@@ -232,8 +232,8 @@ class MarketDataShovel(SingletonParent):
     def update_iwd_tickers_info(self) -> bool:
         return self.update_tickers_info_by_idx('iwd')
 
-    def update_iwg_tickers_info(self) -> bool:
-        return self.update_tickers_info_by_idx('iwg')
+    def update_iwf_tickers_info(self) -> bool:
+        return self.update_tickers_info_by_idx('iwf')
 
     def update_iwm_tickers_info(self) -> bool:
         return self.update_tickers_info_by_idx('iwm')
@@ -318,11 +318,14 @@ class MarketDataShovel(SingletonParent):
                 if not to_update:
                     return True
                 else:
-                    _logger.warning('Re-Update failed %s tickers: %s', index_name, to_update)
-            _logger.error('Failed to update %s tickers info after 6 attempts', index_name)
+                    _logger.warning(
+                        'Re-Update failed %s tickers: %s', index_name, to_update)
+            _logger.error(
+                'Failed to update %s tickers info after 6 attempts', index_name)
             return False
         except Exception as e:
-            _logger.error('Failed to update %s tickers info', index_name, exc_info=e)
+            _logger.error('Failed to update %s tickers info',
+                          index_name, exc_info=e)
             return False
 
     def update_spx_tickers_daily_info(self) -> bool:
@@ -331,8 +334,8 @@ class MarketDataShovel(SingletonParent):
     def update_iwd_tickers_daily_info(self) -> bool:
         return self.update_tickers_daily_info_by_idx('iwd')
 
-    def update_iwg_tickers_daily_info(self) -> bool:
-        return self.update_tickers_daily_info_by_idx('iwg')
+    def update_iwf_tickers_daily_info(self) -> bool:
+        return self.update_tickers_daily_info_by_idx('iwf')
 
     def update_iwm_tickers_daily_info(self) -> bool:
         return self.update_tickers_daily_info_by_idx('iwm')
@@ -351,7 +354,7 @@ class MarketDataShovel(SingletonParent):
                 _logger.info(
                     'update_spx_tickers_daily_info results: %s', results)
                 filtered_dict = {key: value for key,
-                value in results.items() if not value}
+                                 value in results.items() if not value}
                 return list(filtered_dict.keys())
 
             else:

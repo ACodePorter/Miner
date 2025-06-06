@@ -10,7 +10,7 @@ _logger = get_logger('TickerManagerTestCase')
 class TickerManagerTestCase(unittest.TestCase):
 
     def setUp(self):
-        make_db_connection(db='mongogo-test')
+        make_db_connection()
 
     def test_get_latest_as_of_date_before(self):
         ticker_manager: TickerManager = TickerManager.get_instance()

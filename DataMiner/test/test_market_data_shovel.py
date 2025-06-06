@@ -1,16 +1,15 @@
 import unittest
 from datetime import datetime
 
-from mongoengine import connect
-from yfinance import Ticker as YTicker
-
 from dataminer import MarketDataShovel
+from detonator import make_db_connection
+from yfinance import Ticker as YTicker
 
 
 class MarketDataShvelTestCase(unittest.TestCase):
 
     def setUp(self):
-        connect('mongogo-test', uuidRepresentation='standard')
+        make_db_connection()
 
     def test_update_spx_tickers(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()
@@ -22,10 +21,10 @@ class MarketDataShvelTestCase(unittest.TestCase):
         self.assertTrue(md.update_iwd_tickers(),
                         'Failed to update IWD tickers')
 
-    def test_update_iwg_tickers(self):
+    def test_update_iwf_tickers(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()
-        self.assertTrue(md.update_iwg_tickers(),
-                        'Failed to update IWG tickers')
+        self.assertTrue(md.update_iwf_tickers(),
+                        'Failed to update iwf tickers')
 
     def test_update_iwm_tickers(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()
@@ -74,15 +73,18 @@ class MarketDataShvelTestCase(unittest.TestCase):
 
     def test_update_iwd_tickers_daily_info(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()
-        self.assertTrue(md.update_iwd_tickers_daily_info(), 'Failed to update IWD tickers daily info')
+        self.assertTrue(md.update_iwd_tickers_daily_info(),
+                        'Failed to update IWD tickers daily info')
 
-    def test_update_iwg_tickers_daily_info(self):
+    def test_update_iwf_tickers_daily_info(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()
-        self.assertTrue(md.update_iwg_tickers_daily_info(), 'Failed to update IWG tickers daily info')
+        self.assertTrue(md.update_iwf_tickers_daily_info(),
+                        'Failed to update iwf tickers daily info')
 
     def test_update_iwm_tickers_daily_info(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()
-        self.assertTrue(md.update_iwm_tickers_daily_info(), 'Failed to update IWM tickers daily info')
+        self.assertTrue(md.update_iwm_tickers_daily_info(),
+                        'Failed to update IWM tickers daily info')
 
 
 if __name__ == '__main__':

@@ -10,7 +10,7 @@ _logger = get_logger('TradeCalTestCase')
 class TradeCalTestCase(unittest.TestCase):
 
     def setUp(self):
-        make_db_connection(db='mongogo-test')
+        make_db_connection()
 
     def test_is_today_us_trade_day(self):
         tcs = TradeCalendarShovel.get_instance()

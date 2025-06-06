@@ -16,13 +16,15 @@ _logger = get_logger('UIB')
 
 
 class MarketBreadthTestCase(unittest.TestCase):
+
+    def setUp(self):
+        make_db_connection()
+
     def test__update_index_breadth(self):
-        make_db_connection(db='mongogo-test')
         mb: MarketBreadth = MarketBreadth.get_instance()
         mb.update_index_breadth('spx')
 
     def test_get_market_breath(self):
-        make_db_connection()
         mb: MarketBreadth = MarketBreadth.get_instance()
         mbs = mb.get_market_breath()
         _logger.debug(type(mbs.to_json(orient='records')))

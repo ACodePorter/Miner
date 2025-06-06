@@ -6,7 +6,7 @@ _l = get_logger('IndicatorsTestCase')
 
 
 class IndicatorsTestCase(unittest.TestCase):
-    make_db_connection(db='mongogo-test')
+    make_db_connection()
 
     def test_update_sma(self):
         indicators: Indicators = Indicators.get_instance()
