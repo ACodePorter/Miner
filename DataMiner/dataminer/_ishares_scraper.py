@@ -94,7 +94,9 @@ class IsharesScraper(SingletonParent):
                                             'Notional Value', 'Quantity', 'Price', 'Location', 'Exchange', 'Currency',
                                             'FX Rate', 'Market Currency', 'Accrual Date'])  # skiprows=9)
             data = data[(data['Asset Class'] == 'Equity')
-                        & (data['Ticker'] != '-')]
+                        & (data['Ticker'] != '-')
+                        & (data['Exchange'] != 'Non-Nms Quotation Service (Nnqs)')
+                        & (data['Exchange'] != 'NO MARKET (E.G. UNLISTED)')]
             data = data.dropna()
             data = data[['Ticker', 'Name']]
             data.sort_values(by=['Ticker'], ascending=True,
