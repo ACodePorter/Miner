@@ -18,7 +18,7 @@ from .models import IndexTickers, Ticker, TickerDailyInfo, regulate_ticker_daily
 _logger = get_logger('MarketDataShovel')
 _tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()
 
-_DEFAULT_SLEEP_TIME = 8
+_DEFAULT_SLEEP_TIME = 7
 
 
 class MarketDataShovel(SingletonParent):
@@ -89,7 +89,7 @@ class MarketDataShovel(SingletonParent):
 
         ticker_list = reduce(lambda x, y: _accamulte(
             x, y), tickers['ticker'].values, [])
-        _logger.debug('ticker list:\n%s', ticker_list)
+        _logger.info('%s ticker list:\n%s', idx, ticker_list)
         as_of_date = _tcs.last_closed_us_trade_date()
         _logger.debug('as_of_date:%s', as_of_date)
         if local_latest_tickers := self.get_latest_index_tickers(
@@ -106,7 +106,7 @@ class MarketDataShovel(SingletonParent):
                 local_latest_tickers.update(as_of_date=as_of_date)
                 local_latest_tickers.save()
                 return True
-        _logger.info('Save new tickers for spx')
+        _logger.info('Save new tickers for %s', idx)
         IndexTickers(index_name=idx, tickers=ticker_list,
                      as_of_date=as_of_date).save()
         return True
@@ -138,17 +138,17 @@ class MarketDataShovel(SingletonParent):
             'as_of_date__gte': as_of_date
         }
         _logger.debug(f'get_index_tickers_on:{queries}')
-        return IndexTickers.objects(**queries).order_by('as_of_date').first()
+        return IndexTickers.objects(**queries).order_by('as_of_date').limit(1).first()
 
     def get_latest_index_tickers(self, index_name: str) -> IndexTickers:
         make_db_connection()
-        return IndexTickers.objects(index_name=index_name).order_by('-as_of_date').first()
+        return IndexTickers.objects(index_name=index_name).order_by('-as_of_date').limit(1).first()
 
     def update_ticker_info(self, ticker: str | YTicker) -> bool:
         if not isinstance(ticker, (str, YTicker)):
             _logger.error(f'update_ticker_info: invalid arg: {ticker}')
             return False
-        _logger.info('update_ticker_info:%s', ticker)
+        _logger.info('updating ticker info: %s', ticker)
         try:
             make_db_connection()
             if ticker:
@@ -164,7 +164,8 @@ class MarketDataShovel(SingletonParent):
                         f'Illegal argument ticker:{ticker} typeof {type(ticker)}')
                     return False
 
-                local_ticker: Ticker = Ticker.objects(ticker__iexact=ticker).order_by('-as_of_date').first() or Ticker(
+                local_ticker: Ticker = Ticker.objects(ticker__iexact=ticker).order_by('-as_of_date').limit(
+                    1).first() or Ticker(
                     ticker=ticker).save()
 
                 def is_info_full() -> bool:
@@ -178,8 +179,11 @@ class MarketDataShovel(SingletonParent):
                     _logger.info('Tikcer(%s) already full, skip', ticker)
                     return True
                 _logger.info('Fetching info for %s from yahoo', ticker)
-                info = yticker.get_info()
+                if (datetime.now() - self._last_yahoo_fetch_time).total_seconds() < 2:
+                    _logger.info('sleeping ......')
+                    time.sleep(random() * _DEFAULT_SLEEP_TIME)
                 self._last_yahoo_fetch_time = datetime.now()
+                info = yticker.get_info()
 
                 local_ticker.name = info['shortName'] if 'shortName' in info else 'N/A'
                 local_ticker.industry = info['industry'] if 'industry' in info else 'N/A'
@@ -208,22 +212,20 @@ class MarketDataShovel(SingletonParent):
 
     def update_tickers_info_by_idx(self, index_name: str) -> bool:
         try:
+            _logger.info(index_name)
             make_db_connection()
             if tickers := self.get_latest_index_tickers(index_name=index_name):
                 results = {}
-                for ticker in tickers.tickers:
-                    _logger.info('update_tickers_info:%s:%s',
-                                 index_name, ticker)
-                    results[ticker] = self.update_ticker_info(ticker)
-                    if (datetime.now() - self._last_yahoo_fetch_time).total_seconds() < 2:
-                        _logger.info('sleeping ......')
-                        time.sleep(random() * _DEFAULT_SLEEP_TIME)
-                _logger.info('update_ticker_info results: %s', results)
+                results = {ticker: self.update_ticker_info(ticker) for ticker in tickers.tickers}
+                false_tickers = [k for k, v in results.items() if not v]
+                _logger.info('%s results: %s',
+                             index_name, ('failure: ' + ','.join(false_tickers)) if false_tickers else 'all success')
                 return all(results.values())
             else:
+                _logger.error('No tickers provided for %s', index_name)
                 return False
         except Exception as e:
-            _logger.error('Failed to update spx tickers info', exc_info=e)
+            _logger.error('Failed to update %s tickers info', index_name, exc_info=e)
             return False
 
     def update_spx_tickers_info(self) -> bool:
@@ -249,11 +251,16 @@ class MarketDataShovel(SingletonParent):
             _logger.error(
                 'Illegal argument for update_ticker_daily_info: %s', ticker)
             return False
+        _logger.info(ticker)
+        now = datetime.now()
         tdi = TickerDailyInfo.objects(
-            ticker__iexact=ticker).order_by('-trade_date').first()
+            ticker__iexact=ticker).order_by('-trade_date').limit(1).first()
+        tdi_time = (datetime.now() - now).total_seconds()
+        if tdi_time > 0.5:
+            _logger.warning('Slow query %s: %s', ticker, tdi_time)
         if trade_dates := _tcs.us_trade_dates_since(tdi.trade_date.strftime('%Y%m%d') if tdi else '00000000'):
             earliest_gap_trade_date = trade_dates[-1]
-            _logger.info('Update ticker daily info for %s', ticker)
+            _logger.info('Update ticker daily info for %s %s', ticker, (datetime.now() - now).total_seconds())
             return self.fetch_ticker_daily_info_to_db(yticker=yticker, start_date=earliest_gap_trade_date,
                                                       end_date=tomorrow_of(_tcs.last_closed_us_trade_date()).strftime(
                                                           '%Y%m%d'))
@@ -277,9 +284,12 @@ class MarketDataShovel(SingletonParent):
                 start_date) if start_date else start_date
             end_date = add_minus_to_YYYYmmdd(
                 end_date) if end_date else end_date
+            if ((datetime.now() - self._last_yahoo_fetch_time).total_seconds() < 2):
+                _logger.info('sleeping ......')
+                time.sleep(random() * _DEFAULT_SLEEP_TIME)
+            self._last_yahoo_fetch_time = datetime.now()
             his: DataFrame = yticker.history(
                 start=start_date, end=end_date, interval=interval, period=period)
-            self._last_yahoo_fetch_time = datetime.now()
             if his.empty:
                 _logger.error(
                     'Failed to get history for %s from yahoo', yticker)
@@ -295,7 +305,7 @@ class MarketDataShovel(SingletonParent):
             info = yticker.info
             regulated_info = regulate_ticker_daily_info(info)
             tdi: TickerDailyInfo = TickerDailyInfo.objects.order_by(
-                '-trade_date').first()
+                '-trade_date').limit(1).first()
             tdi.update(**regulated_info)
             tdi.save()
             return True
@@ -321,7 +331,7 @@ class MarketDataShovel(SingletonParent):
                     _logger.warning(
                         'Re-Update failed %s tickers: %s', index_name, to_update)
             _logger.error(
-                'Failed to update %s tickers info after 6 attempts', index_name)
+                'Failed to update %s tickers info after 6 attempts: ', ','.join(index_name))
             return False
         except Exception as e:
             _logger.error('Failed to update %s tickers info',
@@ -341,20 +351,17 @@ class MarketDataShovel(SingletonParent):
         return self.update_tickers_daily_info_by_idx('iwm')
 
     def update_tickers_daily_info(self, tickers: List[str]) -> List[str]:
-        _logger.debug('update_tickers_daily_info:%s', tickers)
+        _logger.debug('tickers:%s', tickers)
         try:
             make_db_connection()
             if tickers:
                 results = {}
                 for ticker in tickers:
+                    now = datetime.now()
                     results[ticker] = self.update_ticker_daily_info(ticker)
-                    if (datetime.now() - self._last_yahoo_fetch_time).total_seconds() < 2:
-                        _logger.info('sleeping ......')
-                        time.sleep(random() * _DEFAULT_SLEEP_TIME)
-                _logger.info(
-                    'update_spx_tickers_daily_info results: %s', results)
+                    _logger.info('%s loop time for %s', ticker, (datetime.now() - now).total_seconds())
                 filtered_dict = {key: value for key,
-                                 value in results.items() if not value}
+                value in results.items() if not value}
                 return list(filtered_dict.keys())
 
             else:
@@ -362,7 +369,7 @@ class MarketDataShovel(SingletonParent):
                 return tickers
         except Exception as e:
             _logger.error(
-                'Failed to update_tickers_daily_info for %s', tickers, exc_info=e)
+                'Failed to update daily info for %s', tickers, exc_info=e)
             return tickers
 
     def get_tickers_daily_info_on(self, tickers: str | List[str], trade_date: str | datetime,

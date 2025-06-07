@@ -62,12 +62,12 @@ RUN bash $HOME/bin/Miniconda3.sh -b -p $CONDA_INS_DIR && \
         conda activate base
         # pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple && \
         # rm -rfv $HOME/bin/Miniconda3*
-
-RUN pip install /miner_release/Detonator
-RUN pip install /miner_release/DataMiner
-RUN pip install /miner_release/MarketBreadth
-RUN pip install /miner_release/MinerWorkers
-RUN pip install /miner_release/MinerService
+RUN pip install uv
+RUN uv pip install --system /miner_release/Detonator
+RUN uv pip install --system /miner_release/DataMiner
+RUN uv pip install --system /miner_release/MarketBreadth
+RUN uv pip install --system /miner_release/MinerWorkers
+RUN uv pip install --system /miner_release/MinerService
 
 RUN mkdir -p $HOME/.miner
 COPY --chown=miner:miner miner.json $HOME/.miner/miner.json

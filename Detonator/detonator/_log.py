@@ -8,7 +8,7 @@ from rich.logging import RichHandler
 
 from ._path import to_real_abs_path
 
-_DEFAULT_LOG_FORMAT = '%(asctime)s.%(msecs)d:%(name)s:%(levelname)s: %(message)s'
+_DEFAULT_LOG_FORMAT = '[%(asctime)s.%(msecs)d %(levelname)s] %(name)s:%(funcName)s-> %(message)s'
 _DEFAULT_LOG_DATE_FORMAT = '%Y%m%d %H%M%S'
 
 logging.basicConfig(format=_DEFAULT_LOG_FORMAT, datefmt=_DEFAULT_LOG_DATE_FORMAT,

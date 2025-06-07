@@ -29,19 +29,16 @@ class TradeCalendarShovel(SingletonParent):
                 .only('cal_date')
                 .first()
             ):
-                _logger.debug(f'latest_cal_date: {latest_cal_date.cal_date}')
                 args['start_date'] = (
                     datetime.datetime.strptime(latest_cal_date.cal_date, '%Y%m%d') + datetime.timedelta(
                         days=1)).strftime(
                     '%Y%m%d')
-                _logger.debug(f'update_us_trade_calendar args: {args}')
                 if args['start_date'] > args['end_date']:
-                    _logger.info(f'skip update_us_trade_calendar: {args}')
+                    _logger.info(f'us trade cal up to date, skip updating: {args}')
                     return
-            _logger.debug(f'update_us_trade_calendar: {args}')
             cal_df = ts.pro_api().us_tradecal(**args)
             cal_df['country'] = 'us'
-            _logger.debug(f'update_us_trade_calendar: {cal_df}')
+            _logger.info(f'update_us_trade_calendar: {cal_df}')
             df_2_mongo(cal_df, TradeCalendar)
         except Exception as e:
             _logger.error(f'update_us_trade_calendar failed: {e}')
@@ -52,7 +49,6 @@ class TradeCalendarShovel(SingletonParent):
             self.update_us_trade_calendar()
             today_date = datetime.datetime.now(
                 pytz.timezone('America/New_York')).strftime('%Y%m%d')
-            _logger.debug(f'today_date: {today_date}')
             return TradeCalendar.objects(country='us', cal_date=today_date).first().is_open == True
         except Exception as e:
             _logger.error(f'is_today_us_trade_day failed: {e}')
@@ -64,7 +60,6 @@ class TradeCalendarShovel(SingletonParent):
             self.update_us_trade_calendar()
             today_date = datetime.datetime.now(
                 pytz.timezone('America/New_York')).strftime('%Y%m%d')
-            _logger.debug(f'today_date: {today_date}')
             return TradeCalendar.objects(country='us', cal_date__lt=today_date, is_open=True).order_by('-cal_date') .first().cal_date
         except Exception as e:
             _logger.error(
@@ -84,7 +79,6 @@ class TradeCalendarShovel(SingletonParent):
             end_date, str) else end_date.strftime('%Y%m%d')
         try:
             self.update_us_trade_calendar()
-            _logger.debug(f'us_trade_dates_since:{start_date}->{end_date}')
             trade_dates = TradeCalendar.objects(cal_date__gt=start_date,
                                                 cal_date__lte=end_date, country='us',
                                                 is_open=True).order_by('-cal_date')
@@ -105,8 +99,6 @@ class TradeCalendarShovel(SingletonParent):
                 pytz.timezone('America/New_York'))
             this_cal_date: TradeCalendar = TradeCalendar.objects(country='us',
                                                                  cal_date=today_date.strftime('%Y%m%d')).first()
-            _logger.debug(
-                'last_closed_us_trade_date:%s %s', this_cal_date.is_open, today_date.hour)
             if this_cal_date.is_open and today_date.hour >= 16:
                 return this_cal_date.cal_date
             return self.last_us_trade_day_before_today()

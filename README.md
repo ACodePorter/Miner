@@ -30,6 +30,7 @@ open http://localhost/docs, you'll see.
 
 ## TODO
 
+- [X] ~~improve deployment speed by using uv instead of pip~~
 - [ ] avoid querying db for trade calendar every time before getting stock data
     - [ ] add a cache for trade calendar, like 1 day
 - [ ] regular russell index ticker names(class A/class B stock tickers incorrect, like BFA/BFB)
