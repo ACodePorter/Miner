@@ -1,4 +1,5 @@
 import unittest
+
 from dataminer import Indicators
 from detonator import make_db_connection, get_logger
 
@@ -7,13 +8,6 @@ _l = get_logger('IndicatorsTestCase')
 
 class IndicatorsTestCase(unittest.TestCase):
     make_db_connection()
-
-    def test_update_sma(self):
-        indicators: Indicators = Indicators.get_instance()
-        ret = indicators.update_sma('aapl')
-        ret = indicators.update_sma('aapl', period=50)
-        ret = indicators.update_sma('aapl', period=200)
-        _l.debug(ret)
 
     def test_update_spx_daily_sma(self):
         indicators: Indicators = Indicators.get_instance()
