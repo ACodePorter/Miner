@@ -30,6 +30,8 @@ open http://localhost/docs, you'll see.
 
 ## TODO
 
+- [ ] mongo db query performance optimization
+    - [ ] replace mongoengine with pymongo
 - [X] ~~improve deployment speed by using uv instead of pip~~
 - [ ] avoid querying db for trade calendar every time before getting stock data
     - [ ] add a cache for trade calendar, like 1 day

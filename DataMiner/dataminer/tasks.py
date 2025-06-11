@@ -128,3 +128,10 @@ def update_spx_daily_sma_task() -> bool:
     _logger.debug('update_spx_daily_sma_task')
     indicators: Indicators = Indicators.get_instance()
     return indicators.update_spx_daily_sma()
+
+
+@app.task
+def update_indicators_for_tickers_task(tickers: List[str]) -> bool:
+    _logger.debug('update_indicators_for_tickers_task')
+    indicators: Indicators = Indicators.get_instance()
+    return indicators.update_indicators_for_tickers(tickers)

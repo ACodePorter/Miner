@@ -6,7 +6,7 @@ from dataminer.tasks import update_iwm_tickers_info_task, update_iwd_tickers_tas
 from dataminer.tasks import update_spx_tickers_task, update_iwf_tickers_task, \
     update_spx_tickers_info_task, update_spx_tickers_daily_info_task, \
     update_us_trade_calendar_task, update_tickers_daily_info_task, update_spx_daily_sma_task, update_iwm_tickers_task, \
-    update_iwf_tickers_info_task
+    update_iwf_tickers_info_task, update_indicators_for_tickers_task
 from detonator import make_db_connection
 from fastapi import FastAPI
 from marketbreadth import MarketBreadth
@@ -83,6 +83,12 @@ async def update_tickers_daily_info(tickers: List[str]) -> str:
 @app.get('/update_spx_daily_sma')
 async def update_spx_daily_sma() -> str:
     update_spx_daily_sma_task.delay()
+    return 'GOOD'
+
+
+@app.post('/update_indicators_for_tickers')
+async def update_indicators_for_tickers(tickers: List[str]) -> str:
+    update_indicators_for_tickers_task.delay(tickers=tickers)
     return 'GOOD'
 
 

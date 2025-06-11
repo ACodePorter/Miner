@@ -158,3 +158,14 @@ class Indicators(SingletonParent):
 
     def update_spx_daily_sma(self) -> bool:
         return update_daily_ma_by_idx('spx')
+
+    def update_indicators_for_tickers(self, tickers: list[str]) -> bool:
+        """
+        Update indicators for the given list of tickers.
+        :param tickers: List of ticker symbols.
+        :return: Dictionary with ticker as key and update status as value.
+        """
+        results = {}
+        for ticker in tickers:
+            results[ticker] = _update_ma_for_ticker(ticker)
+        return all(results.values())

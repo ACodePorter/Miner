@@ -14,6 +14,7 @@ from yfinance import Ticker as YTicker
 from ._ishares_scraper import IsharesScraper
 from ._trade_cal import TradeCalendarShovel
 from .models import IndexTickers, Ticker, TickerDailyInfo, regulate_ticker_daily_info
+from .utils import TickerRegulator
 
 _logger = get_logger('MarketDataShovel')
 _tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()
@@ -30,6 +31,7 @@ class MarketDataShovel(SingletonParent):
     def __init__(self):
         self._last_yahoo_fetch_time = datetime.now()
         self._ishares_shovel: IsharesScraper = IsharesScraper.get_instance()
+        self._ticker_regulator: TickerRegulator = TickerRegulator.get_instance()
 
     def _fetch_spx_tickers(self) -> pd.DataFrame:
         # sourcery skip: extract-method, remove-unnecessary-else
@@ -84,6 +86,7 @@ class MarketDataShovel(SingletonParent):
             return False
 
         def _accamulte(l: list, i) -> list:
+            i = self._ticker_regulator.validate_ticker(i)
             l.append(i)
             return l
 
