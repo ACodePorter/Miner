@@ -1,5 +1,4 @@
 import time
-import traceback
 from threading import Lock
 
 import requests
@@ -29,13 +28,13 @@ class TickerRegulator(SingletonParent):
                 self._refresh_cache()
             if ticker.upper() in self._tickers:
                 return ticker.upper()
-            t = (ticker[:-1] + '-' + ticker[-1]).upper()
+            t = f'{ticker[:-1]}-{ticker[-1]}'.upper()
             return t if t in self._tickers else ''
 
     def _refresh_cache(self):
         try:
             headers = {
-                'User-Agent': 'YourAppName/1.0 (your.email@example.com)'
+                'User-Agent': 'Miner/0.0.2 leran0222@gmail.com)'
             }
             url = "https://www.sec.gov/files/company_tickers.json"
             response = requests.get(url, headers=headers)
@@ -45,6 +44,5 @@ class TickerRegulator(SingletonParent):
             self._last_updated = time.time()
             _logger.info('Refreshed tickers')
         except Exception as e:
-            _logger.error(f"Failed to refresh ticker cache", exc_info=e)
+            _logger.error("Failed to refresh ticker cache", exc_info=e)
             self._tickers = set()
-

@@ -85,12 +85,13 @@ class MarketDataShovel(SingletonParent):
             _logger.error('Got Empty tickers for spx')
             return False
 
-        def _accamulte(l: list, i) -> list:
+        def _accumulte(l: list, i) -> list:
             i = self._ticker_regulator.validate_ticker(i)
-            l.append(i)
+            if i:
+                l.append(i)
             return l
 
-        ticker_list = reduce(lambda x, y: _accamulte(
+        ticker_list = reduce(lambda x, y: _accumulte(
             x, y), tickers['ticker'].values, [])
         _logger.info('%s ticker list:\n%s', idx, ticker_list)
         as_of_date = _tcs.last_closed_us_trade_date()
