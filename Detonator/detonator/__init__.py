@@ -8,6 +8,7 @@ from ._db import ensure_db_connection, make_db_connection
 from ._env import is_in_docker, is_in_daemon, is_prod
 from ._hash import md5_str, md5_iterable
 from ._log import get_logger
+from ._run_utils import sleep
 from ._singleton_meta import SingletonParent, SingletonMeta
 from ._version import version
 
@@ -22,6 +23,7 @@ __all__ = [
     'is_in_docker', 'is_in_daemon', 'is_prod',
     'md5_str', 'md5_iterable',
     'get_logger',
+    'sleep',
     'SingletonParent', 'SingletonMeta',
     'version',
 ]

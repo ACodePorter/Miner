@@ -7,7 +7,7 @@ from typing import List, Literal
 import pandas as pd
 import requests
 from detonator import SingletonParent, get_logger, md5_iterable, make_db_connection, df_2_mongo, add_minus_to_YYYYmmdd, \
-    tomorrow_of, datetime_from_str, mongo_2_df
+    tomorrow_of, datetime_from_str, mongo_2_df, sleep
 from pandas import DataFrame
 from yfinance import Ticker as YTicker
 
@@ -18,8 +18,6 @@ from .utils import TickerRegulator
 
 _logger = get_logger('MarketDataShovel')
 _tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()
-
-_DEFAULT_SLEEP_TIME = 7
 
 
 class MarketDataShovel(SingletonParent):
@@ -185,7 +183,7 @@ class MarketDataShovel(SingletonParent):
                 _logger.info('Fetching info for %s from yahoo', ticker)
                 if (datetime.now() - self._last_yahoo_fetch_time).total_seconds() < 2:
                     _logger.info('sleeping ......')
-                    time.sleep(random() * _DEFAULT_SLEEP_TIME)
+                    sleep()
                 self._last_yahoo_fetch_time = datetime.now()
                 info = yticker.get_info()
 
@@ -290,7 +288,7 @@ class MarketDataShovel(SingletonParent):
                 end_date) if end_date else end_date
             if ((datetime.now() - self._last_yahoo_fetch_time).total_seconds() < 2):
                 _logger.info('sleeping ......')
-                time.sleep(random() * _DEFAULT_SLEEP_TIME)
+                sleep()
             self._last_yahoo_fetch_time = datetime.now()
             his: DataFrame = yticker.history(
                 start=start_date, end=end_date, interval=interval, period=period)
