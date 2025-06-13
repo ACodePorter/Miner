@@ -14,9 +14,8 @@ RUN apt-get update && apt upgrade -y && \
         apt-get install -y wget locales sudo nginx unzip git openssh-client curl jq libmagic-dev openssh-client \
         tzdata
 
-# ENV TZ=America/Toronto
-# RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata
-RUN dpkg-reconfigure -f noninteractive tzdata
+ENV TZ=America/Toronto
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata
 
 COPY --chown=root:root nginx.conf /etc/nginx/nginx.conf
 
@@ -74,8 +73,7 @@ COPY --chown=miner:miner miner.json $HOME/.miner/miner.json
 RUN touch $HOME/.miner/miner.log
 
 RUN mkdir $HOME/.ssh && \
-        ssh-keyscan -H github.com >> $HOME/.ssh/known_hosts \
-        ssh-keyscan -H 54.153.40.36 >> $HOME/.ssh/known_hosts
+        ssh-keyscan -H github.com >> $HOME/.ssh/known_hosts
 #         ssh-keyscan -H  -p 29418 github.com >> $HOME/.ssh/known_hosts
 
 # RUN ssh-keygen -q -t rsa -N '' -f $HOME/.ssh/id_rsa <<<y 
