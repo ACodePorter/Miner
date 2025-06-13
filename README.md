@@ -25,6 +25,8 @@ register a free account at https://tushare.pro/register?reg=253543, and get a ap
 
 ## TODO
 
+- [ ] add MCP server for stock market data
+- [ ] add sec edgar data
 - [ ] mongo db query performance optimization
     - [ ] replace mongoengine with pymongo
 - [X] improve deployment speed by using uv instead of pip
