@@ -166,7 +166,7 @@ class MarketDataShovel(SingletonParent):
                         f'Illegal argument ticker:{ticker} typeof {type(ticker)}')
                     return False
 
-                local_ticker: Ticker = Ticker.objects(ticker__iexact=ticker).order_by('-as_of_date').limit(
+                local_ticker: Ticker = Ticker.objects(ticker=ticker).order_by('-as_of_date').limit(
                     1).first() or Ticker(
                     ticker=ticker).save()
 
@@ -256,7 +256,7 @@ class MarketDataShovel(SingletonParent):
         _logger.info(ticker)
         now = datetime.now()
         tdi = TickerDailyInfo.objects(
-            ticker__iexact=ticker).order_by('-trade_date').limit(1).first()
+            ticker=ticker).order_by('-trade_date').limit(1).first()
         tdi_time = (datetime.now() - now).total_seconds()
         if tdi_time > 0.5:
             _logger.warning('Slow query %s: %s', ticker, tdi_time)

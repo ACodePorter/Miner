@@ -26,8 +26,8 @@ def _get_since_trade_date_for_indicator(ticker: str, indicator: Literal['sma', '
     """
     ticker = ticker.upper()
     query = {
-        'ticker__iexact': ticker,
-        'interval__iexact': interval,
+        'ticker': ticker,
+        'interval': interval,
         f'{indicator}{period}__exists': True
     }
 
@@ -37,8 +37,8 @@ def _get_since_trade_date_for_indicator(ticker: str, indicator: Literal['sma', '
     info: TickerDailyInfo = infos.first()
 
     query = {
-        'ticker__iexact': ticker,
-        'interval__iexact': interval,
+        'ticker': ticker,
+        'interval': interval,
         'trade_date__lte': info.trade_date
     }
     info = TickerDailyInfo.objects(**query).order_by('-trade_date').skip(period).first()
