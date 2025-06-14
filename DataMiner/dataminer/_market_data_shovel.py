@@ -333,7 +333,7 @@ class MarketDataShovel(SingletonParent):
                     _logger.warning(
                         'Re-Update failed %s tickers: %s', index_name, to_update)
             _logger.error(
-                'Failed to update %s tickers info after 6 attempts: ', ','.join(index_name))
+                'Failed to update %s tickers info after 6 attempts: ', index_name)
             return False
         except Exception as e:
             _logger.error('Failed to update %s tickers info',
