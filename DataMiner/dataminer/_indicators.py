@@ -31,7 +31,7 @@ def _get_since_trade_date_for_indicator(ticker: str, indicator: Literal['sma', '
         f'{indicator}{period}__exists': True
     }
 
-    infos: QuerySet = TickerDailyInfo.objects(**query).order_by('-trade_date').limit(1)
+    infos: QuerySet = TickerDailyInfo.objects(**query).order_by('-trade_date').limit(1).hint([('ticker', 1), ('interval', 1), (f'{indicator}{period}', 1)])
     if infos.count() == 0:
         return None
     info: TickerDailyInfo = infos.first()
@@ -55,7 +55,7 @@ def _calculate_indicator(ticker: str, indicator: Literal['sma', 'ema'] = 'sma', 
     _logger.info(
         'Calculating %s for %s since %s @ interval:%s period:%d', indicator, ticker, since, interval, period)
     ticker = ticker.upper()
-    query = {'ticker__iexact': ticker, 'interval__iexact': interval}
+    query = {'ticker': ticker, 'interval': interval}
     if since:
         query['trade_date__gte'] = since if isinstance(
             since, datetime) else datetime.strptime(since, '%Y%m%d')

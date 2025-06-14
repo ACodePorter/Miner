@@ -126,6 +126,13 @@ class TickerDailyInfo(Document):
             {'fields': ['ticker', '-trade_date']},
             {'fields': ['ticker']},
             {'fields': ['ticker', 'interval', 'trade_date']},
+            {'fields': ['ticker', 'interval', 'ema10']},
+            {'fields': ['ticker', 'interval', 'ema20']},
+            {'fields': ['ticker', 'interval', 'sma10']},
+            {'fields': ['ticker', 'interval', 'sma20']},
+            {'fields': ['ticker', 'interval', 'sma50']},
+            {'fields': ['ticker', 'interval', 'sma200']},
+            {'fields': ['interval', 'ticker', 'trade_date']},
         ]
     }
 
