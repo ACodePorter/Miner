@@ -5,8 +5,8 @@ from dataminer.tasks import update_iwm_tickers_info_task, update_iwd_tickers_tas
     update_iwd_tickers_daily_info_task, update_iwf_tickers_daily_info_task, update_iwm_tickers_daily_info_task
 from dataminer.tasks import update_spx_tickers_task, update_iwf_tickers_task, \
     update_spx_tickers_info_task, update_spx_tickers_daily_info_task, \
-    update_us_trade_calendar_task, update_tickers_daily_info_task, update_spx_daily_sma_task, update_iwm_tickers_task, \
-    update_iwf_tickers_info_task, update_indicators_for_tickers_task
+    update_us_trade_calendar_task, update_tickers_daily_info_task, update_spx_daily_ma_task, update_iwm_tickers_task, \
+    update_iwf_tickers_info_task, update_indicators_for_tickers_task, run_daily_updates_task, update_iw_daily_ma_task
 from detonator import make_db_connection
 from fastapi import FastAPI
 from marketbreadth import MarketBreadth
@@ -80,9 +80,21 @@ async def update_tickers_daily_info(tickers: List[str]) -> str:
     return 'GOOD'
 
 
-@app.get('/update_spx_daily_sma')
-async def update_spx_daily_sma() -> str:
-    update_spx_daily_sma_task.delay()
+@app.get('/update_all_above', description='Update all above tasks to fetch latest data')
+async def update_all_above() -> str:
+    run_daily_updates_task.delay()
+    return 'GOOD'
+
+
+@app.get('/update_spx_daily_ma')
+async def update_spx_daily_ma() -> str:
+    update_spx_daily_ma_task.delay()
+    return 'GOOD'
+
+
+@app.get('/update_iw_daily_ma')
+async def update_iw_daily_ma() -> str:
+    update_iw_daily_ma_task.delay()
     return 'GOOD'
 
 

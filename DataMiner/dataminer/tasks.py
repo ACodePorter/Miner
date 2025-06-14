@@ -125,11 +125,19 @@ def update_tickers_daily_info_task(tickers: List[str]) -> bool:
 
 
 @app.task
-def update_spx_daily_sma_task() -> bool:
+def update_spx_daily_ma_task() -> bool:
     _logger.debug('update_spx_daily_sma_task')
     indicators: Indicators = Indicators.get_instance()
-    return indicators.update_spx_daily_sma()
+    return indicators.update_spx_daily_ma()
 
+@app.task
+def update_iw_daily_ma_task() -> bool:
+    _logger.debug('update_iw_daily_ma_task')
+    indicators: Indicators = Indicators.get_instance()
+    indicators.update_daily_ma_by_idx('iwd')
+    indicators.update_daily_ma_by_idx('iwf')
+    indicators.update_daily_ma_by_idx('iwm')
+    return True
 
 @app.task
 def update_indicators_for_tickers_task(tickers: List[str]) -> bool:

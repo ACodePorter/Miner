@@ -220,8 +220,11 @@ class Indicators(SingletonParent):
     def __init__(self):
         make_db_connection()
 
-    def update_spx_daily_sma(self) -> bool:
+    def update_spx_daily_ma(self) -> bool:
         return update_daily_ma_by_idx('spx')
+
+    def update_daily_ma_by_idx(self, index_name: str) -> bool:
+        return update_daily_ma_by_idx(index_name)
 
     def update_indicators_for_tickers(self, tickers: list[str]) -> bool:
         """
