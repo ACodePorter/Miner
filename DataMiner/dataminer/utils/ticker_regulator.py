@@ -40,7 +40,8 @@ class TickerRegulator(SingletonParent):
             response = requests.get(url, headers=headers)
             response.raise_for_status()
             data = response.json()
-            self._tickers = {entry['ticker'].upper() for entry in data.values()}
+            self._tickers = {entry['ticker'].upper()
+                             for entry in data.values()}
             self._last_updated = time.time()
             _logger.info('Refreshed tickers')
         except Exception as e:

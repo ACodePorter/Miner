@@ -218,7 +218,8 @@ class MarketDataShovel(SingletonParent):
             make_db_connection()
             if tickers := self.get_latest_index_tickers(index_name=index_name):
                 results = {}
-                results = {ticker: self.update_ticker_info(ticker) for ticker in tickers.tickers}
+                results = {ticker: self.update_ticker_info(
+                    ticker) for ticker in tickers.tickers}
                 false_tickers = [k for k, v in results.items() if not v]
                 _logger.info('%s results: %s',
                              index_name, ('failure: ' + ','.join(false_tickers)) if false_tickers else 'all success')
@@ -227,7 +228,8 @@ class MarketDataShovel(SingletonParent):
                 _logger.error('No tickers provided for %s', index_name)
                 return False
         except Exception as e:
-            _logger.error('Failed to update %s tickers info', index_name, exc_info=e)
+            _logger.error('Failed to update %s tickers info',
+                          index_name, exc_info=e)
             return False
 
     def update_spx_tickers_info(self) -> bool:
@@ -262,7 +264,8 @@ class MarketDataShovel(SingletonParent):
             _logger.warning('Slow query %s: %s', ticker, tdi_time)
         if trade_dates := _tcs.us_trade_dates_since(tdi.trade_date.strftime('%Y%m%d') if tdi else '00000000'):
             earliest_gap_trade_date = trade_dates[-1]
-            _logger.info('Update ticker daily info for %s %s', ticker, (datetime.now() - now).total_seconds())
+            _logger.info('Update ticker daily info for %s %s',
+                         ticker, (datetime.now() - now).total_seconds())
             return self.fetch_ticker_daily_info_to_db(yticker=yticker, start_date=earliest_gap_trade_date,
                                                       end_date=tomorrow_of(_tcs.last_closed_us_trade_date()).strftime(
                                                           '%Y%m%d'))
@@ -361,9 +364,10 @@ class MarketDataShovel(SingletonParent):
                 for ticker in tickers:
                     now = datetime.now()
                     results[ticker] = self.update_ticker_daily_info(ticker)
-                    _logger.info('%s loop time for %s', ticker, (datetime.now() - now).total_seconds())
+                    _logger.info('%s loop time for %s', ticker,
+                                 (datetime.now() - now).total_seconds())
                 filtered_dict = {key: value for key,
-                value in results.items() if not value}
+                                 value in results.items() if not value}
                 return list(filtered_dict.keys())
 
             else:

@@ -34,7 +34,8 @@ class TradeCalendarShovel(SingletonParent):
                         days=1)).strftime(
                     '%Y%m%d')
                 if args['start_date'] > args['end_date']:
-                    _logger.info(f'us trade cal up to date, skip updating: {args}')
+                    _logger.info(
+                        f'us trade cal up to date, skip updating: {args}')
                     return
             cal_df = ts.pro_api().us_tradecal(**args)
             cal_df['country'] = 'us'

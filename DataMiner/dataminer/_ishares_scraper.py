@@ -98,9 +98,10 @@ class IsharesScraper(SingletonParent):
                         & (data['Exchange'] != 'Non-Nms Quotation Service (Nnqs)')
                         & (data['Exchange'] != 'NO MARKET (E.G. UNLISTED)')
                         & (
-                                data['Exchange'].str.contains('NASDAQ', case=False, na=False) |
-                                data['Exchange'].str.contains('New York Stock Exchange', case=False, na=False)
-                        )]
+                data['Exchange'].str.contains('NASDAQ', case=False, na=False) |
+                data['Exchange'].str.contains(
+                    'New York Stock Exchange', case=False, na=False)
+            )]
             data = data.dropna()
             data = data[['Ticker', 'Name']]
             data.sort_values(by=['Ticker'], ascending=True,
