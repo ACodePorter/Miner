@@ -27,6 +27,8 @@ register a free account at https://tushare.pro/register?reg=253543, and get a ap
 
 - [ ] add MCP server for stock market data
 - [ ] add sec edgar data
+- [ ] decide how to save tickers with symbol in it, like'BRK-A' or "BRK.A"
+    - [ ] now we store them as 'BRK.A', may be 'BRK-A' would be better since it matches SEC and YH data,TBD
 - [ ] mongo db query performance optimization
     - [ ] replace mongoengine with pymongo
 - [X] improve deployment speed by using uv instead of pip

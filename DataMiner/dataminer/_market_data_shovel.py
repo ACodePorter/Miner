@@ -47,6 +47,7 @@ class MarketDataShovel(SingletonParent):
                 data = data[['Company', 'Symbol']]
                 data.rename({'Symbol': 'ticker', 'Company': 'name'},
                             axis='columns', inplace=True)
+                data['ticker'] = data['ticker'].str.replace('.', '-', regex=False)
                 _logger.debug('spx tickers: %s', data)
                 return data
             else:
@@ -86,7 +87,7 @@ class MarketDataShovel(SingletonParent):
         def _accumulte(l: list, i) -> list:
             i = self._ticker_regulator.validate_ticker(i)
             if i:
-                l.append(i)
+                l.append(i.replace('-', '.'))
             return l
 
         ticker_list = reduce(lambda x, y: _accumulte(
