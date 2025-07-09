@@ -13,7 +13,7 @@ app.autodiscover_tasks(['dataminer', 'marketbreadth'], force=True)
 
 
 @app.on_after_configure.connect
-def setup_periodic_tasks(sender:Celery, **kwargs):
+def setup_periodic_tasks(sender: Celery, **kwargs):
     """
     Set up periodic tasks for Celery Beat.
     This function is connected to the `on_after_configure` signal.

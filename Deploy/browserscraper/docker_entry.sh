@@ -10,7 +10,7 @@ MY_DIR=$(realpath $(dirname $0))
 # celery --broker=amqp://miner:12qw@rabbitmq:5672 --result-backend=redis://miner:12qw@redis/0 flower --port=6666 --auto_refresh=True --url_prefix=flower --broker_api=http://admin:12qw@rabbitmq:15672/api &
 
 touch ~/.miner-worker.log
-celery --app=browserscraper worker --loglevel INFO --detach --logfile ~/.miner-worker.log
+celery --app=browserscraper worker --loglevel INFO --detach --logfile ~/.miner-worker.log -Q browserscraper
 
 sleep 5
 

@@ -9,13 +9,13 @@ MY_DIR=$(realpath $(dirname $0))
 echo 12qw | sudo -S nginx -g "daemon on; master_process off;"
 # mongod --fork --syslog --bind_ip_all
 # start flower for celery monitoring, you can view it from http://host/flower
-celery --app=minerservice flower --beat --port=6666 --auto_refresh=True --url_prefix=flower --broker_api=http://admin:12qw@rabbitmq:15672/api &
+celery --app=minerservice flower --port=6666 --auto_refresh=True --url_prefix=flower --broker_api=http://admin:12qw@rabbitmq:15672/api &
 
 touch ~/.miner-beat.log
 celery --app=minerservice beat --loglevel INFO --detach --logfile ~/.miner-beat.log
 
 touch ~/.miner-worker.log
-celery --app=minerservice worker --loglevel INFO --detach --logfile ~/.miner-worker.log
+celery --app=minerservice worker --loglevel INFO --detach --logfile ~/.miner-worker.log -Q dataminer
 
 $MY_DIR/run_service_as_prod_uds.sh 2>&1 &
 

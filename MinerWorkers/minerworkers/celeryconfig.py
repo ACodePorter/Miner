@@ -1,3 +1,5 @@
+from kombu import Queue
+
 from detonator import is_in_docker
 
 result_serializer = 'json'
@@ -15,8 +17,13 @@ worker_log_format = '[%(asctime)s: %(levelname)s/%(processName)s] %(name)s:%(fun
 
 broker_connection_retry_on_startup = True
 
-# Celery Beat using Redis scheduler for persistence
-beat_scheduler = 'redisbeat.RedisScheduler'
+task_queues = (
+    Queue('dataminer'),
+    Queue('browserscraper'),
+)
 
-CELERY_BEAT_SCHEDULER = 'redisbeat.RedisScheduler'
-CELERY_REDIS_SCHEDULER_URL = f'redis://miner:12qw@{redis_host}:6379/1'
+task_routes = {
+    'dataminer.tasks.*': {'queue': 'dataminer'},
+    'browserscraper.tasks.*': {'queue': 'browserscraper'},
+    'marketbreadth.tasks.*': {'queue': 'dataminer'},
+}
