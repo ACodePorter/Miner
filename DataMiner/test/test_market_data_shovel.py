@@ -40,9 +40,18 @@ class MarketDataShvelTestCase(unittest.TestCase):
         yticker = YTicker('AAPL')
         md.fetch_ticker_daily_info_to_db(yticker, start_date='20240101')
 
+    def test_update_qqq_daily_info_to_db(self):
+        md: MarketDataShovel = MarketDataShovel.get_instance()
+        yticker = YTicker('QQQ')
+        md.fetch_ticker_daily_info_to_db(yticker)
+
+    def test_update_iwm_daily_info_to_db(self):
+        md: MarketDataShovel = MarketDataShovel.get_instance()
+        md.update_ticker_daily_info("IWM")
+
     def test_update_ticker_daily_info(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()
-        md.update_ticker_daily_info('AAPL')
+        md.update_ticker_daily_info('GOOGL')
 
     def test_get_latest_index_tickers(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()

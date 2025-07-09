@@ -80,12 +80,6 @@ async def update_tickers_daily_info(tickers: List[str]) -> str:
     return 'GOOD'
 
 
-@app.get('/update_all_above', description='Update all above tasks to fetch latest data')
-async def update_all_above() -> str:
-    run_daily_updates_task.delay()
-    return 'GOOD'
-
-
 @app.get('/update_spx_daily_ma')
 async def update_spx_daily_ma() -> str:
     update_spx_daily_ma_task.delay()
@@ -95,6 +89,12 @@ async def update_spx_daily_ma() -> str:
 @app.get('/update_iw_daily_ma')
 async def update_iw_daily_ma() -> str:
     update_iw_daily_ma_task.delay()
+    return 'GOOD'
+
+
+@app.get('/update_all_above', description='Update all above tasks to fetch latest data')
+async def update_all_above() -> str:
+    run_daily_updates_task.delay()
     return 'GOOD'
 
 

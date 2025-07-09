@@ -67,12 +67,18 @@ RELEASE_DIR=$MY_DIR/miner/release
 rm -rf $RELEASE_DIR
 mkdir -p $RELEASE_DIR
 
+BROWSERSCRAPER_RELEASE_DIR=$MY_DIR/browserscraper/release
+rm -rf $BROWSERSCRAPER_RELEASE_DIR
+mkdir -p $BROWSERSCRAPER_RELEASE_DIR
+
 function cleanup() {
     echo "Cleaning up ..."
     rm -rf $RELEASE_DIR
+    rm -rf $BROWSERSCRAPER_RELEASE_DIR
     cd $MY_PWD
 }
 
+# TODO: remove java later since it was not used
 java_version=$($JAVA_HOME/bin/java -version 2>&1 | awk -F '"' '/version/ {print $2}')
 major_version=$(echo "$java_version" | awk -F '.' '{print $1}')
 
@@ -82,14 +88,22 @@ else
     echo ""
 fi
 
-cp -av $MY_DIR/../Detonator $RELEASE_DIR/
-cp -av $MY_DIR/../DataMiner $RELEASE_DIR/
-cp -av $MY_DIR/../MarketBreadth $RELEASE_DIR/
-cp -av $MY_DIR/../MinerWorkers $RELEASE_DIR/
-cp -av $MY_DIR/../MinerService $RELEASE_DIR/
-cp -av $MY_DIR/../MinerService/run_service_as_prod_uds.sh $RELEASE_DIR/
-cp -av $MY_DIR/miner/run_socks5_proxy.sh $RELEASE_DIR/
-cp -av $MY_DIR/miner/docker_entry.sh $RELEASE_DIR/
+cp -a $MY_DIR/../Detonator $RELEASE_DIR/
+cp -a $MY_DIR/../DataMiner $RELEASE_DIR/
+cp -a $MY_DIR/../MarketBreadth $RELEASE_DIR/
+cp -a $MY_DIR/../MinerWorkers $RELEASE_DIR/
+cp -a $MY_DIR/../MinerService $RELEASE_DIR/
+cp -a $MY_DIR/../BrowserScraper $RELEASE_DIR/
+cp -a $MY_DIR/../MinerService/run_service_as_prod_uds.sh $RELEASE_DIR/
+cp -a $MY_DIR/miner/run_socks5_proxy.sh $RELEASE_DIR/
+cp -a $MY_DIR/miner/docker_entry.sh $RELEASE_DIR/
+
+cp -av $MY_DIR/../Detonator $BROWSERSCRAPER_RELEASE_DIR/
+cp -av $MY_DIR/../DataMiner $BROWSERSCRAPER_RELEASE_DIR/
+cp -av $MY_DIR/../MinerWorkers $BROWSERSCRAPER_RELEASE_DIR/
+cp -av $MY_DIR/../BrowserScraper $BROWSERSCRAPER_RELEASE_DIR/
+cp -av $MY_DIR/miner/bin $BROWSERSCRAPER_RELEASE_DIR/
+cp -av $MY_DIR/browserscraper/docker_entry.sh $BROWSERSCRAPER_RELEASE_DIR/
 
 docker -D compose --project-name miner up --build -d
 

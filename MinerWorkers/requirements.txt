@@ -1,3 +1,5 @@
 celery[redis]
+redisbeat
+celery-redbeat
 flower
 gevent

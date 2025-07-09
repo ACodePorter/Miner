@@ -11,22 +11,45 @@ RUN apt-get update && \
         apt-get install -y ca-certificates gnupg curl apt-utils
 
 RUN apt-get update && apt upgrade -y && \
-        apt-get install -y wget locales sudo nginx unzip git openssh-client curl jq libmagic-dev openssh-client \
+        apt-get install -y wget locales sudo unzip git openssh-client curl jq libmagic-dev openssh-client \
         tzdata
 
 ENV TZ=America/Toronto
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata
 
-COPY --chown=root:root nginx.conf /etc/nginx/nginx.conf
+RUN apt-get update && apt-get install -y \
+    # --- GUI DEPENDENCIES ---
+    # These are libraries required for Chrome to open a window and talk to an X Server
+    libx11-6 \
+    libx11-xcb1 \
+    libxcomposite1 \
+    libxcursor1 \
+    libxdamage1 \
+    libxext6 \
+    libxfixes3 \
+    libxi6 \
+    libxrandr2 \
+    libxrender1 \
+    libxtst6 \
+    libglib2.0-0 \
+    libnss3 \
+    libasound2t64 \
+    # A simple X11 app for testing the display connection
+    x11-apps \
+    --no-install-recommends
+
+# Download and install Google Chrome
+RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /usr/share/keyrings/google-chrome.gpg && \
+    echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list && \
+    apt-get update && \
+    apt-get install -y google-chrome-stable --no-install-recommends
+
+# Install chromedriver
+RUN apt-get install -y chromedriver
 
 RUN useradd miner -G sudo,www-data,plugdev -s /bin/bash -m
 RUN usermod -aG www-data miner
 RUN echo miner:12qw | chpasswd
-
-RUN mkdir -p -m 775 /data/db && \
-        chown miner:miner /data/db
-
-EXPOSE 80 27017 2222 6666 8001
 
 RUN locale-gen en_US.UTF-8
 
@@ -37,13 +60,13 @@ ENV LC_ALL en_US.UTF-8
 
 COPY --chown=miner:miner release/ /miner_release/
 RUN chmod a+x /miner_release/*.sh
-# RUN chmod a+x /miner_release/run_service_as_prod_uds.sh
 
 
 RUN echo "export USER=$(whoami)" >> ~/.bashrc && \
         echo "export SHELL=/bin/bash" >>~/.bashrc
 ENV HOME=/home/miner
-COPY --chown=miner:miner bin/* $HOME/bin/
+COPY --chown=miner:miner release/bin/* $HOME/bin/
+RUN chmod a+x $HOME/bin/*
 WORKDIR $HOME
 ENV PATH=$HOME/bin:$PATH
 RUN cat $HOME/.bashrc
@@ -59,17 +82,16 @@ RUN bash $HOME/bin/Miniconda3.sh -b -p $CONDA_INS_DIR && \
         . $HOME/.bashrc && \
         . $CONDA_INS_DIR/etc/profile.d/conda.sh && \
         conda activate base
-        # pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple && \
-RUN rm -rfv $HOME/bin/Miniconda3.sh
+RUN rm -v $HOME/bin/Miniconda3.sh
+
 RUN pip install uv
 RUN uv pip install --system /miner_release/Detonator
 RUN uv pip install --system /miner_release/DataMiner
-RUN uv pip install --system /miner_release/MarketBreadth
+RUN uv pip install --system /miner_release/BrowserScraper
 RUN uv pip install --system /miner_release/MinerWorkers
-RUN uv pip install --system /miner_release/MinerService
 
 RUN mkdir -p $HOME/.miner
-COPY --chown=miner:miner miner.json $HOME/.miner/miner.json
+# COPY --chown=miner:miner miner.json $HOME/.miner/miner.json
 RUN touch $HOME/.miner/miner.log
 
 RUN mkdir $HOME/.ssh && \
@@ -80,6 +102,6 @@ RUN mkdir $HOME/.ssh && \
 RUN ssh-keygen -t rsa -b 4096 -f $HOME/.ssh/id_rsa -N ""
 
 
-COPY --chown=miner:miner .ssh/config $HOME/.ssh/
+# COPY --chown=miner:miner .ssh/config $HOME/.ssh/
 
 ENTRYPOINT /miner_release/docker_entry.sh

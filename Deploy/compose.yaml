@@ -2,7 +2,7 @@ services:
   mongodb:
     # build: ./mongodb
     image: mongo:8.0.5
-    restart: always
+    restart: unless-stopped
     container_name: miner-mongodb
     hostname: miner-mongodb
     volumes:
@@ -26,7 +26,7 @@ services:
 
   redis:
     build: ./redis
-    restart: always
+    restart: unless-stopped
     hostname: miner-redis
     container_name: miner-redis
     ports:
@@ -34,17 +34,35 @@ services:
 
   rabbitmq:
     build: ./rabbitmq
-    restart: always
+    restart: unless-stopped
     container_name: miner-rabbitmq
     hostname: miner-rabbitmq
     ports:
       - '5672:5672'
       - '15672:15672'
 
+  browserscraper:
+    build: ./browserscraper
+    restart: unless-stopped
+    container_name: miner-browserscraper
+    hostname: miner-browserscraper
+    depends_on:
+      - redis
+      - rabbitmq
+      - mongodb
+    ports:
+      - '8002:8002'
+    environment:
+      - RUNTIME_ENV=${RUNTIME_ENV}
+    volumes:
+      - '${MINER_DATA}:/data/miner'
+      - '${PWD}/../:/minerdev'
+
   miner:
     build: ./miner
     restart: always
     container_name: minerservice
+    hostname: miner-service
     depends_on:
       - redis
       - rabbitmq
@@ -63,3 +81,4 @@ services:
       - '/dev/bus/usb:/dev/bus/usb'
       - '${MINER_DATA}:/data/miner'
       - '${PWD}/../:/minerdev'
+  

@@ -111,6 +111,7 @@ class TickerDailyInfo(Document):
     operatingMargins = FloatField()
     financialCurrency = StringField()
     trailingPegRatio = FloatField()
+    capitalGains = FloatField()
     meta = {
         'ordering': ['trade_date', 'ticker'],
         'index_background': True,
@@ -228,7 +229,8 @@ _ticker_info_keys = [
     'ebitdaMargins',
     'operatingMargins',
     'financialCurrency',
-    'trailingPegRatio'
+    'trailingPegRatio',
+    'capitalGains'
 ]
 
 _logger = get_logger('TickerDailyInfo')

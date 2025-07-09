@@ -6,25 +6,15 @@ MY_DIR=$(realpath $(dirname $0))
 
 # $MY_DIR/run_socks5_proxy.sh &
 
-echo 12qw | sudo -S nginx -g "daemon on; master_process off;"
-# mongod --fork --syslog --bind_ip_all
 # start flower for celery monitoring, you can view it from http://host/flower
-celery --app=minerservice flower --beat --port=6666 --auto_refresh=True --url_prefix=flower --broker_api=http://admin:12qw@rabbitmq:15672/api &
-
-touch ~/.miner-beat.log
-celery --app=minerservice beat --loglevel INFO --detach --logfile ~/.miner-beat.log
+# celery --broker=amqp://miner:12qw@rabbitmq:5672 --result-backend=redis://miner:12qw@redis/0 flower --port=6666 --auto_refresh=True --url_prefix=flower --broker_api=http://admin:12qw@rabbitmq:15672/api &
 
 touch ~/.miner-worker.log
-celery --app=minerservice worker --loglevel INFO --detach --logfile ~/.miner-worker.log
-
-$MY_DIR/run_service_as_prod_uds.sh 2>&1 &
+celery --app=browserscraper worker --loglevel INFO --detach --logfile ~/.miner-worker.log
 
 sleep 5
 
 tail -f ~/.miner-worker.log &
-tail -f ~/.miner-beat.log &
-tail -f /var/log/nginx/access.log &
-tail -f /var/log/nginx/error.log &
 
 
 catch_kill() {

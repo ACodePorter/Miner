@@ -178,6 +178,8 @@ def run_daily_updates_task() -> bool:
         update_iwd_tickers_daily_info_task.si(),
         update_iwf_tickers_daily_info_task.si(),
         update_iwm_tickers_daily_info_task.si(),
+        update_spx_daily_ma_task.si(),
+        update_iw_daily_ma_task.si(),
     )
 
     # Execute the chain
