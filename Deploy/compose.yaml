@@ -54,6 +54,7 @@ services:
       - '8002:8002'
     environment:
       - RUNTIME_ENV=${RUNTIME_ENV}
+      - TUSHARE_KEY=${TUSHARE_KEY}
     volumes:
       - '${MINER_DATA}:/data/miner'
       - '${PWD}/../:/minerdev'
