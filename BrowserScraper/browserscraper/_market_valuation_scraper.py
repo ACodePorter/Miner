@@ -6,7 +6,7 @@ import time
 from typing import Literal
 from datetime import datetime 
 
-from detonator import get_logger, df_2_mongo, SingletonParent
+from detonator import get_logger, df_2_mongo,make_db_connection, SingletonParent
 from dataminer.models import MarketPe
 from dataminer import TradeCalendarShovel
 
@@ -26,7 +26,7 @@ class MarketValuationScraper(SingletonParent):
     SP500_PE_RATIO_URL = "https://www.gurufocus.com/economic_indicators/57/sp-500-pe-ratio"
 
     def __init__(self):
-        pass
+        make_db_connection()
 
     def handle_popups(self, driver, wait):
         """
