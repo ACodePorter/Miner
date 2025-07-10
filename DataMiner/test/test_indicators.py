@@ -32,9 +32,11 @@ class IndicatorsTestCase(unittest.TestCase):
         interval = '1d'
         period = 20
         now = datetime.datetime.now()
-        since_date = _get_since_trade_date_for_indicator(ticker, indicator, interval, period)
+        since_date = _get_since_trade_date_for_indicator(
+            ticker, indicator, interval, period)
         _l.debug((datetime.datetime.now() - now).total_seconds())
-        _l.debug(f'Since date for {ticker} {indicator}{period} is {since_date}')
+        _l.debug(
+            f'Since date for {ticker} {indicator}{period} is {since_date}')
         self.assertIsNotNone(since_date)
 
     def test_db_perf(self):

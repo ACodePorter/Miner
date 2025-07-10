@@ -4,9 +4,9 @@ import pandas as pd
 from pandas import DataFrame
 import time
 from typing import Literal
-from datetime import datetime 
+from datetime import datetime
 
-from detonator import get_logger, df_2_mongo,make_db_connection, SingletonParent
+from detonator import get_logger, df_2_mongo, make_db_connection, SingletonParent
 from dataminer.models import MarketPe
 from dataminer import TradeCalendarShovel
 
@@ -20,6 +20,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 _logger = get_logger("MarketValuationScraper")
 _tcs = TradeCalendarShovel.get_instance()
+
 
 class MarketValuationScraper(SingletonParent):
     NASDAT_100_PE_RATIO_URL = "https://www.gurufocus.com/economic_indicators/6778/nasdaq-100-pe-ratio"
@@ -131,7 +132,8 @@ class MarketValuationScraper(SingletonParent):
                     else:
                         _logger.warning("Row data length (%d) doesn't match header length (%d). Skipping row: %s", len(
                             row_data), len(header), row_data)
-                go = self._to_db(idx=idx, df=pd.DataFrame(all_rows_data, columns=header), start_date=start_date, end_date=end_date)
+                go = self._to_db(idx=idx, df=pd.DataFrame(
+                    all_rows_data, columns=header), start_date=start_date, end_date=end_date)
 
                 try:
                     # Before interacting with the 'Next' button, check for and close any pop-ups.
@@ -175,12 +177,13 @@ class MarketValuationScraper(SingletonParent):
                 _logger.info("Closing the browser session.")
                 driver.quit()
 
-    def _to_db(self, idx: Literal['spx', 'qqq'] = 'spx', df: DataFrame = None, start_date:str='', end_date:str='') -> bool:
+    def _to_db(self, idx: Literal['spx', 'qqq'] = 'spx', df: DataFrame = None, start_date: str = '', end_date: str = '') -> bool:
         """
         Scrapes the PE ratio for a given index and saves it to the database.
         This is a private method intended for internal use.
         """
-        _logger.info("Saving to database for index: %s:%s %s->%s", idx, df.shape, start_date, end_date)
+        _logger.info("Saving to database for index: %s:%s %s->%s",
+                     idx, df.shape, start_date, end_date)
         if df is None or df.empty:
             _logger.error("DataFrame is empty or None. Exiting.")
             return False
@@ -193,7 +196,8 @@ class MarketValuationScraper(SingletonParent):
             df['pe'] = df['Value'].astype(float)
             df = df[['idx', 'trade_date', 'pe', 'yoy_change']]
             _logger.info("DataFrame after processing: %s", df)
-            to_save = df[(df['trade_date'] >= start_date) & (df['trade_date'] <= end_date)]
+            to_save = df[(df['trade_date'] >= start_date)
+                         & (df['trade_date'] <= end_date)]
             _logger.info("Filtered data to save: %s", to_save)
             if to_save.empty:
                 _logger.info("No data to save for the specified date range.")
@@ -205,7 +209,7 @@ class MarketValuationScraper(SingletonParent):
                 "An error occurred while saving to the database: %s", exc_info=e)
             return False
 
-    def update_idx_pe_to_db(self, idx: Literal['spx', 'qqq'] = 'spx', start_date:str='0000,00,00', end_date:str='9999,12,31') -> bool:
+    def update_idx_pe_to_db(self, idx: Literal['spx', 'qqq'] = 'spx', start_date: str = '0000,00,00', end_date: str = '9999,12,31') -> bool:
         """
         Scrapes the PE ratio for a given index and saves it to the database.
         """
@@ -215,13 +219,17 @@ class MarketValuationScraper(SingletonParent):
         """
         Scrapes the latest PE ratio for a given index and saves it to the database.
         """
-        latest_pe = MarketPe.objects(idx=idx).order_by('-trade_date').limit(1).first()
+        latest_pe = MarketPe.objects(idx=idx).order_by(
+            '-trade_date').limit(1).first()
         if latest_pe:
             _logger.debug(latest_pe.trade_date)
             _logger.debug(type(latest_pe.trade_date))
-            start_date = datetime.strptime(_tcs.us_trade_dates_since(start_date=latest_pe.trade_date)[-1], '%Y%m%d').strftime('%Y,%m,%d,%H,%M,%S,%f')
+            start_date = datetime.strptime(_tcs.us_trade_dates_since(
+                start_date=latest_pe.trade_date)[-1], '%Y%m%d').strftime('%Y,%m,%d,%H,%M,%S,%f')
         else:
-            _logger.warning("No existing PE data found for index: %s, and we will try to get all the PEs", idx)
+            _logger.warning(
+                "No existing PE data found for index: %s, and we will try to get all the PEs", idx)
             start_date = '0000,00,00'
-        self.update_idx_pe_to_db(idx=idx, start_date=start_date, end_date='9999,12,31')
+        self.update_idx_pe_to_db(
+            idx=idx, start_date=start_date, end_date='9999,12,31')
         return True

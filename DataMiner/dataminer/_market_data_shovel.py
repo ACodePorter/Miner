@@ -47,7 +47,8 @@ class MarketDataShovel(SingletonParent):
                 data = data[['Company', 'Symbol']]
                 data.rename({'Symbol': 'ticker', 'Company': 'name'},
                             axis='columns', inplace=True)
-                data['ticker'] = data['ticker'].str.replace('.', '-', regex=False)
+                data['ticker'] = data['ticker'].str.replace(
+                    '.', '-', regex=False)
                 _logger.debug('spx tickers: %s', data)
                 return data
             else:
@@ -302,7 +303,7 @@ class MarketDataShovel(SingletonParent):
                 return False
             his.rename(columns={'Open': 'open', 'High': 'high', 'Low': 'low', 'Close': 'close', 'Volume': 'volume',
                                 'Dividends': 'dividends',
-                                'Stock Splits': 'stock_splits','Capital Gains':'capitalGains'}, inplace=True)
+                                'Stock Splits': 'stock_splits', 'Capital Gains': 'capitalGains'}, inplace=True)
             his['trade_date'] = his.index.strftime('%Y,%m,%d,%H,%M,%S,%f')
             his['ticker'] = yticker.ticker.replace('-', '.')
             his['interval'] = interval

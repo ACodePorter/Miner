@@ -16,6 +16,7 @@ __all__ = [
 
 app.autodiscover_tasks(['browserscraper'], force=True)
 
+
 @app.on_after_configure.connect
 def setup_periodic_tasks(sender: Celery, **kwargs):
     """
@@ -23,7 +24,8 @@ def setup_periodic_tasks(sender: Celery, **kwargs):
     This function is connected to the `on_after_configure` signal.
     """
     # Add the daily update task.
-    _logger.info('Setting up periodic task \'update-market-pe-on-weekdays\'...')
+    _logger.info(
+        'Setting up periodic task \'update-market-pe-on-weekdays\'...')
     sender.add_periodic_task(
         crontab(hour='*/3', day_of_week='mon-fri'),
         update_market_pe_task.s(),

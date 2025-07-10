@@ -1,6 +1,7 @@
 from minerworkers import app
 from ._market_valuation_scraper import MarketValuationScraper
 
+
 @app.task
 def update_market_pe_task() -> bool:
     """
