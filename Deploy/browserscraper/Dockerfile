@@ -36,6 +36,7 @@ RUN apt-get update && apt-get install -y \
     libasound2t64 \
     # A simple X11 app for testing the display connection
     x11-apps \
+    xvfb \
     --no-install-recommends
 
 # Download and install Google Chrome
@@ -43,9 +44,6 @@ RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | gpg --dearm
     echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list && \
     apt-get update && \
     apt-get install -y google-chrome-stable --no-install-recommends
-
-# Install chromedriver
-RUN apt-get install -y chromedriver
 
 RUN useradd miner -G sudo,www-data,plugdev -s /bin/bash -m
 RUN usermod -aG www-data miner
@@ -104,4 +102,4 @@ RUN ssh-keygen -t rsa -b 4096 -f $HOME/.ssh/id_rsa -N ""
 
 # COPY --chown=miner:miner .ssh/config $HOME/.ssh/
 
-ENTRYPOINT /miner_release/docker_entry.sh
+ENTRYPOINT xvfb-run --auto-servernum --server-args="-screen 0 1920x1080x24" /miner_release/docker_entry.sh

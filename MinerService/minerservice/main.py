@@ -11,6 +11,7 @@ from detonator import make_db_connection
 from fastapi import FastAPI
 from marketbreadth import MarketBreadth
 from marketbreadth.tasks import update_spx_market_breadth_task
+from browserscraper.tasks import update_market_pe_task
 
 app = FastAPI()
 
@@ -95,6 +96,7 @@ async def update_iw_daily_ma() -> str:
 @app.get('/update_all_above', description='Update all above tasks to fetch latest data')
 async def update_all_above() -> str:
     run_daily_updates_task.delay()
+    update_market_pe_task.delay()
     return 'GOOD'
 
 

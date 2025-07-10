@@ -6,7 +6,7 @@ import time
 from typing import Literal
 from datetime import datetime 
 
-from detonator import get_logger, df_2_mongo
+from detonator import get_logger, df_2_mongo, SingletonParent
 from dataminer.models import MarketPe
 from dataminer import TradeCalendarShovel
 
@@ -21,7 +21,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 _logger = get_logger("MarketValuationScraper")
 _tcs = TradeCalendarShovel.get_instance()
 
-class MarketValuationScraper:
+class MarketValuationScraper(SingletonParent):
     NASDAT_100_PE_RATIO_URL = "https://www.gurufocus.com/economic_indicators/6778/nasdaq-100-pe-ratio"
     SP500_PE_RATIO_URL = "https://www.gurufocus.com/economic_indicators/57/sp-500-pe-ratio"
 

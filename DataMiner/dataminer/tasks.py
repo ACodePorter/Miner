@@ -161,25 +161,25 @@ def run_daily_updates_task() -> bool:
     # Create the task chain
     task_chain = chain(
         # First update trade calendar
-        update_us_trade_calendar_task.si().set(queue='dataminer'),
+        update_us_trade_calendar_task.si(),
 
         # Then update all ticker lists and their info
-        update_spx_tickers_task.si().set(queue='dataminer'),
-        update_spx_tickers_info_task.si().set(queue='dataminer'),
-        update_iwd_tickers_task.si().set(queue='dataminer'),
-        update_iwd_tickers_info_task.si().set(queue='dataminer'),
-        update_iwf_tickers_task.si().set(queue='dataminer'),
-        update_iwf_tickers_info_task.si().set(queue='dataminer'),
-        update_iwm_tickers_task.si().set(queue='dataminer'),
-        update_iwm_tickers_info_task.si().set(queue='dataminer'),
+        update_spx_tickers_task.si(),
+        update_spx_tickers_info_task.si(),
+        update_iwd_tickers_task.si(),
+        update_iwd_tickers_info_task.si(),
+        update_iwf_tickers_task.si(),
+        update_iwf_tickers_info_task.si(),
+        update_iwm_tickers_task.si(),
+        update_iwm_tickers_info_task.si(),
 
         # Then update daily info for all tickers
-        update_spx_tickers_daily_info_task.si().set(queue='dataminer'),
-        update_iwd_tickers_daily_info_task.si().set(queue='dataminer'),
-        update_iwf_tickers_daily_info_task.si().set(queue='dataminer'),
-        update_iwm_tickers_daily_info_task.si().set(queue='dataminer'),
-        update_spx_daily_ma_task.si().set(queue='dataminer'),
-        update_iw_daily_ma_task.si().set(queue='dataminer'),
+        update_spx_tickers_daily_info_task.si(),
+        update_iwd_tickers_daily_info_task.si(),
+        update_iwf_tickers_daily_info_task.si(),
+        update_iwm_tickers_daily_info_task.si(),
+        update_spx_daily_ma_task.si(),
+        update_iw_daily_ma_task.si(),
     )
 
     # Execute the chain

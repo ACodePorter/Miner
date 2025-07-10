@@ -9,7 +9,7 @@ _logger = get_logger('MarketValuationScraperTestCase')
 
 class MarketValuationScraperTestCase(TestCase):
     def setUp(self):
-        make_db_connection(host='localhost')
+        make_db_connection()
         self.scraper = MarketValuationScraper()
         df = pd.read_csv('./spx_pe_ratio.csv')
         self.df = df
