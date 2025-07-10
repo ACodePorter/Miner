@@ -5,6 +5,7 @@ from pandas import DataFrame
 import time
 from typing import Literal
 from datetime import datetime
+import tempfile
 
 from detonator import get_logger, df_2_mongo, make_db_connection, SingletonParent
 from dataminer.models import MarketPe
@@ -77,6 +78,7 @@ class MarketValuationScraper(SingletonParent):
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
         options.add_argument("--window-size=1920,1080")
+        options.add_argument("--incognito")
         options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
         driver = None
@@ -130,8 +132,7 @@ class MarketValuationScraper(SingletonParent):
                     if len(row_data) == len(header):
                         all_rows_data.append(row_data)
                     else:
-                        _logger.warning("Row data length (%d) doesn't match header length (%d). Skipping row: %s", len(
-                            row_data), len(header), row_data)
+                        pass
                 go = self._to_db(idx=idx, df=pd.DataFrame(
                     all_rows_data, columns=header), start_date=start_date, end_date=end_date)
 
@@ -222,6 +223,7 @@ class MarketValuationScraper(SingletonParent):
         latest_pe = MarketPe.objects(idx=idx).order_by(
             '-trade_date').limit(1).first()
         if latest_pe:
+            _logger.debug('Latest PE for index %s: %s', idx, latest_pe.trade_date)
             dates = _tcs.us_trade_dates_since(
                 start_date=latest_pe.trade_date)
             if dates:
