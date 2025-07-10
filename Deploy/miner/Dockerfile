@@ -69,6 +69,7 @@ RUN uv pip install --system /miner_release/MinerWorkers
 RUN uv pip install --system /miner_release/BrowserScraper
 RUN uv pip install --system /miner_release/MinerService
 
+RUN rm -rfv  /miner_release/Detonator /miner_release/DataMiner /miner_release/MarketBreadth /miner_release/MinerWorkers /miner_release/BrowserScraper /miner_release/MinerService
 
 RUN mkdir -p $HOME/.miner
 COPY --chown=miner:miner miner.json $HOME/.miner/miner.json

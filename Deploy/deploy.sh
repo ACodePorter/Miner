@@ -1,29 +1,43 @@
 #!/bin/sh
 
-set -x
+# set -x
+# Exit immediately if a command exits with a non-zero status.
 set -e
-
-echo "Let's go ..."
 
 MY_PWD=$PWD
 MY_DIR=$(realpath $(dirname $0))
 
-catch_user_signal() {
-    cleanup
-    cd $MY_PWD
-    kill -KILL "$pid" 2>/dev/null
+RELEASE_DIR=$MY_DIR/miner/release
+BROWSERSCRAPER_RELEASE_DIR=$MY_DIR/browserscraper/release
+
+function cleanup() {
+    # This function is called on exit to clean up temporary files.
+    echo "Cleaning up temporary release directories..."
+    rm -rf "$RELEASE_DIR"
+    rm -rf "$BROWSERSCRAPER_RELEASE_DIR"
+    cd "$MY_PWD"
 }
 
-trap catcher_user_signal SIGTERM
-trap catcher_user_signal SIGKILL
-trap catcher_user_signal SIGQUIT
-trap catcher_user_signal INT
+function exit_callback() {
+    local exit_status=$?
+    cleanup # Always run cleanup
+    if [ $exit_status -eq 0 ]; then
+        echo "✅ Deployment script finished successfully."
+    else
+        echo "❌ Deployment script failed with exit code: $exit_status."
+    fi
+    exit $exit_status
+}
+
+# Trap the EXIT signal to run the exit_callback function when the script finishes.
+trap exit_callback EXIT
+
+echo "Let's go ..."
 
 usage() {
     echo "Usage: $0 <tushare_key> <runtime_env[PROD|TEST|DEV]> [miner_data_dir]"
     exit 1
 }
-
 if [ -n "$1" ]; then
     export TUSHARE_KEY=$1
 else
@@ -45,8 +59,8 @@ if [ -n "$3" ];then
     export MINER_DATA=$2
 fi
 
-echo $TUSHARE_KEY
-echo $MINER_DATA
+echo "Tushare Key: $TUSHARE_KEY"
+echo "Miner Data Dir: $MINER_DATA"
 mkdir -p $MINER_DATA
 
 export MONGO_INITDB_ROOT_USERNAME=root
@@ -60,33 +74,14 @@ fi
 
 cd $MY_DIR
 
-mkdir -p $MY_DIR/miner/bin/
-wget -d -c https://repo.anaconda.com/miniconda/Miniconda3-py312_24.11.1-0-Linux-x86_64.sh -O $MY_DIR/miner/bin/Miniconda3.sh
+mkdir -p "$MY_DIR/miner/bin/"
+wget -nv -c https://repo.anaconda.com/miniconda/Miniconda3-py312_24.11.1-0-Linux-x86_64.sh -O $MY_DIR/miner/bin/Miniconda3.sh
 
-RELEASE_DIR=$MY_DIR/miner/release
 rm -rf $RELEASE_DIR
 mkdir -p $RELEASE_DIR
 
-BROWSERSCRAPER_RELEASE_DIR=$MY_DIR/browserscraper/release
 rm -rf $BROWSERSCRAPER_RELEASE_DIR
 mkdir -p $BROWSERSCRAPER_RELEASE_DIR
-
-function cleanup() {
-    echo "Cleaning up ..."
-    rm -rf $RELEASE_DIR
-    rm -rf $BROWSERSCRAPER_RELEASE_DIR
-    cd $MY_PWD
-}
-
-# TODO: remove java later since it was not used
-java_version=$($JAVA_HOME/bin/java -version 2>&1 | awk -F '"' '/version/ {print $2}')
-major_version=$(echo "$java_version" | awk -F '.' '{print $1}')
-
-if [ "$major_version" -ge 17 ]; then
-    echo ""
-else
-    echo ""
-fi
 
 cp -a $MY_DIR/../Detonator $RELEASE_DIR/
 cp -a $MY_DIR/../DataMiner $RELEASE_DIR/
@@ -98,16 +93,14 @@ cp -a $MY_DIR/../MinerService/run_service_as_prod_uds.sh $RELEASE_DIR/
 cp -a $MY_DIR/miner/run_socks5_proxy.sh $RELEASE_DIR/
 cp -a $MY_DIR/miner/docker_entry.sh $RELEASE_DIR/
 
-cp -av $MY_DIR/../Detonator $BROWSERSCRAPER_RELEASE_DIR/
-cp -av $MY_DIR/../DataMiner $BROWSERSCRAPER_RELEASE_DIR/
-cp -av $MY_DIR/../MinerWorkers $BROWSERSCRAPER_RELEASE_DIR/
-cp -av $MY_DIR/../BrowserScraper $BROWSERSCRAPER_RELEASE_DIR/
-cp -av $MY_DIR/miner/bin $BROWSERSCRAPER_RELEASE_DIR/
-cp -av $MY_DIR/browserscraper/docker_entry.sh $BROWSERSCRAPER_RELEASE_DIR/
+cp -a $MY_DIR/../Detonator $BROWSERSCRAPER_RELEASE_DIR/
+cp -a $MY_DIR/../DataMiner $BROWSERSCRAPER_RELEASE_DIR/
+cp -a $MY_DIR/../MinerWorkers $BROWSERSCRAPER_RELEASE_DIR/
+cp -a $MY_DIR/../BrowserScraper $BROWSERSCRAPER_RELEASE_DIR/
+cp -a $MY_DIR/miner/bin $BROWSERSCRAPER_RELEASE_DIR/
+cp -a $MY_DIR/browserscraper/docker_entry.sh $BROWSERSCRAPER_RELEASE_DIR/
 
-docker -D compose --project-name miner up --build -d
+COMPOSE_BAKE=true docker compose --project-name miner up --build -d
 
-cleanup
-
-set +x
-set +e
+#set +x
+# The 'set +e' and final cleanup call are no longer needed as the EXIT trap handles the script's conclusion.

@@ -88,6 +88,8 @@ RUN uv pip install --system /miner_release/DataMiner
 RUN uv pip install --system /miner_release/BrowserScraper
 RUN uv pip install --system /miner_release/MinerWorkers
 
+RUN  rm -rfv /miner_release/Detonator /miner_release/DataMiner /miner_release/BrowserScraper /miner_release/MinerWorkers
+
 RUN mkdir -p $HOME/.miner
 # COPY --chown=miner:miner miner.json $HOME/.miner/miner.json
 RUN touch $HOME/.miner/miner.log
