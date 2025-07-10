@@ -222,10 +222,13 @@ class MarketValuationScraper(SingletonParent):
         latest_pe = MarketPe.objects(idx=idx).order_by(
             '-trade_date').limit(1).first()
         if latest_pe:
-            _logger.debug(latest_pe.trade_date)
-            _logger.debug(type(latest_pe.trade_date))
-            start_date = datetime.strptime(_tcs.us_trade_dates_since(
-                start_date=latest_pe.trade_date)[-1], '%Y%m%d').strftime('%Y,%m,%d,%H,%M,%S,%f')
+            dates = _tcs.us_trade_dates_since(
+                start_date=latest_pe.trade_date)
+            if dates:
+                start_date = datetime.strptime(dates[-1], '%Y%m%d').strftime('%Y,%m,%d,%H,%M,%S,%f')
+            else:
+                _logger.info('Already up to date for index: %s @ %s', idx, latest_pe.trade_date)
+                return True
         else:
             _logger.warning(
                 "No existing PE data found for index: %s, and we will try to get all the PEs", idx)
