@@ -5,7 +5,6 @@ from pandas import DataFrame
 import time
 from typing import Literal
 from datetime import datetime
-import tempfile
 
 from detonator import get_logger, df_2_mongo, make_db_connection, SingletonParent
 from dataminer.models import MarketPe
@@ -43,13 +42,10 @@ class MarketValuationScraper(SingletonParent):
             short_wait = WebDriverWait(driver, 2)
             close_button = short_wait.until(
                 EC.element_to_be_clickable(dialog_close_locator))
-            _logger.info(
-                "Login/subscription pop-up found. Attempting to close it.")
             close_button.click()
             time.sleep(1)  # Give a moment for the dialog to disappear
         except TimeoutException:
-            # This is expected if the pop-up is not present. Do nothing.
-            _logger.info("No pop-up dialog found. Continuing...")
+            pass
         except Exception as e:
             _logger.warning(
                 f"An error occurred while trying to close the pop-up: {e}")
@@ -59,6 +55,7 @@ class MarketValuationScraper(SingletonParent):
         Scrapes a paginated table with robust pop-up handling and click strategies.
         """
         # target_url = "https://www.gurufocus.com/economic_indicators/57/sp-500-pe-ratio"
+        _logger.info("Starting scrape for index: %s %s -> %s", idx, start_date, end_date)
         target_url = None
         if idx == 'spx':
             target_url = self.SP500_PE_RATIO_URL
@@ -83,49 +80,32 @@ class MarketValuationScraper(SingletonParent):
 
         driver = None
         try:
-            _logger.info("Initializing WebDriver...")
             service = ChromeService(ChromeDriverManager().install())
-            _logger.info("Attempting to open Chrome now...")
             driver = webdriver.Chrome(service=service, options=options)
-            _logger.info("WebDriver initialized successfully.")
-
             wait = WebDriverWait(driver, 20)  # A reasonable default wait time
-
-            _logger.info("Navigating to URL: %s", target_url)
             driver.get(target_url)
-
             # Initial check for any pop-ups on page load
             self.handle_popups(driver, wait)
-
-            _logger.info("Waiting for the data table to become visible...")
             table_element = wait.until(
                 EC.visibility_of_element_located(table_locator))
-
             header_elements = table_element.find_elements(
                 By.XPATH, ".//thead//th")
             header = [h.text.strip()
                       for h in header_elements if h.text.strip()]
-            _logger.info("Scraped table header: %s", header)
-
             page_number = 1
             go = True
 
             while go:
-                _logger.info("Starting scrape for page %d.", page_number)
-
+                _logger.debug("Starting scrape for page %d.", page_number)
                 all_rows_data = []
                 # This ensures the data on the page is stable and not from the previous page.
                 wait.until(EC.invisibility_of_element_located(
                     loading_mask_locator))
-
                 # Wait for at least one row to be present in the table body
                 wait.until(EC.presence_of_element_located(
                     (By.XPATH, '//*[@id="non-sticky-table"]//tbody/tr')))
                 table_rows = driver.find_elements(
                     By.XPATH, '//*[@id="non-sticky-table"]//tbody/tr')
-                _logger.info("Found %d rows on page %d.",
-                             len(table_rows), page_number)
-
                 for row in table_rows:
                     row_data = [cell.text for cell in row.find_elements(
                         By.TAG_NAME, "td")]
@@ -141,23 +121,15 @@ class MarketValuationScraper(SingletonParent):
                     self.handle_popups(driver, wait)
 
                     next_button = driver.find_element(*next_button_locator)
-                    _logger.debug(next_button.get_attribute('disabled'))
                     if next_button.get_attribute("disabled") == "true":
-                        _logger.info(
-                            "Last page reached (Next button is disabled).")
                         break
-
-                    _logger.info("Scrolling to and clicking 'Next' button...")
-
-                    # --- FIX 3 (Part 2): USE A JAVASCRIPT CLICK FOR ROBUSTNESS ---
+                    # USE A JAVASCRIPT CLICK FOR ROBUSTNESS ---
                     # This is less likely to be intercepted than a standard Selenium click.
                     driver.execute_script(
                         "arguments[0].scrollIntoView({block: 'center'});", next_button)
                     time.sleep(0.5)  # A brief pause can help stability
                     driver.execute_script("arguments[0].click();", next_button)
-
                     page_number += 1
-
                 except NoSuchElementException:
                     _logger.info(
                         "No more 'Next' button found. Assuming end of pages.")
@@ -166,7 +138,6 @@ class MarketValuationScraper(SingletonParent):
                     _logger.error(
                         "An unexpected error occurred while trying to navigate to the next page: %s", e)
                     break
-
             return True
 
         except Exception as e:
@@ -196,12 +167,10 @@ class MarketValuationScraper(SingletonParent):
                 '%').astype(float)  # Placeholder for YOY change
             df['pe'] = df['Value'].astype(float)
             df = df[['idx', 'trade_date', 'pe', 'yoy_change']]
-            _logger.info("DataFrame after processing: %s", df)
             to_save = df[(df['trade_date'] >= start_date)
                          & (df['trade_date'] <= end_date)]
-            _logger.info("Filtered data to save: %s", to_save)
             if to_save.empty:
-                _logger.info("No data to save for the specified date range.")
+                _logger.warning("No data to save for the specified date range.")
                 return False
             df_2_mongo(to_save, MarketPe)
             return len(to_save) == len(df)
@@ -220,10 +189,10 @@ class MarketValuationScraper(SingletonParent):
         """
         Scrapes the latest PE ratio for a given index and saves it to the database.
         """
+        _logger.info("Updating latest PE for index: %s", idx)
         latest_pe = MarketPe.objects(idx=idx).order_by(
             '-trade_date').limit(1).first()
         if latest_pe:
-            _logger.debug('Latest PE for index %s: %s', idx, latest_pe.trade_date)
             dates = _tcs.us_trade_dates_since(
                 start_date=latest_pe.trade_date)
             if dates:
@@ -232,7 +201,7 @@ class MarketValuationScraper(SingletonParent):
                 _logger.info('Already up to date for index: %s @ %s', idx, latest_pe.trade_date)
                 return True
         else:
-            _logger.warning(
+            _logger.info(
                 "No existing PE data found for index: %s, and we will try to get all the PEs", idx)
             start_date = '0000,00,00'
         self.update_idx_pe_to_db(
