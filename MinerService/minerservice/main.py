@@ -93,6 +93,12 @@ async def update_iw_daily_ma() -> str:
     return 'GOOD'
 
 
+@app.get('/update_market_pe')
+async def update_market_pe() -> str:
+    update_market_pe_task.delay()
+    return 'GOOD'
+
+
 @app.get('/update_all_above', description='Update all above tasks to fetch latest data')
 async def update_all_above() -> str:
     run_daily_updates_task.delay()
