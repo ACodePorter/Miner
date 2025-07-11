@@ -60,11 +60,15 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({ indexId, displayName, col
 
   // Calculate rolling N-year average and stddev for each point in history
   const getRollingStats = () => {
-    if (!peData || !peData.data.length) return { avg: [], plus2: [], minus2: [] };
+    if (!peData || !peData.data.length) return { avg: [], plus2: [], minus2: [], pctLines: [] };
     const msPerYear = 365.25 * 24 * 3600 * 1000;
     const resultAvg: [number, number|null][] = [];
     const resultPlus2: [number, number|null][] = [];
     const resultMinus2: [number, number|null][] = [];
+    // For percentage lines: array of arrays, one for each pct
+    const pctPercents = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6];
+    const pctLinesAbove: [number, (number|null)][][] = pctPercents.map(() => []);
+    const pctLinesBelow: [number, (number|null)][][] = pctPercents.map(() => []);
     for (let i = 0; i < peData.data.length; ++i) {
       const [ts, v] = peData.data[i];
       // Find all points within the N-year window ending at ts
@@ -80,16 +84,54 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({ indexId, displayName, col
         resultAvg.push([ts, avg]);
         resultPlus2.push([ts, avg + 2 * std]);
         resultMinus2.push([ts, avg - 2 * std]);
+        pctPercents.forEach((pct, idx) => {
+          pctLinesAbove[idx].push([ts, avg * (1 + pct)]);
+          pctLinesBelow[idx].push([ts, avg * (1 - pct)]);
+        });
       } else {
         resultAvg.push([ts, null]);
         resultPlus2.push([ts, null]);
         resultMinus2.push([ts, null]);
+        pctPercents.forEach((_, idx) => {
+          pctLinesAbove[idx].push([ts, null]);
+          pctLinesBelow[idx].push([ts, null]);
+        });
       }
     }
-    return { avg: resultAvg, plus2: resultPlus2, minus2: resultMinus2 };
+    return { avg: resultAvg, plus2: resultPlus2, minus2: resultMinus2, pctLinesAbove, pctLinesBelow, pctPercents };
   };
 
   const rollingStats = getRollingStats();
+
+  const pctColors = ['#1abc9c', '#3498db', '#9b59b6', '#e67e22', '#e74c3c', '#34495e'];
+  const pctDashStyles = ['ShortDash', 'ShortDot', 'ShortDashDot', 'Dash', 'Dot', 'DashDot'];
+
+  const pctPercents = rollingStats.pctPercents || [];
+  const pctLinesAbove = rollingStats.pctLinesAbove || [];
+  const pctLinesBelow = rollingStats.pctLinesBelow || [];
+
+  // Find the two percentage lines (above or below) closest to the current value
+  let visiblePctIdxs: number[] = [];
+  if (peData && peData.data.length && pctPercents.length) {
+    const lastIdx = peData.data.length - 1;
+    const currentPE = peData.data[lastIdx][1];
+    // Find the rolling avg at the last point
+    const avgAtLast = rollingStats.avg[lastIdx]?.[1];
+    if (avgAtLast !== null && avgAtLast !== undefined) {
+      // Build all percentage lines' last values
+      const aboveVals = pctLinesAbove.map(line => line[lastIdx]?.[1]);
+      const belowVals = pctLinesBelow.map(line => line[lastIdx]?.[1]);
+      // Build array of {idx, val, type} for all lines
+      const allLines = [
+        ...aboveVals.map((val, idx) => ({ idx, val, type: 'above' })),
+        ...belowVals.map((val, idx) => ({ idx, val, type: 'below' })),
+      ].filter(x => x.val !== null && x.val !== undefined);
+      // Sort by absolute distance to currentPE
+      allLines.sort((a, b) => Math.abs((a.val ?? 0) - currentPE) - Math.abs((b.val ?? 0) - currentPE));
+      // Pick the two closest
+      visiblePctIdxs = allLines.slice(0, 2).map(x => x.type === 'above' ? x.idx : x.idx + pctPercents.length);
+    }
+  }
 
   const chartOptions: Highcharts.Options = {
     chart: {
@@ -189,6 +231,26 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({ indexId, displayName, col
         type: 'line',
         zIndex: 1,
       },
+      // Add percentage lines above
+      ...pctPercents.map((pct, idx) => ({
+        name: `+${Math.round(pct * 100)}% Avg`,
+        data: pctLinesAbove[idx],
+        color: pctColors[idx],
+        dashStyle: pctDashStyles[idx],
+        type: 'line',
+        zIndex: 0,
+        visible: visiblePctIdxs.includes(idx),
+      })),
+      // Add percentage lines below
+      ...pctPercents.map((pct, idx) => ({
+        name: `-${Math.round(pct * 100)}% Avg`,
+        data: pctLinesBelow[idx],
+        color: pctColors[idx],
+        dashStyle: pctDashStyles[idx],
+        type: 'line',
+        zIndex: 0,
+        visible: visiblePctIdxs.includes(idx + pctPercents.length),
+      })),
     ].filter(Boolean) as Highcharts.SeriesOptionsType[],
     credits: {
       enabled: false,
