@@ -23,6 +23,7 @@ pip install -q $mydir/Detonator
 pip install -q $mydir/DataMiner
 pip install -q $mydir/MarketBreadth
 pip install -q $mydir/MinerWorkers
+pip install -q $mydir/BrowserScraper
 pip install -q $mydir/MinerService
 
 set +x
