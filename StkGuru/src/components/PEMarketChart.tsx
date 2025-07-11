@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Highcharts from 'highcharts';
+import Highcharts from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
 
 interface PEData {
@@ -23,7 +23,7 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({ indexId, displayName, col
   const [peData, setPeData] = useState<PEData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [nYears, setNYears] = useState<number>(20); // N-year window
+  const [nYears, setNYears] = useState<number>(10); // N-year window
 
   const fetchPEData = async (index: string): Promise<PEData> => {
     const response = await fetch(`/api/market_pe?index=${index}`);
@@ -133,11 +133,28 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({ indexId, displayName, col
     }
   }
 
-  const chartOptions: Highcharts.Options = {
+  // Calculate default xAxis min and max for last 5 years
+  let xAxisMin: number | undefined = undefined;
+  let xAxisMax: number | undefined = undefined;
+  if (peData && peData.data.length) {
+    xAxisMax = peData.data[peData.data.length - 1][0];
+    const ms5y = 5 * 365.25 * 24 * 3600 * 1000;
+    xAxisMin = xAxisMax - ms5y;
+    // Ensure min is not before first data point
+    if (xAxisMin < peData.data[0][0]) xAxisMin = peData.data[0][0];
+  }
+
+  const chartOptions = {
     chart: {
       type: 'line',
       height: 600,
       backgroundColor: '#f8f9fa',
+      zoomType: 'x', // Enable zooming on x-axis
+      panning: {
+        enabled: true,
+        type: 'x',
+      },
+      // panKey is not needed for Highstock
     },
     title: {
       text: `${displayName} PE Ratio`,
@@ -160,6 +177,8 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({ indexId, displayName, col
       labels: {
         format: '{value:%Y-%m-%d}',
       },
+      min: xAxisMin,
+      max: xAxisMax,
     },
     yAxis: {
       title: {
@@ -198,6 +217,25 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({ indexId, displayName, col
           duration: 1000,
         },
       },
+    },
+    navigator: {
+      enabled: true,
+      height: 40,
+      margin: 10,
+    },
+    scrollbar: {
+      enabled: true,
+    },
+    rangeSelector: {
+      enabled: true,
+      selected: 2, // 5y button
+      inputEnabled: false,
+      buttons: [
+        { type: 'year', count: 1, text: '1y' },
+        { type: 'year', count: 3, text: '3y' },
+        { type: 'year', count: 5, text: '5y' },
+        { type: 'all', text: 'All' },
+      ],
     },
     series: [
       {
@@ -255,7 +293,7 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({ indexId, displayName, col
     credits: {
       enabled: false,
     },
-  };
+  } as Highcharts.Options;
 
   if (loading) {
     return (
