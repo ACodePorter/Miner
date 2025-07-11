@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Highcharts from 'highcharts/highstock';
-import HighchartsReact from 'highcharts-react-official';
+import React, { useState, useEffect } from "react";
+import Highcharts from "highcharts/highstock";
+import HighchartsReact from "highcharts-react-official";
 
 interface PEData {
   index: string;
@@ -19,7 +19,11 @@ interface PEMarketChartProps {
   color?: string; // e.g., '#2E86AB'
 }
 
-const PEMarketChart: React.FC<PEMarketChartProps> = ({ indexId, displayName, color = '#2E86AB' }) => {
+const PEMarketChart: React.FC<PEMarketChartProps> = ({
+  indexId,
+  displayName,
+  color = "#2E86AB",
+}) => {
   const [peData, setPeData] = useState<PEData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -41,7 +45,7 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({ indexId, displayName, col
         const data = await fetchPEData(indexId);
         setPeData(data);
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'Failed to load PE data');
+        setError(err instanceof Error ? err.message : "Failed to load PE data");
       } finally {
         setLoading(false);
       }
@@ -60,15 +64,20 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({ indexId, displayName, col
 
   // Calculate rolling N-year average and stddev for each point in history
   const getRollingStats = () => {
-    if (!peData || !peData.data.length) return { avg: [], plus2: [], minus2: [], pctLines: [] };
+    if (!peData || !peData.data.length)
+      return { avg: [], plus2: [], minus2: [], pctLines: [] };
     const msPerYear = 365.25 * 24 * 3600 * 1000;
-    const resultAvg: [number, number|null][] = [];
-    const resultPlus2: [number, number|null][] = [];
-    const resultMinus2: [number, number|null][] = [];
+    const resultAvg: [number, number | null][] = [];
+    const resultPlus2: [number, number | null][] = [];
+    const resultMinus2: [number, number | null][] = [];
     // For percentage lines: array of arrays, one for each pct
     const pctPercents = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6];
-    const pctLinesAbove: [number, (number|null)][][] = pctPercents.map(() => []);
-    const pctLinesBelow: [number, (number|null)][][] = pctPercents.map(() => []);
+    const pctLinesAbove: [number, number | null][][] = pctPercents.map(
+      () => []
+    );
+    const pctLinesBelow: [number, number | null][][] = pctPercents.map(
+      () => []
+    );
     for (let i = 0; i < peData.data.length; ++i) {
       const [ts, v] = peData.data[i];
       // Find all points within the N-year window ending at ts
@@ -80,7 +89,9 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({ indexId, displayName, col
       }
       if (window.length > 1) {
         const avg = window.reduce((a, b) => a + b, 0) / window.length;
-        const std = Math.sqrt(window.reduce((sum, x) => sum + (x - avg) ** 2, 0) / window.length);
+        const std = Math.sqrt(
+          window.reduce((sum, x) => sum + (x - avg) ** 2, 0) / window.length
+        );
         resultAvg.push([ts, avg]);
         resultPlus2.push([ts, avg + 2 * std]);
         resultMinus2.push([ts, avg - 2 * std]);
@@ -98,13 +109,34 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({ indexId, displayName, col
         });
       }
     }
-    return { avg: resultAvg, plus2: resultPlus2, minus2: resultMinus2, pctLinesAbove, pctLinesBelow, pctPercents };
+    return {
+      avg: resultAvg,
+      plus2: resultPlus2,
+      minus2: resultMinus2,
+      pctLinesAbove,
+      pctLinesBelow,
+      pctPercents,
+    };
   };
 
   const rollingStats = getRollingStats();
 
-  const pctColors = ['#1abc9c', '#3498db', '#9b59b6', '#e67e22', '#e74c3c', '#34495e'];
-  const pctDashStyles = ['ShortDash', 'ShortDot', 'ShortDashDot', 'Dash', 'Dot', 'DashDot'];
+  const pctColors = [
+    "#1abc9c",
+    "#3498db",
+    "#9b59b6",
+    "#e67e22",
+    "#e74c3c",
+    "#34495e",
+  ];
+  const pctDashStyles = [
+    "ShortDash",
+    "ShortDot",
+    "ShortDashDot",
+    "Dash",
+    "Dot",
+    "DashDot",
+  ];
 
   const pctPercents = rollingStats.pctPercents || [];
   const pctLinesAbove = rollingStats.pctLinesAbove || [];
@@ -119,17 +151,23 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({ indexId, displayName, col
     const avgAtLast = rollingStats.avg[lastIdx]?.[1];
     if (avgAtLast !== null && avgAtLast !== undefined) {
       // Build all percentage lines' last values
-      const aboveVals = pctLinesAbove.map(line => line[lastIdx]?.[1]);
-      const belowVals = pctLinesBelow.map(line => line[lastIdx]?.[1]);
+      const aboveVals = pctLinesAbove.map((line) => line[lastIdx]?.[1]);
+      const belowVals = pctLinesBelow.map((line) => line[lastIdx]?.[1]);
       // Build array of {idx, val, type} for all lines
       const allLines = [
-        ...aboveVals.map((val, idx) => ({ idx, val, type: 'above' })),
-        ...belowVals.map((val, idx) => ({ idx, val, type: 'below' })),
-      ].filter(x => x.val !== null && x.val !== undefined);
+        ...aboveVals.map((val, idx) => ({ idx, val, type: "above" })),
+        ...belowVals.map((val, idx) => ({ idx, val, type: "below" })),
+      ].filter((x) => x.val !== null && x.val !== undefined);
       // Sort by absolute distance to currentPE
-      allLines.sort((a, b) => Math.abs((a.val ?? 0) - currentPE) - Math.abs((b.val ?? 0) - currentPE));
+      allLines.sort(
+        (a, b) =>
+          Math.abs((a.val ?? 0) - currentPE) -
+          Math.abs((b.val ?? 0) - currentPE)
+      );
       // Pick the two closest
-      visiblePctIdxs = allLines.slice(0, 2).map(x => x.type === 'above' ? x.idx : x.idx + pctPercents.length);
+      visiblePctIdxs = allLines
+        .slice(0, 2)
+        .map((x) => (x.type === "above" ? x.idx : x.idx + pctPercents.length));
     }
   }
 
@@ -146,64 +184,66 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({ indexId, displayName, col
 
   const chartOptions = {
     chart: {
-      type: 'line',
+      type: "line",
       height: 600,
-      backgroundColor: '#f8f9fa',
-      zoomType: 'x', // Enable zooming on x-axis
+      backgroundColor: "#f8f9fa",
+      zoomType: "x", // Enable zooming on x-axis
       panning: {
         enabled: true,
-        type: 'x',
+        type: "x",
       },
       // panKey is not needed for Highstock
     },
     title: {
       text: `${displayName} PE Ratio`,
       style: {
-        fontSize: '18px',
-        fontWeight: 'bold',
+        fontSize: "18px",
+        fontWeight: "bold",
       },
     },
     subtitle: {
-      text: 'Price-to-Earnings ratio over time',
+      text: "Price-to-Earnings ratio over time",
       style: {
-        fontSize: '14px',
+        fontSize: "14px",
       },
     },
     xAxis: {
-      type: 'datetime',
+      type: "datetime",
       title: {
-        text: 'Date',
+        text: "Date",
       },
       labels: {
-        format: '{value:%Y-%m-%d}',
+        format: "{value:%Y-%m-%d}",
       },
       min: xAxisMin,
       max: xAxisMax,
     },
     yAxis: {
       title: {
-        text: 'PE Ratio',
+        text: "PE Ratio",
       },
       labels: {
-        format: '{value:.1f}',
+        format: "{value:.1f}",
       },
     },
     tooltip: {
       shared: true,
-      formatter: function() {
-        const date = Highcharts.dateFormat('%Y-%m-%d', this.x);
+      formatter: function () {
+        const date = Highcharts.dateFormat("%Y-%m-%d", this.x);
         let tooltip = `<b>${date}</b><br/>`;
-        this.points?.forEach(point => {
-          tooltip += `<span style="color:${point.color}">●</span> ${point.series.name}: <b>${point.y?.toFixed(2)}</b><br/>`;
+        this.points?.forEach((point) => {
+          tooltip += `<span style="color:${point.color}">●</span> ${
+            point.series.name
+          }: <b>${point.y?.toFixed(2)}</b><br/>`;
         });
         return tooltip;
       },
     },
     legend: {
       enabled: true,
-      align: 'center',
-      verticalAlign: 'bottom',
-      layout: 'horizontal',
+      align: "center",
+      verticalAlign: "bottom",
+      layout: "horizontal",
     },
     plotOptions: {
       line: {
@@ -231,10 +271,10 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({ indexId, displayName, col
       selected: 2, // 5y button
       inputEnabled: false,
       buttons: [
-        { type: 'year', count: 1, text: '1y' },
-        { type: 'year', count: 3, text: '3y' },
-        { type: 'year', count: 5, text: '5y' },
-        { type: 'all', text: 'All' },
+        { type: "year", count: 1, text: "1y" },
+        { type: "year", count: 3, text: "3y" },
+        { type: "year", count: 5, text: "5y" },
+        { type: "all", text: "All" },
       ],
     },
     series: [
@@ -242,31 +282,31 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({ indexId, displayName, col
         name: displayName,
         data: peData?.data || [],
         color: color,
-        type: 'line',
+        type: "line",
         zIndex: 3,
       },
       {
         name: `${nYears}Y Avg`,
         data: rollingStats.avg,
-        color: '#888',
-        dashStyle: 'Dash',
-        type: 'line',
+        color: "#888",
+        dashStyle: "Dash",
+        type: "line",
         zIndex: 2,
       },
       {
         name: `+2 Std`,
         data: rollingStats.plus2,
-        color: '#b8860b',
-        dashStyle: 'Dot',
-        type: 'line',
+        color: "#b8860b",
+        dashStyle: "Dot",
+        type: "line",
         zIndex: 1,
       },
       {
         name: `-2 Std`,
         data: rollingStats.minus2,
-        color: '#b8860b',
-        dashStyle: 'Dot',
-        type: 'line',
+        color: "#b8860b",
+        dashStyle: "Dot",
+        type: "line",
         zIndex: 1,
       },
       // Add percentage lines above
@@ -275,7 +315,7 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({ indexId, displayName, col
         data: pctLinesAbove[idx],
         color: pctColors[idx],
         dashStyle: pctDashStyles[idx],
-        type: 'line',
+        type: "line",
         zIndex: 0,
         visible: visiblePctIdxs.includes(idx),
       })),
@@ -285,7 +325,7 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({ indexId, displayName, col
         data: pctLinesBelow[idx],
         color: pctColors[idx],
         dashStyle: pctDashStyles[idx],
-        type: 'line',
+        type: "line",
         zIndex: 0,
         visible: visiblePctIdxs.includes(idx + pctPercents.length),
       })),
@@ -297,13 +337,15 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({ indexId, displayName, col
 
   if (loading) {
     return (
-      <div style={{ 
-        display: 'flex', 
-        justifyContent: 'center', 
-        alignItems: 'center', 
-        height: '400px',
-        fontSize: '18px'
-      }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "400px",
+          fontSize: "18px",
+        }}
+      >
         Loading PE data...
       </div>
     );
@@ -311,50 +353,99 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({ indexId, displayName, col
 
   if (error) {
     return (
-      <div style={{ 
-        display: 'flex', 
-        justifyContent: 'center', 
-        alignItems: 'center', 
-        height: '400px',
-        color: 'red',
-        fontSize: '16px'
-      }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "400px",
+          color: "red",
+          fontSize: "16px",
+        }}
+      >
         Error: {error}
       </div>
     );
   }
 
   return (
-    <div style={{ padding: '20px', background: '#fff', borderRadius: '10px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)', maxWidth: 900, margin: '0 auto' }}>
-      <div style={{ marginBottom: '20px' }}>
-        <h2 style={{ marginBottom: '10px', color }}>{displayName}</h2>
-        <div style={{ marginBottom: '10px' }}>
-          <label>
-            N-year window for average/stddev: 
+    <div
+      style={{
+        padding: "10px 12px",
+        background: "#fff",
+        borderRadius: "8px",
+        boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
+        maxWidth: 1000,
+        margin: "12px auto",
+      }}
+    >
+      <div style={{ marginBottom: "10px" }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            marginBottom: 4,
+          }}
+        >
+          <h2 style={{ margin: 0, color, fontSize: "1.1rem", fontWeight: 600 }}>
+            {displayName}
+          </h2>
+          <label style={{ fontSize: "0.95rem" }}>
+            N-year:
             <input
               type="number"
               min={1}
               max={100}
               value={nYears}
-              onChange={e => setNYears(Number(e.target.value))}
-              style={{ marginLeft: 8, width: 60 }}
+              onChange={(e) => setNYears(Number(e.target.value))}
+              style={{
+                marginLeft: 4,
+                width: 40,
+                fontSize: "0.95rem",
+                padding: "2px 4px",
+              }}
             />
           </label>
         </div>
         {peData && (
-          <div style={{ background: '#f8f9fa', padding: '15px', borderRadius: '8px', minWidth: '200px', marginBottom: '10px' }}>
-            <div>Current PE: <strong>{peData.stats.current_pe.toFixed(2)}</strong></div>
-            <div>20Y Average: <strong>{peData.stats.avg_20y.toFixed(2)}</strong></div>
-            <div>Range: <strong>{peData.stats.min_pe.toFixed(2)} - {peData.stats.max_pe.toFixed(2)}</strong></div>
+          <div
+            style={{
+              background: "#f8f9fa",
+              padding: "7px 10px",
+              borderRadius: "6px",
+              minWidth: "120px",
+              marginBottom: 4,
+              fontSize: "0.97rem",
+              display: "flex",
+              gap: 12,
+            }}
+          >
+            <div>
+              PE: <strong>{peData.stats.current_pe.toFixed(2)}</strong>
+            </div>
+            <div>
+              Avg(20y): <strong>{peData.stats.avg_20y.toFixed(2)}</strong>
+            </div>
+            <div>
+              Range:{" "}
+              <strong>
+                {peData.stats.min_pe.toFixed(2)} -{" "}
+                {peData.stats.max_pe.toFixed(2)}
+              </strong>
+            </div>
           </div>
         )}
       </div>
       <HighchartsReact
         highcharts={Highcharts}
-        options={chartOptions}
+        options={{
+          ...chartOptions,
+          chart: { ...(chartOptions.chart || {}), height: 600, width: 900 },
+        }}
       />
     </div>
   );
 };
 
-export default PEMarketChart; 
+export default PEMarketChart;
