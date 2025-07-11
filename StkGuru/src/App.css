@@ -38,29 +38,29 @@
 }
 
 .App-header {
-  @apply bg-gradient-to-r from-blue-600 to-blue-800 text-white py-8 px-4 shadow-lg;
+  @apply bg-gradient-to-r from-blue-600 to-blue-800 text-white py-2 px-4 shadow-lg;
 }
 
 .App-header h1 {
-  @apply text-3xl md:text-4xl font-bold mb-2 text-balance;
+  @apply text-xl md:text-2xl font-bold mb-0 text-balance;
 }
 
 .App-header p {
-  @apply text-lg md:text-xl opacity-90 text-balance;
+  @apply text-sm md:text-base opacity-90 text-balance;
 }
 
 main {
-  @apply max-w-7xl mx-auto px-4 py-8 space-y-8;
+  @apply max-w-7xl mx-auto px-4 py-4 space-y-8;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
   .App-header h1 {
-    @apply text-2xl;
+    @apply text-lg;
   }
   
   .App-header p {
-    @apply text-base;
+    @apply text-xs;
   }
   
   main {
