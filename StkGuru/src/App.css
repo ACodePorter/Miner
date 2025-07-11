@@ -25,7 +25,28 @@
   }
 
   .input-field {
-    @apply bg-gray-800/50 border border-gray-700/50 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent transition-all duration-300;
+    @apply bg-gray-800/30 backdrop-blur-sm border border-gray-700/30 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all duration-300 shadow-lg;
+    box-shadow: 
+      inset 0 1px 2px rgba(255, 255, 255, 0.05),
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .input-field:hover {
+    @apply bg-gray-700/40 border-gray-600/40;
+    box-shadow: 
+      inset 0 1px 2px rgba(255, 255, 255, 0.08),
+      0 6px 8px -1px rgba(0, 0, 0, 0.15),
+      0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .input-field:focus {
+    @apply bg-gray-700/50 border-blue-500/50;
+    box-shadow: 
+      inset 0 1px 2px rgba(255, 255, 255, 0.1),
+      0 0 0 3px rgba(96, 165, 250, 0.1),
+      0 8px 12px -1px rgba(0, 0, 0, 0.2),
+      0 4px 6px -1px rgba(0, 0, 0, 0.1);
   }
 
   .loading-spinner {
@@ -172,7 +193,41 @@ input[type="radio"]:disabled {
 }
 
 input[type="number"] {
-  @apply bg-gray-800/50 border border-gray-700/50 rounded-xl px-3 py-2 text-white text-center focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent;
+  @apply bg-gray-800/30 backdrop-blur-sm border border-gray-700/30 rounded-xl px-3 py-2 text-white text-center focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all duration-300 shadow-lg;
+  box-shadow: 
+    inset 0 1px 2px rgba(255, 255, 255, 0.05),
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+input[type="number"]:hover {
+  @apply bg-gray-700/40 border-gray-600/40;
+  box-shadow: 
+    inset 0 1px 2px rgba(255, 255, 255, 0.08),
+    0 6px 8px -1px rgba(0, 0, 0, 0.15),
+    0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+input[type="number"]:focus {
+  @apply bg-gray-700/50 border-blue-500/50;
+  box-shadow: 
+    inset 0 1px 2px rgba(255, 255, 255, 0.1),
+    0 0 0 3px rgba(96, 165, 250, 0.1),
+    0 8px 12px -1px rgba(0, 0, 0, 0.2),
+    0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Hide spinner buttons on number inputs */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  display: none;
+}
+
+/* Firefox - hide spinner buttons */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 /* Table styling */
