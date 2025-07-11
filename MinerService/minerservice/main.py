@@ -24,9 +24,8 @@ app = FastAPI()
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173",
-                   "http://127.0.0.1:5173"],  # React dev server
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -134,7 +133,7 @@ async def update_spx_market_breadth() -> str:
     return 'GOOD'
 
 
-@app.get('/mbs')
+@app.get('/api/mbs')
 async def get_mbs(market_index: str = 'spx', start_date: str = None, end_date: str = None) -> list | dict:
     '''
     获取市场宽度分数

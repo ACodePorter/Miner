@@ -29,15 +29,14 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
   const [error, setError] = useState<string | null>(null);
   const [nYears, setNYears] = useState<number>(10); // N-year window
 
-  const fetchPEData = async (index: string): Promise<PEData> => {
-    const response = await fetch(`/api/market_pe?index=${index}`);
-    if (!response.ok) {
-      throw new Error(`Failed to fetch ${index} PE data`);
-    }
-    return response.json();
-  };
-
   useEffect(() => {
+    const fetchPEData = async (index: string): Promise<PEData> => {
+      const response = await fetch(`/api/market_pe?index=${index}`);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch ${index} PE data`);
+      }
+      return response.json();
+    };
     const loadData = async () => {
       try {
         setLoading(true);
