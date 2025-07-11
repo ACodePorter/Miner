@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback, useMemo } from "react";
 import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
 import LoadingSpinner from "./LoadingSpinner";
@@ -37,26 +37,26 @@ const SMA_OPTIONS = [
 ];
 
 const COLORS = [
-  "#60A5FA", // Blue - main series
-  "#A78BFA", // Purple
-  "#F59E0B", // Amber
-  "#EF4444", // Red
-  "#10B981", // Emerald
-  "#8B5CF6", // Violet
-  "#F97316", // Orange
-  "#06B6D4", // Cyan
-  "#84CC16", // Lime
-  "#EC4899", // Pink
-  "#6366F1", // Indigo
-  "#14B8A6", // Teal
-  "#F43F5E", // Rose
-  "#A855F7", // Purple
-  "#EAB308", // Yellow
-  "#22C55E", // Green
-  "#3B82F6", // Blue
-  "#F59E0B", // Amber
-  "#10B981", // Emerald
-  "#8B5CF6", // Violet
+  "#F92672", // Pink - main series
+  "#A6E22E", // Green
+  "#FD971F", // Orange
+  "#AE81FF", // Purple
+  "#66D9EF", // Cyan
+  "#E6DB74", // Yellow
+  "#F92672", // Pink
+  "#A6E22E", // Green
+  "#FD971F", // Orange
+  "#AE81FF", // Purple
+  "#66D9EF", // Cyan
+  "#E6DB74", // Yellow
+  "#F92672", // Pink
+  "#A6E22E", // Green
+  "#FD971F", // Orange
+  "#AE81FF", // Purple
+  "#66D9EF", // Cyan
+  "#E6DB74", // Yellow
+  "#F92672", // Pink
+  "#A6E22E", // Green
 ];
 
 const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
@@ -124,6 +124,32 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
     setNYears(Math.max(1, Math.min(20, value)));
   }, []);
 
+  // Calculate chart statistics
+  const chartStats = useMemo(() => {
+    if (!data || data.length === 0) return null;
+    
+    const smaOption = SMA_OPTIONS[selectedSMA];
+    const scores = data.map(d => d[smaOption.key as keyof MarketBreadthData] as number);
+    
+    const currentScore = scores[scores.length - 1];
+    const avgScore = scores.reduce((sum, score) => sum + score, 0) / scores.length;
+    const minScore = Math.min(...scores);
+    const maxScore = Math.max(...scores);
+    
+    // Calculate 20-period average
+    const recentScores = scores.slice(-20);
+    const avg20Period = recentScores.reduce((sum, score) => sum + score, 0) / recentScores.length;
+    
+    return {
+      current: currentScore,
+      average: avgScore,
+      min: minScore,
+      max: maxScore,
+      avg20Period: avg20Period,
+      period: smaOption.label
+    };
+  }, [data, selectedSMA]);
+
   if (loading) {
     return (
       <div className="chart-container">
@@ -152,10 +178,10 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
       xData[i],
       d[smaOption.key as keyof MarketBreadthData] as number,
     ]),
-    color: COLORS[0],
+    color: "#F92672",
     type: "line" as const,
     zIndex: 2,
-    lineWidth: 3,
+    lineWidth: 2,
     marker: { 
       enabled: false,
       states: {
@@ -216,38 +242,39 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
       type: "datetime",
       title: {
         text: "Date",
-        style: { fontSize: "14px", fontWeight: "600", color: "#9ca3af" },
+        style: { fontSize: "16px", fontWeight: "700", color: "#E5E7EB" },
       },
       labels: { 
         format: "{value:%Y-%m-%d}", 
-        style: { fontSize: "12px", color: "#9ca3af" } 
+        style: { fontSize: "14px", color: "#D1D5DB", fontWeight: "500" } 
       },
-      tickLength: 0,
+      tickLength: 6,
+      tickWidth: 2,
       minTickInterval: 24 * 3600 * 1000 * 7, // at least 1 week
       min:
         xData.length > 0
           ? xData[Math.max(0, xData.length - nYears * 365)]
           : undefined, // N years ago
       max: xData.length > 0 ? xData[xData.length - 1] : undefined, // latest data
-      gridLineWidth: 1,
-      gridLineColor: "rgba(75, 85, 99, 0.3)",
-      lineColor: "rgba(75, 85, 99, 0.5)",
-      tickColor: "rgba(75, 85, 99, 0.3)",
+      gridLineWidth: 2,
+      gridLineColor: "rgba(107, 114, 128, 0.4)",
+      lineColor: "rgba(156, 163, 175, 0.6)",
+      tickColor: "rgba(156, 163, 175, 0.6)",
     },
     yAxis: {
       title: { 
         text: "Score",
-        style: { fontSize: "14px", fontWeight: "600", color: "#9ca3af" },
+        style: { fontSize: "16px", fontWeight: "700", color: "#E5E7EB" },
       },
       labels: { 
         format: "{value}", 
-        style: { fontSize: "12px", color: "#9ca3af" } 
+        style: { fontSize: "14px", color: "#D1D5DB", fontWeight: "500" } 
       },
       min: 0,
       max: 1100,
-      gridLineWidth: 1,
-      gridLineColor: "rgba(75, 85, 99, 0.3)",
-      lineColor: "rgba(75, 85, 99, 0.5)",
+      gridLineWidth: 2,
+      gridLineColor: "rgba(107, 114, 128, 0.4)",
+      lineColor: "rgba(156, 163, 175, 0.6)",
       tickColor: "rgba(75, 85, 99, 0.3)",
     },
     legend: {
@@ -256,16 +283,24 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
       verticalAlign: "bottom",
       layout: "horizontal",
       itemStyle: { 
-        fontSize: "12px",
-        color: "#E5E7EB"
+        fontSize: "14px",
+        color: "#F3F4F6",
+        fontWeight: "600"
       },
-      symbolHeight: 10,
-      symbolWidth: 20,
-      margin: 4,
-      padding: 2,
-      backgroundColor: "transparent",
-      borderWidth: 0,
-      shadow: false,
+      itemHoverStyle: {
+        color: "#60A5FA"
+      },
+      symbolHeight: 12,
+      symbolWidth: 24,
+      symbolRadius: 3,
+      margin: 8,
+      padding: 12,
+      backgroundColor: "rgba(17, 24, 39, 0.8)",
+      borderWidth: 1,
+      borderColor: "rgba(75, 85, 99, 0.5)",
+      borderRadius: 8,
+      shadow: true,
+      itemDistance: 20,
     },
     tooltip: {
       shared: true,
@@ -481,6 +516,33 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
           </div>
         </div>
       </div>
+      
+      {chartStats && (
+        <div className="chart-stats">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <div className="chart-stat">
+              <div className="chart-stat-label">Current {chartStats.period}</div>
+              <div className="chart-stat-value">{chartStats.current.toFixed(0)}</div>
+            </div>
+            <div className="chart-stat">
+              <div className="chart-stat-label">20-Period Avg</div>
+              <div className="chart-stat-value">{chartStats.avg20Period.toFixed(0)}</div>
+            </div>
+            <div className="chart-stat">
+              <div className="chart-stat-label">All-Time Avg</div>
+              <div className="chart-stat-value">{chartStats.average.toFixed(0)}</div>
+            </div>
+            <div className="chart-stat">
+              <div className="chart-stat-label">Min</div>
+              <div className="chart-stat-value">{chartStats.min.toFixed(0)}</div>
+            </div>
+            <div className="chart-stat">
+              <div className="chart-stat-label">Max</div>
+              <div className="chart-stat-value">{chartStats.max.toFixed(0)}</div>
+            </div>
+          </div>
+        </div>
+      )}
       
       <div className="mt-6">
         <HighchartsReact highcharts={Highcharts} options={chartOptions} />

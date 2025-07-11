@@ -239,10 +239,10 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
       {
         name: displayName,
         data: peData?.data || [],
-        color: color,
+        color: "#F92672",
         type: "line",
         zIndex: 3,
-        lineWidth: 3,
+        lineWidth: 2,
         marker: {
           enabled: false,
           states: {
@@ -256,7 +256,7 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
     series.push({
       name: `${nYears}Y Avg`,
       data: rollingStats.avg,
-      color: "#60A5FA",
+      color: "#A6E22E",
       dashStyle: "Dash" as const,
       type: "line",
       zIndex: 2,
@@ -270,21 +270,21 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
         {
           name: `+2 Std`,
           data: rollingStats.plus2,
-          color: "#F59E0B",
+          color: "#FD971F",
           dashStyle: "Dot" as const,
           type: "line",
           zIndex: 1,
-          lineWidth: 1,
+          lineWidth: 3,
           marker: { enabled: false },
         },
         {
           name: `-2 Std`,
           data: rollingStats.minus2,
-          color: "#F59E0B",
+          color: "#FD971F",
           dashStyle: "Dot" as const,
           type: "line",
           zIndex: 1,
-          lineWidth: 1,
+          lineWidth: 3,
           marker: { enabled: false },
         }
       );
@@ -301,7 +301,7 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
           dashStyle: pctDashStyles[idx] as any,
           type: "line",
           zIndex: 0,
-          lineWidth: 1,
+          lineWidth: 3,
           visible: visiblePctIdxs.includes(idx),
           marker: { enabled: false },
         });
@@ -316,7 +316,7 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
           dashStyle: pctDashStyles[idx] as any,
           type: "line",
           zIndex: 0,
-          lineWidth: 1,
+          lineWidth: 3,
           visible: visiblePctIdxs.includes(idx + pctPercents.length),
           marker: { enabled: false },
         });
@@ -355,40 +355,44 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
         type: "datetime",
         title: {
           text: "Date",
-          style: { fontSize: "14px", fontWeight: "600", color: "#9ca3af" },
+          style: { fontSize: "16px", fontWeight: "700", color: "#E5E7EB" },
         },
         labels: {
           format: "{value:%Y-%m-%d}",
-          style: { fontSize: "12px", color: "#9ca3af" },
+          style: { fontSize: "14px", color: "#D1D5DB", fontWeight: "500" },
         },
         min: xAxisMin,
         max: xAxisMax,
-        gridLineWidth: 1,
-        gridLineColor: "rgba(75, 85, 99, 0.3)",
-        lineColor: "rgba(75, 85, 99, 0.5)",
-        tickColor: "rgba(75, 85, 99, 0.3)",
+        gridLineWidth: 2,
+        gridLineColor: "rgba(107, 114, 128, 0.4)",
+        lineColor: "rgba(156, 163, 175, 0.6)",
+        tickColor: "rgba(156, 163, 175, 0.6)",
+        tickWidth: 2,
+        tickLength: 6,
         crosshair: {
-          color: 'rgba(96, 165, 250, 0.5)',
-          width: 1,
+          color: 'rgba(96, 165, 250, 0.7)',
+          width: 2,
           dashStyle: 'shortdot'
         }
       },
       yAxis: {
         title: {
           text: "PE Ratio",
-          style: { fontSize: "14px", fontWeight: "600", color: "#9ca3af" },
+          style: { fontSize: "16px", fontWeight: "700", color: "#E5E7EB" },
         },
         labels: {
           format: "{value:.1f}",
-          style: { fontSize: "12px", color: "#9ca3af" },
+          style: { fontSize: "14px", color: "#D1D5DB", fontWeight: "500" },
         },
-        gridLineWidth: 1,
-        gridLineColor: "rgba(75, 85, 99, 0.3)",
-        lineColor: "rgba(75, 85, 99, 0.5)",
-        tickColor: "rgba(75, 85, 99, 0.3)",
+        gridLineWidth: 2,
+        gridLineColor: "rgba(107, 114, 128, 0.4)",
+        lineColor: "rgba(156, 163, 175, 0.6)",
+        tickColor: "rgba(156, 163, 175, 0.6)",
+        tickWidth: 2,
+        tickLength: 6,
         crosshair: {
-          color: 'rgba(96, 165, 250, 0.5)',
-          width: 1,
+          color: 'rgba(96, 165, 250, 0.7)',
+          width: 2,
           dashStyle: 'shortdot'
         }
       },
@@ -424,20 +428,36 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
           return tooltip;
         },
       },
-      legend: {
+            legend: {
         enabled: true,
         align: "center",
         verticalAlign: "bottom",
         layout: "horizontal",
         itemStyle: { 
-          fontSize: "12px",
-          color: "#E5E7EB"
+          fontSize: "14px",
+          color: "#F3F4F6",
+          fontWeight: "600"
         },
-        symbolHeight: 10,
-        symbolWidth: 20,
-        backgroundColor: "transparent",
-        borderWidth: 0,
-        shadow: false,
+        itemHoverStyle: {
+          color: "#60A5FA"
+        },
+        symbolHeight: 12,
+        symbolWidth: 24,
+        symbolRadius: 3,
+        backgroundColor: "rgba(17, 24, 39, 0.8)",
+        borderWidth: 1,
+        borderColor: "rgba(75, 85, 99, 0.5)",
+        borderRadius: 8,
+        shadow: true,
+        itemDistance: 20,
+        padding: 12,
+        width: "100%",
+        height: 50,
+        itemWidth: 150,
+        useHTML: false,
+        floating: false,
+        x: 0,
+        y: 0,
       },
       plotOptions: {
         line: {
@@ -686,51 +706,51 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
       
       {peData && (
         <div className="chart-stats">
-          <table className="w-full text-center">
-            <thead>
-              <tr className="text-xs text-gray-600 font-medium">
-                <th className="pb-1">Current PE</th>
-                <th className="pb-1">{nYears}-Year Avg</th>
-                <th className="pb-1">Range</th>
-                <th className="pb-1">vs {nYears}Y Avg</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="text-lg font-bold text-gray-900">
-                <td>{peData.stats.current_pe.toFixed(2)}</td>
-                <td>
-                  {rollingStats.avg.length > 0 && rollingStats.avg[rollingStats.avg.length - 1]?.[1] 
-                    ? rollingStats.avg[rollingStats.avg.length - 1][1]?.toFixed(2)
-                    : peData.stats.avg_20y.toFixed(2)
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="chart-stat">
+              <div className="chart-stat-label">Current PE</div>
+              <div className="chart-stat-value">{peData.stats.current_pe.toFixed(2)}</div>
+            </div>
+            <div className="chart-stat">
+              <div className="chart-stat-label">{nYears}-Year Avg</div>
+              <div className="chart-stat-value">
+                {rollingStats.avg.length > 0 && rollingStats.avg[rollingStats.avg.length - 1]?.[1] 
+                  ? rollingStats.avg[rollingStats.avg.length - 1][1]?.toFixed(2)
+                  : peData.stats.avg_20y.toFixed(2)
+                }
+              </div>
+            </div>
+            <div className="chart-stat">
+              <div className="chart-stat-label">Range</div>
+              <div className="chart-stat-value text-sm">
+                {(() => {
+                  // Calculate range from current view range
+                  const visibleData = peData.data.filter(([timestamp]) => {
+                    if (!currentViewRange.min || !currentViewRange.max) return true;
+                    return timestamp >= currentViewRange.min && timestamp <= currentViewRange.max;
+                  });
+                  
+                  if (visibleData.length > 0) {
+                    const values = visibleData.map(([_, value]) => value);
+                    const min = Math.min(...values);
+                    const max = Math.max(...values);
+                    return `${min.toFixed(2)} - ${max.toFixed(2)}`;
                   }
-                </td>
-                <td className="text-sm">
-                  {(() => {
-                    // Calculate range from current view range
-                    const visibleData = peData.data.filter(([timestamp]) => {
-                      if (!currentViewRange.min || !currentViewRange.max) return true;
-                      return timestamp >= currentViewRange.min && timestamp <= currentViewRange.max;
-                    });
-                    
-                    if (visibleData.length > 0) {
-                      const values = visibleData.map(([_, value]) => value);
-                      const min = Math.min(...values);
-                      const max = Math.max(...values);
-                      return `${min.toFixed(2)} - ${max.toFixed(2)}`;
-                    }
-                    
-                    // Fallback to full dataset range
-                    return `${peData.stats.min_pe.toFixed(2)} - ${peData.stats.max_pe.toFixed(2)}`;
-                  })()}
-                </td>
-                <td className={
-                  peData.stats.current_pe > (rollingStats.avg.length > 0 && rollingStats.avg[rollingStats.avg.length - 1]?.[1] || peData.stats.avg_20y) ? 'text-red-600' : 'text-green-600'
-                }>
-                  {((peData.stats.current_pe / (rollingStats.avg.length > 0 && rollingStats.avg[rollingStats.avg.length - 1]?.[1] || peData.stats.avg_20y) - 1) * 100).toFixed(1)}%
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                  
+                  // Fallback to full dataset range
+                  return `${peData.stats.min_pe.toFixed(2)} - ${peData.stats.max_pe.toFixed(2)}`;
+                })()}
+              </div>
+            </div>
+            <div className="chart-stat">
+              <div className="chart-stat-label">vs {nYears}Y Avg</div>
+              <div className={`chart-stat-value ${
+                peData.stats.current_pe > (rollingStats.avg.length > 0 && rollingStats.avg[rollingStats.avg.length - 1]?.[1] || peData.stats.avg_20y) ? 'text-red-400' : 'text-green-400'
+              }`}>
+                {((peData.stats.current_pe / (rollingStats.avg.length > 0 && rollingStats.avg[rollingStats.avg.length - 1]?.[1] || peData.stats.avg_20y) - 1) * 100).toFixed(1)}%
+              </div>
+            </div>
+          </div>
         </div>
       )}
       

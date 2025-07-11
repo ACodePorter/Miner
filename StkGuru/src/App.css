@@ -157,7 +157,7 @@ main {
 }
 
 .chart-stats {
-  @apply bg-gray-800/30 rounded-2xl p-6 mt-6 border border-gray-700/30;
+  @apply bg-gray-800/30 rounded-2xl py-3 px-6 mt-6 border border-gray-700/30;
 }
 
 .chart-stat {
