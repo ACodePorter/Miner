@@ -95,6 +95,7 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
     type: "line" as const,
     zIndex: 2,
     marker: { enabled: false },
+    // no stacking property
   };
   // Collect all unique sector keys (from the first non-empty sector array)
   let sectorKeys: string[] = [];
@@ -114,16 +115,17 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
       return [xData[i], found ? found.score : null];
     }),
     color: COLORS[(idx + 1) % COLORS.length],
-    type: "line" as const,
+    type: "area" as const,
     zIndex: 1,
     visible: false, // hidden by default
     marker: { enabled: false },
+    stacking: 'normal' as const,
   }));
 
   // Compact chart options
   const chartOptions: Highcharts.Options = {
     chart: {
-      type: "line",
+      type: "line", // This will be overridden by individual series types
       height: 600,
       width: 900,
       backgroundColor: "#fff",
@@ -141,7 +143,7 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
       title: { text: "Score" },
       labels: { format: "{value}", style: { fontSize: "0.85rem" } },
       min: 0,
-      max: 100,
+      max: 1100,
       gridLineWidth: 1,
     },
     legend: {
@@ -171,6 +173,11 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
       line: {
         marker: { enabled: false },
         lineWidth: 2,
+      },
+      area: {
+        marker: { enabled: false },
+        lineWidth: 1,
+        fillOpacity: 0.6,
       },
       series: {
         animation: { duration: 600 },
