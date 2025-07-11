@@ -7,19 +7,21 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>StkGuru - Stock Market Data Visualization</h1>
-        <p>Real-time financial market data and analysis</p>
+        <div className="max-w-7xl mx-auto text-center">
+          <h1>StkGuru - Stock Market Data Visualization</h1>
+          <p>Real-time financial market data and analysis</p>
+        </div>
       </header>
 
       <main>
-        <PEMarketChart indexId="spx" displayName="S&P 500 (SPX)" color="#2E86AB" />
-        <div style={{ height: '32px' }} />
-        <PEMarketChart indexId="qqq" displayName="NASDAQ 100 (QQQ)" color="#A23B72" />
-        <div style={{ height: '32px' }} />
-
-        <div className="market-breadth-section">
-          <h2 className="text-xl font-bold text-center mb-4">Market Breadth Analysis</h2>
-          <MarketBreadthCard indexId="spx" />
+        <div className="space-y-8">
+          <PEMarketChart indexId="spx" displayName="S&P 500 (SPX)" color="#2E86AB" />
+          <PEMarketChart indexId="qqq" displayName="NASDAQ 100 (QQQ)" color="#A23B72" />
+          
+          <div className="market-breadth-section">
+            <h2 className="market-breadth-title">Market Breadth Analysis</h2>
+            <MarketBreadthCard indexId="spx" />
+          </div>
         </div>
       </main>
     </div>

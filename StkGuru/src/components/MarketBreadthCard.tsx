@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
+import LoadingSpinner from "./LoadingSpinner";
+import ErrorMessage from "./ErrorMessage";
 
 export interface SectorScore {
   sector_key: string;
@@ -89,10 +91,18 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
   }, [indexId]);
 
   if (loading) {
-    return <div className="text-center">Loading Market Breadth...</div>;
+    return (
+      <div className="chart-container">
+        <LoadingSpinner text="Loading Market Breadth..." />
+      </div>
+    );
   }
   if (error) {
-    return <div className="text-center text-red-600">Error: {error}</div>;
+    return (
+      <div className="chart-container">
+        <ErrorMessage message={`Error: ${error}`} />
+      </div>
+    );
   }
   if (!data || data.length === 0) {
     return null;
@@ -145,9 +155,8 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
   const chartOptions: Highcharts.Options = {
     chart: {
       type: "line", // This will be overridden by individual series types
-      height: 600,
-      width: 900,
-      backgroundColor: "#fff",
+      height: 500,
+      backgroundColor: "transparent",
       spacing: [10, 12, 10, 12],
       style: { fontFamily: "inherit" },
       panning: {
@@ -156,13 +165,19 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
       },
     },
     title: {
-      text: `${data[0].index_name.toUpperCase()} Market Breadth`,
-      style: { fontSize: "1.1rem", fontWeight: "bold" },
+      text: "",
     },
     // Calculate default xAxis min and max for last 3 years
     xAxis: {
       type: "datetime",
-      labels: { format: "{value:%Y-%m-%d}", style: { fontSize: "0.85rem" } },
+      title: {
+        text: "Date",
+        style: { fontSize: "14px", fontWeight: "600" },
+      },
+      labels: { 
+        format: "{value:%Y-%m-%d}", 
+        style: { fontSize: "12px" } 
+      },
       tickLength: 0,
       minTickInterval: 24 * 3600 * 1000 * 7, // at least 1 week
       min:
@@ -170,20 +185,29 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
           ? xData[Math.max(0, xData.length - 3 * 365)]
           : undefined, // 3 years ago
       max: xData.length > 0 ? xData[xData.length - 1] : undefined, // latest data
+      gridLineWidth: 1,
+      gridLineColor: "#f0f0f0",
     },
     yAxis: {
-      title: { text: "Score" },
-      labels: { format: "{value}", style: { fontSize: "0.85rem" } },
+      title: { 
+        text: "Score",
+        style: { fontSize: "14px", fontWeight: "600" },
+      },
+      labels: { 
+        format: "{value}", 
+        style: { fontSize: "12px" } 
+      },
       min: 0,
       max: 1100,
       gridLineWidth: 1,
+      gridLineColor: "#f0f0f0",
     },
     legend: {
       enabled: true,
       align: "center",
       verticalAlign: "bottom",
       layout: "horizontal",
-      itemStyle: { fontSize: "0.85rem" },
+      itemStyle: { fontSize: "12px" },
       symbolHeight: 8,
       symbolWidth: 18,
       margin: 4,
@@ -191,6 +215,10 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
     },
     tooltip: {
       shared: true,
+      backgroundColor: "rgba(255, 255, 255, 0.95)",
+      borderWidth: 0,
+      shadow: true,
+      style: { fontSize: "13px" },
       formatter: function () {
         const date = Highcharts.dateFormat("%Y-%m-%d", this.x as number);
         let tooltip = `<b>${date}</b><br/>`;
@@ -199,7 +227,6 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
         });
         return tooltip;
       },
-      style: { fontSize: "0.95rem" },
     },
     plotOptions: {
       line: {
@@ -233,51 +260,50 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
   };
 
   return (
-    <div
-      style={{
-        padding: "10px 12px",
-        background: "#fff",
-        borderRadius: "8px",
-        boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
-        maxWidth: 1000,
-        margin: "12px auto",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          marginBottom: 4,
-        }}
-      >
-        <div style={{ fontWeight: 600, fontSize: "1rem" }}>
+    <div className="chart-container">
+      <div className="chart-header">
+        <h2 className="chart-title">
           {data[0].index_name.toUpperCase()} Market Breadth
-        </div>
-        <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-          {SMA_OPTIONS.map((opt, idx) => (
-            <label
-              key={opt.key}
-              style={{
-                fontSize: "0.95rem",
-                fontWeight: idx === selectedSMA ? 600 : 400,
-                cursor: "pointer",
-              }}
-            >
-              <input
-                type="radio"
-                name="sma"
-                value={String(idx)}
-                checked={selectedSMA === idx}
-                onChange={(e) => setSelectedSMA(Number(e.target.value))}
-                style={{ marginRight: 2 }}
-              />
-              {opt.label}
-            </label>
-          ))}
+        </h2>
+        <div className="chart-controls">
+          <div className="flex items-center gap-4">
+            {SMA_OPTIONS.map((opt, idx) => (
+              <label
+                key={opt.key}
+                className={`flex items-center gap-2 cursor-pointer ${
+                  idx === selectedSMA 
+                    ? "text-blue-600 font-semibold" 
+                    : "text-gray-600 hover:text-gray-800"
+                }`}
+              >
+                <input
+                  type="radio"
+                  name="sma"
+                  value={String(idx)}
+                  checked={selectedSMA === idx}
+                  onChange={(e) => setSelectedSMA(Number(e.target.value))}
+                  className="sr-only"
+                  aria-label={`Select ${opt.label}`}
+                />
+                <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${
+                  idx === selectedSMA 
+                    ? "border-blue-600 bg-blue-600" 
+                    : "border-gray-300"
+                }`}>
+                  {idx === selectedSMA && (
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  )}
+                </div>
+                <span className="text-sm font-medium">{opt.label}</span>
+              </label>
+            ))}
+          </div>
         </div>
       </div>
-      <HighchartsReact highcharts={Highcharts} options={chartOptions} />
+      
+      <div className="mt-6">
+        <HighchartsReact highcharts={Highcharts} options={chartOptions} />
+      </div>
     </div>
   );
 };

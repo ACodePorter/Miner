@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
+import LoadingSpinner from "./LoadingSpinner";
+import ErrorMessage from "./ErrorMessage";
 
 interface PEData {
   index: string;
@@ -184,49 +186,56 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
   const chartOptions = {
     chart: {
       type: "line",
-      height: 600,
-      backgroundColor: "#f8f9fa",
-      zoomType: "x", // Enable zooming on x-axis
+      height: 500,
+      backgroundColor: "transparent",
+      zoomType: "x",
       panning: {
         enabled: true,
         type: "x",
       },
-      // panKey is not needed for Highstock
+      style: {
+        fontFamily: "inherit",
+      },
     },
     title: {
-      text: `${displayName} PE Ratio`,
-      style: {
-        fontSize: "18px",
-        fontWeight: "bold",
-      },
+      text: "",
     },
     subtitle: {
-      text: "Price-to-Earnings ratio over time",
-      style: {
-        fontSize: "14px",
-      },
+      text: "",
     },
     xAxis: {
       type: "datetime",
       title: {
         text: "Date",
+        style: { fontSize: "14px", fontWeight: "600" },
       },
       labels: {
         format: "{value:%Y-%m-%d}",
+        style: { fontSize: "12px" },
       },
       min: xAxisMin,
       max: xAxisMax,
+      gridLineWidth: 1,
+      gridLineColor: "#f0f0f0",
     },
     yAxis: {
       title: {
         text: "PE Ratio",
+        style: { fontSize: "14px", fontWeight: "600" },
       },
       labels: {
         format: "{value:.1f}",
+        style: { fontSize: "12px" },
       },
+      gridLineWidth: 1,
+      gridLineColor: "#f0f0f0",
     },
     tooltip: {
       shared: true,
+      backgroundColor: "rgba(255, 255, 255, 0.95)",
+      borderWidth: 0,
+      shadow: true,
+      style: { fontSize: "13px" },
       formatter: function () {
         const date = Highcharts.dateFormat("%Y-%m-%d", this.x);
         let tooltip = `<b>${date}</b><br/>`;
@@ -243,6 +252,9 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
       align: "center",
       verticalAlign: "bottom",
       layout: "horizontal",
+      itemStyle: { fontSize: "12px" },
+      symbolHeight: 8,
+      symbolWidth: 18,
     },
     plotOptions: {
       line: {
@@ -336,61 +348,28 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
 
   if (loading) {
     return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "400px",
-          fontSize: "18px",
-        }}
-      >
-        Loading PE data...
+      <div className="chart-container">
+        <LoadingSpinner text="Loading PE data..." />
       </div>
     );
   }
 
   if (error) {
     return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "400px",
-          color: "red",
-          fontSize: "16px",
-        }}
-      >
-        Error: {error}
+      <div className="chart-container">
+        <ErrorMessage message={`Error: ${error}`} />
       </div>
     );
   }
 
   return (
-    <div
-      style={{
-        padding: "10px 12px",
-        background: "#fff",
-        borderRadius: "8px",
-        boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
-        maxWidth: 1000,
-        margin: "12px auto",
-      }}
-    >
-      <div style={{ marginBottom: "10px" }}>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            marginBottom: 4,
-          }}
-        >
-          <h2 style={{ margin: 0, color, fontSize: "1.1rem", fontWeight: 600 }}>
-            {displayName}
-          </h2>
-          <label style={{ fontSize: "0.95rem" }}>
+    <div className="chart-container">
+      <div className="chart-header">
+        <h2 className="chart-title" style={{ color }}>
+          {displayName}
+        </h2>
+        <div className="chart-controls">
+          <label className="flex items-center gap-2 text-sm font-medium">
             N-year:
             <input
               type="number"
@@ -398,51 +377,38 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
               max={100}
               value={nYears}
               onChange={(e) => setNYears(Number(e.target.value))}
-              style={{
-                marginLeft: 4,
-                width: 40,
-                fontSize: "0.95rem",
-                padding: "2px 4px",
-              }}
+              className="input-field w-16 text-center"
+              aria-label="N-year window"
             />
           </label>
         </div>
-        {peData && (
-          <div
-            style={{
-              background: "#f8f9fa",
-              padding: "7px 10px",
-              borderRadius: "6px",
-              minWidth: "120px",
-              marginBottom: 4,
-              fontSize: "0.97rem",
-              display: "flex",
-              gap: 12,
-            }}
-          >
-            <div>
-              PE: <strong>{peData.stats.current_pe.toFixed(2)}</strong>
-            </div>
-            <div>
-              Avg(20y): <strong>{peData.stats.avg_20y.toFixed(2)}</strong>
-            </div>
-            <div>
-              Range:{" "}
-              <strong>
-                {peData.stats.min_pe.toFixed(2)} -{" "}
-                {peData.stats.max_pe.toFixed(2)}
-              </strong>
-            </div>
-          </div>
-        )}
       </div>
-      <HighchartsReact
-        highcharts={Highcharts}
-        options={{
-          ...chartOptions,
-          chart: { ...(chartOptions.chart || {}), height: 600, width: 900 },
-        }}
-      />
+      
+      {peData && (
+        <div className="chart-stats">
+          <div className="chart-stat">
+            <span className="chart-stat-label">Current PE</span>
+            <span className="chart-stat-value">{peData.stats.current_pe.toFixed(2)}</span>
+          </div>
+          <div className="chart-stat">
+            <span className="chart-stat-label">20-Year Average</span>
+            <span className="chart-stat-value">{peData.stats.avg_20y.toFixed(2)}</span>
+          </div>
+          <div className="chart-stat">
+            <span className="chart-stat-label">Range</span>
+            <span className="chart-stat-value">
+              {peData.stats.min_pe.toFixed(2)} - {peData.stats.max_pe.toFixed(2)}
+            </span>
+          </div>
+        </div>
+      )}
+      
+      <div className="mt-6">
+        <HighchartsReact
+          highcharts={Highcharts}
+          options={chartOptions}
+        />
+      </div>
     </div>
   );
 };

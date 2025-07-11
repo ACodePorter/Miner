@@ -1,45 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom component styles */
+@layer components {
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6;
+  }
+
+  .card-header {
+    @apply flex items-center justify-between mb-4;
+  }
+
+  .card-title {
+    @apply text-lg font-semibold text-gray-900;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-medium transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-md font-medium transition-colors;
+  }
+
+  .input-field {
+    @apply border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
+
+  .loading-spinner {
+    @apply inline-block w-6 h-6 border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin;
+  }
+}
+
 .App {
-  text-align: center;
-  min-height: 100vh;
-  background-color: #f5f5f5;
+  @apply min-h-screen bg-gray-50;
 }
 
 .App-header {
-  background-color: #282c34;
-  padding: 20px;
-  color: white;
-  margin-bottom: 20px;
+  @apply bg-gradient-to-r from-blue-600 to-blue-800 text-white py-8 px-4 shadow-lg;
 }
 
 .App-header h1 {
-  margin: 0 0 10px 0;
-  font-size: 2.5rem;
-  font-weight: bold;
+  @apply text-3xl md:text-4xl font-bold mb-2 text-balance;
 }
 
 .App-header p {
-  margin: 0;
-  font-size: 1.1rem;
-  opacity: 0.9;
+  @apply text-lg md:text-xl opacity-90 text-balance;
 }
 
 main {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
+  @apply max-w-7xl mx-auto px-4 py-8 space-y-8;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
   .App-header h1 {
-    font-size: 2rem;
+    @apply text-2xl;
   }
   
   .App-header p {
-    font-size: 1rem;
+    @apply text-base;
   }
   
   main {
-    padding: 0 10px;
+    @apply px-2 py-4 space-y-6;
   }
+}
+
+/* Chart container improvements */
+.chart-container {
+  @apply card w-full max-w-6xl mx-auto;
+}
+
+.chart-header {
+  @apply card-header;
+}
+
+.chart-title {
+  @apply card-title;
+}
+
+.chart-controls {
+  @apply flex items-center gap-4 flex-wrap;
+}
+
+.chart-stats {
+  @apply bg-gray-50 rounded-lg p-4 mt-4 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm;
+}
+
+.chart-stat {
+  @apply flex flex-col;
+}
+
+.chart-stat-label {
+  @apply text-gray-600 font-medium;
+}
+
+.chart-stat-value {
+  @apply text-lg font-bold text-gray-900;
+}
+
+/* Loading and error states */
+.loading-state {
+  @apply flex items-center justify-center py-16 text-gray-600;
+}
+
+.error-state {
+  @apply flex items-center justify-center py-16 text-red-600 bg-red-50 rounded-lg;
+}
+
+/* Market breadth section */
+.market-breadth-section {
+  @apply space-y-4;
+}
+
+.market-breadth-title {
+  @apply text-2xl font-bold text-center text-gray-900 mb-6;
 }
