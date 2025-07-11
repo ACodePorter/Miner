@@ -528,9 +528,6 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
             {displayName}
           </h2>
           <div className="flex items-center gap-2 text-sm text-gray-600">
-            {lastUpdated && (
-              <span>Last updated: {lastUpdated.toLocaleTimeString()}</span>
-            )}
             <button
               onClick={handleRefresh}
               disabled={isRefreshing}

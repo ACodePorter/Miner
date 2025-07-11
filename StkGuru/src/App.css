@@ -50,7 +50,7 @@
 }
 
 main {
-  @apply max-w-7xl mx-auto px-4 py-4 space-y-8;
+  @apply w-full px-4 py-4 space-y-8;
 }
 
 /* Responsive design */
@@ -70,7 +70,7 @@ main {
 
 /* Chart container improvements */
 .chart-container {
-  @apply card w-full max-w-6xl mx-auto;
+  @apply card w-full;
 }
 
 .chart-header {
@@ -117,4 +117,42 @@ main {
 
 .market-breadth-title {
   @apply text-2xl font-bold text-center text-gray-900 mb-6;
+}
+
+/* Responsive chart layout */
+@media (max-width: 1024px) {
+  .chart-container {
+    @apply max-w-none;
+  }
+  
+  .chart-controls {
+    @apply flex-col items-start gap-2;
+  }
+  
+  .chart-stats table {
+    @apply text-xs;
+  }
+  
+  .chart-stats th,
+  .chart-stats td {
+    @apply px-1;
+  }
+}
+
+@media (max-width: 640px) {
+  .chart-header {
+    @apply flex-col items-start gap-3;
+  }
+  
+  .chart-title {
+    @apply text-base;
+  }
+  
+  .chart-stats {
+    @apply p-2;
+  }
+  
+  .chart-stats table {
+    @apply text-xs;
+  }
 }
