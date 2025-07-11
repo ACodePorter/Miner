@@ -13,9 +13,14 @@ interface PEData {
   };
 }
 
-const PEMarketChart: React.FC = () => {
-  const [spxData, setSpxData] = useState<PEData | null>(null);
-  const [qqqData, setQqqData] = useState<PEData | null>(null);
+interface PEMarketChartProps {
+  indexId: string; // e.g., 'spx', 'qqq', etc.
+  displayName: string; // e.g., 'S&P 500 (SPX)'
+  color?: string; // e.g., '#2E86AB'
+}
+
+const PEMarketChart: React.FC<PEMarketChartProps> = ({ indexId, displayName, color = '#2E86AB' }) => {
+  const [peData, setPeData] = useState<PEData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -32,109 +37,94 @@ const PEMarketChart: React.FC = () => {
       try {
         setLoading(true);
         setError(null);
-        
-        const [spx, qqq] = await Promise.all([
-          fetchPEData('spx'),
-          fetchPEData('qqq')
-        ]);
-        
-        setSpxData(spx);
-        setQqqData(qqq);
+        const data = await fetchPEData(indexId);
+        setPeData(data);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to load PE data');
       } finally {
         setLoading(false);
       }
     };
-
     loadData();
-  }, []);
+  }, [indexId]);
 
   const chartOptions: Highcharts.Options = {
     chart: {
       type: 'line',
       height: 600,
-      backgroundColor: '#f8f9fa'
+      backgroundColor: '#f8f9fa',
     },
     title: {
-      text: 'Market PE Ratios - SPX vs QQQ',
+      text: `${displayName} PE Ratio`,
       style: {
         fontSize: '18px',
-        fontWeight: 'bold'
-      }
+        fontWeight: 'bold',
+      },
     },
     subtitle: {
-      text: 'Price-to-Earnings ratios over time',
+      text: 'Price-to-Earnings ratio over time',
       style: {
-        fontSize: '14px'
-      }
+        fontSize: '14px',
+      },
     },
     xAxis: {
       type: 'datetime',
       title: {
-        text: 'Date'
+        text: 'Date',
       },
       labels: {
-        format: '{value:%Y-%m-%d}'
-      }
+        format: '{value:%Y-%m-%d}',
+      },
     },
     yAxis: {
       title: {
-        text: 'PE Ratio'
+        text: 'PE Ratio',
       },
       labels: {
-        format: '{value:.1f}'
-      }
+        format: '{value:.1f}',
+      },
     },
     tooltip: {
       shared: true,
       formatter: function() {
         const date = Highcharts.dateFormat('%Y-%m-%d', this.x);
         let tooltip = `<b>${date}</b><br/>`;
-        
         this.points?.forEach(point => {
           tooltip += `<span style="color:${point.color}">●</span> ${point.series.name}: <b>${point.y?.toFixed(2)}</b><br/>`;
         });
-        
         return tooltip;
-      }
+      },
     },
     legend: {
       enabled: true,
       align: 'center',
       verticalAlign: 'bottom',
-      layout: 'horizontal'
+      layout: 'horizontal',
     },
     plotOptions: {
       line: {
         marker: {
-          enabled: false
+          enabled: false,
         },
-        lineWidth: 2
+        lineWidth: 2,
       },
       series: {
         animation: {
-          duration: 1000
-        }
-      }
+          duration: 1000,
+        },
+      },
     },
     series: [
       {
-        name: 'S&P 500 (SPX)',
-        data: spxData?.data || [],
-        color: '#2E86AB',
-        type: 'line'
+        name: displayName,
+        data: peData?.data || [],
+        color: color,
+        type: 'line',
       },
-      {
-        name: 'NASDAQ 100 (QQQ)',
-        data: qqqData?.data || [],
-        color: '#A23B72',
-        type: 'line'
-      }
     ],
     credits: {
-      enabled: false
-    }
+      enabled: false,
+    },
   };
 
   if (loading) {
@@ -167,39 +157,17 @@ const PEMarketChart: React.FC = () => {
   }
 
   return (
-    <div style={{ padding: '20px' }}>
+    <div style={{ padding: '20px', background: '#fff', borderRadius: '10px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)', maxWidth: 900, margin: '0 auto' }}>
       <div style={{ marginBottom: '20px' }}>
-        <h2 style={{ marginBottom: '10px' }}>Market PE Ratios</h2>
-        <div style={{ display: 'flex', gap: '40px', flexWrap: 'wrap' }}>
-          {spxData && (
-            <div style={{ 
-              background: '#f8f9fa', 
-              padding: '15px', 
-              borderRadius: '8px',
-              minWidth: '200px'
-            }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#2E86AB' }}>S&P 500 (SPX)</h3>
-              <div>Current PE: <strong>{spxData.stats.current_pe.toFixed(2)}</strong></div>
-              <div>20Y Average: <strong>{spxData.stats.avg_20y.toFixed(2)}</strong></div>
-              <div>Range: <strong>{spxData.stats.min_pe.toFixed(2)} - {spxData.stats.max_pe.toFixed(2)}</strong></div>
-            </div>
-          )}
-          {qqqData && (
-            <div style={{ 
-              background: '#f8f9fa', 
-              padding: '15px', 
-              borderRadius: '8px',
-              minWidth: '200px'
-            }}>
-              <h3 style={{ margin: '0 0 10px 0', color: '#A23B72' }}>NASDAQ 100 (QQQ)</h3>
-              <div>Current PE: <strong>{qqqData.stats.current_pe.toFixed(2)}</strong></div>
-              <div>20Y Average: <strong>{qqqData.stats.avg_20y.toFixed(2)}</strong></div>
-              <div>Range: <strong>{qqqData.stats.min_pe.toFixed(2)} - {qqqData.stats.max_pe.toFixed(2)}</strong></div>
-            </div>
-          )}
-        </div>
+        <h2 style={{ marginBottom: '10px', color }}>{displayName}</h2>
+        {peData && (
+          <div style={{ background: '#f8f9fa', padding: '15px', borderRadius: '8px', minWidth: '200px', marginBottom: '10px' }}>
+            <div>Current PE: <strong>{peData.stats.current_pe.toFixed(2)}</strong></div>
+            <div>20Y Average: <strong>{peData.stats.avg_20y.toFixed(2)}</strong></div>
+            <div>Range: <strong>{peData.stats.min_pe.toFixed(2)} - {peData.stats.max_pe.toFixed(2)}</strong></div>
+          </div>
+        )}
       </div>
-      
       <HighchartsReact
         highcharts={Highcharts}
         options={chartOptions}

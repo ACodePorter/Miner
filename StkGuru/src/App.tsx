@@ -11,7 +11,9 @@ function App() {
       </header>
       
       <main>
-        <PEMarketChart />
+        <PEMarketChart indexId="spx" displayName="S&P 500 (SPX)" color="#2E86AB" />
+        <div style={{ height: '32px' }} />
+        <PEMarketChart indexId="qqq" displayName="NASDAQ 100 (QQQ)" color="#A23B72" />
       </main>
     </div>
   )
