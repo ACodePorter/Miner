@@ -15,8 +15,20 @@ function App() {
 
       <main>
         <div className="space-y-8">
-          <PEMarketChart indexId="spx" displayName="S&P 500 (SPX)" color="#2E86AB" />
-          <PEMarketChart indexId="qqq" displayName="NASDAQ 100 (QQQ)" color="#A23B72" />
+          <PEMarketChart 
+            indexId="spx" 
+            displayName="S&P 500 (SPX)" 
+            color="#2E86AB"
+            autoRefresh={true}
+            refreshInterval={5 * 60 * 1000} // 5 minutes
+          />
+          <PEMarketChart 
+            indexId="qqq" 
+            displayName="NASDAQ 100 (QQQ)" 
+            color="#A23B72"
+            autoRefresh={true}
+            refreshInterval={5 * 60 * 1000} // 5 minutes
+          />
           
           <div className="market-breadth-section">
             <h2 className="market-breadth-title">Market Breadth Analysis</h2>
