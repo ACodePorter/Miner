@@ -37,7 +37,6 @@ function App() {
           
           {/* Market Breadth Section */}
           <div className="market-breadth-section animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-            <h2 className="market-breadth-title">Market Breadth Analysis</h2>
             <MarketBreadthCard indexId="spx" />
           </div>
         </div>
