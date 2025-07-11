@@ -25,11 +25,7 @@ interface MarketBreadthCardProps {
 function parseTradeDate(trade_date: string): number {
   // "2024,07,23,00,00,00,000000" => timestamp (ms)
   const [year, month, day] = trade_date.split(",");
-  return new Date(
-    Number(year),
-    Number(month) - 1,
-    Number(day)
-  ).getTime();
+  return new Date(Number(year), Number(month) - 1, Number(day)).getTime();
 }
 
 const SMA_OPTIONS = [
@@ -39,8 +35,26 @@ const SMA_OPTIONS = [
 ];
 
 const COLORS = [
-  "#2E86AB", "#A23B72", "#F18F01", "#C73E1D", "#5C415D", "#1B998B", "#ED217C", "#FF6F59", "#3A86FF", "#8338EC",
-  "#FFBE0B", "#FB5607", "#FF006E", "#3A86FF", "#FFB4A2", "#B5838D", "#6D6875", "#FFB703", "#219EBC", "#023047"
+  "#2E86AB",
+  "#A23B72",
+  "#F18F01",
+  "#C73E1D",
+  "#5C415D",
+  "#1B998B",
+  "#ED217C",
+  "#FF6F59",
+  "#3A86FF",
+  "#8338EC",
+  "#FFBE0B",
+  "#FB5607",
+  "#FF006E",
+  "#3A86FF",
+  "#FFB4A2",
+  "#B5838D",
+  "#6D6875",
+  "#FFB703",
+  "#219EBC",
+  "#023047",
 ];
 
 const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
@@ -53,13 +67,13 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
     setLoading(true);
     setError(null);
     fetch(`/api/mbs?market_index=${indexId}`)
-      .then(res => {
+      .then((res) => {
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
         return res.json();
       })
-      .then(arr => {
+      .then((arr) => {
         if (Array.isArray(arr) && arr.length > 0) {
           setData(arr);
         } else {
@@ -68,7 +82,7 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
         }
         setLoading(false);
       })
-      .catch(err => {
+      .catch((err) => {
         setError(`Failed to load market breadth: ${err.message}`);
         setLoading(false);
       });
@@ -86,11 +100,14 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
 
   // Prepare chart data
   const smaOption = SMA_OPTIONS[selectedSMA];
-  const xData = data.map(d => parseTradeDate(d.trade_date));
+  const xData = data.map((d) => parseTradeDate(d.trade_date));
   // Generic score series
   const genericSeries = {
     name: smaOption.label,
-    data: data.map((d, i) => [xData[i], d[smaOption.key as keyof MarketBreadthData] as number]),
+    data: data.map((d, i) => [
+      xData[i],
+      d[smaOption.key as keyof MarketBreadthData] as number,
+    ]),
     color: COLORS[0],
     type: "line" as const,
     zIndex: 2,
@@ -102,7 +119,7 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
   for (const d of data) {
     const arr = d[smaOption.sector as keyof MarketBreadthData] as SectorScore[];
     if (arr && arr.length > 0) {
-      sectorKeys = arr.map(s => s.sector_key);
+      sectorKeys = arr.map((s) => s.sector_key);
       break;
     }
   }
@@ -110,8 +127,10 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
   const sectorSeries = sectorKeys.map((sector, idx) => ({
     name: sector,
     data: data.map((d, i) => {
-      const arr = d[smaOption.sector as keyof MarketBreadthData] as SectorScore[];
-      const found = arr?.find(s => s.sector_key === sector);
+      const arr = d[
+        smaOption.sector as keyof MarketBreadthData
+      ] as SectorScore[];
+      const found = arr?.find((s) => s.sector_key === sector);
       return [xData[i], found ? found.score : null];
     }),
     color: COLORS[(idx + 1) % COLORS.length],
@@ -119,7 +138,7 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
     zIndex: 1,
     visible: false, // hidden by default
     marker: { enabled: false },
-    stacking: 'normal' as const,
+    stacking: "normal" as const,
   }));
 
   // Compact chart options
@@ -130,14 +149,27 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
       width: 900,
       backgroundColor: "#fff",
       spacing: [10, 12, 10, 12],
-      style: { fontFamily: 'inherit' },
+      style: { fontFamily: "inherit" },
+      panning: {
+        enabled: true,
+        type: "x",
+      },
     },
-    title: { text: `${data[0].index_name.toUpperCase()} Market Breadth`, style: { fontSize: "1.1rem", fontWeight: "bold" } },
+    title: {
+      text: `${data[0].index_name.toUpperCase()} Market Breadth`,
+      style: { fontSize: "1.1rem", fontWeight: "bold" },
+    },
+    // Calculate default xAxis min and max for last 3 years
     xAxis: {
       type: "datetime",
       labels: { format: "{value:%Y-%m-%d}", style: { fontSize: "0.85rem" } },
       tickLength: 0,
       minTickInterval: 24 * 3600 * 1000 * 7, // at least 1 week
+      min:
+        xData.length > 0
+          ? xData[Math.max(0, xData.length - 3 * 365)]
+          : undefined, // 3 years ago
+      max: xData.length > 0 ? xData[xData.length - 1] : undefined, // latest data
     },
     yAxis: {
       title: { text: "Score" },
@@ -185,9 +217,19 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
     },
     series: [genericSeries, ...sectorSeries],
     credits: { enabled: false },
-    navigator: { enabled: false },
-    scrollbar: { enabled: false },
-    rangeSelector: { enabled: false },
+    navigator: { enabled: true, height: 40, margin: 10 },
+    scrollbar: { enabled: true },
+    rangeSelector: {
+      enabled: true,
+      selected: 2, // 3y button
+      inputEnabled: false,
+      buttons: [
+        { type: "year", count: 1, text: "1y" },
+        { type: "year", count: 2, text: "2y" },
+        { type: "year", count: 3, text: "3y" },
+        { type: "all", text: "All" },
+      ],
+    },
   };
 
   return (
@@ -201,17 +243,33 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
         margin: "12px auto",
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 4 }}>
-        <div style={{ fontWeight: 600, fontSize: "1rem" }}>{data[0].index_name.toUpperCase()} Market Breadth</div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          marginBottom: 4,
+        }}
+      >
+        <div style={{ fontWeight: 600, fontSize: "1rem" }}>
+          {data[0].index_name.toUpperCase()} Market Breadth
+        </div>
         <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
           {SMA_OPTIONS.map((opt, idx) => (
-            <label key={opt.key} style={{ fontSize: "0.95rem", fontWeight: idx === selectedSMA ? 600 : 400, cursor: "pointer" }}>
+            <label
+              key={opt.key}
+              style={{
+                fontSize: "0.95rem",
+                fontWeight: idx === selectedSMA ? 600 : 400,
+                cursor: "pointer",
+              }}
+            >
               <input
                 type="radio"
                 name="sma"
                 value={String(idx)}
                 checked={selectedSMA === idx}
-                onChange={e => setSelectedSMA(Number(e.target.value))}
+                onChange={(e) => setSelectedSMA(Number(e.target.value))}
                 style={{ marginRight: 2 }}
               />
               {opt.label}
@@ -219,10 +277,7 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
           ))}
         </div>
       </div>
-      <HighchartsReact
-        highcharts={Highcharts}
-        options={chartOptions}
-      />
+      <HighchartsReact highcharts={Highcharts} options={chartOptions} />
     </div>
   );
 };
