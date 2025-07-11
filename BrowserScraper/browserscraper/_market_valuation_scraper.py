@@ -55,7 +55,8 @@ class MarketValuationScraper(SingletonParent):
         Scrapes a paginated table with robust pop-up handling and click strategies.
         """
         # target_url = "https://www.gurufocus.com/economic_indicators/57/sp-500-pe-ratio"
-        _logger.info("Starting scrape for index: %s %s -> %s", idx, start_date, end_date)
+        _logger.info("Starting scrape for index: %s %s -> %s",
+                     idx, start_date, end_date)
         target_url = None
         if idx == 'spx':
             target_url = self.SP500_PE_RATIO_URL
@@ -170,7 +171,8 @@ class MarketValuationScraper(SingletonParent):
             to_save = df[(df['trade_date'] >= start_date)
                          & (df['trade_date'] <= end_date)]
             if to_save.empty:
-                _logger.warning("No data to save for the specified date range.")
+                _logger.warning(
+                    "No data to save for the specified date range.")
                 return False
             df_2_mongo(to_save, MarketPe)
             return len(to_save) == len(df)
@@ -196,9 +198,11 @@ class MarketValuationScraper(SingletonParent):
             dates = _tcs.us_trade_dates_since(
                 start_date=latest_pe.trade_date)
             if dates:
-                start_date = datetime.strptime(dates[-1], '%Y%m%d').strftime('%Y,%m,%d,%H,%M,%S,%f')
+                start_date = datetime.strptime(
+                    dates[-1], '%Y%m%d').strftime('%Y,%m,%d,%H,%M,%S,%f')
             else:
-                _logger.info('Already up to date for index: %s @ %s', idx, latest_pe.trade_date)
+                _logger.info('Already up to date for index: %s @ %s',
+                             idx, latest_pe.trade_date)
                 return True
         else:
             _logger.info(
