@@ -8,11 +8,11 @@ from pytz import timezone
 from marketbreadth import MarketBreadth
 
 _default_start_date = datetime.now(
-    timezone('America/New_York')) - timedelta(days=365)
+    timezone('America/New_York')) - timedelta(days=7)
 
 _tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()
 _mds: MarketDataShovel = MarketDataShovel.get_instance()
-_logger = get_logger('UIB')
+_logger = get_logger('MarketBreadthTestCase')
 
 
 class MarketBreadthTestCase(unittest.TestCase):
