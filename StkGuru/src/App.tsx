@@ -8,33 +8,35 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="w-full text-center">
-          <h1>StkGuru - Stock Market Data Visualization</h1>
-          <p>Real-time financial market data and analysis</p>
+          <h1 className="animate-fade-in-up">StkGuru</h1>
+          <p className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            Advanced Stock Market Analytics & Visualization
+          </p>
         </div>
       </header>
 
       <main>
         <div className="space-y-8">
           {/* PE Charts Row */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <PEMarketChart 
               indexId="spx" 
               displayName="S&P 500 (SPX)" 
-              color="#2E86AB"
+              color="#60A5FA"
               autoRefresh={true}
               refreshInterval={5 * 60 * 1000} // 5 minutes
             />
             <PEMarketChart 
               indexId="qqq" 
               displayName="NASDAQ 100 (QQQ)" 
-              color="#A23B72"
+              color="#A78BFA"
               autoRefresh={true}
               refreshInterval={5 * 60 * 1000} // 5 minutes
             />
           </div>
           
           {/* Market Breadth Section */}
-          <div className="market-breadth-section">
+          <div className="market-breadth-section animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
             <h2 className="market-breadth-title">Market Breadth Analysis</h2>
             <MarketBreadthCard indexId="spx" />
           </div>

@@ -242,10 +242,11 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
         color: color,
         type: "line",
         zIndex: 3,
+        lineWidth: 3,
         marker: {
           enabled: false,
           states: {
-            hover: { enabled: true, radius: 4 }
+            hover: { enabled: true, radius: 6, lineWidth: 2, lineColor: color }
           }
         },
       },
@@ -255,10 +256,11 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
     series.push({
       name: `${nYears}Y Avg`,
       data: rollingStats.avg,
-      color: "#888",
-               dashStyle: "Dash" as const,
+      color: "#60A5FA",
+      dashStyle: "Dash" as const,
       type: "line",
       zIndex: 2,
+      lineWidth: 2,
       marker: { enabled: false },
     });
 
@@ -268,19 +270,21 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
         {
           name: `+2 Std`,
           data: rollingStats.plus2,
-          color: "#b8860b",
+          color: "#F59E0B",
           dashStyle: "Dot" as const,
           type: "line",
           zIndex: 1,
+          lineWidth: 1,
           marker: { enabled: false },
         },
         {
           name: `-2 Std`,
           data: rollingStats.minus2,
-          color: "#b8860b",
+          color: "#F59E0B",
           dashStyle: "Dot" as const,
           type: "line",
           zIndex: 1,
+          lineWidth: 1,
           marker: { enabled: false },
         }
       );
@@ -294,9 +298,10 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
           name: `+${Math.round(pct * 100)}% Avg`,
           data: pctLinesAbove[idx],
           color: pctColors[idx],
-          dashStyle: pctDashStyles[idx],
+          dashStyle: pctDashStyles[idx] as any,
           type: "line",
           zIndex: 0,
+          lineWidth: 1,
           visible: visiblePctIdxs.includes(idx),
           marker: { enabled: false },
         });
@@ -308,9 +313,10 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
           name: `-${Math.round(pct * 100)}% Avg`,
           data: pctLinesBelow[idx],
           color: pctColors[idx],
-          dashStyle: pctDashStyles[idx],
+          dashStyle: pctDashStyles[idx] as any,
           type: "line",
           zIndex: 0,
+          lineWidth: 1,
           visible: visiblePctIdxs.includes(idx + pctPercents.length),
           marker: { enabled: false },
         });
@@ -334,7 +340,10 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
           load: function() {
             // Chart loaded successfully
           }
-        }
+        },
+        plotBackgroundColor: "transparent",
+        plotBorderWidth: 0,
+        plotShadow: false,
       },
       title: {
         text: "",
@@ -346,18 +355,20 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
         type: "datetime",
         title: {
           text: "Date",
-          style: { fontSize: "14px", fontWeight: "600" },
+          style: { fontSize: "14px", fontWeight: "600", color: "#9ca3af" },
         },
         labels: {
           format: "{value:%Y-%m-%d}",
-          style: { fontSize: "12px" },
+          style: { fontSize: "12px", color: "#9ca3af" },
         },
         min: xAxisMin,
         max: xAxisMax,
         gridLineWidth: 1,
-        gridLineColor: "#f0f0f0",
+        gridLineColor: "rgba(75, 85, 99, 0.3)",
+        lineColor: "rgba(75, 85, 99, 0.5)",
+        tickColor: "rgba(75, 85, 99, 0.3)",
         crosshair: {
-          color: '#666',
+          color: 'rgba(96, 165, 250, 0.5)',
           width: 1,
           dashStyle: 'shortdot'
         }
@@ -365,33 +376,50 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
       yAxis: {
         title: {
           text: "PE Ratio",
-          style: { fontSize: "14px", fontWeight: "600" },
+          style: { fontSize: "14px", fontWeight: "600", color: "#9ca3af" },
         },
         labels: {
           format: "{value:.1f}",
-          style: { fontSize: "12px" },
+          style: { fontSize: "12px", color: "#9ca3af" },
         },
         gridLineWidth: 1,
-        gridLineColor: "#f0f0f0",
+        gridLineColor: "rgba(75, 85, 99, 0.3)",
+        lineColor: "rgba(75, 85, 99, 0.5)",
+        tickColor: "rgba(75, 85, 99, 0.3)",
         crosshair: {
-          color: '#666',
+          color: 'rgba(96, 165, 250, 0.5)',
           width: 1,
           dashStyle: 'shortdot'
         }
       },
       tooltip: {
         shared: true,
-        backgroundColor: "rgba(255, 255, 255, 0.95)",
+        backgroundColor: "rgba(17, 24, 39, 0.98)",
         borderWidth: 0,
         shadow: true,
-        style: { fontSize: "13px" },
-        formatter: function () {
+        borderRadius: 8,
+        style: { fontSize: "13px", color: "#ffffff" },
+        formatter: function (this: any) {
           const date = Highcharts.dateFormat("%Y-%m-%d", this.x);
-          let tooltip = `<b>${date}</b><br/>`;
-          this.points?.forEach((point) => {
-            tooltip += `<span style="color:${point.color}">●</span> ${
-              point.series.name
-            }: <b>${point.y?.toFixed(2)}</b><br/>`;
+          let tooltip = `<div style="padding: 4px 0;"><b style="color: #60A5FA; font-size: 14px;">${date}</b></div><br/>`;
+          this.points?.forEach((point: any) => {
+            const seriesName = point.series.name;
+            const value = point.y?.toFixed(2);
+            const isMainSeries = seriesName === displayName;
+            const isAvgSeries = seriesName.includes('Avg') && !seriesName.includes('%');
+            
+            let nameColor = "#9ca3af";
+            let valueColor = "#ffffff";
+            
+            if (isMainSeries) {
+              nameColor = "#60A5FA";
+              valueColor = "#60A5FA";
+            } else if (isAvgSeries) {
+              nameColor = "#A78BFA";
+              valueColor = "#A78BFA";
+            }
+            
+            tooltip += `<span style="color:${point.color}; font-size: 16px;">●</span> <span style="color: ${nameColor}; font-weight: 500;">${seriesName}</span>: <span style="color: ${valueColor}; font-weight: bold;">${value}</span><br/>`;
           });
           return tooltip;
         },
@@ -401,9 +429,15 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
         align: "center",
         verticalAlign: "bottom",
         layout: "horizontal",
-        itemStyle: { fontSize: "12px" },
-        symbolHeight: 8,
-        symbolWidth: 18,
+        itemStyle: { 
+          fontSize: "12px",
+          color: "#E5E7EB"
+        },
+        symbolHeight: 10,
+        symbolWidth: 20,
+        backgroundColor: "transparent",
+        borderWidth: 0,
+        shadow: false,
       },
       plotOptions: {
         line: {
@@ -422,14 +456,66 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
         enabled: true,
         height: 40,
         margin: 10,
+        outlineWidth: 0,
+        outlineColor: "transparent",
+        handles: {
+          backgroundColor: "rgba(96, 165, 250, 0.8)",
+          borderColor: "rgba(96, 165, 250, 1)",
+          lineColor: "rgba(96, 165, 250, 0.5)",
+          rifleColor: "rgba(96, 165, 250, 0.8)",
+        },
+        xAxis: {
+          gridLineColor: "rgba(75, 85, 99, 0.3)",
+          lineColor: "rgba(75, 85, 99, 0.5)",
+          tickColor: "rgba(75, 85, 99, 0.3)",
+          labels: {
+            style: {
+              color: "#9ca3af",
+              fontSize: "10px",
+            },
+          },
+        },
       },
       scrollbar: {
         enabled: true,
+        barBackgroundColor: "rgba(75, 85, 99, 0.5)",
+        barBorderColor: "rgba(75, 85, 99, 0.8)",
+        buttonBackgroundColor: "rgba(55, 65, 81, 0.8)",
+        buttonBorderColor: "rgba(75, 85, 99, 0.8)",
+        buttonArrowColor: "#9ca3af",
+        rifleColor: "rgba(96, 165, 250, 0.8)",
+        trackBackgroundColor: "rgba(31, 41, 55, 0.3)",
+        trackBorderColor: "rgba(75, 85, 99, 0.3)",
       },
       rangeSelector: {
         enabled: true,
         selected: 2, // 5y button
         inputEnabled: false,
+        buttonTheme: {
+          fill: "rgba(31, 41, 55, 0.8)",
+          stroke: "rgba(75, 85, 99, 0.5)",
+          r: 8,
+          states: {
+            hover: {
+              fill: "rgba(55, 65, 81, 0.8)",
+              style: {
+                color: "#ffffff",
+              },
+            },
+            select: {
+              fill: "rgba(96, 165, 250, 0.8)",
+              style: {
+                color: "#ffffff",
+                fontWeight: "bold",
+              },
+            },
+          },
+          style: {
+            color: "#9ca3af",
+            fontSize: "12px",
+            fontWeight: "500",
+          },
+        },
         buttons: [
           { type: "year", count: 1, text: "1y" },
           { type: "year", count: 3, text: "3y" },
@@ -445,7 +531,26 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
         enabled: true,
         buttons: {
           contextButton: {
-            menuItems: ['downloadPNG', 'downloadPDF', 'downloadCSV']
+            symbol: 'menu',
+            symbolX: 12,
+            symbolY: 10,
+            symbolSize: 14,
+            symbolStrokeWidth: 2,
+            symbolStroke: '#9ca3af',
+            symbolFill: 'rgba(31, 41, 55, 0.8)',
+            menuItems: ['downloadPNG', 'downloadPDF', 'downloadCSV'],
+            theme: {
+              fill: 'rgba(31, 41, 55, 0.95)',
+              stroke: 'rgba(75, 85, 99, 0.5)',
+              states: {
+                hover: {
+                  fill: 'rgba(55, 65, 81, 0.95)',
+                  style: {
+                    color: '#ffffff'
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -563,7 +668,6 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
                 type="checkbox"
                 checked={showStdDevLines}
                 onChange={(e) => setShowStdDevLines(e.target.checked)}
-                className="rounded"
               />
               Std Dev Lines
             </label>
@@ -573,7 +677,6 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
                 type="checkbox"
                 checked={showPercentageLines}
                 onChange={(e) => setShowPercentageLines(e.target.checked)}
-                className="rounded"
               />
               Percentage Lines
             </label>

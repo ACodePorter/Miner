@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
 import LoadingSpinner from "./LoadingSpinner";
@@ -37,26 +37,26 @@ const SMA_OPTIONS = [
 ];
 
 const COLORS = [
-  "#2E86AB",
-  "#A23B72",
-  "#F18F01",
-  "#C73E1D",
-  "#5C415D",
-  "#1B998B",
-  "#ED217C",
-  "#FF6F59",
-  "#3A86FF",
-  "#8338EC",
-  "#FFBE0B",
-  "#FB5607",
-  "#FF006E",
-  "#3A86FF",
-  "#FFB4A2",
-  "#B5838D",
-  "#6D6875",
-  "#FFB703",
-  "#219EBC",
-  "#023047",
+  "#60A5FA", // Blue - main series
+  "#A78BFA", // Purple
+  "#F59E0B", // Amber
+  "#EF4444", // Red
+  "#10B981", // Emerald
+  "#8B5CF6", // Violet
+  "#F97316", // Orange
+  "#06B6D4", // Cyan
+  "#84CC16", // Lime
+  "#EC4899", // Pink
+  "#6366F1", // Indigo
+  "#14B8A6", // Teal
+  "#F43F5E", // Rose
+  "#A855F7", // Purple
+  "#EAB308", // Yellow
+  "#22C55E", // Green
+  "#3B82F6", // Blue
+  "#F59E0B", // Amber
+  "#10B981", // Emerald
+  "#8B5CF6", // Violet
 ];
 
 const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
@@ -64,6 +64,9 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedSMA, setSelectedSMA] = useState(0); // 0: SMA20, 1: SMA50, 2: SMA200
+  const [nYears, setNYears] = useState<number>(3); // N-year window for zoom
+  const [showSectorLines, setShowSectorLines] = useState(false); // Show/hide sector lines
+  const [isRefreshing, setIsRefreshing] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -89,6 +92,37 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
         setLoading(false);
       });
   }, [indexId]);
+
+  // Handle manual refresh
+  const handleRefresh = useCallback(() => {
+    setIsRefreshing(true);
+    setError(null);
+    fetch(`/api/mbs?market_index=${indexId}`)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        return res.json();
+      })
+      .then((arr) => {
+        if (Array.isArray(arr) && arr.length > 0) {
+          setData(arr);
+        } else {
+          setData([]);
+          setError("No market breadth data available");
+        }
+        setIsRefreshing(false);
+      })
+      .catch((err) => {
+        setError(`Failed to load market breadth: ${err.message}`);
+        setIsRefreshing(false);
+      });
+  }, [indexId]);
+
+  // Handle N-year change
+  const handleNYearsChange = useCallback((value: number) => {
+    setNYears(Math.max(1, Math.min(20, value)));
+  }, []);
 
   if (loading) {
     return (
@@ -121,7 +155,13 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
     color: COLORS[0],
     type: "line" as const,
     zIndex: 2,
-    marker: { enabled: false },
+    lineWidth: 3,
+    marker: { 
+      enabled: false,
+      states: {
+        hover: { enabled: true, radius: 6, lineWidth: 2, lineColor: COLORS[0] }
+      }
+    },
     // no stacking property
   };
   // Collect all unique sector keys (from the first non-empty sector array)
@@ -146,7 +186,8 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
     color: COLORS[(idx + 1) % COLORS.length],
     type: "area" as const,
     zIndex: 1,
-    visible: false, // hidden by default
+    lineWidth: 1,
+    visible: showSectorLines, // controlled by checkbox
     marker: { enabled: false },
     stacking: "normal" as const,
   }));
@@ -163,67 +204,93 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
         enabled: true,
         type: "x",
       },
+      plotBackgroundColor: "transparent",
+      plotBorderWidth: 0,
+      plotShadow: false,
     },
     title: {
       text: "",
     },
-    // Calculate default xAxis min and max for last 3 years
+    // Calculate default xAxis min and max for last N years
     xAxis: {
       type: "datetime",
       title: {
         text: "Date",
-        style: { fontSize: "14px", fontWeight: "600" },
+        style: { fontSize: "14px", fontWeight: "600", color: "#9ca3af" },
       },
       labels: { 
         format: "{value:%Y-%m-%d}", 
-        style: { fontSize: "12px" } 
+        style: { fontSize: "12px", color: "#9ca3af" } 
       },
       tickLength: 0,
       minTickInterval: 24 * 3600 * 1000 * 7, // at least 1 week
       min:
         xData.length > 0
-          ? xData[Math.max(0, xData.length - 3 * 365)]
-          : undefined, // 3 years ago
+          ? xData[Math.max(0, xData.length - nYears * 365)]
+          : undefined, // N years ago
       max: xData.length > 0 ? xData[xData.length - 1] : undefined, // latest data
       gridLineWidth: 1,
-      gridLineColor: "#f0f0f0",
+      gridLineColor: "rgba(75, 85, 99, 0.3)",
+      lineColor: "rgba(75, 85, 99, 0.5)",
+      tickColor: "rgba(75, 85, 99, 0.3)",
     },
     yAxis: {
       title: { 
         text: "Score",
-        style: { fontSize: "14px", fontWeight: "600" },
+        style: { fontSize: "14px", fontWeight: "600", color: "#9ca3af" },
       },
       labels: { 
         format: "{value}", 
-        style: { fontSize: "12px" } 
+        style: { fontSize: "12px", color: "#9ca3af" } 
       },
       min: 0,
       max: 1100,
       gridLineWidth: 1,
-      gridLineColor: "#f0f0f0",
+      gridLineColor: "rgba(75, 85, 99, 0.3)",
+      lineColor: "rgba(75, 85, 99, 0.5)",
+      tickColor: "rgba(75, 85, 99, 0.3)",
     },
     legend: {
       enabled: true,
       align: "center",
       verticalAlign: "bottom",
       layout: "horizontal",
-      itemStyle: { fontSize: "12px" },
-      symbolHeight: 8,
-      symbolWidth: 18,
+      itemStyle: { 
+        fontSize: "12px",
+        color: "#E5E7EB"
+      },
+      symbolHeight: 10,
+      symbolWidth: 20,
       margin: 4,
       padding: 2,
+      backgroundColor: "transparent",
+      borderWidth: 0,
+      shadow: false,
     },
     tooltip: {
       shared: true,
-      backgroundColor: "rgba(255, 255, 255, 0.95)",
+      backgroundColor: "rgba(17, 24, 39, 0.98)",
       borderWidth: 0,
       shadow: true,
-      style: { fontSize: "13px" },
-      formatter: function () {
+      borderRadius: 8,
+      style: { fontSize: "13px", color: "#ffffff" },
+      formatter: function (this: any) {
         const date = Highcharts.dateFormat("%Y-%m-%d", this.x as number);
-        let tooltip = `<b>${date}</b><br/>`;
+        let tooltip = `<div style="padding: 4px 0;"><b style="color: #60A5FA; font-size: 14px;">${date}</b></div><br/>`;
         this.points?.forEach((point: any) => {
-          tooltip += `<span style=\"color:${point.color}\">●</span> ${point.series.name}: <b>${point.y}</b><br/>`;
+          const seriesName = point.series.name;
+          const value = point.y;
+          const isMainSeries = seriesName === smaOption.label;
+          
+          let nameColor = "#9ca3af";
+          let valueColor = "#ffffff";
+          
+          if (isMainSeries) {
+            nameColor = "#60A5FA";
+            valueColor = "#60A5FA";
+          }
+          
+          tooltip += `<span style="color:${point.color}; font-size: 16px;">●</span> <span style="color: ${nameColor}; font-weight: 500;">${seriesName}</span>: <span style="color: ${valueColor}; font-weight: bold;">${value}</span><br/>`;
         });
         return tooltip;
       },
@@ -244,12 +311,97 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
     },
     series: [genericSeries, ...sectorSeries],
     credits: { enabled: false },
-    navigator: { enabled: true, height: 40, margin: 10 },
-    scrollbar: { enabled: true },
+    exporting: {
+      enabled: true,
+      buttons: {
+        contextButton: {
+          symbol: 'menu',
+          symbolX: 12,
+          symbolY: 10,
+          symbolSize: 14,
+          symbolStrokeWidth: 2,
+          symbolStroke: '#9ca3af',
+          symbolFill: 'rgba(31, 41, 55, 0.8)',
+          menuItems: ['downloadPNG', 'downloadPDF', 'downloadCSV'],
+          theme: {
+            fill: 'rgba(31, 41, 55, 0.95)',
+            stroke: 'rgba(75, 85, 99, 0.5)',
+            states: {
+              hover: {
+                fill: 'rgba(55, 65, 81, 0.95)',
+                style: {
+                  color: '#ffffff'
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    navigator: {
+      enabled: true,
+      height: 40,
+      margin: 10,
+      outlineWidth: 0,
+      outlineColor: "transparent",
+      handles: {
+        backgroundColor: "rgba(96, 165, 250, 0.8)",
+        borderColor: "rgba(96, 165, 250, 1)",
+        lineColor: "rgba(96, 165, 250, 0.5)",
+        rifleColor: "rgba(96, 165, 250, 0.8)",
+      },
+      xAxis: {
+        gridLineColor: "rgba(75, 85, 99, 0.3)",
+        lineColor: "rgba(75, 85, 99, 0.5)",
+        tickColor: "rgba(75, 85, 99, 0.3)",
+        labels: {
+          style: {
+            color: "#9ca3af",
+            fontSize: "10px",
+          },
+        },
+      },
+    },
+    scrollbar: {
+      enabled: true,
+      barBackgroundColor: "rgba(75, 85, 99, 0.5)",
+      barBorderColor: "rgba(75, 85, 99, 0.8)",
+      buttonBackgroundColor: "rgba(55, 65, 81, 0.8)",
+      buttonBorderColor: "rgba(75, 85, 99, 0.8)",
+      buttonArrowColor: "#9ca3af",
+      rifleColor: "rgba(96, 165, 250, 0.8)",
+      trackBackgroundColor: "rgba(31, 41, 55, 0.3)",
+      trackBorderColor: "rgba(75, 85, 99, 0.3)",
+    },
     rangeSelector: {
       enabled: true,
       selected: 2, // 3y button
       inputEnabled: false,
+      buttonTheme: {
+        fill: "rgba(31, 41, 55, 0.8)",
+        stroke: "rgba(75, 85, 99, 0.5)",
+        r: 8,
+        states: {
+          hover: {
+            fill: "rgba(55, 65, 81, 0.8)",
+            style: {
+              color: "#ffffff",
+            },
+          },
+          select: {
+            fill: "rgba(96, 165, 250, 0.8)",
+            style: {
+              color: "#ffffff",
+              fontWeight: "bold",
+            },
+          },
+        },
+        style: {
+          color: "#9ca3af",
+          fontSize: "12px",
+          fontWeight: "500",
+        },
+      },
       buttons: [
         { type: "year", count: 1, text: "1y" },
         { type: "year", count: 2, text: "2y" },
@@ -262,18 +414,48 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
   return (
     <div className="chart-container">
       <div className="chart-header">
-        <h2 className="chart-title">
-          {data[0].index_name.toUpperCase()} Market Breadth
-        </h2>
+        <div className="flex items-center justify-between">
+          <h2 className="chart-title">
+            {data[0].index_name.toUpperCase()} Market Breadth
+          </h2>
+          <div className="flex items-center gap-2 text-sm text-gray-600">
+            <button
+              onClick={handleRefresh}
+              disabled={isRefreshing}
+              className="btn-secondary text-xs"
+              title="Refresh data"
+            >
+              {isRefreshing ? (
+                <div className="loading-spinner w-4 h-4" />
+              ) : (
+                '↻'
+              )}
+            </button>
+          </div>
+        </div>
+        
         <div className="chart-controls">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-6 flex-wrap">
+            <label className="flex items-center gap-2 text-sm font-medium">
+              N-year:
+              <input
+                type="number"
+                min={1}
+                max={20}
+                value={nYears}
+                onChange={(e) => handleNYearsChange(Number(e.target.value))}
+                className="input-field w-16 text-center"
+                aria-label="N-year window"
+              />
+            </label>
+            
             {SMA_OPTIONS.map((opt, idx) => (
               <label
                 key={opt.key}
-                className={`flex items-center gap-2 cursor-pointer ${
+                className={`flex items-center gap-2 cursor-pointer transition-colors duration-200 ${
                   idx === selectedSMA 
-                    ? "text-blue-600 font-semibold" 
-                    : "text-gray-600 hover:text-gray-800"
+                    ? "text-blue-400 font-semibold" 
+                    : "text-gray-400 hover:text-gray-300"
                 }`}
               >
                 <input
@@ -282,21 +464,20 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
                   value={String(idx)}
                   checked={selectedSMA === idx}
                   onChange={(e) => setSelectedSMA(Number(e.target.value))}
-                  className="sr-only"
                   aria-label={`Select ${opt.label}`}
                 />
-                <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${
-                  idx === selectedSMA 
-                    ? "border-blue-600 bg-blue-600" 
-                    : "border-gray-300"
-                }`}>
-                  {idx === selectedSMA && (
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                  )}
-                </div>
                 <span className="text-sm font-medium">{opt.label}</span>
               </label>
             ))}
+            
+            <label className="flex items-center gap-2 text-sm font-medium cursor-pointer">
+              <input
+                type="checkbox"
+                checked={showSectorLines}
+                onChange={(e) => setShowSectorLines(e.target.checked)}
+              />
+              Sector Lines
+            </label>
           </div>
         </div>
       </div>

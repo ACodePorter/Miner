@@ -5,66 +5,70 @@
 /* Custom component styles */
 @layer components {
   .card {
-    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6;
+    @apply bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-800/50 p-6 shadow-2xl;
   }
 
   .card-header {
-    @apply flex items-center justify-between mb-4;
+    @apply flex items-center justify-between mb-6;
   }
 
   .card-title {
-    @apply text-lg font-semibold text-gray-900;
+    @apply text-xl font-bold text-white;
   }
 
   .btn-primary {
-    @apply bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-medium transition-colors;
+    @apply bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105;
   }
 
   .btn-secondary {
-    @apply bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-md font-medium transition-colors;
+    @apply bg-gray-800/50 hover:bg-gray-700/50 text-gray-300 hover:text-white px-4 py-2 rounded-xl font-medium transition-all duration-300 border border-gray-700/50 hover:border-gray-600/50;
   }
 
   .input-field {
-    @apply border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+    @apply bg-gray-800/50 border border-gray-700/50 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent transition-all duration-300;
   }
 
   .loading-spinner {
-    @apply inline-block w-6 h-6 border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin;
+    @apply inline-block w-6 h-6 border-2 border-gray-600 border-t-blue-500 rounded-full animate-spin;
   }
 }
 
 .App {
-  @apply min-h-screen bg-gray-50;
+  @apply min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
 }
 
 .App-header {
-  @apply bg-gradient-to-r from-blue-600 to-blue-800 text-white py-2 px-4 shadow-lg;
+  @apply bg-gradient-to-r from-gray-900/80 to-gray-800/80 backdrop-blur-xl border-b border-gray-800/50 py-6 px-6 shadow-2xl;
 }
 
 .App-header h1 {
-  @apply text-xl md:text-2xl font-bold mb-0 text-balance;
+  @apply text-3xl md:text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400;
 }
 
 .App-header p {
-  @apply text-sm md:text-base opacity-90 text-balance;
+  @apply text-lg md:text-xl text-gray-300 font-medium;
 }
 
 main {
-  @apply w-full px-4 py-4 space-y-8;
+  @apply w-full px-6 py-8 space-y-8;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
   .App-header h1 {
-    @apply text-lg;
+    @apply text-2xl;
   }
   
   .App-header p {
-    @apply text-xs;
+    @apply text-base;
   }
   
   main {
-    @apply px-2 py-4 space-y-6;
+    @apply px-4 py-6 space-y-6;
   }
 }
 
@@ -82,11 +86,11 @@ main {
 }
 
 .chart-controls {
-  @apply flex items-center gap-4 flex-wrap;
+  @apply flex items-center gap-6 flex-wrap;
 }
 
 .chart-stats {
-  @apply bg-gray-50 rounded-lg p-3 mt-4 text-sm;
+  @apply bg-gray-800/30 rounded-2xl p-6 mt-6 border border-gray-700/30;
 }
 
 .chart-stat {
@@ -94,29 +98,94 @@ main {
 }
 
 .chart-stat-label {
-  @apply text-gray-600 font-medium;
+  @apply text-gray-400 font-medium text-sm;
 }
 
 .chart-stat-value {
-  @apply text-lg font-bold text-gray-900;
+  @apply text-xl font-bold text-white;
 }
 
 /* Loading and error states */
 .loading-state {
-  @apply flex items-center justify-center py-16 text-gray-600;
+  @apply flex items-center justify-center py-16 text-gray-400;
 }
 
 .error-state {
-  @apply flex items-center justify-center py-16 text-red-600 bg-red-50 rounded-lg;
+  @apply flex items-center justify-center py-16 text-red-400 bg-red-900/20 rounded-2xl border border-red-800/30;
 }
 
 /* Market breadth section */
 .market-breadth-section {
-  @apply space-y-4;
+  @apply space-y-6;
 }
 
 .market-breadth-title {
-  @apply text-2xl font-bold text-center text-gray-900 mb-6;
+  @apply text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-8;
+}
+
+/* Custom checkbox styling */
+input[type="checkbox"] {
+  @apply appearance-none w-4 h-4 bg-gray-800 border-2 border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all duration-200 cursor-pointer relative;
+}
+
+input[type="checkbox"]:checked {
+  @apply bg-blue-500 border-blue-500;
+}
+
+input[type="checkbox"]:checked::after {
+  content: '';
+  @apply absolute inset-0 flex items-center justify-center;
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input[type="checkbox"]:hover:not(:checked) {
+  @apply border-gray-500 bg-gray-700;
+}
+
+input[type="checkbox"]:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Radio button styling */
+input[type="radio"] {
+  @apply appearance-none w-4 h-4 bg-gray-800 border-2 border-gray-600 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all duration-200 cursor-pointer relative;
+}
+
+input[type="radio"]:checked {
+  @apply bg-blue-500 border-blue-500;
+}
+
+input[type="radio"]:checked::after {
+  content: '';
+  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-white rounded-full;
+}
+
+input[type="radio"]:hover:not(:checked) {
+  @apply border-gray-500 bg-gray-700;
+}
+
+input[type="radio"]:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+input[type="number"] {
+  @apply bg-gray-800/50 border border-gray-700/50 rounded-xl px-3 py-2 text-white text-center focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent;
+}
+
+/* Table styling */
+.chart-stats table {
+  @apply w-full;
+}
+
+.chart-stats th {
+  @apply text-xs text-gray-400 font-semibold pb-3 border-b border-gray-700/30;
+}
+
+.chart-stats td {
+  @apply text-lg font-bold text-white py-3;
 }
 
 /* Responsive chart layout */
@@ -126,7 +195,30 @@ main {
   }
   
   .chart-controls {
-    @apply flex-col items-start gap-2;
+    @apply flex-col items-start gap-4;
+  }
+  
+  .chart-stats table {
+    @apply text-sm;
+  }
+  
+  .chart-stats th,
+  .chart-stats td {
+    @apply px-2;
+  }
+}
+
+@media (max-width: 640px) {
+  .chart-header {
+    @apply flex-col items-start gap-4;
+  }
+  
+  .chart-title {
+    @apply text-lg;
+  }
+  
+  .chart-stats {
+    @apply p-4;
   }
   
   .chart-stats table {
@@ -139,20 +231,53 @@ main {
   }
 }
 
-@media (max-width: 640px) {
-  .chart-header {
-    @apply flex-col items-start gap-3;
+/* Highcharts customization for dark theme */
+.highcharts-background {
+  fill: transparent !important;
+}
+
+.highcharts-grid-line {
+  stroke: rgba(75, 85, 99, 0.3) !important;
+}
+
+.highcharts-axis-line {
+  stroke: rgba(75, 85, 99, 0.5) !important;
+}
+
+.highcharts-tick {
+  stroke: rgba(75, 85, 99, 0.3) !important;
+}
+
+.highcharts-text {
+  fill: #9ca3af !important;
+}
+
+.highcharts-title {
+  fill: #ffffff !important;
+}
+
+/* Animation classes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .chart-title {
-    @apply text-base;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .chart-stats {
-    @apply p-2;
-  }
-  
-  .chart-stats table {
-    @apply text-xs;
-  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Glass morphism effect */
+.glass {
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400;
 }
