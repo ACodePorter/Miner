@@ -1,10 +1,12 @@
 import './App.css'
 import MarketPeChart from './components/MarketPeChart'
 import MarketBreathChart from "./components/MarketBreathChart";
+import ExtensionWarning from './components/ExtensionWarning';
 
 function App() {
   return (
     <div className="App">
+      <ExtensionWarning />
       <header className="App-header">
         <div className="w-full text-center">
           <h1 className="animate-fade-in-up">StkGuru</h1>

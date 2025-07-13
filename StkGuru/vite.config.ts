@@ -11,6 +11,28 @@ export default defineConfig({
         changeOrigin: true,
         secure: false,
       }
+    },
+    hmr: {
+      // Fix WebSocket connection issues
+      port: 5173,
+      host: 'localhost',
+      protocol: 'ws',
+      timeout: 30000,
+      // Disable HMR overlay for service worker errors
+      overlay: false,
+    },
+    // Add better error handling and logging
+    watch: {
+      usePolling: false,
+      interval: 1000,
     }
+  },
+  // Optimize for development
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'highcharts', 'highcharts-react-official']
+  },
+  // Disable service worker for development
+  worker: {
+    format: 'es'
   }
 })
