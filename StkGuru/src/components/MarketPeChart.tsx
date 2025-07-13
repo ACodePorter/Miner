@@ -26,7 +26,7 @@ interface MarketPeChartProps {
 
 // Memoized constants to prevent recreation on every render
 const PCT_COLORS = [
-  "#1abc9c", "#3498db", "#9b59b6", "#e67e22", "#e74c3c", "#34495e",
+  "#1abc9c", "#3498db", "#9b59b6", "#e67e22", "#e74c3c", "#f39c12",
 ];
 
 const PCT_DASH_STYLES = [
@@ -47,7 +47,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
   const [error, setError] = useState<string | null>(null);
   const [nYears, setNYears] = useState<number>(10); // N-year window
   const [showPercentageLines, setShowPercentageLines] = useState(true);
-  const [showStdDevLines, setShowStdDevLines] = useState(true);
+  const [showStdDevLines, setShowStdDevLines] = useState(false);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [currentViewRange, setCurrentViewRange] = useState<{min: number | undefined, max: number | undefined}>({min: undefined, max: undefined});
 
