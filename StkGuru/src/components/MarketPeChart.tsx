@@ -40,7 +40,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
   displayName,
   color = "#2E86AB",
   autoRefresh = false,
-  refreshInterval = 5 * 60 * 1000, // 5 minutes
+  refreshInterval = 60 * 60 * 1000, // 1 hour
 }) => {
   const [peData, setPeData] = useState<PEData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -151,13 +151,13 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
       }
     }
 
-    // Calculate default xAxis min and max for last 5 years
+    // Calculate default xAxis min and max for last 3 years
     let xAxisMin: number | undefined = undefined;
     let xAxisMax: number | undefined = undefined;
     if (peData?.data && peData.data.length) {
       xAxisMax = peData.data[peData.data.length - 1][0];
-      const ms5y = 5 * 365.25 * 24 * 3600 * 1000;
-      xAxisMin = xAxisMax - ms5y;
+      const ms3y = 3 * 365.25 * 24 * 3600 * 1000;
+      xAxisMin = xAxisMax - ms3y;
       if (xAxisMin < peData.data[0][0]) xAxisMin = peData.data[0][0];
     }
 
@@ -306,10 +306,6 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
       },
       xAxis: {
         type: "datetime",
-        title: {
-          text: "Date",
-          style: { fontSize: "16px", fontWeight: "700", color: "#E5E7EB" },
-        },
         labels: {
           format: "{value:%Y-%m-%d}",
           style: { fontSize: "14px", color: "#D1D5DB", fontWeight: "500" },
@@ -462,7 +458,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
       },
       rangeSelector: {
         enabled: true,
-        selected: 2, // 5y button
+        selected: 1, // 3y button
         inputEnabled: false,
         buttonTheme: {
           fill: "rgba(0, 0, 0, 0.9)",
