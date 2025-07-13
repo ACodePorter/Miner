@@ -174,10 +174,10 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = ({ indexId }) => {
   // Generic score series
   const genericSeries = {
     name: smaOption.label,
-    data: data.map((d, i) => [
-      xData[i],
-      d[smaOption.key as keyof MarketBreadthData] as number,
-    ]),
+    data: data.map((d, i) => {
+      const value = d[smaOption.key as keyof MarketBreadthData] as number;
+      return [xData[i], value];
+    }),
     color: "#F92672",
     type: "line" as const,
     zIndex: 2,
@@ -189,6 +189,72 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = ({ indexId }) => {
       }
     },
     // no stacking property
+  };
+
+  // Highlight series for extreme values above 950 (very bullish)
+  const highlightAbove950Series = {
+    name: `${smaOption.label} (Above 950)`,
+    data: data.map((d, i) => {
+      const value = d[smaOption.key as keyof MarketBreadthData] as number;
+      // Only show points that are above 950
+      return [xData[i], value > 950 ? value : null];
+    }),
+    color: "#FFD700", // Bright gold for highlighted points
+    type: "line" as const,
+    zIndex: 3,
+    lineWidth: 0, // No line, only markers
+    marker: {
+      enabled: true,
+      radius: 6,
+      symbol: "circle",
+      fillColor: "#FF6B6B", // Red fill for above 950
+      lineColor: "#FFD700",
+      lineWidth: 2,
+      states: {
+        hover: {
+          enabled: true,
+          radius: 8,
+          lineWidth: 3,
+          lineColor: "#FFD700"
+        }
+      }
+    },
+    enableMouseTracking: true,
+    stickyTracking: false,
+    showInLegend: false // Hide from legend
+  };
+
+  // Highlight series for extreme values below 200 (very bearish)
+  const highlightBelow200Series = {
+    name: `${smaOption.label} (Below 200)`,
+    data: data.map((d, i) => {
+      const value = d[smaOption.key as keyof MarketBreadthData] as number;
+      // Only show points that are below 200
+      return [xData[i], value < 200 ? value : null];
+    }),
+    color: "#4ECDC4", // Bright cyan for highlighted points
+    type: "line" as const,
+    zIndex: 3,
+    lineWidth: 0, // No line, only markers
+    marker: {
+      enabled: true,
+      radius: 6,
+      symbol: "circle",
+      fillColor: "#4ECDC4", // Cyan fill for below 200
+      lineColor: "#FFD700",
+      lineWidth: 2,
+      states: {
+        hover: {
+          enabled: true,
+          radius: 8,
+          lineWidth: 3,
+          lineColor: "#FFD700"
+        }
+      }
+    },
+    enableMouseTracking: true,
+    stickyTracking: false,
+    showInLegend: false // Hide from legend
   };
   // Collect all unique sector keys (from the first non-empty sector array)
   let sectorKeys: string[] = [];
@@ -217,6 +283,32 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = ({ indexId }) => {
     marker: { enabled: false },
     stacking: "normal" as const,
   }));
+
+  // Horizontal reference lines
+  const horizontalLines = [
+    {
+      name: "950 Level",
+      data: xData.map(x => [x, 950]),
+      color: "#FF6B6B", // Bright red
+      type: "line" as const,
+      zIndex: 0,
+      lineWidth: 2,
+      dashStyle: "Dash" as const,
+      marker: { enabled: false },
+      showInLegend: false, // Hide from legend
+    },
+    {
+      name: "200 Level",
+      data: xData.map(x => [x, 200]),
+      color: "#4ECDC4", // Bright cyan
+      type: "line" as const,
+      zIndex: 0,
+      lineWidth: 2,
+      dashStyle: "Dash" as const,
+      marker: { enabled: false },
+      showInLegend: false, // Hide from legend
+    }
+  ];
 
   // Compact chart options
   const chartOptions: Highcharts.Options = {
@@ -316,6 +408,12 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = ({ indexId }) => {
           const seriesName = point.series.name;
           const value = point.y;
           const isMainSeries = seriesName === smaOption.label;
+          const isHorizontalLine = seriesName === "950 Level" || seriesName === "200 Level";
+          
+          // Skip horizontal reference lines in tooltip
+          if (isHorizontalLine) {
+            return;
+          }
           
           let nameColor = "#9ca3af";
           let valueColor = "#ffffff";
@@ -323,6 +421,12 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = ({ indexId }) => {
           if (isMainSeries) {
             nameColor = "#60A5FA";
             valueColor = "#60A5FA";
+          } else if (seriesName.includes("Above 950")) {
+            nameColor = "#FF6B6B";
+            valueColor = "#FF6B6B";
+          } else if (seriesName.includes("Below 200")) {
+            nameColor = "#4ECDC4";
+            valueColor = "#4ECDC4";
           }
           
           tooltip += `<span style="color:${point.color}; font-size: 16px;">●</span> <span style="color: ${nameColor}; font-weight: 500;">${seriesName}</span>: <span style="color: ${valueColor}; font-weight: bold;">${value}</span><br/>`;
@@ -344,7 +448,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = ({ indexId }) => {
         animation: { duration: 600 },
       },
     },
-    series: [genericSeries, ...sectorSeries],
+    series: [genericSeries, highlightAbove950Series, highlightBelow200Series, ...sectorSeries, ...horizontalLines],
     credits: { enabled: false },
     exporting: {
       enabled: true,
