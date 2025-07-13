@@ -623,26 +623,102 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = ({ indexId }) => {
       
       {chartStats && (
         <div className="chart-stats">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            <div className="chart-stat">
-              <div className="chart-stat-label">Current {chartStats.period}</div>
-              <div className="chart-stat-value">{chartStats.current.toFixed(0)}</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+
+            {/* Progress Bar */}
+            <div className="chart-stat flex flex-col justify-center">
+              <div className="chart-stat-label text-center">Score</div>
+              <div className="flex flex-col items-center py-2">
+                {/* Progress bar */}
+                <div className="w-full bg-gray-700 rounded-full h-4 mb-2 relative">
+                  {/* Background with extreme value markers */}
+                  <div className="absolute inset-0 rounded-full overflow-hidden">
+                    {/* Below 200 zone */}
+                    <div 
+                      className="absolute left-0 h-full bg-gray-600"
+                      style={{ width: `${(200 / 1100) * 100}%` }}
+                    ></div>
+                    {/* Above 950 zone */}
+                    <div 
+                      className="absolute right-0 h-full bg-gray-600"
+                      style={{ 
+                        width: `${((1100 - 950) / 1100) * 100}%`,
+                        left: `${(950 / 1100) * 100}%`
+                      }}
+                    ></div>
+                  </div>
+                  
+                  {/* Progress fill */}
+                  <div 
+                    className="h-full rounded-full transition-all duration-500 relative"
+                    style={{
+                      width: `${Math.min(100, Math.max(0, (chartStats.current / 1100) * 100))}%`,
+                      background: chartStats.current > 950 
+                        ? 'linear-gradient(90deg, #FF6B6B, #FFD700)' 
+                        : chartStats.current < 200 
+                        ? 'linear-gradient(90deg, #4ECDC4, #FFD700)'
+                        : 'linear-gradient(90deg, #60A5FA, #A78BFA)'
+                    }}
+                  >
+                    {/* Current value indicator */}
+                    <div 
+                      className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full border-2 border-white"
+                      style={{
+                        background: chartStats.current > 950 ? "#FF6B6B" : chartStats.current < 200 ? "#4ECDC4" : "#60A5FA"
+                      }}
+                    ></div>
+                  </div>
+                  
+                  {/* Extreme value labels */}
+                  <div className="absolute -top-6 left-0 text-xs text-gray-400">0</div>
+                  <div className="absolute -top-6 left-0 text-xs text-gray-400" style={{ left: `${(200 / 1100) * 100}%` }}>200</div>
+                  <div className="absolute -top-6 right-0 text-xs text-gray-400" style={{ right: `${((1100 - 950) / 1100) * 100}%` }}>950</div>
+                  <div className="absolute -top-6 right-0 text-xs text-gray-400">1100</div>
+                </div>
+                
+                {/* Current value display */}
+                <div className="text-sm font-bold text-white">
+                  {chartStats.current.toFixed(0)} / 1100
+                </div>
+              </div>
             </div>
-            <div className="chart-stat">
-              <div className="chart-stat-label">20-Period Avg</div>
-              <div className="chart-stat-value">{chartStats.avg20Period.toFixed(0)}</div>
-            </div>
-            <div className="chart-stat">
-              <div className="chart-stat-label">All-Time Avg</div>
-              <div className="chart-stat-value">{chartStats.average.toFixed(0)}</div>
-            </div>
-            <div className="chart-stat">
-              <div className="chart-stat-label">Min</div>
-              <div className="chart-stat-value">{chartStats.min.toFixed(0)}</div>
-            </div>
-            <div className="chart-stat">
-              <div className="chart-stat-label">Max</div>
-              <div className="chart-stat-value">{chartStats.max.toFixed(0)}</div>
+
+            {/* Top 3 Sectors - Enhanced */}
+            <div className="chart-stat md:col-span-2 flex flex-col justify-center">
+              <div className="grid grid-cols-3 gap-4 py-2">
+                {(() => {
+                  const smaOption = SMA_OPTIONS[selectedSMA];
+                  const currentData = data[data.length - 1];
+                  const sectorScores = currentData[smaOption.sector as keyof MarketBreadthData] as SectorScore[];
+                  
+                  if (!sectorScores || sectorScores.length === 0) {
+                    return <div className="text-gray-400 text-xs col-span-3 text-center">No sector data</div>;
+                  }
+
+                  // Sort by score and get top 3
+                  const topSectors = sectorScores
+                    .sort((a, b) => b.score - a.score)
+                    .slice(0, 3);
+
+                  return topSectors.map((sector, idx) => (
+                    <div key={sector.sector_key} className="text-center flex flex-col items-center bg-gray-800/30 rounded-lg p-3 border border-gray-700/30">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div 
+                          className="w-3 h-3 rounded-full flex-shrink-0"
+                          style={{ backgroundColor: COLORS[(idx + 1) % COLORS.length] }}
+                        ></div>
+                        <span className="font-semibold text-gray-200 text-sm whitespace-nowrap">
+                          {sector.sector_key}
+                        </span>
+                      </div>
+                      <div className="font-bold text-white text-xl">
+                        {sector.score.toFixed(0)}
+                      </div>
+                    </div>
+                  ));
+                })()}
+              </div>
             </div>
           </div>
         </div>
