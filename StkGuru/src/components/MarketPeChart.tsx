@@ -279,7 +279,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
     return {
       chart: {
         type: "line",
-        height: 500,
+        height: 650,
         backgroundColor: "rgba(0, 0, 0, 0.3)",
         zoomType: "x",
         panning: {
@@ -712,7 +712,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
         </div>
       )}
       
-      <div className="mt-6">
+      <div className="mt-2">
         <HighchartsReact
           highcharts={Highcharts}
           options={chartOptions}

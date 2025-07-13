@@ -270,6 +270,8 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
         dashStyle: "Dash" as const,
         marker: { enabled: false },
         showInLegend: false,
+        enableMouseTracking: false,
+        stickyTracking: false,
       },
       {
         name: "200 Level",
@@ -281,6 +283,8 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
         dashStyle: "Dash" as const,
         marker: { enabled: false },
         showInLegend: false,
+        enableMouseTracking: false,
+        stickyTracking: false,
       }
     ];
 
@@ -303,7 +307,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
     return {
       chart: {
         type: "line",
-        height: 500,
+        height: 650,
         backgroundColor: "rgba(0, 0, 0, 0.3)",
         spacing: [10, 12, 10, 12],
         style: { fontFamily: "inherit" },
@@ -724,7 +728,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
         </div>
       )}
       
-      <div className="mt-6">
+      <div className="mt-2">
         {chartOptions && (
           <HighchartsReact highcharts={Highcharts} options={chartOptions} />
         )}

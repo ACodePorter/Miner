@@ -5,7 +5,7 @@
 /* Custom component styles */
 @layer components {
   .card {
-    @apply bg-gray-900/70 backdrop-blur-sm rounded-2xl border border-gray-800/70 p-6 shadow-2xl;
+    @apply bg-gray-900/70 backdrop-blur-sm rounded-2xl border border-gray-800/70 px-6 py-3 shadow-2xl;
   }
 
   .card-header {
@@ -145,23 +145,23 @@ main {
 }
 
 .chart-header {
-  @apply card-header;
+  @apply flex items-center justify-between mb-3;
 }
 
 .chart-title {
-  @apply card-title;
+  @apply text-xl font-bold text-white;
 }
 
 .chart-controls {
-  @apply flex items-center gap-6 flex-wrap;
+  @apply flex items-center gap-4 flex-wrap;
 }
 
 .chart-stats {
-  @apply bg-gray-800/50 rounded-2xl py-3 px-6 mt-6 border border-gray-700/50;
+  @apply bg-gray-800/50 rounded-2xl py-2 px-4 mt-3 border border-gray-700/50;
 }
 
 .chart-stat {
-  @apply flex flex-col;
+  @apply flex flex-col py-3 px-2;
 }
 
 .chart-stat-label {
@@ -311,7 +311,7 @@ input[type="number"] {
 
 @media (max-width: 640px) {
   .chart-header {
-    @apply flex-col items-start gap-4;
+    @apply flex-col items-start gap-2;
   }
   
   .chart-title {
@@ -319,7 +319,7 @@ input[type="number"] {
   }
   
   .chart-stats {
-    @apply p-4;
+    @apply py-1 px-3;
   }
   
   .chart-stats table {
