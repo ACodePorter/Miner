@@ -324,7 +324,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = ({
       chart: {
         type: "line",
         height: 500,
-        backgroundColor: "transparent",
+        backgroundColor: "rgba(0, 0, 0, 0.3)",
         zoomType: "x",
         panning: {
           enabled: true,
@@ -338,7 +338,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = ({
             // Chart loaded successfully
           }
         },
-        plotBackgroundColor: "transparent",
+        plotBackgroundColor: "rgba(0, 0, 0, 0.2)",
         plotBorderWidth: 0,
         plotShadow: false,
       },
@@ -441,9 +441,9 @@ const MarketPeChart: React.FC<MarketPeChartProps> = ({
         symbolHeight: 12,
         symbolWidth: 24,
         symbolRadius: 3,
-        backgroundColor: "rgba(17, 24, 39, 0.8)",
+        backgroundColor: "rgba(0, 0, 0, 0.9)",
         borderWidth: 1,
-        borderColor: "rgba(75, 85, 99, 0.5)",
+        borderColor: "rgba(75, 85, 99, 0.6)",
         borderRadius: 8,
         shadow: true,
         itemDistance: 20,
@@ -482,9 +482,9 @@ const MarketPeChart: React.FC<MarketPeChartProps> = ({
           rifleColor: "rgba(96, 165, 250, 0.8)",
         },
         xAxis: {
-          gridLineColor: "rgba(75, 85, 99, 0.3)",
-          lineColor: "rgba(75, 85, 99, 0.5)",
-          tickColor: "rgba(75, 85, 99, 0.3)",
+          gridLineColor: "rgba(0, 0, 0, 0.4)",
+          lineColor: "rgba(75, 85, 99, 0.6)",
+          tickColor: "rgba(75, 85, 99, 0.4)",
           labels: {
             style: {
               color: "#9ca3af",
@@ -509,12 +509,12 @@ const MarketPeChart: React.FC<MarketPeChartProps> = ({
         selected: 2, // 5y button
         inputEnabled: false,
         buttonTheme: {
-          fill: "rgba(31, 41, 55, 0.8)",
-          stroke: "rgba(75, 85, 99, 0.5)",
+          fill: "rgba(0, 0, 0, 0.9)",
+          stroke: "rgba(75, 85, 99, 0.6)",
           r: 8,
           states: {
             hover: {
-              fill: "rgba(55, 65, 81, 0.8)",
+              fill: "rgba(31, 41, 55, 0.9)",
               style: {
                 color: "#ffffff",
               },

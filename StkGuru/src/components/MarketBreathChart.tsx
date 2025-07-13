@@ -315,14 +315,14 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = ({ indexId }) => {
     chart: {
       type: "line", // This will be overridden by individual series types
       height: 500,
-      backgroundColor: "transparent",
+      backgroundColor: "rgba(0, 0, 0, 0.3)",
       spacing: [10, 12, 10, 12],
       style: { fontFamily: "inherit" },
       panning: {
         enabled: true,
         type: "x",
       },
-      plotBackgroundColor: "transparent",
+      plotBackgroundColor: "rgba(0, 0, 0, 0.2)",
       plotBorderWidth: 0,
       plotShadow: false,
     },
@@ -387,9 +387,9 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = ({ indexId }) => {
       symbolRadius: 3,
       margin: 8,
       padding: 12,
-      backgroundColor: "rgba(17, 24, 39, 0.8)",
+      backgroundColor: "rgba(0, 0, 0, 0.9)",
       borderWidth: 1,
-      borderColor: "rgba(75, 85, 99, 0.5)",
+      borderColor: "rgba(75, 85, 99, 0.6)",
       borderRadius: 8,
       shadow: true,
       itemDistance: 20,
@@ -462,18 +462,10 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = ({ indexId }) => {
           symbolStroke: '#9ca3af',
           symbolFill: 'rgba(31, 41, 55, 0.8)',
           menuItems: ['downloadPNG', 'downloadPDF', 'downloadCSV'],
-          theme: {
-            fill: 'rgba(31, 41, 55, 0.95)',
-            stroke: 'rgba(75, 85, 99, 0.5)',
-            states: {
-              hover: {
-                fill: 'rgba(55, 65, 81, 0.95)',
-                style: {
-                  color: '#ffffff'
-                }
-              }
+                      theme: {
+              fill: 'rgba(31, 41, 55, 0.95)',
+              stroke: 'rgba(75, 85, 99, 0.5)'
             }
-          }
         }
       }
     },
@@ -483,16 +475,14 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = ({ indexId }) => {
       margin: 10,
       outlineWidth: 0,
       outlineColor: "transparent",
-      handles: {
-        backgroundColor: "rgba(96, 165, 250, 0.8)",
-        borderColor: "rgba(96, 165, 250, 1)",
-        lineColor: "rgba(96, 165, 250, 0.5)",
-        rifleColor: "rgba(96, 165, 250, 0.8)",
-      },
+              handles: {
+          backgroundColor: "rgba(96, 165, 250, 0.8)",
+          borderColor: "rgba(96, 165, 250, 1)",
+        },
       xAxis: {
-        gridLineColor: "rgba(75, 85, 99, 0.3)",
-        lineColor: "rgba(75, 85, 99, 0.5)",
-        tickColor: "rgba(75, 85, 99, 0.3)",
+        gridLineColor: "rgba(0, 0, 0, 0.4)",
+        lineColor: "rgba(75, 85, 99, 0.6)",
+        tickColor: "rgba(75, 85, 99, 0.4)",
         labels: {
           style: {
             color: "#9ca3af",
@@ -516,25 +506,25 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = ({ indexId }) => {
       enabled: true,
       selected: 2, // 3y button
       inputEnabled: false,
-      buttonTheme: {
-        fill: "rgba(31, 41, 55, 0.8)",
-        stroke: "rgba(75, 85, 99, 0.5)",
-        r: 8,
-        states: {
-          hover: {
-            fill: "rgba(55, 65, 81, 0.8)",
-            style: {
-              color: "#ffffff",
+              buttonTheme: {
+          fill: "rgba(0, 0, 0, 0.9)",
+          stroke: "rgba(75, 85, 99, 0.6)",
+          r: 8,
+          states: {
+            hover: {
+              fill: "rgba(31, 41, 55, 0.9)",
+              style: {
+                color: "#ffffff",
+              },
+            },
+            select: {
+              fill: "rgba(96, 165, 250, 0.8)",
+              style: {
+                color: "#ffffff",
+                fontWeight: "bold",
+              },
             },
           },
-          select: {
-            fill: "rgba(96, 165, 250, 0.8)",
-            style: {
-              color: "#ffffff",
-              fontWeight: "bold",
-            },
-          },
-        },
         style: {
           color: "#9ca3af",
           fontSize: "12px",
@@ -631,17 +621,17 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = ({ indexId }) => {
               <div className="chart-stat-label text-center">Score</div>
               <div className="flex flex-col items-center py-2">
                 {/* Progress bar */}
-                <div className="w-full bg-gray-700 rounded-full h-4 mb-2 relative">
+                <div className="w-full bg-gray-600 rounded-full h-4 mb-2 relative">
                   {/* Background with extreme value markers */}
                   <div className="absolute inset-0 rounded-full overflow-hidden">
                     {/* Below 200 zone */}
                     <div 
-                      className="absolute left-0 h-full bg-gray-600"
+                      className="absolute left-0 h-full bg-red-900/50 border-r border-red-600/70"
                       style={{ width: `${(200 / 1100) * 100}%` }}
                     ></div>
                     {/* Above 950 zone */}
                     <div 
-                      className="absolute right-0 h-full bg-gray-600"
+                      className="absolute right-0 h-full bg-red-900/40 border-l border-red-600/60"
                       style={{ 
                         width: `${((1100 - 950) / 1100) * 100}%`,
                         left: `${(950 / 1100) * 100}%`
@@ -658,23 +648,23 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = ({ indexId }) => {
                         ? 'linear-gradient(90deg, #FF6B6B, #FFD700)' 
                         : chartStats.current < 200 
                         ? 'linear-gradient(90deg, #4ECDC4, #FFD700)'
-                        : 'linear-gradient(90deg, #60A5FA, #A78BFA)'
+                        : 'linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899)'
                     }}
                   >
                     {/* Current value indicator */}
                     <div 
                       className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full border-2 border-white"
                       style={{
-                        background: chartStats.current > 950 ? "#FF6B6B" : chartStats.current < 200 ? "#4ECDC4" : "#60A5FA"
+                        background: chartStats.current > 950 ? "#FF6B6B" : chartStats.current < 200 ? "#4ECDC4" : "#3B82F6"
                       }}
                     ></div>
                   </div>
                   
                   {/* Extreme value labels */}
-                  <div className="absolute -top-6 left-0 text-xs text-gray-400">0</div>
-                  <div className="absolute -top-6 left-0 text-xs text-gray-400" style={{ left: `${(200 / 1100) * 100}%` }}>200</div>
-                  <div className="absolute -top-6 right-0 text-xs text-gray-400" style={{ right: `${((1100 - 950) / 1100) * 100}%` }}>950</div>
-                  <div className="absolute -top-6 right-0 text-xs text-gray-400">1100</div>
+                  <div className="absolute -top-6 left-0 text-xs text-gray-300">0</div>
+                  <div className="absolute -top-6 left-0 text-xs text-red-400" style={{ left: `${(200 / 1100) * 100}%` }}>200</div>
+                  <div className="absolute -top-6 right-0 text-xs text-red-400" style={{ right: `${((1100 - 950) / 1100) * 100}%` }}>950</div>
+                  <div className="absolute -top-6 right-0 text-xs text-gray-300">1100</div>
                 </div>
                 
                 {/* Current value display */}
