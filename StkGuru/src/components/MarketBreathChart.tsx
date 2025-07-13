@@ -122,12 +122,23 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
     if (!data || data.length === 0) return null;
     
     const smaOption = SMA_OPTIONS[selectedSMA];
-    const xData = data.map((d) => parseTradeDate(d.trade_date));
-    const scores = data.map(d => d[smaOption.key as keyof MarketBreadthData] as number);
+    
+    // Sort data by date to ensure proper time series
+    const sortedData = [...data].sort((a, b) => parseTradeDate(a.trade_date) - parseTradeDate(b.trade_date));
+    
+    const xData = sortedData.map((d) => parseTradeDate(d.trade_date));
+    const scores = sortedData.map(d => d[smaOption.key as keyof MarketBreadthData] as number);
+    
+    // Debug: Log data range for rangeSelector
+    console.log('Data range:', {
+      start: new Date(xData[0]).toISOString(),
+      end: new Date(xData[xData.length - 1]).toISOString(),
+      count: xData.length
+    });
     
     // Collect all unique sector keys (from the first non-empty sector array)
     let sectorKeys: string[] = [];
-    for (const d of data) {
+    for (const d of sortedData) {
       const arr = d[smaOption.sector as keyof MarketBreadthData] as SectorScore[];
       if (arr && arr.length > 0) {
         sectorKeys = arr.map((s) => s.sector_key);
@@ -140,6 +151,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
       scores,
       sectorKeys,
       smaOption,
+      sortedData,
       currentScore: scores[scores.length - 1],
       avgScore: scores.reduce((sum, score) => sum + score, 0) / scores.length,
       minScore: Math.min(...scores),
@@ -166,7 +178,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
   const chartSeries = useMemo(() => {
     if (!processedData) return { genericSeries: null, highlightSeries: null, sectorSeries: [], horizontalLines: [] };
     
-    const { xData, scores, sectorKeys, smaOption } = processedData;
+    const { xData, scores, sectorKeys, smaOption, sortedData } = processedData;
     
     // Generic score series
     const genericSeries = {
@@ -182,6 +194,8 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
           hover: { enabled: true, radius: 6, lineWidth: 2, lineColor: COLORS[0] }
         }
       },
+      // Ensure this series is used for rangeSelector calculations
+      id: 'main-series',
     };
 
     // Highlight series for extreme values
@@ -245,7 +259,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
     const sectorSeries = sectorKeys.map((sector, idx) => ({
       name: sector,
       data: xData.map((x, i) => {
-        const arr = data[i][smaOption.sector as keyof MarketBreadthData] as SectorScore[];
+        const arr = sortedData[i][smaOption.sector as keyof MarketBreadthData] as SectorScore[];
         const found = arr?.find((s) => s.sector_key === sector);
         return [x, found ? found.score : null];
       }),
@@ -309,6 +323,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
         type: "line",
         height: 650,
         backgroundColor: "rgba(0, 0, 0, 0.3)",
+        zoomType: "x",
         spacing: [10, 12, 10, 12],
         style: { fontFamily: "inherit" },
         panning: {
@@ -335,8 +350,6 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
         tickLength: 6,
         tickWidth: 2,
         minTickInterval: 24 * 3600 * 1000 * 7, // at least 1 week
-        min: xData.length > 0 ? xData[Math.max(0, xData.length - nYears * 365)] : undefined,
-        max: xData.length > 0 ? xData[xData.length - 1] : undefined,
         gridLineWidth: 2,
         gridLineColor: "rgba(107, 114, 128, 0.4)",
         lineColor: "rgba(156, 163, 175, 0.6)",
@@ -493,7 +506,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
       },
       rangeSelector: {
         enabled: true,
-        selected: 2, // 3y button
+        selected: 0, // 1y button
         inputEnabled: false,
         buttonTheme: {
           fill: "rgba(0, 0, 0, 0.9)",
@@ -526,6 +539,12 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
           { type: "year", count: 3, text: "3y" },
           { type: "all", text: "All" },
         ],
+        events: {
+          click: function(e: any) {
+            // Handle range selector button clicks
+            console.log('Range selector clicked:', e);
+          }
+        }
       },
     } as Highcharts.Options;
   }, [processedData, chartSeries, nYears]);
@@ -730,7 +749,17 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
       
       <div className="mt-2">
         {chartOptions && (
-          <HighchartsReact highcharts={Highcharts} options={chartOptions} />
+          <HighchartsReact 
+            highcharts={Highcharts} 
+            options={chartOptions}
+            callback={(chart: Highcharts.Chart) => {
+              // Initialize chart if needed
+              if (chart) {
+                // Chart is ready - rangeSelector should work automatically
+                console.log('Chart initialized with rangeSelector');
+              }
+            }}
+          />
         )}
       </div>
     </div>

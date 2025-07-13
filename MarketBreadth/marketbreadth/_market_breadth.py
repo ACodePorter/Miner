@@ -122,7 +122,7 @@ class MarketBreadth(SingletonParent):
         end_date = end_date or datetime.now(
             tz=pytz.timezone('America/New_York'))
         start_date = start_date or datetime.now(
-            tz=pytz.timezone('America/New_York')) - timedelta(days=356)
+            tz=pytz.timezone('America/New_York')) - timedelta(days=35600)
         query = {
             'index_name': market_index,
             'trade_date__gte': start_date,
