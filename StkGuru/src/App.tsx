@@ -10,9 +10,6 @@ function App() {
       <header className="App-header">
         <div className="w-full text-center">
           <h1 className="animate-fade-in-up">StkGuru</h1>
-          <p className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Advanced Stock Market Analytics & Visualization
-          </p>
         </div>
       </header>
 
