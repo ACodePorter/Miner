@@ -20,7 +20,7 @@ export interface MarketBreadthData {
   sector_score200: SectorScore[];
 }
 
-interface MarketBreadthCardProps {
+interface MarketBreathChartProps {
   indexId: string; // e.g., 'spx', 'qqq', etc.
 }
 
@@ -59,7 +59,7 @@ const COLORS = [
   "#A6E22E", // Green
 ];
 
-const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
+const MarketBreathChart: React.FC<MarketBreathChartProps> = ({ indexId }) => {
   const [data, setData] = useState<MarketBreadthData[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -551,4 +551,4 @@ const MarketBreadthCard: React.FC<MarketBreadthCardProps> = ({ indexId }) => {
   );
 };
 
-export default MarketBreadthCard;
+export default MarketBreathChart;

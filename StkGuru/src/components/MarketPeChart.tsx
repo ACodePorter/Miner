@@ -15,7 +15,7 @@ interface PEData {
   };
 }
 
-interface PEMarketChartProps {
+interface MarketPeChartProps {
   indexId: string; // e.g., 'spx', 'qqq', etc.
   displayName: string; // e.g., 'S&P 500 (SPX)'
   color?: string; // e.g., '#2E86AB'
@@ -23,7 +23,7 @@ interface PEMarketChartProps {
   refreshInterval?: number; // Refresh interval in milliseconds
 }
 
-const PEMarketChart: React.FC<PEMarketChartProps> = ({
+const MarketPeChart: React.FC<MarketPeChartProps> = ({
   indexId,
   displayName,
   color = "#2E86AB",
@@ -34,12 +34,10 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [nYears, setNYears] = useState<number>(10); // N-year window
-  const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
   const [showPercentageLines, setShowPercentageLines] = useState(true);
   const [showStdDevLines, setShowStdDevLines] = useState(true);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [currentViewRange, setCurrentViewRange] = useState<{min: number | undefined, max: number | undefined}>({min: undefined, max: undefined});
-  const chartRef = useRef<HighchartsReact.RefObject>(null);
 
   // Memoized fetch function
   const fetchPEData = useCallback(async (index: string): Promise<PEData> => {
@@ -58,7 +56,6 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
       setError(null);
       const data = await fetchPEData(indexId);
       setPeData(data);
-      setLastUpdated(new Date());
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to load PE data");
     } finally {
@@ -108,7 +105,7 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
 
     // Optimized rolling window calculation
     for (let i = 0; i < peData.data.length; ++i) {
-      const [ts, v] = peData.data[i];
+      const [ts] = peData.data[i];
       const cutoff = ts - nYears * msPerYear;
       
       // Use binary search to find the start of the window
@@ -765,4 +762,4 @@ const PEMarketChart: React.FC<PEMarketChartProps> = ({
   );
 };
 
-export default PEMarketChart;
+export default MarketPeChart;

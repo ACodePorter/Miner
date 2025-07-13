@@ -54,7 +54,7 @@ The application connects to the Miner backend API:
 ```
 src/
 ├── components/
-│   └── PEMarketChart.tsx    # PE ratio chart component
+│   └── MarketPeChart.tsx    # PE ratio chart component
 ├── App.tsx                  # Main application component
 ├── App.css                  # Application styles
 ├── main.tsx                 # Application entry point

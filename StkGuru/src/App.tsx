@@ -1,7 +1,6 @@
-import React from "react";
 import './App.css'
-import PEMarketChart from './components/PEMarketChart'
-import MarketBreadthCard from "./components/MarketBreadthCard";
+import MarketPeChart from './components/MarketPeChart'
+import MarketBreathChart from "./components/MarketBreathChart";
 
 function App() {
   return (
@@ -19,14 +18,14 @@ function App() {
         <div className="space-y-8">
           {/* PE Charts Row */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            <PEMarketChart 
+            <MarketPeChart 
               indexId="spx" 
               displayName="S&P 500 (SPX)" 
               color="#60A5FA"
               autoRefresh={true}
               refreshInterval={5 * 60 * 1000} // 5 minutes
             />
-            <PEMarketChart 
+            <MarketPeChart 
               indexId="qqq" 
               displayName="NASDAQ 100 (QQQ)" 
               color="#A78BFA"
@@ -37,7 +36,7 @@ function App() {
           
           {/* Market Breadth Section */}
           <div className="market-breadth-section animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-            <MarketBreadthCard indexId="spx" />
+            <MarketBreathChart indexId="spx" />
           </div>
         </div>
       </main>
