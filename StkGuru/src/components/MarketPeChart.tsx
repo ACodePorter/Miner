@@ -3,6 +3,7 @@ import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
 import LoadingSpinner from "./LoadingSpinner";
 import ErrorMessage from "./ErrorMessage";
+import { useRollingStatsWorker } from "../hooks/useRollingStatsWorker";
 
 interface PEData {
   index: string;
@@ -23,7 +24,18 @@ interface MarketPeChartProps {
   refreshInterval?: number; // Refresh interval in milliseconds
 }
 
-const MarketPeChart: React.FC<MarketPeChartProps> = ({
+// Memoized constants to prevent recreation on every render
+const PCT_COLORS = [
+  "#1abc9c", "#3498db", "#9b59b6", "#e67e22", "#e74c3c", "#34495e",
+];
+
+const PCT_DASH_STYLES = [
+  "ShortDash", "ShortDot", "ShortDashDot", "Dash", "Dot", "DashDot",
+];
+
+const PCT_PERCENTS = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6];
+
+const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
   indexId,
   displayName,
   color = "#2E86AB",
@@ -38,6 +50,9 @@ const MarketPeChart: React.FC<MarketPeChartProps> = ({
   const [showStdDevLines, setShowStdDevLines] = useState(true);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [currentViewRange, setCurrentViewRange] = useState<{min: number | undefined, max: number | undefined}>({min: undefined, max: undefined});
+
+  // Web Worker for heavy calculations
+  const { rollingStats, isLoading: isCalculating, error: calculationError, calculateStats } = useRollingStatsWorker();
 
   // Memoized fetch function
   const fetchPEData = useCallback(async (index: string): Promise<PEData> => {
@@ -69,7 +84,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = ({
     loadData();
   }, [loadData]);
 
-  // Auto refresh effect
+  // Auto refresh effect with proper cleanup
   useEffect(() => {
     if (!autoRefresh) return;
 
@@ -77,93 +92,32 @@ const MarketPeChart: React.FC<MarketPeChartProps> = ({
       loadData(false); // Don't show loading state for auto-refresh
     }, refreshInterval);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+    };
   }, [autoRefresh, refreshInterval, loadData]);
 
-  // Memoized rolling stats calculation for performance
-  const rollingStats = useMemo(() => {
-    if (!peData || !peData.data.length) {
-      return { 
-        avg: [], 
-        plus2: [], 
-        minus2: [], 
-        pctLinesAbove: [], 
-        pctLinesBelow: [], 
-        pctPercents: [] 
+  // Trigger worker calculation when data or nYears changes
+  useEffect(() => {
+    if (peData?.data && peData.data.length > 0) {
+      calculateStats(peData.data, nYears);
+    }
+  }, [peData?.data, nYears, calculateStats]);
+
+  // Memoized chart configuration with optimized dependencies
+  const chartConfig = useMemo(() => {
+    if (!rollingStats) {
+      return {
+        pctColors: PCT_COLORS,
+        pctDashStyles: PCT_DASH_STYLES,
+        pctPercents: PCT_PERCENTS,
+        pctLinesAbove: [],
+        pctLinesBelow: [],
+        visiblePctIdxs: [],
+        xAxisMin: undefined,
+        xAxisMax: undefined,
       };
     }
-
-    const msPerYear = 365.25 * 24 * 3600 * 1000;
-    const resultAvg: [number, number | null][] = [];
-    const resultPlus2: [number, number | null][] = [];
-    const resultMinus2: [number, number | null][] = [];
-    
-    // For percentage lines: array of arrays, one for each pct
-    const pctPercents = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6];
-    const pctLinesAbove: [number, number | null][][] = pctPercents.map(() => []);
-    const pctLinesBelow: [number, number | null][][] = pctPercents.map(() => []);
-
-    // Optimized rolling window calculation
-    for (let i = 0; i < peData.data.length; ++i) {
-      const [ts] = peData.data[i];
-      const cutoff = ts - nYears * msPerYear;
-      
-      // Use binary search to find the start of the window
-      let startIdx = 0;
-      let endIdx = i;
-      while (startIdx < endIdx) {
-        const mid = Math.floor((startIdx + endIdx) / 2);
-        if (peData.data[mid][0] >= cutoff) {
-          endIdx = mid;
-        } else {
-          startIdx = mid + 1;
-        }
-      }
-      
-      const window = peData.data.slice(startIdx, i + 1).map(([_, val]) => val);
-      
-      if (window.length > 1) {
-        const avg = window.reduce((a, b) => a + b, 0) / window.length;
-        const variance = window.reduce((sum, x) => sum + (x - avg) ** 2, 0) / window.length;
-        const std = Math.sqrt(variance);
-        
-        resultAvg.push([ts, avg]);
-        resultPlus2.push([ts, avg + 2 * std]);
-        resultMinus2.push([ts, avg - 2 * std]);
-        
-        pctPercents.forEach((pct, idx) => {
-          pctLinesAbove[idx].push([ts, avg * (1 + pct)]);
-          pctLinesBelow[idx].push([ts, avg * (1 - pct)]);
-        });
-      } else {
-        resultAvg.push([ts, null]);
-        resultPlus2.push([ts, null]);
-        resultMinus2.push([ts, null]);
-        pctPercents.forEach((_, idx) => {
-          pctLinesAbove[idx].push([ts, null]);
-          pctLinesBelow[idx].push([ts, null]);
-        });
-      }
-    }
-
-    return {
-      avg: resultAvg,
-      plus2: resultPlus2,
-      minus2: resultMinus2,
-      pctLinesAbove,
-      pctLinesBelow,
-      pctPercents,
-    };
-  }, [peData, nYears]);
-
-  // Memoized chart configuration
-  const chartConfig = useMemo(() => {
-    const pctColors = [
-      "#1abc9c", "#3498db", "#9b59b6", "#e67e22", "#e74c3c", "#34495e",
-    ];
-    const pctDashStyles = [
-      "ShortDash", "ShortDot", "ShortDashDot", "Dash", "Dot", "DashDot",
-    ];
 
     const pctPercents = rollingStats.pctPercents || [];
     const pctLinesAbove = rollingStats.pctLinesAbove || [];
@@ -171,7 +125,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = ({
 
     // Find the two percentage lines closest to the current value
     let visiblePctIdxs: number[] = [];
-    if (peData && peData.data.length && pctPercents.length) {
+    if (peData?.data && peData.data.length && pctPercents.length) {
       const lastIdx = peData.data.length - 1;
       const currentPE = peData.data[lastIdx][1];
       const avgAtLast = rollingStats.avg[lastIdx]?.[1];
@@ -200,7 +154,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = ({
     // Calculate default xAxis min and max for last 5 years
     let xAxisMin: number | undefined = undefined;
     let xAxisMax: number | undefined = undefined;
-    if (peData && peData.data.length) {
+    if (peData?.data && peData.data.length) {
       xAxisMax = peData.data[peData.data.length - 1][0];
       const ms5y = 5 * 365.25 * 24 * 3600 * 1000;
       xAxisMin = xAxisMax - ms5y;
@@ -208,8 +162,8 @@ const MarketPeChart: React.FC<MarketPeChartProps> = ({
     }
 
     return {
-      pctColors,
-      pctDashStyles,
+      pctColors: PCT_COLORS,
+      pctDashStyles: PCT_DASH_STYLES,
       pctPercents,
       pctLinesAbove,
       pctLinesBelow,
@@ -217,9 +171,9 @@ const MarketPeChart: React.FC<MarketPeChartProps> = ({
       xAxisMin,
       xAxisMax,
     };
-  }, [peData, rollingStats]);
+  }, [peData?.data, rollingStats?.avg, rollingStats?.pctPercents, rollingStats?.pctLinesAbove, rollingStats?.pctLinesBelow]); // More specific dependencies
 
-  // Memoized chart options
+  // Memoized chart options with optimized dependencies
   const chartOptions = useMemo(() => {
     const {
       pctColors,
@@ -250,41 +204,43 @@ const MarketPeChart: React.FC<MarketPeChartProps> = ({
     ];
 
     // Add rolling average
-    series.push({
-      name: `${nYears}Y Avg`,
-      data: rollingStats.avg,
-      color: "#A6E22E",
-      dashStyle: "Dash" as const,
-      type: "line",
-      zIndex: 2,
-      lineWidth: 2,
-      marker: { enabled: false },
-    });
+    if (rollingStats) {
+      series.push({
+        name: `${nYears}Y Avg`,
+        data: rollingStats.avg,
+        color: "#A6E22E",
+        dashStyle: "Dash" as const,
+        type: "line",
+        zIndex: 2,
+        lineWidth: 2,
+        marker: { enabled: false },
+      });
 
-    // Add standard deviation lines
-    if (showStdDevLines) {
-      series.push(
-        {
-          name: `+2 Std`,
-          data: rollingStats.plus2,
-          color: "#FD971F",
-          dashStyle: "Dot" as const,
-          type: "line",
-          zIndex: 1,
-          lineWidth: 3,
-          marker: { enabled: false },
-        },
-        {
-          name: `-2 Std`,
-          data: rollingStats.minus2,
-          color: "#FD971F",
-          dashStyle: "Dot" as const,
-          type: "line",
-          zIndex: 1,
-          lineWidth: 3,
-          marker: { enabled: false },
-        }
-      );
+      // Add standard deviation lines
+      if (showStdDevLines) {
+        series.push(
+          {
+            name: `+2 Std`,
+            data: rollingStats.plus2,
+            color: "#FD971F",
+            dashStyle: "Dot" as const,
+            type: "line",
+            zIndex: 1,
+            lineWidth: 3,
+            marker: { enabled: false },
+          },
+          {
+            name: `-2 Std`,
+            data: rollingStats.minus2,
+            color: "#FD971F",
+            dashStyle: "Dot" as const,
+            type: "line",
+            zIndex: 1,
+            lineWidth: 3,
+            marker: { enabled: false },
+          }
+        );
+      }
     }
 
     // Add percentage lines if enabled
@@ -425,7 +381,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = ({
           return tooltip;
         },
       },
-            legend: {
+      legend: {
         enabled: true,
         align: "center",
         verticalAlign: "bottom",
@@ -573,16 +529,17 @@ const MarketPeChart: React.FC<MarketPeChartProps> = ({
       }
     } as unknown as Highcharts.Options;
   }, [
-    peData,
     displayName,
     color,
     nYears,
-    rollingStats,
+    rollingStats?.avg,
+    rollingStats?.plus2,
+    rollingStats?.minus2,
     showStdDevLines,
     showPercentageLines,
     chartConfig,
-    indexId,
-  ]);
+    peData?.data,
+  ]); // More specific dependencies
 
   // Handle manual refresh
   const handleRefresh = useCallback(() => {
@@ -625,10 +582,18 @@ const MarketPeChart: React.FC<MarketPeChartProps> = ({
     );
   }
 
-  if (error) {
+  if (isCalculating && !rollingStats) {
     return (
       <div className="chart-container">
-        <ErrorMessage message={`Error: ${error}`} />
+        <LoadingSpinner text="Calculating statistics..." />
+      </div>
+    );
+  }
+
+  if (error || calculationError) {
+    return (
+      <div className="chart-container">
+        <ErrorMessage message={`Error: ${error || calculationError}`} />
         <div className="mt-4 text-center">
           <button 
             onClick={handleRefresh}
@@ -701,7 +666,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = ({
         </div>
       </div>
       
-      {peData && (
+      {peData && rollingStats && (
         <div className="chart-stats">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="chart-stat">
@@ -711,7 +676,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = ({
             <div className="chart-stat">
               <div className="chart-stat-label">{nYears}-Year Avg</div>
               <div className="chart-stat-value">
-                {rollingStats.avg.length > 0 && rollingStats.avg[rollingStats.avg.length - 1]?.[1] 
+                {rollingStats?.avg && rollingStats.avg.length > 0 && rollingStats.avg[rollingStats.avg.length - 1]?.[1] 
                   ? rollingStats.avg[rollingStats.avg.length - 1][1]?.toFixed(2)
                   : peData.stats.avg_20y.toFixed(2)
                 }
@@ -742,9 +707,9 @@ const MarketPeChart: React.FC<MarketPeChartProps> = ({
             <div className="chart-stat">
               <div className="chart-stat-label">vs {nYears}Y Avg</div>
               <div className={`chart-stat-value ${
-                peData.stats.current_pe > (rollingStats.avg.length > 0 && rollingStats.avg[rollingStats.avg.length - 1]?.[1] || peData.stats.avg_20y) ? 'text-red-400' : 'text-green-400'
+                peData.stats.current_pe > (rollingStats?.avg && rollingStats.avg.length > 0 && rollingStats.avg[rollingStats.avg.length - 1]?.[1] || peData.stats.avg_20y) ? 'text-red-400' : 'text-green-400'
               }`}>
-                {((peData.stats.current_pe / (rollingStats.avg.length > 0 && rollingStats.avg[rollingStats.avg.length - 1]?.[1] || peData.stats.avg_20y) - 1) * 100).toFixed(1)}%
+                {((peData.stats.current_pe / (rollingStats?.avg && rollingStats.avg.length > 0 && rollingStats.avg[rollingStats.avg.length - 1]?.[1] || peData.stats.avg_20y) - 1) * 100).toFixed(1)}%
               </div>
             </div>
           </div>
@@ -760,6 +725,8 @@ const MarketPeChart: React.FC<MarketPeChartProps> = ({
       </div>
     </div>
   );
-};
+});
+
+MarketPeChart.displayName = 'MarketPeChart';
 
 export default MarketPeChart;

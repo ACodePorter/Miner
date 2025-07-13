@@ -24,12 +24,7 @@ interface MarketBreathChartProps {
   indexId: string; // e.g., 'spx', 'qqq', etc.
 }
 
-function parseTradeDate(trade_date: string): number {
-  // "2024,07,23,00,00,00,000000" => timestamp (ms)
-  const [year, month, day] = trade_date.split(",");
-  return new Date(Number(year), Number(month) - 1, Number(day)).getTime();
-}
-
+// Memoized constants to prevent recreation on every render
 const SMA_OPTIONS = [
   { key: "score_sma20", label: "SMA 20", sector: "sector_score20" },
   { key: "score_sma50", label: "SMA 50", sector: "sector_score50" },
@@ -59,7 +54,13 @@ const COLORS = [
   "#A6E22E", // Green
 ];
 
-const MarketBreathChart: React.FC<MarketBreathChartProps> = ({ indexId }) => {
+function parseTradeDate(trade_date: string): number {
+  // "2024,07,23,00,00,00,000000" => timestamp (ms)
+  const [year, month, day] = trade_date.split(",");
+  return new Date(Number(year), Number(month) - 1, Number(day)).getTime();
+}
+
+const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexId }) => {
   const [data, setData] = useState<MarketBreadthData[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -68,445 +69,427 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = ({ indexId }) => {
   const [showSectorLines, setShowSectorLines] = useState(false); // Show/hide sector lines
   const [isRefreshing, setIsRefreshing] = useState(false);
 
+  // Memoized fetch function
+  const fetchMarketBreadthData = useCallback(async (index: string): Promise<MarketBreadthData[]> => {
+    const response = await fetch(`/api/mbs?market_index=${index}`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const arr = await response.json();
+    if (Array.isArray(arr) && arr.length > 0) {
+      return arr;
+    } else {
+      throw new Error("No market breadth data available");
+    }
+  }, []);
+
+  // Memoized data loading function
+  const loadData = useCallback(async (showLoading = true) => {
+    try {
+      if (showLoading) setLoading(true);
+      setIsRefreshing(true);
+      setError(null);
+      const arr = await fetchMarketBreadthData(indexId);
+      setData(arr);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to load market breadth data");
+      setData([]);
+    } finally {
+      setLoading(false);
+      setIsRefreshing(false);
+    }
+  }, [fetchMarketBreadthData, indexId]);
+
+  // Initial data load
   useEffect(() => {
-    setLoading(true);
-    setError(null);
-    fetch(`/api/mbs?market_index=${indexId}`)
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error(`HTTP error! status: ${res.status}`);
-        }
-        return res.json();
-      })
-      .then((arr) => {
-        if (Array.isArray(arr) && arr.length > 0) {
-          setData(arr);
-        } else {
-          setData([]);
-          setError("No market breadth data available");
-        }
-        setLoading(false);
-      })
-      .catch((err) => {
-        setError(`Failed to load market breadth: ${err.message}`);
-        setLoading(false);
-      });
-  }, [indexId]);
+    loadData();
+  }, [loadData]);
 
   // Handle manual refresh
   const handleRefresh = useCallback(() => {
-    setIsRefreshing(true);
-    setError(null);
-    fetch(`/api/mbs?market_index=${indexId}`)
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error(`HTTP error! status: ${res.status}`);
-        }
-        return res.json();
-      })
-      .then((arr) => {
-        if (Array.isArray(arr) && arr.length > 0) {
-          setData(arr);
-        } else {
-          setData([]);
-          setError("No market breadth data available");
-        }
-        setIsRefreshing(false);
-      })
-      .catch((err) => {
-        setError(`Failed to load market breadth: ${err.message}`);
-        setIsRefreshing(false);
-      });
-  }, [indexId]);
+    loadData(false);
+  }, [loadData]);
 
   // Handle N-year change
   const handleNYearsChange = useCallback((value: number) => {
     setNYears(Math.max(1, Math.min(20, value)));
   }, []);
 
-  // Calculate chart statistics
-  const chartStats = useMemo(() => {
+  // Memoized data transformations
+  const processedData = useMemo(() => {
     if (!data || data.length === 0) return null;
     
     const smaOption = SMA_OPTIONS[selectedSMA];
+    const xData = data.map((d) => parseTradeDate(d.trade_date));
     const scores = data.map(d => d[smaOption.key as keyof MarketBreadthData] as number);
     
-    const currentScore = scores[scores.length - 1];
-    const avgScore = scores.reduce((sum, score) => sum + score, 0) / scores.length;
-    const minScore = Math.min(...scores);
-    const maxScore = Math.max(...scores);
-    
-    // Calculate 20-period average
-    const recentScores = scores.slice(-20);
-    const avg20Period = recentScores.reduce((sum, score) => sum + score, 0) / recentScores.length;
-    
+    // Collect all unique sector keys (from the first non-empty sector array)
+    let sectorKeys: string[] = [];
+    for (const d of data) {
+      const arr = d[smaOption.sector as keyof MarketBreadthData] as SectorScore[];
+      if (arr && arr.length > 0) {
+        sectorKeys = arr.map((s) => s.sector_key);
+        break;
+      }
+    }
+
     return {
-      current: currentScore,
-      average: avgScore,
-      min: minScore,
-      max: maxScore,
-      avg20Period: avg20Period,
-      period: smaOption.label
+      xData,
+      scores,
+      sectorKeys,
+      smaOption,
+      currentScore: scores[scores.length - 1],
+      avgScore: scores.reduce((sum, score) => sum + score, 0) / scores.length,
+      minScore: Math.min(...scores),
+      maxScore: Math.max(...scores),
+      avg20Period: scores.slice(-20).reduce((sum, score) => sum + score, 0) / Math.min(20, scores.length)
     };
   }, [data, selectedSMA]);
 
-  if (loading) {
-    return (
-      <div className="chart-container">
-        <LoadingSpinner text="Loading Market Breadth..." />
-      </div>
-    );
-  }
-  if (error) {
-    return (
-      <div className="chart-container">
-        <ErrorMessage message={`Error: ${error}`} />
-      </div>
-    );
-  }
-  if (!data || data.length === 0) {
-    return null;
-  }
+  // Memoized chart statistics
+  const chartStats = useMemo(() => {
+    if (!processedData) return null;
+    
+    return {
+      current: processedData.currentScore,
+      average: processedData.avgScore,
+      min: processedData.minScore,
+      max: processedData.maxScore,
+      avg20Period: processedData.avg20Period,
+      period: processedData.smaOption.label
+    };
+  }, [processedData]);
 
-  // Prepare chart data
-  const smaOption = SMA_OPTIONS[selectedSMA];
-  const xData = data.map((d) => parseTradeDate(d.trade_date));
-  // Generic score series
-  const genericSeries = {
-    name: smaOption.label,
-    data: data.map((d, i) => {
-      const value = d[smaOption.key as keyof MarketBreadthData] as number;
-      return [xData[i], value];
-    }),
-    color: "#F92672",
-    type: "line" as const,
-    zIndex: 2,
-    lineWidth: 2,
-    marker: { 
-      enabled: false,
-      states: {
-        hover: { enabled: true, radius: 6, lineWidth: 2, lineColor: COLORS[0] }
-      }
-    },
-    // no stacking property
-  };
-
-  // Highlight series for extreme values above 950 (very bullish)
-  const highlightAbove950Series = {
-    name: `${smaOption.label} (Above 950)`,
-    data: data.map((d, i) => {
-      const value = d[smaOption.key as keyof MarketBreadthData] as number;
-      // Only show points that are above 950
-      return [xData[i], value > 950 ? value : null];
-    }),
-    color: "#FFD700", // Bright gold for highlighted points
-    type: "line" as const,
-    zIndex: 3,
-    lineWidth: 0, // No line, only markers
-    marker: {
-      enabled: true,
-      radius: 6,
-      symbol: "circle",
-      fillColor: "#FF6B6B", // Red fill for above 950
-      lineColor: "#FFD700",
-      lineWidth: 2,
-      states: {
-        hover: {
-          enabled: true,
-          radius: 8,
-          lineWidth: 3,
-          lineColor: "#FFD700"
-        }
-      }
-    },
-    enableMouseTracking: true,
-    stickyTracking: false,
-    showInLegend: false // Hide from legend
-  };
-
-  // Highlight series for extreme values below 200 (very bearish)
-  const highlightBelow200Series = {
-    name: `${smaOption.label} (Below 200)`,
-    data: data.map((d, i) => {
-      const value = d[smaOption.key as keyof MarketBreadthData] as number;
-      // Only show points that are below 200
-      return [xData[i], value < 200 ? value : null];
-    }),
-    color: "#4ECDC4", // Bright cyan for highlighted points
-    type: "line" as const,
-    zIndex: 3,
-    lineWidth: 0, // No line, only markers
-    marker: {
-      enabled: true,
-      radius: 6,
-      symbol: "circle",
-      fillColor: "#4ECDC4", // Cyan fill for below 200
-      lineColor: "#FFD700",
-      lineWidth: 2,
-      states: {
-        hover: {
-          enabled: true,
-          radius: 8,
-          lineWidth: 3,
-          lineColor: "#FFD700"
-        }
-      }
-    },
-    enableMouseTracking: true,
-    stickyTracking: false,
-    showInLegend: false // Hide from legend
-  };
-  // Collect all unique sector keys (from the first non-empty sector array)
-  let sectorKeys: string[] = [];
-  for (const d of data) {
-    const arr = d[smaOption.sector as keyof MarketBreadthData] as SectorScore[];
-    if (arr && arr.length > 0) {
-      sectorKeys = arr.map((s) => s.sector_key);
-      break;
-    }
-  }
-  // Sector series
-  const sectorSeries = sectorKeys.map((sector, idx) => ({
-    name: sector,
-    data: data.map((d, i) => {
-      const arr = d[
-        smaOption.sector as keyof MarketBreadthData
-      ] as SectorScore[];
-      const found = arr?.find((s) => s.sector_key === sector);
-      return [xData[i], found ? found.score : null];
-    }),
-    color: COLORS[(idx + 1) % COLORS.length],
-    type: "area" as const,
-    zIndex: 1,
-    lineWidth: 1,
-    visible: showSectorLines, // controlled by checkbox
-    marker: { enabled: false },
-    stacking: "normal" as const,
-  }));
-
-  // Horizontal reference lines
-  const horizontalLines = [
-    {
-      name: "950 Level",
-      data: xData.map(x => [x, 950]),
-      color: "#FF6B6B", // Bright red
+  // Memoized chart series data
+  const chartSeries = useMemo(() => {
+    if (!processedData) return { genericSeries: null, highlightSeries: null, sectorSeries: [], horizontalLines: [] };
+    
+    const { xData, scores, sectorKeys, smaOption } = processedData;
+    
+    // Generic score series
+    const genericSeries = {
+      name: smaOption.label,
+      data: xData.map((x, i) => [x, scores[i]]),
+      color: "#F92672",
       type: "line" as const,
-      zIndex: 0,
+      zIndex: 2,
       lineWidth: 2,
-      dashStyle: "Dash" as const,
-      marker: { enabled: false },
-      showInLegend: false, // Hide from legend
-    },
-    {
-      name: "200 Level",
-      data: xData.map(x => [x, 200]),
-      color: "#4ECDC4", // Bright cyan
-      type: "line" as const,
-      zIndex: 0,
-      lineWidth: 2,
-      dashStyle: "Dash" as const,
-      marker: { enabled: false },
-      showInLegend: false, // Hide from legend
-    }
-  ];
+      marker: { 
+        enabled: false,
+        states: {
+          hover: { enabled: true, radius: 6, lineWidth: 2, lineColor: COLORS[0] }
+        }
+      },
+    };
 
-  // Compact chart options
-  const chartOptions: Highcharts.Options = {
-    chart: {
-      type: "line", // This will be overridden by individual series types
-      height: 500,
-      backgroundColor: "rgba(0, 0, 0, 0.3)",
-      spacing: [10, 12, 10, 12],
-      style: { fontFamily: "inherit" },
-      panning: {
+    // Highlight series for extreme values
+    const highlightAbove950Series = {
+      name: `${smaOption.label} (Above 950)`,
+      data: xData.map((x, i) => [x, scores[i] > 950 ? scores[i] : null]),
+      color: "#FFD700",
+      type: "line" as const,
+      zIndex: 3,
+      lineWidth: 0,
+      marker: {
         enabled: true,
-        type: "x",
-      },
-      plotBackgroundColor: "rgba(0, 0, 0, 0.2)",
-      plotBorderWidth: 0,
-      plotShadow: false,
-    },
-    title: {
-      text: "",
-    },
-    // Calculate default xAxis min and max for last N years
-    xAxis: {
-      type: "datetime",
-      title: {
-        text: "Date",
-        style: { fontSize: "16px", fontWeight: "700", color: "#E5E7EB" },
-      },
-      labels: { 
-        format: "{value:%Y-%m-%d}", 
-        style: { fontSize: "14px", color: "#D1D5DB", fontWeight: "500" } 
-      },
-      tickLength: 6,
-      tickWidth: 2,
-      minTickInterval: 24 * 3600 * 1000 * 7, // at least 1 week
-      min:
-        xData.length > 0
-          ? xData[Math.max(0, xData.length - nYears * 365)]
-          : undefined, // N years ago
-      max: xData.length > 0 ? xData[xData.length - 1] : undefined, // latest data
-      gridLineWidth: 2,
-      gridLineColor: "rgba(107, 114, 128, 0.4)",
-      lineColor: "rgba(156, 163, 175, 0.6)",
-      tickColor: "rgba(156, 163, 175, 0.6)",
-    },
-    yAxis: {
-      title: { 
-        text: "Score",
-        style: { fontSize: "16px", fontWeight: "700", color: "#E5E7EB" },
-      },
-      labels: { 
-        format: "{value}", 
-        style: { fontSize: "14px", color: "#D1D5DB", fontWeight: "500" } 
-      },
-      min: 0,
-      max: 1100,
-      gridLineWidth: 2,
-      gridLineColor: "rgba(107, 114, 128, 0.4)",
-      lineColor: "rgba(156, 163, 175, 0.6)",
-      tickColor: "rgba(75, 85, 99, 0.3)",
-    },
-    legend: {
-      enabled: true,
-      align: "center",
-      verticalAlign: "bottom",
-      layout: "horizontal",
-      itemStyle: { 
-        fontSize: "14px",
-        color: "#F3F4F6",
-        fontWeight: "600"
-      },
-      itemHoverStyle: {
-        color: "#60A5FA"
-      },
-      symbolHeight: 12,
-      symbolWidth: 24,
-      symbolRadius: 3,
-      margin: 8,
-      padding: 12,
-      backgroundColor: "rgba(0, 0, 0, 0.9)",
-      borderWidth: 1,
-      borderColor: "rgba(75, 85, 99, 0.6)",
-      borderRadius: 8,
-      shadow: true,
-      itemDistance: 20,
-    },
-    tooltip: {
-      shared: true,
-      backgroundColor: "rgba(17, 24, 39, 0.98)",
-      borderWidth: 0,
-      shadow: true,
-      borderRadius: 8,
-      style: { fontSize: "13px", color: "#ffffff" },
-      formatter: function (this: any) {
-        const date = Highcharts.dateFormat("%Y-%m-%d", this.x as number);
-        let tooltip = `<div style="padding: 4px 0;"><b style="color: #60A5FA; font-size: 14px;">${date}</b></div><br/>`;
-        this.points?.forEach((point: any) => {
-          const seriesName = point.series.name;
-          const value = point.y;
-          const isMainSeries = seriesName === smaOption.label;
-          const isHorizontalLine = seriesName === "950 Level" || seriesName === "200 Level";
-          
-          // Skip horizontal reference lines in tooltip
-          if (isHorizontalLine) {
-            return;
-          }
-          
-          let nameColor = "#9ca3af";
-          let valueColor = "#ffffff";
-          
-          if (isMainSeries) {
-            nameColor = "#60A5FA";
-            valueColor = "#60A5FA";
-          } else if (seriesName.includes("Above 950")) {
-            nameColor = "#FF6B6B";
-            valueColor = "#FF6B6B";
-          } else if (seriesName.includes("Below 200")) {
-            nameColor = "#4ECDC4";
-            valueColor = "#4ECDC4";
-          }
-          
-          tooltip += `<span style="color:${point.color}; font-size: 16px;">●</span> <span style="color: ${nameColor}; font-weight: 500;">${seriesName}</span>: <span style="color: ${valueColor}; font-weight: bold;">${value}</span><br/>`;
-        });
-        return tooltip;
-      },
-    },
-    plotOptions: {
-      line: {
-        marker: { enabled: false },
+        radius: 6,
+        symbol: "circle",
+        fillColor: "#FF6B6B",
+        lineColor: "#FFD700",
         lineWidth: 2,
+        states: {
+          hover: {
+            enabled: true,
+            radius: 8,
+            lineWidth: 3,
+            lineColor: "#FFD700"
+          }
+        }
       },
-      area: {
+      enableMouseTracking: true,
+      stickyTracking: false,
+      showInLegend: false
+    };
+
+    const highlightBelow200Series = {
+      name: `${smaOption.label} (Below 200)`,
+      data: xData.map((x, i) => [x, scores[i] < 200 ? scores[i] : null]),
+      color: "#4ECDC4",
+      type: "line" as const,
+      zIndex: 3,
+      lineWidth: 0,
+      marker: {
+        enabled: true,
+        radius: 6,
+        symbol: "circle",
+        fillColor: "#4ECDC4",
+        lineColor: "#FFD700",
+        lineWidth: 2,
+        states: {
+          hover: {
+            enabled: true,
+            radius: 8,
+            lineWidth: 3,
+            lineColor: "#FFD700"
+          }
+        }
+      },
+      enableMouseTracking: true,
+      stickyTracking: false,
+      showInLegend: false
+    };
+
+    // Sector series
+    const sectorSeries = sectorKeys.map((sector, idx) => ({
+      name: sector,
+      data: xData.map((x, i) => {
+        const arr = data[i][smaOption.sector as keyof MarketBreadthData] as SectorScore[];
+        const found = arr?.find((s) => s.sector_key === sector);
+        return [x, found ? found.score : null];
+      }),
+      color: COLORS[(idx + 1) % COLORS.length],
+      type: "area" as const,
+      zIndex: 1,
+      lineWidth: 1,
+      visible: showSectorLines,
+      marker: { enabled: false },
+      stacking: "normal" as const,
+    }));
+
+    // Horizontal reference lines
+    const horizontalLines = [
+      {
+        name: "950 Level",
+        data: xData.map(x => [x, 950]),
+        color: "#FF6B6B",
+        type: "line" as const,
+        zIndex: 0,
+        lineWidth: 2,
+        dashStyle: "Dash" as const,
         marker: { enabled: false },
-        lineWidth: 1,
-        fillOpacity: 0.6,
+        showInLegend: false,
       },
-      series: {
-        animation: { duration: 600 },
+      {
+        name: "200 Level",
+        data: xData.map(x => [x, 200]),
+        color: "#4ECDC4",
+        type: "line" as const,
+        zIndex: 0,
+        lineWidth: 2,
+        dashStyle: "Dash" as const,
+        marker: { enabled: false },
+        showInLegend: false,
+      }
+    ];
+
+    return {
+      genericSeries,
+      highlightAbove950Series,
+      highlightBelow200Series,
+      sectorSeries,
+      horizontalLines
+    };
+  }, [processedData, showSectorLines, data]);
+
+  // Memoized chart options
+  const chartOptions = useMemo(() => {
+    if (!processedData || !chartSeries) return null;
+
+    const { xData } = processedData;
+    const { genericSeries, highlightAbove950Series, highlightBelow200Series, sectorSeries, horizontalLines } = chartSeries;
+
+    return {
+      chart: {
+        type: "line",
+        height: 500,
+        backgroundColor: "rgba(0, 0, 0, 0.3)",
+        spacing: [10, 12, 10, 12],
+        style: { fontFamily: "inherit" },
+        panning: {
+          enabled: true,
+          type: "x",
+        },
+        plotBackgroundColor: "rgba(0, 0, 0, 0.2)",
+        plotBorderWidth: 0,
+        plotShadow: false,
       },
-    },
-    series: [genericSeries, highlightAbove950Series, highlightBelow200Series, ...sectorSeries, ...horizontalLines],
-    credits: { enabled: false },
-    exporting: {
-      enabled: true,
-      buttons: {
-        contextButton: {
-          symbol: 'menu',
-          symbolX: 12,
-          symbolY: 10,
-          symbolSize: 14,
-          symbolStrokeWidth: 2,
-          symbolStroke: '#9ca3af',
-          symbolFill: 'rgba(31, 41, 55, 0.8)',
-          menuItems: ['downloadPNG', 'downloadPDF', 'downloadCSV'],
-                      theme: {
+      title: {
+        text: "",
+      },
+      xAxis: {
+        type: "datetime",
+        title: {
+          text: "Date",
+          style: { fontSize: "16px", fontWeight: "700", color: "#E5E7EB" },
+        },
+        labels: { 
+          format: "{value:%Y-%m-%d}", 
+          style: { fontSize: "14px", color: "#D1D5DB", fontWeight: "500" } 
+        },
+        tickLength: 6,
+        tickWidth: 2,
+        minTickInterval: 24 * 3600 * 1000 * 7, // at least 1 week
+        min: xData.length > 0 ? xData[Math.max(0, xData.length - nYears * 365)] : undefined,
+        max: xData.length > 0 ? xData[xData.length - 1] : undefined,
+        gridLineWidth: 2,
+        gridLineColor: "rgba(107, 114, 128, 0.4)",
+        lineColor: "rgba(156, 163, 175, 0.6)",
+        tickColor: "rgba(156, 163, 175, 0.6)",
+      },
+      yAxis: {
+        title: { 
+          text: "Score",
+          style: { fontSize: "16px", fontWeight: "700", color: "#E5E7EB" },
+        },
+        labels: { 
+          format: "{value}", 
+          style: { fontSize: "14px", color: "#D1D5DB", fontWeight: "500" } 
+        },
+        min: 0,
+        max: 1100,
+        gridLineWidth: 2,
+        gridLineColor: "rgba(107, 114, 128, 0.4)",
+        lineColor: "rgba(156, 163, 175, 0.6)",
+        tickColor: "rgba(75, 85, 99, 0.3)",
+      },
+      legend: {
+        enabled: true,
+        align: "center",
+        verticalAlign: "bottom",
+        layout: "horizontal",
+        itemStyle: { 
+          fontSize: "14px",
+          color: "#F3F4F6",
+          fontWeight: "600"
+        },
+        itemHoverStyle: {
+          color: "#60A5FA"
+        },
+        symbolHeight: 12,
+        symbolWidth: 24,
+        symbolRadius: 3,
+        margin: 8,
+        padding: 12,
+        backgroundColor: "rgba(0, 0, 0, 0.9)",
+        borderWidth: 1,
+        borderColor: "rgba(75, 85, 99, 0.6)",
+        borderRadius: 8,
+        shadow: true,
+        itemDistance: 20,
+      },
+      tooltip: {
+        shared: true,
+        backgroundColor: "rgba(17, 24, 39, 0.98)",
+        borderWidth: 0,
+        shadow: true,
+        borderRadius: 8,
+        style: { fontSize: "13px", color: "#ffffff" },
+        formatter: function (this: any) {
+          const date = Highcharts.dateFormat("%Y-%m-%d", this.x as number);
+          let tooltip = `<div style="padding: 4px 0;"><b style="color: #60A5FA; font-size: 14px;">${date}</b></div><br/>`;
+          this.points?.forEach((point: any) => {
+            const seriesName = point.series.name;
+            const value = point.y;
+            const isMainSeries = seriesName === processedData.smaOption.label;
+            const isHorizontalLine = seriesName === "950 Level" || seriesName === "200 Level";
+            
+            // Skip horizontal reference lines in tooltip
+            if (isHorizontalLine) {
+              return;
+            }
+            
+            let nameColor = "#9ca3af";
+            let valueColor = "#ffffff";
+            
+            if (isMainSeries) {
+              nameColor = "#60A5FA";
+              valueColor = "#60A5FA";
+            } else if (seriesName.includes("Above 950")) {
+              nameColor = "#FF6B6B";
+              valueColor = "#FF6B6B";
+            } else if (seriesName.includes("Below 200")) {
+              nameColor = "#4ECDC4";
+              valueColor = "#4ECDC4";
+            }
+            
+            tooltip += `<span style="color:${point.color}; font-size: 16px;">●</span> <span style="color: ${nameColor}; font-weight: 500;">${seriesName}</span>: <span style="color: ${valueColor}; font-weight: bold;">${value}</span><br/>`;
+          });
+          return tooltip;
+        },
+      },
+      plotOptions: {
+        line: {
+          marker: { enabled: false },
+          lineWidth: 2,
+        },
+        area: {
+          marker: { enabled: false },
+          lineWidth: 1,
+          fillOpacity: 0.6,
+        },
+        series: {
+          animation: { duration: 600 },
+        },
+      },
+      series: [genericSeries, highlightAbove950Series, highlightBelow200Series, ...sectorSeries, ...horizontalLines],
+      credits: { enabled: false },
+      exporting: {
+        enabled: true,
+        buttons: {
+          contextButton: {
+            symbol: 'menu',
+            symbolX: 12,
+            symbolY: 10,
+            symbolSize: 14,
+            symbolStrokeWidth: 2,
+            symbolStroke: '#9ca3af',
+            symbolFill: 'rgba(31, 41, 55, 0.8)',
+            menuItems: ['downloadPNG', 'downloadPDF', 'downloadCSV'],
+            theme: {
               fill: 'rgba(31, 41, 55, 0.95)',
               stroke: 'rgba(75, 85, 99, 0.5)'
             }
+          }
         }
-      }
-    },
-    navigator: {
-      enabled: true,
-      height: 40,
-      margin: 10,
-      outlineWidth: 0,
-      outlineColor: "transparent",
-              handles: {
+      },
+      navigator: {
+        enabled: true,
+        height: 40,
+        margin: 10,
+        outlineWidth: 0,
+        outlineColor: "transparent",
+        handles: {
           backgroundColor: "rgba(96, 165, 250, 0.8)",
           borderColor: "rgba(96, 165, 250, 1)",
         },
-      xAxis: {
-        gridLineColor: "rgba(0, 0, 0, 0.4)",
-        lineColor: "rgba(75, 85, 99, 0.6)",
-        tickColor: "rgba(75, 85, 99, 0.4)",
-        labels: {
-          style: {
-            color: "#9ca3af",
-            fontSize: "10px",
+        xAxis: {
+          gridLineColor: "rgba(0, 0, 0, 0.4)",
+          lineColor: "rgba(75, 85, 99, 0.6)",
+          tickColor: "rgba(75, 85, 99, 0.4)",
+          labels: {
+            style: {
+              color: "#9ca3af",
+              fontSize: "10px",
+            },
           },
         },
       },
-    },
-    scrollbar: {
-      enabled: true,
-      barBackgroundColor: "rgba(75, 85, 99, 0.5)",
-      barBorderColor: "rgba(75, 85, 99, 0.8)",
-      buttonBackgroundColor: "rgba(55, 65, 81, 0.8)",
-      buttonBorderColor: "rgba(75, 85, 99, 0.8)",
-      buttonArrowColor: "#9ca3af",
-      rifleColor: "rgba(96, 165, 250, 0.8)",
-      trackBackgroundColor: "rgba(31, 41, 55, 0.3)",
-      trackBorderColor: "rgba(75, 85, 99, 0.3)",
-    },
-    rangeSelector: {
-      enabled: true,
-      selected: 2, // 3y button
-      inputEnabled: false,
-              buttonTheme: {
+      scrollbar: {
+        enabled: true,
+        barBackgroundColor: "rgba(75, 85, 99, 0.5)",
+        barBorderColor: "rgba(75, 85, 99, 0.8)",
+        buttonBackgroundColor: "rgba(55, 65, 81, 0.8)",
+        buttonBorderColor: "rgba(75, 85, 99, 0.8)",
+        buttonArrowColor: "#9ca3af",
+        rifleColor: "rgba(96, 165, 250, 0.8)",
+        trackBackgroundColor: "rgba(31, 41, 55, 0.3)",
+        trackBorderColor: "rgba(75, 85, 99, 0.3)",
+      },
+      rangeSelector: {
+        enabled: true,
+        selected: 2, // 3y button
+        inputEnabled: false,
+        buttonTheme: {
           fill: "rgba(0, 0, 0, 0.9)",
           stroke: "rgba(75, 85, 99, 0.6)",
           r: 8,
@@ -525,20 +508,41 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = ({ indexId }) => {
               },
             },
           },
-        style: {
-          color: "#9ca3af",
-          fontSize: "12px",
-          fontWeight: "500",
+          style: {
+            color: "#9ca3af",
+            fontSize: "12px",
+            fontWeight: "500",
+          },
         },
+        buttons: [
+          { type: "year", count: 1, text: "1y" },
+          { type: "year", count: 2, text: "2y" },
+          { type: "year", count: 3, text: "3y" },
+          { type: "all", text: "All" },
+        ],
       },
-      buttons: [
-        { type: "year", count: 1, text: "1y" },
-        { type: "year", count: 2, text: "2y" },
-        { type: "year", count: 3, text: "3y" },
-        { type: "all", text: "All" },
-      ],
-    },
-  };
+    } as Highcharts.Options;
+  }, [processedData, chartSeries, nYears]);
+
+  if (loading) {
+    return (
+      <div className="chart-container">
+        <LoadingSpinner text="Loading Market Breadth..." />
+      </div>
+    );
+  }
+  
+  if (error) {
+    return (
+      <div className="chart-container">
+        <ErrorMessage message={`Error: ${error}`} />
+      </div>
+    );
+  }
+  
+  if (!data || data.length === 0) {
+    return null;
+  }
 
   return (
     <div className="chart-container">
@@ -614,8 +618,6 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = ({ indexId }) => {
       {chartStats && (
         <div className="chart-stats">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-
-
             {/* Progress Bar */}
             <div className="chart-stat flex flex-col justify-center">
               <div className="chart-stat-label text-center">Score</div>
@@ -678,7 +680,11 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = ({ indexId }) => {
             <div className="chart-stat md:col-span-2 flex flex-col justify-center">
               <div className="grid grid-cols-3 gap-4 py-2">
                 {(() => {
-                  const smaOption = SMA_OPTIONS[selectedSMA];
+                  if (!processedData) {
+                    return <div className="text-gray-400 text-xs col-span-3 text-center">No sector data</div>;
+                  }
+
+                  const { smaOption } = processedData;
                   const currentData = data[data.length - 1];
                   const sectorScores = currentData[smaOption.sector as keyof MarketBreadthData] as SectorScore[];
                   
@@ -715,10 +721,14 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = ({ indexId }) => {
       )}
       
       <div className="mt-6">
-        <HighchartsReact highcharts={Highcharts} options={chartOptions} />
+        {chartOptions && (
+          <HighchartsReact highcharts={Highcharts} options={chartOptions} />
+        )}
       </div>
     </div>
   );
-};
+});
+
+MarketBreathChart.displayName = 'MarketBreathChart';
 
 export default MarketBreathChart;
