@@ -129,12 +129,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
     const xData = sortedData.map((d) => parseTradeDate(d.trade_date));
     const scores = sortedData.map(d => d[smaOption.key as keyof MarketBreadthData] as number);
     
-    // Debug: Log data range for rangeSelector
-    console.log('Data range:', {
-      start: new Date(xData[0]).toISOString(),
-      end: new Date(xData[xData.length - 1]).toISOString(),
-      count: xData.length
-    });
+
     
     // Collect all unique sector keys (from the first non-empty sector array)
     let sectorKeys: string[] = [];
@@ -146,6 +141,24 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
       }
     }
 
+    // Single-pass calculation for min, max, and average
+    let sum = 0;
+    let minScore = scores[0];
+    let maxScore = scores[0];
+    
+    for (let i = 0; i < scores.length; i++) {
+      const score = scores[i];
+      sum += score;
+      if (score < minScore) minScore = score;
+      if (score > maxScore) maxScore = score;
+    }
+    
+    const avgScore = sum / scores.length;
+    
+    // Calculate 20-period average efficiently
+    const last20Scores = scores.slice(-20);
+    const avg20Period = last20Scores.reduce((sum, score) => sum + score, 0) / last20Scores.length;
+    
     return {
       xData,
       scores,
@@ -153,10 +166,10 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
       smaOption,
       sortedData,
       currentScore: scores[scores.length - 1],
-      avgScore: scores.reduce((sum, score) => sum + score, 0) / scores.length,
-      minScore: Math.min(...scores),
-      maxScore: Math.max(...scores),
-      avg20Period: scores.slice(-20).reduce((sum, score) => sum + score, 0) / Math.min(20, scores.length)
+      avgScore,
+      minScore,
+      maxScore,
+      avg20Period
     };
   }, [data, selectedSMA]);
 
@@ -172,7 +185,14 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
       avg20Period: processedData.avg20Period,
       period: processedData.smaOption.label
     };
-  }, [processedData]);
+  }, [
+    processedData?.currentScore,
+    processedData?.avgScore,
+    processedData?.minScore,
+    processedData?.maxScore,
+    processedData?.avg20Period,
+    processedData?.smaOption?.label,
+  ]);
 
   // Memoized chart series data
   const chartSeries = useMemo(() => {
@@ -309,7 +329,13 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
       sectorSeries,
       horizontalLines
     };
-  }, [processedData, showSectorLines, data]);
+  }, [
+    processedData?.xData?.length, // Only depend on data length
+    processedData?.scores?.length,
+    processedData?.sectorKeys?.length,
+    processedData?.smaOption?.label, // Only depend on the label string
+    showSectorLines, // Boolean primitive
+  ]);
 
   // Memoized chart options
   const chartOptions = useMemo(() => {
@@ -340,7 +366,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
       xAxis: {
         type: "datetime",
         title: {
-          text: "Date",
+          text: "",
           style: { fontSize: "16px", fontWeight: "700", color: "#E5E7EB" },
         },
         labels: { 
@@ -541,13 +567,20 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
         ],
         events: {
           click: function(e: any) {
-            // Handle range selector button clicks
-            console.log('Range selector clicked:', e);
+            // Handle range selector button clicks (development only)
+            if (import.meta.env.DEV) {
+              console.log('Range selector clicked:', e);
+            }
           }
         }
       },
     } as Highcharts.Options;
-  }, [processedData, chartSeries, nYears]);
+  }, [
+    processedData?.xData?.length, // Only depend on data length, not the entire object
+    chartSeries?.genericSeries?.data?.length, // Only depend on series data length
+    showSectorLines, // Boolean primitive
+    nYears // Number primitive
+  ]);
 
   if (loading) {
     return (
@@ -756,7 +789,9 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
               // Initialize chart if needed
               if (chart) {
                 // Chart is ready - rangeSelector should work automatically
-                console.log('Chart initialized with rangeSelector');
+                if (import.meta.env.DEV) {
+                  console.log('Chart initialized with rangeSelector');
+                }
               }
             }}
           />

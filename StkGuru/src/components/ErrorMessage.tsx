@@ -5,7 +5,7 @@ interface ErrorMessageProps {
   className?: string;
 }
 
-const ErrorMessage: React.FC<ErrorMessageProps> = ({ message, className = '' }) => {
+const ErrorMessage: React.FC<ErrorMessageProps> = React.memo(({ message, className = '' }) => {
   return (
     <div className={`flex items-center justify-center py-8 text-red-600 bg-red-50 rounded-lg ${className}`}>
       <svg className="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -14,6 +14,8 @@ const ErrorMessage: React.FC<ErrorMessageProps> = ({ message, className = '' }) 
       <span className="font-medium">{message}</span>
     </div>
   );
-};
+});
+
+ErrorMessage.displayName = 'ErrorMessage';
 
 export default ErrorMessage; 

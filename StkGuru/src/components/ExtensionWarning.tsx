@@ -5,7 +5,7 @@ interface ExtensionWarningProps {
   onDismiss?: () => void;
 }
 
-const ExtensionWarning: React.FC<ExtensionWarningProps> = ({ onDismiss }) => {
+const ExtensionWarning: React.FC<ExtensionWarningProps> = React.memo(({ onDismiss }) => {
   const [isVisible, setIsVisible] = useState(shouldShowExtensionWarning());
 
   if (!isVisible) {
@@ -67,6 +67,8 @@ const ExtensionWarning: React.FC<ExtensionWarningProps> = ({ onDismiss }) => {
       </div>
     </div>
   );
-};
+});
+
+ExtensionWarning.displayName = 'ExtensionWarning';
 
 export default ExtensionWarning; 
