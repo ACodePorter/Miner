@@ -4,6 +4,20 @@ import './index.css'
 import App from './App.tsx'
 import ErrorBoundary from './components/ErrorBoundary.tsx'
 import { clearExtensionInterference, shouldShowExtensionWarning } from './utils/browserUtils.ts'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+
+// Create a client
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 5 * 60 * 1000, // 5 minutes
+      gcTime: 10 * 60 * 1000, // 10 minutes
+      retry: 3,
+      refetchOnWindowFocus: false,
+      refetchOnReconnect: true,
+    },
+  },
+})
 
 // Prevent service worker errors from affecting the app
 const preventServiceWorkerErrors = () => {
@@ -52,9 +66,11 @@ const root = createRoot(document.getElementById('root')!);
 try {
   root.render(
     <ErrorBoundary>
-      <StrictMode>
-        <App />
-      </StrictMode>
+      <QueryClientProvider client={queryClient}>
+        <StrictMode>
+          <App />
+        </StrictMode>
+      </QueryClientProvider>
     </ErrorBoundary>
   );
 } catch (error) {
@@ -63,7 +79,9 @@ try {
   try {
     root.render(
       <ErrorBoundary>
-        <App />
+        <QueryClientProvider client={queryClient}>
+          <App />
+        </QueryClientProvider>
       </ErrorBoundary>
     );
   } catch (fallbackError) {

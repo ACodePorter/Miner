@@ -68,6 +68,8 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
   const [nYears, setNYears] = useState<number>(3); // N-year window for zoom
   const [showSectorLines, setShowSectorLines] = useState(false); // Show/hide sector lines
   const [isRefreshing, setIsRefreshing] = useState(false);
+  
+
 
   // Memoized fetch function
   const fetchMarketBreadthData = useCallback(async (index: string): Promise<MarketBreadthData[]> => {
@@ -531,6 +533,8 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
       </div>
     );
   }
+
+
   
   if (error) {
     return (

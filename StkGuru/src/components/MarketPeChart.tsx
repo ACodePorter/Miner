@@ -590,10 +590,10 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
     );
   }
 
-  if (error || calculationError) {
+  if (error) {
     return (
       <div className="chart-container">
-        <ErrorMessage message={`Error: ${error || calculationError}`} />
+        <ErrorMessage message={`Error: ${error}`} />
         <div className="mt-4 text-center">
           <button 
             onClick={handleRefresh}
@@ -666,7 +666,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
         </div>
       </div>
       
-      {peData && rollingStats && (
+      {peData && (
         <div className="chart-stats">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="chart-stat">
