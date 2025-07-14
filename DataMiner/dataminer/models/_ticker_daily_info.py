@@ -120,6 +120,7 @@ class TickerDailyInfo(Document):
         'indexes': [
             {
                 'fields': ['ticker', 'trade_date', 'interval'],
+                'unique': True
             },
             {'fields': ['trade_date']},
             {'fields': ['trade_date', 'ticker']},
