@@ -303,6 +303,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
         plotBackgroundColor: "rgba(0, 0, 0, 0.2)",
         plotBorderWidth: 0,
         plotShadow: false,
+        spacing: [5, 5, 5, 5], // Reduced spacing: [top, right, bottom, left]
       },
       title: {
         text: "",
@@ -633,7 +634,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
           </div>
         </div>
         
-        <div className="chart-controls">
+        <div className="chart-controls mt-2">
           <div className="flex items-center gap-6 flex-wrap">
             <label className="flex items-center gap-2 text-sm font-medium">
               N-year:
@@ -670,7 +671,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
       </div>
       
       {peData && (
-        <div className="chart-stats">
+        <div className="chart-stats py-1 px-3">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="chart-stat">
               <div className="chart-stat-label">Current PE</div>
@@ -719,7 +720,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
         </div>
       )}
       
-      <div className="mt-2">
+      <div className="mt-1">
         <HighchartsReact
           highcharts={Highcharts}
           options={chartOptions}

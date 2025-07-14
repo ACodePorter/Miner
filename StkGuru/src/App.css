@@ -5,7 +5,7 @@
 /* Custom component styles */
 @layer components {
   .card {
-    @apply bg-gray-900/70 backdrop-blur-sm rounded-2xl border border-gray-800/70 px-6 py-3 shadow-2xl;
+    @apply bg-gray-900/70 backdrop-blur-sm rounded-2xl border border-gray-800/70 px-3 py-2 shadow-2xl;
   }
 
   .card-header {
@@ -121,7 +121,7 @@
 }
 
 main {
-  @apply w-full px-6 py-4 space-y-6;
+  @apply w-full px-4 py-3 space-y-4;
 }
 
 /* Responsive design */
@@ -145,7 +145,7 @@ main {
 }
 
 .chart-header {
-  @apply flex items-center justify-between mb-3;
+  @apply flex items-center justify-between mb-2;
 }
 
 .chart-title {
@@ -157,11 +157,11 @@ main {
 }
 
 .chart-stats {
-  @apply bg-gray-800/50 rounded-2xl py-2 px-4 mt-3 border border-gray-700/50;
+  @apply bg-gray-800/50 rounded-2xl py-1 px-3 mt-2 border border-gray-700/50;
 }
 
 .chart-stat {
-  @apply flex flex-col py-3 px-2;
+  @apply flex flex-col py-2 px-1;
 }
 
 .chart-stat-label {

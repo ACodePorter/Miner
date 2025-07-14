@@ -350,7 +350,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
         height: 650,
         backgroundColor: "rgba(0, 0, 0, 0.3)",
         zoomType: "x",
-        spacing: [10, 12, 10, 12],
+        spacing: [5, 5, 5, 5], // Reduced spacing: [top, right, bottom, left]
         style: { fontFamily: "inherit" },
         panning: {
           enabled: true,
@@ -380,6 +380,11 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
         gridLineColor: "rgba(107, 114, 128, 0.4)",
         lineColor: "rgba(156, 163, 175, 0.6)",
         tickColor: "rgba(156, 163, 175, 0.6)",
+        crosshair: {
+          color: 'rgba(96, 165, 250, 0.7)',
+          width: 2,
+          dashStyle: 'shortdot'
+        }
       },
       yAxis: {
         title: { 
@@ -396,6 +401,11 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
         gridLineColor: "rgba(107, 114, 128, 0.4)",
         lineColor: "rgba(156, 163, 175, 0.6)",
         tickColor: "rgba(75, 85, 99, 0.3)",
+        crosshair: {
+          color: 'rgba(96, 165, 250, 0.7)',
+          width: 2,
+          dashStyle: 'shortdot'
+        }
       },
       legend: {
         enabled: true,
@@ -421,6 +431,10 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
         borderRadius: 8,
         shadow: true,
         itemDistance: 20,
+        width: "100%", // Align width with chart area
+        x: 0, // Align to left edge of chart area
+        useHTML: false,
+        floating: false,
       },
       tooltip: {
         shared: true,
@@ -574,7 +588,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
           }
         }
       },
-    } as Highcharts.Options;
+    } as unknown as Highcharts.Options;
   }, [
     processedData?.xData?.length, // Only depend on data length, not the entire object
     chartSeries?.genericSeries?.data?.length, // Only depend on series data length
@@ -627,7 +641,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
           </div>
         </div>
         
-        <div className="chart-controls">
+        <div className="chart-controls mt-2">
           <div className="flex items-center gap-6 flex-wrap">
             <label className="flex items-center gap-2 text-sm font-medium">
               N-year:
@@ -676,7 +690,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
       </div>
       
       {chartStats && (
-        <div className="chart-stats">
+        <div className="chart-stats py-1 px-3">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Progress Bar */}
             <div className="chart-stat flex flex-col justify-center">
@@ -780,7 +794,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
         </div>
       )}
       
-      <div className="mt-2">
+      <div className="mt-1">
         {chartOptions && (
           <HighchartsReact 
             highcharts={Highcharts} 
