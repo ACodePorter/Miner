@@ -114,9 +114,18 @@ async def update_market_pe() -> str:
     return 'GOOD'
 
 
+@app.get('/update_spx_market_breadth')
+async def update_spx_market_breadth() -> str:
+    update_spx_market_breadth_task.delay()
+    return 'GOOD'
+
 @app.get('/update_all_above', description='Update all above tasks to fetch latest data')
 async def update_all_above() -> str:
-    run_daily_updates_task.delay()
+    task_chain = chain(
+        run_daily_updates_task.si(),
+        update_spx_market_breadth_task.si(),
+    )
+    task_chain.apply_async()
     update_market_pe_task.delay()
     return 'GOOD'
 
@@ -125,13 +134,6 @@ async def update_all_above() -> str:
 async def update_indicators_for_tickers(tickers: List[str]) -> str:
     update_indicators_for_tickers_task.delay(tickers=tickers)
     return 'GOOD'
-
-
-@app.get('/update_spx_market_breadth')
-async def update_spx_market_breadth() -> str:
-    update_spx_market_breadth_task.delay()
-    return 'GOOD'
-
 
 @app.get('/api/mbs')
 async def get_mbs(market_index: str = 'spx', start_date: str = None, end_date: str = None) -> list | dict:
