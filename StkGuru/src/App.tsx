@@ -15,8 +15,8 @@ function App() {
 
       <main>
         <div className="space-y-8">
-          {/* PE Charts Row */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          {/* PE Charts Row - Each chart takes exactly 50% of screen width */}
+          <div className="grid grid-cols-2 gap-8 animate-fade-in-up pe-charts-grid" style={{ animationDelay: '0.4s' }}>
             <MarketPeChart 
               indexId="spx" 
               displayName="S&P 500 (SPX)" 

@@ -142,6 +142,13 @@ main {
 /* Chart container improvements */
 .chart-container {
   @apply card w-full;
+  min-width: 0; /* Allow container to shrink below content size */
+}
+
+/* Ensure Highcharts containers are responsive */
+.chart-container .highcharts-container {
+  width: 100% !important;
+  height: auto !important;
 }
 
 .chart-header {
@@ -306,6 +313,37 @@ input[type="number"] {
   .chart-stats th,
   .chart-stats td {
     @apply px-2;
+  }
+}
+
+/* Ensure PE charts maintain 50% width on all screen sizes */
+@media (max-width: 768px) {
+  /* On smaller screens, stack the PE charts vertically but maintain full width */
+  .pe-charts-grid {
+    @apply grid-cols-1;
+  }
+  
+  .pe-charts-grid .chart-container {
+    @apply w-full;
+  }
+}
+
+/* Additional responsive adjustments for very small screens */
+@media (max-width: 480px) {
+  .pe-charts-grid {
+    @apply gap-4;
+  }
+  
+  .chart-container {
+    @apply px-2;
+  }
+  
+  .chart-controls {
+    @apply gap-2;
+  }
+  
+  .chart-controls label {
+    @apply text-xs;
   }
 }
 

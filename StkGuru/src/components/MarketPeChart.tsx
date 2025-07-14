@@ -304,6 +304,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
         plotBorderWidth: 0,
         plotShadow: false,
         spacing: [5, 5, 5, 5], // Reduced spacing: [top, right, bottom, left]
+        reflow: true, // Enable responsive behavior
       },
       title: {
         text: "",
@@ -498,6 +499,21 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
           { type: "year", count: 5, text: "5y" },
           { type: "all", text: "All" },
         ],
+      },
+      responsive: {
+        rules: [{
+          condition: {
+            maxWidth: 768
+          },
+          chartOptions: {
+            legend: {
+              enabled: false
+            },
+            chart: {
+              height: 400
+            }
+          }
+        }]
       },
       series,
       credits: {
