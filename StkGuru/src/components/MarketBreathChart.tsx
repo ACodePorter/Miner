@@ -341,7 +341,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
   const chartOptions = useMemo(() => {
     if (!processedData || !chartSeries) return null;
 
-    const { xData } = processedData;
+    // const { xData } = processedData; // Unused variable removed
     const { genericSeries, highlightAbove950Series, highlightBelow200Series, sectorSeries, horizontalLines } = chartSeries;
 
     return {

@@ -4,11 +4,11 @@ export const detectProblematicExtensions = (): string[] => {
   const problematicExtensions: string[] = [];
   
   // Check for common problematic extensions
-  const extensions = [
-    'chrome-extension://',
-    'moz-extension://',
-    'safari-extension://'
-  ];
+  // const extensions = [
+  //   'chrome-extension://',
+  //   'moz-extension://',
+  //   'safari-extension://'
+  // ];
   
   // Check if any chrome-extension URLs are being cached
   if ('caches' in window) {

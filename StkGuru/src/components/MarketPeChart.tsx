@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useCallback, useRef } from "react";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
 import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
 import LoadingSpinner from "./LoadingSpinner";
@@ -52,7 +52,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
   const [currentViewRange, setCurrentViewRange] = useState<{min: number | undefined, max: number | undefined}>({min: undefined, max: undefined});
 
   // Web Worker for heavy calculations
-  const { rollingStats, isLoading: isCalculating, error: calculationError, calculateStats } = useRollingStatsWorker();
+  const { rollingStats, isLoading: isCalculating, calculateStats } = useRollingStatsWorker();
 
   // Memoized fetch function
   const fetchPEData = useCallback(async (index: string): Promise<PEData> => {
