@@ -23,8 +23,12 @@ _tcs = TradeCalendarShovel.get_instance()
 
 
 class MarketValuationScraper(SingletonParent):
-    NASDAT_100_PE_RATIO_URL = "https://www.gurufocus.com/economic_indicators/6778/nasdaq-100-pe-ratio"
-    SP500_PE_RATIO_URL = "https://www.gurufocus.com/economic_indicators/57/sp-500-pe-ratio"
+    IDX_URL_MAP = {
+        'spx': "https://www.gurufocus.com/economic_indicators/57/sp-500-pe-ratio",
+        'qqq': "https://www.gurufocus.com/economic_indicators/6778/nasdaq-100-pe-ratio",
+        'ndx': "https://www.gurufocus.com/economic_indicators/6778/nasdaq-100-pe-ratio",
+        'hsi': "https://www.gurufocus.com/economic_indicators/5732/pe-ratio-ttm-for-the-hang-seng-index"
+    }
 
     def __init__(self):
         make_db_connection()
@@ -50,7 +54,7 @@ class MarketValuationScraper(SingletonParent):
             _logger.warning(
                 f"An error occurred while trying to close the pop-up: {e}")
 
-    def _scrape_paginated_table_robust_final(self, idx: Literal['spx', 'qqq'] = 'spx', start_date='0000,00,00', end_date='') -> bool:
+    def _scrape_paginated_table_robust_final(self, idx: Literal['spx', 'qqq', 'ndx', 'hsi'] = 'spx', start_date='0000,00,00', end_date='') -> bool:
         """
         Scrapes a paginated table with robust pop-up handling and click strategies.
         """
@@ -58,12 +62,11 @@ class MarketValuationScraper(SingletonParent):
         _logger.info("Starting scrape for index: %s %s -> %s",
                      idx, start_date, end_date)
         target_url = None
-        if idx == 'spx':
-            target_url = self.SP500_PE_RATIO_URL
-        elif idx == 'qqq':
-            target_url = self.NASDAT_100_PE_RATIO_URL
+        if idx not in MarketValuationScraper.IDX_URL_MAP:
+            raise ValueError(
+                f"Invalid index {idx}. Use {MarketValuationScraper.IDX_URL_MAP.keys()}.")
         else:
-            raise ValueError("Invalid index type. Use 'spx' or 'qqq'.")
+            target_url = self.IDX_URL_MAP[idx]
 
         table_locator = (By.ID, "non-sticky-table")
         next_button_locator = (By.CSS_SELECTOR, "button.btn-next")
@@ -150,7 +153,7 @@ class MarketValuationScraper(SingletonParent):
                 _logger.info("Closing the browser session.")
                 driver.quit()
 
-    def _to_db(self, idx: Literal['spx', 'qqq'] = 'spx', df: DataFrame = None, start_date: str = '', end_date: str = '') -> bool:
+    def _to_db(self, idx: Literal['spx', 'qqq', 'ndx', 'hsi'] = 'spx', df: DataFrame = None, start_date: str = '', end_date: str = '') -> bool:
         """
         Scrapes the PE ratio for a given index and saves it to the database.
         This is a private method intended for internal use.
@@ -181,13 +184,13 @@ class MarketValuationScraper(SingletonParent):
                 "An error occurred while saving to the database: %s", exc_info=e)
             return False
 
-    def update_idx_pe_to_db(self, idx: Literal['spx', 'qqq'] = 'spx', start_date: str = '0000,00,00', end_date: str = '9999,12,31') -> bool:
+    def update_idx_pe_to_db(self, idx: Literal['spx', 'qqq', 'ndx', 'hsi'] = 'spx', start_date: str = '0000,00,00', end_date: str = '9999,12,31') -> bool:
         """
         Scrapes the PE ratio for a given index and saves it to the database.
         """
         return self._scrape_paginated_table_robust_final(idx=idx, start_date=start_date, end_date=end_date)
 
-    def update_idx_pe_to_latest(self, idx: Literal['spx', 'qqq'] = 'spx') -> bool:
+    def update_idx_pe_to_latest(self, idx: Literal['spx', 'qqq', 'ndx', 'hsi'] = 'spx') -> bool:
         """
         Scrapes the latest PE ratio for a given index and saves it to the database.
         """

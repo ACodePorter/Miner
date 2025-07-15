@@ -36,3 +36,5 @@ class MarketValuationScraperTestCase(TestCase):
         """
         self.scraper.update_idx_pe_to_latest(idx='qqq')
         self.scraper.update_idx_pe_to_latest(idx='spx')
+        self.scraper.update_idx_pe_to_latest(idx='ndx')
+        self.scraper.update_idx_pe_to_latest(idx='hsi')

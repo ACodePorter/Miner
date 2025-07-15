@@ -9,4 +9,4 @@ def update_market_pe_task() -> bool:
     This task is registered with Celery and can be scheduled or called directly.
     """
     scraper = MarketValuationScraper.get_instance()
-    return scraper.update_idx_pe_to_latest('spx') & scraper.update_idx_pe_to_latest('qqq')
+    return scraper.update_idx_pe_to_latest('spx') & scraper.update_idx_pe_to_latest('qqq') & scraper.update_idx_pe_to_latest('hsi') & scraper.update_idx_pe_to_latest('ndx')
