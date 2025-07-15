@@ -119,6 +119,7 @@ async def update_spx_market_breadth() -> str:
     update_spx_market_breadth_task.delay()
     return 'GOOD'
 
+
 @app.get('/update_all_above', description='Update all above tasks to fetch latest data')
 async def update_all_above() -> str:
     task_chain = chain(
@@ -134,6 +135,7 @@ async def update_all_above() -> str:
 async def update_indicators_for_tickers(tickers: List[str]) -> str:
     update_indicators_for_tickers_task.delay(tickers=tickers)
     return 'GOOD'
+
 
 @app.get('/api/mbs')
 async def get_mbs(market_index: str = 'spx', start_date: str = None, end_date: str = None) -> list | dict:

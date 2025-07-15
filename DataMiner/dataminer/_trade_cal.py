@@ -40,7 +40,8 @@ class TradeCalendarShovel(SingletonParent):
                 cal_df['country'] = 'us'
                 df_2_mongo(cal_df, TradeCalendar)
             else:
-                self.update_historical_us_trade_calendar(start_date="19620101", end_date=end_date)
+                self.update_historical_us_trade_calendar(
+                    start_date="19620101", end_date=end_date)
         except Exception as e:
             _logger.error(f'update_us_trade_calendar failed: {e}')
 

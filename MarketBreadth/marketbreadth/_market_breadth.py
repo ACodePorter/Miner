@@ -50,7 +50,8 @@ class MarketBreadth(SingletonParent):
                     f'Skip {trade_date} >= {last_closed_trade_date}')
                 continue
             if (not index_tickers) or index_tickers.as_of_date < trade_date:
-                index_tickers = _mds.get_index_tickers_on(index_name, trade_date)
+                index_tickers = _mds.get_index_tickers_on(
+                    index_name, trade_date)
                 # _logger.debug(index_tickers.tickers)
                 tickers = mongo_2_df(Ticker.objects(
                     ticker__in=index_tickers.tickers))
@@ -67,12 +68,15 @@ class MarketBreadth(SingletonParent):
                 # _logger.debug(f'tickers:{tickers.head(2)}')
                 # _logger.debug(f'daily_infos:{daily_infos.head(2)}')
                 if 'ticker' not in tickers.columns or 'ticker' not in daily_infos.columns:
-                    _logger.error(f"'ticker' column missing in tickers or daily_infos DataFrame")
+                    _logger.error(
+                        f"'ticker' column missing in tickers or daily_infos DataFrame")
                     _logger.error(f"tickers columns: {tickers.columns}")
-                    _logger.error(f"daily_infos columns: {daily_infos.columns}")
+                    _logger.error(
+                        f"daily_infos columns: {daily_infos.columns}")
                     continue
                 if tickers.empty or daily_infos.empty:
-                    _logger.error(f"tickers or daily_infos DataFrame is empty for trade_date {trade_date}")
+                    _logger.error(
+                        f"tickers or daily_infos DataFrame is empty for trade_date {trade_date}")
                     continue
                 full_daily = pd.merge(
                     tickers, daily_infos, how='inner', on='ticker')
@@ -85,17 +89,22 @@ class MarketBreadth(SingletonParent):
                 for sector in sectors:
                     sector_daily = full_daily[full_daily['sectorKey'] == sector]
                     if sector == 'N/A':
-                        _logger.warning(f"Skip sector {sector} on {trade_date} \n{sector_daily['ticker'].values}")
+                        _logger.warning(
+                            f"Skip sector {sector} on {trade_date} \n{sector_daily['ticker'].values}")
                         continue
                     sector_sma20_gte = sector_daily['sma20'] <= sector_daily['close']
                     sector_sma50_gte = sector_daily['sma50'] <= sector_daily['close']
                     sector_sma200_gte = sector_daily['sma200'] <= sector_daily['close']
                     if sector_sma20_gte.count() == 0:
-                        _logger.warning(f"No data for sector {sector} on {trade_date}")
+                        _logger.warning(
+                            f"No data for sector {sector} on {trade_date}")
                         continue
-                    sector_sma_20_score = round(100 * sector_sma20_gte.sum() / sector_sma20_gte.count(), 2)
-                    sector_sma_50_score = round(100 * sector_sma50_gte.sum() / sector_sma50_gte.count(), 2)
-                    sector_sma_200_score = round(100 * sector_sma200_gte.sum() / sector_sma200_gte.count(), 2)
+                    sector_sma_20_score = round(
+                        100 * sector_sma20_gte.sum() / sector_sma20_gte.count(), 2)
+                    sector_sma_50_score = round(
+                        100 * sector_sma50_gte.sum() / sector_sma50_gte.count(), 2)
+                    sector_sma_200_score = round(
+                        100 * sector_sma200_gte.sum() / sector_sma200_gte.count(), 2)
                     market_breadth_score.sector_score20.append(
                         MarketBreadthSectorScore(sector_key=sector, score=sector_sma_20_score))
                     market_breadth_score.sector_score50.append(
