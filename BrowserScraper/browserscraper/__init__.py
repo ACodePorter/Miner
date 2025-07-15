@@ -1,7 +1,7 @@
 from minerworkers import app
 from ._version import __version__
 from ._market_valuation_scraper import MarketValuationScraper
-from .tasks import update_market_pe_task
+from .tasks import update_market_pe_task, update_hk_market_pe_task
 from celery.schedules import crontab
 from celery import Celery
 from detonator import get_logger
@@ -30,5 +30,12 @@ def setup_periodic_tasks(sender: Celery, **kwargs):
         crontab(hour='*/3', minute='3', day_of_week='mon-fri'),
         update_market_pe_task.s(),
         name='update-market-pe-on-weekdays',
+        expires=600,
+    )
+
+    sender.add_periodic_task(
+        crontab(hour='%/3', minute=15, day_of_week='mon-fri'),
+        update_hk_market_pe_task.s(),
+        name='update-hk-market-pe-on-weekdays',
         expires=600,
     )

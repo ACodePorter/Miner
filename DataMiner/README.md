@@ -12,3 +12,4 @@ Get US stock market datas to local db.
 - [ ] 时间日期处理，全部使用美国东部时间，避免可能的时间混乱
 - [ ] 获取 spx 指定日志的 spx 成分股
 - [ ] 优化: 多进程并行计算 SMA
+- [ ] update function to get all history data of ticker

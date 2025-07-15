@@ -3,6 +3,7 @@ from datetime import datetime
 from functools import reduce
 from random import random
 from typing import List, Literal
+import pytz
 
 import pandas as pd
 import requests
@@ -26,10 +27,23 @@ class MarketDataShovel(SingletonParent):
     TODO: move spx fetching to separate scraper
     """
 
+    TICKER_EXCHANGE_MAP = {
+        '^HSI': ('hk', 'XHKG', pytz.timezone('Asia/Hong_Kong')),
+        '^SPX': ('us', 'XNYS', pytz.timezone('America/New_York')),
+        '^NDX': ('us', 'XNYS', pytz.timezone('America/New_York')),
+        '^RUT': ('us', 'XNYS', pytz.timezone('America/New_York')),
+    }
+
     def __init__(self):
         self._last_yahoo_fetch_time = datetime.now()
         self._ishares_shovel: IsharesScraper = IsharesScraper.get_instance()
         self._ticker_regulator: TickerRegulator = TickerRegulator.get_instance()
+
+    def _country_exchange_of(self, ticker: str) -> tuple[str, str, pytz.timezone]:
+        if ticker in self.TICKER_EXCHANGE_MAP:
+            return self.TICKER_EXCHANGE_MAP[ticker]
+        else:
+            return ('us', 'XNYS', pytz.timezone('America/New_York'))
 
     def _fetch_spx_tickers(self) -> pd.DataFrame:
         # sourcery skip: extract-method, remove-unnecessary-else
@@ -207,6 +221,9 @@ class MarketDataShovel(SingletonParent):
             _logger.error(f'Failed to update ticker:{ticker}', exc_info=e)
             return False
 
+    def update_hsi_daily_info(self) -> bool:
+        return self.update_ticker_daily_info('^HSI')
+
     def update_tickers_info(self, tickers: List[str | YTicker]) -> bool:
         if tickers:
             return all([self.update_ticker_info(ticker) for ticker in tickers])
@@ -264,12 +281,13 @@ class MarketDataShovel(SingletonParent):
         tdi_time = (datetime.now() - now).total_seconds()
         if tdi_time > 0.5:
             _logger.warning('Slow query %s: %s', ticker, tdi_time)
-        if trade_dates := _tcs.us_trade_dates_since(tdi.trade_date.strftime('%Y%m%d') if tdi else '00000000'):
+        country, exchange, _ = self._country_exchange_of(ticker)
+        if trade_dates := _tcs.trade_dates_since(country=country, exchange=exchange, start_date=tdi.trade_date.strftime('%Y%m%d') if tdi else '00000000'):
             earliest_gap_trade_date = trade_dates[-1]
             _logger.info('Update ticker daily info for %s %s',
                          ticker, (datetime.now() - now).total_seconds())
             return self.fetch_ticker_daily_info_to_db(yticker=yticker, start_date=earliest_gap_trade_date,
-                                                      end_date=tomorrow_of(_tcs.last_closed_us_trade_date()).strftime(
+                                                      end_date=tomorrow_of(_tcs.last_closed_trade_date(country=country, exchange=exchange)).strftime(
                                                           '%Y%m%d'))
         else:
             _logger.info(

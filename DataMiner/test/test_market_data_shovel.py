@@ -37,8 +37,10 @@ class MarketDataShvelTestCase(unittest.TestCase):
 
     def test_update_ticker_daily_info_to_db(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()
-        yticker = YTicker('AAPL')
-        md.fetch_ticker_daily_info_to_db(yticker, start_date='20240101')
+        yticker = YTicker('^HSI')
+        # md.fetch_ticker_daily_info_to_db(yticker, end_date='19861230')
+        md.fetch_ticker_daily_info_to_db(
+            yticker, start_date='19861230', end_date='20081230')
 
     def test_update_qqq_daily_info_to_db(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()
@@ -49,9 +51,13 @@ class MarketDataShvelTestCase(unittest.TestCase):
         md: MarketDataShovel = MarketDataShovel.get_instance()
         md.update_ticker_daily_info("IWM")
 
+    def test_update_hsi_daily_info_to_db(self):
+        md: MarketDataShovel = MarketDataShovel.get_instance()
+        md.update_ticker_daily_info("^HSI")
+
     def test_update_ticker_daily_info(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()
-        md.update_ticker_daily_info('GOOGL')
+        md.update_ticker_daily_info('HSI')
 
     def test_get_latest_index_tickers(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()
@@ -94,6 +100,11 @@ class MarketDataShvelTestCase(unittest.TestCase):
         md: MarketDataShovel = MarketDataShovel.get_instance()
         self.assertTrue(md.update_iwm_tickers_daily_info(),
                         'Failed to update IWM tickers daily info')
+
+    def test_update_hsi_daily_info(self):
+        md: MarketDataShovel = MarketDataShovel.get_instance()
+        self.assertTrue(md.update_hsi_daily_info(),
+                        'Failed to update HSI daily info')
 
 
 if __name__ == '__main__':

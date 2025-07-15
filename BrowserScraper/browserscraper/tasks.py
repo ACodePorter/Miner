@@ -10,3 +10,13 @@ def update_market_pe_task() -> bool:
     """
     scraper = MarketValuationScraper.get_instance()
     return scraper.update_idx_pe_to_latest('spx') & scraper.update_idx_pe_to_latest('qqq') & scraper.update_idx_pe_to_latest('hsi') & scraper.update_idx_pe_to_latest('ndx')
+
+
+@app.task
+def update_hk_market_pe_task() -> bool:
+    """
+    Task to update the market P/E ratio using the MarketValuationScraper.
+    This task is registered with Celery and can be scheduled or called directly.
+    """
+    scraper = MarketValuationScraper.get_instance()
+    return scraper.update_idx_pe_to_latest('hsi')

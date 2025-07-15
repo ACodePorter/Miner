@@ -125,6 +125,38 @@ def update_tickers_daily_info_task(tickers: List[str]) -> bool:
 
 
 @app.task
+def update_us_idxs_daily_info_task() -> bool:
+    _logger.debug('update_us_idxs_daily_info_task')
+    mds: MarketDataShovel = MarketDataShovel.get_instance()
+    return mds.update_ticker_daily_info('^SPX') & mds.update_ticker_daily_info('^NDX') & mds.update_ticker_daily_info('^RUT')
+
+
+@app.task
+def update_hk_idxs_daily_info_task() -> bool:
+    _logger.debug('update_hk_idxs_daily_info_task')
+    mds: MarketDataShovel = MarketDataShovel.get_instance()
+    return mds.update_ticker_daily_info('^HSI')
+
+
+@app.task
+def update_hk_trade_calendar_task() -> bool:
+    _logger.debug('update_hk_trade_calendar_info_task')
+    tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()
+    return tcs.update_hk_trade_calendar()
+
+
+@app.task
+def update_hk_all_task() -> bool:
+    _logger.debug('update_hk_all_task')
+    task_chain = chain(
+        update_hk_trade_calendar_task.si(),
+        update_hk_idxs_daily_info_task.si(),
+    )
+    task_chain.apply_async()
+    return True
+
+
+@app.task
 def update_spx_daily_ma_task() -> bool:
     _logger.debug('update_spx_daily_sma_task')
     indicators: Indicators = Indicators.get_instance()
@@ -182,6 +214,9 @@ def run_daily_updates_task() -> bool:
         update_iwm_tickers_daily_info_task.si(),
         update_spx_daily_ma_task.si(),
         update_iw_daily_ma_task.si(),
+
+        # Then update idxs daily info
+        update_us_idxs_daily_info_task.si(),
     )
 
     # Execute the chain
