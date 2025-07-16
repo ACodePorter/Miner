@@ -25,7 +25,7 @@ def setup_periodic_tasks(sender: Celery, **kwargs):
     """
     # Add the daily update task.
     _logger.info(
-        'Setting up periodic task \'update-market-pe-on-weekdays\'...')
+        'Setting up periodic task for browserscraper ...')
     sender.add_periodic_task(
         crontab(hour='*/3', minute='3', day_of_week='mon-fri'),
         update_market_pe_task.s(),
@@ -34,7 +34,7 @@ def setup_periodic_tasks(sender: Celery, **kwargs):
     )
 
     sender.add_periodic_task(
-        crontab(hour='*/3', minute=15, day_of_week='mon-fri'),
+        crontab(hour='5', minute=30, day_of_week='mon-fri'),
         update_hk_market_pe_task.s(),
         name='update-hk-market-pe-on-weekdays',
         expires=600,
