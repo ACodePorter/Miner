@@ -1,27 +1,63 @@
 # Miner
 
-This is a repository for syncing/storing/managing financial market data. you can deploy it to your host by one command.
+Miner is a modular, Dockerized platform for collecting, processing, and serving financial market data, with a focus on US equities and market breadth analytics. It is designed for easy deployment, automation, and extensibility, supporting both research and production use cases.
 
+## Project Structure
 
-## Get Started with Miner
+- **BrowserScraper**: Scrapes market valuation data (e.g., P/E ratios) from web sources and updates the database automatically via Celery tasks.
+- **DataMiner**: Core data ingestion and management for US stock market data, including tickers, daily info, financials, and indicators. Integrates with Yahoo Finance, iShares, and more.
+- **Detonator**: Shared utilities for logging, configuration, database connections, and other infrastructure needs.
+- **MinerService**: FastAPI-based web service exposing REST APIs for data updates, queries, and analytics.
+- **MinerWorkers**: Celery worker setup and configuration for distributed task execution.
+- **MarketBreadth**: Calculates and stores market breadth indicators (e.g., % of stocks above SMA) by sector and index.
+- **Deploy**: Docker and deployment scripts/configuration for all services.
+- **Misc**: Utility scripts for maintenance, backup, and data correction.
 
-1. Tushare api key
+## Quick Start
 
-register a free account at https://tushare.pro/register?reg=253543, and get a api key
-
-2. Install Docker & Docker Compose(I am using orbstack on macOS)
-> All the code was developed and tested on macOS, it should be working on all unix-like system with Docker/Docker Compose installed
-
-## Deployment
+1. **Clone the repository**
+2. ~~Set up your Tushare API key** (if needed)~~**(Not needed, since not using it any more)**
+   - ~~Register at https://tushare.pro/register?reg=253543 and get an API key~~
+3. **Install Docker & Docker Compose**
+   - All code is developed and tested on macOS, but should work on any Unix-like system with Docker/Docker Compose
+   - You should have docker and docker compose installed, you can choose whatever you like, Docker/DockerDesktop/OrbStack
+4. **Deploy with one command:**
 
 ```bash
-./Deploy/deploy.sh <tushare_key> <runtime_env[PROD|TEST|DEV]> [miner_data_dir]
+./Deploy/deploy.sh whatever-not-important <runtime_env[PROD|TEST|DEV]> [miner_data_dir]
 ```
 
-## Usage
+## API Usage
 
-1. http://localhost/docs, you'll see the APIs.
-2. http://localhost/flower, see the celery tasks
+- Visit `http://localhost/docs` for interactive API documentation (Swagger UI)
+  - API endpoints
+- Visit `http://localhost/flower` to monitor Celery tasks
+
+## Features
+
+- Automated scraping and updating of financial market data
+- Market breadth analytics by sector and index
+- Modular, extensible design for easy integration and expansion
+- REST API for programmatic access
+- Distributed task execution with Celery
+- Dockerized for easy deployment and scaling
+
+## Automation & Background Tasks
+
+- **Background Celery tasks** automatically update end-of-day (EOD) data, ensuring your database is always fresh and up-to-date.
+- These tasks include:
+  - Market P/E ratio updates
+  - Daily data updates for stocks and indices
+  - Market breadth calculations
+- All background jobs are managed and scheduled via Celery, and can be monitored using the Flower dashboard (`http://localhost/flower`).
+
+## Development & Testing
+
+- Each module contains its own tests (see the `test/` directories)
+- To run tests for a module:
+  - Example: `cd DataMiner/test && ./run.sh`
+- Celery is used for distributed/background tasks
+- MongoDB, Redis, and RabbitMQ are orchestrated via Docker Compose
 
 ## TODO
 
@@ -46,4 +82,3 @@ register a free account at https://tushare.pro/register?reg=253543, and get a ap
 - [X] update Ubuntu to 24.04
 - [X] 优化获取 yahoo 数据时间间隔管理,减少等待时间
 - [X] reduce logs of celery
-
