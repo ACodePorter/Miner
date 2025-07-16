@@ -33,8 +33,8 @@ class MarketValuationScraper(SingletonParent):
 
     IDX_COUNTRY_MAP = {
         'spx': ('us', 'XNYS'),
-        'qqq': ('us', 'XNAS'),
-        'ndx': ('us', 'XNAS'),
+        'qqq': ('us', 'XNYS'),
+        'ndx': ('us', 'XNYS'),
         'hsi': ('hk', 'XHKG')
     }
 
