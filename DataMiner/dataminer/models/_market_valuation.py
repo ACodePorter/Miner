@@ -15,6 +15,6 @@ class MarketPe(Document):
         'auto_create_index': True,
         'auto_create_index_on_save': False,
         'indexes': [
-            {'fields': ['idx', 'trade_date']}
+            {'fields': ['idx', 'trade_date'], 'unique': True}
         ]
     }

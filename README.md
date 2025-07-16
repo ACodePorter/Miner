@@ -25,6 +25,7 @@ register a free account at https://tushare.pro/register?reg=253543, and get a ap
 
 ## TODO
 
+- [ ] **Unify date time handling: format/storage**
 - [ ] add MCP server for stock market data
 - [ ] add sec edgar data
 - [ ] decide how to save tickers with symbol in it, like'BRK-A' or "BRK.A"

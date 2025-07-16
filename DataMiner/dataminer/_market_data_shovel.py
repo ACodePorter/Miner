@@ -408,3 +408,17 @@ class MarketDataShovel(SingletonParent):
             _logger.error('Illegal trade_date: %s', trade_date)
             return pd.DataFrame()
         return mongo_2_df(TickerDailyInfo.objects(ticker__in=tickers, trade_date=trade_date, interval=interval))
+
+    def get_ticker_daily_info(self, ticker: str, start_date: str | datetime, end_date: str | datetime, interval: str = '1d') -> DataFrame:
+        ticker = ticker.replace('-', '.').upper()
+        if isinstance(start_date, str):
+            try:
+                start_date = datetime.strptime(start_date, '%Y,%m,%d,%H,%M,%S,%f')
+            except Exception as e:
+                start_date = datetime.strptime(start_date, '%Y%m%d')
+        if isinstance(end_date, str):
+            try:
+                end_date = datetime.strptime(end_date, '%Y,%m,%d,%H,%M,%S,%f')
+            except Exception as e:
+                end_date = datetime.strptime(end_date, '%Y%m%d')
+        return mongo_2_df(TickerDailyInfo.objects(ticker=ticker, trade_date__gte=start_date, trade_date__lte=end_date, interval=interval).order_by('trade_date'))

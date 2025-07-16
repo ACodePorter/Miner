@@ -1,5 +1,6 @@
 from unittest import TestCase
 from browserscraper import MarketValuationScraper
+from dataminer import MarketDataShovel
 from dataminer.models import MarketPe
 import pandas as pd
 from detonator import get_logger, make_db_connection
@@ -38,3 +39,17 @@ class MarketValuationScraperTestCase(TestCase):
         self.scraper.update_idx_pe_to_latest(idx='spx')
         self.scraper.update_idx_pe_to_latest(idx='ndx')
         self.scraper.update_idx_pe_to_latest(idx='hsi')
+
+    def test_adj_hk_idx_pe(self):
+        """
+        Test the scraping of the SP500 PE ratio table.
+        """
+        self.scraper.adj_hk_idx_pe(start_date='2006,01,01', end_date='2025,07,16')
+
+
+    def test_hsi_pe(self):
+        """
+        Test the scraping of the SP500 PE ratio table.
+        """
+        mds = MarketDataShovel.get_instance()
+        mds.get_ticker_daily_info('^HSI', stat)
