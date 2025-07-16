@@ -8,9 +8,7 @@ function App() {
     <div className="App">
       <ExtensionWarning />
       <header className="App-header">
-        <div className="w-full text-center">
-          <h1 className="animate-fade-in-up">StkGuru</h1>
-        </div>
+        {/* Removed the app title container div as well */}
       </header>
 
       <main>
