@@ -7,10 +7,6 @@ function App() {
   return (
     <div className="App">
       <ExtensionWarning />
-      <header className="App-header">
-        {/* Removed the app title container div as well */}
-      </header>
-
       <main>
         <div className="space-y-8">
           {/* PE Charts Row - Each chart takes exactly 50% of screen width */}
