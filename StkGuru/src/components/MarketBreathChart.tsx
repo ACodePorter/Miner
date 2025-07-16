@@ -329,13 +329,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
       sectorSeries,
       horizontalLines
     };
-  }, [
-    processedData?.xData?.length, // Only depend on data length
-    processedData?.scores?.length,
-    processedData?.sectorKeys?.length,
-    processedData?.smaOption?.label, // Only depend on the label string
-    showSectorLines, // Boolean primitive
-  ]);
+  }, [processedData, showSectorLines, selectedSMA]);
 
   // Memoized chart options
   const chartOptions = useMemo(() => {
@@ -589,12 +583,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
         }
       },
     } as unknown as Highcharts.Options;
-  }, [
-    processedData?.xData?.length, // Only depend on data length, not the entire object
-    chartSeries?.genericSeries?.data?.length, // Only depend on series data length
-    showSectorLines, // Boolean primitive
-    nYears // Number primitive
-  ]);
+  }, [processedData, chartSeries, showSectorLines, nYears, selectedSMA]);
 
   if (loading) {
     return (
