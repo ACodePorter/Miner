@@ -172,12 +172,11 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
       xAxisMax,
     };
   }, [
-    peData?.data?.length, // Only depend on data length
-    rollingStats?.avg?.length, // Only depend on array length
-    rollingStats?.pctPercents?.length, // Only depend on array length
-    rollingStats?.pctLinesAbove?.length, // Only depend on array length
-    rollingStats?.pctLinesBelow?.length, // Only depend on array length
-  ]); // Optimized dependencies using primitive values
+    rollingStats, // depend on the full rollingStats object
+    nYears, // depend on nYears
+    peData?.data, // depend on the actual data array
+    showPercentageLines, // in case config needs it
+  ]);
 
   // Memoized chart options with optimized dependencies
   const chartOptions = useMemo(() => {
@@ -551,15 +550,12 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
     displayName,
     color,
     nYears,
-    rollingStats?.avg?.length, // Only depend on array length, not the entire array
-    rollingStats?.plus2?.length,
-    rollingStats?.minus2?.length,
-    showStdDevLines, // Boolean primitive
-    showPercentageLines, // Boolean primitive
-    chartConfig?.pctPercents?.length, // Only depend on array length
-    chartConfig?.visiblePctIdxs?.length,
-    peData?.data?.length, // Only depend on data length, not the entire array
-  ]); // Optimized dependencies using primitive values
+    rollingStats, // depend on the full rollingStats object
+    showStdDevLines,
+    showPercentageLines,
+    chartConfig, // depend on the full chartConfig object
+    peData?.data, // depend on the actual data array
+  ]); // Optimized dependencies using full objects and values
 
   // Handle manual refresh
   const handleRefresh = useCallback(() => {
