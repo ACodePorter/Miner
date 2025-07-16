@@ -25,8 +25,8 @@ function App() {
               refreshInterval={5 * 60 * 1000} // 5 minutes
             />
             <MarketPeChart 
-              indexId="qqq" 
-              displayName="NASDAQ 100 (QQQ)" 
+              indexId="hsi" 
+              displayName="Hang Seng Index (HSI)" 
               color="#A78BFA"
               autoRefresh={true}
               refreshInterval={5 * 60 * 1000} // 5 minutes
