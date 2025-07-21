@@ -44,7 +44,7 @@ jobs:
 
       - name: Sync build output to target repo
         run: |
-          rsync -av --delete deploy-dist/ target-repo/
+          rsync -av --delete --exclude='CNAME' --exclude='README.md' --exclude='LICENSE' --exclude='.git' deploy-dist/ target-repo/
 
       - name: Commit and push changes
         run: |
