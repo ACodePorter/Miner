@@ -5,9 +5,22 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:test": "vite --mode test",
+    "dev:staging": "vite --mode staging",
+    "dev:ghpages": "vite --mode ghpages",
+    "dev:ghpages-dev": "vite --mode ghpages-dev",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "build:test": "tsc -b && vite build --mode test",
+    "build:staging": "tsc -b && vite build --mode staging",
+    "build:production": "tsc -b && vite build --mode production",
+    "build:ghpages": "tsc -b && vite build --mode ghpages",
+    "build:ghpages-dev": "tsc -b && vite build --mode ghpages-dev",
+    "preview": "vite preview",
+    "preview:test": "vite preview --mode test",
+    "preview:staging": "vite preview --mode staging",
+    "preview:production": "vite preview --mode production",
+    "preview:ghpages-dev": "vite preview --mode ghpages-dev",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@tanstack/react-query": "^5.83.0",
@@ -19,6 +32,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
+    "@types/node": "^24.0.14",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.6.0",

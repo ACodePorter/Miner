@@ -20,10 +20,12 @@ broker_connection_retry_on_startup = True
 task_queues = (
     Queue('dataminer'),
     Queue('browserscraper'),
+    Queue('maintainer'),
 )
 
 task_routes = {
     'dataminer.tasks.*': {'queue': 'dataminer'},
     'browserscraper.tasks.*': {'queue': 'browserscraper'},
     'marketbreadth.tasks.*': {'queue': 'dataminer'},
+    'maintainer.tasks.*': {'queue': 'maintainer'},
 }

@@ -1,4 +1,6 @@
 from datetime import datetime, date, timedelta
+import pytz
+from pytz import BaseTzInfo
 
 
 def datetime_from_str(day: str) -> datetime | None:
@@ -16,3 +18,10 @@ def tomorrow_of(day: str | datetime | date = None) -> datetime:
         day = datetime_from_str(day)
     tomorrow = day + timedelta(days=1)
     return tomorrow if isinstance(tomorrow, datetime) else datetime.strptime(tomorrow.strftime('%Y%m%d'), '%Y%m%d')
+
+
+def utc_to_target_tz(dt: datetime, target_tz: str | BaseTzInfo) -> datetime:
+    dt_utc = dt.replace(tzinfo=pytz.UTC)
+    target_tz = pytz.timezone(target_tz) if isinstance(
+        target_tz, str) else target_tz
+    return dt_utc.astimezone(target_tz)

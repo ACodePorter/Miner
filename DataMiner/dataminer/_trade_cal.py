@@ -4,7 +4,7 @@ import exchange_calendars as xcals
 from datetime import datetime, timedelta, date
 import pytz
 import pandas as pd
-from detonator import SingletonParent, get_logger, df_2_mongo, make_db_connection
+from detonator import SingletonParent, get_logger, df_2_mongo, make_db_connection, utc_to_target_tz
 
 from .models import TradeCalendar
 
@@ -162,8 +162,11 @@ class TradeCalendarShovel(SingletonParent):
             today_date = datetime.now(self.EXCHANGE_TZ_MAP[exchange])
             this_cal_date: TradeCalendar = TradeCalendar.objects(country=country, exchange=exchange,
                                                                  cal_date=today_date.strftime('%Y%m%d')).first()
-            if this_cal_date.is_open and today_date.hour >= 16:
+            if this_cal_date and this_cal_date.is_open and today_date > utc_to_target_tz(this_cal_date.close, self.EXCHANGE_TZ_MAP[exchange]):
                 return this_cal_date.cal_date
+            if not this_cal_date:
+                _logger.warning(
+                    f'{today_date} is not in trade calendar({country}, {exchange}, something may be wrong with data source), use last trade day before today')
             return self.last_trade_day_before_today(country=country, exchange=exchange)
         except Exception as e:
             _logger.error(

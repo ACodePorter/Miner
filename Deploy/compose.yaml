@@ -54,7 +54,26 @@ services:
       - '8002:8002'
     environment:
       - RUNTIME_ENV=${RUNTIME_ENV}
-      - TUSHARE_KEY=${TUSHARE_KEY}
+    volumes:
+      - '${MINER_DATA}:/data/miner'
+      - '${PWD}/../:/minerdev'
+
+  maintainer:
+    build:
+      context: ./maintainer
+      args:
+        GITHUB_TOKEN: ${GITHUB_TOKEN}
+        GIT_USER_NAME: ${GIT_USER_NAME}
+        GIT_USER_EMAIL: ${GIT_USER_EMAIL}
+    restart: unless-stopped
+    container_name: miner-maintainer
+    hostname: miner-maintainer
+    depends_on:
+      - redis
+      - rabbitmq
+      - mongodb
+    environment:
+      - RUNTIME_ENV=${RUNTIME_ENV}
     volumes:
       - '${MINER_DATA}:/data/miner'
       - '${PWD}/../:/minerdev'
@@ -76,7 +95,6 @@ services:
       - '8001:8001'
     environment:
       - RUNTIME_ENV=${RUNTIME_ENV}
-      - TUSHARE_KEY=${TUSHARE_KEY}
     privileged: true
     volumes:
       - '/dev/bus/usb:/dev/bus/usb'

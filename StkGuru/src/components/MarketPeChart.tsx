@@ -56,7 +56,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
 
   // Memoized fetch function
   const fetchPEData = useCallback(async (index: string): Promise<PEData> => {
-    const response = await fetch(`/api/market_pe?index=${index}`);
+    const response = await fetch(`/api/market_pe/${index}.json`);
     if (!response.ok) {
       throw new Error(`Failed to fetch ${index} PE data: ${response.status}`);
     }

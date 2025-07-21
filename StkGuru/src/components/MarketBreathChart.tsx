@@ -73,7 +73,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
 
   // Memoized fetch function
   const fetchMarketBreadthData = useCallback(async (index: string): Promise<MarketBreadthData[]> => {
-    const response = await fetch(`/api/mbs?market_index=${index}`);
+    const response = await fetch(`/api/mbs/${index}.json`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }

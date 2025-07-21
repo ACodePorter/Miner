@@ -137,7 +137,7 @@ async def update_indicators_for_tickers(tickers: List[str]) -> str:
     return 'GOOD'
 
 
-@app.get('/api/mbs')
+@app.get('/api/mbs/{market_index}.json')
 async def get_mbs(market_index: str = 'spx', start_date: str = None, end_date: str = None) -> list | dict:
     '''
     获取市场宽度分数
@@ -148,7 +148,7 @@ async def get_mbs(market_index: str = 'spx', start_date: str = None, end_date: s
                                                           end_date=end_date).to_dict(orient='records')
 
 
-@app.get('/api/market_pe')
+@app.get('/api/market_pe/{index}.json')
 async def get_market_pe(index: str = 'spx', start_date: str = None, end_date: str = None) -> dict:
     '''
     Get market PE data for visualization

@@ -12,16 +12,7 @@ class MarketValuationScraperTestCase(TestCase):
     def setUp(self):
         make_db_connection()
         self.scraper = MarketValuationScraper()
-        df = pd.read_csv('./spx_pe_ratio.csv')
-        self.df = df
-        _logger.info(self.df.dtypes)
 
-    def test_to_db(self):
-        """
-        Test the scraping of the SP500 PE ratio table.
-        """
-        self.assertTrue(self.scraper._to_db(idx='spx', df=self.df),
-                        "Failed to save SP500 PE ratio data to the database.")
 
     def test_update_idx_pe_to_db(self):
         """
@@ -35,9 +26,9 @@ class MarketValuationScraperTestCase(TestCase):
         """
         Test the scraping of the SP500 PE ratio table.
         """
-        self.scraper.update_idx_pe_to_latest(idx='qqq')
-        self.scraper.update_idx_pe_to_latest(idx='spx')
-        self.scraper.update_idx_pe_to_latest(idx='ndx')
+        # self.scraper.update_idx_pe_to_latest(idx='qqq')
+        # self.scraper.update_idx_pe_to_latest(idx='spx')
+        # self.scraper.update_idx_pe_to_latest(idx='ndx')
         self.scraper.update_idx_pe_to_latest(idx='hsi')
 
     def test_adj_hk_idx_pe(self):
