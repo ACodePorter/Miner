@@ -57,7 +57,7 @@ jobs:
           else
             git commit -m "Deploy StkGuru build from source repo: ${{ github.sha }}"
             git pull --rebase
-            git push origin gh-pages
+            git push origin main:main
           fi
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }} 
