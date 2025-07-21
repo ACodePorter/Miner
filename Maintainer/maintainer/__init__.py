@@ -21,7 +21,7 @@ def setup_periodic_tasks(sender: Celery, **kwargs):
     _logger.info(
         'Setting up periodic task for maintainer ...')
     sender.add_periodic_task(
-        crontab(hour='*/3', minute='15'),
+        crontab(hour='*/2', minute='15'),
         update_gh_pages_task.s(),
         name='update-gh-pages',
         expires=600,
