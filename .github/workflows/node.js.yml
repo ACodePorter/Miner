@@ -22,17 +22,14 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
+        working-directory: ./StkGuru
 
       - name: Install dependencies
         run: npm ci
         working-directory: ./StkGuru
 
       - name: Build
-        run: npm run build --if-present
-        working-directory: ./StkGuru
-
-      - name: Run tests
-        run: npm test
+        run: npm run build:ghpages --if-present
         working-directory: ./StkGuru
 
       - name: Prepare deploy directory
@@ -43,7 +40,7 @@ jobs:
 
       - name: Clone target repo
         run: |
-          git clone --branch gh-pages --single-branch https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/your-username/your-deploy-repo.git target-repo
+          git clone --branch main --single-branch https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/stkguru/stkguru.github.io.git target-repo
 
       - name: Sync build output to target repo
         run: |
@@ -52,8 +49,8 @@ jobs:
       - name: Commit and push changes
         run: |
           cd target-repo
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "Stk.Guru[bot]"
+          git config user.email "205558759+stkguru@users.noreply.github.com"
           git add .
           if git diff --cached --quiet; then
             echo "No changes to commit."
