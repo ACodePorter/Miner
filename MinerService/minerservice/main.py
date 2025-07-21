@@ -6,7 +6,8 @@ from dataminer.tasks import update_iwm_tickers_info_task, update_iwd_tickers_tas
 from dataminer.tasks import update_spx_tickers_task, update_iwf_tickers_task, \
     update_spx_tickers_info_task, update_spx_tickers_daily_info_task, \
     update_us_trade_calendar_task, update_tickers_daily_info_task, update_spx_daily_ma_task, update_iwm_tickers_task, \
-    update_iwf_tickers_info_task, update_indicators_for_tickers_task, run_daily_updates_task, update_iw_daily_ma_task
+    update_iwf_tickers_info_task, update_indicators_for_tickers_task, update_iw_daily_ma_task
+from ._chains import us_daily_chain, hk_daily_chain
 from detonator import make_db_connection
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -120,14 +121,15 @@ async def update_spx_market_breadth() -> str:
     return 'GOOD'
 
 
-@app.get('/update_all_above', description='Update all above tasks to fetch latest data')
-async def update_all_above() -> str:
-    task_chain = chain(
-        run_daily_updates_task.si(),
-        update_spx_market_breadth_task.si(),
-    )
-    task_chain.apply_async()
-    update_market_pe_task.delay()
+@app.get('/update_us_all', description='Update all US tasks to fetch latest data')
+async def update_us_all() -> str:
+    us_daily_chain.apply_async()
+    return 'GOOD'
+
+
+@app.get('/update_hk_all', description='Update all HK tasks to fetch latest data')
+async def update_hk_all() -> str:
+    hk_daily_chain.apply_async()
     return 'GOOD'
 
 
