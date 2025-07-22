@@ -1,5 +1,7 @@
 # Miner
 
+[![Build and Deploy StkGuru](https://github.com/zhangyuz/Miner/actions/workflows/node.js.yml/badge.svg)](https://github.com/zhangyuz/Miner/actions/workflows/node.js.yml)[![Codacy Security Scan](https://github.com/zhangyuz/Miner/actions/workflows/codacy.yml/badge.svg)](https://github.com/zhangyuz/Miner/actions/workflows/codacy.yml)
+
 Miner is a modular, Dockerized platform for collecting, processing, and serving financial market data, with a focus on US equities and market breadth analytics. It is designed for easy deployment, automation, and extensibility, supporting both research and production use cases.
 
 ## Project Structure
