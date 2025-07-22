@@ -6,7 +6,7 @@ import time
 from typing import Literal
 from datetime import datetime, timedelta
 
-from detonator import get_logger, df_2_mongo, make_db_connection, SingletonParent
+from detonator import get_logger, df_2_mongo, ensure_db_connection, SingletonParent
 from dataminer.models import MarketPe
 from dataminer import TradeCalendarShovel, MarketDataShovel
 
@@ -38,10 +38,7 @@ class MarketValuationScraper(SingletonParent):
         'hsi': ('hk', 'XHKG')
     }
 
-    def __init__(self):
-        make_db_connection()
-
-    def handle_popups(self, driver, wait):
+    def _handle_popups(self, driver, wait):
         """
         Checks for and closes the login/subscription pop-up dialog.
         This function is non-blocking and will not fail if the pop-up is not present.
@@ -97,7 +94,7 @@ class MarketValuationScraper(SingletonParent):
             wait = WebDriverWait(driver, 20)  # A reasonable default wait time
             driver.get(target_url)
             # Initial check for any pop-ups on page load
-            self.handle_popups(driver, wait)
+            self._handle_popups(driver, wait)
             table_element = wait.until(
                 EC.visibility_of_element_located(table_locator))
             header_elements = table_element.find_elements(
@@ -130,7 +127,7 @@ class MarketValuationScraper(SingletonParent):
 
                 try:
                     # Before interacting with the 'Next' button, check for and close any pop-ups.
-                    self.handle_popups(driver, wait)
+                    self._handle_popups(driver, wait)
 
                     next_button = driver.find_element(*next_button_locator)
                     if next_button.get_attribute("disabled") == "true":
@@ -192,12 +189,14 @@ class MarketValuationScraper(SingletonParent):
                 "An error occurred while saving to the database: %s", exc_info=e)
             return False
 
+    @ensure_db_connection
     def update_idx_pe_to_db(self, idx: Literal['spx', 'qqq', 'ndx', 'hsi'] = 'spx', start_date: str = '0000,00,00', end_date: str = '9999,12,31') -> bool:
         """
         Scrapes the PE ratio for a given index and saves it to the database.
         """
         return self._scrape_paginated_table_robust_final(idx=idx, start_date=start_date, end_date=end_date)
 
+    @ensure_db_connection
     def adj_hk_idx_pe(self, start_date: str, end_date: str) -> bool:
         """
         For each trading day, fill HSI PE using the PE of the last closed trading day before or on the 1st of the month,
@@ -277,6 +276,7 @@ class MarketValuationScraper(SingletonParent):
                 "No adjusted PE values calculated for HSI from %s to %s", start_date, end_date)
             return False
 
+    @ensure_db_connection
     def update_idx_pe_to_latest(self, idx: Literal['spx', 'qqq', 'ndx', 'hsi'] = 'spx') -> bool:
         """
         Scrapes the latest PE ratio for a given index and saves it to the database.
