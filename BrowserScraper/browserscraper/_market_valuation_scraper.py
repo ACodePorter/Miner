@@ -225,7 +225,6 @@ class MarketValuationScraper(SingletonParent):
         if hsi_daily_df.empty:
             _logger.error('No HSI daily data found for %s -> %s', start_date, end_date)
             return False
-        _logger.debug('HSI daily data: %s', hsi_daily_df)
         adjusted_pes = []
         for trade_date in trade_dates:
             _logger.debug('Trade date: %s', trade_date)
@@ -268,13 +267,16 @@ class MarketValuationScraper(SingletonParent):
         _logger.info("Updating latest PE for index: %s", idx)
         latest_pe = MarketPe.objects(idx=idx).order_by(
             '-trade_date').limit(1).first()
+        adj_start_date = None
         if latest_pe:
             c,e = self.IDX_COUNTRY_MAP[idx]
             dates = _tcs.trade_dates_since(country=c, exchange=e,
                 start_date=latest_pe.trade_date)
             if dates:
                 start_date = datetime.strptime(
-                    dates[-1], '%Y%m%d').strftime('%Y,%m,%d,%H,%M,%S,%f')
+                    dates[-1], '%Y%m%d')
+                adj_start_date = (start_date - timedelta(days=1)).strftime('%Y,%m,%d,%H,%M,%S,%f')
+                start_date =start_date.strftime('%Y,%m,%d,%H,%M,%S,%f')
             else:
                 _logger.info('Already up to date for index: %s @ %s',
                              idx, latest_pe.trade_date)
@@ -283,10 +285,11 @@ class MarketValuationScraper(SingletonParent):
             _logger.info(
                 "No existing PE data found for index: %s, and we will try to get all the PEs", idx)
             start_date = '1980,01,01,00,00,00,000000'
+            adj_start_date = '1980,01,01,00,00,00,000000'
         self.update_idx_pe_to_db(
             idx=idx, start_date=start_date, end_date='9999,12,31,00,00,00,000000')
         if idx == 'hsi':
-            self.adj_hk_idx_pe(start_date=start_date, end_date=datetime.now().strftime('%Y,%m,%d,%H,%M,%S,%f'))
+            self.adj_hk_idx_pe(start_date=adj_start_date, end_date=datetime.now().strftime('%Y,%m,%d,%H,%M,%S,%f'))
         else:
             _logger.info('No adjustment needed for index: %s', idx)
         return True
