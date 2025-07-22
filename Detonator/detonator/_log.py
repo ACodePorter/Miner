@@ -2,13 +2,14 @@ import contextlib
 import logging
 from functools import wraps
 from logging.handlers import RotatingFileHandler
+from typing import Optional, Any, Callable
 
 from rich.console import Console
 from rich.logging import RichHandler
 
 from ._path import to_real_abs_path
 
-_DEFAULT_LOG_FORMAT = '[%(asctime)s.%(msecs)d %(levelname)s] %(name)s:%(funcName)s-> %(message)s'
+_DEFAULT_LOG_FORMAT = '[%(asctime)s: %(levelname)s/%(processName)s] %(name)s:%(funcName)s-> %(message)s'
 _DEFAULT_LOG_DATE_FORMAT = '%Y%m%d %H%M%S'
 
 logging.basicConfig(format=_DEFAULT_LOG_FORMAT, datefmt=_DEFAULT_LOG_DATE_FORMAT,
@@ -24,10 +25,10 @@ with contextlib.suppress(Exception):
 
 
 class _Manager:
-    _loggers = {}
+    _loggers: dict[str, logging.Logger] = {}
 
     @staticmethod
-    def get_logger(name, level=logging.DEBUG, storage_path: str = None) -> logging.Logger:
+    def get_logger(name: str, level: int = logging.DEBUG, storage_path: Optional[str] = None) -> logging.Logger:
         if name in _Manager._loggers:
             return _Manager._loggers[name]
         logger = _Manager._create_logger(name, level, storage_path)
@@ -35,30 +36,32 @@ class _Manager:
         return logger
 
     @staticmethod
-    def _create_logger(name, level=logging.DEBUG, storage_path: str = None) -> logging.Logger:
+    def _create_logger(name: str, level: int = logging.DEBUG, storage_path: Optional[str] = None) -> logging.Logger:
         logger = logging.getLogger(name)
         logger.setLevel(level)
-        if storage_path := to_real_abs_path(storage_path):
-            handler = RotatingFileHandler(
-                storage_path, maxBytes=1024 * 1024 * 10, backupCount=10)
-            handler.setFormatter(logging.Formatter(
-                _DEFAULT_LOG_FORMAT, _DEFAULT_LOG_DATE_FORMAT))
-            logger.addHandler(handler)
+        if storage_path is not None:
+            real_path = to_real_abs_path(storage_path)
+            if real_path:
+                handler = RotatingFileHandler(
+                    real_path, maxBytes=1024 * 1024 * 10, backupCount=10)
+                handler.setFormatter(logging.Formatter(
+                    _DEFAULT_LOG_FORMAT, _DEFAULT_LOG_DATE_FORMAT))
+                logger.addHandler(handler)
         return logger
 
 
-def get_logger(name: str, level=logging.DEBUG, storage_path=None) -> logging.Logger:
+def get_logger(name: str, level: int = logging.DEBUG, storage_path: Optional[str] = None) -> logging.Logger:
     return _Manager.get_logger(name, level, storage_path)
 
 
-def log_in_out(logger: logging.Logger):
+def log_in_out(logger: logging.Logger) -> Callable[[Callable[..., Any]], Callable[..., Any]]:
     """
     Decorator to log input and output of function to specified logger
     """
 
-    def decorator(func):
+    def decorator(func: Callable[..., Any]) -> Callable[..., Any]:
         @wraps(func)
-        def wrapper(*args, **kwargs):
+        def wrapper(*args: Any, **kwargs: Any) -> Any:
             if logger:
                 logger.debug(f'{func.__name__}: {args} {kwargs}')
             result = func(*args, **kwargs)
