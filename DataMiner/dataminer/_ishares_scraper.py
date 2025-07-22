@@ -12,9 +12,6 @@ from ._trade_cal import TradeCalendarShovel
 
 _logger = get_logger('IsharesScraper')
 
-_tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()
-_tm: TickerManager = TickerManager.get_instance()
-
 
 class IsharesScraper(SingletonParent):
     """

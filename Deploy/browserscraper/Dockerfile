@@ -65,18 +65,7 @@ RUN pip install uv && \
     rm -rfv /miner_release/Detonator /miner_release/DataMiner /miner_release/BrowserScraper /miner_release/MinerWorkers && \
     rm -rfv $HOME/.cache/uv/http*
 
-RUN mkdir -p $HOME/.miner
-# COPY --chown=miner:miner miner.json $HOME/.miner/miner.json
-RUN touch $HOME/.miner/miner.log
-
-RUN mkdir $HOME/.ssh && \
-        ssh-keyscan -H github.com >> $HOME/.ssh/known_hosts
-#         ssh-keyscan -H  -p 29418 github.com >> $HOME/.ssh/known_hosts
-
-# RUN ssh-keygen -q -t rsa -N '' -f $HOME/.ssh/id_rsa <<<y 
-RUN ssh-keygen -t rsa -b 4096 -f $HOME/.ssh/id_rsa -N ""
-
-
-# COPY --chown=miner:miner .ssh/config $HOME/.ssh/
+RUN mkdir -p $HOME/.miner && \
+    touch $HOME/.miner/miner.log
 
 ENTRYPOINT xvfb-run --auto-servernum --server-args="-screen 0 1920x1080x24" /miner_release/docker_entry.sh

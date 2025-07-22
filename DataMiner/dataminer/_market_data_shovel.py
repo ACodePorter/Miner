@@ -18,7 +18,6 @@ from .models import IndexTickers, Ticker, TickerDailyInfo, regulate_ticker_daily
 from .utils import TickerRegulator
 
 _logger = get_logger('MarketDataShovel')
-_tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()
 
 
 class MarketDataShovel(SingletonParent):
@@ -38,6 +37,7 @@ class MarketDataShovel(SingletonParent):
         self._last_yahoo_fetch_time = datetime.now()
         self._ishares_shovel: IsharesScraper = IsharesScraper.get_instance()
         self._ticker_regulator: TickerRegulator = TickerRegulator.get_instance()
+        self._tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()
 
     def _country_exchange_of(self, ticker: str) -> tuple[str, str, pytz.timezone]:
         if ticker in self.TICKER_EXCHANGE_MAP:
@@ -108,7 +108,7 @@ class MarketDataShovel(SingletonParent):
         ticker_list = reduce(lambda x, y: _accumulte(
             x, y), tickers['ticker'].values, [])
         _logger.info('%s ticker list:\n%s', idx, ticker_list)
-        as_of_date = _tcs.last_closed_us_trade_date()
+        as_of_date = self._tcs.last_closed_us_trade_date()
         _logger.debug('as_of_date:%s', as_of_date)
         if local_latest_tickers := self.get_latest_index_tickers(
                 index_name=idx
@@ -142,7 +142,7 @@ class MarketDataShovel(SingletonParent):
         return self.update_tickers_by_idx(idx='iwm')
 
     def _is_index_tickers_latest(self, index_name: str) -> bool:
-        as_of_date = _tcs.last_closed_us_trade_date()
+        as_of_date = self._tcs.last_closed_us_trade_date()
         return IndexTickers.objects(index_name=index_name, as_of_date=as_of_date).count() > 0
 
     def get_index_tickers_on(self, index_name: str, as_of_date: str = '') -> IndexTickers:
@@ -150,7 +150,7 @@ class MarketDataShovel(SingletonParent):
         获取指定日期的指数成分股
         """
         make_db_connection()
-        as_of_date = as_of_date or _tcs.last_us_trade_day_before_today()
+        as_of_date = as_of_date or self._tcs.last_us_trade_day_before_today()
         queries = {
             'index_name': index_name,
             'as_of_date__gte': as_of_date
@@ -282,12 +282,12 @@ class MarketDataShovel(SingletonParent):
         if tdi_time > 0.5:
             _logger.warning('Slow query %s: %s', ticker, tdi_time)
         country, exchange, _ = self._country_exchange_of(ticker)
-        if trade_dates := _tcs.trade_dates_since(country=country, exchange=exchange, start_date=tdi.trade_date.strftime('%Y%m%d') if tdi else '00000000'):
+        if trade_dates := self._tcs.trade_dates_since(country=country, exchange=exchange, start_date=tdi.trade_date.strftime('%Y%m%d') if tdi else '00000000'):
             earliest_gap_trade_date = trade_dates[-1]
             _logger.info('Update ticker daily info for %s %s',
                          ticker, (datetime.now() - now).total_seconds())
             return self.fetch_ticker_daily_info_to_db(yticker=yticker, start_date=earliest_gap_trade_date,
-                                                      end_date=tomorrow_of(_tcs.last_closed_trade_date(country=country, exchange=exchange)).strftime(
+                                                      end_date=tomorrow_of(self._tcs.last_closed_trade_date(country=country, exchange=exchange)).strftime(
                                                           '%Y%m%d'))
         else:
             _logger.info(
