@@ -13,7 +13,7 @@ _logger = get_logger('TradeCalendarShovel')
 
 class TradeCalendarShovel(SingletonParent):
     """
-    TODO: use another stable trade calendar data source, cause tushare is not always correct.
+    Trade calendar data source
     """
     DEF_START_DATE = '19800101'
     EXCHANGE_TZ_MAP = {

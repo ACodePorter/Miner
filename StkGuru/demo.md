@@ -5,7 +5,7 @@
 1. **Start the Miner Backend**
    ```bash
    # From the root directory
-   ./Deploy/deploy.sh <your_tushare_key> DEV
+   ./Deploy/deploy.sh <your_ghthub_pat> DEV
    ```
 
 2. **Start the StkGuru Frontend**

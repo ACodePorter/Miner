@@ -91,7 +91,7 @@ Each module has its own `requirements.txt`. Main dependencies include:
 - FastAPI, Uvicorn, Gradio, fastapi-cors (MinerService)
 - Celery, Flower, Gevent (MinerWorkers)
 - MongoEngine, Pymongo, jsmin, rich (Detonator, MarketBreadth, DataMiner)
-- pandas, yfinance, requests, tushare, exchange_calendars, etc. (DataMiner)
+- pandas, yfinance, requests, exchange_calendars, etc. (DataMiner)
 - selenium, webdriver_manager (BrowserScraper)
 
 Dependencies are installed automatically during deployment using `uv` for speed.
@@ -99,7 +99,7 @@ Dependencies are installed automatically during deployment using `uv` for speed.
 ## TODO
 
 - [ ] **Unify date time handling: format/storage**
-- [ ] Remove Tushare related docs/codes/comments (no longer used)
+- [X] Remove Tushare related docs/codes/comments (no longer used)
 - [ ] Add MCP server for stock market data
 - [ ] Add SEC EDGAR data
 - [ ] Decide how to save tickers with symbol in it, like 'BRK-A' or "BRK.A"
