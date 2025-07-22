@@ -3,6 +3,7 @@ from mongoengine.connection import DEFAULT_CONNECTION_NAME
 
 from ._env import is_prod
 from ._log import get_logger
+from functools import wraps, partial
 
 DEF_MONGO_HOST = 'miner-mongodb'
 DEF_MONGO_PORT = 27017
@@ -21,15 +22,16 @@ def make_db_connection(db: str = DEF_MONGO_DB, host: str = DEF_MONGO_HOST, port=
                 uuidRepresentation='standard')
 
 
-def ensure_db_connection(db: str = DEF_MONGO_DB, host: str = DEF_MONGO_HOST, port=DEF_MONGO_PORT,
+def ensure_db_connection(_func=None, *, db: str = DEF_MONGO_DB, host: str = DEF_MONGO_HOST, port=DEF_MONGO_PORT,
                          alias: str = DEFAULT_CONNECTION_NAME):
     def decorator(func):
+        @wraps(func)
         def wrapper(*args, **kwargs):
-            # Connect to MongoDB if not already connected
             make_db_connection(db=db, host=host, port=port, alias=alias)
-            # Call the original function
             return func(*args, **kwargs)
-
         return wrapper
 
-    return decorator
+    if _func is None:
+        return decorator
+    else:
+        return decorator(_func)
