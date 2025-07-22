@@ -4,52 +4,30 @@ ENV AM_I_IN_DOCKER_CONTAINER=Yes
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN echo "dash dash/sh boolean false" | debconf-set-selections
-RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure dash
-
+# Install base utilities first
 RUN apt-get update && \
-        apt-get install -y ca-certificates gnupg curl apt-utils
+    apt-get install -y wget gnupg ca-certificates
 
-RUN apt-get update && apt upgrade -y && \
-        apt-get install -y wget locales sudo unzip git openssh-client curl jq libmagic-dev openssh-client \
-        tzdata
+# Now you can safely use wget and gpg
+RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /usr/share/keyrings/google-chrome.gpg && \
+    echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
+
+# Continue with the rest of your installs
+RUN apt-get update && \
+    apt-get install -y google-chrome-stable --no-install-recommends \
+    locales sudo unzip git openssh-client curl jq libmagic-dev tzdata \
+    libx11-6 libx11-xcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 \
+    libxfixes3 libxi6 libxrandr2 libxrender1 libxtst6 libglib2.0-0 libnss3 \
+    libasound2t64 x11-apps xvfb && \
+    rm -rf /var/lib/apt/lists/* && apt-get clean
 
 ENV TZ=America/Toronto
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata
 
-RUN apt-get update && apt-get install -y \
-    # --- GUI DEPENDENCIES ---
-    # These are libraries required for Chrome to open a window and talk to an X Server
-    libx11-6 \
-    libx11-xcb1 \
-    libxcomposite1 \
-    libxcursor1 \
-    libxdamage1 \
-    libxext6 \
-    libxfixes3 \
-    libxi6 \
-    libxrandr2 \
-    libxrender1 \
-    libxtst6 \
-    libglib2.0-0 \
-    libnss3 \
-    libasound2t64 \
-    # A simple X11 app for testing the display connection
-    x11-apps \
-    xvfb \
-    --no-install-recommends
-
-# Download and install Google Chrome
-RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /usr/share/keyrings/google-chrome.gpg && \
-    echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list && \
-    apt-get update && \
-    apt-get install -y google-chrome-stable --no-install-recommends
-
-RUN useradd miner -G sudo,www-data,plugdev -s /bin/bash -m
-RUN usermod -aG www-data miner
-RUN echo miner:12qw | chpasswd
-
-RUN locale-gen en_US.UTF-8
+RUN useradd miner -G sudo,www-data,plugdev -s /bin/bash -m && \
+    usermod -aG www-data miner && \
+    echo miner:12qw | chpasswd && \
+    locale-gen en_US.UTF-8
 
 USER miner
 ENV LANG en_US.UTF-8
@@ -66,11 +44,11 @@ ENV HOME=/home/miner
 COPY --chown=miner:miner release/bin/* $HOME/bin/
 RUN chmod a+x $HOME/bin/*
 WORKDIR $HOME
-ENV PATH=$HOME/bin:$PATH
+ENV PATH="$HOME/bin:$PATH"
 RUN cat $HOME/.bashrc
 ENV CONDA_INS_DIR=$HOME/bin/conda
 RUN echo 'export PATH="$CONDA_INS_DIR"/bin:$PATH' >>~/.bashrc
-ENV PATH="$CONDA_INS_DIR"/bin:$PATH
+ENV PATH="$CONDA_INS_DIR/bin:$PATH"
 RUN . $HOME/.bashrc
 
 # Miniconda
@@ -82,13 +60,10 @@ RUN bash $HOME/bin/Miniconda3.sh -b -p $CONDA_INS_DIR && \
         conda activate base
 RUN rm -v $HOME/bin/Miniconda3.sh
 
-RUN pip install uv
-RUN uv pip install --system /miner_release/Detonator
-RUN uv pip install --system /miner_release/DataMiner
-RUN uv pip install --system /miner_release/BrowserScraper
-RUN uv pip install --system /miner_release/MinerWorkers
-
-RUN  rm -rfv /miner_release/Detonator /miner_release/DataMiner /miner_release/BrowserScraper /miner_release/MinerWorkers
+RUN pip install uv && \
+    uv pip install --system /miner_release/Detonator /miner_release/DataMiner /miner_release/BrowserScraper /miner_release/MinerWorkers && \
+    rm -rfv /miner_release/Detonator /miner_release/DataMiner /miner_release/BrowserScraper /miner_release/MinerWorkers && \
+    rm -rfv $HOME/.cache/uv/http*
 
 RUN mkdir -p $HOME/.miner
 # COPY --chown=miner:miner miner.json $HOME/.miner/miner.json
