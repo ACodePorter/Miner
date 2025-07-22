@@ -39,7 +39,7 @@ def setup_periodic_tasks(sender: Celery, **kwargs):
 
     # 17:15 Hong Kong time (Asia/Hong_Kong) explicitly set
     sender.add_periodic_task(
-        crontab(hour=5, minute=15, day_of_week='mon-fri'),
+        crontab(hour=5, minute=1, day_of_week='mon-fri'),
         update_hk_all_task.s(),
         name='hk-daily-idx-updates',
         expires=600,
