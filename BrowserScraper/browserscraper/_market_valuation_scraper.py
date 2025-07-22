@@ -19,8 +19,6 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from webdriver_manager.chrome import ChromeDriverManager
 
 _logger = get_logger("MarketValuationScraper")
-_tcs = TradeCalendarShovel.get_instance()
-_mds = MarketDataShovel.get_instance()
 
 
 class MarketValuationScraper(SingletonParent):
@@ -37,6 +35,11 @@ class MarketValuationScraper(SingletonParent):
         'ndx': ('us', 'XNYS'),
         'hsi': ('hk', 'XHKG')
     }
+
+    def __init__(self):
+        super().__init__()
+        self._tcs = TradeCalendarShovel.get_instance()
+        self._mds = MarketDataShovel.get_instance()
 
     def _handle_popups(self, driver, wait):
         """
@@ -209,7 +212,7 @@ class MarketValuationScraper(SingletonParent):
             end_date, '%Y,%m,%d,%H,%M,%S,%f').strftime('%Y%m%d')
 
         # 1. Get all trading days
-        trade_dates = _tcs.hk_trade_dates_since(
+        trade_dates = self._tcs.hk_trade_dates_since(
             start_date=start_date, end_date=end_date)
         if not trade_dates:
             _logger.error('No HK trade dates found for %s -> %s',
@@ -226,7 +229,7 @@ class MarketValuationScraper(SingletonParent):
             closest_earlier_pe = pe_records.order_by('trade_date').first()
         _logger.debug('Closest earlier PE: %s %s %s', closest_earlier_pe.trade_date,
                       closest_earlier_pe.pe, closest_earlier_pe.idx)
-        hsi_daily_df = _mds.get_ticker_daily_info(
+        hsi_daily_df = self._mds.get_ticker_daily_info(
             '^HSI', start_date=closest_earlier_pe.trade_date - timedelta(days=15), end_date=end_date)
         if hsi_daily_df.empty:
             _logger.error('No HSI daily data found for %s -> %s',
@@ -287,7 +290,7 @@ class MarketValuationScraper(SingletonParent):
         adj_start_date = None
         if latest_pe:
             c, e = self.IDX_COUNTRY_MAP[idx]
-            dates = _tcs.trade_dates_since(country=c, exchange=e,
+            dates = self._tcs.trade_dates_since(country=c, exchange=e,
                                            start_date=latest_pe.trade_date)
             if dates:
                 start_date = datetime.strptime(
