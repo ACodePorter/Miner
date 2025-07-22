@@ -204,26 +204,34 @@ class MarketValuationScraper(SingletonParent):
         adjusted by the ratio of daily close to reference close.
         """
         _logger.info('Adjusting HSI PE from %s to %s', start_date, end_date)
-        start_date = datetime.strptime(start_date, '%Y,%m,%d,%H,%M,%S,%f').strftime('%Y%m%d')
-        end_date = datetime.strptime(end_date, '%Y,%m,%d,%H,%M,%S,%f').strftime('%Y%m%d')
+        start_date = datetime.strptime(
+            start_date, '%Y,%m,%d,%H,%M,%S,%f').strftime('%Y%m%d')
+        end_date = datetime.strptime(
+            end_date, '%Y,%m,%d,%H,%M,%S,%f').strftime('%Y%m%d')
 
         # 1. Get all trading days
-        trade_dates = _tcs.hk_trade_dates_since(start_date=start_date, end_date=end_date)
+        trade_dates = _tcs.hk_trade_dates_since(
+            start_date=start_date, end_date=end_date)
         if not trade_dates:
-            _logger.error('No HK trade dates found for %s -> %s', start_date, end_date)
+            _logger.error('No HK trade dates found for %s -> %s',
+                          start_date, end_date)
             return False
         _logger.debug('Trade dates: %s', trade_dates)
         # 2. Get all HSI PE records in the range
         pe_records = MarketPe.objects(
             idx='hsi',).order_by('trade_date')  # ascending
         # 3. Get HSI daily close prices
-        closest_earlier_pe = pe_records.filter(trade_date__lte=datetime.strptime(start_date, '%Y%m%d')).order_by('-trade_date').first()
+        closest_earlier_pe = pe_records.filter(trade_date__lte=datetime.strptime(
+            start_date, '%Y%m%d')).order_by('-trade_date').first()
         if not closest_earlier_pe:
             closest_earlier_pe = pe_records.order_by('trade_date').first()
-        _logger.debug('Closest earlier PE: %s %s %s', closest_earlier_pe.trade_date, closest_earlier_pe.pe, closest_earlier_pe.idx)
-        hsi_daily_df = _mds.get_ticker_daily_info('^HSI', start_date=closest_earlier_pe.trade_date - timedelta(days=15), end_date=end_date)
+        _logger.debug('Closest earlier PE: %s %s %s', closest_earlier_pe.trade_date,
+                      closest_earlier_pe.pe, closest_earlier_pe.idx)
+        hsi_daily_df = _mds.get_ticker_daily_info(
+            '^HSI', start_date=closest_earlier_pe.trade_date - timedelta(days=15), end_date=end_date)
         if hsi_daily_df.empty:
-            _logger.error('No HSI daily data found for %s -> %s', start_date, end_date)
+            _logger.error('No HSI daily data found for %s -> %s',
+                          start_date, end_date)
             return False
         adjusted_pes = []
         for trade_date in trade_dates:
@@ -231,33 +239,42 @@ class MarketValuationScraper(SingletonParent):
             if pe_records.filter(trade_date=datetime.strptime(trade_date, '%Y%m%d')).count() != 0:
                 _logger.warning('PE record found for HSI on %s', trade_date)
                 continue
-            ref_pe =pe_records.filter(trade_date__lt=datetime.strptime(trade_date, '%Y%m%d')).order_by('-trade_date').first()
+            ref_pe = pe_records.filter(trade_date__lt=datetime.strptime(
+                trade_date, '%Y%m%d')).order_by('-trade_date').first()
             if not ref_pe:
-                _logger.warning('No HSI PE record found for reference on %s', trade_date)
+                _logger.warning(
+                    'No HSI PE record found for reference on %s', trade_date)
                 continue
-            _logger.debug('Ref PE: %s %s %s', ref_pe.trade_date, ref_pe.pe, ref_pe.idx)
-            ref_daily = hsi_daily_df[hsi_daily_df['trade_date'] <= ref_pe.trade_date.strftime('%Y,%m,%d,%H,%M,%S,%f')]
+            _logger.debug('Ref PE: %s %s %s', ref_pe.trade_date,
+                          ref_pe.pe, ref_pe.idx)
+            ref_daily = hsi_daily_df[hsi_daily_df['trade_date'] <=
+                                     ref_pe.trade_date.strftime('%Y,%m,%d,%H,%M,%S,%f')]
             if ref_daily.empty:
-                _logger.warning('No HSI daily data found for reference on %s', trade_date)
+                _logger.warning(
+                    'No HSI daily data found for reference on %s', trade_date)
                 continue
-            _logger.debug('Ref daily: %s %s %s', ref_daily.iloc[-1]['trade_date'], ref_daily.iloc[-1]['close'], ref_daily.iloc[-1]['ticker'])
+            _logger.debug('Ref daily: %s %s %s', ref_daily.iloc[-1]['trade_date'],
+                          ref_daily.iloc[-1]['close'], ref_daily.iloc[-1]['ticker'])
             ref_close = ref_daily.iloc[-1]['close']
-            daily = hsi_daily_df[hsi_daily_df['trade_date'] == datetime.strptime(trade_date, '%Y%m%d').strftime('%Y,%m,%d,%H,%M,%S,%f')]
+            daily = hsi_daily_df[hsi_daily_df['trade_date'] == datetime.strptime(
+                trade_date, '%Y%m%d').strftime('%Y,%m,%d,%H,%M,%S,%f')]
             if daily.empty:
                 _logger.warning('No HSI daily data found for %s', trade_date)
                 continue
             daily_close = daily.iloc[0]['close']
             adjusted_pes.append(
                 {'idx': 'hsi', 'trade_date': datetime.strptime(trade_date, '%Y%m%d').strftime('%Y,%m,%d,%H,%M,%S,%f'),
-                'pe': round(ref_pe.pe * daily_close / ref_close, 2), 'yoy_change': 0})
-            _logger.debug('Adjusted PE: %s %s %s', adjusted_pes[-1]['trade_date'], adjusted_pes[-1]['pe'], adjusted_pes[-1]['idx'])
+                 'pe': round(ref_pe.pe * daily_close / ref_close, 2), 'yoy_change': 0})
+            _logger.debug('Adjusted PE: %s %s %s',
+                          adjusted_pes[-1]['trade_date'], adjusted_pes[-1]['pe'], adjusted_pes[-1]['idx'])
         # 4. Save to DB (optional, or return as DataFrame)
         if adjusted_pes:
             df_2_mongo(pd.DataFrame(adjusted_pes), MarketPe)
             _logger.info(f"Adjusted PE for {len(adjusted_pes)} trading days.")
             return True
         else:
-            _logger.warning("No adjusted PE values calculated for HSI from %s to %s", start_date, end_date)
+            _logger.warning(
+                "No adjusted PE values calculated for HSI from %s to %s", start_date, end_date)
             return False
 
     def update_idx_pe_to_latest(self, idx: Literal['spx', 'qqq', 'ndx', 'hsi'] = 'spx') -> bool:
@@ -269,14 +286,15 @@ class MarketValuationScraper(SingletonParent):
             '-trade_date').limit(1).first()
         adj_start_date = None
         if latest_pe:
-            c,e = self.IDX_COUNTRY_MAP[idx]
+            c, e = self.IDX_COUNTRY_MAP[idx]
             dates = _tcs.trade_dates_since(country=c, exchange=e,
-                start_date=latest_pe.trade_date)
+                                           start_date=latest_pe.trade_date)
             if dates:
                 start_date = datetime.strptime(
                     dates[-1], '%Y%m%d')
-                adj_start_date = (start_date - timedelta(days=1)).strftime('%Y,%m,%d,%H,%M,%S,%f')
-                start_date =start_date.strftime('%Y,%m,%d,%H,%M,%S,%f')
+                adj_start_date = (start_date - timedelta(days=1)
+                                  ).strftime('%Y,%m,%d,%H,%M,%S,%f')
+                start_date = start_date.strftime('%Y,%m,%d,%H,%M,%S,%f')
             else:
                 _logger.info('Already up to date for index: %s @ %s',
                              idx, latest_pe.trade_date)
@@ -289,7 +307,8 @@ class MarketValuationScraper(SingletonParent):
         self.update_idx_pe_to_db(
             idx=idx, start_date=start_date, end_date='9999,12,31,00,00,00,000000')
         if idx == 'hsi':
-            self.adj_hk_idx_pe(start_date=adj_start_date, end_date=datetime.now().strftime('%Y,%m,%d,%H,%M,%S,%f'))
+            self.adj_hk_idx_pe(start_date=adj_start_date, end_date=datetime.now().strftime(
+                '%Y,%m,%d,%H,%M,%S,%f'))
         else:
             _logger.info('No adjustment needed for index: %s', idx)
         return True

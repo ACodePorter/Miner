@@ -121,8 +121,10 @@ class GhPagesMaintainer(SingletonParent):
 
     def _export_static_json(self, dir_of_miner: str):
         # Ensure all target directories exist
-        os.makedirs(os.path.join(dir_of_miner, 'StkGuru', 'public', 'api', 'market_pe'), exist_ok=True)
-        os.makedirs(os.path.join(dir_of_miner, 'StkGuru', 'public', 'api', 'mbs'), exist_ok=True)
+        os.makedirs(os.path.join(dir_of_miner, 'StkGuru',
+                    'public', 'api', 'market_pe'), exist_ok=True)
+        os.makedirs(os.path.join(dir_of_miner, 'StkGuru',
+                    'public', 'api', 'mbs'), exist_ok=True)
         self._export_market_pe('spx', os.path.join(
             dir_of_miner, 'StkGuru', 'public', 'api', 'market_pe', 'spx.json'))
         self._export_market_pe('hsi', os.path.join(
@@ -150,7 +152,7 @@ class GhPagesMaintainer(SingletonParent):
                     repo.index.commit(
                         f'Update static data exports {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}\n')
                     push_result: PushInfoList = repo.remotes.origin.push()
-                    if  len(push_result) == 0:
+                    if len(push_result) == 0:
                         _logger.error(f'Push failed: {push_result[0]}')
                         return False
                     else:

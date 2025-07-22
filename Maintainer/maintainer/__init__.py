@@ -11,6 +11,7 @@ __all__ = ['GhPagesMaintainer', 'update_gh_pages_task']
 
 app.autodiscover_tasks(packages=['maintainer'])
 
+
 @app.on_after_configure.connect
 def setup_periodic_tasks(sender: Celery, **kwargs):
     """

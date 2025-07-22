@@ -413,7 +413,8 @@ class MarketDataShovel(SingletonParent):
         ticker = ticker.replace('-', '.').upper()
         if isinstance(start_date, str):
             try:
-                start_date = datetime.strptime(start_date, '%Y,%m,%d,%H,%M,%S,%f')
+                start_date = datetime.strptime(
+                    start_date, '%Y,%m,%d,%H,%M,%S,%f')
             except Exception as e:
                 start_date = datetime.strptime(start_date, '%Y%m%d')
         if isinstance(end_date, str):

@@ -13,7 +13,6 @@ class MarketValuationScraperTestCase(TestCase):
         make_db_connection()
         self.scraper = MarketValuationScraper()
 
-
     def test_update_idx_pe_to_db(self):
         """
         Test the scraping of the SP500 PE ratio table and saving to the database.
@@ -35,8 +34,8 @@ class MarketValuationScraperTestCase(TestCase):
         """
         Test the scraping of the SP500 PE ratio table.
         """
-        self.scraper.adj_hk_idx_pe(start_date='2006,01,01,00,00,00,000000', end_date='2025,07,16,00,00,00,000000')
-
+        self.scraper.adj_hk_idx_pe(
+            start_date='2006,01,01,00,00,00,000000', end_date='2025,07,16,00,00,00,000000')
 
     def test_hsi_pe(self):
         """

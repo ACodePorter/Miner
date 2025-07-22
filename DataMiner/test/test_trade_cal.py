@@ -49,7 +49,7 @@ class TradeCalTestCase(unittest.TestCase):
 
     def test_hk_trade_dates_since(self):
         tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()
-        _logger.info(tcs.hk_trade_dates_since('20250721','20250721'))
+        _logger.info(tcs.hk_trade_dates_since('20250721', '20250721'))
 
     def test_last_closed_hk_trade_date(self):
         tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()

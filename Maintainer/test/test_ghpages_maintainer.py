@@ -10,12 +10,15 @@ class GhPagesMaintainerTestCase(TestCase):
 
     def test_export_market_pe(self):
         gpm = GhPagesMaintainer.get_instance()
-        gpm._export_market_pe('hsi', '../../StkGuru/public/api/market_pe/hsi.json')
-        gpm._export_market_pe('spx', '../../StkGuru/public/api/market_pe/spx.json')
+        gpm._export_market_pe(
+            'hsi', '../../StkGuru/public/api/market_pe/hsi.json')
+        gpm._export_market_pe(
+            'spx', '../../StkGuru/public/api/market_pe/spx.json')
 
     def test_export_market_breadth(self):
         gpm = GhPagesMaintainer.get_instance()
-        gpm._export_market_breadth('spx', '../../StkGuru/public/api/mbs/spx.json')
+        gpm._export_market_breadth(
+            'spx', '../../StkGuru/public/api/mbs/spx.json')
 
     def test_git(self):
         with tempfile.TemporaryDirectory(delete=False) as tmpdir:

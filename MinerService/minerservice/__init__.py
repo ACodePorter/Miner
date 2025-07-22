@@ -16,7 +16,6 @@ _logger = get_logger('MinerService')
 app.autodiscover_tasks(['dataminer', 'marketbreadth'], force=True)
 
 
-
 @app.on_after_configure.connect
 def setup_periodic_tasks(sender: Celery, **kwargs):
     """
@@ -25,8 +24,8 @@ def setup_periodic_tasks(sender: Celery, **kwargs):
     """
     # Add the daily update task.
     us_daily_chain = chain(
-       run_daily_updates_task.si(),
-       update_spx_market_breadth_task.si()
+        run_daily_updates_task.si(),
+        update_spx_market_breadth_task.si()
     )
 
     _logger.info('Setting up miner service periodic tasks ...')
@@ -45,5 +44,6 @@ def setup_periodic_tasks(sender: Celery, **kwargs):
         expires=600,
     )
     _logger.info('Miner service periodic tasks setup complete')
+
 
 _logger.info('Miner service initialized...')
