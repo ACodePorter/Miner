@@ -145,15 +145,14 @@ def update_hk_trade_calendar_task() -> bool:
     return tcs.update_hk_trade_calendar()
 
 
-hk_task_chain = chain(
-    update_hk_trade_calendar_task.si(),
-    update_hk_idxs_daily_info_task.si(),
-)
-
 @app.task
 def update_hk_all_task() -> bool:
     _logger.debug('update_hk_all_task')
-    hk_task_chain.apply_async()
+    task_chain = chain(
+        update_hk_trade_calendar_task.si(),
+        update_hk_idxs_daily_info_task.si(),
+    )
+    task_chain.apply_async()
     return True
 
 
@@ -181,33 +180,6 @@ def update_indicators_for_tickers_task(tickers: List[str]) -> bool:
     return indicators.update_indicators_for_tickers(tickers)
 
 
-# Create the task chain
-us_task_chain = chain(
-    # First update trade calendar
-    update_us_trade_calendar_task.si(),
-
-    # Then update all ticker lists and their info
-    update_spx_tickers_task.si(),
-    update_spx_tickers_info_task.si(),
-    update_iwd_tickers_task.si(),
-    update_iwd_tickers_info_task.si(),
-    update_iwf_tickers_task.si(),
-    update_iwf_tickers_info_task.si(),
-    update_iwm_tickers_task.si(),
-    update_iwm_tickers_info_task.si(),
-
-    # Then update daily info for all tickers
-    update_spx_tickers_daily_info_task.si(),
-    update_iwd_tickers_daily_info_task.si(),
-    update_iwf_tickers_daily_info_task.si(),
-    update_iwm_tickers_daily_info_task.si(),
-    update_spx_daily_ma_task.si(),
-    update_iw_daily_ma_task.si(),
-
-    # Then update idxs daily info
-    update_us_idxs_daily_info_task.si(),
-)
-
 @app.task
 def run_daily_updates_task() -> bool:
     """
@@ -220,6 +192,33 @@ def run_daily_updates_task() -> bool:
     """
     _logger.info('Starting daily updates sequence')
 
+    # Create the task chain
+    task_chain = chain(
+        # First update trade calendar
+        update_us_trade_calendar_task.si(),
+
+        # Then update all ticker lists and their info
+        update_spx_tickers_task.si(),
+        update_spx_tickers_info_task.si(),
+        update_iwd_tickers_task.si(),
+        update_iwd_tickers_info_task.si(),
+        update_iwf_tickers_task.si(),
+        update_iwf_tickers_info_task.si(),
+        update_iwm_tickers_task.si(),
+        update_iwm_tickers_info_task.si(),
+
+        # Then update daily info for all tickers
+        update_spx_tickers_daily_info_task.si(),
+        update_iwd_tickers_daily_info_task.si(),
+        update_iwf_tickers_daily_info_task.si(),
+        update_iwm_tickers_daily_info_task.si(),
+        update_spx_daily_ma_task.si(),
+        update_iw_daily_ma_task.si(),
+
+        # Then update idxs daily info
+        update_us_idxs_daily_info_task.si(),
+    )
+
     # Execute the chain
-    us_task_chain.apply_async()
+    task_chain.apply_async()
     return True
