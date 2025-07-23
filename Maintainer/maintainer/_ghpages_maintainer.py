@@ -25,9 +25,9 @@ class GhPagesMaintainer(SingletonParent):
     def _export_market_pe(self, index: Literal['spx', 'qqq', 'ndx', 'hsi'], file: str, start_date: str | None = None, end_date: str | None = None):
         _, _, timezone = IDX_COUNTRY_EXCHANGE_MAP[index]
         end_date = datetime.now(tz=timezone).strftime('%Y-%m-%d')
-        # Default to 20 years ago
+        # Default to 21 years ago
         start_date = (datetime.now(tz=timezone) -
-                      timedelta(days=365*20)).strftime('%Y-%m-%d')
+                      timedelta(days=365*21)).strftime('%Y-%m-%d')
 
         # Convert dates to datetime objects for querying
         start_dt = datetime.strptime(start_date, '%Y-%m-%d')
