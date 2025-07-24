@@ -1,28 +1,13 @@
 services:
   mongodb:
-    # build: ./mongodb
     image: mongo:8.0.5
     restart: unless-stopped
     container_name: miner-mongodb
     hostname: miner-mongodb
     volumes:
-      - '${HOME}/.miner/mongogo:/data/db'
+      - "${HOME}/.miner/mongogo:/data/db"
     ports:
-      - '27017:27017'
-    # environment:
-    #   - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
-    #   - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
-
-#   mongo-express:
-#     image: mongo-express
-#     restart: always
-#     ports:
-#       - 8081:8081
-#     environment:
-#       # ME_CONFIG_MONGODB_ADMINUSERNAME: ${MONGO_INITDB_ROOT_USERNAME}
-#       # ME_CONFIG_MONGODB_ADMINPASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
-#       ME_CONFIG_MONGODB_URL: mongodb://miner-mongodb:27017/
-#       ME_CONFIG_BASICAUTH: false
+      - "127.0.0.1:27017:27017"
 
   redis:
     build: ./redis
@@ -30,7 +15,7 @@ services:
     hostname: miner-redis
     container_name: miner-redis
     ports:
-      - '6379:6379'
+      - "127.0.0.1:6379:6379"
 
   rabbitmq:
     build: ./rabbitmq
@@ -38,11 +23,14 @@ services:
     container_name: miner-rabbitmq
     hostname: miner-rabbitmq
     ports:
-      - '5672:5672'
-      - '15672:15672'
+      - "127.0.0.1:5672:5672"
+      - "127.0.0.1:15672:15672"
 
   browserscraper:
-    build: ./browserscraper
+    build:
+      context: ./browserscraper
+      args:
+        BASE_IMAGE: miner-base:latest
     restart: unless-stopped
     container_name: miner-browserscraper
     hostname: miner-browserscraper
@@ -51,17 +39,18 @@ services:
       - rabbitmq
       - mongodb
     ports:
-      - '8002:8002'
+      - "127.0.0.1:8002:8002"
     environment:
       - RUNTIME_ENV=${RUNTIME_ENV}
     volumes:
-      - '${MINER_DATA}:/data/miner'
-      - '${PWD}/../:/minerdev'
+      - "${MINER_DATA}:/data/miner"
+      - "${PWD}/../:/minerdev"
 
   maintainer:
     build:
       context: ./maintainer
       args:
+        BASE_IMAGE: miner-base:latest
         GITHUB_TOKEN: ${GITHUB_TOKEN}
         GIT_USER_NAME: ${GIT_USER_NAME}
         GIT_USER_EMAIL: ${GIT_USER_EMAIL}
@@ -75,11 +64,14 @@ services:
     environment:
       - RUNTIME_ENV=${RUNTIME_ENV}
     volumes:
-      - '${MINER_DATA}:/data/miner'
-      - '${PWD}/../:/minerdev'
+      - "${MINER_DATA}:/data/miner"
+      - "${PWD}/../:/minerdev"
 
   ib:
-    build: ./ib
+    build:
+      context: ./ib
+      args:
+        BASE_IMAGE: miner-base:latest
     restart: unless-stopped
     container_name: miner-ib
     hostname: miner-ib
@@ -116,13 +108,16 @@ services:
       SSH_RESTART: ${SSH_RESTART:-}
       SSH_VNC_PORT: ${SSH_VNC_PORT:-}
     ports:
-      - '127.0.0.1:4001:4001'
-      - '127.0.0.1:4002:4002'
-      - '127.0.0.1:4003:4003'
-      - '5900:5900'
+      - "127.0.0.1:4001:4001"
+      - "127.0.0.1:4002:4002"
+      - "127.0.0.1:4003:4003"
+      - "127.0.0.1:5900:5900"
 
   miner:
-    build: ./miner
+    build:
+      context: ./miner
+      args:
+        BASE_IMAGE: miner-base:latest
     restart: always
     container_name: minerservice
     hostname: miner-service
@@ -130,17 +125,17 @@ services:
       - redis
       - rabbitmq
       - mongodb
-#       - mongo-express
+      - browserscraper
+      - maintainer
     ports:
-      - '80:80'
-      - '2222:2222'
-      - '6666:6666'
-      - '8001:8001'
+      - "127.0.0.1:80:80"
+      - "127.0.0.1:2222:2222"
+      - "127.0.0.1:6666:6666"
+      - "127.0.0.1:8001:8001"
     environment:
       - RUNTIME_ENV=${RUNTIME_ENV}
     privileged: true
     volumes:
-      - '/dev/bus/usb:/dev/bus/usb'
-      - '${MINER_DATA}:/data/miner'
-      - '${PWD}/../:/minerdev'
-  
+      - "/dev/bus/usb:/dev/bus/usb"
+      - "${MINER_DATA}:/data/miner"
+      - "${PWD}/../:/minerdev"

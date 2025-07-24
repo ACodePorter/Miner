@@ -10,6 +10,7 @@ MY_DIR=$(realpath $(dirname $0))
 RELEASE_DIR=$MY_DIR/miner/release
 BROWSERSCRAPER_RELEASE_DIR=$MY_DIR/browserscraper/release
 MAINTAINER_RELEASE_DIR=$MY_DIR/maintainer/release
+TRADER_RELEASE_DIR=$MY_DIR/trader/release
 
 function cleanup() {
     # This function is called on exit to clean up temporary files.
@@ -17,6 +18,7 @@ function cleanup() {
     rm -rf "$RELEASE_DIR"
     rm -rf "$BROWSERSCRAPER_RELEASE_DIR"
     rm -rf "$MAINTAINER_RELEASE_DIR"
+    rm -rf "$TRADER_RELEASE_DIR"
     cd "$MY_PWD"
 }
 
@@ -28,6 +30,8 @@ function exit_callback() {
     else
         echo "❌ Deployment script failed with exit code: $exit_status."
     fi
+    set +x
+    set +e
     exit $exit_status
 }
 
@@ -86,8 +90,8 @@ fi
 
 cd $MY_DIR
 
-mkdir -p "$MY_DIR/miner/bin/"
-wget -nv -c https://repo.anaconda.com/miniconda/Miniconda3-py312_24.11.1-0-Linux-x86_64.sh -O $MY_DIR/miner/bin/Miniconda3.sh
+mkdir -p "$MY_DIR/base/bin/"
+wget -nv -c https://repo.anaconda.com/miniconda/Miniconda3-py312_24.11.1-0-Linux-x86_64.sh -O $MY_DIR/base/bin/Miniconda3.sh
 
 rm -rf $RELEASE_DIR
 mkdir -p $RELEASE_DIR
@@ -98,6 +102,8 @@ mkdir -p $BROWSERSCRAPER_RELEASE_DIR
 rm -rf $MAINTAINER_RELEASE_DIR
 mkdir -p $MAINTAINER_RELEASE_DIR
 
+rm -rf $TRADER_RELEASE_DIR
+mkdir -p $TRADER_RELEASE_DIR
 
 cp -a $MY_DIR/../Detonator $RELEASE_DIR/
 cp -a $MY_DIR/../DataMiner $RELEASE_DIR/
@@ -113,7 +119,6 @@ cp -a $MY_DIR/../Detonator $BROWSERSCRAPER_RELEASE_DIR/
 cp -a $MY_DIR/../DataMiner $BROWSERSCRAPER_RELEASE_DIR/
 cp -a $MY_DIR/../MinerWorkers $BROWSERSCRAPER_RELEASE_DIR/
 cp -a $MY_DIR/../BrowserScraper $BROWSERSCRAPER_RELEASE_DIR/
-cp -a $MY_DIR/miner/bin $BROWSERSCRAPER_RELEASE_DIR/
 cp -a $MY_DIR/browserscraper/docker_entry.sh $BROWSERSCRAPER_RELEASE_DIR/
 
 cp -a $MY_DIR/../Detonator $MAINTAINER_RELEASE_DIR/
@@ -121,8 +126,38 @@ cp -a $MY_DIR/../MarketBreadth $MAINTAINER_RELEASE_DIR/
 cp -a $MY_DIR/../DataMiner $MAINTAINER_RELEASE_DIR/
 cp -a $MY_DIR/../MinerWorkers $MAINTAINER_RELEASE_DIR/
 cp -a $MY_DIR/../Maintainer $MAINTAINER_RELEASE_DIR/
-cp -a $MY_DIR/miner/bin $MAINTAINER_RELEASE_DIR/
 cp -a $MY_DIR/maintainer/docker_entry.sh $MAINTAINER_RELEASE_DIR/
+
+cp -a $MY_DIR/trader/docker_entry.sh $TRADER_RELEASE_DIR/
+
+# Set base image folder
+BASE_DIR=$MY_DIR/base
+BASE_DOCKERFILE=$BASE_DIR/Dockerfile.base
+BASE_IMAGE_TAG=miner-base:latest
+BASE_HASH_FILE=$BASE_DIR/.docker_base_hash
+
+if [ -f "$BASE_DOCKERFILE" ]; then
+    # Compute hash of Dockerfile.base and any files it depends on (e.g., .condarc, Miniconda3.sh)
+    BASE_HASH=$(cat "$BASE_DOCKERFILE" "$MY_DIR/base/bin/Miniconda3.sh" "$MY_DIR/base/requirements.txt" 2>/dev/null | sha256sum | awk '{print $1}')
+    PREV_HASH=""
+    if [ -f "$BASE_HASH_FILE" ]; then
+        PREV_HASH=$(cat "$BASE_HASH_FILE")
+    fi
+    IMAGE_EXISTS=$(docker images -q $BASE_IMAGE_TAG)
+    if [ -z "$IMAGE_EXISTS" ] || [ "$BASE_HASH" != "$PREV_HASH" ]; then
+        echo "Building $BASE_IMAGE_TAG from $BASE_DOCKERFILE ..."
+        docker build -f "$BASE_DOCKERFILE" -t $BASE_IMAGE_TAG "$BASE_DIR"
+        echo "$BASE_HASH" > "$BASE_HASH_FILE"
+    else
+        echo "$BASE_IMAGE_TAG is up to date, skipping rebuild."
+    fi
+    # Create a dummy container to protect the base image from prune
+    docker rm keep-miner-base || true
+    docker create --name keep-miner-base $BASE_IMAGE_TAG || true
+else
+    echo "Dockerfile.base not found, skipping build."
+    exit 1
+fi
 
 COMPOSE_BAKE=true docker compose --project-name miner up --build -d
 
