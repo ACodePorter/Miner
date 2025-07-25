@@ -1,12 +1,12 @@
 from typing import List
 
 from celery import chain
-from dataminer.tasks import update_iwm_tickers_info_task, update_iwd_tickers_task, update_iwd_tickers_info_task, \
+from .tasks import update_iwm_tickers_info_task, update_iwd_tickers_task, update_iwd_tickers_info_task, \
     update_iwd_tickers_daily_info_task, update_iwf_tickers_daily_info_task, update_iwm_tickers_daily_info_task
-from dataminer.tasks import update_spx_tickers_task, update_iwf_tickers_task, \
+from .tasks import update_spx_tickers_task, update_iwf_tickers_task, \
     update_spx_tickers_info_task, update_spx_tickers_daily_info_task, \
     update_us_trade_calendar_task, update_tickers_daily_info_task, update_spx_daily_ma_task, update_iwm_tickers_task, \
-    update_iwf_tickers_info_task, update_indicators_for_tickers_task, run_daily_updates_task, update_iw_daily_ma_task
+    update_iwf_tickers_info_task, update_indicators_for_tickers_task, run_us_daily_updates_task, update_iw_daily_ma_task, run_hk_daily_updates_task
 from detonator import make_db_connection
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -15,7 +15,6 @@ from marketbreadth.tasks import update_spx_market_breadth_task
 from browserscraper.tasks import update_market_pe_task
 from dataminer.models import MarketPe
 from detonator import mongo_2_df
-import pandas as pd
 from datetime import datetime, timedelta
 import pytz
 
@@ -120,14 +119,15 @@ async def update_spx_market_breadth() -> str:
     return 'GOOD'
 
 
-@app.get('/update_all_above', description='Update all above tasks to fetch latest data')
-async def update_all_above() -> str:
-    task_chain = chain(
-        run_daily_updates_task.si(),
-        update_spx_market_breadth_task.si(),
-    )
-    task_chain.apply_async()
-    update_market_pe_task.delay()
+@app.get('/run_us_daily_updates', description='Update US daily data')
+async def run_us_daily_updates() -> str:
+    run_us_daily_updates_task.delay()
+    return 'GOOD'
+
+
+@app.get('/run_hk_daily_updates')
+async def update_hk_daily_updates() -> str:
+    run_hk_daily_updates_task.delay()
     return 'GOOD'
 
 

@@ -1,15 +1,14 @@
 from typing import List
 
+from minerworkers import app
 from celery import chain
 from detonator import get_logger
-from minerworkers import app
 
-from . import MarketDataShovel
-from ._indicators import Indicators
-from ._ishares_scraper import IsharesScraper
-from ._trade_cal import TradeCalendarShovel
+from dataminer import MarketDataShovel, Indicators, IsharesScraper, TradeCalendarShovel
+from marketbreadth.tasks import update_spx_market_breadth_task
+from browserscraper.tasks import update_hk_market_pe_task
 
-_logger = get_logger('DataMiner.Tasks')
+_logger = get_logger('MinerService.Tasks')
 
 
 @app.task
@@ -132,31 +131,6 @@ def update_us_idxs_daily_info_task() -> bool:
 
 
 @app.task
-def update_hk_idxs_daily_info_task() -> bool:
-    _logger.debug('update_hk_idxs_daily_info_task')
-    mds: MarketDataShovel = MarketDataShovel.get_instance()
-    return mds.update_ticker_daily_info('^HSI')
-
-
-@app.task
-def update_hk_trade_calendar_task() -> bool:
-    _logger.debug('update_hk_trade_calendar_info_task')
-    tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()
-    return tcs.update_hk_trade_calendar()
-
-
-@app.task
-def update_hk_all_task() -> bool:
-    _logger.debug('update_hk_all_task')
-    task_chain = chain(
-        update_hk_trade_calendar_task.si(),
-        update_hk_idxs_daily_info_task.si(),
-    )
-    task_chain.apply_async()
-    return True
-
-
-@app.task
 def update_spx_daily_ma_task() -> bool:
     _logger.debug('update_spx_daily_sma_task')
     indicators: Indicators = Indicators.get_instance()
@@ -181,7 +155,7 @@ def update_indicators_for_tickers_task(tickers: List[str]) -> bool:
 
 
 @app.task
-def run_daily_updates_task() -> bool:
+def run_us_daily_updates_task() -> bool:
     """
     Run all daily update tasks in sequence at 16:30 (with 5 min window)
     The sequence is:
@@ -217,8 +191,37 @@ def run_daily_updates_task() -> bool:
 
         # Then update idxs daily info
         update_us_idxs_daily_info_task.si(),
+
+        # update market breadth
+        update_spx_market_breadth_task.si(),
     )
 
     # Execute the chain
+    task_chain.apply_async()
+    return True
+
+
+@app.task
+def update_hk_idxs_daily_info_task() -> bool:
+    _logger.debug('update_hk_idxs_daily_info_task')
+    mds: MarketDataShovel = MarketDataShovel.get_instance()
+    return mds.update_ticker_daily_info('^HSI')
+
+
+@app.task
+def update_hk_trade_calendar_task() -> bool:
+    _logger.debug('update_hk_trade_calendar_info_task')
+    tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()
+    return tcs.update_hk_trade_calendar()
+
+
+@app.task
+def run_hk_daily_updates_task() -> bool:
+    _logger.debug('run_hk_daily_updates_task')
+    task_chain = chain(
+        update_hk_trade_calendar_task.si(),
+        update_hk_idxs_daily_info_task.si(),
+        update_hk_market_pe_task.si(),
+    )
     task_chain.apply_async()
     return True

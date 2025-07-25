@@ -18,14 +18,14 @@ worker_log_format = '[%(asctime)s: %(levelname)s/%(processName)s] %(name)s:%(fun
 broker_connection_retry_on_startup = True
 
 task_queues = (
-    Queue('dataminer'),
+    Queue('minerservice'),
     Queue('browserscraper'),
     Queue('maintainer'),
 )
 
 task_routes = {
-    'dataminer.tasks.*': {'queue': 'dataminer'},
+    'marketbreadth.tasks.*': {'queue': 'minerservice'},
+    'minerservice.tasks.*': {'queue': 'minerservice'},
     'browserscraper.tasks.*': {'queue': 'browserscraper'},
-    'marketbreadth.tasks.*': {'queue': 'dataminer'},
     'maintainer.tasks.*': {'queue': 'maintainer'},
 }

@@ -24,6 +24,7 @@ def _get_since_trade_date_for_indicator(ticker: str, indicator: Literal['sma', '
                                         period: int = 20) -> datetime | None:
     """
     Generic function to get the since trade date for any indicator.
+    TODO: check if the indicator is already calculated for the given ticker and interval.
     """
     ticker = ticker.upper()
     # First get the most recent document with the indicator

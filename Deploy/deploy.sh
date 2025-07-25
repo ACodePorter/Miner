@@ -128,6 +128,7 @@ cp -a $MY_DIR/../MinerWorkers $MAINTAINER_RELEASE_DIR/
 cp -a $MY_DIR/../Maintainer $MAINTAINER_RELEASE_DIR/
 cp -a $MY_DIR/maintainer/docker_entry.sh $MAINTAINER_RELEASE_DIR/
 
+cp -a $MY_DIR/../MinerTrader $TRADER_RELEASE_DIR/
 cp -a $MY_DIR/trader/docker_entry.sh $TRADER_RELEASE_DIR/
 
 # Set base image folder

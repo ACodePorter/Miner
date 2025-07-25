@@ -22,6 +22,14 @@ _logger = get_logger("MarketValuationScraper")
 
 
 class MarketValuationScraper(SingletonParent):
+    """
+    Scrape market valuation data from Gurufocus.
+    for hsi, we can only get the PE ratio for the 1st day of the month, so we filled PEs by the ratio of daily close to reference close.
+    since the PE from gurufocus was uncertain, we may filled the day before it was publish from gurufocus. FIXME:when 1st day updated from 
+    gurufocus, we adjust the PE again
+
+
+    """
     IDX_URL_MAP = {
         'spx': "https://www.gurufocus.com/economic_indicators/57/sp-500-pe-ratio",
         'qqq': "https://www.gurufocus.com/economic_indicators/6778/nasdaq-100-pe-ratio",
@@ -291,7 +299,7 @@ class MarketValuationScraper(SingletonParent):
         if latest_pe:
             c, e = self.IDX_COUNTRY_MAP[idx]
             dates = self._tcs.trade_dates_since(country=c, exchange=e,
-                                           start_date=latest_pe.trade_date)
+                                                start_date=latest_pe.trade_date)
             if dates:
                 start_date = datetime.strptime(
                     dates[-1], '%Y%m%d')

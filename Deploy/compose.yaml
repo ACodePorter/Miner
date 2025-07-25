@@ -110,8 +110,18 @@ services:
     ports:
       - "127.0.0.1:4001:4001"
       - "127.0.0.1:4002:4002"
-      - "127.0.0.1:4003:4003"
       - "127.0.0.1:5900:5900"
+
+  trader:
+    build:
+      context: ./trader
+      args:
+        BASE_IMAGE: miner-base:latest
+    restart: always
+    container_name: miner-trader
+    hostname: miner-trader
+    depends_on:
+      - ib
 
   miner:
     build:

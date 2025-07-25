@@ -11,13 +11,16 @@ MY_DIR=$(realpath $(dirname $0))
 
 touch ~/.miner-worker.log
 celery --app=browserscraper worker --loglevel INFO --detach --logfile ~/.miner-worker.log -Q browserscraper
-touch ~/.miner-beat.log
-celery --app=browserscraper beat --loglevel INFO --detach --logfile ~/.miner-beat.log
+# to avoid duplicate beat task registration,
+# beat task registration is done by minerservce,
+# so we don't need to start it here
+# touch ~/.miner-beat.log
+# celery --app=browserscraper beat --loglevel INFO --detach --logfile ~/.miner-beat.log
 
 sleep 5
 
 tail -f ~/.miner-worker.log &
-tail -f ~/.miner-beat.log &
+# tail -f ~/.miner-beat.log &
 
 
 catch_kill() {

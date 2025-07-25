@@ -274,7 +274,6 @@ class MarketDataShovel(SingletonParent):
             _logger.error(
                 'Illegal argument for update_ticker_daily_info: %s', ticker)
             return False
-        _logger.info(ticker)
         now = datetime.now()
         tdi = TickerDailyInfo.objects(
             ticker=ticker).order_by('-trade_date').limit(1).first()

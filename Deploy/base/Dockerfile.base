@@ -55,3 +55,4 @@ RUN rm -v $HOME/bin/Miniconda3.sh
 # (Optional) Install pip and uv globally
 RUN pip install --upgrade pip && pip install uv && uv pip install --system -r $HOME/requirements.txt && rm -rf $HOME/.cache/uv/ && rm -rf $HOME/.cache/pip/
 
+ENTRYPOINT sleep infinity

@@ -7,8 +7,8 @@ RUN chmod a+x /miner_release/*.sh
 
 USER miner
 
-RUN uv pip install --system /miner_release/Detonator /miner_release/DataMiner /miner_release/MinerWorkers /miner_release/Maintainer /miner_release/MarketBreadth && \
-        rm -rfv /miner_release/Detonator /miner_release/DataMiner /miner_release/MinerWorkers /miner_release/Maintainer /miner_release/MarketBreadth && \
+RUN uv pip install --system /miner_release/MinerTrader && \
+        rm -rfv /miner_release/MinerTrader && \
         rm -rfv $HOME/.cache/uv && rm -rfv $HOME/.cache/pip
 
 

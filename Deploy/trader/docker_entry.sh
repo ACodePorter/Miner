@@ -1,4 +1,5 @@
 #!/bin/bash -l
+sleep infinity
 set -x
 set -e
 

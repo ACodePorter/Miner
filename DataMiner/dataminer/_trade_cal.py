@@ -47,7 +47,7 @@ class TradeCalendarShovel(SingletonParent):
         try:
             start_date, end_date = self._get_cal_range_to_update(
                 country, exchange)
-            _logger.info(f'update_trade_calendar: {start_date} -> {end_date}')
+            # _logger.info(f'update_trade_calendar: {start_date} -> {end_date}')
             if start_date >= end_date:
                 return True
             cal_df = xcals.get_calendar(
