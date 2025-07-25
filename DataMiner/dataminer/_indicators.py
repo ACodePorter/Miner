@@ -32,6 +32,9 @@ def _get_since_trade_date_for_indicator(ticker: str, indicator: Literal['sma', '
         'ticker': ticker,
         'interval': interval
     }
+    latest_info: TickerDailyInfo = TickerDailyInfo.objects(
+        **query).order_by('-trade_date').limit(1).first()
+
     # Use MongoEngine's proper syntax for existence checks
     query[f'{indicator}{period}__exists'] = True
     query[f'{indicator}{period}__ne'] = None
@@ -40,8 +43,10 @@ def _get_since_trade_date_for_indicator(ticker: str, indicator: Literal['sma', '
     infos: QuerySet = TickerDailyInfo.objects(
         **query).order_by('-trade_date').limit(1)
     if infos.count() == 0:
-        return None
+        return datetime(year=1970, month=1, day=1)
     info: TickerDailyInfo = infos.first()
+    if info.id == latest_info.id:
+        return None
 
     # Then get the document that is 'period' days before
     query = {
@@ -54,7 +59,7 @@ def _get_since_trade_date_for_indicator(ticker: str, indicator: Literal['sma', '
     if info is None:
         _logger.warning(
             'Illegal state _get_since_trade_date_for_indicator for %s (%s)', ticker, indicator)
-        return None
+        return datetime(year=1970, month=1, day=1)
     _logger.debug('since %s of %s for %s%d',
                   info.trade_date, ticker, indicator, period)
     return info.trade_date
@@ -143,6 +148,10 @@ def _update_indicator_with_details(ticker: str, indicator: Literal['sma', 'ema']
     try:
         since = _get_since_trade_date_for_indicator(
             ticker, indicator=indicator, interval=interval, period=period)
+        if not since:
+            _logger.info(
+                'No need to update %s for %s%d, already up to date', ticker, indicator, period)
+            return True
         _calculate_indicator(
             ticker, indicator=indicator, since=since,
             interval=interval, period=period)
