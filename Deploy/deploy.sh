@@ -153,8 +153,9 @@ if [ -f "$BASE_DOCKERFILE" ]; then
         echo "$BASE_IMAGE_TAG is up to date, skipping rebuild."
     fi
     # Create a dummy container to protect the base image from prune
+    docker stop keep-miner-base || true
     docker rm keep-miner-base || true
-    docker create --name keep-miner-base $BASE_IMAGE_TAG || true
+    docker run -d --name keep-miner-base $BASE_IMAGE_TAG bash -c 'sleep infinity' || true
 else
     echo "Dockerfile.base not found, skipping build."
     exit 1

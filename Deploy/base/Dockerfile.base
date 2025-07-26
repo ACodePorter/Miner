@@ -10,9 +10,9 @@ RUN apt-get update && \
 
 # Set up locale
 RUN locale-gen en_US.UTF-8
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.UTF-8
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US:en
+ENV LC_ALL=en_US.UTF-8
 
 # Set timezone
 ENV TZ=America/Toronto
@@ -39,7 +39,6 @@ COPY --chown=miner:miner ./bin/Miniconda3.sh $HOME/bin/
 COPY --chown=miner:miner ./requirements.txt $HOME/
 
 ENV PATH=$HOME/bin:$PATH
-RUN cat $HOME/.bashrc
 ENV CONDA_INS_DIR=$HOME/bin/conda
 RUN echo "export PATH=$CONDA_INS_DIR/bin:\$PATH" >>~/.bashrc
 ENV PATH=$CONDA_INS_DIR/bin:$PATH
@@ -54,5 +53,3 @@ RUN rm -v $HOME/bin/Miniconda3.sh
 
 # (Optional) Install pip and uv globally
 RUN pip install --upgrade pip && pip install uv && uv pip install --system -r $HOME/requirements.txt && rm -rf $HOME/.cache/uv/ && rm -rf $HOME/.cache/pip/
-
-ENTRYPOINT sleep infinity

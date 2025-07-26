@@ -43,8 +43,7 @@ services:
     environment:
       - RUNTIME_ENV=${RUNTIME_ENV}
     volumes:
-      - "${MINER_DATA}:/data/miner"
-      - "${PWD}/../:/minerdev"
+      - miner-dev:/minerdev
 
   maintainer:
     build:
@@ -64,8 +63,7 @@ services:
     environment:
       - RUNTIME_ENV=${RUNTIME_ENV}
     volumes:
-      - "${MINER_DATA}:/data/miner"
-      - "${PWD}/../:/minerdev"
+      - miner-dev:/minerdev
 
   ib:
     build:
@@ -97,7 +95,7 @@ services:
       TIME_ZONE: ${TIME_ZONE:-Etc/UTC}
       TZ: ${TIME_ZONE:-Etc/UTC}
       CUSTOM_CONFIG: ${CUSTOM_CONFIG:-NO}
-      JAVA_HEAP_SIZE: ${JAVA_HEAP_SIZE:-}
+      JAVA_HEAP_SIZE: ${JAVA_HEAP_SIZE:-1024}
       SSH_TUNNEL: ${SSH_TUNNEL:-}
       SSH_OPTIONS: ${SSH_OPTIONS:-}
       SSH_ALIVE_INTERVAL: ${SSH_ALIVE_INTERVAL:-}
@@ -108,8 +106,8 @@ services:
       SSH_RESTART: ${SSH_RESTART:-}
       SSH_VNC_PORT: ${SSH_VNC_PORT:-}
     ports:
-      - "127.0.0.1:4001:4001"
-      - "127.0.0.1:4002:4002"
+      - "127.0.0.1:4001:4003"
+      - "127.0.0.1:4002:4004"
       - "127.0.0.1:5900:5900"
 
   trader:
@@ -122,6 +120,8 @@ services:
     hostname: miner-trader
     depends_on:
       - ib
+    volumes:
+      - miner-dev:/minerdev
 
   miner:
     build:
@@ -146,6 +146,19 @@ services:
       - RUNTIME_ENV=${RUNTIME_ENV}
     privileged: true
     volumes:
-      - "/dev/bus/usb:/dev/bus/usb"
-      - "${MINER_DATA}:/data/miner"
-      - "${PWD}/../:/minerdev"
+      - miner-data:/data/miner
+      - miner-dev:/minerdev
+
+volumes:
+  miner-dev:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${PWD}/../
+  miner-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ${MINER_DATA}
