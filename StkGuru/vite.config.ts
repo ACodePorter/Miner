@@ -95,7 +95,8 @@ export default defineConfig(({ mode }) => {
     },
     // Optimize for development
     optimizeDeps: {
-      include: ['react', 'react-dom', 'highcharts', 'highcharts-react-official']
+      include: ['react', 'react-dom', 'highcharts', 'highcharts-react-official'],
+      exclude: ['@tanstack/react-query'] // Exclude from pre-bundling to reduce initial size
     },
     // Disable service worker for development
     worker: {
@@ -105,12 +106,30 @@ export default defineConfig(({ mode }) => {
     build: {
       outDir: 'dist',
       sourcemap: currentEnv === 'development',
+      chunkSizeWarningLimit: 1000, // Increase warning limit to 1MB
+      minify: 'esbuild', // Use esbuild for faster builds
       rollupOptions: {
         output: {
           manualChunks: {
-            vendor: ['react', 'react-dom'],
-            charts: ['highcharts', 'highcharts-react-official'],
+            // Core React libraries
+            'react-vendor': ['react', 'react-dom'],
+            // Chart libraries (heaviest dependencies)
+            'charts-vendor': ['highcharts', 'highcharts-react-official'],
+            // React Query
+            'query-vendor': ['@tanstack/react-query'],
+            // Utility libraries
+            'utils-vendor': ['react-intersection-observer'],
           },
+          // Optimize chunk naming
+          chunkFileNames: () => `js/[name]-[hash].js`,
+          entryFileNames: 'js/[name]-[hash].js',
+          assetFileNames: 'assets/[name]-[hash].[ext]',
+        },
+        // Tree shaking optimizations
+        treeshake: {
+          moduleSideEffects: false,
+          propertyReadSideEffects: false,
+          unknownGlobalSideEffects: false,
         },
       },
     },
