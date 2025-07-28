@@ -1,6 +1,5 @@
-from kombu import Queue
-
 from detonator import is_in_docker
+from kombu import Queue
 
 result_serializer = 'json'
 

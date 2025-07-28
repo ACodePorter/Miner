@@ -4,7 +4,7 @@ from urllib.parse import urljoin
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-from detonator import get_logger, SingletonParent
+from detonator import SingletonParent, get_logger
 from pandas import DataFrame
 
 from ._ticker_manager import TickerManager

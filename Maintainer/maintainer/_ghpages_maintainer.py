@@ -1,15 +1,15 @@
-from detonator import make_db_connection, mongo_2_df, SingletonParent, IDX_COUNTRY_EXCHANGE_MAP
-from dataminer.models import MarketPe
-from marketbreadth import MarketBreadth
-from typing import Literal
-from detonator import get_logger
-from git import Repo
-from git.remote import PushInfoList
+import json
 import os
-
 import tempfile
 from datetime import datetime, timedelta
-import json
+from typing import Literal
+
+from dataminer.models import MarketPe
+from detonator import (IDX_COUNTRY_EXCHANGE_MAP, SingletonParent, get_logger,
+                       make_db_connection, mongo_2_df)
+from git import Repo
+from git.remote import PushInfoList
+from marketbreadth import MarketBreadth
 
 REPO_URL = 'git@github.com:zhangyuz/Miner.git'
 

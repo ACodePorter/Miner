@@ -1,9 +1,10 @@
-from ._ghpages_maintainer import GhPagesMaintainer
-from minerworkers import app
-from celery.schedules import crontab
 from celery import Celery
-from .tasks import update_gh_pages_task
+from celery.schedules import crontab
 from detonator import get_logger
+from minerworkers import app
+
+from ._ghpages_maintainer import GhPagesMaintainer
+from .tasks import update_gh_pages_task
 
 _logger = get_logger('Maintainer')
 

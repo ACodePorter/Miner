@@ -1,21 +1,21 @@
 # File: scrape_final_robust_fixed.py
 
-import pandas as pd
-from pandas import DataFrame
 import time
-from typing import Literal
 from datetime import datetime, timedelta
+from typing import Literal
 
-from detonator import get_logger, df_2_mongo, ensure_db_connection, SingletonParent
+import pandas as pd
+from dataminer import MarketDataShovel, TradeCalendarShovel
 from dataminer.models import MarketPe
-from dataminer import TradeCalendarShovel, MarketDataShovel
-
+from detonator import (SingletonParent, df_2_mongo, ensure_db_connection,
+                       get_logger)
+from pandas import DataFrame
 from selenium import webdriver
-from selenium.webdriver.common.by import By
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.chrome.service import Service as ChromeService
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException, NoSuchElementException
+from selenium.webdriver.support.ui import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 
 _logger = get_logger("MarketValuationScraper")

@@ -5,7 +5,9 @@ from ._market_data_shovel import MarketDataShovel
 from ._ticker_manager import TickerManager
 from ._trade_cal import TradeCalendarShovel
 from ._version import version
-from .models import Ticker, Balancesheet, CashflowTable, Financials, TradeCalendar
+from ._wedge_pop import WedgePop
+from .models import (Balancesheet, CashflowTable, Financials, Ticker,
+                     TradeCalendar)
 
 __all__ = [
     'version',
@@ -16,5 +18,6 @@ __all__ = [
     'Ticker',
     'Balancesheet', 'CashflowTable', 'Financials', 'TradeCalendar',
     'TickerManager',
-    'TradeCalendarShovel'
+    'TradeCalendarShovel',
+    'WedgePop'
 ]

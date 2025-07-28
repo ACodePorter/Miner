@@ -1,9 +1,10 @@
+from functools import partial, wraps
+
 from mongoengine import connect, get_connection
 from mongoengine.connection import DEFAULT_CONNECTION_NAME
 
 from ._env import is_prod
 from ._log import get_logger
-from functools import wraps, partial
 
 DEF_MONGO_HOST = 'miner-mongodb'
 DEF_MONGO_PORT = 27017

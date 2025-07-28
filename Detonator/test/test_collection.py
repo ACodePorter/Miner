@@ -1,6 +1,6 @@
 import unittest
 
-from detonator import list_minus, common_in_list, get_logger
+from detonator import common_in_list, get_logger, list_minus
 
 _logger = get_logger('CollectionTestCase')
 

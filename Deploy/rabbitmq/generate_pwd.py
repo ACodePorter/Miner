@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 
 from __future__ import print_function
+
 import base64
-import os
 import hashlib
+import os
 import sys
 
 # password to encode

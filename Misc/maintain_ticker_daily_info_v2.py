@@ -11,16 +11,15 @@ This script:
 
 import argparse
 import datetime
-from collections import defaultdict
-from typing import List, Dict, Any
-from multiprocessing import Pool
 import os
-from mongoengine import disconnect
+from collections import defaultdict
+from multiprocessing import Pool
+from typing import Any, Dict, List
 
-from detonator import make_db_connection, get_logger
 from dataminer import TradeCalendarShovel
-from dataminer.models import TradeCalendar, TickerDailyInfo
-
+from dataminer.models import TickerDailyInfo, TradeCalendar
+from detonator import get_logger, make_db_connection
+from mongoengine import disconnect
 
 _logger = get_logger('MaintainTickerDailyInfo')
 

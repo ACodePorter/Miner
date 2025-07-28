@@ -1,10 +1,10 @@
-from celery.schedules import crontab
-from minerworkers import app
-from .tasks import run_us_daily_updates_task, run_hk_daily_updates_task
 from celery import Celery
+from celery.schedules import crontab
 from detonator import get_logger
+from minerworkers import app
 
 from ._version import version
+from .tasks import run_hk_daily_updates_task, run_us_daily_updates_task
 
 __all__ = [
     'version'

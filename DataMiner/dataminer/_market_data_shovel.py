@@ -3,18 +3,21 @@ from datetime import datetime
 from functools import reduce
 from random import random
 from typing import List, Literal
-import pytz
 
 import pandas as pd
+import pytz
 import requests
-from detonator import SingletonParent, get_logger, md5_iterable, make_db_connection, df_2_mongo, add_minus_to_YYYYmmdd, \
-    tomorrow_of, datetime_from_str, mongo_2_df, sleep
+from detonator import (SingletonParent, add_minus_to_YYYYmmdd,
+                       datetime_from_str, df_2_mongo, get_logger,
+                       make_db_connection, md5_iterable, mongo_2_df, sleep,
+                       tomorrow_of)
 from pandas import DataFrame
 from yfinance import Ticker as YTicker
 
 from ._ishares_scraper import IsharesScraper
 from ._trade_cal import TradeCalendarShovel
-from .models import IndexTickers, Ticker, TickerDailyInfo, regulate_ticker_daily_info
+from .models import (IndexTickers, Ticker, TickerDailyInfo,
+                     regulate_ticker_daily_info)
 from .utils import TickerRegulator
 
 _logger = get_logger('MarketDataShovel')

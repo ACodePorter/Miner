@@ -2,8 +2,9 @@ import datetime
 import unittest
 
 from dataminer import Indicators
-from dataminer._indicators import _get_since_trade_date_for_indicator, _calculate_indicator
-from detonator import make_db_connection, get_logger
+from dataminer._indicators import (_calculate_indicator,
+                                   _get_since_trade_date_for_indicator)
+from detonator import get_logger, make_db_connection
 from pandas import DataFrame
 from pymongo import MongoClient
 
@@ -51,6 +52,11 @@ class IndicatorsTestCase(unittest.TestCase):
 
     def test_calculate_indicator(self):
         _calculate_indicator('AAPL', 'sma', '20250101', '1d', 10)
+
+    def test_update_indicators_for_tickers(self):
+        indicators: Indicators = Indicators.get_instance()
+        ret = indicators.update_indicators_for_tickers(['GOOGL', 'TSLA'])
+        _l.debug(ret)
 
 
 if __name__ == '__main__':

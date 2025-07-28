@@ -1,8 +1,9 @@
-from unittest import TestCase
-from maintainer import GhPagesMaintainer
-from git import Repo
-import tempfile
 import os
+import tempfile
+from unittest import TestCase
+
+from git import Repo
+from maintainer import GhPagesMaintainer
 
 
 class GhPagesMaintainerTestCase(TestCase):

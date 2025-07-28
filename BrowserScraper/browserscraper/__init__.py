@@ -1,10 +1,11 @@
-from minerworkers import app
-from ._version import __version__
-from ._market_valuation_scraper import MarketValuationScraper
-from .tasks import update_market_pe_task, update_hk_market_pe_task
-from celery.schedules import crontab
 from celery import Celery
+from celery.schedules import crontab
 from detonator import get_logger
+from minerworkers import app
+
+from ._market_valuation_scraper import MarketValuationScraper
+from ._version import __version__
+from .tasks import update_hk_market_pe_task, update_market_pe_task
 
 _logger = get_logger('BrowserScraper')
 

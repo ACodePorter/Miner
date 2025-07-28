@@ -1,4 +1,4 @@
-from mongoengine import Document, StringField, ListField
+from mongoengine import Document, ListField, StringField
 
 
 class IndexTickers(Document):

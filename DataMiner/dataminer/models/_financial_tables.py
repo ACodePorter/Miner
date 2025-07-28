@@ -1,4 +1,4 @@
-from mongoengine import Document, DateField, FloatField, StringField
+from mongoengine import DateField, Document, FloatField, StringField
 
 
 class Balancesheet(Document):

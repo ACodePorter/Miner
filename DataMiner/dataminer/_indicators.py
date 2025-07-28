@@ -8,14 +8,15 @@ import os
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 from multiprocessing import Pool
-from typing import Literal, Dict
+from typing import Dict, Literal
 
 import numpy
-from detonator import is_in_daemon, make_db_connection, get_logger, mongo_2_df, SingletonParent
+from detonator import (SingletonParent, get_logger, is_in_daemon,
+                       make_db_connection, mongo_2_df)
 from mongoengine import QuerySet
 from pymongo import UpdateOne
 
-from .models import TickerDailyInfo, IndexTickers
+from .models import IndexTickers, TickerDailyInfo
 
 _logger = get_logger('Indicators')
 

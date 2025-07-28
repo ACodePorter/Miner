@@ -1,5 +1,5 @@
-from mongoengine import Document, EmbeddedDocument, EmbeddedDocumentListField, FloatField, \
-    ComplexDateTimeField, StringField
+from mongoengine import (ComplexDateTimeField, Document, EmbeddedDocument,
+                         EmbeddedDocumentListField, FloatField, StringField)
 
 
 class MarketBreadthSectorScore(EmbeddedDocument):

@@ -1,4 +1,5 @@
-from mongoengine import ComplexDateTimeField, Document, StringField, FloatField, IntField
+from mongoengine import (ComplexDateTimeField, Document, FloatField, IntField,
+                         StringField)
 
 
 class TickerMinInfo(Document):

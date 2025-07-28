@@ -1,12 +1,12 @@
 from typing import List
 
-from minerworkers import app
-from celery import chain
-from detonator import get_logger
-
-from dataminer import MarketDataShovel, Indicators, IsharesScraper, TradeCalendarShovel
-from marketbreadth.tasks import update_spx_market_breadth_task
 from browserscraper.tasks import update_hk_market_pe_task
+from celery import chain
+from dataminer import (Indicators, IsharesScraper, MarketDataShovel,
+                       TradeCalendarShovel, WedgePop)
+from detonator import get_logger
+from marketbreadth.tasks import update_spx_market_breadth_task
+from minerworkers import app
 
 _logger = get_logger('MinerService.Tasks')
 
@@ -155,6 +155,13 @@ def update_indicators_for_tickers_task(tickers: List[str]) -> bool:
 
 
 @app.task
+def update_wedge_pop_for_index_task() -> bool:
+    _logger.debug('update_wedge_pop_for_index_task')
+    wedge_pop: WedgePop = WedgePop.get_instance()
+    return wedge_pop.update_wedge_pop_for_index('spx') and wedge_pop.update_wedge_pop_for_index('iwd') and wedge_pop.update_wedge_pop_for_index('iwf') and wedge_pop.update_wedge_pop_for_index('iwm')
+
+
+@app.task
 def run_us_daily_updates_task() -> bool:
     """
     Run all daily update tasks in sequence at 16:30 (with 5 min window)
@@ -188,6 +195,9 @@ def run_us_daily_updates_task() -> bool:
         update_iwm_tickers_daily_info_task.si(),
         update_spx_daily_ma_task.si(),
         update_iw_daily_ma_task.si(),
+
+        # update wedge pop/drop for all tickers
+        update_wedge_pop_for_index_task.si(),
 
         # Then update idxs daily info
         update_us_idxs_daily_info_task.si(),

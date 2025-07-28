@@ -1,7 +1,7 @@
 import json
 from typing import Type
 
-from mongoengine import Document, QuerySet, NotUniqueError
+from mongoengine import Document, NotUniqueError, QuerySet
 from pandas import DataFrame
 
 from ._log import get_logger
@@ -49,4 +49,4 @@ def mongo_2_df(querySet: QuerySet) -> DataFrame:
     '''
     将数据库中查询到的数据转换为DataFrame,若无数据返回空的DataFrame
     '''
-    return DataFrame.from_dict(json.loads(querySet.to_json())).drop('_id', axis=1, errors='ignore')
+    return DataFrame.from_dict(json.loads(querySet.to_json()))

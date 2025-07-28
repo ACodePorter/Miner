@@ -1,7 +1,7 @@
 from unittest import TestCase
 
-from minerworkers.tasks import this_is_the_test_task, this_another_test_task
 from minerworkers import test_task_a
+from minerworkers.tasks import this_another_test_task, this_is_the_test_task
 
 
 class TasksTestCase(TestCase):

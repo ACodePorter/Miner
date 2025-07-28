@@ -1,5 +1,4 @@
-from typing import TypeVar, Type
-
+from typing import Type, TypeVar
 
 T = TypeVar('T', bound='SingletonParent')
 

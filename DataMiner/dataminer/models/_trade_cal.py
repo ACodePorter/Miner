@@ -1,4 +1,5 @@
-from mongoengine import ComplexDateTimeField, Document, StringField, BooleanField, DateTimeField
+from mongoengine import (BooleanField, ComplexDateTimeField, DateTimeField,
+                         Document, StringField)
 
 
 class TradeCalendar(Document):

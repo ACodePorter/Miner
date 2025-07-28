@@ -1,16 +1,16 @@
 from ._calendar import add_minus_to_YYYYmmdd, remove_minus_in_YYYYmmdd
 from ._celery import is_running_in_celery
-from ._collection import subdict, common_in_list, list_minus
+from ._collection import common_in_list, list_minus, subdict
 from ._config import Config, parser_config
-from ._data_converter import df_2_mongo, mongo_2_df, dict_to_mongo
-from ._datetime import tomorrow_of, datetime_from_str, utc_to_target_tz
+from ._data_converter import df_2_mongo, dict_to_mongo, mongo_2_df
+from ._datetime import datetime_from_str, tomorrow_of, utc_to_target_tz
 from ._db import ensure_db_connection, make_db_connection
-from ._env import is_in_docker, is_in_daemon, is_prod
+from ._env import is_in_daemon, is_in_docker, is_prod
 from ._exchanges import IDX_COUNTRY_EXCHANGE_MAP
-from ._hash import md5_str, md5_iterable
+from ._hash import md5_iterable, md5_str
 from ._log import get_logger
-from ._run_utils import sleep
-from ._singleton_meta import SingletonParent, SingletonMeta
+from ._run_utils import run_parallel, sleep
+from ._singleton_meta import SingletonMeta, SingletonParent
 from ._version import version
 
 __all__ = [
@@ -26,7 +26,7 @@ __all__ = [
     'IDX_COUNTRY_EXCHANGE_MAP',
     'md5_str', 'md5_iterable',
     'get_logger',
-    'sleep',
+    'sleep', 'run_parallel',
     'SingletonParent', 'SingletonMeta',
     'version',
 ]

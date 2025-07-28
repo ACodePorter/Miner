@@ -1,6 +1,7 @@
-from minerworkers import app
-from ._ghpages_maintainer import GhPagesMaintainer
 from detonator import get_logger
+from minerworkers import app
+
+from ._ghpages_maintainer import GhPagesMaintainer
 
 _logger = get_logger('Maintainer')
 

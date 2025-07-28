@@ -1,4 +1,4 @@
-from typing import Iterable, Dict, Any
+from typing import Any, Dict, Iterable
 
 
 def list_minus(l1: Iterable[Any], l2: Iterable[Any]) -> Iterable[Any]:

@@ -1,7 +1,8 @@
-from typing import Dict, Any
+from typing import Any, Dict
 
-from detonator import subdict, common_in_list, get_logger
-from mongoengine import Document, ComplexDateTimeField, StringField, FloatField, LongField
+from detonator import common_in_list, get_logger, subdict
+from mongoengine import (ComplexDateTimeField, Document, FloatField, LongField,
+                         StringField)
 
 
 class TickerDailyInfo(Document):
@@ -21,6 +22,10 @@ class TickerDailyInfo(Document):
     sma20 = FloatField()
     sma50 = FloatField()
     sma200 = FloatField()
+    wedge_status = StringField()
+    '''
+    none, pop, drop or not exist
+    '''
     governanceEpochDate = LongField()
     compensationAsOfEpochDate = LongField()
     dividendRate = FloatField()
@@ -135,6 +140,7 @@ class TickerDailyInfo(Document):
             {'fields': ['ticker', 'interval', 'sma50']},
             {'fields': ['ticker', 'interval', 'sma200']},
             {'fields': ['interval', 'ticker', 'trade_date']},
+            {'fields': ['wedge_status', '-ticker', '-trade_date']},
         ]
     }
 

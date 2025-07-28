@@ -1,4 +1,4 @@
-from mongoengine import Document, ComplexDateTimeField, FloatField, StringField
+from mongoengine import ComplexDateTimeField, Document, FloatField, StringField
 
 
 class MarketPe(Document):

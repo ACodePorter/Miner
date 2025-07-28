@@ -1,11 +1,10 @@
 import unittest
 from datetime import datetime, timedelta
 
-from dataminer import TradeCalendarShovel, MarketDataShovel
-from detonator import make_db_connection, get_logger
-from pytz import timezone
-
+from dataminer import MarketDataShovel, TradeCalendarShovel
+from detonator import get_logger, make_db_connection
 from marketbreadth import MarketBreadth
+from pytz import timezone
 
 _default_start_date = datetime.now(
     timezone('America/New_York')) - timedelta(days=7)

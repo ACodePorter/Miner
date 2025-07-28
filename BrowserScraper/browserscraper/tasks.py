@@ -1,4 +1,5 @@
 from minerworkers import app
+
 from ._market_valuation_scraper import MarketValuationScraper
 
 

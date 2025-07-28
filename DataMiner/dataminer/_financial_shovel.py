@@ -1,7 +1,7 @@
 from typing import Dict
 
 import yfinance as yf
-from detonator import SingletonParent, make_db_connection, dict_to_mongo
+from detonator import SingletonParent, dict_to_mongo, make_db_connection
 
 from .models import Balancesheet, CashflowTable, Financials
 

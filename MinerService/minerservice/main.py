@@ -1,22 +1,32 @@
-from typing import List
+from datetime import datetime, timedelta
+from typing import Any, List, Optional
 
+import pytz
+from browserscraper.tasks import update_market_pe_task
 from celery import chain
-from .tasks import update_iwm_tickers_info_task, update_iwd_tickers_task, update_iwd_tickers_info_task, \
-    update_iwd_tickers_daily_info_task, update_iwf_tickers_daily_info_task, update_iwm_tickers_daily_info_task
-from .tasks import update_spx_tickers_task, update_iwf_tickers_task, \
-    update_spx_tickers_info_task, update_spx_tickers_daily_info_task, \
-    update_us_trade_calendar_task, update_tickers_daily_info_task, update_spx_daily_ma_task, update_iwm_tickers_task, \
-    update_iwf_tickers_info_task, update_indicators_for_tickers_task, run_us_daily_updates_task, update_iw_daily_ma_task, run_hk_daily_updates_task
-from detonator import make_db_connection
+from dataminer import MarketDataShovel, WedgePop
+from dataminer.models import MarketPe
+from detonator import make_db_connection, mongo_2_df
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from marketbreadth import MarketBreadth
 from marketbreadth.tasks import update_spx_market_breadth_task
-from browserscraper.tasks import update_market_pe_task
-from dataminer.models import MarketPe
-from detonator import mongo_2_df
-from datetime import datetime, timedelta
-import pytz
+
+from .tasks import (run_hk_daily_updates_task, run_us_daily_updates_task,
+                    update_indicators_for_tickers_task,
+                    update_iw_daily_ma_task,
+                    update_iwd_tickers_daily_info_task,
+                    update_iwd_tickers_info_task, update_iwd_tickers_task,
+                    update_iwf_tickers_daily_info_task,
+                    update_iwf_tickers_info_task, update_iwf_tickers_task,
+                    update_iwm_tickers_daily_info_task,
+                    update_iwm_tickers_info_task, update_iwm_tickers_task,
+                    update_spx_daily_ma_task,
+                    update_spx_tickers_daily_info_task,
+                    update_spx_tickers_info_task, update_spx_tickers_task,
+                    update_tickers_daily_info_task,
+                    update_us_trade_calendar_task,
+                    update_wedge_pop_for_index_task)
 
 app = FastAPI()
 
@@ -116,6 +126,12 @@ async def update_market_pe() -> str:
 @app.get('/update_spx_market_breadth')
 async def update_spx_market_breadth() -> str:
     update_spx_market_breadth_task.delay()
+    return 'GOOD'
+
+
+@app.get('/update_wedge_pop_for_index')
+async def update_wedge_pop_for_index() -> str:
+    update_wedge_pop_for_index_task.delay()
     return 'GOOD'
 
 
@@ -237,3 +253,28 @@ async def get_market_pe(index: str = 'spx', start_date: str = None, end_date: st
             'max_pe': max_pe
         }
     }
+
+
+@app.get('/api/wedge_pop/wedges.json', description='Get wedge pop tickers since 1 year ago')
+async def get_wedge_pop_tickers() -> dict | list:
+    wedge_pop: WedgePop = WedgePop.get_instance()
+    start_date = datetime.now(tz=pytz.timezone(
+        'America/New_York')) - timedelta(days=365)
+    return wedge_pop.get_wedge_tickers_since(start_date)
+
+
+@app.get('/api/ohlcvw/{ticker}.json', description='Get OHLCVW data for a ticker, default to 3 years ago')
+async def get_ohlcvw(ticker: str, start_date: Optional[str] = None, end_date: Optional[str] = None, interval: str = '1d') -> dict | list[Any]:
+    md: MarketDataShovel = MarketDataShovel.get_instance()
+    if start_date is None:
+        start_date = datetime.now(tz=pytz.timezone(
+            'America/New_York')) - timedelta(days=365*3)
+    if end_date is None:
+        end_date = datetime.now(tz=pytz.timezone(
+            'America/New_York'))
+    dailies = md.get_ticker_daily_info(
+        ticker, start_date, end_date, interval=interval)
+    dailies_df = mongo_2_df(dailies)
+    dailies_df = dailies_df[['trade_date', 'ticker', 'open',
+                             'high', 'low', 'close', 'volume', 'wedge_status']]
+    return dailies_df.to_dict(orient='records')

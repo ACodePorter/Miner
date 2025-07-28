@@ -1,6 +1,6 @@
 import unittest
 
-from detonator import get_logger, SingletonParent
+from detonator import SingletonParent, get_logger
 
 _logger = get_logger('SingletonTestCase')
 

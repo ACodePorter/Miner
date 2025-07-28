@@ -2,7 +2,7 @@ import contextlib
 import logging
 from functools import wraps
 from logging.handlers import RotatingFileHandler
-from typing import Optional, Any, Callable
+from typing import Any, Callable, Optional
 
 from rich.console import Console
 from rich.logging import RichHandler

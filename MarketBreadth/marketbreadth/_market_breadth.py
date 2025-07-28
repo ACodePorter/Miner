@@ -5,7 +5,8 @@ import pandas as pd
 import pytz
 from dataminer import MarketDataShovel, TradeCalendarShovel
 from dataminer.models import IndexTickers, Ticker
-from detonator import SingletonParent, make_db_connection, mongo_2_df, get_logger
+from detonator import (SingletonParent, get_logger, make_db_connection,
+                       mongo_2_df)
 from pandas import DataFrame
 
 from .models import MarketBreadthScore, MarketBreadthSectorScore

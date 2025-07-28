@@ -4,11 +4,12 @@ Example script demonstrating how to use the optimized historical trade calendar 
 This script shows how to fetch historical trading calendar data efficiently in chunks.
 """
 
+import os
+import sys
+import time
+
 from dataminer import TradeCalendarShovel
 from detonator import get_logger, make_db_connection
-import time
-import sys
-import os
 
 # Add the parent directory to the path so we can import dataminer
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))

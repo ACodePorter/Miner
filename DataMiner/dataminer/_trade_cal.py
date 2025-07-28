@@ -1,10 +1,11 @@
+from datetime import date, datetime, timedelta
 from typing import List
 
 import exchange_calendars as xcals
-from datetime import datetime, timedelta, date
-import pytz
 import pandas as pd
-from detonator import SingletonParent, get_logger, df_2_mongo, make_db_connection, utc_to_target_tz
+import pytz
+from detonator import (SingletonParent, df_2_mongo, get_logger,
+                       make_db_connection, utc_to_target_tz)
 
 from .models import TradeCalendar
 
@@ -172,3 +173,13 @@ class TradeCalendarShovel(SingletonParent):
             _logger.error(
                 'Failed to get last_closed_us_trade_date', exc_info=e)
             return None
+
+    def is_trade_day(self, date: str | datetime, country: str = 'us', exchange: str = 'XNYS') -> bool:
+        if isinstance(date, str):
+            date = datetime.strptime(date, '%Y%m%d')
+        return TradeCalendar.objects(cal_date=date.strftime('%Y%m%d'), is_open=True, country=country, exchange=exchange).first() is not None
+
+    def get_last_closed_trade_date_before(self, day: str | datetime, country: str = 'us', exchange: str = 'XNYS') -> str:
+        if isinstance(day, datetime):
+            day = day.strftime('%Y%m%d')
+        return TradeCalendar.objects(cal_date__lte=day, is_open=True, country=country, exchange=exchange).order_by('-cal_date').first().cal_date
