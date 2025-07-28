@@ -272,9 +272,8 @@ async def get_ohlcvw(ticker: str, start_date: Optional[str] = None, end_date: Op
     if end_date is None:
         end_date = datetime.now(tz=pytz.timezone(
             'America/New_York'))
-    dailies = md.get_ticker_daily_info(
+    dailies_df = md.get_ticker_daily_info(
         ticker, start_date, end_date, interval=interval)
-    dailies_df = mongo_2_df(dailies)
     dailies_df = dailies_df[['trade_date', 'ticker', 'open',
                              'high', 'low', 'close', 'volume', 'wedge_status']]
     return dailies_df.to_dict(orient='records')

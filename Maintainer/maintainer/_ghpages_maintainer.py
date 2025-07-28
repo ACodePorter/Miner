@@ -1,9 +1,12 @@
 import json
 import os
+import shutil
 import tempfile
 from datetime import datetime, timedelta
-from typing import Literal
+from typing import Literal, Optional
 
+import pytz
+from dataminer import MarketDataShovel, WedgePop
 from dataminer.models import MarketPe
 from detonator import (IDX_COUNTRY_EXCHANGE_MAP, SingletonParent, get_logger,
                        make_db_connection, mongo_2_df)
@@ -20,7 +23,6 @@ class GhPagesMaintainer(SingletonParent):
     def __init__(self, repo_url: str = REPO_URL, branch: str = 'main'):
         self.repo_url = repo_url
         self.branch = branch
-        make_db_connection()
 
     def _export_market_pe(self, index: Literal['spx', 'qqq', 'ndx', 'hsi'], file: str, start_date: str | None = None, end_date: str | None = None):
         _, _, timezone = IDX_COUNTRY_EXCHANGE_MAP[index]
@@ -119,20 +121,63 @@ class GhPagesMaintainer(SingletonParent):
             json.dump(result, f, ensure_ascii=False, indent=2)
         return result
 
+    def _get_ohlcvw(self, ticker: str, start_date: Optional[str] = None, end_date: Optional[str] = None, interval: str = '1d'):
+        md: MarketDataShovel = MarketDataShovel.get_instance()
+        if start_date is None:
+            start_date = datetime.now(tz=pytz.timezone(
+                'America/New_York')) - timedelta(days=365*3)
+        if end_date is None:
+            end_date = datetime.now(tz=pytz.timezone(
+                'America/New_York'))
+        dailies_df = md.get_ticker_daily_info(
+            ticker, start_date, end_date, interval=interval)
+        dailies_df = dailies_df[['trade_date', 'ticker', 'open',
+                                 'high', 'low', 'close', 'volume', 'wedge_status']]
+        return dailies_df.to_dict(orient='records')
+
+    def _export_ohlcvw(self, file_of_wdges_pop: str, dir_of_ohlcvw: str) -> bool:
+        try:
+            wedge_pop: WedgePop = WedgePop.get_instance()
+            start_date = datetime.now(tz=pytz.timezone(
+                'America/New_York')) - timedelta(days=365)
+            tickers = wedge_pop.get_wedge_tickers_since(start_date)
+            with open(file_of_wdges_pop, 'w', encoding='utf-8') as f:
+                json.dump(tickers, f, ensure_ascii=False, indent=2)
+            for ticker in tickers:
+                result = self._get_ohlcvw(ticker)
+                with open(os.path.join(dir_of_ohlcvw, f'{ticker}.json'), 'w', encoding='utf-8') as f:
+                    json.dump(result, f, ensure_ascii=False, indent=2)
+            return True
+        except Exception as e:
+            _logger.error(f"Failed to export ohlcvw: {e}")
+            return False
+
     def _export_static_json(self, dir_of_miner: str):
         # Ensure all target directories exist
         os.makedirs(os.path.join(dir_of_miner, 'StkGuru',
                     'public', 'api', 'market_pe'), exist_ok=True)
         os.makedirs(os.path.join(dir_of_miner, 'StkGuru',
                     'public', 'api', 'mbs'), exist_ok=True)
+        os.makedirs(os.path.join(dir_of_miner, 'StkGuru',
+                    'public', 'api', 'ohlcvw'), exist_ok=True)
+        ohclvw_dir = os.path.join(dir_of_miner, 'StkGuru',
+                                  'public', 'api', 'ohlcvw')
+        if os.path.exists(ohclvw_dir):
+            shutil.rmtree(ohclvw_dir)
+        os.makedirs(ohclvw_dir, exist_ok=True)
+        os.makedirs(os.path.join(dir_of_miner, 'StkGuru',
+                    'public', 'api', 'wedge_pop'), exist_ok=True)
         self._export_market_pe('spx', os.path.join(
             dir_of_miner, 'StkGuru', 'public', 'api', 'market_pe', 'spx.json'))
         self._export_market_pe('hsi', os.path.join(
             dir_of_miner, 'StkGuru', 'public', 'api', 'market_pe', 'hsi.json'))
         self._export_market_breadth('spx', os.path.join(
             dir_of_miner, 'StkGuru', 'public', 'api', 'mbs', 'spx.json'))
+        self._export_ohlcvw(os.path.join(
+            dir_of_miner, 'StkGuru', 'public', 'api', 'wedge_pop', 'wedges.json'), ohclvw_dir)
 
     def update_gh_pages(self) -> bool:
+        make_db_connection()
         try:
             # 1. Clone the repo to a temp directory
             with tempfile.TemporaryDirectory() as tmpdir:
@@ -153,7 +198,7 @@ class GhPagesMaintainer(SingletonParent):
                         f'Update static data exports {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}\n')
                     push_result: PushInfoList = repo.remotes.origin.push()
                     if len(push_result) == 0:
-                        _logger.error(f'Push failed: {push_result[0]}')
+                        _logger.error(f'Push failed: no push results')
                         return False
                     else:
                         _logger.info(f'\n{repo.git.show()}\n')

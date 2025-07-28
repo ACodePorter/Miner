@@ -1,4 +1,5 @@
 import os
+import shutil
 import tempfile
 from unittest import TestCase
 
@@ -47,6 +48,15 @@ class GhPagesMaintainerTestCase(TestCase):
             else:
                 # No changes to commit
                 return True
+
+    def test_export_ohlcvw(self):
+        gpm = GhPagesMaintainer.get_instance()
+        if os.path.exists('../../StkGuru/public/api/ohlcvw'):
+            shutil.rmtree('../../StkGuru/public/api/ohlcvw')
+        os.makedirs('../../StkGuru/public/api/ohlcvw', exist_ok=True)
+        os.makedirs('../../StkGuru/public/api/wedge_pop', exist_ok=True)
+        gpm._export_ohlcvw(
+            '../../StkGuru/public/api/wedge_pop/wedges.json', '../../StkGuru/public/api/ohlcvw')
 
     def test_update_gh_pages(self):
         gpm = GhPagesMaintainer.get_instance()
