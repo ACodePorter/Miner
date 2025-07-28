@@ -340,7 +340,7 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
       return [timestamp, macdData.histogram[index] || null];
     }).filter(item => item[1] !== null);
 
-    // Create wedge status markers
+    // Create wedge status markers with blur light effect
     const wedgeMarkers = sortedData.map((item) => {
       // Handle different date formats from the backend
       let timestamp: number;
@@ -361,11 +361,32 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
           x: timestamp,
           y: item.high,
           marker: {
-            symbol: 'arrow-up',
-            fillColor: '#10B981',
-            lineColor: '#10B981',
-            lineWidth: 2,
-            radius: 5
+            symbol: 'circle',
+            fillColor: '#A6E22E',
+            lineColor: 'transparent',
+            lineWidth: 0,
+            radius: 6,
+            states: {
+              hover: {
+                enabled: true,
+                radius: 10,
+                fillColor: '#A6E22E',
+                lineColor: 'transparent',
+                brightness: 0.5
+              }
+            }
+          },
+          dataLabels: {
+            enabled: true,
+            format: 'POP',
+            style: {
+              color: '#A6E22E',
+              fontSize: '9px',
+              fontWeight: 'bold',
+              textOutline: 'none',
+              textShadow: '0 0 3px #A6E22E'
+            },
+            y: -20
           }
         };
       } else if (item.wedge_status === 'drop') {
@@ -373,11 +394,32 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
           x: timestamp,
           y: item.low,
           marker: {
-            symbol: 'arrow-down',
-            fillColor: '#EF4444',
-            lineColor: '#EF4444',
-            lineWidth: 2,
-            radius: 5
+            symbol: 'circle',
+            fillColor: '#F92672',
+            lineColor: 'transparent',
+            lineWidth: 0,
+            radius: 6,
+            states: {
+              hover: {
+                enabled: true,
+                radius: 10,
+                fillColor: '#F92672',
+                lineColor: 'transparent',
+                brightness: 0.5
+              }
+            }
+          },
+          dataLabels: {
+            enabled: true,
+            format: 'DROP',
+            style: {
+              color: '#F92672',
+              fontSize: '9px',
+              fontWeight: 'bold',
+              textOutline: 'none',
+              textShadow: '0 0 3px #F92672'
+            },
+            y: 20
           }
         };
       }
@@ -439,7 +481,7 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
             // Chart loaded successfully
           },
           mouseOver: function(this: any, e: any) {
-            // Highlight wedge status dots when hovering over candlesticks
+            // Subtle blur light highlighting
             if (e.target && e.target.series && e.target.series.type === 'candlestick') {
               const chart = this;
               const wedgeSeries = chart.series.find((s: any) => s.name === 'Wedge Status');
@@ -448,12 +490,15 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
                 const hoveredX = e.target.x;
                 wedgeSeries.points.forEach((point: any) => {
                   if (Math.abs(point.x - hoveredX) < 24 * 60 * 60 * 1000) { // Within 1 day
+                    const isPop = point.dataLabels?.text === 'POP';
+                    const color = isPop ? '#A6E22E' : '#F92672';
                     point.update({
                       marker: {
-                        radius: 5,
-                        lineWidth: 2,
-                        fillColor: '#F92672', // Highlight color
-                        lineColor: '#F92672'
+                        radius: 12,
+                        lineWidth: 0,
+                        fillColor: color,
+                        lineColor: 'transparent',
+                        symbol: 'circle'
                       }
                     }, false);
                   }
@@ -463,18 +508,21 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
             }
           },
           mouseOut: function(this: any, e: any) {
-            // Reset wedge status dots when mouse leaves candlesticks
+            // Reset wedge status dots to blur light effect
             if (e.target && e.target.series && e.target.series.type === 'candlestick') {
               const chart = this;
               const wedgeSeries = chart.series.find((s: any) => s.name === 'Wedge Status');
               if (wedgeSeries) {
                 wedgeSeries.points.forEach((point: any) => {
+                  const isPop = point.dataLabels?.text === 'POP';
+                  const color = isPop ? '#A6E22E' : '#F92672';
                   point.update({
                     marker: {
-                      radius: 3,
-                      lineWidth: 1,
-                      fillColor: '#A6E22E',
-                      lineColor: '#A6E22E'
+                      radius: 6,
+                      lineWidth: 0,
+                      fillColor: color,
+                      lineColor: 'transparent',
+                      symbol: 'circle'
                     }
                   }, false);
                 });
@@ -653,26 +701,48 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
           name: "Wedge Status",
           data: wedgeMarkers,
           type: "scatter",
-          zIndex: 3,
+          zIndex: 10, // Higher z-index to ensure visibility
           marker: {
             enabled: true,
-            radius: 1, // Very small dots
-            symbol: 'arrow-up',
+            radius: 6, // Soft blur light size
+            symbol: 'circle',
             fillColor: '#A6E22E', // Monokai green
-            lineColor: '#A6E22E', // Monokai green
-            lineWidth: 0.3, // Very thin line
+            lineColor: 'transparent', // No border for blur effect
+            lineWidth: 0,
             states: {
               hover: {
                 enabled: true,
-                radius: 3, // Small hover state
-                lineWidth: 0.8, // Thin hover line
-                lineColor: '#A6E22E'
+                radius: 10, // Larger glow on hover
+                fillColor: '#A6E22E',
+                lineColor: 'transparent',
+                brightness: 0.5
               }
             }
           },
           tooltip: {
             pointFormat: '{point.series.name}: {point.y:.2f}',
+            backgroundColor: 'rgba(17, 24, 39, 0.98)',
+            borderWidth: 0,
+            shadow: true,
+            borderRadius: 8,
+            style: { fontSize: '13px', color: '#ffffff' },
+            formatter: function(this: any) {
+              const date = Highcharts.dateFormat('%Y-%m-%d', this.x);
+              const status = this.point.dataLabels?.text || 'Wedge';
+              const color = status === 'POP' ? '#A6E22E' : '#F92672';
+              return `<div style="padding: 4px 0;"><b style="color: ${color}; font-size: 14px;">${status} - ${date}</b></div>`;
+            }
           },
+          dataLabels: {
+            enabled: true,
+            style: {
+              color: '#A6E22E',
+              fontSize: '9px',
+              fontWeight: 'bold',
+              textOutline: 'none',
+              textShadow: '0 0 3px #A6E22E'
+            }
+          }
         },
         {
           name: "EMA10",
