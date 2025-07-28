@@ -45,7 +45,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
   const [peData, setPeData] = useState<PEData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [nYears, setNYears] = useState<number>(10); // N-year window
+  const [nYears, setNYears] = useState<number>(20); // N-year window
   const [showPercentageLines, setShowPercentageLines] = useState(true);
   const [showStdDevLines, setShowStdDevLines] = useState(false);
   const [isRefreshing, setIsRefreshing] = useState(false);
@@ -151,13 +151,13 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
       }
     }
 
-    // Calculate default xAxis min and max for last 3 years
+    // Calculate default xAxis min and max for last 6 months
     let xAxisMin: number | undefined = undefined;
     let xAxisMax: number | undefined = undefined;
     if (peData?.data && peData.data.length) {
       xAxisMax = peData.data[peData.data.length - 1][0];
-      const ms3y = 3 * 365.25 * 24 * 3600 * 1000;
-      xAxisMin = xAxisMax - ms3y;
+      const ms6m = 6 * 30.44 * 24 * 3600 * 1000; // 6 months in milliseconds
+      xAxisMin = xAxisMax - ms6m;
       if (xAxisMin < peData.data[0][0]) xAxisMin = peData.data[0][0];
     }
 
@@ -465,7 +465,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
       },
       rangeSelector: {
         enabled: true,
-        selected: 1, // 3y button
+        selected: 0, // 6m button
         inputEnabled: false,
         buttonTheme: {
           fill: "rgba(0, 0, 0, 0.9)",
@@ -493,6 +493,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
           },
         },
         buttons: [
+          { type: "month", count: 6, text: "6m" },
           { type: "year", count: 1, text: "1y" },
           { type: "year", count: 3, text: "3y" },
           { type: "year", count: 5, text: "5y" },

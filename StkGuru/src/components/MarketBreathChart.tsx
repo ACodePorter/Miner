@@ -540,7 +540,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
       },
       rangeSelector: {
         enabled: true,
-        selected: 0, // 1y button
+        selected: 0, // 6m button
         inputEnabled: false,
         buttonTheme: {
           fill: "rgba(0, 0, 0, 0.9)",
@@ -568,6 +568,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
           },
         },
         buttons: [
+          { type: "month", count: 6, text: "6m" },
           { type: "year", count: 1, text: "1y" },
           { type: "year", count: 2, text: "2y" },
           { type: "year", count: 3, text: "3y" },
