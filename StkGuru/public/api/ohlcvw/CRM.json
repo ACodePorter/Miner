@@ -7488,5 +7488,15 @@
     "close": 269.1400146484,
     "volume": 3433150.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,28,00,00,00,000000",
+    "ticker": "CRM",
+    "open": 269.5,
+    "high": 270.3399963379,
+    "low": 266.5899963379,
+    "close": 270.25,
+    "volume": 3621259.0,
+    "wedge_status": NaN
   }
 ]

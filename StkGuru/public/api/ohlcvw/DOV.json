@@ -7488,5 +7488,15 @@
     "close": 186.5,
     "volume": 1379805.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,07,28,00,00,00,000000",
+    "ticker": "DOV",
+    "open": 187.0,
+    "high": 186.9600067139,
+    "low": 184.5700073242,
+    "close": 184.9100036621,
+    "volume": 930174.0,
+    "wedge_status": NaN
   }
 ]
