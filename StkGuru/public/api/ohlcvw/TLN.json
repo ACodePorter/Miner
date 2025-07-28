@@ -1,0 +1,5382 @@
+[
+  {
+    "trade_date": "2023,06,02,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 46.375,
+    "high": 46.5,
+    "low": 46.25,
+    "close": 46.5,
+    "volume": 75000.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,06,05,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 45.0,
+    "high": 46.5,
+    "low": 45.0,
+    "close": 46.5,
+    "volume": 900.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,06,06,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 44.5,
+    "high": 46.0,
+    "low": 44.5,
+    "close": 46.0,
+    "volume": 800.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,06,07,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 46.0,
+    "high": 46.25,
+    "low": 46.0,
+    "close": 46.25,
+    "volume": 90200.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,06,08,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 46.25,
+    "high": 46.5,
+    "low": 46.25,
+    "close": 46.5,
+    "volume": 1600.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,06,09,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 46.4900016785,
+    "high": 46.5,
+    "low": 46.0,
+    "close": 46.0,
+    "volume": 27200.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,06,12,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 45.0,
+    "high": 46.5,
+    "low": 45.0,
+    "close": 46.5,
+    "volume": 900.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,06,13,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 46.5,
+    "high": 46.5,
+    "low": 46.4000015259,
+    "close": 46.4300003052,
+    "volume": 8400.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,06,14,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 46.5,
+    "high": 46.5,
+    "low": 46.4199981689,
+    "close": 46.5,
+    "volume": 112200.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,06,15,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 46.5,
+    "high": 46.5,
+    "low": 46.5,
+    "close": 46.5,
+    "volume": 0.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,06,16,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 46.5,
+    "high": 46.5,
+    "low": 46.5,
+    "close": 46.5,
+    "volume": 0.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,06,20,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 46.5,
+    "high": 46.5,
+    "low": 46.1500015259,
+    "close": 46.1500015259,
+    "volume": 112000.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,06,21,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 46.5,
+    "high": 46.5,
+    "low": 46.5,
+    "close": 46.5,
+    "volume": 5000.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,06,22,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 46.5,
+    "high": 46.5,
+    "low": 46.5,
+    "close": 46.5,
+    "volume": 600.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,06,23,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 46.5,
+    "high": 46.5,
+    "low": 46.4000015259,
+    "close": 46.4500007629,
+    "volume": 600.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,06,26,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 47.0999984741,
+    "high": 48.5,
+    "low": 46.4000015259,
+    "close": 47.125,
+    "volume": 30800.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,06,27,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 47.0499992371,
+    "high": 47.5,
+    "low": 47.0499992371,
+    "close": 47.5,
+    "volume": 108300.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,06,28,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 48.0,
+    "high": 52.5,
+    "low": 48.0,
+    "close": 50.0,
+    "volume": 34600.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,06,29,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 49.8800010681,
+    "high": 49.8800010681,
+    "low": 49.375,
+    "close": 49.4900016785,
+    "volume": 59700.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,06,30,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 49.5,
+    "high": 50.4500007629,
+    "low": 49.0,
+    "close": 50.1500015259,
+    "volume": 187500.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,07,03,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 50.9949989319,
+    "high": 50.9949989319,
+    "low": 50.3600006104,
+    "close": 50.3600006104,
+    "volume": 800.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,07,05,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 50.3499984741,
+    "high": 50.3499984741,
+    "low": 49.5250015259,
+    "close": 50.0,
+    "volume": 19300.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,07,06,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 50.25,
+    "high": 50.25,
+    "low": 49.5,
+    "close": 50.1500015259,
+    "volume": 126600.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,07,07,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 51.0,
+    "high": 52.5,
+    "low": 51.0,
+    "close": 51.5099983215,
+    "volume": 61100.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,07,10,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 51.75,
+    "high": 52.25,
+    "low": 51.0,
+    "close": 52.25,
+    "volume": 229300.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,07,11,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 52.1500015259,
+    "high": 52.1629981995,
+    "low": 52.0,
+    "close": 52.0,
+    "volume": 245700.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,07,12,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 51.9000015259,
+    "high": 52.5,
+    "low": 51.7000007629,
+    "close": 52.1500015259,
+    "volume": 160100.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,07,13,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 52.0379981995,
+    "high": 52.1500015259,
+    "low": 51.75,
+    "close": 51.75,
+    "volume": 68300.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,07,14,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 52.0999984741,
+    "high": 52.0999984741,
+    "low": 51.75,
+    "close": 52.0,
+    "volume": 157900.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,07,17,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 51.9029998779,
+    "high": 52.1500015259,
+    "low": 51.577999115,
+    "close": 51.9000015259,
+    "volume": 12100.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,07,18,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 51.6199989319,
+    "high": 51.75,
+    "low": 51.6199989319,
+    "close": 51.75,
+    "volume": 600.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,07,19,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 51.75,
+    "high": 51.9500007629,
+    "low": 51.75,
+    "close": 51.9500007629,
+    "volume": 5900.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,07,20,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 51.9000015259,
+    "high": 51.9000015259,
+    "low": 51.75,
+    "close": 51.875,
+    "volume": 151500.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,07,21,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 51.75,
+    "high": 52.0,
+    "low": 51.75,
+    "close": 52.0,
+    "volume": 12800.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,07,24,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 51.75,
+    "high": 51.75,
+    "low": 51.375,
+    "close": 51.5,
+    "volume": 9900.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,07,25,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 51.25,
+    "high": 52.5,
+    "low": 51.0,
+    "close": 52.5,
+    "volume": 390300.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,07,26,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 51.0,
+    "high": 52.75,
+    "low": 51.0,
+    "close": 52.6920013428,
+    "volume": 327200.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,07,27,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 53.0,
+    "high": 54.4129981995,
+    "low": 51.5,
+    "close": 52.5,
+    "volume": 129900.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,07,28,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 53.25,
+    "high": 54.25,
+    "low": 53.0,
+    "close": 54.25,
+    "volume": 5100.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,07,31,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.75,
+    "high": 54.75,
+    "low": 52.5,
+    "close": 54.25,
+    "volume": 134600.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,08,01,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 53.6749992371,
+    "high": 54.0999984741,
+    "low": 53.0,
+    "close": 54.0999984741,
+    "volume": 211500.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,08,02,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.0,
+    "high": 54.25,
+    "low": 52.75,
+    "close": 53.375,
+    "volume": 4600.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,08,03,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.0,
+    "high": 55.0,
+    "low": 53.5,
+    "close": 53.75,
+    "volume": 50600.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,08,04,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.25,
+    "high": 56.2999992371,
+    "low": 53.375,
+    "close": 53.625,
+    "volume": 358600.0,
+    "wedge_status": NaN
+  },
+  {
+    "trade_date": "2023,08,07,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.0,
+    "high": 54.0,
+    "low": 54.0,
+    "close": 54.0,
+    "volume": 200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,08,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.8600006104,
+    "high": 55.0,
+    "low": 54.5999984741,
+    "close": 55.0,
+    "volume": 1800.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,08,09,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 55.5,
+    "high": 55.5,
+    "low": 54.5,
+    "close": 54.5,
+    "volume": 55500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,10,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 55.0,
+    "high": 55.0,
+    "low": 54.3499984741,
+    "close": 54.5,
+    "volume": 41800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,11,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.5,
+    "high": 54.5,
+    "low": 54.25,
+    "close": 54.25,
+    "volume": 5400.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,08,14,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 55.0,
+    "high": 55.5,
+    "low": 54.5999984741,
+    "close": 55.0,
+    "volume": 28800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,15,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 55.0,
+    "high": 55.0,
+    "low": 54.25,
+    "close": 54.3499984741,
+    "volume": 22700.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,08,16,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.4799995422,
+    "high": 55.5,
+    "low": 54.0,
+    "close": 55.0,
+    "volume": 193200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,17,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.3899993896,
+    "high": 54.3899993896,
+    "low": 53.4000015259,
+    "close": 54.0,
+    "volume": 2800.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,08,18,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 52.0499992371,
+    "high": 54.0,
+    "low": 52.0499992371,
+    "close": 53.5,
+    "volume": 7800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,21,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 53.125,
+    "high": 53.125,
+    "low": 52.9379997253,
+    "close": 53.0,
+    "volume": 7000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,22,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 52.75,
+    "high": 57.2999992371,
+    "low": 52.75,
+    "close": 53.5,
+    "volume": 105800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,23,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.0,
+    "high": 54.0,
+    "low": 53.75,
+    "close": 54.0,
+    "volume": 24400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,24,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 53.5,
+    "high": 54.0,
+    "low": 53.25,
+    "close": 53.6500015259,
+    "volume": 66000.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,08,25,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 53.2929992676,
+    "high": 53.5,
+    "low": 53.25,
+    "close": 53.5,
+    "volume": 5900.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,08,28,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 53.7929992676,
+    "high": 55.0,
+    "low": 53.75,
+    "close": 55.0,
+    "volume": 5400.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,08,29,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 55.0,
+    "high": 55.0,
+    "low": 54.2999992371,
+    "close": 54.75,
+    "volume": 23500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,30,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 55.0,
+    "high": 55.0,
+    "low": 52.75,
+    "close": 55.0,
+    "volume": 2800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,31,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 55.0,
+    "high": 55.2999992371,
+    "low": 55.0,
+    "close": 55.25,
+    "volume": 259800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,01,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 55.4799995422,
+    "high": 56.8300018311,
+    "low": 55.25,
+    "close": 55.25,
+    "volume": 14300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,05,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 55.0,
+    "high": 56.0,
+    "low": 54.75,
+    "close": 54.75,
+    "volume": 62000.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,09,06,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.75,
+    "high": 55.0,
+    "low": 54.0,
+    "close": 55.0,
+    "volume": 8100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,07,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 55.0,
+    "high": 55.0,
+    "low": 54.8260002136,
+    "close": 55.0,
+    "volume": 11100.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,09,08,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.7999992371,
+    "high": 55.0,
+    "low": 54.25,
+    "close": 54.75,
+    "volume": 44100.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,09,11,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.75,
+    "high": 55.0,
+    "low": 54.5,
+    "close": 54.8499984741,
+    "volume": 35300.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,09,12,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.8499984741,
+    "high": 54.9000015259,
+    "low": 54.8100013733,
+    "close": 54.9000015259,
+    "volume": 8200.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,09,13,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.5999984741,
+    "high": 55.0,
+    "low": 53.2599983215,
+    "close": 54.9000015259,
+    "volume": 3100.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,09,14,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.9000015259,
+    "high": 55.0,
+    "low": 54.5,
+    "close": 54.9000015259,
+    "volume": 30800.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,09,15,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 55.0,
+    "high": 55.0,
+    "low": 54.9000015259,
+    "close": 54.9000015259,
+    "volume": 20800.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,09,18,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.9000015259,
+    "high": 54.9000015259,
+    "low": 54.9000015259,
+    "close": 54.9000015259,
+    "volume": 0.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,09,19,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.9000015259,
+    "high": 54.9000015259,
+    "low": 54.2000007629,
+    "close": 54.9000015259,
+    "volume": 6600.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,09,20,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.5999984741,
+    "high": 54.75,
+    "low": 54.5499992371,
+    "close": 54.6399993896,
+    "volume": 42100.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,09,21,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.7000007629,
+    "high": 55.0,
+    "low": 52.0499992371,
+    "close": 54.5,
+    "volume": 88600.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,09,22,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.7400016785,
+    "high": 54.75,
+    "low": 54.25,
+    "close": 54.5,
+    "volume": 44400.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,09,25,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.75,
+    "high": 54.75,
+    "low": 54.0,
+    "close": 54.4000015259,
+    "volume": 157900.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,09,26,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.3499984741,
+    "high": 54.3499984741,
+    "low": 53.5,
+    "close": 53.8899993896,
+    "volume": 26900.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,09,27,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 53.5,
+    "high": 54.9000015259,
+    "low": 50.5,
+    "close": 53.25,
+    "volume": 227900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,28,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 53.5,
+    "high": 53.7400016785,
+    "low": 52.7999992371,
+    "close": 53.2000007629,
+    "volume": 12200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,29,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 53.0999984741,
+    "high": 53.75,
+    "low": 52.8300018311,
+    "close": 52.9000015259,
+    "volume": 14900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,02,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 52.9199981689,
+    "high": 53.5,
+    "low": 52.9199981689,
+    "close": 53.2200012207,
+    "volume": 26800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,03,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 53.75,
+    "high": 53.75,
+    "low": 50.75,
+    "close": 52.2999992371,
+    "volume": 11600.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,10,04,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 51.7599983215,
+    "high": 52.0,
+    "low": 51.5,
+    "close": 51.75,
+    "volume": 9600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,05,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 51.7000007629,
+    "high": 52.7799987793,
+    "low": 51.7000007629,
+    "close": 52.7799987793,
+    "volume": 31800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,06,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 52.7799987793,
+    "high": 52.7799987793,
+    "low": 52.1500015259,
+    "close": 52.5,
+    "volume": 109600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,09,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 52.25,
+    "high": 52.4000015259,
+    "low": 52.0099983215,
+    "close": 52.1500015259,
+    "volume": 8500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,10,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 52.1949996948,
+    "high": 52.1949996948,
+    "low": 51.7000007629,
+    "close": 51.8499984741,
+    "volume": 9500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,11,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 52.0,
+    "high": 52.5,
+    "low": 51.5499992371,
+    "close": 52.5,
+    "volume": 54700.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,10,12,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 52.4799995422,
+    "high": 52.7000007629,
+    "low": 51.5,
+    "close": 52.6800003052,
+    "volume": 309700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,13,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 52.7000007629,
+    "high": 54.9900016785,
+    "low": 51.7410011292,
+    "close": 52.5,
+    "volume": 42100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,16,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 52.4609985352,
+    "high": 52.5,
+    "low": 51.75,
+    "close": 51.75,
+    "volume": 10200.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,10,17,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 52.0999984741,
+    "high": 52.7900009155,
+    "low": 51.9900016785,
+    "close": 52.0900001526,
+    "volume": 21500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,18,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 52.0999984741,
+    "high": 52.4900016785,
+    "low": 52.0,
+    "close": 52.1100006104,
+    "volume": 38600.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,10,19,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 52.1100006104,
+    "high": 52.6399993896,
+    "low": 52.1100006104,
+    "close": 52.2000007629,
+    "volume": 229400.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,10,20,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 52.2000007629,
+    "high": 52.4000015259,
+    "low": 52.0,
+    "close": 52.0,
+    "volume": 16600.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,10,23,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 51.8100013733,
+    "high": 52.5,
+    "low": 51.8100013733,
+    "close": 52.3300018311,
+    "volume": 259300.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,10,24,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 53.6959991455,
+    "high": 53.75,
+    "low": 53.0,
+    "close": 53.1899986267,
+    "volume": 81500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,25,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.4300003052,
+    "high": 54.4300003052,
+    "low": 52.9599990845,
+    "close": 52.9599990845,
+    "volume": 101400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,26,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 53.46900177,
+    "high": 53.4900016785,
+    "low": 52.6699981689,
+    "close": 52.9000015259,
+    "volume": 189600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,27,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 53.2999992371,
+    "high": 53.5900001526,
+    "low": 52.75,
+    "close": 52.9980010986,
+    "volume": 102200.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,10,30,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 53.0,
+    "high": 53.0,
+    "low": 52.5200004578,
+    "close": 53.0,
+    "volume": 286400.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,10,31,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 53.0,
+    "high": 53.0,
+    "low": 52.375,
+    "close": 52.9799995422,
+    "volume": 50300.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,11,01,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 52.9799995422,
+    "high": 53.0,
+    "low": 52.5099983215,
+    "close": 52.8499984741,
+    "volume": 76900.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,11,02,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 52.9799995422,
+    "high": 52.9939994812,
+    "low": 52.75,
+    "close": 52.9000015259,
+    "volume": 42300.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,11,03,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 53.0,
+    "high": 53.3499984741,
+    "low": 52.9000015259,
+    "close": 52.9199981689,
+    "volume": 73800.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,11,06,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 53.0,
+    "high": 54.0,
+    "low": 53.0,
+    "close": 53.9000015259,
+    "volume": 233800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,07,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.0,
+    "high": 54.5,
+    "low": 53.6349983215,
+    "close": 54.25,
+    "volume": 130300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,08,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.25,
+    "high": 54.5740013123,
+    "low": 54.125,
+    "close": 54.2200012207,
+    "volume": 258800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,09,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.75,
+    "high": 54.75,
+    "low": 53.5200004578,
+    "close": 53.7700004578,
+    "volume": 196400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,10,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.1500015259,
+    "high": 56.8899993896,
+    "low": 54.0600013733,
+    "close": 54.75,
+    "volume": 66300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,13,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 55.25,
+    "high": 55.5,
+    "low": 55.0,
+    "close": 55.4199981689,
+    "volume": 150100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,14,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 56.5900001526,
+    "high": 56.5900001526,
+    "low": 52.0099983215,
+    "close": 54.4500007629,
+    "volume": 209100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,15,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.4900016785,
+    "high": 55.5,
+    "low": 53.75,
+    "close": 53.75,
+    "volume": 138800.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,11,16,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.0,
+    "high": 54.4399986267,
+    "low": 53.0299987793,
+    "close": 53.5,
+    "volume": 24000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,17,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 53.9900016785,
+    "high": 54.75,
+    "low": 53.9900016785,
+    "close": 54.5,
+    "volume": 34700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,20,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 55.1399993896,
+    "high": 55.1399993896,
+    "low": 53.3600006104,
+    "close": 54.3899993896,
+    "volume": 21600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,21,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.0,
+    "high": 54.3300018311,
+    "low": 54.0,
+    "close": 54.2999992371,
+    "volume": 165600.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,11,22,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 54.2999992371,
+    "high": 55.1800003052,
+    "low": 54.2999992371,
+    "close": 55.1500015259,
+    "volume": 95500.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,11,24,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 55.0800018311,
+    "high": 55.5,
+    "low": 55.0800018311,
+    "close": 55.4000015259,
+    "volume": 13100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,27,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 55.5,
+    "high": 55.5,
+    "low": 54.9199981689,
+    "close": 54.9199981689,
+    "volume": 30300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,28,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 53.9500007629,
+    "high": 57.0379981995,
+    "low": 53.9500007629,
+    "close": 55.2000007629,
+    "volume": 160500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,29,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 55.25,
+    "high": 56.1599998474,
+    "low": 55.25,
+    "close": 56.0,
+    "volume": 108400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,30,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 60.0,
+    "high": 60.0,
+    "low": 55.8199996948,
+    "close": 57.3499984741,
+    "volume": 222100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,01,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 57.1599998474,
+    "high": 60.2770004272,
+    "low": 57.0,
+    "close": 59.5499992371,
+    "volume": 271100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,04,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 60.0900001526,
+    "high": 60.0900001526,
+    "low": 58.5,
+    "close": 59.0999984741,
+    "volume": 314900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,05,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 59.1500015259,
+    "high": 59.3100013733,
+    "low": 56.1599998474,
+    "close": 59.0,
+    "volume": 123700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,06,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 59.25,
+    "high": 59.9900016785,
+    "low": 58.5099983215,
+    "close": 58.5999984741,
+    "volume": 204200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,07,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 57.5,
+    "high": 59.2400016785,
+    "low": 57.0099983215,
+    "close": 58.3199996948,
+    "volume": 63800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,08,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 58.4020004272,
+    "high": 59.3899993896,
+    "low": 58.0099983215,
+    "close": 58.7599983215,
+    "volume": 19100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,11,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 59.3899993896,
+    "high": 59.3899993896,
+    "low": 58.2599983215,
+    "close": 58.75,
+    "volume": 12900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,12,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 58.5099983215,
+    "high": 58.75,
+    "low": 58.25,
+    "close": 58.5499992371,
+    "volume": 47200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,13,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 58.0,
+    "high": 58.75,
+    "low": 58.0,
+    "close": 58.0499992371,
+    "volume": 68600.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,12,14,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 59.3899993896,
+    "high": 60.0999984741,
+    "low": 58.5,
+    "close": 59.2999992371,
+    "volume": 158900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,15,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 59.3499984741,
+    "high": 59.75,
+    "low": 58.9500007629,
+    "close": 59.25,
+    "volume": 47600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,18,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 58.9599990845,
+    "high": 61.9900016785,
+    "low": 58.2799987793,
+    "close": 60.3499984741,
+    "volume": 146000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,19,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 61.9900016785,
+    "high": 62.5,
+    "low": 61.2400016785,
+    "close": 62.0,
+    "volume": 154000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,20,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 60.0200004578,
+    "high": 63.0,
+    "low": 60.0200004578,
+    "close": 61.0,
+    "volume": 62800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,21,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 61.5,
+    "high": 64.9899978638,
+    "low": 61.2999992371,
+    "close": 62.5099983215,
+    "volume": 123200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,22,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 62.5099983215,
+    "high": 64.0,
+    "low": 60.0,
+    "close": 63.25,
+    "volume": 296800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,26,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 63.0900001526,
+    "high": 63.0900001526,
+    "low": 62.5,
+    "close": 63.0,
+    "volume": 30800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,27,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 62.9500007629,
+    "high": 63.4500007629,
+    "low": 60.2599983215,
+    "close": 63.2000007629,
+    "volume": 107900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,28,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 63.4500007629,
+    "high": 63.4500007629,
+    "low": 62.0999984741,
+    "close": 63.25,
+    "volume": 19000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,29,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 63.25,
+    "high": 69.9899978638,
+    "low": 62.75,
+    "close": 64.0,
+    "volume": 17700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,02,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 64.0,
+    "high": 69.9000015259,
+    "low": 63.5,
+    "close": 65.1999969482,
+    "volume": 179200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,03,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 65.25,
+    "high": 65.25,
+    "low": 63.5200004578,
+    "close": 64.0100021362,
+    "volume": 60900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,04,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 63.5099983215,
+    "high": 64.0,
+    "low": 60.5099983215,
+    "close": 62.2599983215,
+    "volume": 26700.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,01,05,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 62.2599983215,
+    "high": 63.2999992371,
+    "low": 62.2599983215,
+    "close": 63.0999984741,
+    "volume": 18200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,08,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 63.4000015259,
+    "high": 65.75,
+    "low": 63.4000015259,
+    "close": 65.0,
+    "volume": 376700.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,01,09,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 62.8800010681,
+    "high": 67.9800033569,
+    "low": 62.8600006104,
+    "close": 63.5,
+    "volume": 95500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,10,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 64.5999984741,
+    "high": 64.9000015259,
+    "low": 64.0,
+    "close": 64.5,
+    "volume": 16100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,11,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 64.5999984741,
+    "high": 65.0,
+    "low": 64.5999984741,
+    "close": 64.9000015259,
+    "volume": 20200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,12,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 64.6200027466,
+    "high": 65.2399978638,
+    "low": 64.3199996948,
+    "close": 64.5,
+    "volume": 32000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,16,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 64.5,
+    "high": 65.0500030518,
+    "low": 64.5,
+    "close": 65.0500030518,
+    "volume": 22800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,17,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 64.9800033569,
+    "high": 65.0,
+    "low": 64.5100021362,
+    "close": 64.5100021362,
+    "volume": 15600.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,01,18,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 64.8219985962,
+    "high": 65.0899963379,
+    "low": 64.6800003052,
+    "close": 65.0899963379,
+    "volume": 25500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,19,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 65.0800018311,
+    "high": 65.1500015259,
+    "low": 64.9300003052,
+    "close": 65.0999984741,
+    "volume": 21000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,22,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 65.0999984741,
+    "high": 65.0999984741,
+    "low": 64.9000015259,
+    "close": 65.0100021362,
+    "volume": 70700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,23,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 65.0,
+    "high": 65.1500015259,
+    "low": 65.0,
+    "close": 65.0899963379,
+    "volume": 42700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,24,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 65.0299987793,
+    "high": 65.25,
+    "low": 65.0,
+    "close": 65.25,
+    "volume": 52000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,25,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 65.25,
+    "high": 66.0,
+    "low": 65.25,
+    "close": 65.7900009155,
+    "volume": 84100.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,01,26,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 65.8000030518,
+    "high": 67.1100006104,
+    "low": 65.0100021362,
+    "close": 66.25,
+    "volume": 52500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,29,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 67.0,
+    "high": 67.0,
+    "low": 66.5999984741,
+    "close": 66.6999969482,
+    "volume": 27700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,30,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 66.75,
+    "high": 67.0,
+    "low": 66.6500015259,
+    "close": 66.6500015259,
+    "volume": 29900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,31,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 66.5500030518,
+    "high": 66.75,
+    "low": 66.25,
+    "close": 66.3499984741,
+    "volume": 66200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,01,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 66.3199996948,
+    "high": 67.0,
+    "low": 66.0,
+    "close": 67.0,
+    "volume": 28700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,02,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 66.8499984741,
+    "high": 67.5,
+    "low": 66.5,
+    "close": 67.25,
+    "volume": 16600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,05,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 67.0,
+    "high": 67.75,
+    "low": 67.0,
+    "close": 67.25,
+    "volume": 37100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,06,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 67.0,
+    "high": 67.3000030518,
+    "low": 67.0,
+    "close": 67.25,
+    "volume": 12600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,07,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 67.1750030518,
+    "high": 71.9899978638,
+    "low": 67.0,
+    "close": 69.0,
+    "volume": 50200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,08,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 67.7450027466,
+    "high": 68.25,
+    "low": 64.9899978638,
+    "close": 66.0,
+    "volume": 86800.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,02,09,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 66.0,
+    "high": 66.0,
+    "low": 64.5100021362,
+    "close": 65.9000015259,
+    "volume": 46500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,12,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 67.0,
+    "high": 67.68800354,
+    "low": 66.4000015259,
+    "close": 67.0,
+    "volume": 70900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,13,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 67.0,
+    "high": 67.4000015259,
+    "low": 66.4499969482,
+    "close": 67.0,
+    "volume": 17400.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,02,14,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 67.0,
+    "high": 67.2200012207,
+    "low": 66.5400009155,
+    "close": 67.0899963379,
+    "volume": 6900.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,02,15,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 67.0999984741,
+    "high": 67.1900024414,
+    "low": 66.5500030518,
+    "close": 66.9700012207,
+    "volume": 32700.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,02,16,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 67.1999969482,
+    "high": 72.0,
+    "low": 67.1999969482,
+    "close": 68.6999969482,
+    "volume": 268300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,20,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 68.6999969482,
+    "high": 68.6999969482,
+    "low": 67.0199966431,
+    "close": 68.0,
+    "volume": 43700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,21,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 67.0100021362,
+    "high": 68.1999969482,
+    "low": 67.0100021362,
+    "close": 68.0400009155,
+    "volume": 70800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,22,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 67.9700012207,
+    "high": 69.5449981689,
+    "low": 67.5500030518,
+    "close": 69.3499984741,
+    "volume": 214600.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,02,23,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 69.3499984741,
+    "high": 70.0,
+    "low": 68.8000030518,
+    "close": 69.9000015259,
+    "volume": 108300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,26,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 69.9000015259,
+    "high": 70.2200012207,
+    "low": 69.0650024414,
+    "close": 70.0,
+    "volume": 85500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,27,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 70.0,
+    "high": 74.0,
+    "low": 70.0,
+    "close": 72.9000015259,
+    "volume": 155900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,28,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 72.8000030518,
+    "high": 75.5,
+    "low": 72.5,
+    "close": 74.5,
+    "volume": 243200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,29,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 74.5,
+    "high": 75.0999984741,
+    "low": 74.5,
+    "close": 74.8000030518,
+    "volume": 11500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,01,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 74.6500015259,
+    "high": 79.9499969482,
+    "low": 74.6500015259,
+    "close": 75.5999984741,
+    "volume": 71600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,04,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 79.3600006104,
+    "high": 87.3000030518,
+    "low": 79.0,
+    "close": 85.1999969482,
+    "volume": 873500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,05,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 88.0,
+    "high": 88.5,
+    "low": 83.0,
+    "close": 86.0,
+    "volume": 947500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,06,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 85.6999969482,
+    "high": 87.4700012207,
+    "low": 85.5,
+    "close": 87.1999969482,
+    "volume": 376000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,07,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 87.9599990845,
+    "high": 87.9599990845,
+    "low": 83.9199981689,
+    "close": 86.5999984741,
+    "volume": 403000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,08,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 86.5599975586,
+    "high": 86.8000030518,
+    "low": 84.0,
+    "close": 85.0,
+    "volume": 156000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,11,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 85.5,
+    "high": 85.5,
+    "low": 83.1439971924,
+    "close": 84.1999969482,
+    "volume": 36500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,12,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 84.5999984741,
+    "high": 85.0,
+    "low": 83.7099990845,
+    "close": 84.5800018311,
+    "volume": 57200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,13,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 85.9899978638,
+    "high": 86.0,
+    "low": 83.5699996948,
+    "close": 84.3000030518,
+    "volume": 635200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,14,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 84.5,
+    "high": 87.5,
+    "low": 84.0500030518,
+    "close": 85.3000030518,
+    "volume": 612000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,15,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 85.9000015259,
+    "high": 86.0,
+    "low": 84.5699996948,
+    "close": 84.5699996948,
+    "volume": 51000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,18,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 85.5,
+    "high": 87.9400024414,
+    "low": 85.4800033569,
+    "close": 86.9899978638,
+    "volume": 70200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,19,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 86.5879974365,
+    "high": 87.3499984741,
+    "low": 86.5879974365,
+    "close": 87.0,
+    "volume": 70800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,20,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 87.0,
+    "high": 87.9899978638,
+    "low": 86.6800003052,
+    "close": 86.8499984741,
+    "volume": 464800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,21,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 86.8499984741,
+    "high": 87.8000030518,
+    "low": 86.8499984741,
+    "close": 87.0,
+    "volume": 50800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,22,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 87.0,
+    "high": 87.5,
+    "low": 86.75,
+    "close": 87.5,
+    "volume": 251400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,25,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 88.7699966431,
+    "high": 90.9899978638,
+    "low": 87.0,
+    "close": 90.0100021362,
+    "volume": 595000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,26,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 90.4899978638,
+    "high": 93.0,
+    "low": 90.25,
+    "close": 90.9000015259,
+    "volume": 469200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,27,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 93.0,
+    "high": 93.0,
+    "low": 90.3399963379,
+    "close": 91.4000015259,
+    "volume": 432900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,28,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 91.8000030518,
+    "high": 96.0800018311,
+    "low": 91.8000030518,
+    "close": 94.3499984741,
+    "volume": 651100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,01,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 96.0,
+    "high": 98.9899978638,
+    "low": 93.25,
+    "close": 94.8000030518,
+    "volume": 436400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,02,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 95.0,
+    "high": 95.0,
+    "low": 93.2699966431,
+    "close": 94.1200027466,
+    "volume": 166900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,03,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 94.0500030518,
+    "high": 94.5,
+    "low": 93.5599975586,
+    "close": 93.9000015259,
+    "volume": 323000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,04,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 93.8499984741,
+    "high": 95.0,
+    "low": 93.0,
+    "close": 93.5,
+    "volume": 191200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,05,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 93.8000030518,
+    "high": 94.4000015259,
+    "low": 92.75,
+    "close": 94.1900024414,
+    "volume": 60000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,08,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 94.4000015259,
+    "high": 95.0999984741,
+    "low": 93.5,
+    "close": 95.0,
+    "volume": 138300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,09,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 95.2799987793,
+    "high": 95.2799987793,
+    "low": 93.3000030518,
+    "close": 94.0,
+    "volume": 193800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,10,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 94.0,
+    "high": 94.0,
+    "low": 92.9899978638,
+    "close": 94.0,
+    "volume": 42700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,11,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 94.0,
+    "high": 94.0,
+    "low": 93.5999984741,
+    "close": 94.0,
+    "volume": 28600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,12,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 93.0839996338,
+    "high": 93.625,
+    "low": 92.8000030518,
+    "close": 93.5,
+    "volume": 94400.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,04,15,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 93.5,
+    "high": 93.8000030518,
+    "low": 90.8899993896,
+    "close": 93.7300033569,
+    "volume": 212100.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,04,16,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 93.7399978638,
+    "high": 93.7399978638,
+    "low": 92.5299987793,
+    "close": 93.0,
+    "volume": 44600.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,04,17,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 93.25,
+    "high": 93.25,
+    "low": 92.8000030518,
+    "close": 93.0100021362,
+    "volume": 112200.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,04,18,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 92.9000015259,
+    "high": 93.0,
+    "low": 92.5,
+    "close": 93.0,
+    "volume": 60400.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,04,19,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 92.9899978638,
+    "high": 93.5899963379,
+    "low": 92.0999984741,
+    "close": 92.5950012207,
+    "volume": 317000.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,04,22,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 93.09400177,
+    "high": 95.9899978638,
+    "low": 93.0400009155,
+    "close": 93.9899978638,
+    "volume": 120800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,23,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 93.9869995117,
+    "high": 95.0,
+    "low": 93.7099990845,
+    "close": 95.0,
+    "volume": 109700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,24,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 94.75,
+    "high": 96.9899978638,
+    "low": 94.75,
+    "close": 96.5899963379,
+    "volume": 275000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,25,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 97.0,
+    "high": 98.0,
+    "low": 96.8000030518,
+    "close": 97.9000015259,
+    "volume": 134500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,26,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 97.25,
+    "high": 101.1900024414,
+    "low": 97.25,
+    "close": 100.4000015259,
+    "volume": 91400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,29,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 100.4000015259,
+    "high": 100.4000015259,
+    "low": 99.0,
+    "close": 100.0,
+    "volume": 348800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,30,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 99.0400009155,
+    "high": 100.0999984741,
+    "low": 99.0199966431,
+    "close": 100.0,
+    "volume": 306000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,01,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 99.75,
+    "high": 103.0,
+    "low": 99.5100021362,
+    "close": 100.4499969482,
+    "volume": 413700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,02,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 100.2799987793,
+    "high": 101.0,
+    "low": 99.8359985352,
+    "close": 100.9000015259,
+    "volume": 266800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,03,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 101.0,
+    "high": 102.0,
+    "low": 101.0,
+    "close": 101.25,
+    "volume": 78100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,06,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 101.25,
+    "high": 105.0,
+    "low": 101.0,
+    "close": 104.0999984741,
+    "volume": 655000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,07,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 103.7600021362,
+    "high": 108.9000015259,
+    "low": 103.75,
+    "close": 103.75,
+    "volume": 435900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,08,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 105.0,
+    "high": 106.5,
+    "low": 105.0,
+    "close": 106.4000015259,
+    "volume": 303100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,09,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 106.25,
+    "high": 109.4700012207,
+    "low": 104.5199966431,
+    "close": 107.0,
+    "volume": 400000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,10,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 107.2200012207,
+    "high": 108.5,
+    "low": 106.0100021362,
+    "close": 106.75,
+    "volume": 253200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,13,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 108.25,
+    "high": 108.25,
+    "low": 104.8499984741,
+    "close": 104.8499984741,
+    "volume": 218800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,14,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 106.0999984741,
+    "high": 107.5,
+    "low": 100.9599990845,
+    "close": 104.75,
+    "volume": 479900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,15,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 102.0100021362,
+    "high": 109.7399978638,
+    "low": 102.0,
+    "close": 109.0100021362,
+    "volume": 505800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,16,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 109.9400024414,
+    "high": 109.9400024414,
+    "low": 106.5100021362,
+    "close": 108.0,
+    "volume": 395600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,17,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 108.0,
+    "high": 109.8899993896,
+    "low": 106.5500030518,
+    "close": 107.9599990845,
+    "volume": 455900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,20,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 108.1200027466,
+    "high": 108.4800033569,
+    "low": 107.0,
+    "close": 107.5999984741,
+    "volume": 842400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,21,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 107.5999984741,
+    "high": 108.1999969482,
+    "low": 107.3600006104,
+    "close": 107.75,
+    "volume": 368300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,22,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 108.1500015259,
+    "high": 108.5,
+    "low": 107.75,
+    "close": 108.4899978638,
+    "volume": 865100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,23,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 108.75,
+    "high": 125.7900009155,
+    "low": 108.75,
+    "close": 112.3499984741,
+    "volume": 1597200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,24,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 112.5,
+    "high": 115.5,
+    "low": 111.0,
+    "close": 115.3000030518,
+    "volume": 1270600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,28,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 120.7399978638,
+    "high": 120.7399978638,
+    "low": 112.6299972534,
+    "close": 113.5999984741,
+    "volume": 887100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,29,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 118.9899978638,
+    "high": 118.9899978638,
+    "low": 113.5100021362,
+    "close": 114.4100036621,
+    "volume": 1889000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,30,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 114.4100036621,
+    "high": 115.9000015259,
+    "low": 113.5999984741,
+    "close": 115.4899978638,
+    "volume": 793900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,31,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 115.3000030518,
+    "high": 115.8000030518,
+    "low": 114.1299972534,
+    "close": 115.1500015259,
+    "volume": 506100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,03,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 115.6999969482,
+    "high": 115.6999969482,
+    "low": 112.0999984741,
+    "close": 113.2399978638,
+    "volume": 552300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,04,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 113.6999969482,
+    "high": 113.9000015259,
+    "low": 106.1100006104,
+    "close": 108.7600021362,
+    "volume": 795500.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,06,05,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 109.0,
+    "high": 113.2900009155,
+    "low": 108.8199996948,
+    "close": 112.9100036621,
+    "volume": 790900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,06,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 112.9499969482,
+    "high": 114.0,
+    "low": 110.1200027466,
+    "close": 110.3700027466,
+    "volume": 820300.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,06,07,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 111.0,
+    "high": 113.4400024414,
+    "low": 110.5599975586,
+    "close": 111.6999969482,
+    "volume": 685100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,10,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 112.4000015259,
+    "high": 115.0,
+    "low": 112.4000015259,
+    "close": 114.5,
+    "volume": 308300.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,06,11,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 114.0599975586,
+    "high": 115.8000030518,
+    "low": 114.0599975586,
+    "close": 115.3700027466,
+    "volume": 1131900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,12,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 115.3600006104,
+    "high": 117.6149978638,
+    "low": 114.0199966431,
+    "close": 116.1699981689,
+    "volume": 583100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,13,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 115.5500030518,
+    "high": 116.75,
+    "low": 115.0100021362,
+    "close": 115.6999969482,
+    "volume": 489000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,14,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 115.6999969482,
+    "high": 117.25,
+    "low": 115.4100036621,
+    "close": 116.9000015259,
+    "volume": 510600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,17,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 115.4199981689,
+    "high": 117.0,
+    "low": 115.0199966431,
+    "close": 116.5,
+    "volume": 657900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,18,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 116.9000015259,
+    "high": 116.9000015259,
+    "low": 116.1100006104,
+    "close": 116.6999969482,
+    "volume": 225700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,20,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 116.9899978638,
+    "high": 117.5,
+    "low": 116.7300033569,
+    "close": 117.1999969482,
+    "volume": 554700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,21,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 116.5999984741,
+    "high": 119.9400024414,
+    "low": 116.5999984741,
+    "close": 119.1100006104,
+    "volume": 619600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,24,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 120.9000015259,
+    "high": 120.9000015259,
+    "low": 119.0,
+    "close": 120.0,
+    "volume": 309800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,25,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 119.7799987793,
+    "high": 121.0,
+    "low": 119.0199966431,
+    "close": 119.8499984741,
+    "volume": 262400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,26,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 120.1500015259,
+    "high": 120.6999969482,
+    "low": 112.6299972534,
+    "close": 114.4700012207,
+    "volume": 406700.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,06,27,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 113.0299987793,
+    "high": 114.4899978638,
+    "low": 106.8799972534,
+    "close": 110.4499969482,
+    "volume": 1541000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,28,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 109.5,
+    "high": 113.3399963379,
+    "low": 106.2200012207,
+    "close": 111.0199966431,
+    "volume": 375700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,01,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 113.9800033569,
+    "high": 116.4700012207,
+    "low": 111.2099990845,
+    "close": 116.0,
+    "volume": 867000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,02,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 116.4499969482,
+    "high": 119.9000015259,
+    "low": 115.0500030518,
+    "close": 118.0,
+    "volume": 1089200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,03,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 118.0999984741,
+    "high": 118.9400024414,
+    "low": 118.0999984741,
+    "close": 118.9400024414,
+    "volume": 128300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,05,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 119.0,
+    "high": 119.0,
+    "low": 116.2699966431,
+    "close": 118.9899978638,
+    "volume": 97400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,08,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 118.9499969482,
+    "high": 119.0599975586,
+    "low": 117.6800003052,
+    "close": 118.9899978638,
+    "volume": 170800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,09,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 121.75,
+    "high": 128.8500061035,
+    "low": 121.75,
+    "close": 125.0100021362,
+    "volume": 1670000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,10,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 121.0,
+    "high": 133.5,
+    "low": 121.0,
+    "close": 127.5,
+    "volume": 819100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,11,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 128.0399932861,
+    "high": 132.0899963379,
+    "low": 128.0,
+    "close": 130.8899993896,
+    "volume": 1418600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,12,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 131.6199951172,
+    "high": 133.3099975586,
+    "low": 130.6499938965,
+    "close": 131.4299926758,
+    "volume": 722400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,15,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 133.8200073242,
+    "high": 133.8200073242,
+    "low": 129.6499938965,
+    "close": 130.3099975586,
+    "volume": 650800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,16,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 130.1300048828,
+    "high": 135.5500030518,
+    "low": 129.1100006104,
+    "close": 134.1600036621,
+    "volume": 979400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,17,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 134.0,
+    "high": 134.0,
+    "low": 118.5699996948,
+    "close": 119.5,
+    "volume": 1210800.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,07,18,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 123.5,
+    "high": 127.3899993896,
+    "low": 118.0599975586,
+    "close": 120.5299987793,
+    "volume": 703600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,19,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 120.5299987793,
+    "high": 125.9899978638,
+    "low": 119.5800018311,
+    "close": 123.8499984741,
+    "volume": 300400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,22,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 124.3499984741,
+    "high": 127.8499984741,
+    "low": 122.0,
+    "close": 125.6800003052,
+    "volume": 467600.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,07,23,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 126.7900009155,
+    "high": 128.4499969482,
+    "low": 125.7419967651,
+    "close": 126.5599975586,
+    "volume": 581300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,24,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 127.4100036621,
+    "high": 127.4100036621,
+    "low": 118.6900024414,
+    "close": 120.0899963379,
+    "volume": 1442400.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,07,25,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 118.9199981689,
+    "high": 120.8700027466,
+    "low": 105.25,
+    "close": 109.0800018311,
+    "volume": 2627900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,26,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 109.6399993896,
+    "high": 113.8399963379,
+    "low": 105.5449981689,
+    "close": 113.6750030518,
+    "volume": 1021300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,29,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 114.0,
+    "high": 117.9199981689,
+    "low": 106.6699981689,
+    "close": 110.3000030518,
+    "volume": 852500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,30,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 111.9700012207,
+    "high": 116.3499984741,
+    "low": 108.2699966431,
+    "close": 110.8600006104,
+    "volume": 1057100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,31,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 130.0,
+    "high": 130.9499969482,
+    "low": 122.1600036621,
+    "close": 124.6500015259,
+    "volume": 3517600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,01,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 124.6500015259,
+    "high": 125.5699996948,
+    "low": 117.2300033569,
+    "close": 121.0999984741,
+    "volume": 1112200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,02,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 119.4700012207,
+    "high": 122.8700027466,
+    "low": 98.5,
+    "close": 114.6299972534,
+    "volume": 1917200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,05,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 104.4700012207,
+    "high": 116.9199981689,
+    "low": 102.7099990845,
+    "close": 114.2200012207,
+    "volume": 1142100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,06,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 114.7699966431,
+    "high": 120.3300018311,
+    "low": 114.2799987793,
+    "close": 117.2399978638,
+    "volume": 635200.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,08,07,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 119.0,
+    "high": 122.5650024414,
+    "low": 114.0,
+    "close": 116.4400024414,
+    "volume": 489600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,08,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 117.0199966431,
+    "high": 121.4599990845,
+    "low": 117.0,
+    "close": 119.4800033569,
+    "volume": 487600.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,08,09,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 119.4800033569,
+    "high": 125.0,
+    "low": 118.25,
+    "close": 123.5599975586,
+    "volume": 430800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,12,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 123.75,
+    "high": 125.3249969482,
+    "low": 113.4100036621,
+    "close": 119.7600021362,
+    "volume": 688100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,13,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 135.0,
+    "high": 135.0,
+    "low": 120.4670028687,
+    "close": 126.8899993896,
+    "volume": 1085200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,14,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 128.0,
+    "high": 134.0899963379,
+    "low": 126.0,
+    "close": 129.8099975586,
+    "volume": 1571100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,15,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 131.0,
+    "high": 139.9900054932,
+    "low": 130.9100036621,
+    "close": 135.6399993896,
+    "volume": 976300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,16,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 136.5800018311,
+    "high": 139.0,
+    "low": 131.9600067139,
+    "close": 132.9600067139,
+    "volume": 372200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,19,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 132.9600067139,
+    "high": 138.1499938965,
+    "low": 131.3099975586,
+    "close": 137.6499938965,
+    "volume": 362800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,20,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 139.5099945068,
+    "high": 139.5099945068,
+    "low": 133.0200042725,
+    "close": 134.25,
+    "volume": 229600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,21,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 136.6699981689,
+    "high": 142.1900024414,
+    "low": 136.5599975586,
+    "close": 139.0099945068,
+    "volume": 771700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,22,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 140.0500030518,
+    "high": 143.8300018311,
+    "low": 137.9199981689,
+    "close": 143.0,
+    "volume": 557000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,23,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 144.0,
+    "high": 148.8800048828,
+    "low": 143.4700012207,
+    "close": 148.8000030518,
+    "volume": 768500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,26,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 152.1799926758,
+    "high": 152.1799926758,
+    "low": 141.0700073242,
+    "close": 145.0200042725,
+    "volume": 823700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,27,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 143.1600036621,
+    "high": 153.8500061035,
+    "low": 143.1600036621,
+    "close": 151.8600006104,
+    "volume": 747300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,28,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 150.3000030518,
+    "high": 155.0,
+    "low": 145.7200012207,
+    "close": 148.1499938965,
+    "volume": 737800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,29,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 148.9799957275,
+    "high": 151.7350006104,
+    "low": 144.1199951172,
+    "close": 146.3600006104,
+    "volume": 484800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,30,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 145.8600006104,
+    "high": 150.5449981689,
+    "low": 145.8600006104,
+    "close": 149.6100006104,
+    "volume": 589900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,03,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 147.5299987793,
+    "high": 149.6450042725,
+    "low": 137.5,
+    "close": 138.2749938965,
+    "volume": 849600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,04,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 138.7299957275,
+    "high": 145.9600067139,
+    "low": 138.5700073242,
+    "close": 142.8500061035,
+    "volume": 830300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,05,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 152.0599975586,
+    "high": 152.0599975586,
+    "low": 140.1000061035,
+    "close": 145.0099945068,
+    "volume": 775200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,06,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 145.0099945068,
+    "high": 149.0099945068,
+    "low": 137.5500030518,
+    "close": 143.0650024414,
+    "volume": 1095800.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,09,09,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 145.6300048828,
+    "high": 147.6600036621,
+    "low": 141.0299987793,
+    "close": 146.1199951172,
+    "volume": 766700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,10,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 147.2400054932,
+    "high": 149.3500061035,
+    "low": 145.0500030518,
+    "close": 147.6799926758,
+    "volume": 578300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,11,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 149.9700012207,
+    "high": 154.3099975586,
+    "low": 148.8399963379,
+    "close": 152.1000061035,
+    "volume": 888700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,12,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 149.5200042725,
+    "high": 158.6799926758,
+    "low": 149.5200042725,
+    "close": 155.9900054932,
+    "volume": 684600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,13,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 164.7200012207,
+    "high": 169.3000030518,
+    "low": 160.8500061035,
+    "close": 166.75,
+    "volume": 1278300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,16,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 170.0,
+    "high": 171.75,
+    "low": 165.4100036621,
+    "close": 167.5899963379,
+    "volume": 829100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,17,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 169.4700012207,
+    "high": 173.2299957275,
+    "low": 163.8450012207,
+    "close": 165.8699951172,
+    "volume": 1189000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,18,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 168.9400024414,
+    "high": 174.0700073242,
+    "low": 166.7400054932,
+    "close": 171.0200042725,
+    "volume": 2104700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,19,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 174.4299926758,
+    "high": 176.2050018311,
+    "low": 171.3500061035,
+    "close": 175.3600006104,
+    "volume": 2023600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,20,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 181.2200012207,
+    "high": 186.608001709,
+    "low": 178.0,
+    "close": 184.0899963379,
+    "volume": 6423300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,23,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 187.1000061035,
+    "high": 189.6100006104,
+    "low": 175.2899932861,
+    "close": 181.3600006104,
+    "volume": 2540000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,24,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 181.1900024414,
+    "high": 187.2700042725,
+    "low": 181.1900024414,
+    "close": 185.3200073242,
+    "volume": 1957500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,25,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 186.0299987793,
+    "high": 190.6940002441,
+    "low": 181.5500030518,
+    "close": 190.0200042725,
+    "volume": 1332700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,26,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 197.1999969482,
+    "high": 197.6100006104,
+    "low": 177.3600006104,
+    "close": 178.2299957275,
+    "volume": 1519800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,27,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 179.8099975586,
+    "high": 184.1799926758,
+    "low": 175.7599945068,
+    "close": 182.2200012207,
+    "volume": 1042900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,30,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 181.8699951172,
+    "high": 182.6799926758,
+    "low": 176.0,
+    "close": 178.2400054932,
+    "volume": 932100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,01,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 177.8800048828,
+    "high": 180.1600036621,
+    "low": 173.6399993896,
+    "close": 179.0099945068,
+    "volume": 780400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,02,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 177.2799987793,
+    "high": 182.8500061035,
+    "low": 174.4400024414,
+    "close": 175.9299926758,
+    "volume": 1045700.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,10,03,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 178.1900024414,
+    "high": 183.3600006104,
+    "low": 177.5700073242,
+    "close": 182.1999969482,
+    "volume": 657200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,04,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 185.4600067139,
+    "high": 190.6609954834,
+    "low": 182.2899932861,
+    "close": 190.3500061035,
+    "volume": 866900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,07,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 190.8600006104,
+    "high": 192.5599975586,
+    "low": 174.6100006104,
+    "close": 178.6199951172,
+    "volume": 1411500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,08,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 180.2599945068,
+    "high": 182.0500030518,
+    "low": 177.4149932861,
+    "close": 177.8300018311,
+    "volume": 484800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,09,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 175.9100036621,
+    "high": 178.5500030518,
+    "low": 167.3099975586,
+    "close": 170.6600036621,
+    "volume": 1102100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,10,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 167.0099945068,
+    "high": 168.7400054932,
+    "low": 164.3999938965,
+    "close": 167.8899993896,
+    "volume": 1073000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,11,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 155.7599945068,
+    "high": 162.9900054932,
+    "low": 148.0200042725,
+    "close": 159.1900024414,
+    "volume": 2200700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,14,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 159.75,
+    "high": 167.2689971924,
+    "low": 158.5,
+    "close": 166.6100006104,
+    "volume": 986500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,15,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 168.1399993896,
+    "high": 168.6549987793,
+    "low": 160.0,
+    "close": 162.0800018311,
+    "volume": 695300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,16,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 166.1000061035,
+    "high": 173.0,
+    "low": 163.25,
+    "close": 171.0500030518,
+    "volume": 1054500.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,10,17,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 181.9900054932,
+    "high": 181.9900054932,
+    "low": 171.6600036621,
+    "close": 171.6799926758,
+    "volume": 1376600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,18,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 171.5599975586,
+    "high": 175.8800048828,
+    "low": 168.6600036621,
+    "close": 173.9700012207,
+    "volume": 659100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,21,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 174.4499969482,
+    "high": 179.6699981689,
+    "low": 174.1519927979,
+    "close": 179.1799926758,
+    "volume": 908100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,22,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 178.0,
+    "high": 184.0,
+    "low": 176.5,
+    "close": 181.0,
+    "volume": 1110900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,23,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 179.0,
+    "high": 185.4700012207,
+    "low": 179.0,
+    "close": 183.0700073242,
+    "volume": 983200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,24,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 182.0200042725,
+    "high": 182.8000030518,
+    "low": 175.7539978027,
+    "close": 177.9799957275,
+    "volume": 995700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,25,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 181.3099975586,
+    "high": 183.2200012207,
+    "low": 177.8800048828,
+    "close": 181.25,
+    "volume": 484800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,28,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 182.4100036621,
+    "high": 187.5399932861,
+    "low": 182.4100036621,
+    "close": 186.4100036621,
+    "volume": 638300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,29,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 185.3000030518,
+    "high": 186.1349945068,
+    "low": 178.5,
+    "close": 181.3099975586,
+    "volume": 720400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,30,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 180.7599945068,
+    "high": 180.9499969482,
+    "low": 174.1100006104,
+    "close": 174.2299957275,
+    "volume": 496200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,31,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 173.4199981689,
+    "high": 181.9499969482,
+    "low": 171.6499938965,
+    "close": 181.3600006104,
+    "volume": 874900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,01,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 181.5,
+    "high": 183.7899932861,
+    "low": 172.0500030518,
+    "close": 173.8800048828,
+    "volume": 1051700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,04,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 160.0,
+    "high": 173.3600006104,
+    "low": 159.0,
+    "close": 170.0,
+    "volume": 3745300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,05,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 172.4299926758,
+    "high": 190.1000061035,
+    "low": 170.7899932861,
+    "close": 189.7299957275,
+    "volume": 2341000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,06,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 198.0,
+    "high": 198.0,
+    "low": 187.2649993896,
+    "close": 192.1300048828,
+    "volume": 1700500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,07,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 195.3600006104,
+    "high": 208.0899963379,
+    "low": 192.5099945068,
+    "close": 205.5800018311,
+    "volume": 1735900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,08,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 206.7200012207,
+    "high": 214.0,
+    "low": 201.0,
+    "close": 206.5,
+    "volume": 1325500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,11,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 208.5,
+    "high": 211.7899932861,
+    "low": 202.2200012207,
+    "close": 209.2200012207,
+    "volume": 755000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,12,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 210.0,
+    "high": 211.6000061035,
+    "low": 200.5,
+    "close": 208.7899932861,
+    "volume": 875300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,13,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 212.0,
+    "high": 217.6999969482,
+    "low": 204.1999969482,
+    "close": 206.5200042725,
+    "volume": 1178900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,14,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 207.0,
+    "high": 217.7899932861,
+    "low": 199.6799926758,
+    "close": 203.2400054932,
+    "volume": 1780800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,15,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 199.0,
+    "high": 204.3500061035,
+    "low": 197.1600036621,
+    "close": 200.4299926758,
+    "volume": 1019200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,18,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 201.3099975586,
+    "high": 211.3899993896,
+    "low": 201.1829986572,
+    "close": 207.4900054932,
+    "volume": 565900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,19,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 201.3000030518,
+    "high": 217.0,
+    "low": 200.0,
+    "close": 214.6999969482,
+    "volume": 696700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,20,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 218.7799987793,
+    "high": 221.1399993896,
+    "low": 204.3999938965,
+    "close": 206.0899963379,
+    "volume": 1003600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,21,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 211.0,
+    "high": 222.0500030518,
+    "low": 207.0,
+    "close": 219.8899993896,
+    "volume": 1096400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,22,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 220.0,
+    "high": 222.4900054932,
+    "low": 210.2599945068,
+    "close": 214.1999969482,
+    "volume": 943000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,25,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 217.9199981689,
+    "high": 219.4900054932,
+    "low": 203.6300048828,
+    "close": 209.3399963379,
+    "volume": 1719800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,26,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 208.9100036621,
+    "high": 220.0500030518,
+    "low": 208.9100036621,
+    "close": 216.3899993896,
+    "volume": 812500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,27,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 218.3200073242,
+    "high": 219.2899932861,
+    "low": 208.8679962158,
+    "close": 214.0500030518,
+    "volume": 359200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,29,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 216.9900054932,
+    "high": 220.1000061035,
+    "low": 214.0,
+    "close": 214.4100036621,
+    "volume": 215500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,02,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 216.0,
+    "high": 216.4949951172,
+    "low": 207.5800018311,
+    "close": 209.8099975586,
+    "volume": 600600.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,12,03,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 210.4499969482,
+    "high": 216.6900024414,
+    "low": 210.1499938965,
+    "close": 212.6300048828,
+    "volume": 716800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,04,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 217.5899963379,
+    "high": 224.7799987793,
+    "low": 216.0,
+    "close": 221.7100067139,
+    "volume": 920200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,05,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 228.9900054932,
+    "high": 228.9900054932,
+    "low": 221.0229949951,
+    "close": 223.5399932861,
+    "volume": 617900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,06,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 224.0099945068,
+    "high": 230.8899993896,
+    "low": 219.4199981689,
+    "close": 221.4100036621,
+    "volume": 568300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,09,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 218.3200073242,
+    "high": 222.0,
+    "low": 203.9799957275,
+    "close": 208.6799926758,
+    "volume": 1221900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,10,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 209.6999969482,
+    "high": 210.3200073242,
+    "low": 198.8200073242,
+    "close": 203.6600036621,
+    "volume": 1051300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,11,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 208.8999938965,
+    "high": 214.2599945068,
+    "low": 204.5,
+    "close": 210.7299957275,
+    "volume": 584400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,12,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 209.75,
+    "high": 216.1000061035,
+    "low": 209.0,
+    "close": 209.4199981689,
+    "volume": 503800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,13,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 213.3099975586,
+    "high": 214.9400024414,
+    "low": 207.0800018311,
+    "close": 207.4600067139,
+    "volume": 371900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,16,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 206.8899993896,
+    "high": 214.7400054932,
+    "low": 205.8370056152,
+    "close": 209.2200012207,
+    "volume": 363200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,17,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 206.0,
+    "high": 207.9100036621,
+    "low": 200.324005127,
+    "close": 205.8500061035,
+    "volume": 659800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,18,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 207.4799957275,
+    "high": 208.3710021973,
+    "low": 194.7200012207,
+    "close": 195.5200042725,
+    "volume": 598700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,19,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 197.9499969482,
+    "high": 202.8500061035,
+    "low": 195.6100006104,
+    "close": 195.8999938965,
+    "volume": 852700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,20,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 190.6600036621,
+    "high": 199.4900054932,
+    "low": 188.9100036621,
+    "close": 197.1100006104,
+    "volume": 1213600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,23,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 196.7599945068,
+    "high": 201.0399932861,
+    "low": 192.6979980469,
+    "close": 198.75,
+    "volume": 520500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,24,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 203.3300018311,
+    "high": 209.5,
+    "low": 201.1999969482,
+    "close": 206.8500061035,
+    "volume": 260900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,26,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 205.3600006104,
+    "high": 208.0500030518,
+    "low": 202.7799987793,
+    "close": 206.3899993896,
+    "volume": 328100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,27,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 204.0200042725,
+    "high": 205.9900054932,
+    "low": 196.0299987793,
+    "close": 200.1199951172,
+    "volume": 415400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,30,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 196.9600067139,
+    "high": 202.5399932861,
+    "low": 195.9100036621,
+    "close": 201.6600036621,
+    "volume": 436200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,31,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 202.6600036621,
+    "high": 203.1399993896,
+    "low": 198.8899993896,
+    "close": 201.4700012207,
+    "volume": 394600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,02,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 206.0,
+    "high": 213.1999969482,
+    "low": 201.6109924316,
+    "close": 212.2299957275,
+    "volume": 736200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,03,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 215.0,
+    "high": 220.4900054932,
+    "low": 212.5,
+    "close": 215.5899963379,
+    "volume": 839800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,06,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 221.3899993896,
+    "high": 225.0,
+    "low": 212.0,
+    "close": 218.1999969482,
+    "volume": 802600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,07,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 220.5399932861,
+    "high": 221.5500030518,
+    "low": 206.1600036621,
+    "close": 212.7149963379,
+    "volume": 669200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,08,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 211.2799987793,
+    "high": 218.625,
+    "low": 203.0,
+    "close": 215.5899963379,
+    "volume": 1001300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,10,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 220.7200012207,
+    "high": 227.4799957275,
+    "low": 214.0,
+    "close": 221.8000030518,
+    "volume": 1800200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,13,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 219.0,
+    "high": 220.1199951172,
+    "low": 210.0,
+    "close": 212.4900054932,
+    "volume": 557300.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,01,14,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 217.0,
+    "high": 224.1100006104,
+    "low": 216.0319976807,
+    "close": 220.25,
+    "volume": 699300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,15,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 226.6999969482,
+    "high": 231.3899993896,
+    "low": 221.1999969482,
+    "close": 226.3899993896,
+    "volume": 1289500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,16,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 230.4700012207,
+    "high": 235.6239929199,
+    "low": 228.0,
+    "close": 234.1600036621,
+    "volume": 1667100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,17,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 234.5599975586,
+    "high": 236.8600006104,
+    "low": 230.5950012207,
+    "close": 234.9499969482,
+    "volume": 1014600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,21,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 240.2599945068,
+    "high": 249.4850006104,
+    "low": 239.0,
+    "close": 243.6399993896,
+    "volume": 1422000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,22,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 249.7200012207,
+    "high": 253.9060058594,
+    "low": 247.5,
+    "close": 249.9900054932,
+    "volume": 1169900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,23,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 249.8000030518,
+    "high": 258.0299987793,
+    "low": 246.3150024414,
+    "close": 247.1199951172,
+    "volume": 1172200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,24,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 247.7299957275,
+    "high": 250.8200073242,
+    "low": 241.7100067139,
+    "close": 245.0599975586,
+    "volume": 890900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,27,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 217.0,
+    "high": 217.1999969482,
+    "low": 187.0,
+    "close": 192.1600036621,
+    "volume": 4655000.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,01,28,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 199.1999969482,
+    "high": 206.2799987793,
+    "low": 190.5,
+    "close": 204.4199981689,
+    "volume": 2680300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,29,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 209.9100036621,
+    "high": 218.1199951172,
+    "low": 206.0,
+    "close": 214.0,
+    "volume": 2021100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,30,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 221.0599975586,
+    "high": 230.0,
+    "low": 218.5850067139,
+    "close": 224.9499969482,
+    "volume": 1440900.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,01,31,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 227.4700012207,
+    "high": 231.1889953613,
+    "low": 220.2899932861,
+    "close": 221.7299957275,
+    "volume": 1039100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,03,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 213.7299957275,
+    "high": 232.2200012207,
+    "low": 213.300994873,
+    "close": 230.8500061035,
+    "volume": 1204800.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,02,04,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 231.2799987793,
+    "high": 235.0,
+    "low": 221.0800018311,
+    "close": 234.4199981689,
+    "volume": 991100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,05,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 237.8999938965,
+    "high": 241.7899932861,
+    "low": 231.4700012207,
+    "close": 235.8500061035,
+    "volume": 826200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,06,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 236.7799987793,
+    "high": 240.8650054932,
+    "low": 231.6699981689,
+    "close": 238.9100036621,
+    "volume": 662200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,07,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 241.6300048828,
+    "high": 244.9299926758,
+    "low": 235.5899963379,
+    "close": 238.7299957275,
+    "volume": 652600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,10,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 238.9600067139,
+    "high": 243.9649963379,
+    "low": 235.8500061035,
+    "close": 238.2299957275,
+    "volume": 628300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,11,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 235.4600067139,
+    "high": 237.0299987793,
+    "low": 229.1100006104,
+    "close": 233.9499969482,
+    "volume": 736900.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,02,12,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 227.0,
+    "high": 242.2810058594,
+    "low": 226.0,
+    "close": 236.5,
+    "volume": 650300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,13,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 236.0700073242,
+    "high": 240.7890014648,
+    "low": 233.9909973145,
+    "close": 240.3800048828,
+    "volume": 671800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,14,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 240.1900024414,
+    "high": 245.8099975586,
+    "low": 235.4960021973,
+    "close": 241.5399932861,
+    "volume": 686000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,18,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 245.0,
+    "high": 250.7200012207,
+    "low": 241.1300048828,
+    "close": 250.3699951172,
+    "volume": 707700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,19,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 247.9450073242,
+    "high": 249.2539978027,
+    "low": 242.6900024414,
+    "close": 248.3300018311,
+    "volume": 838100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,20,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 245.3500061035,
+    "high": 247.0,
+    "low": 233.9400024414,
+    "close": 236.4299926758,
+    "volume": 921300.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,02,21,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 238.3699951172,
+    "high": 238.5299987793,
+    "low": 214.0599975586,
+    "close": 218.8000030518,
+    "volume": 2494000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,24,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 219.2299957275,
+    "high": 222.0,
+    "low": 206.2400054932,
+    "close": 215.8450012207,
+    "volume": 1453300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,25,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 211.0200042725,
+    "high": 212.7100067139,
+    "low": 197.2599945068,
+    "close": 211.5899963379,
+    "volume": 1590000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,26,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 219.6699981689,
+    "high": 227.5200042725,
+    "low": 215.2799987793,
+    "close": 217.7100067139,
+    "volume": 1216000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,27,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 223.3699951172,
+    "high": 224.0,
+    "low": 200.3049926758,
+    "close": 201.8200073242,
+    "volume": 1491600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,28,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 193.1799926758,
+    "high": 209.8300018311,
+    "low": 192.0,
+    "close": 207.9499969482,
+    "volume": 2209900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,03,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 206.8999938965,
+    "high": 213.6199951172,
+    "low": 185.75,
+    "close": 188.0200042725,
+    "volume": 1541900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,04,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 188.0,
+    "high": 202.5650024414,
+    "low": 178.9100036621,
+    "close": 195.7599945068,
+    "volume": 2605900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,05,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 192.5399932861,
+    "high": 201.2350006104,
+    "low": 190.1300048828,
+    "close": 197.8500061035,
+    "volume": 1144900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,06,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 187.9600067139,
+    "high": 193.5700073242,
+    "low": 176.8999938965,
+    "close": 180.5299987793,
+    "volume": 1864400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,07,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 180.5800018311,
+    "high": 184.5229949951,
+    "low": 171.7949981689,
+    "close": 176.2400054932,
+    "volume": 1664000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,10,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 168.6799926758,
+    "high": 170.5700073242,
+    "low": 158.0800018311,
+    "close": 165.75,
+    "volume": 3045800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,11,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 166.7899932861,
+    "high": 180.7510070801,
+    "low": 163.4100036621,
+    "close": 176.5599975586,
+    "volume": 1964600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,12,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 192.7899932861,
+    "high": 200.0,
+    "low": 187.6999969482,
+    "close": 199.0899963379,
+    "volume": 3297700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,13,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 197.5800018311,
+    "high": 198.4600067139,
+    "low": 188.75,
+    "close": 195.1999969482,
+    "volume": 1193500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,14,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 201.0,
+    "high": 205.0850067139,
+    "low": 196.0,
+    "close": 204.9299926758,
+    "volume": 1224500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,17,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 204.9499969482,
+    "high": 211.3650054932,
+    "low": 203.6799926758,
+    "close": 207.0,
+    "volume": 907900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,18,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 204.3999938965,
+    "high": 206.0149993896,
+    "low": 198.1799926758,
+    "close": 202.7449951172,
+    "volume": 991400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,19,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 204.0700073242,
+    "high": 214.4199981689,
+    "low": 201.5700073242,
+    "close": 210.3000030518,
+    "volume": 1037900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,20,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 209.9700012207,
+    "high": 215.8999938965,
+    "low": 205.5700073242,
+    "close": 212.9600067139,
+    "volume": 760300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,21,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 212.4199981689,
+    "high": 215.8999938965,
+    "low": 208.0,
+    "close": 214.8099975586,
+    "volume": 1268300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,24,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 217.5050048828,
+    "high": 220.5899963379,
+    "low": 214.5099945068,
+    "close": 218.9600067139,
+    "volume": 1333600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,25,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 219.3399963379,
+    "high": 219.5,
+    "low": 208.8999938965,
+    "close": 217.7299957275,
+    "volume": 1081800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,26,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 216.8800048828,
+    "high": 217.6999969482,
+    "low": 202.7200012207,
+    "close": 203.0899963379,
+    "volume": 1351300.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,03,27,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 199.1000061035,
+    "high": 205.0899963379,
+    "low": 194.8600006104,
+    "close": 202.7899932861,
+    "volume": 1146200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,28,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 200.0500030518,
+    "high": 205.2599945068,
+    "low": 194.0599975586,
+    "close": 197.4799957275,
+    "volume": 849900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,31,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 190.3099975586,
+    "high": 200.7200012207,
+    "low": 188.0,
+    "close": 199.6699981689,
+    "volume": 837600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,01,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 200.625,
+    "high": 207.9199981689,
+    "low": 196.5449981689,
+    "close": 207.4400024414,
+    "volume": 959600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,02,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 201.3099975586,
+    "high": 214.9499969482,
+    "low": 201.0,
+    "close": 214.7299957275,
+    "volume": 1099000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,03,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 198.3000030518,
+    "high": 204.0,
+    "low": 183.1699981689,
+    "close": 184.4100036621,
+    "volume": 1608200.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,04,04,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 177.5099945068,
+    "high": 179.5249938965,
+    "low": 162.3090057373,
+    "close": 174.3999938965,
+    "volume": 2379700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,07,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 163.0,
+    "high": 195.4700012207,
+    "low": 163.0,
+    "close": 183.0599975586,
+    "volume": 1633200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,08,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 194.1100006104,
+    "high": 197.4900054932,
+    "low": 179.3399963379,
+    "close": 182.6150054932,
+    "volume": 1413200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,09,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 181.6199951172,
+    "high": 206.5800018311,
+    "low": 176.8000030518,
+    "close": 203.4100036621,
+    "volume": 1703900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,10,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 196.0099945068,
+    "high": 202.3399963379,
+    "low": 190.6499938965,
+    "close": 196.3899993896,
+    "volume": 1054500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,11,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 192.4199981689,
+    "high": 198.8500061035,
+    "low": 190.0500030518,
+    "close": 198.0350036621,
+    "volume": 960200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,14,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 204.3099975586,
+    "high": 206.6750030518,
+    "low": 196.3099975586,
+    "close": 200.2299957275,
+    "volume": 554900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,15,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 203.4600067139,
+    "high": 206.8489990234,
+    "low": 198.0,
+    "close": 202.9299926758,
+    "volume": 541000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,16,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 198.3000030518,
+    "high": 206.1199951172,
+    "low": 194.9750061035,
+    "close": 203.1999969482,
+    "volume": 779200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,17,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 206.8500061035,
+    "high": 208.0,
+    "low": 201.7799987793,
+    "close": 203.4600067139,
+    "volume": 649700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,21,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 197.9799957275,
+    "high": 200.3999938965,
+    "low": 186.4940032959,
+    "close": 191.3699951172,
+    "volume": 737200.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,04,22,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 195.3200073242,
+    "high": 201.1600036621,
+    "low": 194.5350036621,
+    "close": 197.5899963379,
+    "volume": 816300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,23,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 208.9700012207,
+    "high": 212.7100067139,
+    "low": 202.4400024414,
+    "close": 204.6600036621,
+    "volume": 855300.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,04,24,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 205.4499969482,
+    "high": 213.8800048828,
+    "low": 205.4499969482,
+    "close": 211.0099945068,
+    "volume": 471300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,25,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 209.6300048828,
+    "high": 216.3999938965,
+    "low": 209.6300048828,
+    "close": 211.5599975586,
+    "volume": 703800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,28,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 212.9499969482,
+    "high": 215.5,
+    "low": 209.2100067139,
+    "close": 213.4299926758,
+    "volume": 582000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,29,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 210.4400024414,
+    "high": 215.1840057373,
+    "low": 209.8769989014,
+    "close": 213.9499969482,
+    "volume": 533100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,30,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 209.6699981689,
+    "high": 217.1399993896,
+    "low": 206.0099945068,
+    "close": 215.0800018311,
+    "volume": 700500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,01,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 221.3800048828,
+    "high": 230.6300048828,
+    "low": 220.2149963379,
+    "close": 223.3399963379,
+    "volume": 1145600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,02,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 224.3000030518,
+    "high": 230.3549957275,
+    "low": 221.4499969482,
+    "close": 225.9400024414,
+    "volume": 720000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,05,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 222.7400054932,
+    "high": 225.4669952393,
+    "low": 216.1999969482,
+    "close": 222.2799987793,
+    "volume": 768500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,06,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 221.9400024414,
+    "high": 238.0,
+    "low": 221.9400024414,
+    "close": 234.7200012207,
+    "volume": 1398500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,07,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 230.7749938965,
+    "high": 233.5099945068,
+    "low": 228.0,
+    "close": 231.3099975586,
+    "volume": 1420300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,08,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 228.3800048828,
+    "high": 242.6000061035,
+    "low": 227.5,
+    "close": 228.6100006104,
+    "volume": 1221600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,09,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 226.7599945068,
+    "high": 226.8899993896,
+    "low": 220.5899963379,
+    "close": 225.1600036621,
+    "volume": 802000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,12,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 235.4600067139,
+    "high": 240.1399993896,
+    "low": 232.5610046387,
+    "close": 236.6199951172,
+    "volume": 1397100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,13,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 236.2599945068,
+    "high": 246.1399993896,
+    "low": 234.6699981689,
+    "close": 241.0800018311,
+    "volume": 878800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,14,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 243.2400054932,
+    "high": 246.5299987793,
+    "low": 239.0769958496,
+    "close": 244.9199981689,
+    "volume": 616500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,15,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 243.2400054932,
+    "high": 245.8200073242,
+    "low": 240.3500061035,
+    "close": 244.8000030518,
+    "volume": 806900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,16,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 246.0,
+    "high": 247.3529968262,
+    "low": 242.6499938965,
+    "close": 244.8600006104,
+    "volume": 796600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,19,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 239.8500061035,
+    "high": 242.1399993896,
+    "low": 236.9739990234,
+    "close": 240.3000030518,
+    "volume": 746500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,20,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 241.1699981689,
+    "high": 244.3500061035,
+    "low": 239.6199951172,
+    "close": 241.2100067139,
+    "volume": 510000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,21,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 237.9600067139,
+    "high": 241.7290039062,
+    "low": 233.9149932861,
+    "close": 235.3899993896,
+    "volume": 502600.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,05,22,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 233.7899932861,
+    "high": 240.7799987793,
+    "low": 232.3399963379,
+    "close": 238.6300048828,
+    "volume": 608500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,23,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 238.3699951172,
+    "high": 244.5,
+    "low": 237.3500061035,
+    "close": 243.0800018311,
+    "volume": 457500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,27,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 247.0,
+    "high": 247.8600006104,
+    "low": 242.5200042725,
+    "close": 245.2200012207,
+    "volume": 803000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,28,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 245.5,
+    "high": 246.5899963379,
+    "low": 242.5,
+    "close": 244.5200042725,
+    "volume": 462800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,29,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 247.5,
+    "high": 247.6109924316,
+    "low": 239.1999969482,
+    "close": 244.6900024414,
+    "volume": 568800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,30,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 242.7799987793,
+    "high": 246.8500061035,
+    "low": 239.8899993896,
+    "close": 243.9499969482,
+    "volume": 727400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,02,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 245.3800048828,
+    "high": 249.8899993896,
+    "low": 240.8999938965,
+    "close": 248.5599975586,
+    "volume": 754100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,03,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 257.3099975586,
+    "high": 260.8900146484,
+    "low": 252.0149993896,
+    "close": 255.4799957275,
+    "volume": 1588500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,04,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 256.0799865723,
+    "high": 261.9800109863,
+    "low": 251.9900054932,
+    "close": 260.0,
+    "volume": 1009500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,05,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 261.0,
+    "high": 261.0350036621,
+    "low": 252.3899993896,
+    "close": 255.9400024414,
+    "volume": 513700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,06,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 258.9899902344,
+    "high": 259.7799987793,
+    "low": 252.2599945068,
+    "close": 258.5400085449,
+    "volume": 516900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,09,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 261.3399963379,
+    "high": 274.8869934082,
+    "low": 250.0,
+    "close": 257.0199890137,
+    "volume": 1913400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,10,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 257.4100036621,
+    "high": 259.0,
+    "low": 246.9499969482,
+    "close": 255.0950012207,
+    "volume": 1137200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,11,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 271.8999938965,
+    "high": 275.8099975586,
+    "low": 255.5299987793,
+    "close": 274.8200073242,
+    "volume": 3265500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,12,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 273.3599853516,
+    "high": 277.200012207,
+    "low": 271.7399902344,
+    "close": 274.9899902344,
+    "volume": 1199800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,13,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 274.9899902344,
+    "high": 280.2900085449,
+    "low": 272.049987793,
+    "close": 277.1600036621,
+    "volume": 1013300.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,06,16,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 282.3599853516,
+    "high": 286.3800048828,
+    "low": 279.0350036621,
+    "close": 280.9200134277,
+    "volume": 739500.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,06,17,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 282.5599975586,
+    "high": 287.049987793,
+    "low": 279.2470092773,
+    "close": 285.8800048828,
+    "volume": 685900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,18,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 285.0400085449,
+    "high": 294.4599914551,
+    "low": 285.0400085449,
+    "close": 290.3800048828,
+    "volume": 988500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,20,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 291.3099975586,
+    "high": 293.3699951172,
+    "low": 287.6900024414,
+    "close": 288.6600036621,
+    "volume": 889300.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,06,23,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 289.2799987793,
+    "high": 294.7600097656,
+    "low": 284.6400146484,
+    "close": 291.5899963379,
+    "volume": 783800.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,06,24,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 292.4400024414,
+    "high": 296.8900146484,
+    "low": 289.4559936523,
+    "close": 294.1700134277,
+    "volume": 606100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,25,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 298.3200073242,
+    "high": 300.0,
+    "low": 287.3500061035,
+    "close": 288.0,
+    "volume": 873200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,26,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 289.9700012207,
+    "high": 294.4200134277,
+    "low": 282.9100036621,
+    "close": 291.3800048828,
+    "volume": 786900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,27,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 294.7600097656,
+    "high": 298.4599914551,
+    "low": 290.9899902344,
+    "close": 297.8800048828,
+    "volume": 4503200.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,06,30,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 298.4899902344,
+    "high": 301.6950073242,
+    "low": 289.0799865723,
+    "close": 290.7699890137,
+    "volume": 813800.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,07,01,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 291.0299987793,
+    "high": 292.4899902344,
+    "low": 278.3500061035,
+    "close": 279.9899902344,
+    "volume": 1262896.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,07,02,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 278.1000061035,
+    "high": 282.1099853516,
+    "low": 273.7399902344,
+    "close": 276.2699890137,
+    "volume": 819677.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,07,03,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 277.0899963379,
+    "high": 287.5199890137,
+    "low": 276.4361877441,
+    "close": 286.3099975586,
+    "volume": 812037.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,07,07,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 281.3500061035,
+    "high": 286.9099121094,
+    "low": 280.299987793,
+    "close": 285.1000061035,
+    "volume": 666151.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,08,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 284.0,
+    "high": 286.8399047852,
+    "low": 272.2300109863,
+    "close": 277.4599914551,
+    "volume": 629413.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,07,09,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 279.1400146484,
+    "high": 279.1400146484,
+    "low": 271.9400024414,
+    "close": 272.1499938965,
+    "volume": 952983.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,07,10,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 274.0700073242,
+    "high": 274.700012207,
+    "low": 265.0,
+    "close": 267.6199951172,
+    "volume": 810932.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,07,11,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 270.700012207,
+    "high": 280.5899963379,
+    "low": 266.7950134277,
+    "close": 276.1700134277,
+    "volume": 1005438.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,14,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 276.9700012207,
+    "high": 282.8052978516,
+    "low": 270.3699951172,
+    "close": 281.9599914551,
+    "volume": 958326.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,15,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 282.4200134277,
+    "high": 285.0,
+    "low": 264.7200012207,
+    "close": 268.1499938965,
+    "volume": 1521019.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,16,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 268.5100097656,
+    "high": 268.9899902344,
+    "low": 255.5,
+    "close": 264.7799987793,
+    "volume": 1507367.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,17,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 265.799987793,
+    "high": 267.8599853516,
+    "low": 261.5599975586,
+    "close": 264.0,
+    "volume": 866288.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,18,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 310.0,
+    "high": 330.9899902344,
+    "low": 302.4899902344,
+    "close": 328.6300048828,
+    "volume": 4465341.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,21,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 327.6000061035,
+    "high": 329.6099853516,
+    "low": 308.5,
+    "close": 310.1400146484,
+    "volume": 1563311.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,22,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 310.299987793,
+    "high": 316.2699890137,
+    "low": 300.0,
+    "close": 313.5799865723,
+    "volume": 1785802.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,23,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 343.0,
+    "high": 350.5249938965,
+    "low": 331.6835021973,
+    "close": 339.2399902344,
+    "volume": 2490137.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,24,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 339.2600097656,
+    "high": 344.7399902344,
+    "low": 336.0,
+    "close": 339.1600036621,
+    "volume": 1157698.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,25,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 339.75,
+    "high": 352.7699890137,
+    "low": 338.5249938965,
+    "close": 346.6199951172,
+    "volume": 1641597.0,
+    "wedge_status": "none"
+  }
+]
