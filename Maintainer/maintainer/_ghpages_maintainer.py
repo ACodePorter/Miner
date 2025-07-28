@@ -133,6 +133,7 @@ class GhPagesMaintainer(SingletonParent):
             ticker, start_date, end_date, interval=interval)
         dailies_df = dailies_df[['trade_date', 'ticker', 'open',
                                  'high', 'low', 'close', 'volume', 'wedge_status']]
+        dailies_df.dropna(inplace=True)
         return dailies_df.to_dict(orient='records')
 
     def _export_ohlcvw(self, file_of_wdges_pop: str, dir_of_ohlcvw: str) -> bool:
