@@ -4,7 +4,9 @@ A React-based frontend application for visualizing financial market data from th
 
 ## Features
 
-- **Market PE Ratios Chart**: Interactive line chart showing S&P 500 (SPX) and NASDAQ 100 (QQQ) Price-to-Earnings ratios over time
+- **Market PE Ratios Chart**: Interactive line chart showing S&P 500 (SPX) and Hang Seng Index (HSI) Price-to-Earnings ratios over time
+- **Market Breadth Chart**: Shows market breadth scores with sector breakdowns
+- **OHLCV Candlestick Chart**: Interactive candlestick charts with wedge status indicators (pop/drop arrows)
 - **Real-time Data**: Fetches data from the Miner backend API
 - **Responsive Design**: Works on desktop and mobile devices
 - **Interactive Charts**: Built with Highcharts for professional financial data visualization
@@ -37,16 +39,31 @@ npm run dev
 
 The application connects to the Miner backend API:
 
-- `GET /api/market_pe?index=spx` - Get S&P 500 PE data
-- `GET /api/market_pe?index=qqq` - Get NASDAQ 100 PE data
+- `GET /api/market_pe/{index}.json` - Get market PE data (SPX, HSI, etc.)
+- `GET /api/mbs/{market_index}.json` - Get market breadth data
+- `GET /api/wedge_pop/wedges.json` - Get wedge pop tickers list
+- `GET /api/ohlcvw/{ticker}.json` - Get OHLCV data for a specific ticker
 
 ## Features
 
 ### PE Market Chart
-- Displays historical PE ratios for both SPX and QQQ
+- Displays historical PE ratios for both SPX and HSI
 - Shows current PE, 20-year average, and min/max ranges
 - Interactive tooltips with detailed information
 - Responsive design that works on all screen sizes
+
+### Market Breadth Chart
+- Shows market breadth scores with SMA 20/50/200 options
+- Displays sector breakdowns and extreme value indicators
+- Interactive tooltips with detailed sector information
+- Progress bar showing current score vs historical ranges
+
+### OHLCV Candlestick Chart
+- Interactive candlestick charts for individual tickers
+- Dropdown to select from available wedge pop tickers
+- Wedge status indicators (green up arrows for pop, red down arrows for drop)
+- Volume data (hidden by default)
+- Price statistics and change indicators
 
 ## Troubleshooting
 

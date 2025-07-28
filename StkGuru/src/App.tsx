@@ -1,6 +1,7 @@
 import './App.css'
 import MarketPeChart from './components/MarketPeChart'
 import MarketBreathChart from "./components/MarketBreathChart";
+import OHLCVChart from "./components/OHLCVChart";
 import ExtensionWarning from './components/ExtensionWarning';
 
 function App() {
@@ -30,6 +31,14 @@ function App() {
           {/* Market Breadth Section */}
           <div className="market-breadth-section animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
             <MarketBreathChart indexId="spx" />
+          </div>
+          
+          {/* OHLCV Chart Section */}
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+            <OHLCVChart 
+              autoRefresh={true}
+              refreshInterval={5 * 60 * 1000} // 5 minutes
+            />
           </div>
         </div>
       </main>
