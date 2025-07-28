@@ -7488,5 +7488,15 @@
     "close": 175.0200042725,
     "volume": 172948.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,07,28,00,00,00,000000",
+    "ticker": "PAG",
+    "open": 175.1399993896,
+    "high": 174.6750030518,
+    "low": 170.25,
+    "close": 170.25,
+    "volume": 180607.0,
+    "wedge_status": NaN
   }
 ]

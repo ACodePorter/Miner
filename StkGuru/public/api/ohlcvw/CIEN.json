@@ -7488,5 +7488,15 @@
     "close": 88.5999984741,
     "volume": 883817.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,28,00,00,00,000000",
+    "ticker": "CIEN",
+    "open": 88.75,
+    "high": 90.7600021362,
+    "low": 88.2450027466,
+    "close": 90.5500030518,
+    "volume": 920710.0,
+    "wedge_status": NaN
   }
 ]

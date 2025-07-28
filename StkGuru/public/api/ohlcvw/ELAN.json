@@ -7488,5 +7488,15 @@
     "close": 14.9200000763,
     "volume": 3790148.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,28,00,00,00,000000",
+    "ticker": "ELAN",
+    "open": 14.9099998474,
+    "high": 15.0,
+    "low": 14.4899997711,
+    "close": 14.5799999237,
+    "volume": 3522791.0,
+    "wedge_status": NaN
   }
 ]

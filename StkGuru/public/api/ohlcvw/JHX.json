@@ -7488,5 +7488,15 @@
     "close": 26.9400005341,
     "volume": 2689661.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,07,28,00,00,00,000000",
+    "ticker": "JHX",
+    "open": 26.9400005341,
+    "high": 27.1749992371,
+    "low": 26.7199993134,
+    "close": 27.0,
+    "volume": 2470911.0,
+    "wedge_status": NaN
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 99.3899993896,
     "volume": 1528412.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,07,28,00,00,00,000000",
+    "ticker": "LEA",
+    "open": 99.0999984741,
+    "high": 100.1350021362,
+    "low": 98.5,
+    "close": 98.8899993896,
+    "volume": 861017.0,
+    "wedge_status": NaN
   }
 ]

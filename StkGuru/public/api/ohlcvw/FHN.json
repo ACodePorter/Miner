@@ -7488,5 +7488,15 @@
     "close": 22.8099994659,
     "volume": 11283901.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,28,00,00,00,000000",
+    "ticker": "FHN",
+    "open": 23.0,
+    "high": 23.0,
+    "low": 22.4150009155,
+    "close": 22.5200004578,
+    "volume": 10079025.0,
+    "wedge_status": NaN
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 281.0599975586,
     "volume": 15450562.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,28,00,00,00,000000",
+    "ticker": "UNH",
+    "open": 283.5,
+    "high": 285.0,
+    "low": 279.6900024414,
+    "close": 282.1199951172,
+    "volume": 14377938.0,
+    "wedge_status": NaN
   }
 ]

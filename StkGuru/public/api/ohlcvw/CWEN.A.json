@@ -7488,5 +7488,15 @@
     "close": 29.5799999237,
     "volume": 98235.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,28,00,00,00,000000",
+    "ticker": "CWEN.A",
+    "open": 29.75,
+    "high": 29.6700000763,
+    "low": 29.3799991608,
+    "close": 29.5900001526,
+    "volume": 105857.0,
+    "wedge_status": NaN
   }
 ]

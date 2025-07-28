@@ -7488,5 +7488,15 @@
     "close": 785.950012207,
     "volume": 1208514.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,28,00,00,00,000000",
+    "ticker": "INTU",
+    "open": 786.0,
+    "high": 800.4871826172,
+    "low": 783.0,
+    "close": 798.7299804688,
+    "volume": 1908156.0,
+    "wedge_status": NaN
   }
 ]

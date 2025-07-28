@@ -7488,5 +7488,15 @@
     "close": 261.049987793,
     "volume": 916994.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,07,28,00,00,00,000000",
+    "ticker": "TRV",
+    "open": 260.0,
+    "high": 260.2349853516,
+    "low": 254.25,
+    "close": 254.9100036621,
+    "volume": 1018806.0,
+    "wedge_status": NaN
   }
 ]
