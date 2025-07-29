@@ -49,4 +49,4 @@ def mongo_2_df(querySet: QuerySet) -> DataFrame:
     '''
     将数据库中查询到的数据转换为DataFrame,若无数据返回空的DataFrame
     '''
-    return DataFrame.from_dict(json.loads(querySet.to_json()))
+    return DataFrame(list(querySet.as_pymongo()))

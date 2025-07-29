@@ -20,7 +20,7 @@ def make_db_connection(db: str = DEF_MONGO_DB, host: str = DEF_MONGO_HOST, port=
         prod = is_prod()
         _logger.info('Connecting to mongodb database prod: %s', prod)
         connect(db=db if prod else 'mongogo-test', host=host if prod else 'localhost', port=port, alias=alias,
-                uuidRepresentation='standard')
+                uuidRepresentation='standard', maxPoolSize=10, minPoolSize=5)
 
 
 def ensure_db_connection(_func=None, *, db: str = DEF_MONGO_DB, host: str = DEF_MONGO_HOST, port=DEF_MONGO_PORT,
