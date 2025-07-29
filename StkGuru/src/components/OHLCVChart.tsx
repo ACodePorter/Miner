@@ -15,6 +15,24 @@ interface OHLCVData {
   wedge_status: 'pop' | 'drop' | 'none';
 }
 
+// New interfaces for the stats.json structure
+interface WedgeStats {
+  date: string;
+  total: number;
+  pop: string[];
+  drop: string[];
+  pop_pct: number;
+  drop_pct: number;
+}
+
+interface CategorizedTickers {
+  date: string;
+  pop: string[];
+  drop: string[];
+  pop_pct: number;
+  drop_pct: number;
+}
+
 // EMA calculation function
 const calculateEMA = (data: number[], period: number): number[] => {
   const ema: number[] = [];
@@ -63,18 +81,11 @@ const calculateMACD = (data: number[], fastPeriod: number = 10, slowPeriod: numb
   return { macdLine, signalLine, histogram };
 };
 
-interface WedgeTicker {
-  ticker: string;
-  // Add other fields if available from the API
-}
-
 interface OHLCVChartProps {
   autoRefresh?: boolean;
   refreshInterval?: number;
   className?: string;
 }
-
-
 
 const OHLCVChart: React.FC<OHLCVChartProps> = ({
   autoRefresh = false,
@@ -82,64 +93,80 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
   className = "",
 }) => {
   const [selectedTicker, setSelectedTicker] = useState<string>("");
-  const [tickers, setTickers] = useState<WedgeTicker[]>([]);
+  const [categorizedTickers, setCategorizedTickers] = useState<CategorizedTickers[]>([]);
+  const [selectedDate, setSelectedDate] = useState<string>("");
+  const [selectedWedgeStatus, setSelectedWedgeStatus] = useState<'pop' | 'drop'>('pop');
   const [ohlcvData, setOhlcvData] = useState<OHLCVData[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [zoomWindow, setZoomWindow] = useState<{ min: number; max: number } | null>(null);
 
-  // Fetch tickers list
-  const fetchTickers = useCallback(async () => {
+  // Fetch categorized tickers from stats.json
+  const fetchCategorizedTickers = useCallback(async () => {
     try {
       setLoading(true);
       setError(null);
       
-      console.log('Fetching tickers from /api/wedge_pop/wedges.json');
-      const response = await fetch('/api/wedge_pop/wedges.json');
+      console.log('Fetching categorized tickers from /api/wedge_pop/stats.json');
+      const response = await fetch('/api/wedge_pop/stats.json');
       console.log('Response status:', response.status);
       
       if (!response.ok) {
-        throw new Error(`Failed to fetch tickers: ${response.status}`);
+        throw new Error(`Failed to fetch categorized tickers: ${response.status}`);
       }
       
-      const data = await response.json();
-      console.log('Tickers data:', data);
+      const data: WedgeStats[] = await response.json();
+      console.log('Categorized tickers data:', data);
       
-      // Handle different data structures
-      let tickersList: WedgeTicker[] = [];
-      if (Array.isArray(data)) {
-        tickersList = data.map((ticker: string) => ({ ticker }));
-      } else if (data && typeof data === 'object') {
-        // If data is an object, try to extract tickers
-        if (data.tickers) {
-          tickersList = Array.isArray(data.tickers) ? data.tickers.map((ticker: string) => ({ ticker })) : [];
-        } else if (data.data) {
-          // Handle the case where data.data is an array of strings
-          if (Array.isArray(data.data)) {
-            tickersList = data.data.map((ticker: string) => ({ ticker }));
-          } else {
-            tickersList = [];
-          }
-        } else {
-          // Try to convert object keys to tickers
-          tickersList = Object.keys(data).map(key => ({ ticker: key }));
+      // Sort by date (newest first)
+      const sortedData = data.sort((a, b) => {
+        const dateA = new Date(a.date.substring(0, 4) + '-' + a.date.substring(4, 6) + '-' + a.date.substring(6, 8));
+        const dateB = new Date(b.date.substring(0, 4) + '-' + b.date.substring(4, 6) + '-' + b.date.substring(6, 8));
+        return dateB.getTime() - dateA.getTime();
+      });
+      
+      const categorized: CategorizedTickers[] = sortedData.map(item => ({
+        date: item.date,
+        pop: item.pop,
+        drop: item.drop,
+        pop_pct: item.pop_pct,
+        drop_pct: item.drop_pct
+      }));
+      
+      setCategorizedTickers(categorized);
+      console.log('Processed categorized tickers:', categorized);
+      
+      // Set default selections
+      if (categorized.length > 0) {
+        const lastDate = categorized[0].date;
+        setSelectedDate(lastDate);
+        
+        // Set default ticker to first pop ticker of the last date
+        if (categorized[0].pop.length > 0) {
+          setSelectedTicker(categorized[0].pop[0]);
+          setSelectedWedgeStatus('pop');
+        } else if (categorized[0].drop.length > 0) {
+          setSelectedTicker(categorized[0].drop[0]);
+          setSelectedWedgeStatus('drop');
         }
       }
-      
-      setTickers(tickersList);
-      console.log('Processed tickers:', tickersList);
-      
-      // Set first ticker as default if available
-      if (tickersList.length > 0 && !selectedTicker) {
-        setSelectedTicker(tickersList[0].ticker);
-      }
     } catch (err) {
-      console.error('Failed to fetch tickers:', err);
-      setError('Failed to fetch ticker list');
+      console.error('Failed to fetch categorized tickers:', err);
+      setError('Failed to fetch categorized ticker list');
     } finally {
       setLoading(false);
     }
-  }, [selectedTicker]);
+  }, []);
+
+  // Get available tickers for selected date and wedge status
+  const getAvailableTickers = useCallback(() => {
+    if (!selectedDate || !categorizedTickers.length) return [];
+    
+    const dateData = categorizedTickers.find(item => item.date === selectedDate);
+    if (!dateData) return [];
+    
+    return selectedWedgeStatus === 'pop' ? dateData.pop : dateData.drop;
+  }, [selectedDate, selectedWedgeStatus, categorizedTickers]);
 
   // Fetch OHLCV data for selected ticker
   const fetchOHLCVData = useCallback(async (ticker: string) => {
@@ -193,8 +220,8 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
 
   // Initial data fetch
   useEffect(() => {
-    fetchTickers();
-  }, [fetchTickers]);
+    fetchCategorizedTickers();
+  }, [fetchCategorizedTickers]);
 
   // Fetch OHLCV data when ticker changes
   useEffect(() => {
@@ -215,6 +242,16 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
 
     return () => clearInterval(interval);
   }, [autoRefresh, refreshInterval, selectedTicker, fetchOHLCVData]);
+
+  // Update selected ticker when date or wedge status changes
+  useEffect(() => {
+    const availableTickers = getAvailableTickers();
+    if (availableTickers.length > 0) {
+      setSelectedTicker(availableTickers[0]);
+    } else {
+      setSelectedTicker("");
+    }
+  }, [selectedDate, selectedWedgeStatus, getAvailableTickers]);
 
   // Process chart data
   const chartData = useMemo(() => {
@@ -1175,11 +1212,11 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
 
   // Debug logging
   useEffect(() => {
-    console.log('Debug - tickers count:', tickers.length);
+    console.log('Debug - categorizedTickers count:', categorizedTickers.length);
     console.log('Debug - selectedTicker:', selectedTicker);
     console.log('Debug - chartData:', chartData);
     console.log('Debug - chartOptions:', chartOptions);
-  }, [tickers.length, selectedTicker, chartData, chartOptions]);
+  }, [categorizedTickers.length, selectedTicker, chartData, chartOptions]);
 
   if (loading && !ohlcvData.length) {
     return (
@@ -1195,7 +1232,7 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
         <ErrorMessage message={`Error: ${error}`} />
         <div className="mt-4 text-center">
           <button 
-            onClick={() => fetchTickers()}
+            onClick={() => fetchCategorizedTickers()}
             className="btn-primary"
             disabled={loading}
           >
@@ -1215,7 +1252,7 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
           </h2>
           <div className="flex items-center gap-2 text-sm text-gray-600">
             <button
-              onClick={() => fetchTickers()}
+              onClick={() => fetchCategorizedTickers()}
               disabled={loading}
               className="btn-secondary text-xs"
               title="Refresh data"
@@ -1232,21 +1269,63 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
         <div className="chart-controls mt-2">
           <div className="flex items-center gap-6 flex-wrap">
             <label className="flex items-center gap-2 text-sm font-medium">
+              Date:
+              <select
+                value={selectedDate}
+                onChange={(e) => setSelectedDate(e.target.value)}
+                className="input-field"
+                disabled={loading}
+              >
+                {categorizedTickers.length === 0 ? (
+                  <option value="">No dates available</option>
+                ) : (
+                  <>
+                    <option value="">Select a date</option>
+                    {categorizedTickers.map((item) => (
+                      <option key={item.date} value={item.date}>
+                        {item.date.substring(0, 4)}-{item.date.substring(4, 6)}-{item.date.substring(6, 8)}
+                      </option>
+                    ))}
+                  </>
+                )}
+              </select>
+            </label>
+            
+            <label className="flex items-center gap-2 text-sm font-medium">
+              Wedge Status:
+              <select
+                value={selectedWedgeStatus}
+                onChange={(e) => setSelectedWedgeStatus(e.target.value as 'pop' | 'drop')}
+                className="input-field"
+                disabled={loading || !selectedDate}
+              >
+                <option value="pop">POP ({(() => {
+                  const dateData = categorizedTickers.find(item => item.date === selectedDate);
+                  return dateData ? `${dateData.pop.length} tickers (${(dateData.pop_pct * 100).toFixed(1)}%)` : '0 tickers';
+                })()})</option>
+                <option value="drop">DROP ({(() => {
+                  const dateData = categorizedTickers.find(item => item.date === selectedDate);
+                  return dateData ? `${dateData.drop.length} tickers (${(dateData.drop_pct * 100).toFixed(1)}%)` : '0 tickers';
+                })()})</option>
+              </select>
+            </label>
+            
+            <label className="flex items-center gap-2 text-sm font-medium">
               Ticker:
               <select
                 value={selectedTicker}
                 onChange={handleTickerChange}
                 className="input-field"
-                disabled={loading}
+                disabled={loading || !selectedDate}
               >
-                {tickers.length === 0 ? (
+                {getAvailableTickers().length === 0 ? (
                   <option value="">No tickers available</option>
                 ) : (
                   <>
                     <option value="">Select a ticker</option>
-                    {tickers.map((ticker) => (
-                      <option key={ticker.ticker} value={ticker.ticker}>
-                        {ticker.ticker}
+                    {getAvailableTickers().map((ticker) => (
+                      <option key={ticker} value={ticker}>
+                        {ticker}
                       </option>
                     ))}
                   </>
@@ -1259,7 +1338,7 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
 
       {chartData && (
         <div className="chart-stats py-1 px-3">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             <div className="chart-stat" key="current-price">
               <div className="chart-stat-label">Current Price</div>
               <div className="chart-stat-value">
@@ -1336,6 +1415,25 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
                       <span className="text-gray-400 text-xs">{formattedDate}</span>
                       <br />
                       <span className={statusColor}>{statusText}</span>
+                    </span>
+                  );
+                })()}
+              </div>
+            </div>
+            <div className="chart-stat" key="date-stats">
+              <div className="chart-stat-label">Date Stats</div>
+              <div className="chart-stat-value">
+                {(() => {
+                  if (!selectedDate) return 'N/A';
+                  const dateData = categorizedTickers.find(item => item.date === selectedDate);
+                  if (!dateData) return 'N/A';
+                  
+                  const formattedDate = `${selectedDate.substring(0, 4)}-${selectedDate.substring(4, 6)}-${selectedDate.substring(6, 8)}`;
+                  return (
+                    <span>
+                      <span className="text-gray-400 text-xs">{formattedDate}</span>
+                      <br />
+                      <span className="text-blue-600">{dateData.pop.length}P/{dateData.drop.length}D</span>
                     </span>
                   );
                 })()}

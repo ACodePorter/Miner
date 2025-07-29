@@ -255,12 +255,24 @@ async def get_market_pe(index: str = 'spx', start_date: str = None, end_date: st
     }
 
 
+@app.get('/api/wedge_pop/latest.json', description='Get all wedge pop tickers of today')
+async def get_wedge_pop_tickers_of_today() -> dict | list:
+    wedge_pop: WedgePop = WedgePop.get_instance()
+    return wedge_pop.get_wedge_tickers_on_today()
+
+
 @app.get('/api/wedge_pop/wedges.json', description='Get wedge pop tickers since 1 year ago')
 async def get_wedge_pop_tickers() -> dict | list:
     wedge_pop: WedgePop = WedgePop.get_instance()
     start_date = datetime.now(tz=pytz.timezone(
         'America/New_York')) - timedelta(days=365)
     return wedge_pop.get_wedge_tickers_since(start_date)
+
+
+@app.get('/api/wedge_pop/stats.json', description='Get wedge pop stats')
+async def get_wedge_pop_stats(start_date: Optional[str] = None, end_date: Optional[str] = None) -> dict | list:
+    wedge_pop: WedgePop = WedgePop.get_instance()
+    return wedge_pop.get_wedge_stats(start_date=start_date, end_date=end_date)
 
 
 @app.get('/api/ohlcvw/{ticker}.json', description='Get OHLCVW data for a ticker, default to 3 years ago')

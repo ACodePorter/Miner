@@ -1,6 +1,6 @@
 import logging
-from datetime import datetime
-from typing import List, Literal, Optional
+from datetime import datetime, timedelta
+from typing import Any, Dict, List, Literal, Optional
 
 import numpy as np
 import pandas as pd
@@ -31,10 +31,15 @@ class WedgeConfig:
 class WedgePop(SingletonParent):
 
     def _prepare_data(self, ticker: str) -> DataFrame:
+        cal = TradeCalendarShovel.get_instance()
         try:
             make_db_connection()
+            last_closed_trade_date = cal.get_last_closed_trade_date_before(
+                datetime.now(tz=pytz.timezone('America/New_York')))
+            last_closed_trade_date = datetime.strptime(
+                last_closed_trade_date, '%Y%m%d')
             ticker_info = TickerDailyInfo.objects(
-                ticker=ticker, interval='1d', wedge_status__exists=True)
+                ticker=ticker, interval='1d', wedge_status__exists=True, trade_date__lte=last_closed_trade_date)
             if ticker_info.count() == 0:
                 # Get all records ordered by trade_date for new tickers
                 ticker_daily_info_list = TickerDailyInfo.objects(
@@ -53,7 +58,7 @@ class WedgePop(SingletonParent):
                         f"No earliest for calculation found for ticker {ticker}")
                     return DataFrame()
                 ticker_daily_info_list = TickerDailyInfo.objects(
-                    ticker=ticker, interval='1d', trade_date__gte=earliest_for_calculation.trade_date).order_by('trade_date')
+                    ticker=ticker, interval='1d', trade_date__gte=earliest_for_calculation.trade_date, trade_date__lte=last_closed_trade_date).order_by('trade_date')
 
             data = mongo_2_df(ticker_daily_info_list)
             if data.empty:
@@ -98,16 +103,22 @@ class WedgePop(SingletonParent):
             lambda x: np.polyfit(range(len(x)), x, 1)[
                 0] if len(x) >= 3 else np.nan
         )
-        data['is_above_emas'] = (data['close'] > data['ema10']*0.995) & (
-            data['close'] > data['ema20']*0.995)
-        data['was_below_emas'] = (data['close'].shift(1) < data['ema10'].shift(1)*1.005) | (
-            data['close'].shift(1) < data['ema20'].shift(1)*1.005)
-        data['is_below_emas'] = (data['close'] < data['ema10']*1.005) & (
-            data['close'] < data['ema20']*1.005)
-        data['was_above_emas'] = (data['close'].shift(1) > data['ema10'].shift(1)*0.995) | (
-            data['close'].shift(1) > data['ema20'].shift(1)*0.995)
-        data['is_high_rvol'] = data['volume'] / \
-            data['avg_volume'] >= WedgeConfig.MIN_RELATIVE_VOLUME
+        data['is_above_emas'] = (data['close'] > data['ema10']*0.999) & (
+            data['close'] > data['ema20']*0.999)
+        data['is_below_any_emas'] = (data['close'] < data['ema10']*1.001) | (
+            data['close'] < data['ema20']*1.001)
+        data['was_below_emas'] = data['is_below_any_emas'].shift(1)
+        data['is_below_emas'] = (data['close'] < data['ema10']*1.001) & (
+            data['close'] < data['ema20']*1.001)
+        data['is_above_any_emas'] = (data['close'] > data['ema10']*0.999) | (
+            data['close'] > data['ema20']*0.999)
+        data['was_above_emas'] = data['is_above_any_emas'].shift(1)
+        # Calculate relative volume safely, avoiding division by zero or NaN
+        data['is_high_rvol'] = (
+            (data['volume'] / data['avg_volume'] >= WedgeConfig.MIN_RELATIVE_VOLUME) &
+            (data['avg_volume'].notna()) &
+            (data['avg_volume'] > 0)
+        )
         return data
 
     def _is_wedge_pop(self, is_above_emas: bool, was_below_emas: bool, ema_diff_slope: float, volume_increased: bool, atr_slope: float) -> bool:
@@ -117,6 +128,7 @@ class WedgePop(SingletonParent):
         return is_below_emas and was_above_emas and ema_diff_slope < 0 and volume_increased
 
     def update_wedge_pop(self, ticker: str) -> bool:
+        _l.info(f"Updating wedge pop for ticker {ticker}")
         data: DataFrame = self._prepare_data(ticker)
         if data.empty or len(data) < 2*WedgeConfig.VOLUME_ROLLING_WINDOW:
             _l.error(f"No enough data found for ticker {ticker}")
@@ -134,11 +146,17 @@ class WedgePop(SingletonParent):
                 wedge_window['volume'], distance=WedgeConfig.BACKWARD_LOOKBACK_VOLUME_WINDOW)
             vol_increased = False
             for idx in vol_high_idx:
-                if (wedge_window['volume'].iloc[idx] / wedge_window['avg_volume'].iloc[idx]) >= 1.5:
-                    vol_increased = True
-                    break
-            vol_increased = (
-                data['volume'].iloc[i] / data['avg_volume'].iloc[i] >= 1.5 or vol_increased)
+                avg_vol = wedge_window['avg_volume'].iloc[idx]
+                if pd.notna(avg_vol) and avg_vol > 0:
+                    if (wedge_window['volume'].iloc[idx] / avg_vol) >= 1.5:
+                        vol_increased = True
+                        break
+
+            # Check current volume relative to average volume
+            current_avg_vol = data['avg_volume'].iloc[i]
+            if pd.notna(current_avg_vol) and current_avg_vol > 0:
+                vol_increased = (
+                    data['volume'].iloc[i] / current_avg_vol >= 1.5 or vol_increased)
             _l.debug(
                 f'{data.iloc[i].to_dict()} vol_increased: {vol_increased}')
             if self._is_wedge_pop(data['is_above_emas'].iloc[i], data['was_below_emas'].iloc[i], data['ema_diff_slope'].iloc[i], vol_increased, data['atr_slope'].iloc[i]):
@@ -159,13 +177,17 @@ class WedgePop(SingletonParent):
         _l.debug(f'results: {all(results)}')
         return all(results)
 
-    def get_wedge_tickers_on(self, day: str | datetime) -> List[str]:
+    def get_wedge_tickers_on(self, day: str | datetime, status: Optional[List[str] | Literal['pop', 'drop', 'none']] = ['pop', 'drop'], country: str = 'us', exchange: str = 'XNYS') -> List[str]:
         make_db_connection()
         cal = TradeCalendarShovel.get_instance()
         day = cal.get_last_closed_trade_date_before(
-            day, country='us', exchange='XNYS')
+            day, country=country, exchange=exchange)
+        query = {
+            'trade_date': datetime.strptime(day, '%Y%m%d'),
+            'wedge_status__in': [status] if isinstance(status, str) else status
+        }
         tickers: List[str] = TickerDailyInfo.objects(
-            wedge_status__in=['pop', 'drop'], trade_date=datetime.strptime(day, '%Y%m%d')).distinct('ticker')
+            **query).distinct('ticker')
         return tickers
 
     def get_wedge_tickers_on_today(self) -> List[str]:
@@ -181,3 +203,37 @@ class WedgePop(SingletonParent):
         tickers: List[str] = TickerDailyInfo.objects(
             wedge_status__in=['pop', 'drop'], trade_date__gte=start_date, trade_date__lte=end_date).distinct('ticker')
         return tickers
+
+    def get_wedge_stats(self, start_date: Optional[str | datetime] = None, end_date: Optional[str | datetime] = None) -> Dict[Any, Any] | List[Any]:
+        make_db_connection()
+        cal = TradeCalendarShovel.get_instance()
+        if start_date is None:
+            start_date = datetime.now(tz=pytz.timezone(
+                'America/New_York')) - timedelta(days=365*2)
+        if end_date is None:
+            end_date = cal.last_closed_trade_date(
+                country='us', exchange='XNYS')
+        if isinstance(start_date, str):
+            start_date = datetime.strptime(start_date, '%Y%m%d')
+        if isinstance(end_date, str):
+            end_date = datetime.strptime(end_date, '%Y%m%d')
+        _l.info(f'start_date: {start_date}, end_date: {end_date}')
+        cal_dates = cal.trade_dates_since(
+            start_date=start_date-timedelta(days=1), end_date=end_date)
+        cal_dates = sorted(cal_dates)
+        full_stats = []
+        for cal_date in cal_dates:
+            stats = {'date': cal_date}
+            pops = self.get_wedge_tickers_on(cal_date, status='pop')
+            drops = self.get_wedge_tickers_on(cal_date, status='drop')
+            stats['total'] = len(pops) + len(drops)
+            stats['pop'] = pops or []
+            stats['drop'] = drops or []
+            stats['pop_pct'] = len(
+                pops) / stats['total'] if stats['total'] > 0 else 0.0
+            stats['pop_pct'] = round(stats['pop_pct'], 3)
+            stats['drop_pct'] = len(
+                drops) / stats['total'] if stats['total'] > 0 else 0.0
+            stats['drop_pct'] = round(stats['drop_pct'], 3)
+            full_stats.append(stats)
+        return full_stats

@@ -59,6 +59,7 @@ class MarketDataShvelTestCase(unittest.TestCase):
         md: MarketDataShovel = MarketDataShovel.get_instance()
         md.update_ticker_daily_info('TSLA')
         md.update_ticker_daily_info('GOOGL')
+        md.update_ticker_daily_info('ZM')
 
     def test_get_latest_index_tickers(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()

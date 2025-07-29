@@ -56,7 +56,7 @@ class GhPagesMaintainerTestCase(TestCase):
         os.makedirs('../../StkGuru/public/api/ohlcvw', exist_ok=True)
         os.makedirs('../../StkGuru/public/api/wedge_pop', exist_ok=True)
         gpm._export_ohlcvw(
-            '../../StkGuru/public/api/wedge_pop/wedges.json', '../../StkGuru/public/api/ohlcvw')
+            '../../StkGuru/public/api/wedge_pop/wedges.json', '../../StkGuru/public/api/wedge_pop/stats.json', '../../StkGuru/public/api/ohlcvw')
 
     def test_update_gh_pages(self):
         gpm = GhPagesMaintainer.get_instance()

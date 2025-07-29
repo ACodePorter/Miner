@@ -136,14 +136,17 @@ class GhPagesMaintainer(SingletonParent):
         dailies_df.dropna(inplace=True)
         return dailies_df.to_dict(orient='records')
 
-    def _export_ohlcvw(self, file_of_wdges_pop: str, dir_of_ohlcvw: str) -> bool:
+    def _export_ohlcvw(self, file_of_wdges_pop: str, file_of_wdges_stats: str, dir_of_ohlcvw: str) -> bool:
         try:
             wedge_pop: WedgePop = WedgePop.get_instance()
             start_date = datetime.now(tz=pytz.timezone(
                 'America/New_York')) - timedelta(days=365)
             tickers = wedge_pop.get_wedge_tickers_since(start_date)
+            stats = wedge_pop.get_wedge_stats(start_date)
             with open(file_of_wdges_pop, 'w', encoding='utf-8') as f:
                 json.dump(tickers, f, ensure_ascii=False, indent=2)
+            with open(file_of_wdges_stats, 'w', encoding='utf-8') as f:
+                json.dump(stats, f, ensure_ascii=False, indent=2)
             for ticker in tickers:
                 result = self._get_ohlcvw(ticker)
                 with open(os.path.join(dir_of_ohlcvw, f'{ticker}.json'), 'w', encoding='utf-8') as f:
@@ -175,7 +178,10 @@ class GhPagesMaintainer(SingletonParent):
         self._export_market_breadth('spx', os.path.join(
             dir_of_miner, 'StkGuru', 'public', 'api', 'mbs', 'spx.json'))
         self._export_ohlcvw(os.path.join(
-            dir_of_miner, 'StkGuru', 'public', 'api', 'wedge_pop', 'wedges.json'), ohclvw_dir)
+            dir_of_miner, 'StkGuru', 'public', 'api', 'wedge_pop', 'wedges.json'),
+            os.path.join(dir_of_miner, 'StkGuru', 'public',
+                         'api', 'wedge_pop', 'stats.json'),
+            ohclvw_dir)
 
     def update_gh_pages(self) -> bool:
         make_db_connection()

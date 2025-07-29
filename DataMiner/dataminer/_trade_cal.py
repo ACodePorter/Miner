@@ -182,4 +182,5 @@ class TradeCalendarShovel(SingletonParent):
     def get_last_closed_trade_date_before(self, day: str | datetime, country: str = 'us', exchange: str = 'XNYS') -> str:
         if isinstance(day, datetime):
             day = day.strftime('%Y%m%d')
-        return TradeCalendar.objects(cal_date__lte=day, is_open=True, country=country, exchange=exchange).order_by('-cal_date').first().cal_date
+        now = datetime.now(self.EXCHANGE_TZ_MAP[exchange])
+        return TradeCalendar.objects(cal_date__lte=day, is_open=True, country=country, exchange=exchange, close__lte=now).order_by('-cal_date').first().cal_date

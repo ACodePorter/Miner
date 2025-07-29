@@ -55,7 +55,7 @@ class IndicatorsTestCase(unittest.TestCase):
 
     def test_update_indicators_for_tickers(self):
         indicators: Indicators = Indicators.get_instance()
-        ret = indicators.update_indicators_for_tickers(['GOOGL', 'TSLA'])
+        ret = indicators.update_indicators_for_tickers(['GOOGL', 'TSLA', 'ZM'])
         _l.debug(ret)
 
 
