@@ -7487,7 +7487,7 @@
     "low": 26.9200000763,
     "close": 26.9400005341,
     "volume": 2689661.0,
-    "wedge_status": "drop"
+    "wedge_status": "none"
   },
   {
     "trade_date": "2025,07,28,00,00,00,000000",
@@ -7497,6 +7497,6 @@
     "low": 26.7199993134,
     "close": 27.0,
     "volume": 2470911.0,
-    "wedge_status": NaN
+    "wedge_status": "drop"
   }
 ]
