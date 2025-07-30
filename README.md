@@ -12,6 +12,9 @@ Miner is a modular, Dockerized platform for collecting, processing, and serving 
 - **MinerService**: FastAPI-based web service exposing REST APIs for data updates, queries, and analytics.
 - **MinerWorkers**: Celery worker setup and configuration for distributed task execution.
 - **MarketBreadth**: Calculates and stores market breadth indicators (e.g., % of stocks above SMA) by sector and index.
+- **MinerTrader**: Interactive Brokers integration for trading and market data access using Nautilus Trader framework.
+- **Maintainer**: Handles maintenance tasks and GitHub integration.
+- **StkGuru**: React-based frontend application for visualizing financial market data with interactive charts.
 - **Deploy**: Docker and deployment scripts/configuration for all services.
 - **Misc**: Utility scripts for maintenance, backup, and data correction.
 
@@ -46,6 +49,7 @@ Miner is a modular, Dockerized platform for collecting, processing, and serving 
 
 ### Main API Endpoints
 
+#### Data Update Endpoints
 - `GET /update_us_trade_calendar` — Update US trade calendar
 - `GET /update_spx_tickers_info`, `/update_iwd_tickers_info`, `/update_iwf_tickers_info`, `/update_iwm_tickers_info` — Update index tickers info
 - `GET /update_spx_tickers_daily_info`, `/update_iwd_tickers_daily_info`, `/update_iwf_tickers_daily_info`, `/update_iwm_tickers_daily_info` — Update daily info for tickers
@@ -53,15 +57,47 @@ Miner is a modular, Dockerized platform for collecting, processing, and serving 
 - `GET /update_spx_daily_ma`, `/update_iw_daily_ma` — Update moving averages
 - `GET /update_market_pe` — Update market PE ratios
 - `GET /update_spx_market_breadth` — Update market breadth for SPX
+- `GET /update_wedge_pop_for_index` — Update wedge pop data for indices
 - `GET /update_all_above` — Run all update tasks
 - `POST /update_indicators_for_tickers` — Update indicators for a list of tickers
+
+#### Data Retrieval Endpoints
 - `GET /api/mbs/{market_index}.json` — Get market breadth scores
 - `GET /api/market_pe/{index}.json` — Get market PE data (supports `spx` and `qqq`, with optional date range)
+- `GET /api/wedge_pop/latest.json` — Get all wedge pop tickers of today
+- `GET /api/wedge_pop/wedges.json` — Get wedge pop tickers since 1 year ago
+- `GET /api/wedge_pop/stats.json` — Get wedge pop statistics
+- `GET /api/ohlcvw/{ticker}.json` — Get OHLCV data for a specific ticker
+
+#### Daily Update Endpoints
+- `GET /run_us_daily_updates` — Update US daily data
+- `GET /run_hk_daily_updates` — Update Hong Kong daily data
+
+## Frontend Application (StkGuru)
+
+StkGuru is a React-based frontend application for visualizing financial market data:
+
+### Features
+- **Market PE Ratios Chart**: Interactive line chart showing S&P 500 (SPX) and Hang Seng Index (HSI) Price-to-Earnings ratios
+- **Market Breadth Chart**: Shows market breadth scores with sector breakdowns
+- **OHLCV Candlestick Chart**: Interactive candlestick charts with wedge status indicators
+- **Real-time Data**: Fetches data from the Miner backend API
+- **Responsive Design**: Works on desktop and mobile devices
+
+### Quick Start for Frontend
+```bash
+cd StkGuru
+npm install
+npm run dev
+```
+Then visit `http://localhost:5173`
 
 ## Features
 
 - Automated scraping and updating of financial market data
 - Market breadth analytics by sector and index
+- Interactive web frontend for data visualization
+- Interactive Brokers integration for trading
 - Modular, extensible design for easy integration and expansion
 - REST API for programmatic access
 - Distributed task execution with Celery
@@ -95,6 +131,8 @@ Each module has its own `requirements.txt`. Main dependencies include:
 - MongoEngine, Pymongo, jsmin, rich (Detonator, MarketBreadth, DataMiner)
 - pandas, yfinance, requests, exchange_calendars, etc. (DataMiner)
 - selenium, webdriver_manager (BrowserScraper)
+- nautilus_trader, ibapi (MinerTrader)
+- React, TypeScript, Highcharts (StkGuru)
 
 Dependencies are installed automatically during deployment using `uv` for speed.
 
