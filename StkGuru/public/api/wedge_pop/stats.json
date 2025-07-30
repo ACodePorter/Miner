@@ -1,1395 +1,3338 @@
 [
   {
     "date": "20240730",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "AOS",
+      "CZR",
+      "DASH"
+    ],
+    "drop": [
+      "ADM",
+      "AXON",
+      "CME"
+    ],
+    "pop_pct": 0.5,
+    "drop_pct": 0.5
   },
   {
     "date": "20240731",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 5,
+    "pop": [
+      "AES"
+    ],
+    "drop": [
+      "AVB",
+      "BG",
+      "CDW",
+      "CPT"
+    ],
+    "pop_pct": 0.2,
+    "drop_pct": 0.8
   },
   {
     "date": "20240801",
-    "total": 0,
+    "total": 15,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ADI",
+      "AIG",
+      "AME",
+      "AOS",
+      "APO",
+      "BA",
+      "BBY",
+      "C",
+      "CARR",
+      "CI",
+      "COF",
+      "CPAY",
+      "CTVA",
+      "CVX",
+      "DOV"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20240802",
-    "total": 0,
+    "total": 16,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ALB",
+      "APA",
+      "AXP",
+      "BK",
+      "BKR",
+      "BLDR",
+      "BX",
+      "BXP",
+      "CFG",
+      "CSGP",
+      "CVS",
+      "CZR",
+      "DAY",
+      "DD",
+      "DECK",
+      "DIS"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20240805",
-    "total": 0,
+    "total": 16,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "A",
+      "ALL",
+      "ALLE",
+      "AMGN",
+      "AVB",
+      "BAX",
+      "BLK",
+      "BR",
+      "CAH",
+      "CMI",
+      "COO",
+      "CRL",
+      "CTAS",
+      "CTSH",
+      "DLR",
+      "DOC"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20240806",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 2,
+    "pop": [
+      "CHD"
+    ],
+    "drop": [
+      "CB"
+    ],
+    "pop_pct": 0.5,
+    "drop_pct": 0.5
   },
   {
     "date": "20240807",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 9,
+    "pop": [
+      "CHD"
+    ],
+    "drop": [
+      "A",
+      "AMGN",
+      "BDX",
+      "BXP",
+      "CF",
+      "CRL",
+      "CTAS",
+      "DHR"
+    ],
+    "pop_pct": 0.111,
+    "drop_pct": 0.889
   },
   {
     "date": "20240808",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 9,
+    "pop": [
+      "ACGL",
+      "ADSK",
+      "ANET",
+      "BRK.B",
+      "BSX",
+      "CAT",
+      "CEG",
+      "CMG"
+    ],
+    "drop": [
+      "BF.B"
+    ],
+    "pop_pct": 0.889,
+    "drop_pct": 0.111
   },
   {
     "date": "20240809",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 9,
+    "pop": [
+      "ADSK",
+      "AIZ",
+      "CI",
+      "CMG",
+      "DECK",
+      "DLR"
+    ],
+    "drop": [
+      "BALL",
+      "CFG",
+      "DAY"
+    ],
+    "pop_pct": 0.667,
+    "drop_pct": 0.333
   },
   {
     "date": "20240812",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 13,
+    "pop": [
+      "AAPL",
+      "APH",
+      "COP",
+      "DECK",
+      "DPZ"
+    ],
+    "drop": [
+      "A",
+      "BDX",
+      "BF.B",
+      "BLK",
+      "BXP",
+      "CI",
+      "COO",
+      "CTSH"
+    ],
+    "pop_pct": 0.385,
+    "drop_pct": 0.615
   },
   {
     "date": "20240813",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 9,
+    "pop": [
+      "ADSK",
+      "APH",
+      "AXP",
+      "BLDR",
+      "CARR",
+      "CDNS",
+      "CPAY"
+    ],
+    "drop": [
+      "BAX",
+      "BR"
+    ],
+    "pop_pct": 0.778,
+    "drop_pct": 0.222
   },
   {
     "date": "20240814",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 9,
+    "pop": [
+      "AMAT",
+      "AMP",
+      "CB",
+      "CI",
+      "COP",
+      "DAY",
+      "DLR",
+      "DPZ"
+    ],
+    "drop": [
+      "BDX"
+    ],
+    "pop_pct": 0.889,
+    "drop_pct": 0.111
   },
   {
     "date": "20240815",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 21,
+    "pop": [
+      "ADI",
+      "AMAT",
+      "AMD",
+      "AME",
+      "AMGN",
+      "APA",
+      "APO",
+      "AVY",
+      "BA",
+      "BEN",
+      "BF.B",
+      "BKNG",
+      "C",
+      "CDW",
+      "CI",
+      "CMI",
+      "CTVA",
+      "DD",
+      "DDOG",
+      "DOV"
+    ],
+    "drop": [
+      "AMT"
+    ],
+    "pop_pct": 0.952,
+    "drop_pct": 0.048
   },
   {
     "date": "20240816",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "APO",
+      "APTV",
+      "BAC",
+      "CRWD",
+      "CVS"
+    ],
+    "drop": [
+      "AMCR"
+    ],
+    "pop_pct": 0.833,
+    "drop_pct": 0.167
   },
   {
     "date": "20240819",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 12,
+    "pop": [
+      "AIG",
+      "AME",
+      "AMGN",
+      "APA",
+      "APTV",
+      "ARE",
+      "BAC",
+      "CPRT",
+      "CSGP",
+      "DDOG",
+      "DIS"
+    ],
+    "drop": [
+      "DLR"
+    ],
+    "pop_pct": 0.917,
+    "drop_pct": 0.083
   },
   {
     "date": "20240820",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 8,
+    "pop": [
+      "ALB",
+      "CHD"
+    ],
+    "drop": [
+      "APA",
+      "BDX",
+      "BF.B",
+      "BKR",
+      "BX",
+      "CHTR"
+    ],
+    "pop_pct": 0.25,
+    "drop_pct": 0.75
   },
   {
     "date": "20240821",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 9,
+    "pop": [
+      "ARE",
+      "CMG",
+      "CSX",
+      "DD",
+      "DIS",
+      "DLR"
+    ],
+    "drop": [
+      "AMT",
+      "BEN",
+      "COP"
+    ],
+    "pop_pct": 0.667,
+    "drop_pct": 0.333
   },
   {
     "date": "20240822",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 5,
+    "pop": [
+      "ADM",
+      "BAC",
+      "DLR"
+    ],
+    "drop": [
+      "BR",
+      "CSX"
+    ],
+    "pop_pct": 0.6,
+    "drop_pct": 0.4
   },
   {
     "date": "20240823",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 12,
+    "pop": [
+      "APO",
+      "BA",
+      "BDX",
+      "BKR",
+      "CMG",
+      "COIN",
+      "CVX",
+      "DDOG",
+      "DIS"
+    ],
+    "drop": [
+      "AZO",
+      "BR",
+      "CDNS"
+    ],
+    "pop_pct": 0.75,
+    "drop_pct": 0.25
   },
   {
     "date": "20240826",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 3,
+    "pop": [
+      "APA"
+    ],
+    "drop": [
+      "ANET",
+      "COR"
+    ],
+    "pop_pct": 0.333,
+    "drop_pct": 0.667
   },
   {
     "date": "20240827",
-    "total": 0,
+    "total": 3,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "AES",
+      "CHD",
+      "CVS"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20240828",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 7,
+    "pop": [
+      "BR",
+      "CSX"
+    ],
+    "drop": [
+      "AMD",
+      "ANET",
+      "APTV",
+      "BF.B",
+      "DDOG"
+    ],
+    "pop_pct": 0.286,
+    "drop_pct": 0.714
   },
   {
     "date": "20240829",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "CVX"
+    ],
+    "drop": [
+      "BALL",
+      "CHD",
+      "CPB",
+      "CRM",
+      "DG"
+    ],
+    "pop_pct": 0.167,
+    "drop_pct": 0.833
   },
   {
     "date": "20240830",
-    "total": 0,
-    "pop": [],
+    "total": 2,
+    "pop": [
+      "DIS",
+      "DLR"
+    ],
     "drop": [],
-    "pop_pct": 0.0,
+    "pop_pct": 1.0,
     "drop_pct": 0.0
   },
   {
     "date": "20240903",
-    "total": 0,
+    "total": 24,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "A",
+      "AAPL",
+      "ALB",
+      "ANET",
+      "APD",
+      "APH",
+      "APTV",
+      "AVGO",
+      "AXON",
+      "AZO",
+      "BA",
+      "CAT",
+      "CDW",
+      "CEG",
+      "CF",
+      "CMG",
+      "CSGP",
+      "CZR",
+      "DAY",
+      "DDOG",
+      "DECK",
+      "DHR",
+      "DIS",
+      "DOW"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20240904",
-    "total": 0,
+    "total": 5,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "APD",
+      "BDX",
+      "CNC",
+      "CRWD",
+      "DELL"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20240905",
-    "total": 0,
+    "total": 10,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ADSK",
+      "AKAM",
+      "AME",
+      "AMGN",
+      "BR",
+      "CF",
+      "CFG",
+      "COR",
+      "CPRT",
+      "CSCO"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20240906",
-    "total": 0,
+    "total": 10,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ADSK",
+      "AXP",
+      "BLK",
+      "BR",
+      "BX",
+      "CCL",
+      "CFG",
+      "CTSH",
+      "DD",
+      "DLR"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20240909",
-    "total": 0,
+    "total": 2,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "CPT",
+      "CZR"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20240910",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 4,
+    "pop": [
+      "APD"
+    ],
+    "drop": [
+      "AXP",
+      "CMCSA",
+      "COF"
+    ],
+    "pop_pct": 0.25,
+    "drop_pct": 0.75
   },
   {
     "date": "20240911",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 10,
+    "pop": [
+      "DELL"
+    ],
+    "drop": [
+      "AMCR",
+      "BDX",
+      "BRK.B",
+      "BRO",
+      "CAG",
+      "CHD",
+      "CINF",
+      "COR",
+      "CPB"
+    ],
+    "pop_pct": 0.1,
+    "drop_pct": 0.9
   },
   {
     "date": "20240912",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 4,
+    "pop": [
+      "AAPL",
+      "DECK",
+      "DELL"
+    ],
+    "drop": [
+      "ABBV"
+    ],
+    "pop_pct": 0.75,
+    "drop_pct": 0.25
   },
   {
     "date": "20240913",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 11,
+    "pop": [
+      "APH",
+      "CDW",
+      "CHTR",
+      "CMCSA",
+      "CNC",
+      "COR",
+      "CPT",
+      "CVS",
+      "DD"
+    ],
+    "drop": [
+      "ADBE",
+      "BDX"
+    ],
+    "pop_pct": 0.818,
+    "drop_pct": 0.182
   },
   {
     "date": "20240916",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 5,
+    "pop": [
+      "AOS",
+      "BRO",
+      "COF",
+      "CRWD"
+    ],
+    "drop": [
+      "AAPL"
+    ],
+    "pop_pct": 0.8,
+    "drop_pct": 0.2
   },
   {
     "date": "20240917",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 13,
+    "pop": [
+      "A",
+      "AIG",
+      "APH",
+      "BEN",
+      "BKR",
+      "DDOG",
+      "DOW"
+    ],
+    "drop": [
+      "ABBV",
+      "ACN",
+      "CMCSA",
+      "COR",
+      "CSGP",
+      "DOC"
+    ],
+    "pop_pct": 0.538,
+    "drop_pct": 0.462
   },
   {
     "date": "20240918",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 7,
+    "pop": [
+      "C",
+      "CPRT"
+    ],
+    "drop": [
+      "AJG",
+      "AVY",
+      "BRO",
+      "CHD",
+      "CI"
+    ],
+    "pop_pct": 0.286,
+    "drop_pct": 0.714
   },
   {
     "date": "20240919",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 7,
+    "pop": [
+      "AIG",
+      "BRK.B"
+    ],
+    "drop": [
+      "ABT",
+      "AEP",
+      "AMT",
+      "CAH",
+      "DOC"
+    ],
+    "pop_pct": 0.286,
+    "drop_pct": 0.714
   },
   {
     "date": "20240920",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "DPZ"
+    ],
+    "drop": [
+      "AMCR",
+      "BAX",
+      "BRK.B",
+      "CME",
+      "DGX"
+    ],
+    "pop_pct": 0.167,
+    "drop_pct": 0.833
   },
   {
     "date": "20240923",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 5,
+    "pop": [
+      "BDX"
+    ],
+    "drop": [
+      "BRK.B",
+      "CI",
+      "CPB",
+      "CSGP"
+    ],
+    "pop_pct": 0.2,
+    "drop_pct": 0.8
   },
   {
     "date": "20240924",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 21,
+    "pop": [
+      "AVY",
+      "COIN",
+      "CVS"
+    ],
+    "drop": [
+      "ABBV",
+      "ABT",
+      "ACN",
+      "AEP",
+      "AMGN",
+      "AWK",
+      "BAC",
+      "BRK.B",
+      "CAH",
+      "CBOE",
+      "CFG",
+      "CHD",
+      "CNC",
+      "CRL",
+      "CSGP",
+      "CTSH",
+      "D",
+      "DGX"
+    ],
+    "pop_pct": 0.143,
+    "drop_pct": 0.857
   },
   {
     "date": "20240925",
-    "total": 0,
+    "total": 14,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ACN",
+      "ADM",
+      "AMGN",
+      "BAX",
+      "BF.B",
+      "BR",
+      "C",
+      "CDW",
+      "COP",
+      "CPAY",
+      "CSX",
+      "CTSH",
+      "DHI",
+      "DHR"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20240926",
-    "total": 0,
+    "total": 7,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ADP",
+      "AMT",
+      "AVB",
+      "BKR",
+      "CCI",
+      "CPT",
+      "D"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20240927",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 9,
+    "pop": [
+      "BRK.B",
+      "CHD"
+    ],
+    "drop": [
+      "ADP",
+      "ARE",
+      "BAC",
+      "BRO",
+      "COST",
+      "CPT",
+      "CTAS"
+    ],
+    "pop_pct": 0.222,
+    "drop_pct": 0.778
   },
   {
     "date": "20240930",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 5,
+    "pop": [
+      "BRO",
+      "CFG",
+      "CNC"
+    ],
+    "drop": [
+      "AON",
+      "BAX"
+    ],
+    "pop_pct": 0.6,
+    "drop_pct": 0.4
   },
   {
     "date": "20241001",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 17,
+    "pop": [
+      "AJG",
+      "CAH"
+    ],
+    "drop": [
+      "ADI",
+      "AME",
+      "AMZN",
+      "APH",
+      "APTV",
+      "AWK",
+      "BAC",
+      "CDNS",
+      "CDW",
+      "CFG",
+      "CL",
+      "COIN",
+      "CPT",
+      "CRWD",
+      "DELL"
+    ],
+    "pop_pct": 0.118,
+    "drop_pct": 0.882
   },
   {
     "date": "20241002",
-    "total": 0,
+    "total": 10,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "AEP",
+      "AME",
+      "AVY",
+      "AZO",
+      "CAG",
+      "CCI",
+      "CCL",
+      "CHD",
+      "DOC",
+      "DRI"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20241003",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 17,
+    "pop": [
+      "AJG",
+      "CAH"
+    ],
+    "drop": [
+      "AAPL",
+      "AEP",
+      "ALL",
+      "APD",
+      "AWK",
+      "BALL",
+      "BRK.B",
+      "CLX",
+      "COF",
+      "COO",
+      "CSX",
+      "DGX",
+      "DHR",
+      "DLR",
+      "DPZ"
+    ],
+    "pop_pct": 0.118,
+    "drop_pct": 0.882
   },
   {
     "date": "20241004",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 8,
+    "pop": [
+      "AJG",
+      "BG",
+      "CTSH",
+      "DELL"
+    ],
+    "drop": [
+      "ABBV",
+      "AES",
+      "CBRE",
+      "DHI"
+    ],
+    "pop_pct": 0.5,
+    "drop_pct": 0.5
   },
   {
     "date": "20241007",
-    "total": 0,
+    "total": 27,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "AAPL",
+      "ACGL",
+      "ADI",
+      "AIZ",
+      "ALL",
+      "AMCR",
+      "AME",
+      "AMZN",
+      "AON",
+      "APTV",
+      "BF.B",
+      "BRO",
+      "BX",
+      "CB",
+      "CBOE",
+      "CBRE",
+      "CDW",
+      "CINF",
+      "CMS",
+      "CSX",
+      "CTSH",
+      "CTVA",
+      "D",
+      "DIS",
+      "DOV",
+      "DPZ",
+      "DRI"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20241008",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 7,
+    "pop": [
+      "CDW"
+    ],
+    "drop": [
+      "APTV",
+      "BDX",
+      "CTVA",
+      "DD",
+      "DE",
+      "DOW"
+    ],
+    "pop_pct": 0.143,
+    "drop_pct": 0.857
   },
   {
     "date": "20241009",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "AAPL",
+      "AZO",
+      "CHTR"
+    ],
+    "drop": [
+      "BA",
+      "BG",
+      "CMS"
+    ],
+    "pop_pct": 0.5,
+    "drop_pct": 0.5
   },
   {
     "date": "20241010",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 11,
+    "pop": [
+      "CI"
+    ],
+    "drop": [
+      "A",
+      "ABBV",
+      "AEE",
+      "AME",
+      "BDX",
+      "BRK.B",
+      "BRO",
+      "CBRE",
+      "CTSH",
+      "DIS"
+    ],
+    "pop_pct": 0.091,
+    "drop_pct": 0.909
   },
   {
     "date": "20241011",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 10,
+    "pop": [
+      "AME",
+      "ARE",
+      "AVY",
+      "AZO",
+      "CB",
+      "CINF",
+      "CSGP",
+      "DLR"
+    ],
+    "drop": [
+      "ABBV",
+      "AOS"
+    ],
+    "pop_pct": 0.8,
+    "drop_pct": 0.2
   },
   {
     "date": "20241014",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 10,
+    "pop": [
+      "ABBV",
+      "AJG",
+      "CDW",
+      "CHTR",
+      "CLX",
+      "COO",
+      "CTSH"
+    ],
+    "drop": [
+      "ACGL",
+      "COP",
+      "DOW"
+    ],
+    "pop_pct": 0.7,
+    "drop_pct": 0.3
   },
   {
     "date": "20241015",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 20,
+    "pop": [
+      "AIZ",
+      "COST"
+    ],
+    "drop": [
+      "ABBV",
+      "ADI",
+      "ALB",
+      "AMAT",
+      "AMD",
+      "APA",
+      "APTV",
+      "BKR",
+      "C",
+      "CDNS",
+      "CDW",
+      "CF",
+      "CNC",
+      "CTRA",
+      "CVX",
+      "DD",
+      "DE",
+      "DOW"
+    ],
+    "pop_pct": 0.1,
+    "drop_pct": 0.9
   },
   {
     "date": "20241016",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 3,
+    "pop": [
+      "AWK"
+    ],
+    "drop": [
+      "A",
+      "AVY"
+    ],
+    "pop_pct": 0.333,
+    "drop_pct": 0.667
   },
   {
     "date": "20241017",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "ADM",
+      "CPB"
+    ],
+    "drop": [
+      "ALB",
+      "COO",
+      "CSX",
+      "DE"
+    ],
+    "pop_pct": 0.333,
+    "drop_pct": 0.667
   },
   {
     "date": "20241018",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 8,
+    "pop": [
+      "AMT"
+    ],
+    "drop": [
+      "ADM",
+      "AME",
+      "BKR",
+      "C",
+      "CF",
+      "CI",
+      "CVS"
+    ],
+    "pop_pct": 0.125,
+    "drop_pct": 0.875
   },
   {
     "date": "20241021",
-    "total": 0,
+    "total": 9,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ADI",
+      "AME",
+      "AVY",
+      "AXP",
+      "BIIB",
+      "CFG",
+      "COO",
+      "COST",
+      "CPRT"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20241022",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "COST"
+    ],
+    "drop": [
+      "AME",
+      "ARE",
+      "BALL",
+      "CRL",
+      "DHR"
+    ],
+    "pop_pct": 0.167,
+    "drop_pct": 0.833
   },
   {
     "date": "20241023",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 11,
+    "pop": [
+      "AWK"
+    ],
+    "drop": [
+      "AKAM",
+      "ALB",
+      "ANET",
+      "AXP",
+      "CAT",
+      "CFG",
+      "CSGP",
+      "CZR",
+      "DDOG",
+      "DPZ"
+    ],
+    "pop_pct": 0.091,
+    "drop_pct": 0.909
   },
   {
     "date": "20241024",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 8,
+    "pop": [
+      "ADI"
+    ],
+    "drop": [
+      "ALLE",
+      "ARE",
+      "BRK.B",
+      "BSX",
+      "CNP",
+      "COF",
+      "DOV"
+    ],
+    "pop_pct": 0.125,
+    "drop_pct": 0.875
   },
   {
     "date": "20241025",
-    "total": 0,
+    "total": 15,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ABT",
+      "AIZ",
+      "ALL",
+      "ANET",
+      "BA",
+      "BAX",
+      "BLK",
+      "BMY",
+      "BRO",
+      "C",
+      "CFG",
+      "CMI",
+      "COST",
+      "CPT",
+      "CTAS"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20241028",
-    "total": 0,
+    "total": 2,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ADP",
+      "COO"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20241029",
-    "total": 0,
+    "total": 9,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "AEE",
+      "AIZ",
+      "AKAM",
+      "APD",
+      "AXP",
+      "CMS",
+      "CNP",
+      "CPAY",
+      "D"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20241030",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 13,
+    "pop": [
+      "AIZ"
+    ],
+    "drop": [
+      "ACN",
+      "AKAM",
+      "ALB",
+      "AMD",
+      "APD",
+      "BXP",
+      "CAT",
+      "CBOE",
+      "CDW",
+      "CMG",
+      "COR",
+      "CZR"
+    ],
+    "pop_pct": 0.077,
+    "drop_pct": 0.923
   },
   {
     "date": "20241031",
-    "total": 0,
+    "total": 17,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ADI",
+      "AIZ",
+      "ANET",
+      "APH",
+      "AVB",
+      "AXON",
+      "AXP",
+      "BA",
+      "CHRW",
+      "CHTR",
+      "CMI",
+      "COIN",
+      "CRWD",
+      "CSCO",
+      "DECK",
+      "DOC",
+      "DOV"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20241101",
-    "total": 0,
+    "total": 7,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "AEP",
+      "AMCR",
+      "CBOE",
+      "CNP",
+      "CTRA",
+      "DDOG",
+      "DOC"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20241104",
-    "total": 0,
+    "total": 12,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ANET",
+      "AXP",
+      "BAC",
+      "BEN",
+      "BK",
+      "C",
+      "CFG",
+      "CINF",
+      "CMG",
+      "COO",
+      "CRWD",
+      "D"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20241105",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 7,
+    "pop": [
+      "ANET",
+      "AXP",
+      "BSX",
+      "CSGP",
+      "DOV"
+    ],
+    "drop": [
+      "AIG",
+      "BA"
+    ],
+    "pop_pct": 0.714,
+    "drop_pct": 0.286
   },
   {
     "date": "20241106",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "DDOG"
+    ],
+    "drop": [
+      "CBOE",
+      "CCI",
+      "CME",
+      "DG",
+      "DLTR"
+    ],
+    "pop_pct": 0.167,
+    "drop_pct": 0.833
   },
   {
     "date": "20241107",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "CMG"
+    ],
+    "drop": [
+      "ABT",
+      "AEE",
+      "APA",
+      "BDX",
+      "CTVA"
+    ],
+    "pop_pct": 0.167,
+    "drop_pct": 0.833
   },
   {
     "date": "20241108",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "ALLE"
+    ],
+    "drop": [
+      "AIG",
+      "AKAM",
+      "BAX",
+      "DDOG",
+      "DE"
+    ],
+    "pop_pct": 0.167,
+    "drop_pct": 0.833
   },
   {
     "date": "20241111",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 5,
+    "pop": [
+      "AFL",
+      "BLDR",
+      "CF"
+    ],
+    "drop": [
+      "A",
+      "ABBV"
+    ],
+    "pop_pct": 0.6,
+    "drop_pct": 0.4
   },
   {
     "date": "20241112",
-    "total": 0,
+    "total": 5,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ABNB",
+      "AMGN",
+      "BDX",
+      "D",
+      "DOC"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20241113",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 7,
+    "pop": [
+      "CARR",
+      "CF",
+      "CSGP",
+      "DLTR"
+    ],
+    "drop": [
+      "ABT",
+      "ALGN",
+      "CAT"
+    ],
+    "pop_pct": 0.571,
+    "drop_pct": 0.429
   },
   {
     "date": "20241114",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 4,
+    "pop": [
+      "BLDR",
+      "CB"
+    ],
+    "drop": [
+      "CRL",
+      "CSGP"
+    ],
+    "pop_pct": 0.5,
+    "drop_pct": 0.5
   },
   {
     "date": "20241115",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 8,
+    "pop": [
+      "BBY"
+    ],
+    "drop": [
+      "ACN",
+      "AZO",
+      "CBRE",
+      "CMCSA",
+      "COST",
+      "CTSH",
+      "DPZ"
+    ],
+    "pop_pct": 0.125,
+    "drop_pct": 0.875
   },
   {
     "date": "20241118",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 9,
+    "pop": [
+      "AIG",
+      "CBOE",
+      "CME",
+      "CMS"
+    ],
+    "drop": [
+      "ADBE",
+      "APH",
+      "CSX",
+      "DDOG",
+      "DRI"
+    ],
+    "pop_pct": 0.444,
+    "drop_pct": 0.556
   },
   {
     "date": "20241119",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 4,
+    "pop": [
+      "CPT"
+    ],
+    "drop": [
+      "AZO",
+      "CMCSA",
+      "CSX"
+    ],
+    "pop_pct": 0.25,
+    "drop_pct": 0.75
   },
   {
     "date": "20241120",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "CTVA",
+      "CVS",
+      "D",
+      "DE"
+    ],
+    "drop": [
+      "ABT",
+      "BLDR"
+    ],
+    "pop_pct": 0.667,
+    "drop_pct": 0.333
   },
   {
     "date": "20241121",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 8,
+    "pop": [
+      "ACN",
+      "BG",
+      "CI",
+      "CL",
+      "CMG",
+      "D"
+    ],
+    "drop": [
+      "AMZN",
+      "CHRW"
+    ],
+    "pop_pct": 0.75,
+    "drop_pct": 0.25
   },
   {
     "date": "20241122",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 8,
+    "pop": [
+      "A",
+      "ADBE",
+      "CBRE",
+      "CME",
+      "CRL",
+      "DD"
+    ],
+    "drop": [
+      "BG",
+      "CHRW"
+    ],
+    "pop_pct": 0.75,
+    "drop_pct": 0.25
   },
   {
     "date": "20241125",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 9,
+    "pop": [
+      "AKAM",
+      "ALLE",
+      "AMT",
+      "AZO",
+      "BG",
+      "BXP",
+      "CCI",
+      "DOC"
+    ],
+    "drop": [
+      "COP"
+    ],
+    "pop_pct": 0.889,
+    "drop_pct": 0.111
   },
   {
     "date": "20241126",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 3,
+    "pop": [
+      "ABBV",
+      "AIG"
+    ],
+    "drop": [
+      "CMCSA"
+    ],
+    "pop_pct": 0.667,
+    "drop_pct": 0.333
   },
   {
     "date": "20241127",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 4,
+    "pop": [
+      "AKAM"
+    ],
+    "drop": [
+      "ADSK",
+      "BLK",
+      "DELL"
+    ],
+    "pop_pct": 0.25,
+    "drop_pct": 0.75
   },
   {
     "date": "20241129",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 4,
+    "pop": [
+      "AOS",
+      "BAX",
+      "DG"
+    ],
+    "drop": [
+      "ABNB"
+    ],
+    "pop_pct": 0.75,
+    "drop_pct": 0.25
   },
   {
     "date": "20241202",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 11,
+    "pop": [
+      "ADI",
+      "BBY",
+      "BF.B",
+      "DHR"
+    ],
+    "drop": [
+      "ABT",
+      "AFL",
+      "AWK",
+      "BLK",
+      "CMS",
+      "D",
+      "DOC"
+    ],
+    "pop_pct": 0.364,
+    "drop_pct": 0.636
   },
   {
     "date": "20241203",
-    "total": 0,
+    "total": 9,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "AEE",
+      "AEP",
+      "AFL",
+      "ATO",
+      "BG",
+      "BRK.B",
+      "CARR",
+      "CB",
+      "CMCSA"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20241204",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 13,
+    "pop": [
+      "BBY"
+    ],
+    "drop": [
+      "ACGL",
+      "ALB",
+      "AON",
+      "BKR",
+      "BLDR",
+      "CB",
+      "CPB",
+      "CPT",
+      "CSX",
+      "CVX",
+      "DGX",
+      "DHI"
+    ],
+    "pop_pct": 0.077,
+    "drop_pct": 0.923
   },
   {
     "date": "20241205",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 15,
+    "pop": [
+      "AIG",
+      "APTV"
+    ],
+    "drop": [
+      "ABNB",
+      "ADP",
+      "ALGN",
+      "AMCR",
+      "AON",
+      "APD",
+      "CAT",
+      "CBOE",
+      "COR",
+      "CPAY",
+      "CRL",
+      "CVS",
+      "DAY"
+    ],
+    "pop_pct": 0.133,
+    "drop_pct": 0.867
   },
   {
     "date": "20241206",
-    "total": 0,
+    "total": 12,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "AEE",
+      "AEP",
+      "AIG",
+      "AJG",
+      "AME",
+      "AVY",
+      "BBY",
+      "BEN",
+      "CF",
+      "CL",
+      "COO",
+      "CTVA"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20241209",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 13,
+    "pop": [
+      "ALLE"
+    ],
+    "drop": [
+      "ADP",
+      "AIZ",
+      "ALL",
+      "AME",
+      "AMP",
+      "CEG",
+      "CF",
+      "CHTR",
+      "CINF",
+      "CMCSA",
+      "CTAS",
+      "DRI"
+    ],
+    "pop_pct": 0.077,
+    "drop_pct": 0.923
   },
   {
     "date": "20241210",
-    "total": 0,
+    "total": 12,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ALB",
+      "APH",
+      "AVY",
+      "BMY",
+      "CAH",
+      "CAT",
+      "CBRE",
+      "CDNS",
+      "CRWD",
+      "DAY",
+      "DLR",
+      "DPZ"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20241211",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 8,
+    "pop": [
+      "ADM"
+    ],
+    "drop": [
+      "ADP",
+      "BK",
+      "BMY",
+      "BXP",
+      "CFG",
+      "CRL",
+      "CSCO"
+    ],
+    "pop_pct": 0.125,
+    "drop_pct": 0.875
   },
   {
     "date": "20241212",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 9,
+    "pop": [
+      "ADI",
+      "ADM",
+      "APA"
+    ],
+    "drop": [
+      "ADBE",
+      "BEN",
+      "BKR",
+      "DAY",
+      "DE",
+      "DG"
+    ],
+    "pop_pct": 0.333,
+    "drop_pct": 0.667
   },
   {
     "date": "20241213",
-    "total": 0,
+    "total": 8,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ADSK",
+      "BEN",
+      "BKR",
+      "CHTR",
+      "CMI",
+      "CSCO",
+      "DLTR",
+      "DPZ"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20241216",
-    "total": 0,
+    "total": 6,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "A",
+      "ALGN",
+      "CF",
+      "CSCO",
+      "DE",
+      "DLTR"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20241217",
-    "total": 0,
+    "total": 6,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ADSK",
+      "BF.B",
+      "BR",
+      "BX",
+      "CBRE",
+      "CPRT"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20241218",
-    "total": 0,
+    "total": 19,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "APH",
+      "APO",
+      "AXON",
+      "AZO",
+      "BKNG",
+      "BLK",
+      "BSX",
+      "C",
+      "CAG",
+      "CDNS",
+      "CHRW",
+      "CNP",
+      "COST",
+      "CRM",
+      "CRWD",
+      "DASH",
+      "DDOG",
+      "DE",
+      "DLTR"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20241219",
-    "total": 0,
+    "total": 1,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "BDX"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20241220",
-    "total": 0,
-    "pop": [],
+    "total": 1,
+    "pop": [
+      "BDX"
+    ],
     "drop": [],
-    "pop_pct": 0.0,
+    "pop_pct": 1.0,
     "drop_pct": 0.0
   },
   {
     "date": "20241223",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 5,
+    "pop": [
+      "ADI",
+      "BMY"
+    ],
+    "drop": [
+      "AXON",
+      "AZO",
+      "CRM"
+    ],
+    "pop_pct": 0.4,
+    "drop_pct": 0.6
   },
   {
     "date": "20241224",
-    "total": 0,
-    "pop": [],
+    "total": 13,
+    "pop": [
+      "ABT",
+      "ADI",
+      "ADP",
+      "ADSK",
+      "AEE",
+      "AIZ",
+      "ALL",
+      "C",
+      "CAG",
+      "CAH",
+      "CDNS",
+      "COF",
+      "DAL"
+    ],
     "drop": [],
-    "pop_pct": 0.0,
+    "pop_pct": 1.0,
     "drop_pct": 0.0
   },
   {
     "date": "20241226",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 10,
+    "pop": [
+      "ADP",
+      "AIG",
+      "CAH",
+      "CB",
+      "CHD",
+      "CTSH"
+    ],
+    "drop": [
+      "ACN",
+      "AXON",
+      "AZO",
+      "CRM"
+    ],
+    "pop_pct": 0.6,
+    "drop_pct": 0.4
   },
   {
     "date": "20241227",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 10,
+    "pop": [
+      "APA",
+      "CAG"
+    ],
+    "drop": [
+      "ACN",
+      "ADSK",
+      "APO",
+      "CCL",
+      "CDNS",
+      "CRWD",
+      "CTSH",
+      "DIS"
+    ],
+    "pop_pct": 0.2,
+    "drop_pct": 0.8
   },
   {
     "date": "20241230",
-    "total": 0,
+    "total": 10,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ABT",
+      "ADP",
+      "AIZ",
+      "AMZN",
+      "AXP",
+      "BLK",
+      "BMY",
+      "BSX",
+      "C",
+      "CNP"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20241231",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 4,
+    "pop": [
+      "ABBV",
+      "CAG"
+    ],
+    "drop": [
+      "C",
+      "DECK"
+    ],
+    "pop_pct": 0.5,
+    "drop_pct": 0.5
   },
   {
     "date": "20250102",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 4,
+    "pop": [
+      "BKR"
+    ],
+    "drop": [
+      "AAPL",
+      "C",
+      "CB"
+    ],
+    "pop_pct": 0.25,
+    "drop_pct": 0.75
   },
   {
     "date": "20250103",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 7,
+    "pop": [
+      "AES",
+      "AXP",
+      "BAC",
+      "BDX",
+      "BMY",
+      "D"
+    ],
+    "drop": [
+      "BA"
+    ],
+    "pop_pct": 0.857,
+    "drop_pct": 0.143
   },
   {
     "date": "20250106",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "BIIB",
+      "BMY",
+      "CBRE"
+    ],
+    "drop": [
+      "CAG",
+      "CLX",
+      "CME"
+    ],
+    "pop_pct": 0.5,
+    "drop_pct": 0.5
   },
   {
     "date": "20250107",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 3,
+    "pop": [
+      "DAL",
+      "DGX"
+    ],
+    "drop": [
+      "AMZN"
+    ],
+    "pop_pct": 0.667,
+    "drop_pct": 0.333
   },
   {
     "date": "20250108",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 2,
+    "pop": [
+      "BK"
+    ],
+    "drop": [
+      "DLTR"
+    ],
+    "pop_pct": 0.5,
+    "drop_pct": 0.5
   },
   {
     "date": "20250110",
-    "total": 0,
+    "total": 13,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ABBV",
+      "ADP",
+      "ADSK",
+      "ALL",
+      "AMP",
+      "APTV",
+      "AXP",
+      "BK",
+      "BMY",
+      "BR",
+      "CFG",
+      "CMS",
+      "DLR"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250113",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "CRL"
+    ],
+    "drop": [
+      "AMAT",
+      "AZO",
+      "BA",
+      "BAC",
+      "DECK"
+    ],
+    "pop_pct": 0.167,
+    "drop_pct": 0.833
   },
   {
     "date": "20250114",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 9,
+    "pop": [
+      "AEE",
+      "AFL",
+      "AIG",
+      "AMAT",
+      "BAC",
+      "BR",
+      "CI",
+      "CSCO"
+    ],
+    "drop": [
+      "CRL"
+    ],
+    "pop_pct": 0.889,
+    "drop_pct": 0.111
   },
   {
     "date": "20250115",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 11,
+    "pop": [
+      "ADI",
+      "ADP",
+      "AVY",
+      "BR",
+      "CCL",
+      "CI",
+      "CTAS",
+      "CTSH",
+      "DOC",
+      "DOW"
+    ],
+    "drop": [
+      "DECK"
+    ],
+    "pop_pct": 0.909,
+    "drop_pct": 0.091
   },
   {
     "date": "20250116",
-    "total": 0,
-    "pop": [],
+    "total": 6,
+    "pop": [
+      "AIZ",
+      "ALGN",
+      "ALL",
+      "CB",
+      "CINF",
+      "DD"
+    ],
     "drop": [],
-    "pop_pct": 0.0,
+    "pop_pct": 1.0,
     "drop_pct": 0.0
   },
   {
     "date": "20250117",
-    "total": 0,
-    "pop": [],
+    "total": 12,
+    "pop": [
+      "ABNB",
+      "ADI",
+      "AVB",
+      "AXON",
+      "BLK",
+      "BXP",
+      "CDNS",
+      "COO",
+      "CTSH",
+      "CZR",
+      "DASH",
+      "DPZ"
+    ],
     "drop": [],
-    "pop_pct": 0.0,
+    "pop_pct": 1.0,
     "drop_pct": 0.0
   },
   {
     "date": "20250121",
-    "total": 0,
-    "pop": [],
+    "total": 10,
+    "pop": [
+      "ADSK",
+      "AVB",
+      "AXON",
+      "BALL",
+      "BLK",
+      "CBOE",
+      "CHRW",
+      "CPRT",
+      "DGX",
+      "DLTR"
+    ],
     "drop": [],
-    "pop_pct": 0.0,
+    "pop_pct": 1.0,
     "drop_pct": 0.0
   },
   {
     "date": "20250122",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 7,
+    "pop": [
+      "ADBE",
+      "CHTR",
+      "CRM"
+    ],
+    "drop": [
+      "ADM",
+      "ALB",
+      "APA",
+      "D"
+    ],
+    "pop_pct": 0.429,
+    "drop_pct": 0.571
   },
   {
     "date": "20250123",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 9,
+    "pop": [
+      "ABNB",
+      "ADBE",
+      "BALL",
+      "BEN",
+      "BLK",
+      "DIS"
+    ],
+    "drop": [
+      "ACGL",
+      "AJG",
+      "ATO"
+    ],
+    "pop_pct": 0.667,
+    "drop_pct": 0.333
   },
   {
     "date": "20250124",
-    "total": 0,
+    "total": 2,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ABNB",
+      "CF"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250127",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 16,
+    "pop": [
+      "CINF",
+      "DG"
+    ],
+    "drop": [
+      "AMAT",
+      "AMD",
+      "ANET",
+      "APH",
+      "AVGO",
+      "BKR",
+      "CARR",
+      "CDNS",
+      "CEG",
+      "CMI",
+      "COIN",
+      "CSCO",
+      "DELL",
+      "DLR"
+    ],
+    "pop_pct": 0.125,
+    "drop_pct": 0.875
   },
   {
     "date": "20250128",
-    "total": 0,
+    "total": 5,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "AME",
+      "AOS",
+      "ARE",
+      "CMS",
+      "DPZ"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250129",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 7,
+    "pop": [
+      "ABNB",
+      "CMG"
+    ],
+    "drop": [
+      "BRO",
+      "BXP",
+      "DHR",
+      "DOC",
+      "DPZ"
+    ],
+    "pop_pct": 0.286,
+    "drop_pct": 0.714
   },
   {
     "date": "20250130",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 15,
+    "pop": [
+      "BEN",
+      "CAG",
+      "CLX",
+      "CMG"
+    ],
+    "drop": [
+      "AMP",
+      "AVY",
+      "BX",
+      "CAT",
+      "CHRW",
+      "CHTR",
+      "CI",
+      "CMCSA",
+      "CSX",
+      "DAY",
+      "DOW"
+    ],
+    "pop_pct": 0.267,
+    "drop_pct": 0.733
   },
   {
     "date": "20250131",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 14,
+    "pop": [
+      "ANET"
+    ],
+    "drop": [
+      "ACGL",
+      "AIG",
+      "ALGN",
+      "APH",
+      "BRO",
+      "CAH",
+      "CHD",
+      "CL",
+      "CSX",
+      "CTRA",
+      "CVX",
+      "DECK",
+      "DHI"
+    ],
+    "pop_pct": 0.071,
+    "drop_pct": 0.929
   },
   {
     "date": "20250203",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 19,
+    "pop": [
+      "AWK",
+      "CB",
+      "CLX",
+      "CMS"
+    ],
+    "drop": [
+      "ADM",
+      "AMAT",
+      "AMCR",
+      "ANET",
+      "APTV",
+      "BAC",
+      "BAX",
+      "BBY",
+      "BLDR",
+      "BLK",
+      "COIN",
+      "COO",
+      "CSX",
+      "DLTR",
+      "DOC"
+    ],
+    "pop_pct": 0.211,
+    "drop_pct": 0.789
   },
   {
     "date": "20250204",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 9,
+    "pop": [
+      "AVGO",
+      "DDOG"
+    ],
+    "drop": [
+      "AME",
+      "BALL",
+      "CAH",
+      "CHD",
+      "CLX",
+      "CNC",
+      "D"
+    ],
+    "pop_pct": 0.222,
+    "drop_pct": 0.778
   },
   {
     "date": "20250205",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 14,
+    "pop": [
+      "ALL",
+      "ANET",
+      "AVGO",
+      "BBY",
+      "BXP",
+      "CDNS",
+      "CMS",
+      "CSX",
+      "DG"
+    ],
+    "drop": [
+      "AMD",
+      "BLDR",
+      "CF",
+      "DAY",
+      "DIS"
+    ],
+    "pop_pct": 0.643,
+    "drop_pct": 0.357
   },
   {
     "date": "20250206",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 13,
+    "pop": [
+      "ABNB",
+      "CHTR"
+    ],
+    "drop": [
+      "AFL",
+      "BDX",
+      "BMY",
+      "CHD",
+      "CI",
+      "COO",
+      "COR",
+      "CRM",
+      "CSX",
+      "CTRA",
+      "CTVA"
+    ],
+    "pop_pct": 0.154,
+    "drop_pct": 0.846
   },
   {
     "date": "20250207",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 14,
+    "pop": [
+      "AME",
+      "BXP"
+    ],
+    "drop": [
+      "A",
+      "AAPL",
+      "ADSK",
+      "ALL",
+      "AMZN",
+      "APD",
+      "BBY",
+      "CB",
+      "CDW",
+      "DDOG",
+      "DIS",
+      "DLTR"
+    ],
+    "pop_pct": 0.143,
+    "drop_pct": 0.857
   },
   {
     "date": "20250210",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 16,
+    "pop": [
+      "AMAT",
+      "APH",
+      "CSX",
+      "CVX",
+      "D",
+      "DDOG"
+    ],
+    "drop": [
+      "ACGL",
+      "AIZ",
+      "AVB",
+      "AXP",
+      "BEN",
+      "BXP",
+      "CCL",
+      "COR",
+      "CPAY",
+      "DAL"
+    ],
+    "pop_pct": 0.375,
+    "drop_pct": 0.625
   },
   {
     "date": "20250211",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 9,
+    "pop": [
+      "AAPL",
+      "ALLE",
+      "CHTR"
+    ],
+    "drop": [
+      "ADSK",
+      "AMZN",
+      "AVB",
+      "CMG",
+      "CPAY",
+      "DLTR"
+    ],
+    "pop_pct": 0.333,
+    "drop_pct": 0.667
   },
   {
     "date": "20250212",
-    "total": 0,
+    "total": 9,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "AIZ",
+      "AMZN",
+      "ANET",
+      "BAC",
+      "CBRE",
+      "CDNS",
+      "CFG",
+      "COF",
+      "CTVA"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250213",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "ALL",
+      "CL",
+      "CMG",
+      "CPB",
+      "CSX"
+    ],
+    "drop": [
+      "DDOG"
+    ],
+    "pop_pct": 0.833,
+    "drop_pct": 0.167
   },
   {
     "date": "20250214",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 7,
+    "pop": [
+      "APA",
+      "BEN"
+    ],
+    "drop": [
+      "AMAT",
+      "AME",
+      "AVB",
+      "CAH",
+      "DG"
+    ],
+    "pop_pct": 0.286,
+    "drop_pct": 0.714
   },
   {
     "date": "20250218",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 8,
+    "pop": [
+      "CARR"
+    ],
+    "drop": [
+      "ADSK",
+      "ALLE",
+      "AVGO",
+      "AZO",
+      "CAG",
+      "CAH",
+      "DIS"
+    ],
+    "pop_pct": 0.125,
+    "drop_pct": 0.875
   },
   {
     "date": "20250219",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 11,
+    "pop": [
+      "AFL",
+      "ALL",
+      "CDW",
+      "CL",
+      "CPB",
+      "DAY",
+      "DLR"
+    ],
+    "drop": [
+      "AXON",
+      "AXP",
+      "CDNS",
+      "CSX"
+    ],
+    "pop_pct": 0.636,
+    "drop_pct": 0.364
   },
   {
     "date": "20250220",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 11,
+    "pop": [
+      "CARR",
+      "DOC",
+      "DOW"
+    ],
+    "drop": [
+      "AKAM",
+      "AVGO",
+      "BR",
+      "CBRE",
+      "CFG",
+      "COR",
+      "CPAY",
+      "CPRT"
+    ],
+    "pop_pct": 0.273,
+    "drop_pct": 0.727
   },
   {
     "date": "20250221",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 19,
+    "pop": [
+      "AVY",
+      "CRL"
+    ],
+    "drop": [
+      "ACN",
+      "AFL",
+      "AZO",
+      "BA",
+      "BKR",
+      "CBRE",
+      "CDW",
+      "CEG",
+      "CMI",
+      "CRWD",
+      "CTSH",
+      "CTVA",
+      "CZR",
+      "DAY",
+      "DIS",
+      "DOV",
+      "DRI"
+    ],
+    "pop_pct": 0.105,
+    "drop_pct": 0.895
   },
   {
     "date": "20250224",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "AVB",
+      "AVY",
+      "DOC"
+    ],
+    "drop": [
+      "BEN",
+      "DASH",
+      "DPZ"
+    ],
+    "pop_pct": 0.5,
+    "drop_pct": 0.5
   },
   {
     "date": "20250225",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 11,
+    "pop": [
+      "AES",
+      "ALL",
+      "AOS",
+      "AVY",
+      "BALL",
+      "DOW",
+      "DRI"
+    ],
+    "drop": [
+      "ABNB",
+      "BSX",
+      "COP",
+      "DELL"
+    ],
+    "pop_pct": 0.636,
+    "drop_pct": 0.364
   },
   {
     "date": "20250226",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 8,
+    "pop": [
+      "BALL"
+    ],
+    "drop": [
+      "AZO",
+      "CBOE",
+      "CHTR",
+      "CMCSA",
+      "DE",
+      "DG",
+      "DRI"
+    ],
+    "pop_pct": 0.125,
+    "drop_pct": 0.875
   },
   {
     "date": "20250227",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 13,
+    "pop": [
+      "AIZ"
+    ],
+    "drop": [
+      "AAPL",
+      "ABNB",
+      "BKNG",
+      "CARR",
+      "CBRE",
+      "CMI",
+      "CPAY",
+      "CSGP",
+      "CTAS",
+      "DASH",
+      "DELL",
+      "DLTR"
+    ],
+    "pop_pct": 0.077,
+    "drop_pct": 0.923
   },
   {
     "date": "20250228",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "AMP",
+      "BXP",
+      "CBOE",
+      "CBRE",
+      "DRI"
+    ],
+    "drop": [
+      "APTV"
+    ],
+    "pop_pct": 0.833,
+    "drop_pct": 0.167
   },
   {
     "date": "20250303",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 14,
+    "pop": [
+      "BIIB"
+    ],
+    "drop": [
+      "AAPL",
+      "ALLE",
+      "APTV",
+      "BBY",
+      "BKNG",
+      "BXP",
+      "CMI",
+      "COP",
+      "CSGP",
+      "CTVA",
+      "CVX",
+      "DD",
+      "DE"
+    ],
+    "pop_pct": 0.071,
+    "drop_pct": 0.929
   },
   {
     "date": "20250304",
-    "total": 0,
+    "total": 11,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "AMCR",
+      "AME",
+      "BAC",
+      "BK",
+      "CBRE",
+      "CLX",
+      "CSCO",
+      "D",
+      "DASH",
+      "DIS",
+      "DRI"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250305",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 9,
+    "pop": [
+      "AES",
+      "BSX",
+      "CNC",
+      "COO",
+      "CRL"
+    ],
+    "drop": [
+      "ADP",
+      "AEP",
+      "CAG",
+      "CPB"
+    ],
+    "pop_pct": 0.556,
+    "drop_pct": 0.444
   },
   {
     "date": "20250306",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 18,
+    "pop": [
+      "CAG",
+      "DG"
+    ],
+    "drop": [
+      "ABNB",
+      "ADI",
+      "ADP",
+      "AEE",
+      "AEP",
+      "AVB",
+      "BK",
+      "BR",
+      "BSX",
+      "CAH",
+      "CBRE",
+      "CINF",
+      "CNP",
+      "COST",
+      "CTAS",
+      "DRI"
+    ],
+    "pop_pct": 0.111,
+    "drop_pct": 0.889
   },
   {
     "date": "20250307",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 8,
+    "pop": [
+      "AES",
+      "AVY",
+      "BEN"
+    ],
+    "drop": [
+      "ACGL",
+      "AJG",
+      "CINF",
+      "COO",
+      "DPZ"
+    ],
+    "pop_pct": 0.375,
+    "drop_pct": 0.625
   },
   {
     "date": "20250310",
-    "total": 0,
+    "total": 5,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "AAPL",
+      "ADI",
+      "BR",
+      "CSCO",
+      "DPZ"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250311",
-    "total": 0,
+    "total": 8,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "AFL",
+      "AMCR",
+      "AVY",
+      "CHTR",
+      "CMCSA",
+      "CPT",
+      "DE",
+      "DRI"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250312",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 11,
+    "pop": [
+      "AXON",
+      "CTRA"
+    ],
+    "drop": [
+      "AEE",
+      "AEP",
+      "BIIB",
+      "CAG",
+      "CHD",
+      "CL",
+      "CMCSA",
+      "CSGP",
+      "DG"
+    ],
+    "pop_pct": 0.182,
+    "drop_pct": 0.818
   },
   {
     "date": "20250313",
-    "total": 0,
+    "total": 5,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "AON",
+      "CAG",
+      "CRL",
+      "CSGP",
+      "DASH"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250314",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 5,
+    "pop": [
+      "AXON",
+      "CAH",
+      "CVX"
+    ],
+    "drop": [
+      "BMY",
+      "CHD"
+    ],
+    "pop_pct": 0.6,
+    "drop_pct": 0.4
   },
   {
     "date": "20250317",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 7,
+    "pop": [
+      "AOS",
+      "BDX",
+      "CDNS",
+      "CHRW",
+      "DASH",
+      "DE"
+    ],
+    "drop": [
+      "AON"
+    ],
+    "pop_pct": 0.857,
+    "drop_pct": 0.143
   },
   {
     "date": "20250318",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 4,
+    "pop": [
+      "ALLE",
+      "CMCSA"
+    ],
+    "drop": [
+      "CHD",
+      "CPT"
+    ],
+    "pop_pct": 0.5,
+    "drop_pct": 0.5
   },
   {
     "date": "20250319",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 17,
+    "pop": [
+      "ADSK",
+      "APA",
+      "AXON",
+      "BEN",
+      "BR",
+      "BSX",
+      "CDNS",
+      "CPAY",
+      "CRWD",
+      "D",
+      "DASH",
+      "DHI",
+      "DPZ"
+    ],
+    "drop": [
+      "AJG",
+      "BAX",
+      "BIIB",
+      "CAG"
+    ],
+    "pop_pct": 0.765,
+    "drop_pct": 0.235
   },
   {
     "date": "20250320",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 7,
+    "pop": [
+      "BK",
+      "CHTR",
+      "CPT",
+      "D"
+    ],
+    "drop": [
+      "CAG",
+      "CRL",
+      "DE"
+    ],
+    "pop_pct": 0.571,
+    "drop_pct": 0.429
   },
   {
     "date": "20250321",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 8,
+    "pop": [
+      "DAY"
+    ],
+    "drop": [
+      "AIZ",
+      "ATO",
+      "BG",
+      "CAG",
+      "CARR",
+      "CPT",
+      "DOC"
+    ],
+    "pop_pct": 0.125,
+    "drop_pct": 0.875
   },
   {
     "date": "20250324",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 20,
+    "pop": [
+      "ACGL",
+      "ADSK",
+      "AXP",
+      "BEN",
+      "BK",
+      "BKNG",
+      "BR",
+      "BX",
+      "C",
+      "CARR",
+      "CAT",
+      "CBRE",
+      "CNC",
+      "COF",
+      "CRWD",
+      "DELL"
+    ],
+    "drop": [
+      "AEP",
+      "AWK",
+      "BF.B",
+      "CBOE"
+    ],
+    "pop_pct": 0.8,
+    "drop_pct": 0.2
   },
   {
     "date": "20250325",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 16,
+    "pop": [
+      "AAPL",
+      "ADP",
+      "AON",
+      "CAT",
+      "CFG",
+      "CRM"
+    ],
+    "drop": [
+      "ABBV",
+      "AEE",
+      "AMGN",
+      "ATO",
+      "AWK",
+      "BDX",
+      "BMY",
+      "CL",
+      "CMS",
+      "DOC"
+    ],
+    "pop_pct": 0.375,
+    "drop_pct": 0.625
   },
   {
     "date": "20250326",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 5,
+    "pop": [
+      "ADM",
+      "CPB",
+      "CSCO"
+    ],
+    "drop": [
+      "ALB",
+      "BDX"
+    ],
+    "pop_pct": 0.6,
+    "drop_pct": 0.4
   },
   {
     "date": "20250327",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 10,
+    "pop": [
+      "AAPL",
+      "BALL",
+      "CF",
+      "CMG",
+      "COO",
+      "DHI"
+    ],
+    "drop": [
+      "AEE",
+      "BKR",
+      "CARR",
+      "DOC"
+    ],
+    "pop_pct": 0.6,
+    "drop_pct": 0.4
   },
   {
     "date": "20250328",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 17,
+    "pop": [
+      "AEE",
+      "D"
+    ],
+    "drop": [
+      "AIZ",
+      "AOS",
+      "BAC",
+      "BDX",
+      "BK",
+      "BLK",
+      "BSX",
+      "BXP",
+      "CDNS",
+      "CPAY",
+      "CTVA",
+      "DASH",
+      "DE",
+      "DHI",
+      "DPZ"
+    ],
+    "pop_pct": 0.118,
+    "drop_pct": 0.882
   },
   {
     "date": "20250331",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 8,
+    "pop": [
+      "BALL",
+      "BAX",
+      "CF",
+      "CLX",
+      "COO"
+    ],
+    "drop": [
+      "APH",
+      "BA",
+      "BF.B"
+    ],
+    "pop_pct": 0.625,
+    "drop_pct": 0.375
   },
   {
     "date": "20250401",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 4,
+    "pop": [
+      "AIZ",
+      "AMCR"
+    ],
+    "drop": [
+      "AMGN",
+      "BDX"
+    ],
+    "pop_pct": 0.5,
+    "drop_pct": 0.5
   },
   {
     "date": "20250402",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 4,
+    "pop": [
+      "AAPL",
+      "BK",
+      "DAY"
+    ],
+    "drop": [
+      "BSX"
+    ],
+    "pop_pct": 0.75,
+    "drop_pct": 0.25
   },
   {
     "date": "20250403",
-    "total": 0,
+    "total": 45,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "AAPL",
+      "ADSK",
+      "AIZ",
+      "ALLE",
+      "AMP",
+      "AON",
+      "APA",
+      "APD",
+      "APH",
+      "APO",
+      "AVB",
+      "AXP",
+      "BALL",
+      "BBY",
+      "BF.B",
+      "BK",
+      "BKNG",
+      "BKR",
+      "BLK",
+      "BX",
+      "BXP",
+      "C",
+      "CBRE",
+      "CDNS",
+      "CEG",
+      "CFG",
+      "CHRW",
+      "CINF",
+      "CMCSA",
+      "COF",
+      "COP",
+      "CPAY",
+      "CPT",
+      "CRWD",
+      "CSCO",
+      "CSX",
+      "CTRA",
+      "CTVA",
+      "CVX",
+      "DASH",
+      "DAY",
+      "DECK",
+      "DELL",
+      "DLTR",
+      "DRI"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250404",
-    "total": 0,
+    "total": 33,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ABT",
+      "ACGL",
+      "ADM",
+      "ADP",
+      "AEE",
+      "AEP",
+      "AFL",
+      "AIG",
+      "AJG",
+      "ALL",
+      "AMGN",
+      "ATO",
+      "AZO",
+      "BG",
+      "BR",
+      "BRK.B",
+      "BRO",
+      "CAH",
+      "CB",
+      "CBOE",
+      "CCI",
+      "CF",
+      "CHD",
+      "CHTR",
+      "CME",
+      "CMS",
+      "CPB",
+      "CPRT",
+      "CTAS",
+      "CVS",
+      "D",
+      "DGX",
+      "DPZ"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250407",
-    "total": 0,
+    "total": 6,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "AMT",
+      "AWK",
+      "CAG",
+      "CI",
+      "CNP",
+      "DHI"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250408",
-    "total": 0,
+    "total": 1,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "DLTR"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250409",
@@ -1401,602 +3344,1428 @@
   },
   {
     "date": "20250410",
-    "total": 0,
+    "total": 2,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "BG",
+      "CMCSA"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250411",
-    "total": 0,
-    "pop": [],
+    "total": 19,
+    "pop": [
+      "ACGL",
+      "ADP",
+      "AEP",
+      "AFL",
+      "AJG",
+      "ALGN",
+      "AOS",
+      "APH",
+      "ATO",
+      "AVGO",
+      "AWK",
+      "BF.B",
+      "BG",
+      "BKNG",
+      "BRO",
+      "CEG",
+      "CME",
+      "DE",
+      "DPZ"
+    ],
     "drop": [],
-    "pop_pct": 0.0,
+    "pop_pct": 1.0,
     "drop_pct": 0.0
   },
   {
     "date": "20250414",
-    "total": 0,
-    "pop": [],
+    "total": 24,
+    "pop": [
+      "ADM",
+      "ADSK",
+      "AEE",
+      "AEP",
+      "AFL",
+      "ALLE",
+      "AMCR",
+      "AMP",
+      "AON",
+      "AOS",
+      "BR",
+      "CAG",
+      "CB",
+      "CBOE",
+      "CMS",
+      "CPB",
+      "CSGP",
+      "CTVA",
+      "D",
+      "DASH",
+      "DAY",
+      "DGX",
+      "DLR",
+      "DRI"
+    ],
     "drop": [],
-    "pop_pct": 0.0,
+    "pop_pct": 1.0,
     "drop_pct": 0.0
   },
   {
     "date": "20250415",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 4,
+    "pop": [
+      "ALLE",
+      "AMAT",
+      "CEG"
+    ],
+    "drop": [
+      "CAG"
+    ],
+    "pop_pct": 0.75,
+    "drop_pct": 0.25
   },
   {
     "date": "20250416",
-    "total": 0,
+    "total": 1,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "AIG"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250417",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 14,
+    "pop": [
+      "AEE",
+      "ALLE",
+      "APH",
+      "AVB",
+      "BA",
+      "BKNG",
+      "BXP",
+      "CF",
+      "CMS",
+      "COO"
+    ],
+    "drop": [
+      "AJG",
+      "BRO",
+      "CNC",
+      "CVS"
+    ],
+    "pop_pct": 0.714,
+    "drop_pct": 0.286
   },
   {
     "date": "20250421",
-    "total": 0,
+    "total": 19,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ACGL",
+      "ADSK",
+      "AEE",
+      "AFL",
+      "ALL",
+      "APH",
+      "AXON",
+      "BKNG",
+      "BR",
+      "BRK.B",
+      "CAH",
+      "CBOE",
+      "CDNS",
+      "CEG",
+      "CI",
+      "CME",
+      "CTAS",
+      "D",
+      "DASH"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250422",
-    "total": 0,
-    "pop": [],
+    "total": 14,
+    "pop": [
+      "ADSK",
+      "AMCR",
+      "APH",
+      "AVB",
+      "AVY",
+      "BA",
+      "BAC",
+      "BXP",
+      "CMS",
+      "COF",
+      "CTVA",
+      "CZR",
+      "D",
+      "DHI"
+    ],
     "drop": [],
-    "pop_pct": 0.0,
+    "pop_pct": 1.0,
     "drop_pct": 0.0
   },
   {
     "date": "20250423",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 9,
+    "pop": [
+      "AAPL",
+      "AIG",
+      "AMAT",
+      "AVGO",
+      "BRO",
+      "CDW",
+      "CPT",
+      "CRWD"
+    ],
+    "drop": [
+      "AMT"
+    ],
+    "pop_pct": 0.889,
+    "drop_pct": 0.111
   },
   {
     "date": "20250424",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 10,
+    "pop": [
+      "AIG",
+      "BK",
+      "BLDR",
+      "BLK",
+      "CCL",
+      "CFG",
+      "COP",
+      "D",
+      "DE"
+    ],
+    "drop": [
+      "CL"
+    ],
+    "pop_pct": 0.9,
+    "drop_pct": 0.1
   },
   {
     "date": "20250425",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 10,
+    "pop": [
+      "ADBE",
+      "BLDR",
+      "CTSH"
+    ],
+    "drop": [
+      "ABT",
+      "ACGL",
+      "AJG",
+      "AWK",
+      "BRO",
+      "CNC",
+      "DOC"
+    ],
+    "pop_pct": 0.3,
+    "drop_pct": 0.7
   },
   {
     "date": "20250428",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 8,
+    "pop": [
+      "AEE",
+      "AIG",
+      "ALL",
+      "CFG",
+      "CMI",
+      "CTSH",
+      "D"
+    ],
+    "drop": [
+      "CL"
+    ],
+    "pop_pct": 0.875,
+    "drop_pct": 0.125
   },
   {
     "date": "20250429",
-    "total": 0,
-    "pop": [],
+    "total": 18,
+    "pop": [
+      "A",
+      "ACGL",
+      "ADP",
+      "AIZ",
+      "AMGN",
+      "AMP",
+      "AZO",
+      "BF.B",
+      "CARR",
+      "CB",
+      "CBOE",
+      "CBRE",
+      "CMS",
+      "CPAY",
+      "CSCO",
+      "DAL",
+      "DECK",
+      "DOW"
+    ],
     "drop": [],
-    "pop_pct": 0.0,
+    "pop_pct": 1.0,
     "drop_pct": 0.0
   },
   {
     "date": "20250430",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 9,
+    "pop": [
+      "APD",
+      "AWK",
+      "CB",
+      "CMI",
+      "CPT",
+      "CVS"
+    ],
+    "drop": [
+      "BXP",
+      "CSGP",
+      "CTRA"
+    ],
+    "pop_pct": 0.667,
+    "drop_pct": 0.333
   },
   {
     "date": "20250501",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 10,
+    "pop": [
+      "BX",
+      "CCL",
+      "CMI"
+    ],
+    "drop": [
+      "AEE",
+      "AFL",
+      "AVY",
+      "BDX",
+      "BLDR",
+      "BR",
+      "DG"
+    ],
+    "pop_pct": 0.3,
+    "drop_pct": 0.7
   },
   {
     "date": "20250502",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 8,
+    "pop": [
+      "AIZ",
+      "AMP",
+      "BXP",
+      "CB",
+      "CMCSA",
+      "COP",
+      "CSX"
+    ],
+    "drop": [
+      "CMS"
+    ],
+    "pop_pct": 0.875,
+    "drop_pct": 0.125
   },
   {
     "date": "20250505",
-    "total": 0,
+    "total": 2,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "BRK.B",
+      "COP"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250506",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 10,
+    "pop": [
+      "CMS"
+    ],
+    "drop": [
+      "ALGN",
+      "AMZN",
+      "APO",
+      "BAX",
+      "BXP",
+      "CVS",
+      "CZR",
+      "DHI",
+      "DHR"
+    ],
+    "pop_pct": 0.1,
+    "drop_pct": 0.9
   },
   {
     "date": "20250507",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 10,
+    "pop": [
+      "AFL",
+      "AMZN",
+      "AVY",
+      "BAX",
+      "BR",
+      "CSX"
+    ],
+    "drop": [
+      "BG",
+      "DASH",
+      "DAY",
+      "DPZ"
+    ],
+    "pop_pct": 0.6,
+    "drop_pct": 0.4
   },
   {
     "date": "20250508",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 7,
+    "pop": [
+      "CVS"
+    ],
+    "drop": [
+      "AMT",
+      "AVB",
+      "AWK",
+      "CMS",
+      "COR",
+      "DPZ"
+    ],
+    "pop_pct": 0.143,
+    "drop_pct": 0.857
   },
   {
     "date": "20250509",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 5,
+    "pop": [
+      "AIZ",
+      "APD"
+    ],
+    "drop": [
+      "AKAM",
+      "CMG",
+      "CRWD"
+    ],
+    "pop_pct": 0.4,
+    "drop_pct": 0.6
   },
   {
     "date": "20250512",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 10,
+    "pop": [
+      "AMCR",
+      "DAY"
+    ],
+    "drop": [
+      "AJG",
+      "AMT",
+      "CBOE",
+      "CCI",
+      "CI",
+      "CME",
+      "CVS",
+      "DG"
+    ],
+    "pop_pct": 0.2,
+    "drop_pct": 0.8
   },
   {
     "date": "20250513",
-    "total": 0,
+    "total": 3,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ABT",
+      "CNC",
+      "D"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250514",
-    "total": 0,
+    "total": 6,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ACGL",
+      "AJG",
+      "COO",
+      "DGX",
+      "DHI",
+      "DHR"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250515",
-    "total": 0,
-    "pop": [],
+    "total": 2,
+    "pop": [
+      "AMCR",
+      "APD"
+    ],
     "drop": [],
-    "pop_pct": 0.0,
+    "pop_pct": 1.0,
     "drop_pct": 0.0
   },
   {
     "date": "20250516",
-    "total": 0,
-    "pop": [],
+    "total": 7,
+    "pop": [
+      "AFL",
+      "AON",
+      "CCI",
+      "COO",
+      "CSGP",
+      "CTRA",
+      "DHI"
+    ],
     "drop": [],
-    "pop_pct": 0.0,
+    "pop_pct": 1.0,
     "drop_pct": 0.0
   },
   {
     "date": "20250519",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 8,
+    "pop": [
+      "AMT",
+      "AWK",
+      "BRO",
+      "CMS",
+      "CNP",
+      "CSGP"
+    ],
+    "drop": [
+      "ALB",
+      "COP"
+    ],
+    "pop_pct": 0.75,
+    "drop_pct": 0.25
   },
   {
     "date": "20250520",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "BRO",
+      "CHD",
+      "CI"
+    ],
+    "drop": [
+      "AES",
+      "BLDR",
+      "COO"
+    ],
+    "pop_pct": 0.5,
+    "drop_pct": 0.5
   },
   {
     "date": "20250521",
-    "total": 0,
+    "total": 25,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "A",
+      "ABNB",
+      "ACGL",
+      "AIZ",
+      "ALGN",
+      "AMCR",
+      "AOS",
+      "APA",
+      "APD",
+      "APO",
+      "BF.B",
+      "BG",
+      "BXP",
+      "CBRE",
+      "CMG",
+      "COF",
+      "COO",
+      "CPRT",
+      "CPT",
+      "CSGP",
+      "DAY",
+      "DGX",
+      "DHR",
+      "DPZ",
+      "DRI"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250522",
-    "total": 0,
+    "total": 5,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ALL",
+      "BR",
+      "CB",
+      "CINF",
+      "CMCSA"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250523",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 9,
+    "pop": [
+      "AWK"
+    ],
+    "drop": [
+      "ADI",
+      "AMAT",
+      "AVY",
+      "BALL",
+      "BR",
+      "CRM",
+      "DAY",
+      "DECK"
+    ],
+    "pop_pct": 0.111,
+    "drop_pct": 0.889
   },
   {
     "date": "20250527",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 5,
+    "pop": [
+      "ABBV",
+      "BKR",
+      "BRO",
+      "CTRA"
+    ],
+    "drop": [
+      "AZO"
+    ],
+    "pop_pct": 0.8,
+    "drop_pct": 0.2
   },
   {
     "date": "20250528",
-    "total": 0,
+    "total": 9,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ABNB",
+      "AOS",
+      "AVY",
+      "AWK",
+      "CDNS",
+      "D",
+      "DAY",
+      "DD",
+      "DGX"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250529",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 11,
+    "pop": [
+      "ACGL",
+      "AIZ",
+      "BRO",
+      "CPT",
+      "CTRA",
+      "DOC"
+    ],
+    "drop": [
+      "ABNB",
+      "AMAT",
+      "ANET",
+      "BBY",
+      "CHTR"
+    ],
+    "pop_pct": 0.545,
+    "drop_pct": 0.455
   },
   {
     "date": "20250530",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 9,
+    "pop": [
+      "AMT",
+      "AWK",
+      "CBRE",
+      "DAY"
+    ],
+    "drop": [
+      "APA",
+      "AVY",
+      "BG",
+      "COF",
+      "DD"
+    ],
+    "pop_pct": 0.444,
+    "drop_pct": 0.556
   },
   {
     "date": "20250602",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 8,
+    "pop": [
+      "AEE",
+      "BKR",
+      "CNP"
+    ],
+    "drop": [
+      "AME",
+      "BALL",
+      "CARR",
+      "CDW",
+      "CMI"
+    ],
+    "pop_pct": 0.375,
+    "drop_pct": 0.625
   },
   {
     "date": "20250603",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "ABNB",
+      "CBRE",
+      "CMS",
+      "DAY"
+    ],
+    "drop": [
+      "AZO",
+      "BSX"
+    ],
+    "pop_pct": 0.667,
+    "drop_pct": 0.333
   },
   {
     "date": "20250604",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 11,
+    "pop": [
+      "AMT",
+      "CBRE",
+      "DGX"
+    ],
+    "drop": [
+      "AEP",
+      "AJG",
+      "AZO",
+      "CBOE",
+      "CDW",
+      "CME",
+      "CNP",
+      "COR"
+    ],
+    "pop_pct": 0.273,
+    "drop_pct": 0.727
   },
   {
     "date": "20250605",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 11,
+    "pop": [
+      "CPAY"
+    ],
+    "drop": [
+      "AME",
+      "AVB",
+      "AVY",
+      "CB",
+      "CHRW",
+      "COIN",
+      "COST",
+      "CPT",
+      "CTSH",
+      "DD"
+    ],
+    "pop_pct": 0.091,
+    "drop_pct": 0.909
   },
   {
     "date": "20250606",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 8,
+    "pop": [
+      "BKR",
+      "BMY",
+      "CRM",
+      "CTRA",
+      "CVS",
+      "DD",
+      "DGX"
+    ],
+    "drop": [
+      "D"
+    ],
+    "pop_pct": 0.875,
+    "drop_pct": 0.125
   },
   {
     "date": "20250609",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 11,
+    "pop": [
+      "AKAM",
+      "BLDR",
+      "COP"
+    ],
+    "drop": [
+      "ACGL",
+      "ADP",
+      "AIZ",
+      "ALL",
+      "AON",
+      "CB",
+      "CHRW",
+      "D"
+    ],
+    "pop_pct": 0.273,
+    "drop_pct": 0.727
   },
   {
     "date": "20250610",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 7,
+    "pop": [
+      "AMT",
+      "AOS",
+      "CHTR"
+    ],
+    "drop": [
+      "CEG",
+      "CINF",
+      "CMG",
+      "CTAS"
+    ],
+    "pop_pct": 0.429,
+    "drop_pct": 0.571
   },
   {
     "date": "20250611",
-    "total": 0,
+    "total": 4,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "AVY",
+      "BR",
+      "CDW",
+      "CHRW"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250612",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 9,
+    "pop": [
+      "AEP",
+      "ATO",
+      "CBOE",
+      "CMS"
+    ],
+    "drop": [
+      "BA",
+      "BR",
+      "CHTR",
+      "CMG",
+      "COIN"
+    ],
+    "pop_pct": 0.444,
+    "drop_pct": 0.556
   },
   {
     "date": "20250613",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 28,
+    "pop": [
+      "AWK"
+    ],
+    "drop": [
+      "ADBE",
+      "ADSK",
+      "AME",
+      "AMP",
+      "ANET",
+      "AVY",
+      "AXP",
+      "BBY",
+      "BK",
+      "BLK",
+      "BX",
+      "CCI",
+      "CCL",
+      "CFG",
+      "CHD",
+      "CINF",
+      "CMI",
+      "COF",
+      "CPAY",
+      "CPT",
+      "CTAS",
+      "CTSH",
+      "D",
+      "DAY",
+      "DD",
+      "DE",
+      "DELL"
+    ],
+    "pop_pct": 0.036,
+    "drop_pct": 0.964
   },
   {
     "date": "20250616",
-    "total": 0,
+    "total": 1,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "DOC"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250617",
-    "total": 0,
+    "total": 23,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ABBV",
+      "ABNB",
+      "ABT",
+      "AES",
+      "AIG",
+      "AIZ",
+      "ALB",
+      "ALGN",
+      "AME",
+      "AMP",
+      "ANET",
+      "APD",
+      "AXP",
+      "BBY",
+      "BIIB",
+      "BLK",
+      "CFG",
+      "CMCSA",
+      "CMI",
+      "CTAS",
+      "CTSH",
+      "DD",
+      "DHR"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250618",
-    "total": 0,
+    "total": 2,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ADSK",
+      "DOW"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250620",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 8,
+    "pop": [
+      "ALGN",
+      "APO",
+      "AWK",
+      "CCI"
+    ],
+    "drop": [
+      "AME",
+      "AMZN",
+      "APTV",
+      "BLK"
+    ],
+    "pop_pct": 0.5,
+    "drop_pct": 0.5
   },
   {
     "date": "20250623",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 9,
+    "pop": [
+      "BRO",
+      "BSX",
+      "CHTR",
+      "CI"
+    ],
+    "drop": [
+      "AMGN",
+      "AMZN",
+      "APA",
+      "BKR",
+      "DHR"
+    ],
+    "pop_pct": 0.444,
+    "drop_pct": 0.556
   },
   {
     "date": "20250624",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 10,
+    "pop": [
+      "AME",
+      "CMCSA",
+      "CNP",
+      "DD"
+    ],
+    "drop": [
+      "AVB",
+      "BXP",
+      "CF",
+      "COP",
+      "CPT",
+      "CVX"
+    ],
+    "pop_pct": 0.4,
+    "drop_pct": 0.6
   },
   {
     "date": "20250625",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 13,
+    "pop": [
+      "AAPL"
+    ],
+    "drop": [
+      "ADP",
+      "AIG",
+      "AVB",
+      "AWK",
+      "CB",
+      "CF",
+      "CMS",
+      "CTAS",
+      "CVX",
+      "DAY",
+      "DLR",
+      "DRI"
+    ],
+    "pop_pct": 0.077,
+    "drop_pct": 0.923
   },
   {
     "date": "20250626",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "AES",
+      "CNP",
+      "COR",
+      "DAL",
+      "DOC"
+    ],
+    "drop": [
+      "CTRA"
+    ],
+    "pop_pct": 0.833,
+    "drop_pct": 0.167
   },
   {
     "date": "20250627",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 9,
+    "pop": [
+      "AEP",
+      "AOS",
+      "BRO",
+      "CME",
+      "D"
+    ],
+    "drop": [
+      "ABBV",
+      "AIG",
+      "BG",
+      "BKR"
+    ],
+    "pop_pct": 0.556,
+    "drop_pct": 0.444
   },
   {
     "date": "20250630",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 12,
+    "pop": [
+      "AEE",
+      "AIG",
+      "AON",
+      "ATO",
+      "BDX",
+      "CPAY",
+      "CTAS"
+    ],
+    "drop": [
+      "AES",
+      "ARE",
+      "CVX",
+      "DE",
+      "DHR"
+    ],
+    "pop_pct": 0.583,
+    "drop_pct": 0.417
   },
   {
     "date": "20250701",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "ACGL",
+      "ADP",
+      "AON",
+      "DPZ"
+    ],
+    "drop": [
+      "AXON",
+      "DLR"
+    ],
+    "pop_pct": 0.667,
+    "drop_pct": 0.333
   },
   {
     "date": "20250702",
-    "total": 0,
+    "total": 10,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ABT",
+      "ACGL",
+      "AIG",
+      "ATO",
+      "CB",
+      "CEG",
+      "CNC",
+      "COR",
+      "CTAS",
+      "CVS"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250703",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 3,
+    "pop": [
+      "ACN"
+    ],
+    "drop": [
+      "BG",
+      "CI"
+    ],
+    "pop_pct": 0.333,
+    "drop_pct": 0.667
   },
   {
     "date": "20250707",
-    "total": 0,
+    "total": 6,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ABT",
+      "AFL",
+      "BAX",
+      "CDW",
+      "CVS",
+      "DRI"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250708",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "DAY",
+      "DPZ"
+    ],
+    "drop": [
+      "AEE",
+      "BR",
+      "BSX",
+      "CMS"
+    ],
+    "pop_pct": 0.333,
+    "drop_pct": 0.667
   },
   {
     "date": "20250709",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "BXP",
+      "D"
+    ],
+    "drop": [
+      "ACGL",
+      "BAX",
+      "CPAY",
+      "CVS"
+    ],
+    "pop_pct": 0.333,
+    "drop_pct": 0.667
   },
   {
     "date": "20250710",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 11,
+    "pop": [
+      "BXP",
+      "CINF",
+      "CPAY"
+    ],
+    "drop": [
+      "ADSK",
+      "AXON",
+      "CAH",
+      "CHTR",
+      "CL",
+      "CME",
+      "CRM",
+      "CTSH"
+    ],
+    "pop_pct": 0.273,
+    "drop_pct": 0.727
   },
   {
     "date": "20250711",
-    "total": 0,
+    "total": 13,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "AKAM",
+      "AMT",
+      "APTV",
+      "BSX",
+      "CDW",
+      "CMCSA",
+      "CME",
+      "COR",
+      "CPAY",
+      "CTVA",
+      "DAY",
+      "DECK",
+      "DIS"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250714",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 7,
+    "pop": [
+      "AON"
+    ],
+    "drop": [
+      "AME",
+      "CHD",
+      "CMG",
+      "DHR",
+      "DIS",
+      "DOW"
+    ],
+    "pop_pct": 0.143,
+    "drop_pct": 0.857
   },
   {
     "date": "20250715",
-    "total": 0,
+    "total": 35,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "A",
+      "ABBV",
+      "AJG",
+      "ALGN",
+      "ALLE",
+      "AMCR",
+      "AMP",
+      "AMT",
+      "APA",
+      "APD",
+      "APTV",
+      "AVY",
+      "AXP",
+      "BAC",
+      "BF.B",
+      "BIIB",
+      "BKR",
+      "BLK",
+      "BMY",
+      "BRO",
+      "CBRE",
+      "CCI",
+      "CHRW",
+      "CMCSA",
+      "CME",
+      "CMG",
+      "COO",
+      "COP",
+      "COR",
+      "COST",
+      "CSCO",
+      "CTRA",
+      "D",
+      "DHI",
+      "DIS"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250716",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 7,
+    "pop": [
+      "AEE",
+      "CPT",
+      "DLR"
+    ],
+    "drop": [
+      "ALGN",
+      "BSX",
+      "CF",
+      "DASH"
+    ],
+    "pop_pct": 0.429,
+    "drop_pct": 0.571
   },
   {
     "date": "20250717",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 5,
+    "pop": [
+      "BSX",
+      "CPT"
+    ],
+    "drop": [
+      "BXP",
+      "COR",
+      "DG"
+    ],
+    "pop_pct": 0.4,
+    "drop_pct": 0.6
   },
   {
     "date": "20250718",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 14,
+    "pop": [
+      "AKAM",
+      "AON",
+      "AVB",
+      "BR"
+    ],
+    "drop": [
+      "ABBV",
+      "ALGN",
+      "AME",
+      "APTV",
+      "AVY",
+      "AXP",
+      "BLDR",
+      "CME",
+      "COO",
+      "COP"
+    ],
+    "pop_pct": 0.286,
+    "drop_pct": 0.714
   },
   {
     "date": "20250721",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 11,
+    "pop": [
+      "DECK"
+    ],
+    "drop": [
+      "ABBV",
+      "AMCR",
+      "AON",
+      "BDX",
+      "BMY",
+      "CDW",
+      "CHRW",
+      "CRL",
+      "DHI",
+      "DPZ"
+    ],
+    "pop_pct": 0.091,
+    "drop_pct": 0.909
   },
   {
     "date": "20250722",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 6,
+    "pop": [
+      "ADSK",
+      "ALL",
+      "CHTR"
+    ],
+    "drop": [
+      "ADI",
+      "AMAT",
+      "BSX"
+    ],
+    "pop_pct": 0.5,
+    "drop_pct": 0.5
   },
   {
     "date": "20250723",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 4,
+    "pop": [
+      "AON",
+      "CTVA",
+      "DE"
+    ],
+    "drop": [
+      "CB"
+    ],
+    "pop_pct": 0.75,
+    "drop_pct": 0.25
   },
   {
     "date": "20250724",
-    "total": 0,
+    "total": 7,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "AMP",
+      "AVY",
+      "CHTR",
+      "COF",
+      "CTVA",
+      "DOV",
+      "DOW"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250725",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 5,
+    "pop": [
+      "AFL",
+      "ALL",
+      "BAX"
+    ],
+    "drop": [
+      "CMCSA",
+      "DOC"
+    ],
+    "pop_pct": 0.6,
+    "drop_pct": 0.4
   },
   {
     "date": "20250728",
-    "total": 0,
+    "total": 5,
     "pop": [],
-    "drop": [],
+    "drop": [
+      "ABBV",
+      "ACGL",
+      "ALL",
+      "ATO",
+      "CLX"
+    ],
     "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "drop_pct": 1.0
   },
   {
     "date": "20250729",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 10,
+    "pop": [
+      "CTAS",
+      "DE"
+    ],
+    "drop": [
+      "ALB",
+      "AMT",
+      "AXP",
+      "BKNG",
+      "CARR",
+      "COF",
+      "COIN",
+      "CPAY"
+    ],
+    "pop_pct": 0.2,
+    "drop_pct": 0.8
   }
 ]
