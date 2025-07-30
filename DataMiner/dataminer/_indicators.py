@@ -10,7 +10,7 @@ from datetime import datetime
 from multiprocessing import Pool
 from typing import Dict, Literal
 
-import numpy
+import numpy as np
 from detonator import (SingletonParent, get_logger, is_in_daemon,
                        make_db_connection, mongo_2_df)
 from mongoengine import QuerySet
@@ -33,6 +33,10 @@ def _get_since_trade_date_for_indicator(ticker: str, indicator: Literal['sma', '
         'ticker': ticker,
         'interval': interval
     }
+    if indicator == 'ema':
+        oldest_info = TickerDailyInfo.objects(
+            **query).order_by('trade_date').limit(1).first()
+        return oldest_info.trade_date if oldest_info else datetime(year=1970, month=1, day=1)
     latest_info: TickerDailyInfo = TickerDailyInfo.objects(
         **query).order_by('-trade_date').limit(1).first()
 
@@ -66,10 +70,11 @@ def _get_since_trade_date_for_indicator(ticker: str, indicator: Literal['sma', '
     return info.trade_date
 
 
-def _calculate_indicator(ticker: str, indicator: Literal['sma', 'ema'] = 'sma', since: str | datetime = None,
+def _calculate_indicator(ticker: str, indicator: Literal['sma', 'ema'] = 'sma', since: str | datetime | None = None,
                          interval: str = '1d', period: int = 20):
     _logger.info(
         'Calculating %s for %s since %s @ interval:%s period:%d', indicator, ticker, since, interval, period)
+    start_time = datetime.now()
     ticker = ticker.upper()
     query = {'ticker': ticker, 'interval': interval}
     if since:
@@ -82,60 +87,59 @@ def _calculate_indicator(ticker: str, indicator: Literal['sma', 'ema'] = 'sma', 
 
     if indicator == 'sma':
         values = tickers_df['close'].rolling(window=period).mean()
+        tickers_df[f'sma{period}_t'] = values
+        if f'sma{period}' not in tickers_df.columns:
+            tickers_df[f'sma{period}'] = np.nan
+        tickers_df = tickers_df[tickers_df[f'sma{period}_t'].notna(
+        ) & tickers_df[f'sma{period}'].isna()]
     elif indicator == 'ema':
         values = tickers_df['close'].ewm(span=period, adjust=False).mean()
+        tickers_df[f'ema{period}_t'] = values
+        if f'ema{period}' not in tickers_df.columns:
+            tickers_df[f'ema{period}'] = np.nan
+        tickers_df = tickers_df[tickers_df[f'ema{period}_t'].notna(
+        ) & tickers_df[f'ema{period}'].isna()]
     else:
         raise ValueError(f'Unsupported indicator: {indicator}')
 
-    # Create a dictionary mapping trade dates to indicator values
-    updates = {}
-    for i, t in enumerate(tickers):
-        if not numpy.isnan(values[i]):
-            updates[t.trade_date] = float(values[i])
-
-    _logger.info('Calculated %d valid indicator values for %s',
-                 len(updates), ticker)
-    if len(updates) > 0:
-        _logger.info('Sample values: %s', dict(list(updates.items())[:3]))
-
-    if updates:
-        _logger.info('Updating %d documents for %s %s%d',
-                     len(updates), ticker, indicator, period)
-        start_time = datetime.now()
-
-        # Create bulk operations
-        bulk_operations = []
-        for trade_date, value in updates.items():
-            # Create update operation without checking current value
-            bulk_operations.append(
-                UpdateOne(
-                    {'ticker': ticker, 'interval': interval, 'trade_date': trade_date.strftime(
-                        '%Y,%m,%d,%H,%M,%S,000000')},
-                    {'$set': {f'{indicator}{period}': value}}
-                )
-            )
-
-        if bulk_operations:
-            _logger.info('Executing %d bulk operations for %s',
-                         len(bulk_operations), ticker)
-            # Log first few operations for debugging
-            for i, op in enumerate(bulk_operations[:3]):
-                filter_doc = {'ticker': ticker, 'interval': interval, 'trade_date': list(
-                    updates.keys())[i].strftime('%Y,%m,%d,%H,%M,%S,000000')}
-                update_doc = {
-                    '$set': {f'{indicator}{period}': list(updates.values())[i]}}
-                _logger.debug('Sample operation %d: %s', i, {
-                    'filter': filter_doc,
-                    'update': update_doc
-                })
-
-            result = TickerDailyInfo._get_collection().bulk_write(
-                bulk_operations, ordered=False)
-            duration = (datetime.now() - start_time).total_seconds()
-            _logger.info('Update completed in %.2f seconds. Modified: %d, Matched: %d',
-                         duration, result.modified_count, result.matched_count)
+    if len(tickers_df) > 0:
+        _logger.info(
+            f'{indicator}{period} for {ticker} @ {interval} since {since} is calculated')
     else:
-        _logger.info('No updates for %s %s%d', ticker, indicator, period)
+        _logger.info(
+            f'{indicator}{period} for {ticker} @ {interval} since {since} is already calculated')
+        return
+
+    # Create bulk operations
+    bulk_operations = []
+    for _, row in tickers_df.iterrows():
+        # Create update operation without checking current value
+        # Handle both ObjectId objects and string representations
+        from bson import ObjectId
+        if isinstance(row['_id'], ObjectId):
+            object_id = row['_id']
+        else:
+            # Handle string representation from mongo_2_df
+            object_id = ObjectId(row['_id']['$oid'])
+        bulk_operations.append(
+            UpdateOne(
+                filter={'_id': object_id},
+                update={
+                    '$set': {f'{indicator}{period}': row[f'{indicator}{period}_t']}}
+            )
+        )
+    if bulk_operations:
+        _logger.info('Executing %d bulk operations for %s',
+                     len(bulk_operations), ticker)
+        # Log first few operations for debugging
+        result = TickerDailyInfo._get_collection().bulk_write(
+            bulk_operations, ordered=False)
+        duration = (datetime.now() - start_time).total_seconds()
+        _logger.info('Update completed in %.4f seconds. Modified: %d, Matched: %d',
+                     duration, result.modified_count, result.matched_count)
+    else:
+        _logger.error(
+            'No updates for %s %s%d, but it should not happen', ticker, indicator, period)
 
 
 def _update_indicator_with_details(ticker: str, indicator: Literal['sma', 'ema'] = 'sma', interval: str = '1d',

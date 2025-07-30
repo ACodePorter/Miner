@@ -165,7 +165,16 @@ class WedgePop(SingletonParent):
                 data.loc[i, 'wedge_status'] = 'drop'
             else:
                 data.loc[i, 'wedge_status'] = 'none'
-            TickerDailyInfo.objects(ticker=ticker, interval='1d', id=(data['_id'].iloc[i])['$oid']).update(
+            # Handle both ObjectId objects and string representations
+            from bson import ObjectId
+            object_id = data['_id'].iloc[i]
+            if isinstance(object_id, ObjectId):
+                # Already an ObjectId object
+                pass
+            else:
+                # Handle string representation from mongo_2_df
+                object_id = ObjectId(object_id['$oid'])
+            TickerDailyInfo.objects(id=object_id).update(
                 wedge_status=data['wedge_status'].iloc[i])
         data.to_csv(f'{ticker}_wedge_pop.csv', index=False)
         return True  # Return True to indicate successful processing
