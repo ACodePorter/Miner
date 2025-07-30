@@ -116,7 +116,9 @@ class GhPagesMaintainer(SingletonParent):
         else:
             start_date = end_date - timedelta(days=36500)
         result = MarketBreadth.get_instance().get_market_breath(market_index=index, start_date=start_date,
-                                                                end_date=end_date).to_dict(orient='records')
+                                                                end_date=end_date)
+        result.drop(columns=['_id'], inplace=True)
+        result = result.to_dict(orient='records')
         with open(file, 'w', encoding='utf-8') as f:
             json.dump(result, f, ensure_ascii=False, indent=2)
         return result
