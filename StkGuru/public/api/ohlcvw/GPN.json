@@ -7508,5 +7508,15 @@
     "close": 83.2300033569,
     "volume": 905774.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,30,00,00,00,000000",
+    "ticker": "GPN",
+    "open": 83.5,
+    "high": 83.6500015259,
+    "low": 81.0699996948,
+    "close": 81.4400024414,
+    "volume": 1031440.0,
+    "wedge_status": "drop"
   }
 ]
