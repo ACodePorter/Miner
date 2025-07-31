@@ -161,7 +161,7 @@ async def get_mbs(market_index: str = 'spx', start_date: str = None, end_date: s
     '''
     make_db_connection()
     return MarketBreadth.get_instance().get_market_breath(market_index=market_index, start_date=start_date,
-                                                          end_date=end_date).to_dict(orient='records')
+                                                          end_date=end_date).dropna().drop(columns=['_id']).to_dict(orient='records')
 
 
 @app.get('/api/market_pe/{index}.json')

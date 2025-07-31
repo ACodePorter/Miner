@@ -176,7 +176,6 @@ class WedgePop(SingletonParent):
                 object_id = ObjectId(object_id['$oid'])
             TickerDailyInfo.objects(id=object_id).update(
                 wedge_status=data['wedge_status'].iloc[i])
-        data.to_csv(f'{ticker}_wedge_pop.csv', index=False)
         return True  # Return True to indicate successful processing
 
     def update_wedge_pop_for_index(self, idx: Literal['spx', 'iwd', 'iwf', 'iwm']) -> bool:
