@@ -603,6 +603,7 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
       },
       yAxis: [
         {
+          type: 'logarithmic',
           title: {
             text: 'Price ($)',
             style: { fontSize: '16px', fontWeight: '700', color: '#E5E7EB' },
@@ -621,7 +622,12 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
             color: 'rgba(96, 165, 250, 0.7)',
             width: 2,
             dashStyle: 'shortdot'
-          }
+          },
+          minorGridLineWidth: 1,
+          minorGridLineColor: 'rgba(107, 114, 128, 0.2)',
+          minorTickLength: 3,
+          minorTickColor: 'rgba(156, 163, 175, 0.4)',
+          minorTickWidth: 1
         },
         {
           title: {
