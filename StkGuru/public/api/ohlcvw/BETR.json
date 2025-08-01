@@ -1,0 +1,7522 @@
+[
+  {
+    "trade_date": "2022,08,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 491.5,
+    "high": 491.5,
+    "low": 491.5,
+    "close": 491.5,
+    "volume": 8.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2022,08,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 491.5,
+    "high": 491.5,
+    "low": 491.5,
+    "close": 491.5,
+    "volume": 0.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2022,08,04,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 491.5,
+    "high": 492.5,
+    "low": 491.5,
+    "close": 492.5,
+    "volume": 11914.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 492.5,
+    "high": 492.5,
+    "low": 492.5,
+    "close": 492.5,
+    "volume": 42.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 492.5,
+    "high": 492.6499938965,
+    "low": 492.5,
+    "close": 492.5,
+    "volume": 78.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 492.5,
+    "high": 492.5,
+    "low": 492.5,
+    "close": 492.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 493.0,
+    "high": 493.0,
+    "low": 493.0,
+    "close": 493.0,
+    "volume": 28.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 493.0,
+    "high": 493.0,
+    "low": 493.0,
+    "close": 493.0,
+    "volume": 6.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 493.0,
+    "high": 493.0,
+    "low": 493.0,
+    "close": 493.0,
+    "volume": 8.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 493.0,
+    "high": 493.0,
+    "low": 492.950012207,
+    "close": 493.0,
+    "volume": 90.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 492.5,
+    "high": 492.5,
+    "low": 492.5,
+    "close": 492.5,
+    "volume": 4.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,08,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 492.5,
+    "high": 492.5,
+    "low": 492.5,
+    "close": 492.5,
+    "volume": 0.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,08,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 492.5,
+    "high": 492.8500061035,
+    "low": 492.5,
+    "close": 492.5,
+    "volume": 4.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,08,19,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 492.5,
+    "high": 492.5,
+    "low": 492.5,
+    "close": 492.5,
+    "volume": 104.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,08,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 492.5,
+    "high": 492.5,
+    "low": 492.5,
+    "close": 492.5,
+    "volume": 4.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,08,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 493.0,
+    "high": 493.0,
+    "low": 493.0,
+    "close": 493.0,
+    "volume": 6.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 492.5,
+    "high": 493.549987793,
+    "low": 492.5,
+    "close": 492.5,
+    "volume": 118.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,08,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 494.5,
+    "high": 499.5,
+    "low": 493.0,
+    "close": 494.5,
+    "volume": 38.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 492.5,
+    "high": 493.5,
+    "low": 492.5,
+    "close": 493.5,
+    "volume": 34.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,29,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 493.0,
+    "high": 493.5,
+    "low": 492.5,
+    "close": 493.200012207,
+    "volume": 4144.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 493.5,
+    "high": 493.5,
+    "low": 493.25,
+    "close": 493.25,
+    "volume": 188.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,31,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 494.5,
+    "high": 494.5,
+    "low": 493.0,
+    "close": 494.5,
+    "volume": 3608.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2022,09,01,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 494.5,
+    "high": 494.5,
+    "low": 493.5,
+    "close": 494.0,
+    "volume": 8436.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 494.0,
+    "high": 494.0,
+    "low": 494.0,
+    "close": 494.0,
+    "volume": 4.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 494.0,
+    "high": 494.0,
+    "low": 493.6000061035,
+    "close": 493.6000061035,
+    "volume": 3032.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,09,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 494.0,
+    "high": 494.5,
+    "low": 494.0,
+    "close": 494.0,
+    "volume": 3034.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 494.0,
+    "high": 494.0,
+    "low": 493.5,
+    "close": 493.5,
+    "volume": 6510.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,09,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 493.5,
+    "high": 493.5,
+    "low": 493.5,
+    "close": 493.5,
+    "volume": 0.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,09,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 493.5,
+    "high": 493.5,
+    "low": 493.5,
+    "close": 493.5,
+    "volume": 12.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,09,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 493.5,
+    "high": 493.5,
+    "low": 493.5,
+    "close": 493.5,
+    "volume": 0.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,09,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 493.5,
+    "high": 493.5,
+    "low": 493.5,
+    "close": 493.5,
+    "volume": 0.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,09,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 493.5,
+    "high": 493.5,
+    "low": 493.5,
+    "close": 493.5,
+    "volume": 0.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,09,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 493.5,
+    "high": 493.5,
+    "low": 493.5,
+    "close": 493.5,
+    "volume": 0.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,09,19,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 494.0,
+    "high": 494.5,
+    "low": 494.0,
+    "close": 494.25,
+    "volume": 1188.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 494.5,
+    "high": 494.5,
+    "low": 494.0,
+    "close": 494.5,
+    "volume": 1152.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 494.0,
+    "high": 494.5,
+    "low": 494.0,
+    "close": 494.0,
+    "volume": 954.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 494.0,
+    "high": 494.0,
+    "low": 494.0,
+    "close": 494.0,
+    "volume": 408.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,09,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 494.3999938965,
+    "high": 495.0,
+    "low": 494.25,
+    "close": 495.0,
+    "volume": 264.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 495.0,
+    "high": 495.0,
+    "low": 495.0,
+    "close": 495.0,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 497.0,
+    "high": 497.0,
+    "low": 494.0,
+    "close": 494.0,
+    "volume": 8.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,09,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 494.0,
+    "high": 494.0,
+    "low": 494.0,
+    "close": 494.0,
+    "volume": 0.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,09,29,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 495.0,
+    "high": 495.0,
+    "low": 495.0,
+    "close": 495.0,
+    "volume": 22.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 494.5,
+    "high": 494.5,
+    "low": 494.5,
+    "close": 494.5,
+    "volume": 382.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 494.5,
+    "high": 494.5,
+    "low": 494.5,
+    "close": 494.5,
+    "volume": 22.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,10,04,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 494.5,
+    "high": 495.0,
+    "low": 494.5,
+    "close": 494.5,
+    "volume": 5036.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,10,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 494.5,
+    "high": 494.5,
+    "low": 494.5,
+    "close": 494.5,
+    "volume": 0.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,10,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 494.5,
+    "high": 494.5,
+    "low": 494.5,
+    "close": 494.5,
+    "volume": 0.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,10,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 494.5,
+    "high": 494.5,
+    "low": 494.5,
+    "close": 494.5,
+    "volume": 16.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,10,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 495.0,
+    "high": 495.5,
+    "low": 495.0,
+    "close": 495.5,
+    "volume": 414.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 495.5,
+    "high": 495.75,
+    "low": 495.5,
+    "close": 495.75,
+    "volume": 30.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 495.75,
+    "high": 495.75,
+    "low": 495.75,
+    "close": 495.75,
+    "volume": 2.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 495.0,
+    "high": 495.0,
+    "low": 495.0,
+    "close": 495.0,
+    "volume": 10.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 495.0,
+    "high": 495.0,
+    "low": 495.0,
+    "close": 495.0,
+    "volume": 2.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,10,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 495.5,
+    "high": 495.5,
+    "low": 495.5,
+    "close": 495.5,
+    "volume": 4.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 495.5,
+    "high": 495.5,
+    "low": 495.5,
+    "close": 495.5,
+    "volume": 56.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2022,10,19,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 495.5,
+    "high": 495.5,
+    "low": 495.5,
+    "close": 495.5,
+    "volume": 2.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 495.5,
+    "high": 495.700012207,
+    "low": 495.5,
+    "close": 495.700012207,
+    "volume": 8.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2022,10,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 496.0,
+    "high": 496.0,
+    "low": 496.0,
+    "close": 496.0,
+    "volume": 6.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 496.0,
+    "high": 496.0,
+    "low": 496.0,
+    "close": 496.0,
+    "volume": 2.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 496.0,
+    "high": 496.0,
+    "low": 496.0,
+    "close": 496.0,
+    "volume": 14.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2022,10,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 496.1499938965,
+    "high": 496.1499938965,
+    "low": 496.1499938965,
+    "close": 496.1499938965,
+    "volume": 4.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2022,10,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 496.0,
+    "high": 496.0,
+    "low": 496.0,
+    "close": 496.0,
+    "volume": 24.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 496.0,
+    "high": 496.0,
+    "low": 496.0,
+    "close": 496.0,
+    "volume": 4.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,31,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 496.0,
+    "high": 496.5,
+    "low": 496.0,
+    "close": 496.5,
+    "volume": 1302.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,01,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 496.75,
+    "high": 496.75,
+    "low": 496.75,
+    "close": 496.75,
+    "volume": 310.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 496.75,
+    "high": 497.0,
+    "low": 496.75,
+    "close": 497.0,
+    "volume": 50.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 497.0,
+    "high": 497.0,
+    "low": 497.0,
+    "close": 497.0,
+    "volume": 8.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,04,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 497.0,
+    "high": 497.0,
+    "low": 497.0,
+    "close": 497.0,
+    "volume": 14.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 497.0,
+    "high": 497.75,
+    "low": 497.0,
+    "close": 497.75,
+    "volume": 14.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 497.75,
+    "high": 497.75,
+    "low": 497.75,
+    "close": 497.75,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 497.5,
+    "high": 498.299987793,
+    "low": 497.5,
+    "close": 498.299987793,
+    "volume": 4.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 498.0,
+    "high": 498.25,
+    "low": 498.0,
+    "close": 498.25,
+    "volume": 24.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 498.0,
+    "high": 498.0,
+    "low": 497.5,
+    "close": 497.5,
+    "volume": 5024.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 497.5,
+    "high": 497.5,
+    "low": 497.5,
+    "close": 497.5,
+    "volume": 1064.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 497.5,
+    "high": 497.5,
+    "low": 497.5,
+    "close": 497.5,
+    "volume": 1524.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 497.5,
+    "high": 497.5,
+    "low": 497.25,
+    "close": 497.5,
+    "volume": 1268.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 497.5,
+    "high": 497.5,
+    "low": 497.5,
+    "close": 497.5,
+    "volume": 2672.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 497.5,
+    "high": 498.0,
+    "low": 497.5,
+    "close": 497.5,
+    "volume": 1290.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,11,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 497.5,
+    "high": 497.5,
+    "low": 497.5,
+    "close": 497.5,
+    "volume": 308.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,11,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 498.0,
+    "high": 498.25,
+    "low": 498.0,
+    "close": 498.25,
+    "volume": 1058.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 498.5,
+    "high": 498.5,
+    "low": 498.5,
+    "close": 498.5,
+    "volume": 622.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 498.0,
+    "high": 498.5,
+    "low": 498.0,
+    "close": 498.5,
+    "volume": 572.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 498.5,
+    "high": 498.5,
+    "low": 498.5,
+    "close": 498.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,29,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 498.5,
+    "high": 498.5,
+    "low": 498.5,
+    "close": 498.5,
+    "volume": 2.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2022,11,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 498.5,
+    "high": 498.5,
+    "low": 498.5,
+    "close": 498.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,01,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 498.5,
+    "high": 498.5,
+    "low": 498.5,
+    "close": 498.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 498.75,
+    "high": 498.75,
+    "low": 498.75,
+    "close": 498.75,
+    "volume": 10.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 499.0,
+    "high": 499.5,
+    "low": 499.0,
+    "close": 499.0,
+    "volume": 32.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 499.5,
+    "high": 500.25,
+    "low": 499.5,
+    "close": 500.25,
+    "volume": 58.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 500.5,
+    "high": 500.5,
+    "low": 500.5,
+    "close": 500.5,
+    "volume": 2.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 500.5,
+    "high": 501.0,
+    "low": 500.5,
+    "close": 501.0,
+    "volume": 248.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 501.0,
+    "high": 501.0,
+    "low": 501.0,
+    "close": 501.0,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 501.0,
+    "high": 501.75,
+    "low": 501.0,
+    "close": 501.75,
+    "volume": 6.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 500.5,
+    "high": 502.5,
+    "low": 498.5,
+    "close": 501.0,
+    "volume": 196.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 501.0,
+    "high": 501.0,
+    "low": 501.0,
+    "close": 501.0,
+    "volume": 94.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 501.0,
+    "high": 501.5,
+    "low": 501.0,
+    "close": 501.5,
+    "volume": 180.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 501.0,
+    "high": 501.0,
+    "low": 501.0,
+    "close": 501.0,
+    "volume": 2176.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,19,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 501.0,
+    "high": 501.0,
+    "low": 501.0,
+    "close": 501.0,
+    "volume": 114.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 501.0,
+    "high": 501.0,
+    "low": 501.0,
+    "close": 501.0,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 501.5,
+    "high": 501.75,
+    "low": 501.25,
+    "close": 501.75,
+    "volume": 450.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 502.25,
+    "high": 503.0,
+    "low": 502.25,
+    "close": 503.0,
+    "volume": 412.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 503.5,
+    "high": 503.5,
+    "low": 503.25,
+    "close": 503.5,
+    "volume": 276.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 501.5,
+    "high": 504.049987793,
+    "low": 501.5,
+    "close": 504.0,
+    "volume": 418.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 501.950012207,
+    "high": 501.950012207,
+    "low": 501.5,
+    "close": 501.5,
+    "volume": 18.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,12,29,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 501.5,
+    "high": 504.0,
+    "low": 501.5,
+    "close": 503.75,
+    "volume": 416.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 504.0,
+    "high": 504.5,
+    "low": 504.0,
+    "close": 504.5,
+    "volume": 550.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 504.5,
+    "high": 504.5,
+    "low": 503.75,
+    "close": 504.5,
+    "volume": 804.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,04,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 505.0,
+    "high": 505.25,
+    "low": 505.0,
+    "close": 505.0,
+    "volume": 60.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 506.5,
+    "high": 506.5,
+    "low": 505.0,
+    "close": 505.0,
+    "volume": 8348.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 505.0,
+    "high": 505.0,
+    "low": 505.0,
+    "close": 505.0,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 505.5,
+    "high": 505.75,
+    "low": 505.5,
+    "close": 505.75,
+    "volume": 76.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 505.75,
+    "high": 505.75,
+    "low": 505.5,
+    "close": 505.75,
+    "volume": 224.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 504.5,
+    "high": 505.75,
+    "low": 504.5,
+    "close": 505.75,
+    "volume": 10.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 506.0,
+    "high": 506.0,
+    "low": 506.0,
+    "close": 506.0,
+    "volume": 28.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 506.5,
+    "high": 506.8500061035,
+    "low": 506.5,
+    "close": 506.5,
+    "volume": 376.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 506.5,
+    "high": 506.5,
+    "low": 506.25,
+    "close": 506.25,
+    "volume": 16.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 506.5,
+    "high": 507.0,
+    "low": 506.5,
+    "close": 507.0,
+    "volume": 690.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,19,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 507.0,
+    "high": 507.0,
+    "low": 507.0,
+    "close": 507.0,
+    "volume": 6.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 507.25,
+    "high": 507.5,
+    "low": 507.25,
+    "close": 507.5,
+    "volume": 5138.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 507.5,
+    "high": 507.5,
+    "low": 507.5,
+    "close": 507.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 507.5,
+    "high": 507.5,
+    "low": 507.25,
+    "close": 507.25,
+    "volume": 218.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 507.5,
+    "high": 507.5,
+    "low": 507.0,
+    "close": 507.0,
+    "volume": 3068.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 507.0,
+    "high": 507.0,
+    "low": 507.0,
+    "close": 507.0,
+    "volume": 200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 507.5,
+    "high": 508.0,
+    "low": 507.5,
+    "close": 508.0,
+    "volume": 22198.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 508.0,
+    "high": 508.5,
+    "low": 508.0,
+    "close": 508.5,
+    "volume": 60.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,31,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 508.25,
+    "high": 508.25,
+    "low": 508.25,
+    "close": 508.25,
+    "volume": 22.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,01,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 508.0,
+    "high": 508.25,
+    "low": 508.0,
+    "close": 508.0,
+    "volume": 7806.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 508.0,
+    "high": 508.0,
+    "low": 508.0,
+    "close": 508.0,
+    "volume": 8.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 508.5,
+    "high": 509.0,
+    "low": 508.25,
+    "close": 508.5,
+    "volume": 3040.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 509.0,
+    "high": 509.0,
+    "low": 508.5,
+    "close": 508.5,
+    "volume": 20508.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 508.5,
+    "high": 508.75,
+    "low": 508.5,
+    "close": 508.5,
+    "volume": 7718.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 508.5,
+    "high": 508.75,
+    "low": 508.5,
+    "close": 508.75,
+    "volume": 2004.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 508.75,
+    "high": 509.0,
+    "low": 508.5,
+    "close": 508.5,
+    "volume": 6144.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 508.5,
+    "high": 508.75,
+    "low": 508.5,
+    "close": 508.5,
+    "volume": 1234.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 508.75,
+    "high": 508.75,
+    "low": 508.75,
+    "close": 508.75,
+    "volume": 148.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 508.5,
+    "high": 509.0,
+    "low": 508.5,
+    "close": 508.5,
+    "volume": 30.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 508.5,
+    "high": 508.5,
+    "low": 508.5,
+    "close": 508.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 508.75,
+    "high": 509.5,
+    "low": 508.5,
+    "close": 509.0,
+    "volume": 7542.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 509.5,
+    "high": 509.5,
+    "low": 509.0,
+    "close": 509.25,
+    "volume": 552.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 505.5,
+    "high": 507.5,
+    "low": 505.5,
+    "close": 506.0,
+    "volume": 78.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,02,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 508.5,
+    "high": 508.5,
+    "low": 504.5,
+    "close": 508.0,
+    "volume": 58.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 502.5,
+    "high": 505.5,
+    "low": 502.5,
+    "close": 502.5,
+    "volume": 32.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,02,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 502.5,
+    "high": 502.5,
+    "low": 502.5,
+    "close": 502.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 504.0,
+    "high": 504.549987793,
+    "low": 504.0,
+    "close": 504.549987793,
+    "volume": 52.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 503.0,
+    "high": 525.0,
+    "low": 502.6499938965,
+    "close": 512.0,
+    "volume": 552.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,01,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 525.0,
+    "high": 525.0,
+    "low": 508.0,
+    "close": 515.0999755859,
+    "volume": 220.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 513.5,
+    "high": 523.0,
+    "low": 503.0,
+    "close": 514.5,
+    "volume": 322.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 513.0,
+    "high": 515.0,
+    "low": 506.0,
+    "close": 509.0,
+    "volume": 118.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 507.5,
+    "high": 512.5,
+    "low": 507.5,
+    "close": 512.5,
+    "volume": 30.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,03,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 510.0,
+    "high": 510.5,
+    "low": 510.0,
+    "close": 510.5,
+    "volume": 24.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 511.0,
+    "high": 511.0,
+    "low": 510.75,
+    "close": 510.75,
+    "volume": 22.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 511.0,
+    "high": 511.0,
+    "low": 510.5,
+    "close": 510.5,
+    "volume": 120.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 510.5,
+    "high": 524.5,
+    "low": 509.25,
+    "close": 509.25,
+    "volume": 1018.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,03,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 509.0,
+    "high": 509.3500061035,
+    "low": 509.0,
+    "close": 509.3500061035,
+    "volume": 8.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,03,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 509.3500061035,
+    "high": 509.3500061035,
+    "low": 509.3500061035,
+    "close": 509.3500061035,
+    "volume": 8.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,03,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 509.3500061035,
+    "high": 509.3500061035,
+    "low": 509.3500061035,
+    "close": 509.3500061035,
+    "volume": 0.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,03,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 509.3500061035,
+    "high": 509.3500061035,
+    "low": 509.3500061035,
+    "close": 509.3500061035,
+    "volume": 8.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,03,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 509.3500061035,
+    "high": 509.3500061035,
+    "low": 509.3500061035,
+    "close": 509.3500061035,
+    "volume": 0.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,03,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 509.3500061035,
+    "high": 509.3500061035,
+    "low": 509.3500061035,
+    "close": 509.3500061035,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 509.0,
+    "high": 509.0,
+    "low": 509.0,
+    "close": 509.0,
+    "volume": 4.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 509.5,
+    "high": 509.5,
+    "low": 509.5,
+    "close": 509.5,
+    "volume": 8.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 510.0,
+    "high": 510.0,
+    "low": 510.0,
+    "close": 510.0,
+    "volume": 2.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 509.0,
+    "high": 509.0,
+    "low": 506.5,
+    "close": 506.5,
+    "volume": 214.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,03,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 505.1000061035,
+    "high": 505.1000061035,
+    "low": 505.1000061035,
+    "close": 505.1000061035,
+    "volume": 4.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 505.5,
+    "high": 505.5,
+    "low": 505.5,
+    "close": 505.5,
+    "volume": 4.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,29,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 505.5,
+    "high": 505.5,
+    "low": 505.5,
+    "close": 505.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 505.5,
+    "high": 505.5,
+    "low": 505.5,
+    "close": 505.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,31,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 505.5,
+    "high": 505.5,
+    "low": 505.5,
+    "close": 505.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 509.5,
+    "high": 509.5,
+    "low": 509.5,
+    "close": 509.5,
+    "volume": 10.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,04,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 509.0,
+    "high": 509.5,
+    "low": 507.5,
+    "close": 507.5,
+    "volume": 28.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 507.5,
+    "high": 507.5,
+    "low": 507.5,
+    "close": 507.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 507.5,
+    "high": 507.5,
+    "low": 507.5,
+    "close": 507.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 507.5,
+    "high": 507.5,
+    "low": 507.0,
+    "close": 507.5,
+    "volume": 20.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 507.5,
+    "high": 507.5,
+    "low": 507.5,
+    "close": 507.5,
+    "volume": 0.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,04,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 507.0,
+    "high": 507.0,
+    "low": 506.5,
+    "close": 506.5,
+    "volume": 68.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,04,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 506.5,
+    "high": 506.5,
+    "low": 506.5,
+    "close": 506.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 506.5,
+    "high": 506.5,
+    "low": 506.5,
+    "close": 506.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 506.75,
+    "high": 506.75,
+    "low": 506.5,
+    "close": 506.5,
+    "volume": 10.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,04,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 506.5,
+    "high": 506.5,
+    "low": 506.5,
+    "close": 506.5,
+    "volume": 16.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,04,19,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 506.5,
+    "high": 506.5,
+    "low": 506.5,
+    "close": 506.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 506.5,
+    "high": 506.5,
+    "low": 506.5,
+    "close": 506.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 506.5,
+    "high": 506.5,
+    "low": 506.5,
+    "close": 506.5,
+    "volume": 2.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 506.5,
+    "high": 506.5,
+    "low": 506.5,
+    "close": 506.5,
+    "volume": 0.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,04,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 506.5,
+    "high": 506.5,
+    "low": 506.5,
+    "close": 506.5,
+    "volume": 0.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,04,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 508.5,
+    "high": 508.5,
+    "low": 508.5,
+    "close": 508.5,
+    "volume": 2.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 508.5,
+    "high": 508.5,
+    "low": 508.5,
+    "close": 508.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 506.5,
+    "high": 506.5,
+    "low": 506.5,
+    "close": 506.5,
+    "volume": 18.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,01,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 506.5,
+    "high": 506.5,
+    "low": 506.5,
+    "close": 506.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 506.5,
+    "high": 506.5,
+    "low": 506.5,
+    "close": 506.5,
+    "volume": 0.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,05,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 506.5,
+    "high": 506.5,
+    "low": 506.5,
+    "close": 506.5,
+    "volume": 0.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,05,04,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 507.0,
+    "high": 507.0,
+    "low": 507.0,
+    "close": 507.0,
+    "volume": 8.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,05,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 507.0,
+    "high": 507.0,
+    "low": 507.0,
+    "close": 507.0,
+    "volume": 0.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,05,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 507.0,
+    "high": 507.0,
+    "low": 507.0,
+    "close": 507.0,
+    "volume": 0.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,05,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 507.0,
+    "high": 507.0,
+    "low": 507.0,
+    "close": 507.0,
+    "volume": 0.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,05,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 508.0,
+    "high": 509.0,
+    "low": 508.0,
+    "close": 509.0,
+    "volume": 250.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 509.299987793,
+    "high": 509.5,
+    "low": 509.299987793,
+    "close": 509.5,
+    "volume": 48.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 508.5,
+    "high": 508.5,
+    "low": 508.5,
+    "close": 508.5,
+    "volume": 22.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 508.5,
+    "high": 508.5,
+    "low": 508.5,
+    "close": 508.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 509.5,
+    "high": 509.5,
+    "low": 509.5,
+    "close": 509.5,
+    "volume": 8.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 509.5,
+    "high": 509.5,
+    "low": 509.5,
+    "close": 509.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 509.5,
+    "high": 509.5,
+    "low": 509.5,
+    "close": 509.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,19,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 509.5,
+    "high": 509.5,
+    "low": 509.5,
+    "close": 509.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 509.5,
+    "high": 509.5,
+    "low": 509.5,
+    "close": 509.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 511.5,
+    "high": 512.0,
+    "low": 511.5,
+    "close": 512.0,
+    "volume": 30.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 512.0,
+    "high": 512.0,
+    "low": 512.0,
+    "close": 512.0,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 511.0,
+    "high": 512.0,
+    "low": 511.0,
+    "close": 512.0,
+    "volume": 212.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 512.0,
+    "high": 512.0,
+    "low": 512.0,
+    "close": 512.0,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 512.5,
+    "high": 512.5,
+    "low": 512.5,
+    "close": 512.5,
+    "volume": 10.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,31,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 512.5,
+    "high": 525.0,
+    "low": 512.5,
+    "close": 525.0,
+    "volume": 202.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,01,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 525.0,
+    "high": 525.0,
+    "low": 525.0,
+    "close": 525.0,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 516.0,
+    "high": 516.0,
+    "low": 516.0,
+    "close": 516.0,
+    "volume": 2.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 516.0,
+    "high": 517.049987793,
+    "low": 515.5,
+    "close": 517.049987793,
+    "volume": 30.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 517.049987793,
+    "high": 517.049987793,
+    "low": 517.049987793,
+    "close": 517.049987793,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 517.049987793,
+    "high": 517.049987793,
+    "low": 517.049987793,
+    "close": 517.049987793,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 517.049987793,
+    "high": 517.049987793,
+    "low": 517.049987793,
+    "close": 517.049987793,
+    "volume": 2.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 517.049987793,
+    "high": 517.049987793,
+    "low": 517.049987793,
+    "close": 517.049987793,
+    "volume": 2.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 517.049987793,
+    "high": 517.049987793,
+    "low": 517.049987793,
+    "close": 517.049987793,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 516.5,
+    "high": 516.5,
+    "low": 516.5,
+    "close": 516.5,
+    "volume": 12.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 516.5,
+    "high": 516.5,
+    "low": 516.5,
+    "close": 516.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 516.5,
+    "high": 516.5,
+    "low": 516.5,
+    "close": 516.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 525.0,
+    "high": 525.0,
+    "low": 525.0,
+    "close": 525.0,
+    "volume": 2.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 525.0,
+    "high": 525.0,
+    "low": 525.0,
+    "close": 525.0,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 525.0,
+    "high": 525.0,
+    "low": 525.0,
+    "close": 525.0,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 516.5,
+    "high": 516.5,
+    "low": 516.5,
+    "close": 516.5,
+    "volume": 82.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,06,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 516.5,
+    "high": 516.5,
+    "low": 516.5,
+    "close": 516.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 516.5,
+    "high": 516.5,
+    "low": 516.5,
+    "close": 516.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 516.5,
+    "high": 516.5,
+    "low": 516.5,
+    "close": 516.5,
+    "volume": 2.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 516.5,
+    "high": 516.5,
+    "low": 516.5,
+    "close": 516.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,29,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 522.5,
+    "high": 522.5,
+    "low": 522.5,
+    "close": 522.5,
+    "volume": 2.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 522.5,
+    "high": 522.5,
+    "low": 522.5,
+    "close": 522.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 522.5,
+    "high": 522.5,
+    "low": 522.5,
+    "close": 522.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 522.5,
+    "high": 522.5,
+    "low": 522.5,
+    "close": 522.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 522.5,
+    "high": 522.5,
+    "low": 522.5,
+    "close": 522.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 522.5,
+    "high": 522.5,
+    "low": 522.5,
+    "close": 522.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 518.0,
+    "high": 519.0,
+    "low": 518.0,
+    "close": 518.5,
+    "volume": 10.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,07,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 518.5,
+    "high": 518.5,
+    "low": 518.5,
+    "close": 518.5,
+    "volume": 2.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 518.5,
+    "high": 518.5,
+    "low": 518.5,
+    "close": 518.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 518.5,
+    "high": 518.5,
+    "low": 518.5,
+    "close": 518.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 518.5,
+    "high": 518.5,
+    "low": 518.5,
+    "close": 518.5,
+    "volume": 12.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 518.5,
+    "high": 518.5,
+    "low": 518.5,
+    "close": 518.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 518.5,
+    "high": 518.5,
+    "low": 518.5,
+    "close": 518.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,19,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 518.5,
+    "high": 518.5,
+    "low": 518.5,
+    "close": 518.5,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 519.0,
+    "high": 519.0,
+    "low": 519.0,
+    "close": 519.0,
+    "volume": 2.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,07,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 519.0,
+    "high": 519.0,
+    "low": 519.0,
+    "close": 519.0,
+    "volume": 4.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,07,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 519.0,
+    "high": 519.0,
+    "low": 519.0,
+    "close": 519.0,
+    "volume": 0.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,07,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 745.0,
+    "high": 1947.5,
+    "low": 712.5,
+    "close": 1676.5,
+    "volume": 172158.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 1336.5,
+    "high": 1495.0,
+    "low": 1050.0,
+    "close": 1075.0,
+    "volume": 22276.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 995.0,
+    "high": 1150.0,
+    "low": 886.0,
+    "close": 1033.0,
+    "volume": 5572.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 1011.0,
+    "high": 3145.5,
+    "low": 972.5,
+    "close": 2202.5,
+    "volume": 61666.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,31,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 2615.5,
+    "high": 2929.5,
+    "low": 2280.5,
+    "close": 2300.5,
+    "volume": 15694.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,01,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 2150.0,
+    "high": 2165.0,
+    "low": 1523.0,
+    "close": 1550.0,
+    "volume": 3158.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 1650.0,
+    "high": 3045.0,
+    "low": 1605.5,
+    "close": 2479.0,
+    "volume": 28912.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 2912.0,
+    "high": 2912.0,
+    "low": 2036.5,
+    "close": 2208.75,
+    "volume": 5086.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,04,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 2161.5,
+    "high": 2300.0,
+    "low": 1800.5,
+    "close": 2184.5,
+    "volume": 3462.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 1946.5,
+    "high": 2250.0,
+    "low": 1850.5,
+    "close": 2193.5,
+    "volume": 2920.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 2063.5,
+    "high": 2500.0,
+    "low": 1950.0,
+    "close": 2113.5,
+    "volume": 4038.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 2091.0,
+    "high": 2434.0,
+    "low": 2005.0,
+    "close": 2025.0,
+    "volume": 3738.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 2003.5,
+    "high": 2170.0,
+    "low": 1925.5,
+    "close": 2010.5,
+    "volume": 1896.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 1822.0,
+    "high": 1887.8000488281,
+    "low": 1700.0,
+    "close": 1793.5,
+    "volume": 1428.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 1321.5,
+    "high": 1328.8499755859,
+    "low": 1080.9000244141,
+    "close": 1148.5,
+    "volume": 2076.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,08,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 1196.5,
+    "high": 1749.5,
+    "low": 1063.0,
+    "close": 1250.5,
+    "volume": 3888.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 1361.0,
+    "high": 1650.0,
+    "low": 1350.0,
+    "close": 1607.5,
+    "volume": 5212.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 1495.0,
+    "high": 1518.5,
+    "low": 1300.0,
+    "close": 1338.5,
+    "volume": 2432.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,08,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 1290.0,
+    "high": 1350.0,
+    "low": 1186.0,
+    "close": 1193.5,
+    "volume": 1116.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 1056.0,
+    "high": 1200.0,
+    "low": 1025.0,
+    "close": 1099.0,
+    "volume": 1372.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 1151.5,
+    "high": 1246.0,
+    "low": 987.5,
+    "close": 1227.5,
+    "volume": 1758.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 1100.0,
+    "high": 1150.0,
+    "low": 850.5,
+    "close": 872.1500244141,
+    "volume": 2252.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 99.0,
+    "high": 99.0,
+    "low": 38.5499992371,
+    "close": 57.5,
+    "volume": 966494.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 64.0,
+    "high": 67.0,
+    "low": 55.0,
+    "close": 59.5,
+    "volume": 1190038.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 60.0,
+    "high": 61.0,
+    "low": 50.0,
+    "close": 51.0,
+    "volume": 510912.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,29,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 49.9500007629,
+    "high": 50.0,
+    "low": 40.5,
+    "close": 42.4500007629,
+    "volume": 449052.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 44.0,
+    "high": 47.5,
+    "low": 43.0,
+    "close": 43.5,
+    "volume": 349380.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,31,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 46.2000007629,
+    "high": 50.0,
+    "low": 43.5499992371,
+    "close": 46.25,
+    "volume": 364034.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,01,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 43.5,
+    "high": 46.0999984741,
+    "low": 39.5,
+    "close": 40.25,
+    "volume": 379984.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 41.25,
+    "high": 44.0,
+    "low": 38.0,
+    "close": 40.5,
+    "volume": 172724.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 40.5,
+    "high": 41.0,
+    "low": 38.0,
+    "close": 38.4500007629,
+    "volume": 110230.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 37.5,
+    "high": 37.6500015259,
+    "low": 30.25,
+    "close": 31.4500007629,
+    "volume": 281618.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 32.0,
+    "high": 32.0499992371,
+    "low": 26.1499996185,
+    "close": 29.2000007629,
+    "volume": 226106.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 29.0,
+    "high": 34.5499992371,
+    "low": 28.5,
+    "close": 32.0499992371,
+    "volume": 103404.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 32.1500015259,
+    "high": 36.2999992371,
+    "low": 29.0,
+    "close": 34.5499992371,
+    "volume": 118146.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 35.0,
+    "high": 37.25,
+    "low": 33.0999984741,
+    "close": 33.7999992371,
+    "volume": 98454.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 34.0499992371,
+    "high": 34.0499992371,
+    "low": 31.5,
+    "close": 32.2000007629,
+    "volume": 67360.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 31.25,
+    "high": 34.5,
+    "low": 29.0,
+    "close": 32.0999984741,
+    "volume": 95934.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 32.0,
+    "high": 33.9500007629,
+    "low": 30.2000007629,
+    "close": 33.25,
+    "volume": 50374.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,19,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 32.5,
+    "high": 34.0,
+    "low": 32.0,
+    "close": 32.5,
+    "volume": 61934.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 32.0,
+    "high": 33.5999984741,
+    "low": 31.0,
+    "close": 31.2000007629,
+    "volume": 36390.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 31.0,
+    "high": 31.0,
+    "low": 27.5,
+    "close": 28.2000007629,
+    "volume": 105968.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 28.5499992371,
+    "high": 28.8999996185,
+    "low": 26.75,
+    "close": 27.25,
+    "volume": 48982.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 26.5,
+    "high": 27.0,
+    "low": 25.5,
+    "close": 25.8500003815,
+    "volume": 56490.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 25.5,
+    "high": 25.75,
+    "low": 23.0,
+    "close": 23.5,
+    "volume": 79124.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 24.2000007629,
+    "high": 24.25,
+    "low": 22.5,
+    "close": 23.0,
+    "volume": 51170.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.8999996185,
+    "high": 23.25,
+    "low": 22.0,
+    "close": 22.75,
+    "volume": 43842.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,29,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.5,
+    "high": 24.75,
+    "low": 22.5,
+    "close": 23.9500007629,
+    "volume": 45228.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 23.3999996185,
+    "high": 23.6000003815,
+    "low": 22.5499992371,
+    "close": 23.1499996185,
+    "volume": 29372.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 23.0499992371,
+    "high": 23.0499992371,
+    "low": 21.3500003815,
+    "close": 21.9500007629,
+    "volume": 36076.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,04,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.0,
+    "high": 22.1499996185,
+    "low": 20.5,
+    "close": 21.0499992371,
+    "volume": 34074.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 21.3999996185,
+    "high": 22.2000007629,
+    "low": 20.6000003815,
+    "close": 21.2999992371,
+    "volume": 27352.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 21.25,
+    "high": 22.2000007629,
+    "low": 20.75,
+    "close": 21.2999992371,
+    "volume": 24766.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.5499992371,
+    "high": 21.2000007629,
+    "low": 20.25,
+    "close": 20.5,
+    "volume": 31110.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.9500007629,
+    "high": 21.1499996185,
+    "low": 20.5,
+    "close": 20.6000003815,
+    "volume": 36958.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.7999992371,
+    "high": 21.4500007629,
+    "low": 20.5,
+    "close": 20.5499992371,
+    "volume": 26552.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 21.0,
+    "high": 21.0,
+    "low": 19.8500003815,
+    "close": 19.8500003815,
+    "volume": 23710.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 19.3999996185,
+    "high": 20.5,
+    "low": 17.0499992371,
+    "close": 19.8999996185,
+    "volume": 97928.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 19.5499992371,
+    "high": 19.75,
+    "low": 18.0,
+    "close": 18.3500003815,
+    "volume": 50170.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 19.0,
+    "high": 21.0,
+    "low": 19.0,
+    "close": 20.25,
+    "volume": 42484.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.1499996185,
+    "high": 20.6499996185,
+    "low": 19.5499992371,
+    "close": 20.5,
+    "volume": 24132.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,19,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 21.5,
+    "high": 22.5,
+    "low": 21.2999992371,
+    "close": 22.0,
+    "volume": 31228.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.0,
+    "high": 23.0499992371,
+    "low": 20.5,
+    "close": 21.0,
+    "volume": 24430.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 21.4500007629,
+    "high": 21.8999996185,
+    "low": 20.5499992371,
+    "close": 21.25,
+    "volume": 12328.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 21.0499992371,
+    "high": 21.2000007629,
+    "low": 20.0,
+    "close": 21.0,
+    "volume": 15916.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.5,
+    "high": 21.1000003815,
+    "low": 20.1000003815,
+    "close": 21.0,
+    "volume": 15450.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.8500003815,
+    "high": 21.5,
+    "low": 20.5,
+    "close": 21.5,
+    "volume": 13884.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 21.5,
+    "high": 23.2999992371,
+    "low": 20.7999992371,
+    "close": 23.2000007629,
+    "volume": 25420.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.5,
+    "high": 24.3500003815,
+    "low": 22.3500003815,
+    "close": 23.9500007629,
+    "volume": 32008.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,31,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 24.0499992371,
+    "high": 24.4500007629,
+    "low": 23.3500003815,
+    "close": 23.6000003815,
+    "volume": 11722.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,01,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 24.1000003815,
+    "high": 24.1000003815,
+    "low": 22.7999992371,
+    "close": 23.2999992371,
+    "volume": 6826.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 23.0499992371,
+    "high": 23.9500007629,
+    "low": 22.1000003815,
+    "close": 23.5499992371,
+    "volume": 14900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 24.0,
+    "high": 24.2999992371,
+    "low": 23.0,
+    "close": 24.0,
+    "volume": 15128.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 24.25,
+    "high": 24.25,
+    "low": 22.75,
+    "close": 23.5499992371,
+    "volume": 15956.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 23.4500007629,
+    "high": 23.4500007629,
+    "low": 21.4500007629,
+    "close": 22.2000007629,
+    "volume": 26962.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.0,
+    "high": 23.4500007629,
+    "low": 21.75,
+    "close": 22.25,
+    "volume": 14818.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 23.3500003815,
+    "high": 23.3500003815,
+    "low": 21.4500007629,
+    "close": 22.0,
+    "volume": 13766.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 21.9500007629,
+    "high": 22.25,
+    "low": 20.75,
+    "close": 21.8500003815,
+    "volume": 13344.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 21.8999996185,
+    "high": 23.25,
+    "low": 21.2000007629,
+    "close": 23.2000007629,
+    "volume": 18228.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.5499992371,
+    "high": 22.8500003815,
+    "low": 20.25,
+    "close": 21.3999996185,
+    "volume": 52562.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 21.0,
+    "high": 22.5499992371,
+    "low": 21.0,
+    "close": 22.0,
+    "volume": 17896.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.5,
+    "high": 22.1000003815,
+    "low": 20.5,
+    "close": 21.8999996185,
+    "volume": 14150.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.0,
+    "high": 22.2000007629,
+    "low": 21.1000003815,
+    "close": 21.5499992371,
+    "volume": 10146.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 21.5,
+    "high": 21.9500007629,
+    "low": 20.1499996185,
+    "close": 20.6499996185,
+    "volume": 14986.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 21.0499992371,
+    "high": 21.0499992371,
+    "low": 19.25,
+    "close": 20.1499996185,
+    "volume": 23340.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.1499996185,
+    "high": 20.5,
+    "low": 19.0499992371,
+    "close": 20.1000003815,
+    "volume": 18008.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.2000007629,
+    "high": 21.5499992371,
+    "low": 20.1000003815,
+    "close": 21.3500003815,
+    "volume": 9828.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.5499992371,
+    "high": 22.5,
+    "low": 20.5499992371,
+    "close": 22.2000007629,
+    "volume": 22346.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 21.8999996185,
+    "high": 22.0,
+    "low": 20.75,
+    "close": 21.5,
+    "volume": 16068.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,29,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.8500003815,
+    "high": 24.0,
+    "low": 20.5,
+    "close": 22.5499992371,
+    "volume": 38142.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 21.0,
+    "high": 23.1000003815,
+    "low": 21.0,
+    "close": 22.8999996185,
+    "volume": 12416.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,01,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 21.7999992371,
+    "high": 23.5,
+    "low": 21.7999992371,
+    "close": 22.6499996185,
+    "volume": 15990.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,04,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 23.5,
+    "high": 26.6499996185,
+    "low": 22.8999996185,
+    "close": 24.3500003815,
+    "volume": 71244.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 25.0,
+    "high": 25.0,
+    "low": 23.1499996185,
+    "close": 23.7000007629,
+    "volume": 27900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 23.4500007629,
+    "high": 24.8999996185,
+    "low": 21.1499996185,
+    "close": 22.5,
+    "volume": 59372.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.3500003815,
+    "high": 22.6499996185,
+    "low": 21.25,
+    "close": 21.25,
+    "volume": 30586.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 21.2999992371,
+    "high": 22.6499996185,
+    "low": 21.2999992371,
+    "close": 21.4500007629,
+    "volume": 18600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 21.75,
+    "high": 23.0,
+    "low": 21.25,
+    "close": 22.4500007629,
+    "volume": 24706.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.5,
+    "high": 23.8999996185,
+    "low": 21.5499992371,
+    "close": 23.4500007629,
+    "volume": 21646.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,12,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 23.5,
+    "high": 26.5,
+    "low": 23.0,
+    "close": 25.5499992371,
+    "volume": 71028.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 26.75,
+    "high": 27.8999996185,
+    "low": 25.0499992371,
+    "close": 26.7999992371,
+    "volume": 90842.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 28.4500007629,
+    "high": 34.5,
+    "low": 26.6499996185,
+    "close": 32.4500007629,
+    "volume": 438352.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 32.9500007629,
+    "high": 34.0,
+    "low": 28.3500003815,
+    "close": 30.0,
+    "volume": 129096.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,19,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 29.75,
+    "high": 32.3499984741,
+    "low": 29.75,
+    "close": 32.3499984741,
+    "volume": 61128.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 32.2000007629,
+    "high": 34.0,
+    "low": 29.9500007629,
+    "close": 31.1499996185,
+    "volume": 60170.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 31.0,
+    "high": 31.75,
+    "low": 30.1499996185,
+    "close": 31.0,
+    "volume": 22758.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 31.5,
+    "high": 32.0,
+    "low": 29.5,
+    "close": 31.9500007629,
+    "volume": 37960.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 32.0,
+    "high": 35.7999992371,
+    "low": 31.5,
+    "close": 35.0999984741,
+    "volume": 69632.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 35.5,
+    "high": 37.75,
+    "low": 34.7999992371,
+    "close": 36.0499992371,
+    "volume": 61742.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 36.7000007629,
+    "high": 44.0,
+    "low": 36.25,
+    "close": 43.0,
+    "volume": 179240.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,29,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 45.0,
+    "high": 45.5,
+    "low": 39.0,
+    "close": 40.8499984741,
+    "volume": 92832.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 39.5,
+    "high": 41.9000015259,
+    "low": 36.8499984741,
+    "close": 39.4000015259,
+    "volume": 43024.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 38.4500007629,
+    "high": 40.0,
+    "low": 35.0,
+    "close": 36.25,
+    "volume": 41188.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,04,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 35.75,
+    "high": 37.8499984741,
+    "low": 33.1500015259,
+    "close": 33.9500007629,
+    "volume": 52454.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 33.0999984741,
+    "high": 36.4000015259,
+    "low": 33.0999984741,
+    "close": 33.5999984741,
+    "volume": 27256.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 34.4500007629,
+    "high": 38.0,
+    "low": 33.0999984741,
+    "close": 37.4000015259,
+    "volume": 36550.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 36.8499984741,
+    "high": 37.0,
+    "low": 35.0,
+    "close": 35.9500007629,
+    "volume": 14738.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 35.75,
+    "high": 35.9000015259,
+    "low": 34.1500015259,
+    "close": 34.4000015259,
+    "volume": 16546.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 34.5,
+    "high": 36.0,
+    "low": 32.5499992371,
+    "close": 33.5,
+    "volume": 23918.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 33.0,
+    "high": 35.0,
+    "low": 32.75,
+    "close": 33.0,
+    "volume": 22718.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,01,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 32.5,
+    "high": 33.2000007629,
+    "low": 30.6000003815,
+    "close": 32.5,
+    "volume": 27300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 31.7000007629,
+    "high": 32.1500015259,
+    "low": 29.7000007629,
+    "close": 29.8999996185,
+    "volume": 23704.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 30.5,
+    "high": 30.5,
+    "low": 28.0499992371,
+    "close": 28.8999996185,
+    "volume": 17468.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,19,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 29.0,
+    "high": 30.0,
+    "low": 28.0,
+    "close": 28.8500003815,
+    "volume": 15718.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 29.2999992371,
+    "high": 30.5,
+    "low": 28.75,
+    "close": 29.2999992371,
+    "volume": 16956.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 29.25,
+    "high": 31.0,
+    "low": 29.0,
+    "close": 29.5,
+    "volume": 14424.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 29.75,
+    "high": 31.3500003815,
+    "low": 29.0,
+    "close": 29.75,
+    "volume": 13414.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 31.5,
+    "high": 31.5,
+    "low": 29.0,
+    "close": 29.1000003815,
+    "volume": 24936.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 29.1000003815,
+    "high": 30.5,
+    "low": 29.1000003815,
+    "close": 29.7000007629,
+    "volume": 14738.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,29,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 30.0,
+    "high": 30.5,
+    "low": 29.0,
+    "close": 30.2999992371,
+    "volume": 18140.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 29.6000003815,
+    "high": 30.2000007629,
+    "low": 29.1499996185,
+    "close": 29.75,
+    "volume": 25178.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,31,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 29.6499996185,
+    "high": 32.5,
+    "low": 29.25,
+    "close": 30.75,
+    "volume": 12944.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,01,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 31.9500007629,
+    "high": 32.0,
+    "low": 30.2999992371,
+    "close": 31.0,
+    "volume": 10232.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 30.7000007629,
+    "high": 32.0,
+    "low": 30.25,
+    "close": 31.1499996185,
+    "volume": 8962.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 30.6499996185,
+    "high": 31.6499996185,
+    "low": 30.2000007629,
+    "close": 30.6499996185,
+    "volume": 6662.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 30.3500003815,
+    "high": 31.0,
+    "low": 28.2999992371,
+    "close": 30.0,
+    "volume": 36438.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 29.3999996185,
+    "high": 29.6000003815,
+    "low": 27.0,
+    "close": 28.25,
+    "volume": 30054.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 28.0,
+    "high": 28.4500007629,
+    "low": 26.5,
+    "close": 26.5499992371,
+    "volume": 23656.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 26.8999996185,
+    "high": 29.8999996185,
+    "low": 26.25,
+    "close": 27.5499992371,
+    "volume": 36364.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 27.7999992371,
+    "high": 28.4500007629,
+    "low": 27.2999992371,
+    "close": 27.5,
+    "volume": 12582.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 26.75,
+    "high": 27.5,
+    "low": 26.1499996185,
+    "close": 26.8500003815,
+    "volume": 20200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 26.0,
+    "high": 26.75,
+    "low": 24.5499992371,
+    "close": 26.3500003815,
+    "volume": 42204.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 26.5499992371,
+    "high": 28.9500007629,
+    "low": 26.0,
+    "close": 28.5,
+    "volume": 32002.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 29.5,
+    "high": 29.7000007629,
+    "low": 28.5,
+    "close": 28.6499996185,
+    "volume": 17566.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 28.5,
+    "high": 29.5,
+    "low": 27.1499996185,
+    "close": 27.6000003815,
+    "volume": 18716.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 26.7999992371,
+    "high": 27.1000003815,
+    "low": 24.75,
+    "close": 25.3500003815,
+    "volume": 37394.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 25.5,
+    "high": 26.3999996185,
+    "low": 24.3500003815,
+    "close": 24.75,
+    "volume": 38416.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 24.0,
+    "high": 25.8999996185,
+    "low": 23.5,
+    "close": 24.75,
+    "volume": 28612.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 23.75,
+    "high": 25.7999992371,
+    "low": 23.3999996185,
+    "close": 25.0,
+    "volume": 16688.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 24.7000007629,
+    "high": 25.7999992371,
+    "low": 24.7000007629,
+    "close": 25.0,
+    "volume": 20770.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 26.7999992371,
+    "high": 27.9500007629,
+    "low": 25.3999996185,
+    "close": 25.5,
+    "volume": 19546.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,29,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 25.5,
+    "high": 27.0,
+    "low": 25.5,
+    "close": 26.75,
+    "volume": 22044.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,01,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 27.0,
+    "high": 27.0,
+    "low": 23.75,
+    "close": 25.7000007629,
+    "volume": 21586.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,04,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 25.7000007629,
+    "high": 26.0,
+    "low": 24.0,
+    "close": 24.6000003815,
+    "volume": 25404.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 24.5499992371,
+    "high": 24.5499992371,
+    "low": 23.8500003815,
+    "close": 24.3500003815,
+    "volume": 14890.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 24.5,
+    "high": 25.4500007629,
+    "low": 23.7999992371,
+    "close": 24.2999992371,
+    "volume": 14942.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 25.2999992371,
+    "high": 25.2999992371,
+    "low": 24.2000007629,
+    "close": 24.9500007629,
+    "volume": 14866.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 24.7000007629,
+    "high": 25.0,
+    "low": 23.0,
+    "close": 24.0,
+    "volume": 31448.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 24.5,
+    "high": 24.5,
+    "low": 22.25,
+    "close": 23.75,
+    "volume": 23902.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 24.0499992371,
+    "high": 24.0499992371,
+    "low": 22.75,
+    "close": 23.3999996185,
+    "volume": 16736.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.75,
+    "high": 23.4500007629,
+    "low": 22.6000003815,
+    "close": 23.0,
+    "volume": 14128.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.6000003815,
+    "high": 23.0,
+    "low": 22.25,
+    "close": 22.5,
+    "volume": 14652.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.25,
+    "high": 27.0499992371,
+    "low": 22.0499992371,
+    "close": 26.75,
+    "volume": 56868.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 26.0,
+    "high": 26.0,
+    "low": 23.8500003815,
+    "close": 23.8999996185,
+    "volume": 11642.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,19,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 24.25,
+    "high": 24.5,
+    "low": 23.5,
+    "close": 23.6000003815,
+    "volume": 7634.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 23.5,
+    "high": 24.3999996185,
+    "low": 22.5,
+    "close": 23.2000007629,
+    "volume": 15826.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 24.0,
+    "high": 25.0,
+    "low": 23.25,
+    "close": 23.6000003815,
+    "volume": 14604.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 23.8999996185,
+    "high": 24.5499992371,
+    "low": 23.5,
+    "close": 24.4500007629,
+    "volume": 13072.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 24.5,
+    "high": 24.5,
+    "low": 23.1499996185,
+    "close": 23.5499992371,
+    "volume": 10242.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 23.5,
+    "high": 26.5,
+    "low": 23.25,
+    "close": 26.0,
+    "volume": 16998.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 25.2000007629,
+    "high": 29.0,
+    "low": 24.6499996185,
+    "close": 27.2000007629,
+    "volume": 26384.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 25.5,
+    "high": 27.5499992371,
+    "low": 23.5,
+    "close": 24.8500003815,
+    "volume": 42992.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,01,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 25.5,
+    "high": 25.5,
+    "low": 22.5,
+    "close": 22.5,
+    "volume": 22068.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,04,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.6499996185,
+    "high": 23.4500007629,
+    "low": 21.2999992371,
+    "close": 22.9500007629,
+    "volume": 14944.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.7000007629,
+    "high": 22.9500007629,
+    "low": 22.1000003815,
+    "close": 22.5,
+    "volume": 11604.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,04,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 23.0,
+    "high": 24.9500007629,
+    "low": 22.2000007629,
+    "close": 22.6499996185,
+    "volume": 13752.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.7999992371,
+    "high": 23.8999996185,
+    "low": 21.7999992371,
+    "close": 23.1499996185,
+    "volume": 7768.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 23.0499992371,
+    "high": 23.5,
+    "low": 22.0,
+    "close": 23.1000003815,
+    "volume": 6378.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 23.5,
+    "high": 23.5,
+    "low": 22.3500003815,
+    "close": 23.5,
+    "volume": 9504.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.2000007629,
+    "high": 23.2000007629,
+    "low": 21.9500007629,
+    "close": 22.6499996185,
+    "volume": 10522.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.8999996185,
+    "high": 23.1499996185,
+    "low": 22.25,
+    "close": 22.75,
+    "volume": 4972.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.7000007629,
+    "high": 23.5,
+    "low": 22.0,
+    "close": 22.25,
+    "volume": 14694.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.0,
+    "high": 22.2999992371,
+    "low": 20.5,
+    "close": 21.0499992371,
+    "volume": 16964.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.75,
+    "high": 21.5,
+    "low": 20.6499996185,
+    "close": 21.5,
+    "volume": 15108.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 21.5,
+    "high": 22.9500007629,
+    "low": 20.8999996185,
+    "close": 22.6000003815,
+    "volume": 7640.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.3999996185,
+    "high": 22.8500003815,
+    "low": 21.5,
+    "close": 22.5,
+    "volume": 10528.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,19,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.2999992371,
+    "high": 22.6000003815,
+    "low": 21.5,
+    "close": 21.6499996185,
+    "volume": 13636.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.0,
+    "high": 22.8999996185,
+    "low": 21.0,
+    "close": 21.0499992371,
+    "volume": 11838.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.8999996185,
+    "high": 21.9500007629,
+    "low": 20.5,
+    "close": 20.7999992371,
+    "volume": 10608.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.5499992371,
+    "high": 21.3500003815,
+    "low": 20.5,
+    "close": 21.1499996185,
+    "volume": 8268.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 21.2000007629,
+    "high": 21.6000003815,
+    "low": 20.6499996185,
+    "close": 21.0,
+    "volume": 9298.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.6000003815,
+    "high": 21.25,
+    "low": 19.0499992371,
+    "close": 19.8500003815,
+    "volume": 24108.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,29,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 19.3999996185,
+    "high": 21.6499996185,
+    "low": 19.3999996185,
+    "close": 20.8999996185,
+    "volume": 13556.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.7000007629,
+    "high": 21.0,
+    "low": 19.6499996185,
+    "close": 19.8500003815,
+    "volume": 8408.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,01,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 19.6499996185,
+    "high": 20.2999992371,
+    "low": 19.25,
+    "close": 19.3999996185,
+    "volume": 10482.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.0,
+    "high": 20.6000003815,
+    "low": 19.0,
+    "close": 20.6000003815,
+    "volume": 16452.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.1499996185,
+    "high": 21.1499996185,
+    "low": 19.3500003815,
+    "close": 19.3999996185,
+    "volume": 14328.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.0,
+    "high": 21.25,
+    "low": 19.2999992371,
+    "close": 19.2999992371,
+    "volume": 16676.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 19.0,
+    "high": 20.5,
+    "low": 18.7000007629,
+    "close": 19.1000003815,
+    "volume": 12328.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 19.0499992371,
+    "high": 20.5,
+    "low": 19.0499992371,
+    "close": 20.3500003815,
+    "volume": 11416.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.2999992371,
+    "high": 21.2999992371,
+    "low": 20.0,
+    "close": 20.7999992371,
+    "volume": 7076.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,05,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.6499996185,
+    "high": 21.7000007629,
+    "low": 20.6499996185,
+    "close": 21.5,
+    "volume": 7366.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,05,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 21.2000007629,
+    "high": 22.8500003815,
+    "low": 21.0,
+    "close": 22.25,
+    "volume": 12934.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 23.25,
+    "high": 23.25,
+    "low": 18.5499992371,
+    "close": 20.8500003815,
+    "volume": 58264.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 21.2999992371,
+    "high": 21.5,
+    "low": 19.5,
+    "close": 19.75,
+    "volume": 18824.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,05,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 19.5499992371,
+    "high": 20.25,
+    "low": 19.4500007629,
+    "close": 19.6000003815,
+    "volume": 17202.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 19.8500003815,
+    "high": 20.0499992371,
+    "low": 18.75,
+    "close": 19.25,
+    "volume": 36862.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 19.6000003815,
+    "high": 20.5499992371,
+    "low": 19.3999996185,
+    "close": 20.0,
+    "volume": 19352.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.2000007629,
+    "high": 20.25,
+    "low": 19.0,
+    "close": 19.5,
+    "volume": 21990.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 19.4500007629,
+    "high": 19.5,
+    "low": 18.5499992371,
+    "close": 19.0499992371,
+    "volume": 23436.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 18.6000003815,
+    "high": 19.2000007629,
+    "low": 17.6000003815,
+    "close": 18.3500003815,
+    "volume": 50806.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 18.4500007629,
+    "high": 19.0,
+    "low": 15.0,
+    "close": 15.8999996185,
+    "volume": 44824.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 17.75,
+    "high": 17.7999992371,
+    "low": 16.9500007629,
+    "close": 17.2000007629,
+    "volume": 30612.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,29,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 16.9500007629,
+    "high": 17.7000007629,
+    "low": 16.0,
+    "close": 17.5499992371,
+    "volume": 38228.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 17.5499992371,
+    "high": 17.75,
+    "low": 16.0499992371,
+    "close": 16.1000003815,
+    "volume": 48558.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,31,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 16.8999996185,
+    "high": 17.1000003815,
+    "low": 16.1000003815,
+    "close": 16.5,
+    "volume": 31520.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 16.5499992371,
+    "high": 17.75,
+    "low": 16.5,
+    "close": 17.2000007629,
+    "volume": 19136.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,04,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 17.1499996185,
+    "high": 17.1499996185,
+    "low": 16.4500007629,
+    "close": 16.5499992371,
+    "volume": 10738.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 16.6499996185,
+    "high": 18.25,
+    "low": 16.6499996185,
+    "close": 17.5499992371,
+    "volume": 21898.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 17.4500007629,
+    "high": 17.9500007629,
+    "low": 16.0,
+    "close": 17.1499996185,
+    "volume": 41024.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 17.0,
+    "high": 17.1499996185,
+    "low": 16.0499992371,
+    "close": 17.0,
+    "volume": 33600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 17.2000007629,
+    "high": 17.6499996185,
+    "low": 16.5499992371,
+    "close": 17.25,
+    "volume": 17002.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 17.5,
+    "high": 17.9500007629,
+    "low": 16.2999992371,
+    "close": 16.75,
+    "volume": 28592.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 16.5,
+    "high": 17.6000003815,
+    "low": 16.25,
+    "close": 17.2000007629,
+    "volume": 44792.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 17.1000003815,
+    "high": 17.5,
+    "low": 16.7999992371,
+    "close": 17.25,
+    "volume": 18208.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 17.3999996185,
+    "high": 17.5,
+    "low": 16.6000003815,
+    "close": 17.0,
+    "volume": 23186.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 17.25,
+    "high": 17.5,
+    "low": 16.3999996185,
+    "close": 16.5,
+    "volume": 19746.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 16.7000007629,
+    "high": 17.8999996185,
+    "low": 16.0,
+    "close": 17.8500003815,
+    "volume": 99244.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 17.5,
+    "high": 22.0,
+    "low": 17.25,
+    "close": 20.5499992371,
+    "volume": 78352.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.25,
+    "high": 21.6499996185,
+    "low": 19.6000003815,
+    "close": 20.7000007629,
+    "volume": 46232.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.8500003815,
+    "high": 23.6000003815,
+    "low": 20.0,
+    "close": 23.6000003815,
+    "volume": 69758.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 23.5,
+    "high": 24.8500003815,
+    "low": 22.25,
+    "close": 23.1000003815,
+    "volume": 45260.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 23.3999996185,
+    "high": 23.5,
+    "low": 22.1000003815,
+    "close": 23.0,
+    "volume": 14126.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 23.3999996185,
+    "high": 23.75,
+    "low": 22.7000007629,
+    "close": 23.7000007629,
+    "volume": 13572.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 24.0,
+    "high": 24.4500007629,
+    "low": 22.75,
+    "close": 22.9500007629,
+    "volume": 18376.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,01,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 23.4500007629,
+    "high": 23.5,
+    "low": 21.2000007629,
+    "close": 22.6499996185,
+    "volume": 15998.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.2999992371,
+    "high": 23.1000003815,
+    "low": 21.3999996185,
+    "close": 22.2000007629,
+    "volume": 8462.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.1000003815,
+    "high": 23.75,
+    "low": 22.1000003815,
+    "close": 22.75,
+    "volume": 11092.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.1499996185,
+    "high": 23.4500007629,
+    "low": 22.1499996185,
+    "close": 23.1499996185,
+    "volume": 7640.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 23.25,
+    "high": 25.0,
+    "low": 22.6499996185,
+    "close": 25.0,
+    "volume": 52728.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 25.0,
+    "high": 27.5499992371,
+    "low": 24.5,
+    "close": 27.1000003815,
+    "volume": 38358.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 27.1000003815,
+    "high": 28.8999996185,
+    "low": 25.2000007629,
+    "close": 28.3500003815,
+    "volume": 45032.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 28.2000007629,
+    "high": 29.5,
+    "low": 27.0,
+    "close": 27.0,
+    "volume": 14870.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 27.5,
+    "high": 27.9500007629,
+    "low": 26.2999992371,
+    "close": 27.25,
+    "volume": 13200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 27.25,
+    "high": 29.0,
+    "low": 26.7999992371,
+    "close": 28.9500007629,
+    "volume": 69914.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 29.9500007629,
+    "high": 30.0,
+    "low": 28.1000003815,
+    "close": 29.0499992371,
+    "volume": 17388.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 29.7999992371,
+    "high": 29.7999992371,
+    "low": 27.2000007629,
+    "close": 28.2000007629,
+    "volume": 21202.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 28.1499996185,
+    "high": 28.5,
+    "low": 26.25,
+    "close": 26.4500007629,
+    "volume": 11042.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,19,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 26.25,
+    "high": 28.9500007629,
+    "low": 26.2000007629,
+    "close": 28.0,
+    "volume": 16984.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 28.0,
+    "high": 29.25,
+    "low": 26.2999992371,
+    "close": 26.8500003815,
+    "volume": 17624.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 26.6000003815,
+    "high": 28.0,
+    "low": 26.25,
+    "close": 26.4500007629,
+    "volume": 10002.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 26.2999992371,
+    "high": 27.25,
+    "low": 24.2999992371,
+    "close": 25.2000007629,
+    "volume": 22448.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,07,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 25.2999992371,
+    "high": 26.6000003815,
+    "low": 25.0,
+    "close": 25.5499992371,
+    "volume": 4650.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 26.0499992371,
+    "high": 27.7999992371,
+    "low": 25.7000007629,
+    "close": 27.6499996185,
+    "volume": 18636.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,29,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 28.1000003815,
+    "high": 28.1000003815,
+    "low": 26.5499992371,
+    "close": 27.3500003815,
+    "volume": 3558.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 26.5499992371,
+    "high": 27.4500007629,
+    "low": 25.5499992371,
+    "close": 25.5499992371,
+    "volume": 15028.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,07,31,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 25.8999996185,
+    "high": 27.0499992371,
+    "low": 25.2000007629,
+    "close": 25.4500007629,
+    "volume": 9002.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,01,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 25.6000003815,
+    "high": 25.8999996185,
+    "low": 23.3500003815,
+    "close": 24.0499992371,
+    "volume": 17646.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 24.0,
+    "high": 24.0,
+    "low": 21.2999992371,
+    "close": 23.0,
+    "volume": 10802.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 22.0,
+    "high": 24.2999992371,
+    "low": 21.75,
+    "close": 23.8500003815,
+    "volume": 26064.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 24.2999992371,
+    "high": 25.2000007629,
+    "low": 23.3500003815,
+    "close": 23.9500007629,
+    "volume": 9456.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 24.0,
+    "high": 24.8999996185,
+    "low": 23.1499996185,
+    "close": 23.8500003815,
+    "volume": 15156.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.5,
+    "high": 20.6499996185,
+    "low": 15.9499998093,
+    "close": 19.3999996185,
+    "volume": 89298.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 19.5,
+    "high": 21.4500007629,
+    "low": 19.3500003815,
+    "close": 20.7000007629,
+    "volume": 21308.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.4500007629,
+    "high": 20.7000007629,
+    "low": 18.6000003815,
+    "close": 19.25,
+    "volume": 22506.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 19.3500003815,
+    "high": 19.9500007629,
+    "low": 18.6499996185,
+    "close": 18.8999996185,
+    "volume": 14424.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 19.5,
+    "high": 19.9500007629,
+    "low": 18.75,
+    "close": 19.4500007629,
+    "volume": 9930.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 19.5,
+    "high": 20.7000007629,
+    "low": 18.75,
+    "close": 19.1499996185,
+    "volume": 16930.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 18.7000007629,
+    "high": 20.5,
+    "low": 18.7000007629,
+    "close": 19.8999996185,
+    "volume": 22984.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,19,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 19.9599990845,
+    "high": 22.6599998474,
+    "low": 17.5970001221,
+    "close": 20.2800006866,
+    "volume": 43100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 19.9899997711,
+    "high": 20.1399993896,
+    "low": 19.1499996185,
+    "close": 20.0499992371,
+    "volume": 23700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.1900005341,
+    "high": 21.75,
+    "low": 19.5900001526,
+    "close": 21.0200004578,
+    "volume": 33900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.1299991608,
+    "high": 21.1000003815,
+    "low": 19.3700008392,
+    "close": 19.4099998474,
+    "volume": 20900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 19.4699993134,
+    "high": 20.1000003815,
+    "low": 18.7900009155,
+    "close": 18.9500007629,
+    "volume": 50600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 18.8700008392,
+    "high": 19.1739997864,
+    "low": 17.2099990845,
+    "close": 17.25,
+    "volume": 60400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 17.2000007629,
+    "high": 17.6760005951,
+    "low": 16.75,
+    "close": 16.8400001526,
+    "volume": 27600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 16.7900009155,
+    "high": 16.8540000916,
+    "low": 16.0599994659,
+    "close": 16.3400001526,
+    "volume": 39500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,29,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 16.3799991608,
+    "high": 16.8250007629,
+    "low": 15.3900003433,
+    "close": 16.1000003815,
+    "volume": 79800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 16.5,
+    "high": 16.8150005341,
+    "low": 15.4350004196,
+    "close": 15.7399997711,
+    "volume": 102700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 15.720000267,
+    "high": 15.9650001526,
+    "low": 14.8599996567,
+    "close": 15.6199998856,
+    "volume": 37900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,04,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 15.0200004578,
+    "high": 16.5,
+    "low": 15.0200004578,
+    "close": 16.3999996185,
+    "volume": 75800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 16.0100002289,
+    "high": 17.5,
+    "low": 16.0100002289,
+    "close": 16.9599990845,
+    "volume": 30200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 16.5499992371,
+    "high": 17.0,
+    "low": 16.2800006866,
+    "close": 16.9799995422,
+    "volume": 19700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 17.0599994659,
+    "high": 17.7549991608,
+    "low": 16.4300003052,
+    "close": 16.8999996185,
+    "volume": 28000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 16.9699993134,
+    "high": 17.4400005341,
+    "low": 16.9699993134,
+    "close": 17.0599994659,
+    "volume": 9100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 16.8649997711,
+    "high": 17.1749992371,
+    "low": 16.0200004578,
+    "close": 16.2999992371,
+    "volume": 47700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 16.2999992371,
+    "high": 17.1200008392,
+    "low": 15.8400001526,
+    "close": 16.3299999237,
+    "volume": 30400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 16.3169994354,
+    "high": 17.1000003815,
+    "low": 16.0499992371,
+    "close": 16.3799991608,
+    "volume": 14500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 16.6900005341,
+    "high": 17.2700004578,
+    "low": 15.8800001144,
+    "close": 16.2000007629,
+    "volume": 14200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 16.5300006866,
+    "high": 16.5300006866,
+    "low": 15.9499998093,
+    "close": 16.4300003052,
+    "volume": 18600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 16.1200008392,
+    "high": 18.3999996185,
+    "low": 15.5530004501,
+    "close": 17.4500007629,
+    "volume": 67600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,19,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 18.2299995422,
+    "high": 21.7999992371,
+    "low": 18.1399993896,
+    "close": 20.0599994659,
+    "volume": 103200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 20.7399997711,
+    "high": 20.7399997711,
+    "low": 18.9489994049,
+    "close": 19.25,
+    "volume": 69700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 19.1940002441,
+    "high": 19.8099994659,
+    "low": 18.7700004578,
+    "close": 19.4200000763,
+    "volume": 56100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 19.4200000763,
+    "high": 19.6599998474,
+    "low": 18.486000061,
+    "close": 18.5,
+    "volume": 43300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 18.5100002289,
+    "high": 18.5100002289,
+    "low": 17.4400005341,
+    "close": 18.0599994659,
+    "volume": 39300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 18.3899993896,
+    "high": 18.5200004578,
+    "low": 17.7450008392,
+    "close": 18.2199993134,
+    "volume": 17900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 18.4699993134,
+    "high": 19.4599990845,
+    "low": 18.2999992371,
+    "close": 18.2999992371,
+    "volume": 15500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 18.2399997711,
+    "high": 18.7099990845,
+    "low": 17.6499996185,
+    "close": 17.8099994659,
+    "volume": 20000.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,10,01,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 17.5799999237,
+    "high": 18.3649997711,
+    "low": 17.4549999237,
+    "close": 18.1599998474,
+    "volume": 65600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 18.1800003052,
+    "high": 18.2000007629,
+    "low": 16.3799991608,
+    "close": 16.7000007629,
+    "volume": 37000.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,10,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 17.2950000763,
+    "high": 17.2950000763,
+    "low": 15.6099996567,
+    "close": 15.8900003433,
+    "volume": 64500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,04,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 16.6200008392,
+    "high": 16.6399993896,
+    "low": 15.779999733,
+    "close": 16.0699996948,
+    "volume": 31700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 16.0,
+    "high": 16.8199996948,
+    "low": 15.470000267,
+    "close": 15.7399997711,
+    "volume": 136300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 15.7100000381,
+    "high": 15.8249998093,
+    "low": 15.1000003815,
+    "close": 15.1499996185,
+    "volume": 16400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 15.8599996567,
+    "high": 15.8599996567,
+    "low": 14.779999733,
+    "close": 14.8999996185,
+    "volume": 30400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.5100002289,
+    "high": 15.0799999237,
+    "low": 14.1999998093,
+    "close": 14.9250001907,
+    "volume": 21500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 15.220000267,
+    "high": 16.607000351,
+    "low": 14.8900003433,
+    "close": 16.0400009155,
+    "volume": 66000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 16.6200008392,
+    "high": 16.6200008392,
+    "low": 15.3100004196,
+    "close": 15.4099998474,
+    "volume": 47400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 15.4300003052,
+    "high": 15.7270002365,
+    "low": 14.8000001907,
+    "close": 15.4200000763,
+    "volume": 44200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 15.732000351,
+    "high": 16.1200008392,
+    "low": 15.2100000381,
+    "close": 15.2600002289,
+    "volume": 56600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 15.4300003052,
+    "high": 15.5749998093,
+    "low": 14.6350002289,
+    "close": 14.75,
+    "volume": 74800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 15.1499996185,
+    "high": 16.2350006104,
+    "low": 15.0100002289,
+    "close": 15.3100004196,
+    "volume": 42200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 15.0100002289,
+    "high": 15.279999733,
+    "low": 14.8859996796,
+    "close": 15.279999733,
+    "volume": 8800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 15.3500003815,
+    "high": 15.5500001907,
+    "low": 14.7600002289,
+    "close": 15.1800003052,
+    "volume": 44400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.779999733,
+    "high": 15.1739997864,
+    "low": 14.3999996185,
+    "close": 14.8299999237,
+    "volume": 51200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.9499998093,
+    "high": 15.0399999619,
+    "low": 14.5,
+    "close": 14.970000267,
+    "volume": 12400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.7899999619,
+    "high": 15.3000001907,
+    "low": 14.3800001144,
+    "close": 14.8100004196,
+    "volume": 63500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 15.0200004578,
+    "high": 16.1599998474,
+    "low": 14.8199996948,
+    "close": 16.1599998474,
+    "volume": 66800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,29,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 15.9799995422,
+    "high": 15.9799995422,
+    "low": 15.2100000381,
+    "close": 15.6999998093,
+    "volume": 52800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 15.5200004578,
+    "high": 16.2299995422,
+    "low": 15.3999996185,
+    "close": 16.1599998474,
+    "volume": 18900.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,10,31,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 16.1000003815,
+    "high": 16.1000003815,
+    "low": 15.1400003433,
+    "close": 15.5799999237,
+    "volume": 60100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,01,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 15.5799999237,
+    "high": 15.906999588,
+    "low": 14.7100000381,
+    "close": 14.9499998093,
+    "volume": 21300.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,11,04,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 15.0,
+    "high": 15.25,
+    "low": 13.9600000381,
+    "close": 14.1000003815,
+    "volume": 26900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.2100000381,
+    "high": 14.8199996948,
+    "low": 14.1689996719,
+    "close": 14.5500001907,
+    "volume": 12100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 15.5399999619,
+    "high": 15.5399999619,
+    "low": 14.5799999237,
+    "close": 15.0,
+    "volume": 34000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.9499998093,
+    "high": 15.3819999695,
+    "low": 14.4350004196,
+    "close": 14.8299999237,
+    "volume": 46000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.7299995422,
+    "high": 15.3299999237,
+    "low": 14.5200004578,
+    "close": 14.9399995804,
+    "volume": 41800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.7299995422,
+    "high": 15.1999998093,
+    "low": 14.3699998856,
+    "close": 14.6899995804,
+    "volume": 58100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.6850004196,
+    "high": 14.8599996567,
+    "low": 13.6850004196,
+    "close": 14.8000001907,
+    "volume": 56300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.3699998856,
+    "high": 14.470000267,
+    "low": 13.8800001144,
+    "close": 14.0,
+    "volume": 63700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.1000003815,
+    "high": 14.1099996567,
+    "low": 13.3500003815,
+    "close": 13.6099996567,
+    "volume": 45400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.4399995804,
+    "high": 13.5100002289,
+    "low": 12.4099998474,
+    "close": 12.75,
+    "volume": 96700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.6499996185,
+    "high": 13.0740003586,
+    "low": 12.1979999542,
+    "close": 13.0,
+    "volume": 66900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,19,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.0900001526,
+    "high": 13.7530002594,
+    "low": 12.8599996567,
+    "close": 13.3199996948,
+    "volume": 25300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.0500001907,
+    "high": 13.1599998474,
+    "low": 12.2899999619,
+    "close": 12.4499998093,
+    "volume": 25700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.4300003052,
+    "high": 13.5200004578,
+    "low": 11.8999996185,
+    "close": 13.0200004578,
+    "volume": 50500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.1599998474,
+    "high": 13.1599998474,
+    "low": 12.75,
+    "close": 12.8900003433,
+    "volume": 15200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.8400001526,
+    "high": 13.6300001144,
+    "low": 12.720000267,
+    "close": 13.1300001144,
+    "volume": 52400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.7299995422,
+    "high": 13.4499998093,
+    "low": 12.7100000381,
+    "close": 13.4300003052,
+    "volume": 14500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.6300001144,
+    "high": 14.3999996185,
+    "low": 13.2100000381,
+    "close": 14.3100004196,
+    "volume": 28500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,29,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.3100004196,
+    "high": 15.7700004578,
+    "low": 14.1949996948,
+    "close": 15.7700004578,
+    "volume": 34100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 15.25,
+    "high": 15.3900003433,
+    "low": 13.1700000763,
+    "close": 13.6099996567,
+    "volume": 97800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.6999998093,
+    "high": 13.75,
+    "low": 13.1899995804,
+    "close": 13.4399995804,
+    "volume": 22700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,04,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.5799999237,
+    "high": 13.6960000992,
+    "low": 12.9499998093,
+    "close": 13.3400001526,
+    "volume": 26500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.029999733,
+    "high": 13.2399997711,
+    "low": 12.7100000381,
+    "close": 12.9899997711,
+    "volume": 29000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.5,
+    "high": 12.9899997711,
+    "low": 12.3999996185,
+    "close": 12.720000267,
+    "volume": 63100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.9799995422,
+    "high": 13.1000003815,
+    "low": 12.2299995422,
+    "close": 12.6800003052,
+    "volume": 36300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.4099998474,
+    "high": 12.9600000381,
+    "low": 12.1850004196,
+    "close": 12.3299999237,
+    "volume": 53000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.3699998856,
+    "high": 12.6099996567,
+    "low": 11.970000267,
+    "close": 12.3500003815,
+    "volume": 25200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.111000061,
+    "high": 12.1800003052,
+    "low": 11.75,
+    "close": 12.1700000763,
+    "volume": 18100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.8999996185,
+    "high": 12.0500001907,
+    "low": 10.8549995422,
+    "close": 10.8599996567,
+    "volume": 75200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.0399999619,
+    "high": 11.2559995651,
+    "low": 10.3000001907,
+    "close": 10.970000267,
+    "volume": 27300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.9399995804,
+    "high": 11.3599996567,
+    "low": 10.470000267,
+    "close": 11.3599996567,
+    "volume": 22700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.4899997711,
+    "high": 11.4899997711,
+    "low": 10.25,
+    "close": 10.3199996948,
+    "volume": 39600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,19,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.5050001144,
+    "high": 10.5050001144,
+    "low": 9.5,
+    "close": 10.3000001907,
+    "volume": 42800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.1300001144,
+    "high": 10.3579998016,
+    "low": 9.8470001221,
+    "close": 10.3299999237,
+    "volume": 12300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.0500001907,
+    "high": 10.6499996185,
+    "low": 10.0500001907,
+    "close": 10.6300001144,
+    "volume": 21900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.3400001526,
+    "high": 10.6999998093,
+    "low": 10.2449998856,
+    "close": 10.5,
+    "volume": 9100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.4919996262,
+    "high": 10.5,
+    "low": 10.1800003052,
+    "close": 10.2100000381,
+    "volume": 13900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.2779998779,
+    "high": 10.4399995804,
+    "low": 9.8500003815,
+    "close": 10.0100002289,
+    "volume": 31100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.3000001907,
+    "high": 10.3000001907,
+    "low": 9.1000003815,
+    "close": 9.1499996185,
+    "volume": 44400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,31,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 9.0600004196,
+    "high": 9.7700004578,
+    "low": 8.7899999619,
+    "close": 8.9200000763,
+    "volume": 56700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 9.154999733,
+    "high": 9.1999998093,
+    "low": 8.8800001144,
+    "close": 9.1400003433,
+    "volume": 19100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 8.9899997711,
+    "high": 10.1099996567,
+    "low": 8.9849996567,
+    "close": 9.8500003815,
+    "volume": 26500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 9.970000267,
+    "high": 10.2600002289,
+    "low": 9.3599996567,
+    "close": 9.8500003815,
+    "volume": 24800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.0500001907,
+    "high": 10.1800003052,
+    "low": 9.4079999924,
+    "close": 9.4399995804,
+    "volume": 14700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 9.4600000381,
+    "high": 9.8299999237,
+    "low": 9.0200004578,
+    "close": 9.1700000763,
+    "volume": 123500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 8.8900003433,
+    "high": 9.5,
+    "low": 8.1350002289,
+    "close": 8.4200000763,
+    "volume": 62600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 8.2399997711,
+    "high": 8.4650001526,
+    "low": 7.7069997787,
+    "close": 8.1199998856,
+    "volume": 33700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 8.1999998093,
+    "high": 8.3950004578,
+    "low": 7.8899998665,
+    "close": 7.9600000381,
+    "volume": 23900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 7.8699998856,
+    "high": 9.4799995422,
+    "low": 7.7649998665,
+    "close": 9.4799995422,
+    "volume": 145800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 9.8800001144,
+    "high": 11.0100002289,
+    "low": 9.4600000381,
+    "close": 10.4799995422,
+    "volume": 149800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.4600000381,
+    "high": 10.970000267,
+    "low": 9.9099998474,
+    "close": 9.9499998093,
+    "volume": 53700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.0500001907,
+    "high": 10.0699996948,
+    "low": 9.1370000839,
+    "close": 9.4099998474,
+    "volume": 28700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 9.4099998474,
+    "high": 9.795999527,
+    "low": 9.1099996567,
+    "close": 9.3999996185,
+    "volume": 26900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.3900003433,
+    "high": 11.5900001526,
+    "low": 9.9200000763,
+    "close": 10.9600000381,
+    "volume": 180100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.8699998856,
+    "high": 11.1800003052,
+    "low": 10.6999998093,
+    "close": 10.8999996185,
+    "volume": 41400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.7899999619,
+    "high": 10.7899999619,
+    "low": 10.3000001907,
+    "close": 10.3400001526,
+    "volume": 19500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.279999733,
+    "high": 10.4250001907,
+    "low": 9.7700004578,
+    "close": 9.9300003052,
+    "volume": 31200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,29,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 9.9300003052,
+    "high": 10.3400001526,
+    "low": 9.7250003815,
+    "close": 10.3400001526,
+    "volume": 18900.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,01,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.7399997711,
+    "high": 11.0699996948,
+    "low": 10.470000267,
+    "close": 10.7399997711,
+    "volume": 12800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,31,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.8900003433,
+    "high": 10.8900003433,
+    "low": 10.1800003052,
+    "close": 10.1800003052,
+    "volume": 13300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 9.9600000381,
+    "high": 10.8999996185,
+    "low": 9.8199996948,
+    "close": 10.4499998093,
+    "volume": 27800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,04,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.1909999847,
+    "high": 12.0,
+    "low": 10.1909999847,
+    "close": 11.5500001907,
+    "volume": 50700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.4399995804,
+    "high": 12.4899997711,
+    "low": 11.3900003433,
+    "close": 11.7600002289,
+    "volume": 44800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.8380002975,
+    "high": 11.9960002899,
+    "low": 11.4350004196,
+    "close": 11.7100000381,
+    "volume": 15700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.7600002289,
+    "high": 11.7600002289,
+    "low": 11.2899999619,
+    "close": 11.4499998093,
+    "volume": 17700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.9099998474,
+    "high": 11.9499998093,
+    "low": 11.0,
+    "close": 11.029999733,
+    "volume": 25100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.6800003052,
+    "high": 11.779999733,
+    "low": 11.0399999619,
+    "close": 11.6099996567,
+    "volume": 18700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.4010000229,
+    "high": 11.8599996567,
+    "low": 11.3999996185,
+    "close": 11.7100000381,
+    "volume": 20300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.6400003433,
+    "high": 12.4399995804,
+    "low": 11.3599996567,
+    "close": 11.3599996567,
+    "volume": 73600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.6599998474,
+    "high": 11.8500003815,
+    "low": 11.0,
+    "close": 11.0500001907,
+    "volume": 41600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.0900001526,
+    "high": 11.6350002289,
+    "low": 10.9600000381,
+    "close": 11.3400001526,
+    "volume": 37900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,19,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.25,
+    "high": 11.2600002289,
+    "low": 10.8999996185,
+    "close": 11.0100002289,
+    "volume": 16600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.279999733,
+    "high": 11.3299999237,
+    "low": 10.6909999847,
+    "close": 11.220000267,
+    "volume": 8600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.1899995804,
+    "high": 11.5500001907,
+    "low": 10.9099998474,
+    "close": 11.2810001373,
+    "volume": 18700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.9799995422,
+    "high": 11.4940004349,
+    "low": 10.6700000763,
+    "close": 10.9300003052,
+    "volume": 27600.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,02,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.0,
+    "high": 11.0500001907,
+    "low": 10.4600000381,
+    "close": 10.8999996185,
+    "volume": 27500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.0699996948,
+    "high": 11.2399997711,
+    "low": 10.8000001907,
+    "close": 10.970000267,
+    "volume": 10900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.1300001144,
+    "high": 11.1499996185,
+    "low": 10.7049999237,
+    "close": 11.029999733,
+    "volume": 17000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.7889995575,
+    "high": 11.470000267,
+    "low": 10.5399999619,
+    "close": 11.470000267,
+    "volume": 16900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.5500001907,
+    "high": 11.5500001907,
+    "low": 10.8950004578,
+    "close": 10.8999996185,
+    "volume": 13500.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,03,04,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.6599998474,
+    "high": 11.2100000381,
+    "low": 10.6049995422,
+    "close": 10.9399995804,
+    "volume": 53200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.6899995804,
+    "high": 11.484000206,
+    "low": 10.6899995804,
+    "close": 10.8800001144,
+    "volume": 15700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.8800001144,
+    "high": 10.9399995804,
+    "low": 10.4549999237,
+    "close": 10.6000003815,
+    "volume": 15400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.4200000763,
+    "high": 10.9099998474,
+    "low": 9.8000001907,
+    "close": 9.9099998474,
+    "volume": 169200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 9.8000001907,
+    "high": 10.0500001907,
+    "low": 8.904999733,
+    "close": 9.25,
+    "volume": 43400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 9.220000267,
+    "high": 9.6400003433,
+    "low": 9.1700000763,
+    "close": 9.6400003433,
+    "volume": 20300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 9.75,
+    "high": 11.1949996948,
+    "low": 9.5,
+    "close": 11.0,
+    "volume": 31000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.3299999237,
+    "high": 11.5699996948,
+    "low": 10.3299999237,
+    "close": 11.3299999237,
+    "volume": 30600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.3950004578,
+    "high": 12.5,
+    "low": 11.3100004196,
+    "close": 11.8299999237,
+    "volume": 104100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.7100000381,
+    "high": 12.1049995422,
+    "low": 11.6300001144,
+    "close": 11.6300001144,
+    "volume": 16700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.7690000534,
+    "high": 11.8100004196,
+    "low": 11.4320001602,
+    "close": 11.5,
+    "volume": 10200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,19,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.3599996567,
+    "high": 12.1049995422,
+    "low": 9.9600000381,
+    "close": 11.7700004578,
+    "volume": 88400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.6300001144,
+    "high": 12.9799995422,
+    "low": 11.6300001144,
+    "close": 12.9799995422,
+    "volume": 68600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.75,
+    "high": 13.1049995422,
+    "low": 12.1199998856,
+    "close": 12.8699998856,
+    "volume": 92200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.8800001144,
+    "high": 13.1000003815,
+    "low": 12.1999998093,
+    "close": 12.3800001144,
+    "volume": 44300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.3000001907,
+    "high": 13.9499998093,
+    "low": 12.2729997635,
+    "close": 13.9499998093,
+    "volume": 84300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.9300003052,
+    "high": 14.4300003052,
+    "low": 13.2700004578,
+    "close": 13.2700004578,
+    "volume": 53300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.279999733,
+    "high": 13.4370002747,
+    "low": 12.1199998856,
+    "close": 12.25,
+    "volume": 25900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.5,
+    "high": 12.5,
+    "low": 11.6400003433,
+    "close": 11.6999998093,
+    "volume": 25900.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,03,31,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.6700000763,
+    "high": 11.8199996948,
+    "low": 10.8299999237,
+    "close": 10.9149999619,
+    "volume": 55600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,01,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.1700000763,
+    "high": 11.5500001907,
+    "low": 10.7600002289,
+    "close": 10.9899997711,
+    "volume": 62200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.9499998093,
+    "high": 11.2299995422,
+    "low": 10.6700000763,
+    "close": 11.0100002289,
+    "volume": 50200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.5100002289,
+    "high": 11.0500001907,
+    "low": 10.3400001526,
+    "close": 10.3800001144,
+    "volume": 35000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,04,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.25,
+    "high": 10.6199998856,
+    "low": 9.5,
+    "close": 10.3900003433,
+    "volume": 54900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.0100002289,
+    "high": 10.4849996567,
+    "low": 9.8800001144,
+    "close": 10.0699996948,
+    "volume": 44800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.4499998093,
+    "high": 10.75,
+    "low": 9.8000001907,
+    "close": 10.095000267,
+    "volume": 31300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.3500003815,
+    "high": 11.0550003052,
+    "low": 10.0100002289,
+    "close": 10.8100004196,
+    "volume": 25700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.6400003433,
+    "high": 11.234000206,
+    "low": 10.6300001144,
+    "close": 10.8350000381,
+    "volume": 28000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.9899997711,
+    "high": 11.5349998474,
+    "low": 9.8000001907,
+    "close": 10.279999733,
+    "volume": 147000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 10.1999998093,
+    "high": 13.029999733,
+    "low": 10.1999998093,
+    "close": 12.3999996185,
+    "volume": 244000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.8400001526,
+    "high": 13.0430002213,
+    "low": 11.8149995804,
+    "close": 12.8800001144,
+    "volume": 65200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.9399995804,
+    "high": 13.1499996185,
+    "low": 12.6700000763,
+    "close": 13.1499996185,
+    "volume": 42400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.7650003433,
+    "high": 14.7469997406,
+    "low": 12.7650003433,
+    "close": 14.2899999619,
+    "volume": 66900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.1499996185,
+    "high": 14.1499996185,
+    "low": 12.7600002289,
+    "close": 13.1499996185,
+    "volume": 24600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.9799995422,
+    "high": 14.2100000381,
+    "low": 12.9799995422,
+    "close": 14.0900001526,
+    "volume": 25200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.5500001907,
+    "high": 14.9600000381,
+    "low": 14.2849998474,
+    "close": 14.5600004196,
+    "volume": 46300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.2100000381,
+    "high": 14.529999733,
+    "low": 13.8599996567,
+    "close": 14.4099998474,
+    "volume": 30600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.1700000763,
+    "high": 15.0600004196,
+    "low": 13.6000003815,
+    "close": 14.5500001907,
+    "volume": 68100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.470000267,
+    "high": 15.0389995575,
+    "low": 14.0349998474,
+    "close": 14.6300001144,
+    "volume": 25700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,29,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.3699998856,
+    "high": 14.9799995422,
+    "low": 13.6099996567,
+    "close": 14.6300001144,
+    "volume": 68900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.2700004578,
+    "high": 14.8100004196,
+    "low": 13.7299995422,
+    "close": 14.3599996567,
+    "volume": 46500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,01,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.1999998093,
+    "high": 14.970000267,
+    "low": 14.1999998093,
+    "close": 14.9499998093,
+    "volume": 14600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.9799995422,
+    "high": 15.25,
+    "low": 14.5600004196,
+    "close": 14.6999998093,
+    "volume": 35200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.4099998474,
+    "high": 14.7899999619,
+    "low": 14.0850000381,
+    "close": 14.3699998856,
+    "volume": 14100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.0170001984,
+    "high": 14.2950000763,
+    "low": 13.1300001144,
+    "close": 13.3999996185,
+    "volume": 18700.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,05,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.6099996567,
+    "high": 13.7449998856,
+    "low": 12.75,
+    "close": 13.1400003433,
+    "volume": 24700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.1999998093,
+    "high": 13.6479997635,
+    "low": 12.5699996948,
+    "close": 13.4899997711,
+    "volume": 43900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.220000267,
+    "high": 13.9399995804,
+    "low": 13.220000267,
+    "close": 13.9399995804,
+    "volume": 18000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.6599998474,
+    "high": 14.8850002289,
+    "low": 13.6800003052,
+    "close": 14.0600004196,
+    "volume": 46100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.6499996185,
+    "high": 14.1400003433,
+    "low": 13.6499996185,
+    "close": 13.7100000381,
+    "volume": 13200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.6499996185,
+    "high": 13.904999733,
+    "low": 12.9250001907,
+    "close": 13.3999996185,
+    "volume": 35400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.8500003815,
+    "high": 13.8500003815,
+    "low": 12.6700000763,
+    "close": 13.4399995804,
+    "volume": 80000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.6999998093,
+    "high": 14.3299999237,
+    "low": 13.6300001144,
+    "close": 13.6300001144,
+    "volume": 47500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,19,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.3000001907,
+    "high": 14.1400003433,
+    "low": 13.1499996185,
+    "close": 13.7299995422,
+    "volume": 79200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.107000351,
+    "high": 14.0500001907,
+    "low": 13.107000351,
+    "close": 13.3999996185,
+    "volume": 12300.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,05,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.3999996185,
+    "high": 13.8000001907,
+    "low": 12.9799995422,
+    "close": 13.4300003052,
+    "volume": 47800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.2899999619,
+    "high": 14.0,
+    "low": 12.9300003052,
+    "close": 12.9300003052,
+    "volume": 32600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.8149995804,
+    "high": 13.1049995422,
+    "low": 12.3500003815,
+    "close": 12.720000267,
+    "volume": 50100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.0900001526,
+    "high": 13.6999998093,
+    "low": 12.8850002289,
+    "close": 13.4799995422,
+    "volume": 66200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.6300001144,
+    "high": 13.8599996567,
+    "low": 12.6099996567,
+    "close": 13.6199998856,
+    "volume": 41300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,29,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.9799995422,
+    "high": 15.1000003815,
+    "low": 13.6199998856,
+    "close": 14.6850004196,
+    "volume": 97100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.7700004578,
+    "high": 14.9469995499,
+    "low": 13.0,
+    "close": 13.4499998093,
+    "volume": 101400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.529999733,
+    "high": 14.5249996185,
+    "low": 12.6199998856,
+    "close": 12.7449998856,
+    "volume": 93400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.8999996185,
+    "high": 12.8999996185,
+    "low": 11.5900001526,
+    "close": 11.6000003815,
+    "volume": 103500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,04,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.75,
+    "high": 11.75,
+    "low": 10.8100004196,
+    "close": 11.6000003815,
+    "volume": 118100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,05,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.6700000763,
+    "high": 11.6700000763,
+    "low": 10.8599996567,
+    "close": 11.1599998474,
+    "volume": 119800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,06,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.1800003052,
+    "high": 11.7100000381,
+    "low": 10.9750003815,
+    "close": 11.4250001907,
+    "volume": 96000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 11.5500001907,
+    "high": 12.6829996109,
+    "low": 11.0799999237,
+    "close": 12.1700000763,
+    "volume": 149800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.2299995422,
+    "high": 12.5500001907,
+    "low": 12.0249996185,
+    "close": 12.3599996567,
+    "volume": 60500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.4099998474,
+    "high": 14.1000003815,
+    "low": 12.3699998856,
+    "close": 13.779999733,
+    "volume": 103100.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,06,12,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.6700000763,
+    "high": 14.3000001907,
+    "low": 13.5,
+    "close": 13.9899997711,
+    "volume": 106300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,13,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.8800001144,
+    "high": 13.9399995804,
+    "low": 13.4300003052,
+    "close": 13.8100004196,
+    "volume": 42200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.8599996567,
+    "high": 14.4200000763,
+    "low": 13.6099996567,
+    "close": 14.3500003815,
+    "volume": 34300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.3400001526,
+    "high": 14.7530002594,
+    "low": 14.1700000763,
+    "close": 14.3599996567,
+    "volume": 66000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.3599996567,
+    "high": 14.3599996567,
+    "low": 13.470000267,
+    "close": 13.6000003815,
+    "volume": 85900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,20,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.5799999237,
+    "high": 14.0679998398,
+    "low": 13.1000003815,
+    "close": 13.1000003815,
+    "volume": 50500.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,06,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.0699996948,
+    "high": 13.5,
+    "low": 12.220000267,
+    "close": 12.4899997711,
+    "volume": 131100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.4499998093,
+    "high": 13.3129997253,
+    "low": 12.3299999237,
+    "close": 12.3299999237,
+    "volume": 78200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.1800003052,
+    "high": 12.6499996185,
+    "low": 12.1499996185,
+    "close": 12.25,
+    "volume": 101600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,26,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.1499996185,
+    "high": 12.8000001907,
+    "low": 12.1000003815,
+    "close": 12.3699998856,
+    "volume": 99100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,27,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.5,
+    "high": 12.529999733,
+    "low": 11.8999996185,
+    "close": 12.1199998856,
+    "volume": 721800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.6000003815,
+    "high": 13.4359998703,
+    "low": 12.0200004578,
+    "close": 12.3900003433,
+    "volume": 151800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,01,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.1999998093,
+    "high": 12.7600002289,
+    "low": 12.1999998093,
+    "close": 12.4799995422,
+    "volume": 82056.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,02,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.4799995422,
+    "high": 12.9300003052,
+    "low": 12.2600002289,
+    "close": 12.4399995804,
+    "volume": 84678.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,03,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.9250001907,
+    "high": 13.3699998856,
+    "low": 12.8699998856,
+    "close": 13.1800003052,
+    "volume": 23494.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,07,07,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 12.9899997711,
+    "high": 13.4350004196,
+    "low": 12.8406000137,
+    "close": 13.3800001144,
+    "volume": 49454.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,08,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.345000267,
+    "high": 13.8000001907,
+    "low": 13.345000267,
+    "close": 13.6099996567,
+    "volume": 37816.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,09,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.5900001526,
+    "high": 13.7299995422,
+    "low": 13.0749998093,
+    "close": 13.6999998093,
+    "volume": 57735.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,10,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.9099998474,
+    "high": 14.2899999619,
+    "low": 13.6300001144,
+    "close": 14.2600002289,
+    "volume": 45836.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,11,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.1099996567,
+    "high": 14.5564002991,
+    "low": 13.5450000763,
+    "close": 13.6000003815,
+    "volume": 32515.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,14,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.470000267,
+    "high": 13.6499996185,
+    "low": 13.3299999237,
+    "close": 13.5500001907,
+    "volume": 13109.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,15,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.6400003433,
+    "high": 13.6999998093,
+    "low": 13.029999733,
+    "close": 13.029999733,
+    "volume": 31454.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,07,16,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.279999733,
+    "high": 13.595000267,
+    "low": 12.9499998093,
+    "close": 13.3599996567,
+    "volume": 38076.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,17,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.4300003052,
+    "high": 13.7150001526,
+    "low": 13.3249998093,
+    "close": 13.595000267,
+    "volume": 19651.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,18,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.3999996185,
+    "high": 13.6099996567,
+    "low": 13.0749998093,
+    "close": 13.1899995804,
+    "volume": 30194.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,07,21,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.5142002106,
+    "high": 13.5375995636,
+    "low": 13.0100002289,
+    "close": 13.2600002289,
+    "volume": 38103.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,22,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.5799999237,
+    "high": 14.6300001144,
+    "low": 13.2700004578,
+    "close": 14.4399995804,
+    "volume": 57051.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,23,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.6599998474,
+    "high": 15.220000267,
+    "low": 14.4399995804,
+    "close": 14.7399997711,
+    "volume": 40663.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,24,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.6599998474,
+    "high": 14.9499998093,
+    "low": 14.2252998352,
+    "close": 14.5,
+    "volume": 24906.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,25,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 14.4200000763,
+    "high": 14.4460000992,
+    "low": 13.8699998856,
+    "close": 13.8699998856,
+    "volume": 22047.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,28,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.9786996841,
+    "high": 14.3599996567,
+    "low": 13.7800998688,
+    "close": 13.8999996185,
+    "volume": 20074.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,29,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.9899997711,
+    "high": 14.5628004074,
+    "low": 13.4027996063,
+    "close": 13.6899995804,
+    "volume": 17819.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,30,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.382399559,
+    "high": 13.8000001907,
+    "low": 12.8850002289,
+    "close": 13.220000267,
+    "volume": 36981.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,31,00,00,00,000000",
+    "ticker": "BETR",
+    "open": 13.5,
+    "high": 13.5,
+    "low": 12.5699996948,
+    "close": 12.9399995804,
+    "volume": 36650.0,
+    "wedge_status": "none"
+  }
+]

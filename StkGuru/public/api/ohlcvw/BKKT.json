@@ -1,0 +1,7522 @@
+[
+  {
+    "trade_date": "2022,08,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 69.0,
+    "high": 73.5,
+    "low": 68.0,
+    "close": 72.75,
+    "volume": 65688.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 74.5,
+    "high": 76.25,
+    "low": 71.75,
+    "close": 76.0,
+    "volume": 85776.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,04,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 80.0,
+    "high": 88.875,
+    "low": 77.5,
+    "close": 78.5,
+    "volume": 320432.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 77.25,
+    "high": 79.375,
+    "low": 73.75,
+    "close": 78.75,
+    "volume": 133612.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 80.25,
+    "high": 87.0,
+    "low": 79.25,
+    "close": 81.25,
+    "volume": 121660.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 79.0,
+    "high": 80.75,
+    "low": 74.75,
+    "close": 78.25,
+    "volume": 91376.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 80.75,
+    "high": 81.75,
+    "low": 77.5,
+    "close": 79.0,
+    "volume": 158164.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 85.25,
+    "high": 94.75,
+    "low": 81.4749984741,
+    "close": 81.75,
+    "volume": 246744.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 81.75,
+    "high": 88.25,
+    "low": 78.0,
+    "close": 87.75,
+    "volume": 124148.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 86.25,
+    "high": 89.5250015259,
+    "low": 83.875,
+    "close": 84.5,
+    "volume": 91784.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 84.5,
+    "high": 84.625,
+    "low": 77.625,
+    "close": 80.75,
+    "volume": 104836.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 78.75,
+    "high": 80.125,
+    "low": 75.625,
+    "close": 76.75,
+    "volume": 82632.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 77.25,
+    "high": 77.25,
+    "low": 73.0,
+    "close": 73.5,
+    "volume": 70968.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,08,19,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 69.25,
+    "high": 71.0,
+    "low": 66.5,
+    "close": 66.75,
+    "volume": 81524.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 64.75,
+    "high": 66.25,
+    "low": 63.0,
+    "close": 63.25,
+    "volume": 62208.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 64.25,
+    "high": 67.75,
+    "low": 64.25,
+    "close": 65.0,
+    "volume": 54276.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 65.5,
+    "high": 67.75,
+    "low": 64.75,
+    "close": 66.75,
+    "volume": 34376.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 68.0,
+    "high": 69.875,
+    "low": 66.625,
+    "close": 69.75,
+    "volume": 52308.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 70.0,
+    "high": 71.4749984741,
+    "low": 65.5,
+    "close": 65.75,
+    "volume": 61464.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,29,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 63.5,
+    "high": 67.5,
+    "low": 62.5,
+    "close": 65.25,
+    "volume": 46212.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 66.25,
+    "high": 68.0,
+    "low": 62.625,
+    "close": 63.5,
+    "volume": 43860.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,31,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 63.0,
+    "high": 65.5,
+    "low": 62.375,
+    "close": 64.75,
+    "volume": 36140.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,01,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 62.75,
+    "high": 64.75,
+    "low": 61.0,
+    "close": 64.75,
+    "volume": 44732.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 64.5,
+    "high": 66.125,
+    "low": 62.4749984741,
+    "close": 64.0,
+    "volume": 45704.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 65.25,
+    "high": 67.9000015259,
+    "low": 62.875,
+    "close": 65.0,
+    "volume": 48868.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 64.25,
+    "high": 67.125,
+    "low": 62.25,
+    "close": 66.75,
+    "volume": 67048.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 65.5,
+    "high": 67.75,
+    "low": 64.5,
+    "close": 66.75,
+    "volume": 39752.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 68.5,
+    "high": 75.0,
+    "low": 68.5,
+    "close": 74.0,
+    "volume": 90652.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 73.75,
+    "high": 81.0,
+    "low": 71.125,
+    "close": 74.5,
+    "volume": 115036.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 68.75,
+    "high": 70.625,
+    "low": 64.75,
+    "close": 68.0,
+    "volume": 84628.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 68.0,
+    "high": 70.5,
+    "low": 66.25,
+    "close": 69.25,
+    "volume": 25944.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 68.5,
+    "high": 70.875,
+    "low": 67.0,
+    "close": 67.5,
+    "volume": 43156.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,09,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 66.0,
+    "high": 66.5,
+    "low": 63.0,
+    "close": 63.0,
+    "volume": 88124.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,19,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 62.0,
+    "high": 62.5,
+    "low": 59.5,
+    "close": 60.0,
+    "volume": 56356.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 58.5,
+    "high": 62.25,
+    "low": 58.25,
+    "close": 59.25,
+    "volume": 48672.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 60.0,
+    "high": 61.25,
+    "low": 57.25,
+    "close": 57.5,
+    "volume": 47704.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 58.75,
+    "high": 58.75,
+    "low": 54.625,
+    "close": 56.75,
+    "volume": 43244.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 55.0,
+    "high": 56.0,
+    "low": 53.5,
+    "close": 55.25,
+    "volume": 35328.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 54.25,
+    "high": 57.5499992371,
+    "low": 53.5,
+    "close": 54.75,
+    "volume": 37344.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 56.75,
+    "high": 56.75,
+    "low": 53.5,
+    "close": 55.5,
+    "volume": 38544.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 55.5,
+    "high": 59.0,
+    "low": 54.5,
+    "close": 57.75,
+    "volume": 46356.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,29,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 56.0,
+    "high": 58.25,
+    "low": 55.75,
+    "close": 57.0,
+    "volume": 46032.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 57.5,
+    "high": 60.25,
+    "low": 56.875,
+    "close": 57.0,
+    "volume": 33372.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 57.75,
+    "high": 57.75,
+    "low": 54.5,
+    "close": 56.75,
+    "volume": 34208.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,04,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 58.25,
+    "high": 60.7249984741,
+    "low": 58.25,
+    "close": 60.5,
+    "volume": 43676.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 59.25,
+    "high": 60.5,
+    "low": 58.375,
+    "close": 60.5,
+    "volume": 30908.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 59.75,
+    "high": 63.75,
+    "low": 59.75,
+    "close": 63.25,
+    "volume": 45192.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2022,10,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 59.5,
+    "high": 60.75,
+    "low": 57.25,
+    "close": 57.5,
+    "volume": 32760.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 57.5,
+    "high": 57.75,
+    "low": 54.0,
+    "close": 55.0,
+    "volume": 49036.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 54.75,
+    "high": 55.0,
+    "low": 52.0,
+    "close": 52.75,
+    "volume": 79140.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 53.25,
+    "high": 53.75,
+    "low": 51.25,
+    "close": 52.75,
+    "volume": 34936.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 50.0,
+    "high": 53.9000015259,
+    "low": 50.0,
+    "close": 53.75,
+    "volume": 52252.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 54.75,
+    "high": 56.0,
+    "low": 51.875,
+    "close": 52.0,
+    "volume": 31712.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 52.75,
+    "high": 56.0,
+    "low": 52.75,
+    "close": 54.75,
+    "volume": 51376.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 56.75,
+    "high": 58.25,
+    "low": 53.25,
+    "close": 53.75,
+    "volume": 38528.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,19,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 53.0,
+    "high": 53.75,
+    "low": 51.5,
+    "close": 52.75,
+    "volume": 34380.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 51.75,
+    "high": 54.75,
+    "low": 51.5,
+    "close": 52.5,
+    "volume": 38636.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 52.0,
+    "high": 56.0,
+    "low": 50.5,
+    "close": 55.75,
+    "volume": 56596.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 56.5,
+    "high": 56.5,
+    "low": 53.0,
+    "close": 54.0,
+    "volume": 51628.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 54.0,
+    "high": 60.25,
+    "low": 54.0,
+    "close": 59.0,
+    "volume": 72740.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 59.25,
+    "high": 60.125,
+    "low": 57.0,
+    "close": 57.75,
+    "volume": 79636.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 56.0,
+    "high": 57.0,
+    "low": 52.75,
+    "close": 53.0,
+    "volume": 57208.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 53.0,
+    "high": 54.875,
+    "low": 52.0,
+    "close": 54.25,
+    "volume": 40072.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,31,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 55.25,
+    "high": 56.25,
+    "low": 53.0,
+    "close": 53.25,
+    "volume": 46160.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,01,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 54.5,
+    "high": 55.25,
+    "low": 53.75,
+    "close": 54.25,
+    "volume": 43392.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 54.25,
+    "high": 54.25,
+    "low": 49.75,
+    "close": 50.0,
+    "volume": 113132.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 50.25,
+    "high": 53.5,
+    "low": 49.0,
+    "close": 50.0,
+    "volume": 104380.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,04,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 51.75,
+    "high": 52.0,
+    "low": 46.25,
+    "close": 47.0,
+    "volume": 126744.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 48.0,
+    "high": 50.125,
+    "low": 45.25,
+    "close": 48.75,
+    "volume": 100068.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 48.75,
+    "high": 50.0,
+    "low": 45.75,
+    "close": 47.5,
+    "volume": 77876.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 46.5,
+    "high": 46.5,
+    "low": 42.5,
+    "close": 43.25,
+    "volume": 89312.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 45.25,
+    "high": 47.5,
+    "low": 45.0,
+    "close": 47.25,
+    "volume": 82696.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 45.25,
+    "high": 52.5,
+    "low": 45.0,
+    "close": 52.25,
+    "volume": 127660.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 50.25,
+    "high": 52.0,
+    "low": 48.5,
+    "close": 49.5,
+    "volume": 60240.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 50.0,
+    "high": 55.625,
+    "low": 50.0,
+    "close": 54.0,
+    "volume": 92844.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 52.5,
+    "high": 54.0,
+    "low": 49.75,
+    "close": 50.0,
+    "volume": 46544.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 48.5,
+    "high": 50.5,
+    "low": 47.25,
+    "close": 47.75,
+    "volume": 41700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 49.25,
+    "high": 49.25,
+    "low": 45.75,
+    "close": 46.0,
+    "volume": 36828.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 46.0,
+    "high": 46.0,
+    "low": 41.5,
+    "close": 41.5,
+    "volume": 58124.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 42.25,
+    "high": 42.5,
+    "low": 39.75,
+    "close": 40.75,
+    "volume": 62536.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 41.25,
+    "high": 42.5,
+    "low": 40.625,
+    "close": 42.25,
+    "volume": 36500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 42.75,
+    "high": 43.0,
+    "low": 41.5,
+    "close": 42.75,
+    "volume": 13632.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 42.75,
+    "high": 43.5,
+    "low": 40.25,
+    "close": 40.75,
+    "volume": 36400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,29,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 41.25,
+    "high": 42.625,
+    "low": 40.75,
+    "close": 42.25,
+    "volume": 32300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 42.5,
+    "high": 44.5,
+    "low": 40.5,
+    "close": 44.25,
+    "volume": 65740.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,01,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 44.0,
+    "high": 45.5,
+    "low": 43.0,
+    "close": 45.0,
+    "volume": 44344.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 44.25,
+    "high": 46.25,
+    "low": 43.75,
+    "close": 46.0,
+    "volume": 24824.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 44.75,
+    "high": 47.75,
+    "low": 43.25,
+    "close": 43.25,
+    "volume": 49700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 43.5,
+    "high": 43.7999992371,
+    "low": 41.25,
+    "close": 42.0,
+    "volume": 36280.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 42.0,
+    "high": 42.7750015259,
+    "low": 41.25,
+    "close": 42.0,
+    "volume": 29380.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 42.25,
+    "high": 43.5,
+    "low": 41.25,
+    "close": 42.5,
+    "volume": 36688.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 42.5,
+    "high": 44.625,
+    "low": 42.0,
+    "close": 42.0,
+    "volume": 35740.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 42.25,
+    "high": 42.75,
+    "low": 40.75,
+    "close": 41.0,
+    "volume": 31100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 42.5,
+    "high": 44.75,
+    "low": 39.0,
+    "close": 40.75,
+    "volume": 71020.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 39.25,
+    "high": 40.375,
+    "low": 37.5,
+    "close": 38.0,
+    "volume": 61312.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 37.75,
+    "high": 39.625,
+    "low": 37.25,
+    "close": 38.5,
+    "volume": 48976.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 37.75,
+    "high": 38.25,
+    "low": 34.75,
+    "close": 37.0,
+    "volume": 135660.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,19,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 36.75,
+    "high": 36.75,
+    "low": 32.5,
+    "close": 33.25,
+    "volume": 56100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 33.5,
+    "high": 34.5,
+    "low": 33.0,
+    "close": 33.25,
+    "volume": 18924.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 33.75,
+    "high": 34.375,
+    "low": 32.25,
+    "close": 32.5,
+    "volume": 44424.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 33.0,
+    "high": 38.75,
+    "low": 32.0,
+    "close": 38.0,
+    "volume": 110456.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 37.75,
+    "high": 37.75,
+    "low": 30.75,
+    "close": 33.0,
+    "volume": 112592.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.75,
+    "high": 35.0,
+    "low": 31.75,
+    "close": 33.5,
+    "volume": 61228.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.75,
+    "high": 33.75,
+    "low": 29.75,
+    "close": 29.75,
+    "volume": 66260.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,29,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 30.0,
+    "high": 31.5,
+    "low": 30.0,
+    "close": 30.25,
+    "volume": 47136.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 29.75,
+    "high": 30.75,
+    "low": 29.0,
+    "close": 29.75,
+    "volume": 56680.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 31.0,
+    "high": 31.25,
+    "low": 28.25,
+    "close": 29.0,
+    "volume": 52044.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,04,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 29.75,
+    "high": 33.0,
+    "low": 28.5,
+    "close": 32.25,
+    "volume": 60644.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 30.25,
+    "high": 32.0,
+    "low": 29.5,
+    "close": 32.0,
+    "volume": 47536.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.5,
+    "high": 33.5,
+    "low": 31.0,
+    "close": 33.25,
+    "volume": 37680.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 33.5,
+    "high": 36.0,
+    "low": 33.25,
+    "close": 34.5,
+    "volume": 45872.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.5,
+    "high": 35.5,
+    "low": 32.5,
+    "close": 35.0,
+    "volume": 32880.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,01,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.25,
+    "high": 38.25,
+    "low": 35.0,
+    "close": 35.75,
+    "volume": 69028.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 36.25,
+    "high": 71.75,
+    "low": 33.75,
+    "close": 69.5,
+    "volume": 1005824.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 61.0,
+    "high": 63.25,
+    "low": 49.25,
+    "close": 51.25,
+    "volume": 788028.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 54.5,
+    "high": 56.5,
+    "low": 49.0,
+    "close": 50.0,
+    "volume": 234316.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 49.25,
+    "high": 50.0,
+    "low": 44.5,
+    "close": 45.25,
+    "volume": 128024.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,19,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 44.5,
+    "high": 51.5,
+    "low": 42.5,
+    "close": 50.5,
+    "volume": 206292.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 50.5,
+    "high": 51.5,
+    "low": 45.625,
+    "close": 50.0,
+    "volume": 212400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 49.5,
+    "high": 51.0,
+    "low": 46.5,
+    "close": 48.0,
+    "volume": 178872.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 47.25,
+    "high": 48.75,
+    "low": 43.5,
+    "close": 44.0,
+    "volume": 95088.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 42.25,
+    "high": 44.0,
+    "low": 40.25,
+    "close": 43.0,
+    "volume": 93196.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,01,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 44.25,
+    "high": 45.0,
+    "low": 41.0,
+    "close": 42.0,
+    "volume": 113564.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 41.75,
+    "high": 44.5,
+    "low": 40.5,
+    "close": 43.25,
+    "volume": 171316.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 42.5,
+    "high": 43.0,
+    "low": 39.5,
+    "close": 39.75,
+    "volume": 94520.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,01,31,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 39.75,
+    "high": 40.75,
+    "low": 39.0,
+    "close": 39.25,
+    "volume": 71860.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,01,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 40.0,
+    "high": 42.75,
+    "low": 38.0,
+    "close": 41.0,
+    "volume": 119840.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 42.5,
+    "high": 53.0,
+    "low": 41.2000007629,
+    "close": 44.5,
+    "volume": 680652.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 42.5,
+    "high": 45.5,
+    "low": 42.0,
+    "close": 42.5,
+    "volume": 121980.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 41.5,
+    "high": 44.25,
+    "low": 41.0,
+    "close": 42.75,
+    "volume": 68268.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 42.5,
+    "high": 46.0,
+    "low": 42.0,
+    "close": 45.75,
+    "volume": 90948.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,02,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 45.5,
+    "high": 47.0,
+    "low": 43.5,
+    "close": 43.5,
+    "volume": 55480.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 44.75,
+    "high": 45.5,
+    "low": 38.5,
+    "close": 38.75,
+    "volume": 112200.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,02,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 39.5,
+    "high": 39.75,
+    "low": 36.75,
+    "close": 37.5,
+    "volume": 48256.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 37.25,
+    "high": 37.75,
+    "low": 36.25,
+    "close": 37.0,
+    "volume": 38548.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 36.75,
+    "high": 41.5,
+    "low": 36.25,
+    "close": 41.0,
+    "volume": 99620.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 40.0,
+    "high": 43.875,
+    "low": 39.5,
+    "close": 43.5,
+    "volume": 107824.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 42.25,
+    "high": 47.375,
+    "low": 41.0,
+    "close": 41.75,
+    "volume": 158436.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 42.0,
+    "high": 43.25,
+    "low": 40.25,
+    "close": 42.0,
+    "volume": 66596.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 40.75,
+    "high": 42.0,
+    "low": 38.0,
+    "close": 38.25,
+    "volume": 61396.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,02,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 38.0,
+    "high": 39.75,
+    "low": 37.625,
+    "close": 38.25,
+    "volume": 48112.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 39.5,
+    "high": 39.75,
+    "low": 35.9249992371,
+    "close": 37.0,
+    "volume": 66700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 36.5,
+    "high": 36.9500007629,
+    "low": 34.5,
+    "close": 35.0,
+    "volume": 50012.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.25,
+    "high": 36.875,
+    "low": 35.125,
+    "close": 35.5,
+    "volume": 32388.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 36.25,
+    "high": 38.0,
+    "low": 35.875,
+    "close": 36.5,
+    "volume": 47860.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,01,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 36.75,
+    "high": 36.75,
+    "low": 35.0,
+    "close": 35.25,
+    "volume": 38496.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.5,
+    "high": 34.5,
+    "low": 33.25,
+    "close": 34.0,
+    "volume": 67260.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 33.5,
+    "high": 34.75,
+    "low": 33.0,
+    "close": 34.5,
+    "volume": 62524.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.0,
+    "high": 35.5,
+    "low": 33.0,
+    "close": 33.25,
+    "volume": 37968.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 33.25,
+    "high": 34.0,
+    "low": 31.75,
+    "close": 32.0,
+    "volume": 35484.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.5,
+    "high": 32.5,
+    "low": 30.5,
+    "close": 31.5,
+    "volume": 57988.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 31.0,
+    "high": 32.75,
+    "low": 29.5,
+    "close": 30.5,
+    "volume": 77092.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 29.25,
+    "high": 30.0,
+    "low": 27.0,
+    "close": 27.25,
+    "volume": 101636.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 28.25,
+    "high": 37.5,
+    "low": 27.5,
+    "close": 32.25,
+    "volume": 336036.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.5,
+    "high": 35.0,
+    "low": 29.5,
+    "close": 30.5,
+    "volume": 198844.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 28.75,
+    "high": 30.0,
+    "low": 27.5,
+    "close": 29.0,
+    "volume": 105936.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 29.0,
+    "high": 30.25,
+    "low": 28.25,
+    "close": 29.75,
+    "volume": 61576.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 30.75,
+    "high": 44.5,
+    "low": 29.75,
+    "close": 43.0,
+    "volume": 284036.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 37.0,
+    "high": 38.25,
+    "low": 32.5,
+    "close": 34.0,
+    "volume": 228372.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.5,
+    "high": 38.25,
+    "low": 32.75,
+    "close": 36.0,
+    "volume": 182900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.5,
+    "high": 37.25,
+    "low": 33.5,
+    "close": 34.0,
+    "volume": 91568.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 33.25,
+    "high": 39.4749984741,
+    "low": 33.25,
+    "close": 38.75,
+    "volume": 118728.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,03,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 37.5,
+    "high": 39.5,
+    "low": 36.25,
+    "close": 39.25,
+    "volume": 62116.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 39.0,
+    "high": 40.0,
+    "low": 35.5,
+    "close": 37.25,
+    "volume": 63968.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 37.5,
+    "high": 37.75,
+    "low": 35.125,
+    "close": 36.5,
+    "volume": 41592.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,29,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 38.0,
+    "high": 39.5250015259,
+    "low": 36.75,
+    "close": 39.25,
+    "volume": 44656.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 40.0,
+    "high": 41.25,
+    "low": 38.5,
+    "close": 41.0,
+    "volume": 62188.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,31,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 41.25,
+    "high": 43.75,
+    "low": 40.75,
+    "close": 43.0,
+    "volume": 68224.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 41.75,
+    "high": 43.75,
+    "low": 40.5,
+    "close": 42.5,
+    "volume": 51780.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,04,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 43.5,
+    "high": 43.5,
+    "low": 39.5,
+    "close": 40.75,
+    "volume": 34312.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 40.25,
+    "high": 40.5,
+    "low": 37.5,
+    "close": 38.5,
+    "volume": 48424.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 38.5,
+    "high": 40.125,
+    "low": 37.625,
+    "close": 39.5,
+    "volume": 38984.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 39.0,
+    "high": 43.1749992371,
+    "low": 38.25,
+    "close": 43.0,
+    "volume": 75732.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 43.75,
+    "high": 45.25,
+    "low": 43.0,
+    "close": 43.25,
+    "volume": 138728.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 43.25,
+    "high": 43.75,
+    "low": 38.75,
+    "close": 39.0,
+    "volume": 105036.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,04,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 39.5,
+    "high": 42.75,
+    "low": 39.375,
+    "close": 39.75,
+    "volume": 107700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 39.75,
+    "high": 40.875,
+    "low": 36.75,
+    "close": 38.25,
+    "volume": 86876.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,04,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 37.0,
+    "high": 38.25,
+    "low": 36.25,
+    "close": 36.75,
+    "volume": 45256.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 37.5,
+    "high": 38.75,
+    "low": 36.5,
+    "close": 36.75,
+    "volume": 41328.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,19,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 36.25,
+    "high": 36.9249992371,
+    "low": 33.75,
+    "close": 34.25,
+    "volume": 77700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.0,
+    "high": 34.75,
+    "low": 33.0,
+    "close": 33.25,
+    "volume": 28108.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 33.25,
+    "high": 34.5,
+    "low": 32.75,
+    "close": 34.5,
+    "volume": 31156.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 33.5,
+    "high": 34.75,
+    "low": 32.75,
+    "close": 33.5,
+    "volume": 32136.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 33.75,
+    "high": 34.25,
+    "low": 32.0,
+    "close": 33.5,
+    "volume": 53960.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.75,
+    "high": 35.7750015259,
+    "low": 32.75,
+    "close": 33.75,
+    "volume": 71972.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.0,
+    "high": 35.75,
+    "low": 33.5,
+    "close": 35.25,
+    "volume": 47600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.25,
+    "high": 35.0,
+    "low": 33.75,
+    "close": 33.75,
+    "volume": 26448.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,01,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.0,
+    "high": 34.5,
+    "low": 32.0,
+    "close": 32.75,
+    "volume": 29848.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 33.0,
+    "high": 34.0,
+    "low": 32.0,
+    "close": 32.75,
+    "volume": 36276.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.25,
+    "high": 35.125,
+    "low": 32.25,
+    "close": 33.5,
+    "volume": 28312.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,04,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 33.25,
+    "high": 34.75,
+    "low": 32.375,
+    "close": 34.25,
+    "volume": 29000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.0,
+    "high": 37.0,
+    "low": 34.5,
+    "close": 36.75,
+    "volume": 29908.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.75,
+    "high": 36.0,
+    "low": 34.5,
+    "close": 35.75,
+    "volume": 27900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.5,
+    "high": 35.5,
+    "low": 33.125,
+    "close": 33.5,
+    "volume": 38088.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 33.75,
+    "high": 35.75,
+    "low": 33.0,
+    "close": 34.25,
+    "volume": 46480.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 31.25,
+    "high": 32.75,
+    "low": 30.75,
+    "close": 32.25,
+    "volume": 43972.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.5,
+    "high": 32.75,
+    "low": 30.0,
+    "close": 30.0,
+    "volume": 51608.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 31.25,
+    "high": 32.0,
+    "low": 30.25,
+    "close": 32.0,
+    "volume": 18776.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 31.25,
+    "high": 32.5,
+    "low": 31.25,
+    "close": 32.25,
+    "volume": 21288.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.5,
+    "high": 35.75,
+    "low": 32.125,
+    "close": 35.5,
+    "volume": 33076.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.5,
+    "high": 37.0,
+    "low": 34.375,
+    "close": 35.5,
+    "volume": 24816.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,19,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 36.25,
+    "high": 36.25,
+    "low": 34.0,
+    "close": 34.75,
+    "volume": 18600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.0,
+    "high": 37.25,
+    "low": 34.5,
+    "close": 37.0,
+    "volume": 30312.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.25,
+    "high": 38.0,
+    "low": 35.25,
+    "close": 36.25,
+    "volume": 23388.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 36.0,
+    "high": 37.25,
+    "low": 35.0,
+    "close": 36.75,
+    "volume": 17268.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 36.5,
+    "high": 37.0,
+    "low": 34.25,
+    "close": 35.5,
+    "volume": 20260.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.0,
+    "high": 35.25,
+    "low": 33.75,
+    "close": 34.25,
+    "volume": 25740.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.75,
+    "high": 36.5,
+    "low": 34.875,
+    "close": 35.25,
+    "volume": 28020.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,31,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 36.25,
+    "high": 36.25,
+    "low": 34.25,
+    "close": 35.5,
+    "volume": 17512.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,01,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.75,
+    "high": 37.25,
+    "low": 34.5,
+    "close": 36.25,
+    "volume": 29168.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 36.5,
+    "high": 37.0,
+    "low": 35.25,
+    "close": 36.5,
+    "volume": 21732.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 36.25,
+    "high": 37.0,
+    "low": 34.75,
+    "close": 35.0,
+    "volume": 22584.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 33.75,
+    "high": 35.5,
+    "low": 33.0,
+    "close": 35.0,
+    "volume": 41668.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.25,
+    "high": 36.9500007629,
+    "low": 34.0,
+    "close": 34.75,
+    "volume": 31260.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.75,
+    "high": 35.75,
+    "low": 34.7000007629,
+    "close": 35.75,
+    "volume": 14956.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.5,
+    "high": 36.4749984741,
+    "low": 34.75,
+    "close": 34.75,
+    "volume": 15708.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.0,
+    "high": 35.0,
+    "low": 33.5,
+    "close": 34.0,
+    "volume": 24552.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.5,
+    "high": 35.625,
+    "low": 33.5,
+    "close": 35.25,
+    "volume": 23100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.5,
+    "high": 36.25,
+    "low": 35.0,
+    "close": 35.75,
+    "volume": 49884.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.0,
+    "high": 35.75,
+    "low": 34.75,
+    "close": 35.0,
+    "volume": 43052.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.5,
+    "high": 36.75,
+    "low": 34.75,
+    "close": 35.5,
+    "volume": 110808.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,06,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.25,
+    "high": 36.0,
+    "low": 34.0,
+    "close": 34.5,
+    "volume": 82952.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,06,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.75,
+    "high": 36.5,
+    "low": 34.5,
+    "close": 34.5,
+    "volume": 184776.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.5,
+    "high": 34.75,
+    "low": 30.75,
+    "close": 31.75,
+    "volume": 102868.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.5,
+    "high": 33.5,
+    "low": 31.5,
+    "close": 31.75,
+    "volume": 112720.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 31.25,
+    "high": 31.5,
+    "low": 27.0,
+    "close": 27.25,
+    "volume": 193580.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 28.75,
+    "high": 31.25,
+    "low": 27.75,
+    "close": 31.25,
+    "volume": 133684.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 30.25,
+    "high": 31.75,
+    "low": 29.75,
+    "close": 30.0,
+    "volume": 55376.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,29,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 29.75,
+    "high": 31.25,
+    "low": 29.5,
+    "close": 30.0,
+    "volume": 42356.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 30.5,
+    "high": 31.25,
+    "low": 30.0,
+    "close": 30.75,
+    "volume": 44968.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 31.0,
+    "high": 33.25,
+    "low": 30.75,
+    "close": 33.0,
+    "volume": 65032.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,07,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.5,
+    "high": 33.75,
+    "low": 31.75,
+    "close": 33.25,
+    "volume": 45488.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.75,
+    "high": 33.25,
+    "low": 31.25,
+    "close": 32.75,
+    "volume": 48444.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 33.0,
+    "high": 36.75,
+    "low": 32.75,
+    "close": 35.25,
+    "volume": 98928.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.75,
+    "high": 41.0,
+    "low": 35.25,
+    "close": 40.5,
+    "volume": 135000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 41.25,
+    "high": 43.25,
+    "low": 38.0,
+    "close": 41.0,
+    "volume": 209936.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 41.75,
+    "high": 43.0,
+    "low": 38.5,
+    "close": 40.5,
+    "volume": 110188.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 40.5,
+    "high": 48.5,
+    "low": 39.25,
+    "close": 48.25,
+    "volume": 344528.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 46.5,
+    "high": 58.75,
+    "low": 44.5,
+    "close": 45.5,
+    "volume": 570036.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 46.5,
+    "high": 49.0,
+    "low": 42.5,
+    "close": 44.25,
+    "volume": 184644.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 43.25,
+    "high": 46.5,
+    "low": 41.0,
+    "close": 43.0,
+    "volume": 114668.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,19,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 43.875,
+    "high": 46.75,
+    "low": 43.5,
+    "close": 45.75,
+    "volume": 89656.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 45.75,
+    "high": 46.0,
+    "low": 41.5,
+    "close": 41.75,
+    "volume": 98848.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 42.75,
+    "high": 44.5,
+    "low": 40.625,
+    "close": 42.5,
+    "volume": 57680.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 41.75,
+    "high": 43.125,
+    "low": 41.0,
+    "close": 42.25,
+    "volume": 47920.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 42.25,
+    "high": 44.5,
+    "low": 42.25,
+    "close": 42.25,
+    "volume": 38864.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 42.75,
+    "high": 44.25,
+    "low": 41.8499984741,
+    "close": 43.25,
+    "volume": 37016.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 43.5,
+    "high": 44.0,
+    "low": 38.5,
+    "close": 39.0,
+    "volume": 90696.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,07,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 40.0,
+    "high": 41.5,
+    "low": 39.5,
+    "close": 40.75,
+    "volume": 41760.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,31,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 41.5,
+    "high": 43.0,
+    "low": 40.5,
+    "close": 41.25,
+    "volume": 91480.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,01,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 41.0,
+    "high": 41.25,
+    "low": 39.125,
+    "close": 39.75,
+    "volume": 47128.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,08,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 39.25,
+    "high": 39.25,
+    "low": 37.5,
+    "close": 37.75,
+    "volume": 53812.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 37.5,
+    "high": 38.75,
+    "low": 37.0,
+    "close": 38.0,
+    "volume": 41772.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,04,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 38.25,
+    "high": 39.0,
+    "low": 37.0,
+    "close": 37.0,
+    "volume": 34596.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 38.0,
+    "high": 39.25,
+    "low": 35.0,
+    "close": 35.5,
+    "volume": 85044.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.0,
+    "high": 37.25,
+    "low": 34.25,
+    "close": 37.0,
+    "volume": 48264.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 37.5,
+    "high": 37.5,
+    "low": 35.0,
+    "close": 35.25,
+    "volume": 36612.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 33.25,
+    "high": 37.25,
+    "low": 33.25,
+    "close": 34.25,
+    "volume": 52984.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.25,
+    "high": 35.75,
+    "low": 34.25,
+    "close": 35.5,
+    "volume": 19676.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.75,
+    "high": 35.75,
+    "low": 34.25,
+    "close": 34.75,
+    "volume": 28976.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.25,
+    "high": 35.0,
+    "low": 33.25,
+    "close": 33.75,
+    "volume": 30288.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 33.5,
+    "high": 34.125,
+    "low": 32.5,
+    "close": 32.5,
+    "volume": 28728.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.75,
+    "high": 33.0,
+    "low": 31.5,
+    "close": 31.75,
+    "volume": 31512.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 30.75,
+    "high": 33.0,
+    "low": 30.75,
+    "close": 32.75,
+    "volume": 31292.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.0,
+    "high": 34.0,
+    "low": 32.0,
+    "close": 32.25,
+    "volume": 19356.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.75,
+    "high": 32.9500007629,
+    "low": 31.75,
+    "close": 31.75,
+    "volume": 18968.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 31.75,
+    "high": 34.25,
+    "low": 31.5,
+    "close": 33.75,
+    "volume": 24312.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.0,
+    "high": 34.0,
+    "low": 31.5,
+    "close": 31.75,
+    "volume": 14848.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.0,
+    "high": 33.5,
+    "low": 31.5,
+    "close": 32.75,
+    "volume": 20348.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.75,
+    "high": 33.75,
+    "low": 32.75,
+    "close": 33.25,
+    "volume": 13532.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,29,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.75,
+    "high": 38.25,
+    "low": 32.75,
+    "close": 37.5,
+    "volume": 68120.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 37.25,
+    "high": 37.5,
+    "low": 35.5,
+    "close": 37.25,
+    "volume": 23564.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,31,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 37.0,
+    "high": 37.75,
+    "low": 33.5,
+    "close": 34.5,
+    "volume": 33384.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,01,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.5,
+    "high": 35.5,
+    "low": 34.25,
+    "close": 35.5,
+    "volume": 16196.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.0,
+    "high": 35.25,
+    "low": 32.5,
+    "close": 32.5,
+    "volume": 24588.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.75,
+    "high": 33.75,
+    "low": 31.8250007629,
+    "close": 32.25,
+    "volume": 23260.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.25,
+    "high": 33.0,
+    "low": 31.25,
+    "close": 32.25,
+    "volume": 23616.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.25,
+    "high": 32.75,
+    "low": 31.75,
+    "close": 32.0,
+    "volume": 18272.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.25,
+    "high": 32.75,
+    "low": 31.75,
+    "close": 32.25,
+    "volume": 19500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.5,
+    "high": 34.0,
+    "low": 31.25,
+    "close": 31.5,
+    "volume": 46388.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 31.5,
+    "high": 32.5,
+    "low": 30.75,
+    "close": 31.25,
+    "volume": 31404.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 31.75,
+    "high": 33.0,
+    "low": 31.25,
+    "close": 31.5,
+    "volume": 31168.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 31.75,
+    "high": 32.25,
+    "low": 30.5,
+    "close": 30.5,
+    "volume": 49276.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 31.0,
+    "high": 31.75,
+    "low": 30.0,
+    "close": 30.0,
+    "volume": 35480.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,19,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 30.0,
+    "high": 30.75,
+    "low": 29.125,
+    "close": 30.0,
+    "volume": 54400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 30.5,
+    "high": 31.0,
+    "low": 29.75,
+    "close": 30.0,
+    "volume": 20356.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 29.75,
+    "high": 29.75,
+    "low": 28.5,
+    "close": 29.0,
+    "volume": 31192.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 29.5,
+    "high": 29.5,
+    "low": 27.5,
+    "close": 27.5,
+    "volume": 31036.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 28.0,
+    "high": 29.75,
+    "low": 27.5,
+    "close": 29.0,
+    "volume": 27064.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 29.0,
+    "high": 29.75,
+    "low": 28.125,
+    "close": 28.25,
+    "volume": 25980.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 29.25,
+    "high": 30.25,
+    "low": 29.0,
+    "close": 29.75,
+    "volume": 19292.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 29.75,
+    "high": 33.0,
+    "low": 29.0,
+    "close": 30.5,
+    "volume": 81096.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,29,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 31.0,
+    "high": 31.25,
+    "low": 28.75,
+    "close": 29.25,
+    "volume": 43912.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 29.5,
+    "high": 30.5,
+    "low": 28.0,
+    "close": 28.25,
+    "volume": 51024.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 28.5,
+    "high": 28.75,
+    "low": 27.5,
+    "close": 27.5,
+    "volume": 27416.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,04,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 28.0,
+    "high": 28.75,
+    "low": 26.25,
+    "close": 28.25,
+    "volume": 54564.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 28.25,
+    "high": 29.0,
+    "low": 27.875,
+    "close": 28.25,
+    "volume": 23728.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 28.0,
+    "high": 29.25,
+    "low": 27.5,
+    "close": 29.0,
+    "volume": 15328.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 28.0,
+    "high": 28.75,
+    "low": 27.75,
+    "close": 28.5,
+    "volume": 10360.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 29.0,
+    "high": 29.5,
+    "low": 28.5,
+    "close": 29.25,
+    "volume": 14772.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 29.5,
+    "high": 29.75,
+    "low": 28.75,
+    "close": 28.75,
+    "volume": 15444.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 28.75,
+    "high": 28.75,
+    "low": 27.25,
+    "close": 27.25,
+    "volume": 25988.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 27.75,
+    "high": 28.0,
+    "low": 26.75,
+    "close": 27.0,
+    "volume": 19640.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 27.75,
+    "high": 29.5,
+    "low": 27.5,
+    "close": 27.5,
+    "volume": 73736.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 27.5,
+    "high": 28.75,
+    "low": 27.5,
+    "close": 28.5,
+    "volume": 17284.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 28.0,
+    "high": 28.25,
+    "low": 27.0,
+    "close": 27.0,
+    "volume": 20396.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,19,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 27.25,
+    "high": 27.75,
+    "low": 26.75,
+    "close": 26.75,
+    "volume": 17512.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 27.0,
+    "high": 28.0,
+    "low": 26.5,
+    "close": 26.5,
+    "volume": 32384.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 27.25,
+    "high": 27.25,
+    "low": 25.75,
+    "close": 26.0,
+    "volume": 106992.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 28.25,
+    "high": 28.25,
+    "low": 25.9750003815,
+    "close": 26.0,
+    "volume": 119036.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 26.25,
+    "high": 26.5,
+    "low": 25.25,
+    "close": 25.5,
+    "volume": 58048.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 25.25,
+    "high": 26.0,
+    "low": 24.75,
+    "close": 24.7999992371,
+    "volume": 38816.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 25.0,
+    "high": 25.4750003815,
+    "low": 23.5,
+    "close": 23.5,
+    "volume": 40604.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 24.1749992371,
+    "high": 24.9750003815,
+    "low": 24.0,
+    "close": 24.5750007629,
+    "volume": 32444.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,31,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 24.5,
+    "high": 25.5,
+    "low": 24.5,
+    "close": 25.25,
+    "volume": 28176.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,01,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 25.5,
+    "high": 25.5,
+    "low": 23.4249992371,
+    "close": 23.5,
+    "volume": 31648.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 24.1749992371,
+    "high": 24.6749992371,
+    "low": 22.875,
+    "close": 23.5,
+    "volume": 47836.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 23.5,
+    "high": 24.25,
+    "low": 23.25,
+    "close": 24.25,
+    "volume": 34128.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 24.5,
+    "high": 24.75,
+    "low": 22.75,
+    "close": 22.7999992371,
+    "volume": 26880.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 23.125,
+    "high": 23.7000007629,
+    "low": 22.4249992371,
+    "close": 22.5750007629,
+    "volume": 41036.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 22.75,
+    "high": 22.75,
+    "low": 16.0249996185,
+    "close": 16.0249996185,
+    "volume": 173788.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 18.25,
+    "high": 19.5499992371,
+    "low": 16.125,
+    "close": 17.1749992371,
+    "volume": 138372.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 17.7250003815,
+    "high": 21.7000007629,
+    "low": 17.0,
+    "close": 19.8999996185,
+    "volume": 199808.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 20.75,
+    "high": 20.75,
+    "low": 17.875,
+    "close": 18.0,
+    "volume": 96656.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 19.5,
+    "high": 25.25,
+    "low": 19.0249996185,
+    "close": 24.625,
+    "volume": 174876.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 25.0,
+    "high": 30.0,
+    "low": 25.0,
+    "close": 29.25,
+    "volume": 141836.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 28.75,
+    "high": 31.25,
+    "low": 27.5249996185,
+    "close": 30.0,
+    "volume": 136652.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 29.75,
+    "high": 32.0,
+    "low": 25.75,
+    "close": 31.75,
+    "volume": 117308.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 33.5,
+    "high": 42.0,
+    "low": 33.375,
+    "close": 34.25,
+    "volume": 272524.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.0,
+    "high": 42.75,
+    "low": 31.25,
+    "close": 40.75,
+    "volume": 244692.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 41.5,
+    "high": 43.25,
+    "low": 37.75,
+    "close": 39.0,
+    "volume": 124492.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 39.5,
+    "high": 49.25,
+    "low": 38.0,
+    "close": 47.0,
+    "volume": 184104.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 46.0,
+    "high": 50.0,
+    "low": 44.0,
+    "close": 45.0,
+    "volume": 202980.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 45.25,
+    "high": 46.25,
+    "low": 42.75,
+    "close": 44.0,
+    "volume": 139500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,29,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 44.75,
+    "high": 45.75,
+    "low": 40.5,
+    "close": 41.5,
+    "volume": 134400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 42.25,
+    "high": 42.25,
+    "low": 35.5,
+    "close": 37.5,
+    "volume": 157256.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,01,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 38.5,
+    "high": 47.75,
+    "low": 38.25,
+    "close": 47.0,
+    "volume": 195912.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,04,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 51.0,
+    "high": 53.5,
+    "low": 45.0,
+    "close": 49.75,
+    "volume": 346020.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 49.25,
+    "high": 52.5,
+    "low": 46.5,
+    "close": 47.25,
+    "volume": 215336.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 47.75,
+    "high": 54.25,
+    "low": 47.5,
+    "close": 49.5,
+    "volume": 196196.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 47.25,
+    "high": 47.625,
+    "low": 44.0,
+    "close": 44.5,
+    "volume": 124776.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 45.0,
+    "high": 45.75,
+    "low": 42.5,
+    "close": 44.25,
+    "volume": 130620.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 41.75,
+    "high": 41.75,
+    "low": 37.75,
+    "close": 39.5,
+    "volume": 104788.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,12,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 40.75,
+    "high": 44.5,
+    "low": 40.0,
+    "close": 43.0,
+    "volume": 81640.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 42.75,
+    "high": 46.25,
+    "low": 41.0,
+    "close": 45.5,
+    "volume": 132480.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 46.25,
+    "high": 48.0,
+    "low": 42.25,
+    "close": 43.75,
+    "volume": 124272.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 44.5,
+    "high": 47.25,
+    "low": 43.125,
+    "close": 47.25,
+    "volume": 171592.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 44.0,
+    "high": 51.9500007629,
+    "low": 43.75,
+    "close": 48.75,
+    "volume": 174636.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,19,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 49.0,
+    "high": 51.75,
+    "low": 48.25,
+    "close": 49.75,
+    "volume": 119464.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 52.75,
+    "high": 54.5,
+    "low": 45.5,
+    "close": 46.0,
+    "volume": 249564.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 48.0,
+    "high": 49.25,
+    "low": 44.25,
+    "close": 46.0,
+    "volume": 139472.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 46.0,
+    "high": 47.6749992371,
+    "low": 44.9249992371,
+    "close": 46.25,
+    "volume": 136556.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 46.5,
+    "high": 46.75,
+    "low": 44.5,
+    "close": 45.0,
+    "volume": 88004.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 46.75,
+    "high": 62.25,
+    "low": 46.25,
+    "close": 59.0,
+    "volume": 1051844.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 59.0,
+    "high": 59.5,
+    "low": 52.75,
+    "close": 57.25,
+    "volume": 443216.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,29,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 60.75,
+    "high": 68.75,
+    "low": 55.0,
+    "close": 55.75,
+    "volume": 580128.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 58.25,
+    "high": 59.5,
+    "low": 51.625,
+    "close": 53.0,
+    "volume": 293560.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 46.75,
+    "high": 50.9749984741,
+    "low": 46.5,
+    "close": 47.5,
+    "volume": 215140.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,01,04,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 48.0,
+    "high": 48.9249992371,
+    "low": 46.375,
+    "close": 47.5,
+    "volume": 155588.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 46.5,
+    "high": 46.75,
+    "low": 42.75,
+    "close": 46.0,
+    "volume": 169072.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 47.0,
+    "high": 51.75,
+    "low": 45.0,
+    "close": 50.0,
+    "volume": 183888.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 49.5,
+    "high": 51.5,
+    "low": 46.0,
+    "close": 46.25,
+    "volume": 159400.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,01,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 45.25,
+    "high": 48.5,
+    "low": 43.75,
+    "close": 46.0,
+    "volume": 142688.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 49.25,
+    "high": 49.5,
+    "low": 40.75,
+    "close": 41.25,
+    "volume": 308168.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 41.5,
+    "high": 42.25,
+    "low": 39.25,
+    "close": 40.25,
+    "volume": 151644.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 38.75,
+    "high": 39.5,
+    "low": 36.5,
+    "close": 36.5,
+    "volume": 131512.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.5,
+    "high": 36.5,
+    "low": 34.5,
+    "close": 35.25,
+    "volume": 133384.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.25,
+    "high": 37.0,
+    "low": 33.25,
+    "close": 34.0,
+    "volume": 111700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,19,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.25,
+    "high": 35.625,
+    "low": 32.5,
+    "close": 34.75,
+    "volume": 124172.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.25,
+    "high": 37.75,
+    "low": 33.875,
+    "close": 36.0,
+    "volume": 75620.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.25,
+    "high": 36.5,
+    "low": 33.75,
+    "close": 34.25,
+    "volume": 72220.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.75,
+    "high": 35.5,
+    "low": 31.5,
+    "close": 31.75,
+    "volume": 97124.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.25,
+    "high": 32.5,
+    "low": 31.25,
+    "close": 31.5,
+    "volume": 70368.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.5,
+    "high": 36.25,
+    "low": 32.25,
+    "close": 35.0,
+    "volume": 161272.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,29,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.75,
+    "high": 39.0,
+    "low": 34.75,
+    "close": 38.5,
+    "volume": 108696.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 39.25,
+    "high": 39.75,
+    "low": 37.25,
+    "close": 38.0,
+    "volume": 78584.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,31,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 37.0,
+    "high": 37.75,
+    "low": 34.0,
+    "close": 34.25,
+    "volume": 123272.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,01,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.5,
+    "high": 36.25,
+    "low": 34.5,
+    "close": 35.5,
+    "volume": 48484.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.25,
+    "high": 36.125,
+    "low": 34.0,
+    "close": 34.25,
+    "volume": 59580.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 34.0,
+    "high": 34.25,
+    "low": 32.0,
+    "close": 32.25,
+    "volume": 50880.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.5,
+    "high": 36.25,
+    "low": 32.5,
+    "close": 35.75,
+    "volume": 54504.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 35.5,
+    "high": 36.75,
+    "low": 34.75,
+    "close": 36.25,
+    "volume": 55136.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 26.0,
+    "high": 26.25,
+    "low": 19.5249996185,
+    "close": 21.6499996185,
+    "volume": 1154804.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,02,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 23.625,
+    "high": 26.5,
+    "low": 21.6499996185,
+    "close": 26.5,
+    "volume": 481536.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 27.25,
+    "high": 28.0,
+    "low": 24.25,
+    "close": 25.5,
+    "volume": 293068.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 24.25,
+    "high": 25.25,
+    "low": 23.75,
+    "close": 23.875,
+    "volume": 183760.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 25.25,
+    "high": 26.5,
+    "low": 24.5,
+    "close": 25.75,
+    "volume": 121292.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 25.5,
+    "high": 26.75,
+    "low": 23.0750007629,
+    "close": 24.5,
+    "volume": 189900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 24.75,
+    "high": 25.25,
+    "low": 23.7000007629,
+    "close": 24.375,
+    "volume": 97500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 23.8250007629,
+    "high": 24.0,
+    "low": 22.75,
+    "close": 23.2749996185,
+    "volume": 99428.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 23.5,
+    "high": 23.5,
+    "low": 21.625,
+    "close": 21.8250007629,
+    "volume": 86704.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 23.0,
+    "high": 23.625,
+    "low": 21.4500007629,
+    "close": 22.2000007629,
+    "volume": 81108.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 22.1749992371,
+    "high": 23.2250003815,
+    "low": 21.0,
+    "close": 22.0249996185,
+    "volume": 106552.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 22.4500007629,
+    "high": 24.375,
+    "low": 22.0249996185,
+    "close": 23.9500007629,
+    "volume": 133648.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 25.0,
+    "high": 25.25,
+    "low": 23.4500007629,
+    "close": 23.8999996185,
+    "volume": 95864.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 24.8250007629,
+    "high": 26.25,
+    "low": 23.75,
+    "close": 25.5,
+    "volume": 183960.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,29,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 22.5,
+    "high": 22.5,
+    "low": 14.5,
+    "close": 14.5,
+    "volume": 1552920.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,03,01,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 16.7000007629,
+    "high": 16.7000007629,
+    "low": 14.0249996185,
+    "close": 14.5,
+    "volume": 653076.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,04,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.75,
+    "high": 15.75,
+    "low": 14.25,
+    "close": 15.5500001907,
+    "volume": 667928.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.75,
+    "high": 16.0,
+    "low": 14.625,
+    "close": 15.1999998093,
+    "volume": 250680.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.5,
+    "high": 16.5,
+    "low": 15.0,
+    "close": 16.2749996185,
+    "volume": 382712.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 16.5750007629,
+    "high": 16.625,
+    "low": 14.5,
+    "close": 14.9250001907,
+    "volume": 389320.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.1999998093,
+    "high": 15.4250001907,
+    "low": 14.5749998093,
+    "close": 14.8999996185,
+    "volume": 221088.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.25,
+    "high": 15.4750003815,
+    "low": 14.6999998093,
+    "close": 15.0749998093,
+    "volume": 205180.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.25,
+    "high": 15.25,
+    "low": 14.5,
+    "close": 14.5500001907,
+    "volume": 107668.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.625,
+    "high": 15.2749996185,
+    "low": 14.625,
+    "close": 14.9499998093,
+    "volume": 109360.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.5,
+    "high": 14.75,
+    "low": 12.5749998093,
+    "close": 13.375,
+    "volume": 271876.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.0,
+    "high": 14.9250001907,
+    "low": 13.0,
+    "close": 14.5749998093,
+    "volume": 397136.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.8000001907,
+    "high": 14.8000001907,
+    "low": 12.8999996185,
+    "close": 12.8999996185,
+    "volume": 184176.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,19,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.0,
+    "high": 13.2749996185,
+    "low": 12.3500003815,
+    "close": 13.0,
+    "volume": 166580.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.75,
+    "high": 13.75,
+    "low": 12.2749996185,
+    "close": 13.5749998093,
+    "volume": 183624.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.625,
+    "high": 15.75,
+    "low": 13.5749998093,
+    "close": 13.8249998093,
+    "volume": 409540.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.0749998093,
+    "high": 14.0749998093,
+    "low": 12.875,
+    "close": 13.4499998093,
+    "volume": 328408.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.9750003815,
+    "high": 14.9499998093,
+    "low": 12.8000001907,
+    "close": 14.0500001907,
+    "volume": 653632.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.375,
+    "high": 13.4499998093,
+    "low": 11.25,
+    "close": 11.2749996185,
+    "volume": 614872.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.75,
+    "high": 12.25,
+    "low": 10.2749996185,
+    "close": 11.9250001907,
+    "volume": 406436.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.9499998093,
+    "high": 12.2749996185,
+    "low": 11.3500003815,
+    "close": 11.5,
+    "volume": 380980.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,01,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.2749996185,
+    "high": 12.1750001907,
+    "low": 11.0,
+    "close": 11.625,
+    "volume": 248464.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.2250003815,
+    "high": 11.375,
+    "low": 10.5,
+    "close": 10.5,
+    "volume": 218468.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.25,
+    "high": 11.7250003815,
+    "low": 10.1999998093,
+    "close": 11.625,
+    "volume": 189744.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,04,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.75,
+    "high": 12.25,
+    "low": 11.25,
+    "close": 11.5,
+    "volume": 144856.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.5500001907,
+    "high": 11.5500001907,
+    "low": 10.8000001907,
+    "close": 11.1750001907,
+    "volume": 104564.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.6999998093,
+    "high": 12.375,
+    "low": 11.0500001907,
+    "close": 12.2749996185,
+    "volume": 166912.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.1999998093,
+    "high": 13.5,
+    "low": 12.0749998093,
+    "close": 13.0,
+    "volume": 147744.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.5,
+    "high": 13.8500003815,
+    "low": 12.5,
+    "close": 13.75,
+    "volume": 119072.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.0,
+    "high": 14.0500001907,
+    "low": 12.5249996185,
+    "close": 13.5749998093,
+    "volume": 151776.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.6999998093,
+    "high": 13.6999998093,
+    "low": 11.4750003815,
+    "close": 12.3000001907,
+    "volume": 172056.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.0500001907,
+    "high": 12.1000003815,
+    "low": 10.6499996185,
+    "close": 11.0,
+    "volume": 126696.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.1750001907,
+    "high": 10.8500003815,
+    "low": 10.0249996185,
+    "close": 10.3249998093,
+    "volume": 141976.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.5249996185,
+    "high": 10.7749996185,
+    "low": 9.875,
+    "close": 10.0,
+    "volume": 108108.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.1000003815,
+    "high": 10.75,
+    "low": 9.875,
+    "close": 10.5,
+    "volume": 102372.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,19,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.375,
+    "high": 10.5249996185,
+    "low": 9.8000001907,
+    "close": 9.9499998093,
+    "volume": 101272.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.75,
+    "high": 10.75,
+    "low": 9.75,
+    "close": 10.25,
+    "volume": 139444.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.0749998093,
+    "high": 10.1000003815,
+    "low": 9.4250001907,
+    "close": 10.0249996185,
+    "volume": 168640.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.2749996185,
+    "high": 9.4499998093,
+    "low": 8.2749996185,
+    "close": 9.0,
+    "volume": 236460.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.0749998093,
+    "high": 9.25,
+    "low": 8.2749996185,
+    "close": 9.2250003815,
+    "volume": 113732.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.4250001907,
+    "high": 10.1750001907,
+    "low": 8.8999996185,
+    "close": 10.0,
+    "volume": 98804.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,29,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.3000001907,
+    "high": 10.7899999619,
+    "low": 9.0399999619,
+    "close": 9.9600000381,
+    "volume": 242900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.6000003815,
+    "high": 9.779999733,
+    "low": 6.5100002289,
+    "close": 6.7100000381,
+    "volume": 1337900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,01,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 6.5100002289,
+    "high": 6.7899999619,
+    "low": 5.5729999542,
+    "close": 6.3099999428,
+    "volume": 998400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 6.3600001335,
+    "high": 6.5399999619,
+    "low": 5.9000000954,
+    "close": 6.2800002098,
+    "volume": 331600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 6.4299998283,
+    "high": 6.75,
+    "low": 6.1240000725,
+    "close": 6.5,
+    "volume": 332900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 6.5999999046,
+    "high": 7.25,
+    "low": 6.4899997711,
+    "close": 6.5999999046,
+    "volume": 384900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 6.6599998474,
+    "high": 7.4499998093,
+    "low": 6.5999999046,
+    "close": 7.2899999619,
+    "volume": 278700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 7.0,
+    "high": 9.0,
+    "low": 7.0,
+    "close": 8.7899999619,
+    "volume": 644600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 8.7899999619,
+    "high": 11.4200000763,
+    "low": 8.7899999619,
+    "close": 10.25,
+    "volume": 1380100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.2299995422,
+    "high": 10.3500003815,
+    "low": 8.8500003815,
+    "close": 9.8400001526,
+    "volume": 604400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.3000001907,
+    "high": 10.8999996185,
+    "low": 9.8500003815,
+    "close": 9.9799995422,
+    "volume": 254500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.75,
+    "high": 12.9200000763,
+    "low": 9.75,
+    "close": 11.1499996185,
+    "volume": 860800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.25,
+    "high": 12.5,
+    "low": 10.5699996948,
+    "close": 12.1800003052,
+    "volume": 478500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.220000267,
+    "high": 11.4899997711,
+    "low": 9.7539997101,
+    "close": 10.4899997711,
+    "volume": 393600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.3999996185,
+    "high": 11.6759996414,
+    "low": 10.2399997711,
+    "close": 11.4600000381,
+    "volume": 295500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.470000267,
+    "high": 17.0699996948,
+    "low": 11.4200000763,
+    "close": 16.6499996185,
+    "volume": 972400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.5699996948,
+    "high": 20.0,
+    "low": 15.3129997253,
+    "close": 16.1800003052,
+    "volume": 1522000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 16.3500003815,
+    "high": 17.8999996185,
+    "low": 14.8400001526,
+    "close": 15.3000001907,
+    "volume": 490200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.3999996185,
+    "high": 16.5300006866,
+    "low": 14.8100004196,
+    "close": 15.6199998856,
+    "volume": 229600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 16.5,
+    "high": 18.1490001678,
+    "low": 14.8500003815,
+    "close": 17.3899993896,
+    "volume": 482300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 16.9400005341,
+    "high": 16.9850006104,
+    "low": 15.6700000763,
+    "close": 16.0499992371,
+    "volume": 247900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,29,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 16.0900001526,
+    "high": 17.0270004272,
+    "low": 15.779999733,
+    "close": 16.0799999237,
+    "volume": 155000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 16.1800003052,
+    "high": 17.9150009155,
+    "low": 15.5,
+    "close": 16.5799999237,
+    "volume": 256900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,31,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 17.0499992371,
+    "high": 18.5300006866,
+    "low": 16.7999992371,
+    "close": 17.6000003815,
+    "volume": 345900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 17.75,
+    "high": 18.8799991608,
+    "low": 17.0300006866,
+    "close": 17.0300006866,
+    "volume": 308500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,04,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 17.0599994659,
+    "high": 17.0599994659,
+    "low": 16.0599994659,
+    "close": 16.4200000763,
+    "volume": 157300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 16.9799995422,
+    "high": 19.5300006866,
+    "low": 16.7000007629,
+    "close": 19.2700004578,
+    "volume": 353300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 19.4500007629,
+    "high": 21.2399997711,
+    "low": 18.8600006104,
+    "close": 19.5,
+    "volume": 331600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 19.0599994659,
+    "high": 24.7380008698,
+    "low": 17.5200004578,
+    "close": 19.0400009155,
+    "volume": 721200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 18.7600002289,
+    "high": 20.9500007629,
+    "low": 18.5100002289,
+    "close": 19.3500003815,
+    "volume": 240200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 18.9599990845,
+    "high": 20.4699993134,
+    "low": 17.7999992371,
+    "close": 20.2900009155,
+    "volume": 222000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 20.5799999237,
+    "high": 21.6900005341,
+    "low": 19.6299991608,
+    "close": 20.0,
+    "volume": 284300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 19.9300003052,
+    "high": 20.8400001526,
+    "low": 17.8199996948,
+    "close": 18.75,
+    "volume": 306100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 18.9099998474,
+    "high": 19.9500007629,
+    "low": 18.5200004578,
+    "close": 18.6599998474,
+    "volume": 225900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 18.5200004578,
+    "high": 18.5599994659,
+    "low": 16.5200004578,
+    "close": 17.2700004578,
+    "volume": 231000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 17.0100002289,
+    "high": 17.4740009308,
+    "low": 16.1049995422,
+    "close": 16.5,
+    "volume": 199800.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,06,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 16.5,
+    "high": 17.4519996643,
+    "low": 15.5200004578,
+    "close": 16.7600002289,
+    "volume": 237000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 16.5200004578,
+    "high": 17.3999996185,
+    "low": 15.0,
+    "close": 15.0,
+    "volume": 495200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.1199998856,
+    "high": 17.25,
+    "low": 14.8050003052,
+    "close": 16.6000003815,
+    "volume": 249500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 16.3299999237,
+    "high": 17.8700008392,
+    "low": 16.1340007782,
+    "close": 17.3700008392,
+    "volume": 219500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 16.9099998474,
+    "high": 20.5100002289,
+    "low": 16.8099994659,
+    "close": 18.7099990845,
+    "volume": 442500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 18.7299995422,
+    "high": 20.9230003357,
+    "low": 18.7299995422,
+    "close": 20.7099990845,
+    "volume": 460600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 21.0,
+    "high": 21.0,
+    "low": 18.9200000763,
+    "close": 18.9200000763,
+    "volume": 544700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,01,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 19.2299995422,
+    "high": 19.8899993896,
+    "low": 18.75,
+    "close": 18.8700008392,
+    "volume": 140600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 19.0,
+    "high": 19.0100002289,
+    "low": 17.6420001984,
+    "close": 18.0300006866,
+    "volume": 193300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 17.8600006104,
+    "high": 18.1970005035,
+    "low": 17.3899993896,
+    "close": 17.7900009155,
+    "volume": 69000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 16.9699993134,
+    "high": 18.1700000763,
+    "low": 16.7999992371,
+    "close": 17.7600002289,
+    "volume": 156000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 17.6700000763,
+    "high": 18.4099998474,
+    "low": 17.25,
+    "close": 17.7999992371,
+    "volume": 131200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 17.7099990845,
+    "high": 17.8500003815,
+    "low": 16.3700008392,
+    "close": 16.5699996948,
+    "volume": 196700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 16.5300006866,
+    "high": 17.4699993134,
+    "low": 16.3540000916,
+    "close": 17.1299991608,
+    "volume": 113800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 17.6000003815,
+    "high": 18.9599990845,
+    "low": 17.5100002289,
+    "close": 18.6399993896,
+    "volume": 164400.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,07,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 18.5699996948,
+    "high": 19.3899993896,
+    "low": 17.9899997711,
+    "close": 18.9200000763,
+    "volume": 101900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 19.3600006104,
+    "high": 21.9200000763,
+    "low": 18.9200000763,
+    "close": 21.7900009155,
+    "volume": 292400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 21.5,
+    "high": 23.5900001526,
+    "low": 21.3700008392,
+    "close": 22.7999992371,
+    "volume": 297300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 21.6499996185,
+    "high": 23.0,
+    "low": 20.2000007629,
+    "close": 20.8999996185,
+    "volume": 247900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 20.9099998474,
+    "high": 21.0200004578,
+    "low": 18.7630004883,
+    "close": 19.0900001526,
+    "volume": 170800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,19,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 18.8899993896,
+    "high": 21.0300006866,
+    "low": 18.8470001221,
+    "close": 20.7199993134,
+    "volume": 185300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 21.7900009155,
+    "high": 22.0799999237,
+    "low": 19.0400009155,
+    "close": 20.2000007629,
+    "volume": 289600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 19.5400009155,
+    "high": 20.0499992371,
+    "low": 18.8999996185,
+    "close": 19.0200004578,
+    "volume": 197000.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,07,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 19.3500003815,
+    "high": 19.6800003052,
+    "low": 17.9300003052,
+    "close": 18.2900009155,
+    "volume": 131800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 18.0499992371,
+    "high": 18.7000007629,
+    "low": 17.6060009003,
+    "close": 18.0,
+    "volume": 93400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 18.6499996185,
+    "high": 18.6499996185,
+    "low": 17.5760002136,
+    "close": 18.0799999237,
+    "volume": 104400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,29,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 19.3799991608,
+    "high": 19.3799991608,
+    "low": 16.9500007629,
+    "close": 17.3099994659,
+    "volume": 180500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 17.4500007629,
+    "high": 17.4899997711,
+    "low": 16.5200004578,
+    "close": 16.6299991608,
+    "volume": 84000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,31,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 16.8700008392,
+    "high": 17.9699993134,
+    "low": 16.8700008392,
+    "close": 17.2000007629,
+    "volume": 102100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,01,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 17.2000007629,
+    "high": 17.2000007629,
+    "low": 15.7600002289,
+    "close": 15.9200000763,
+    "volume": 163900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.1599998474,
+    "high": 15.654999733,
+    "low": 14.6300001144,
+    "close": 15.3900003433,
+    "volume": 125100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.1800003052,
+    "high": 14.9650001526,
+    "low": 12.8400001526,
+    "close": 14.1599998474,
+    "volume": 138200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.5,
+    "high": 15.3900003433,
+    "low": 14.1300001144,
+    "close": 14.8500003815,
+    "volume": 60900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.3000001907,
+    "high": 15.3299999237,
+    "low": 13.6300001144,
+    "close": 13.7100000381,
+    "volume": 113600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.3000001907,
+    "high": 15.6899995804,
+    "low": 14.3000001907,
+    "close": 15.5100002289,
+    "volume": 92100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.7700004578,
+    "high": 16.0499992371,
+    "low": 15.154999733,
+    "close": 15.8999996185,
+    "volume": 102000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.6700000763,
+    "high": 15.8699998856,
+    "low": 14.8000001907,
+    "close": 15.2100000381,
+    "volume": 68100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.1599998474,
+    "high": 15.8000001907,
+    "low": 15.0,
+    "close": 15.279999733,
+    "volume": 74800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.279999733,
+    "high": 15.5100002289,
+    "low": 11.7299995422,
+    "close": 12.1300001144,
+    "volume": 340300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.4099998474,
+    "high": 14.2399997711,
+    "low": 12.4099998474,
+    "close": 13.6300001144,
+    "volume": 193600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.6300001144,
+    "high": 14.3400001526,
+    "low": 13.4099998474,
+    "close": 13.7899999619,
+    "volume": 96100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,19,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.779999733,
+    "high": 14.4390001297,
+    "low": 13.470000267,
+    "close": 13.7899999619,
+    "volume": 78400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.1000003815,
+    "high": 14.1599998474,
+    "low": 13.3000001907,
+    "close": 13.4600000381,
+    "volume": 66100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.5200004578,
+    "high": 14.720000267,
+    "low": 13.5200004578,
+    "close": 14.4899997711,
+    "volume": 68300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.5799999237,
+    "high": 14.8079996109,
+    "low": 13.9200000763,
+    "close": 13.9499998093,
+    "volume": 46200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.0600004196,
+    "high": 15.8310003281,
+    "low": 14.0500001907,
+    "close": 15.1700000763,
+    "volume": 119300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.8100004196,
+    "high": 15.9300003052,
+    "low": 14.8900003433,
+    "close": 14.9099998474,
+    "volume": 71600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.8199996948,
+    "high": 14.8500003815,
+    "low": 14.1400003433,
+    "close": 14.4600000381,
+    "volume": 49500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.1700000763,
+    "high": 14.5500001907,
+    "low": 13.279999733,
+    "close": 13.3699998856,
+    "volume": 79500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,29,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.5799999237,
+    "high": 14.4499998093,
+    "low": 13.5799999237,
+    "close": 13.720000267,
+    "volume": 57700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.1300001144,
+    "high": 14.2950000763,
+    "low": 13.720000267,
+    "close": 14.1599998474,
+    "volume": 47000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.9099998474,
+    "high": 13.9300003052,
+    "low": 12.9799995422,
+    "close": 13.0399999619,
+    "volume": 58300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,04,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.8599996567,
+    "high": 13.1169996262,
+    "low": 12.1300001144,
+    "close": 12.4300003052,
+    "volume": 88100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.7100000381,
+    "high": 12.8000001907,
+    "low": 12.1899995804,
+    "close": 12.2899999619,
+    "volume": 57800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.2700004578,
+    "high": 12.3400001526,
+    "low": 11.25,
+    "close": 11.4200000763,
+    "volume": 103300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.5,
+    "high": 12.0799999237,
+    "low": 11.4750003815,
+    "close": 11.9200000763,
+    "volume": 53700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.8900003433,
+    "high": 11.9600000381,
+    "low": 11.2299995422,
+    "close": 11.6499996185,
+    "volume": 90000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.6199998856,
+    "high": 11.6499996185,
+    "low": 10.4300003052,
+    "close": 10.9499998093,
+    "volume": 174300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.8699998856,
+    "high": 11.7899999619,
+    "low": 10.6219997406,
+    "close": 11.3199996948,
+    "volume": 82000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.1300001144,
+    "high": 11.8500003815,
+    "low": 11.1300001144,
+    "close": 11.1400003433,
+    "volume": 104500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.1999998093,
+    "high": 11.1999998093,
+    "low": 10.6499996185,
+    "close": 10.6800003052,
+    "volume": 49600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.0,
+    "high": 11.5500001907,
+    "low": 10.8350000381,
+    "close": 11.3999996185,
+    "volume": 67000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.5699996948,
+    "high": 11.8400001526,
+    "low": 10.970000267,
+    "close": 10.970000267,
+    "volume": 70900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,19,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.3599996567,
+    "high": 11.5,
+    "low": 10.9600000381,
+    "close": 11.1199998856,
+    "volume": 81000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.1800003052,
+    "high": 11.2299995422,
+    "low": 10.2899999619,
+    "close": 10.2899999619,
+    "volume": 153200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.3299999237,
+    "high": 10.5,
+    "low": 9.6099996567,
+    "close": 9.6499996185,
+    "volume": 146000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.6599998474,
+    "high": 9.9799995422,
+    "low": 9.029999733,
+    "close": 9.3500003815,
+    "volume": 191900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.4499998093,
+    "high": 9.5579996109,
+    "low": 8.9600000381,
+    "close": 9.220000267,
+    "volume": 127200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.3500003815,
+    "high": 10.25,
+    "low": 9.2770004272,
+    "close": 10.0600004196,
+    "volume": 114900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.2399997711,
+    "high": 10.5500001907,
+    "low": 9.8599996567,
+    "close": 9.8599996567,
+    "volume": 131500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.8699998856,
+    "high": 10.0399999619,
+    "low": 9.5600004196,
+    "close": 9.5699996948,
+    "volume": 65400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,01,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.529999733,
+    "high": 9.6099996567,
+    "low": 8.8800001144,
+    "close": 9.0,
+    "volume": 99800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.0100002289,
+    "high": 9.3199996948,
+    "low": 8.8999996185,
+    "close": 9.0699996948,
+    "volume": 91300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.0,
+    "high": 9.5699996948,
+    "low": 8.8999996185,
+    "close": 9.4799995422,
+    "volume": 64900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,04,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.5900001526,
+    "high": 10.3009996414,
+    "low": 9.5900001526,
+    "close": 9.8599996567,
+    "volume": 93400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.6099996567,
+    "high": 10.6099996567,
+    "low": 9.4300003052,
+    "close": 9.8100004196,
+    "volume": 154300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.7600002289,
+    "high": 10.9899997711,
+    "low": 9.7600002289,
+    "close": 9.9799995422,
+    "volume": 140400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.1199998856,
+    "high": 10.3500003815,
+    "low": 9.6999998093,
+    "close": 9.8400001526,
+    "volume": 88800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.7100000381,
+    "high": 10.1099996567,
+    "low": 9.4530000687,
+    "close": 9.8199996948,
+    "volume": 57900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.8199996948,
+    "high": 10.970000267,
+    "low": 9.8199996948,
+    "close": 10.5100002289,
+    "volume": 108800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.7899999619,
+    "high": 11.2399997711,
+    "low": 10.4639997482,
+    "close": 11.1700000763,
+    "volume": 112700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.2600002289,
+    "high": 11.5399999619,
+    "low": 10.8299999237,
+    "close": 11.0100002289,
+    "volume": 94900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.3500003815,
+    "high": 11.8000001907,
+    "low": 11.0,
+    "close": 11.7299995422,
+    "volume": 94000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.6099996567,
+    "high": 11.7899999619,
+    "low": 11.2419996262,
+    "close": 11.3599996567,
+    "volume": 59400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.3500003815,
+    "high": 11.6899995804,
+    "low": 10.8100004196,
+    "close": 11.2899999619,
+    "volume": 131000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.3100004196,
+    "high": 11.7290000916,
+    "low": 11.0209999084,
+    "close": 11.470000267,
+    "volume": 94100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.3100004196,
+    "high": 12.0,
+    "low": 11.3100004196,
+    "close": 11.75,
+    "volume": 85700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.5900001526,
+    "high": 11.5900001526,
+    "low": 10.4899997711,
+    "close": 10.7299995422,
+    "volume": 91300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.7700004578,
+    "high": 11.279999733,
+    "low": 10.7700004578,
+    "close": 11.029999733,
+    "volume": 36800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.1499996185,
+    "high": 11.3400001526,
+    "low": 10.7609996796,
+    "close": 10.7700004578,
+    "volume": 49900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.1000003815,
+    "high": 12.0900001526,
+    "low": 11.1000003815,
+    "close": 11.6800003052,
+    "volume": 106800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,29,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.720000267,
+    "high": 12.4469995499,
+    "low": 11.3000001907,
+    "close": 11.3199996948,
+    "volume": 112300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.0699996948,
+    "high": 11.5200004578,
+    "low": 10.8199996948,
+    "close": 11.0799999237,
+    "volume": 60400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,31,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.9200000763,
+    "high": 10.9930000305,
+    "low": 9.5,
+    "close": 9.529999733,
+    "volume": 139000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,01,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.6099996567,
+    "high": 10.0200004578,
+    "low": 9.3950004578,
+    "close": 9.3999996185,
+    "volume": 87300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,04,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.3900003433,
+    "high": 9.6000003815,
+    "low": 8.9099998474,
+    "close": 8.9600000381,
+    "volume": 76900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.0100002289,
+    "high": 9.3999996185,
+    "low": 9.0100002289,
+    "close": 9.2700004578,
+    "volume": 47000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.1999998093,
+    "high": 11.1700000763,
+    "low": 9.9200000763,
+    "close": 10.5500001907,
+    "volume": 228000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.4200000763,
+    "high": 10.5399999619,
+    "low": 10.1000003815,
+    "close": 10.1400003433,
+    "volume": 109100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.5,
+    "high": 10.5,
+    "low": 9.8199996948,
+    "close": 9.8199996948,
+    "volume": 233700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.6499996185,
+    "high": 12.9899997711,
+    "low": 10.5100002289,
+    "close": 12.4499998093,
+    "volume": 711100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.3000001907,
+    "high": 12.9300003052,
+    "low": 11.7880001068,
+    "close": 12.3199996948,
+    "volume": 357100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.5100002289,
+    "high": 13.6689996719,
+    "low": 11.4200000763,
+    "close": 11.529999733,
+    "volume": 280400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.779999733,
+    "high": 13.0500001907,
+    "low": 11.2700004578,
+    "close": 12.1099996567,
+    "volume": 354600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.2299995422,
+    "high": 12.5900001526,
+    "low": 10.8000001907,
+    "close": 11.3199996948,
+    "volume": 273100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.3100004196,
+    "high": 29.7099990845,
+    "low": 10.8719997406,
+    "close": 29.7099990845,
+    "volume": 9712000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,19,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.7700004578,
+    "high": 37.2099990845,
+    "low": 28.2000007629,
+    "close": 29.5,
+    "volume": 15956500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 31.5,
+    "high": 35.25,
+    "low": 29.1399993896,
+    "close": 31.6100006104,
+    "volume": 4696400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.4900016785,
+    "high": 33.6800003052,
+    "low": 29.5440006256,
+    "close": 31.1000003815,
+    "volume": 2591200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 30.8999996185,
+    "high": 31.172000885,
+    "low": 28.2600002289,
+    "close": 29.3099994659,
+    "volume": 1588000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 30.0,
+    "high": 30.1049995422,
+    "low": 26.3299999237,
+    "close": 28.0100002289,
+    "volume": 1011200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 26.5699996948,
+    "high": 27.5,
+    "low": 25.3999996185,
+    "close": 25.8600006104,
+    "volume": 797300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 26.3600006104,
+    "high": 27.0,
+    "low": 25.1100006104,
+    "close": 26.5300006866,
+    "volume": 663200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,29,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 27.0,
+    "high": 28.6399993896,
+    "low": 25.7199993134,
+    "close": 27.8500003815,
+    "volume": 618700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 27.7800006866,
+    "high": 29.3400001526,
+    "low": 24.6000003815,
+    "close": 25.3700008392,
+    "volume": 1109600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 24.6100006104,
+    "high": 25.3840007782,
+    "low": 23.5200004578,
+    "close": 23.9599990845,
+    "volume": 518400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,04,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 23.6599998474,
+    "high": 25.3700008392,
+    "low": 23.0,
+    "close": 23.7800006866,
+    "volume": 669600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 25.5300006866,
+    "high": 25.7000007629,
+    "low": 23.6100006104,
+    "close": 23.8999996185,
+    "volume": 736400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 23.7000007629,
+    "high": 26.4699993134,
+    "low": 23.7000007629,
+    "close": 25.6700000763,
+    "volume": 789600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 26.1800003052,
+    "high": 26.5499992371,
+    "low": 24.2099990845,
+    "close": 25.0499992371,
+    "volume": 375900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 24.5,
+    "high": 25.6800003052,
+    "low": 24.3400001526,
+    "close": 25.1100006104,
+    "volume": 321000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 25.0,
+    "high": 25.9400005341,
+    "low": 23.6219997406,
+    "close": 25.3999996185,
+    "volume": 426500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 25.3999996185,
+    "high": 29.2900009155,
+    "low": 25.2600002289,
+    "close": 27.2099990845,
+    "volume": 1134600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 28.1000003815,
+    "high": 29.6000003815,
+    "low": 27.2999992371,
+    "close": 28.8199996948,
+    "volume": 786400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 29.2000007629,
+    "high": 33.9679985046,
+    "low": 28.0,
+    "close": 32.4399986267,
+    "volume": 1284400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 32.5800018311,
+    "high": 32.6500015259,
+    "low": 30.0109996796,
+    "close": 30.6000003815,
+    "volume": 672500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 30.3899993896,
+    "high": 30.7099990845,
+    "low": 26.1509990692,
+    "close": 26.5499992371,
+    "volume": 787100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,19,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 28.0,
+    "high": 29.5769996643,
+    "low": 26.5219993591,
+    "close": 26.6599998474,
+    "volume": 539500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 25.6000003815,
+    "high": 27.9099998474,
+    "low": 25.0,
+    "close": 27.5599994659,
+    "volume": 651200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 26.9300003052,
+    "high": 27.7900009155,
+    "low": 26.0510005951,
+    "close": 27.7900009155,
+    "volume": 292400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 28.4300003052,
+    "high": 29.6879997253,
+    "low": 27.9300003052,
+    "close": 29.3999996185,
+    "volume": 356400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 29.2299995422,
+    "high": 30.6100006104,
+    "low": 28.0200004578,
+    "close": 30.4099998474,
+    "volume": 451700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 30.1499996185,
+    "high": 30.25,
+    "low": 26.4549999237,
+    "close": 27.4899997711,
+    "volume": 516200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 26.4500007629,
+    "high": 26.8700008392,
+    "low": 24.8099994659,
+    "close": 25.9099998474,
+    "volume": 334700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,31,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 27.3700008392,
+    "high": 27.3700008392,
+    "low": 24.0799999237,
+    "close": 24.7700004578,
+    "volume": 419700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 25.2600002289,
+    "high": 26.4799995422,
+    "low": 24.4340000153,
+    "close": 25.4400005341,
+    "volume": 261200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 25.9799995422,
+    "high": 28.1399993896,
+    "low": 25.5100002289,
+    "close": 27.1100006104,
+    "volume": 450300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 27.4799995422,
+    "high": 28.5499992371,
+    "low": 26.6599998474,
+    "close": 28.2299995422,
+    "volume": 463000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 27.7999992371,
+    "high": 28.5189990997,
+    "low": 26.2000007629,
+    "close": 26.6599998474,
+    "volume": 271500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 26.4699993134,
+    "high": 26.5400009155,
+    "low": 24.908000946,
+    "close": 25.4099998474,
+    "volume": 205200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 25.1000003815,
+    "high": 25.2549991608,
+    "low": 24.2600002289,
+    "close": 24.9799995422,
+    "volume": 162600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 24.0699996948,
+    "high": 24.2999992371,
+    "low": 21.8400001526,
+    "close": 23.0599994659,
+    "volume": 372100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 23.8099994659,
+    "high": 24.2150001526,
+    "low": 22.5,
+    "close": 23.3999996185,
+    "volume": 237300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 24.5,
+    "high": 24.8700008392,
+    "low": 23.6599998474,
+    "close": 24.1700000763,
+    "volume": 198000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 24.3999996185,
+    "high": 26.75,
+    "low": 23.5200004578,
+    "close": 26.1100006104,
+    "volume": 381100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 27.1100006104,
+    "high": 29.3400001526,
+    "low": 26.7000007629,
+    "close": 28.8600006104,
+    "volume": 750500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 28.8500003815,
+    "high": 29.3700008392,
+    "low": 26.25,
+    "close": 28.8400001526,
+    "volume": 527100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 29.2000007629,
+    "high": 30.5,
+    "low": 28.5100002289,
+    "close": 29.1599998474,
+    "volume": 403100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 28.1200008392,
+    "high": 31.75,
+    "low": 28.0100002289,
+    "close": 31.4200000763,
+    "volume": 484700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 31.75,
+    "high": 31.75,
+    "low": 28.8799991608,
+    "close": 29.4400005341,
+    "volume": 557900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 28.0599994659,
+    "high": 28.2000007629,
+    "low": 24.3500003815,
+    "close": 25.7700004578,
+    "volume": 459600.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,01,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 26.3299999237,
+    "high": 27.0,
+    "low": 25.0300006866,
+    "close": 26.3600006104,
+    "volume": 239000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,29,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 23.8899993896,
+    "high": 23.8899993896,
+    "low": 18.1700000763,
+    "close": 18.8999996185,
+    "volume": 1887000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 19.25,
+    "high": 19.5900001526,
+    "low": 18.0,
+    "close": 18.25,
+    "volume": 694800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,31,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 18.0799999237,
+    "high": 19.7900009155,
+    "low": 17.5400009155,
+    "close": 17.5599994659,
+    "volume": 723100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 16.2000007629,
+    "high": 16.6140003204,
+    "low": 14.9200000763,
+    "close": 16.1100006104,
+    "volume": 718600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,04,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.9399995804,
+    "high": 16.3299999237,
+    "low": 15.1899995804,
+    "close": 15.3000001907,
+    "volume": 428600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.0699996948,
+    "high": 15.3950004578,
+    "low": 14.279999733,
+    "close": 14.3500003815,
+    "volume": 414800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.5500001907,
+    "high": 15.279999733,
+    "low": 13.9899997711,
+    "close": 14.1999998093,
+    "volume": 391200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.6099996567,
+    "high": 15.7119998932,
+    "low": 14.5100002289,
+    "close": 14.7100000381,
+    "volume": 334400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.8800001144,
+    "high": 15.4200000763,
+    "low": 14.5,
+    "close": 14.5500001907,
+    "volume": 230100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.5500001907,
+    "high": 14.5500001907,
+    "low": 13.75,
+    "close": 13.8999996185,
+    "volume": 210800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.6300001144,
+    "high": 14.470000267,
+    "low": 13.4300003052,
+    "close": 14.3000001907,
+    "volume": 178300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.4600000381,
+    "high": 15.4750003815,
+    "low": 14.2100000381,
+    "close": 14.8400001526,
+    "volume": 381800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.9499998093,
+    "high": 15.295999527,
+    "low": 14.6499996185,
+    "close": 14.8000001907,
+    "volume": 264100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.0,
+    "high": 15.5900001526,
+    "low": 14.7600002289,
+    "close": 15.3100004196,
+    "volume": 284400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,19,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.3000001907,
+    "high": 15.779999733,
+    "low": 15.0,
+    "close": 15.2899999619,
+    "volume": 170000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.4099998474,
+    "high": 15.5900001526,
+    "low": 14.6300001144,
+    "close": 14.9499998093,
+    "volume": 152300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.1999998093,
+    "high": 15.970000267,
+    "low": 14.1599998474,
+    "close": 14.3199996948,
+    "volume": 231200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.1000003815,
+    "high": 14.1199998856,
+    "low": 12.9650001526,
+    "close": 13.0699996948,
+    "volume": 266500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.8100004196,
+    "high": 12.8950004578,
+    "low": 11.8299999237,
+    "close": 12.25,
+    "volume": 184300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.4499998093,
+    "high": 12.3699998856,
+    "low": 11.3050003052,
+    "close": 11.9399995804,
+    "volume": 327700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.0799999237,
+    "high": 12.5749998093,
+    "low": 11.5200004578,
+    "close": 11.6000003815,
+    "volume": 115000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.3999996185,
+    "high": 12.3000001907,
+    "low": 11.3059997559,
+    "close": 11.9399995804,
+    "volume": 121300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.2399997711,
+    "high": 14.8489999771,
+    "low": 13.1850004196,
+    "close": 13.5,
+    "volume": 649100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,04,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.8000001907,
+    "high": 13.3999996185,
+    "low": 12.0380001068,
+    "close": 12.8900003433,
+    "volume": 277200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.1199998856,
+    "high": 16.7989997864,
+    "low": 12.6049995422,
+    "close": 15.9499998093,
+    "volume": 2039200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.3999996185,
+    "high": 16.0100002289,
+    "low": 14.3149995804,
+    "close": 14.779999733,
+    "volume": 404500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.3000001907,
+    "high": 14.6400003433,
+    "low": 12.6400003433,
+    "close": 14.1499996185,
+    "volume": 350800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.5500001907,
+    "high": 13.8199996948,
+    "low": 11.0799999237,
+    "close": 11.5699996948,
+    "volume": 388100.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,03,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.4799995422,
+    "high": 11.6800003052,
+    "low": 10.8000001907,
+    "close": 11.1800003052,
+    "volume": 238300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.5,
+    "high": 11.7700004578,
+    "low": 10.6999998093,
+    "close": 11.4399995804,
+    "volume": 272900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.470000267,
+    "high": 11.470000267,
+    "low": 10.9399995804,
+    "close": 11.3599996567,
+    "volume": 108900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.8400001526,
+    "high": 12.236000061,
+    "low": 11.3199996948,
+    "close": 11.9899997711,
+    "volume": 186400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.8800001144,
+    "high": 12.8299999237,
+    "low": 11.7100000381,
+    "close": 12.8299999237,
+    "volume": 1376600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 8.5799999237,
+    "high": 9.4200000763,
+    "low": 7.9600000381,
+    "close": 9.3299999237,
+    "volume": 1977100.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,03,19,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.0100002289,
+    "high": 9.5699996948,
+    "low": 8.4600000381,
+    "close": 9.3100004196,
+    "volume": 636200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.6000003815,
+    "high": 13.1999998093,
+    "low": 9.3420000076,
+    "close": 10.5200004578,
+    "volume": 2425700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.6400003433,
+    "high": 12.3999996185,
+    "low": 10.2910003662,
+    "close": 11.9300003052,
+    "volume": 683500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.1199998856,
+    "high": 14.0830001831,
+    "low": 12.1199998856,
+    "close": 13.8299999237,
+    "volume": 857000.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,03,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.6099996567,
+    "high": 13.6099996567,
+    "low": 11.8859996796,
+    "close": 12.1400003433,
+    "volume": 518100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.3400001526,
+    "high": 12.3850002289,
+    "low": 10.8199996948,
+    "close": 10.9399995804,
+    "volume": 330100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.6800003052,
+    "high": 11.0799999237,
+    "low": 10.4200000763,
+    "close": 10.5500001907,
+    "volume": 127000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.5,
+    "high": 10.529999733,
+    "low": 9.0900001526,
+    "close": 9.1099996567,
+    "volume": 263500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,31,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 8.9200000763,
+    "high": 9.1199998856,
+    "low": 8.5089998245,
+    "close": 8.6700000763,
+    "volume": 345500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,01,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 8.6499996185,
+    "high": 9.5209999084,
+    "low": 8.6499996185,
+    "close": 9.0799999237,
+    "volume": 394300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 8.8000001907,
+    "high": 10.3199996948,
+    "low": 8.8000001907,
+    "close": 10.25,
+    "volume": 426300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.1300001144,
+    "high": 9.6370000839,
+    "low": 8.4499998093,
+    "close": 8.9600000381,
+    "volume": 385100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,04,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 8.1999998093,
+    "high": 8.5600004196,
+    "low": 7.8099999428,
+    "close": 8.1599998474,
+    "volume": 253700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 7.5900001526,
+    "high": 8.5769996643,
+    "low": 7.0399999619,
+    "close": 7.5900001526,
+    "volume": 304000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 8.0900001526,
+    "high": 8.3470001221,
+    "low": 6.8099999428,
+    "close": 7.0,
+    "volume": 238900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 7.1100001335,
+    "high": 9.1040000916,
+    "low": 6.8299999237,
+    "close": 8.6199998856,
+    "volume": 422400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 8.4600000381,
+    "high": 9.0,
+    "low": 8.0220003128,
+    "close": 8.5699996948,
+    "volume": 218700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 8.6000003815,
+    "high": 8.8870000839,
+    "low": 8.1599998474,
+    "close": 8.8100004196,
+    "volume": 195300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.0,
+    "high": 9.1899995804,
+    "low": 8.4200000763,
+    "close": 8.5200004578,
+    "volume": 168700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 8.529999733,
+    "high": 8.8000001907,
+    "low": 8.25,
+    "close": 8.4300003052,
+    "volume": 77900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 8.25,
+    "high": 8.6800003052,
+    "low": 7.9200000763,
+    "close": 8.1300001144,
+    "volume": 171000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 8.1000003815,
+    "high": 8.5900001526,
+    "low": 8.1000003815,
+    "close": 8.5100002289,
+    "volume": 127500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 8.5900001526,
+    "high": 9.25,
+    "low": 8.3999996185,
+    "close": 8.6999998093,
+    "volume": 249000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 8.8699998856,
+    "high": 9.2049999237,
+    "low": 8.6420001984,
+    "close": 8.9300003052,
+    "volume": 201700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.5,
+    "high": 9.6499996185,
+    "low": 9.0100002289,
+    "close": 9.0500001907,
+    "volume": 170900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.1499996185,
+    "high": 10.3489999771,
+    "low": 9.1199998856,
+    "close": 10.0600004196,
+    "volume": 310700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.9600000381,
+    "high": 10.25,
+    "low": 9.8000001907,
+    "close": 9.9499998093,
+    "volume": 193500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.0,
+    "high": 10.0,
+    "low": 9.220000267,
+    "close": 9.5100002289,
+    "volume": 251300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,29,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.6099996567,
+    "high": 9.6450004578,
+    "low": 9.0799999237,
+    "close": 9.529999733,
+    "volume": 194100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.1999998093,
+    "high": 9.3800001144,
+    "low": 8.7069997787,
+    "close": 9.3800001144,
+    "volume": 119100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,01,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.6599998474,
+    "high": 10.5,
+    "low": 9.470000267,
+    "close": 10.4399995804,
+    "volume": 257000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.6700000763,
+    "high": 10.9200000763,
+    "low": 9.6899995804,
+    "close": 9.9799995422,
+    "volume": 345000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.779999733,
+    "high": 9.779999733,
+    "low": 9.2899999619,
+    "close": 9.3800001144,
+    "volume": 119700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.1099996567,
+    "high": 9.2550001144,
+    "low": 8.8319997787,
+    "close": 9.1199998856,
+    "volume": 145000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.3299999237,
+    "high": 9.345000267,
+    "low": 8.7600002289,
+    "close": 8.970000267,
+    "volume": 200100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.4499998093,
+    "high": 10.1000003815,
+    "low": 9.1789999008,
+    "close": 9.75,
+    "volume": 282400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.8000001907,
+    "high": 10.3000001907,
+    "low": 9.5399999619,
+    "close": 10.0500001907,
+    "volume": 286300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.7899999619,
+    "high": 10.9799995422,
+    "low": 9.9200000763,
+    "close": 10.0100002289,
+    "volume": 432000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.6300001144,
+    "high": 15.4899997711,
+    "low": 11.5799999237,
+    "close": 14.75,
+    "volume": 3667600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.7899999619,
+    "high": 14.7899999619,
+    "low": 12.7299995422,
+    "close": 12.9099998474,
+    "volume": 837700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.6199998856,
+    "high": 14.6899995804,
+    "low": 12.2100000381,
+    "close": 12.3999996185,
+    "volume": 739900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.2299995422,
+    "high": 12.8800001144,
+    "low": 11.6400003433,
+    "close": 12.7899999619,
+    "volume": 499300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,19,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.3400001526,
+    "high": 13.779999733,
+    "low": 12.3000001907,
+    "close": 13.1800003052,
+    "volume": 361000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.0100002289,
+    "high": 13.2779998779,
+    "low": 12.5799999237,
+    "close": 12.7899999619,
+    "volume": 178900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.5699996948,
+    "high": 13.1920003891,
+    "low": 12.0100002289,
+    "close": 12.1599998474,
+    "volume": 306800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.5100002289,
+    "high": 12.8579998016,
+    "low": 11.6999998093,
+    "close": 11.8100004196,
+    "volume": 340800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.4200000763,
+    "high": 11.8900003433,
+    "low": 10.6199998856,
+    "close": 10.6599998474,
+    "volume": 528500.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,05,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.279999733,
+    "high": 12.3000001907,
+    "low": 11.279999733,
+    "close": 11.4300003052,
+    "volume": 414100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.5,
+    "high": 11.6899995804,
+    "low": 11.0120000839,
+    "close": 11.0600004196,
+    "volume": 210000.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,05,29,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.3000001907,
+    "high": 11.4600000381,
+    "low": 10.8800001144,
+    "close": 11.3400001526,
+    "volume": 97200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.1700000763,
+    "high": 11.8100004196,
+    "low": 10.7899999619,
+    "close": 11.6400003433,
+    "volume": 204100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.6499996185,
+    "high": 12.1000003815,
+    "low": 11.3699998856,
+    "close": 11.5600004196,
+    "volume": 163800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 11.6300001144,
+    "high": 13.5,
+    "low": 11.4499998093,
+    "close": 13.3400001526,
+    "volume": 497900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,04,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.3000001907,
+    "high": 13.470000267,
+    "low": 12.3999996185,
+    "close": 13.0699996948,
+    "volume": 297400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,05,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.0699996948,
+    "high": 15.4799995422,
+    "low": 12.5,
+    "close": 13.3999996185,
+    "volume": 729800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,06,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.3100004196,
+    "high": 15.5900001526,
+    "low": 13.6300001144,
+    "close": 13.9099998474,
+    "volume": 395500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.8999996185,
+    "high": 15.3350000381,
+    "low": 14.1999998093,
+    "close": 15.1499996185,
+    "volume": 315800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 15.0,
+    "high": 15.1499996185,
+    "low": 13.3100004196,
+    "close": 13.4399995804,
+    "volume": 556500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.6099996567,
+    "high": 13.9399995804,
+    "low": 13.0,
+    "close": 13.1800003052,
+    "volume": 300000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,12,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.8999996185,
+    "high": 13.5,
+    "low": 12.75,
+    "close": 12.9899997711,
+    "volume": 203500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,13,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.7100000381,
+    "high": 12.8500003815,
+    "low": 12.1350002289,
+    "close": 12.3100004196,
+    "volume": 189400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.8500003815,
+    "high": 13.5,
+    "low": 12.779999733,
+    "close": 13.0799999237,
+    "volume": 322800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.529999733,
+    "high": 12.8319997787,
+    "low": 11.9300003052,
+    "close": 12.0900001526,
+    "volume": 241400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.1000003815,
+    "high": 12.8400001526,
+    "low": 11.8000001907,
+    "close": 12.6899995804,
+    "volume": 325000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,20,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.4899997711,
+    "high": 15.3699998856,
+    "low": 12.8079996109,
+    "close": 13.4799995422,
+    "volume": 976600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.2600002289,
+    "high": 13.7700004578,
+    "low": 11.9899997711,
+    "close": 12.2700004578,
+    "volume": 632600.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,06,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 12.9099998474,
+    "high": 13.4799995422,
+    "low": 12.4499998093,
+    "close": 13.1700000763,
+    "volume": 472800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.5100002289,
+    "high": 13.5769996643,
+    "low": 12.6949996948,
+    "close": 12.9300003052,
+    "volume": 218700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,26,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.2700004578,
+    "high": 13.5500001907,
+    "low": 12.5,
+    "close": 13.3299999237,
+    "volume": 336500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,27,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.3999996185,
+    "high": 13.5,
+    "low": 12.4449996948,
+    "close": 12.779999733,
+    "volume": 1338400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.0500001907,
+    "high": 14.6599998474,
+    "low": 13.029999733,
+    "close": 13.9499998093,
+    "volume": 537600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,01,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 13.4899997711,
+    "high": 14.4499998093,
+    "low": 12.7299995422,
+    "close": 14.0699996948,
+    "volume": 265009.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,02,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 14.2399997711,
+    "high": 19.0,
+    "low": 14.3199996948,
+    "close": 18.6299991608,
+    "volume": 2140579.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,03,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 17.5300006866,
+    "high": 19.5499992371,
+    "low": 17.2000007629,
+    "close": 18.1100006104,
+    "volume": 853316.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,07,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 18.2600002289,
+    "high": 18.9993000031,
+    "low": 16.2900009155,
+    "close": 16.9799995422,
+    "volume": 688152.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,08,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 17.8099994659,
+    "high": 19.3150005341,
+    "low": 17.1431999207,
+    "close": 17.5300006866,
+    "volume": 804711.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,09,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 17.9599990845,
+    "high": 20.0,
+    "low": 16.6800003052,
+    "close": 19.9599990845,
+    "volume": 714038.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,10,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 20.2999992371,
+    "high": 21.1200008392,
+    "low": 19.5200004578,
+    "close": 20.8199996948,
+    "volume": 592568.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,11,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 20.9200000763,
+    "high": 21.3099994659,
+    "low": 19.3899002075,
+    "close": 19.4500007629,
+    "volume": 512636.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,14,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 19.7000007629,
+    "high": 20.4899997711,
+    "low": 17.890499115,
+    "close": 18.4599990845,
+    "volume": 508225.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,15,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 18.75,
+    "high": 19.4885997772,
+    "low": 17.5599994659,
+    "close": 17.8099994659,
+    "volume": 497323.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,16,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 18.3400001526,
+    "high": 21.9783992767,
+    "low": 18.4150009155,
+    "close": 21.3899993896,
+    "volume": 1014931.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,17,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 20.9599990845,
+    "high": 24.6200008392,
+    "low": 20.7985992432,
+    "close": 24.1100006104,
+    "volume": 943596.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,18,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 24.4099998474,
+    "high": 25.6800003052,
+    "low": 22.1599998474,
+    "close": 22.7700004578,
+    "volume": 1137008.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,21,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 23.7099990845,
+    "high": 25.6539993286,
+    "low": 23.2800006866,
+    "close": 23.8700008392,
+    "volume": 706747.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,22,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 23.8299999237,
+    "high": 23.8099994659,
+    "low": 21.5020999908,
+    "close": 22.3899993896,
+    "volume": 441655.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,23,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 23.0200004578,
+    "high": 25.2649993896,
+    "low": 23.0,
+    "close": 24.7199993134,
+    "volume": 627083.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,24,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 24.0,
+    "high": 24.1849994659,
+    "low": 20.8299999237,
+    "close": 21.0300006866,
+    "volume": 764652.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,25,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 20.9300003052,
+    "high": 21.0650005341,
+    "low": 17.8799991608,
+    "close": 18.0599994659,
+    "volume": 1019197.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,07,28,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 19.3099994659,
+    "high": 19.2450008392,
+    "low": 16.5799999237,
+    "close": 17.1700000763,
+    "volume": 879884.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,29,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.2100000381,
+    "high": 10.25,
+    "low": 9.8900003433,
+    "close": 10.0,
+    "volume": 7162329.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,30,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 10.1400003433,
+    "high": 10.1400003433,
+    "low": 9.888999939,
+    "close": 9.970000267,
+    "volume": 2472900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,31,00,00,00,000000",
+    "ticker": "BKKT",
+    "open": 9.9799995422,
+    "high": 10.0399999619,
+    "low": 9.7119998932,
+    "close": 9.8999996185,
+    "volume": 1625648.0,
+    "wedge_status": "none"
+  }
+]
