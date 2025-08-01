@@ -1,0 +1,7512 @@
+[
+  {
+    "trade_date": "2022,08,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.779999733,
+    "high": 15.1999998093,
+    "low": 14.6000003815,
+    "close": 14.9600000381,
+    "volume": 10905.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,04,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.1999998093,
+    "high": 15.1999998093,
+    "low": 13.779999733,
+    "close": 14.3999996185,
+    "volume": 19435.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.3999996185,
+    "high": 14.5600004196,
+    "low": 13.6800003052,
+    "close": 14.0,
+    "volume": 13495.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.3400001526,
+    "high": 14.8000001907,
+    "low": 13.1999998093,
+    "close": 13.3999996185,
+    "volume": 17045.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,08,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.1400003433,
+    "high": 13.6000003815,
+    "low": 11.6400003433,
+    "close": 12.5,
+    "volume": 37780.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.6000003815,
+    "high": 14.0,
+    "low": 12.0399999619,
+    "close": 13.1999998093,
+    "volume": 22635.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.0600004196,
+    "high": 13.2600002289,
+    "low": 11.720000267,
+    "close": 12.6000003815,
+    "volume": 32375.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.6199998856,
+    "high": 12.9399995804,
+    "low": 11.8800001144,
+    "close": 12.6999998093,
+    "volume": 20865.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.6400003433,
+    "high": 13.5600004196,
+    "low": 12.6000003815,
+    "close": 13.1999998093,
+    "volume": 34390.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.3999996185,
+    "high": 13.5399999619,
+    "low": 12.8000001907,
+    "close": 13.3400001526,
+    "volume": 16650.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.3999996185,
+    "high": 14.1999998093,
+    "low": 13.0,
+    "close": 14.0,
+    "volume": 22420.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2022,08,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.220000267,
+    "high": 14.220000267,
+    "low": 13.3999996185,
+    "close": 14.1000003815,
+    "volume": 19890.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,19,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.2600002289,
+    "high": 14.6999998093,
+    "low": 13.9799995422,
+    "close": 14.6000003815,
+    "volume": 7990.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.0,
+    "high": 15.5399999619,
+    "low": 14.1999998093,
+    "close": 14.6000003815,
+    "volume": 10620.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.3199996948,
+    "high": 14.6000003815,
+    "low": 14.0,
+    "close": 14.6000003815,
+    "volume": 5375.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.3999996185,
+    "high": 14.6000003815,
+    "low": 13.8000001907,
+    "close": 14.6000003815,
+    "volume": 4625.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.2399997711,
+    "high": 14.6000003815,
+    "low": 13.6000003815,
+    "close": 14.0,
+    "volume": 28065.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.1000003815,
+    "high": 14.6000003815,
+    "low": 14.0,
+    "close": 14.3400001526,
+    "volume": 9605.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,29,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.1000003815,
+    "high": 14.8599996567,
+    "low": 14.1000003815,
+    "close": 14.3999996185,
+    "volume": 17155.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.1999998093,
+    "high": 14.1999998093,
+    "low": 13.6000003815,
+    "close": 13.9200000763,
+    "volume": 22530.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,08,31,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.0799999237,
+    "high": 14.0799999237,
+    "low": 13.0,
+    "close": 13.6000003815,
+    "volume": 7640.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,01,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.8000001907,
+    "high": 14.1999998093,
+    "low": 13.1999998093,
+    "close": 13.6599998474,
+    "volume": 11615.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.6000003815,
+    "high": 14.6999998093,
+    "low": 13.2600002289,
+    "close": 14.1000003815,
+    "volume": 18390.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.5399999619,
+    "high": 14.6000003815,
+    "low": 13.2399997711,
+    "close": 13.5799999237,
+    "volume": 11010.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.9200000763,
+    "high": 13.6000003815,
+    "low": 12.6599998474,
+    "close": 13.3000001907,
+    "volume": 12195.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.3999996185,
+    "high": 14.3599996567,
+    "low": 13.3999996185,
+    "close": 13.7600002289,
+    "volume": 10515.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.0,
+    "high": 14.1999998093,
+    "low": 13.6000003815,
+    "close": 13.9200000763,
+    "volume": 5780.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.1999998093,
+    "high": 14.1999998093,
+    "low": 13.1599998474,
+    "close": 13.6400003433,
+    "volume": 13820.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.4600000381,
+    "high": 14.279999733,
+    "low": 13.3999996185,
+    "close": 14.279999733,
+    "volume": 9905.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.1800003052,
+    "high": 14.9200000763,
+    "low": 14.0,
+    "close": 14.1999998093,
+    "volume": 9260.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.5399999619,
+    "high": 14.8999996185,
+    "low": 14.1999998093,
+    "close": 14.4200000763,
+    "volume": 8200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.6000003815,
+    "high": 16.1200008392,
+    "low": 14.1800003052,
+    "close": 16.1200008392,
+    "volume": 12425.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,19,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.3999996185,
+    "high": 15.6599998474,
+    "low": 14.8199996948,
+    "close": 15.1999998093,
+    "volume": 11325.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.1999998093,
+    "high": 15.8000001907,
+    "low": 14.4600000381,
+    "close": 15.4200000763,
+    "volume": 10125.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.6000003815,
+    "high": 15.8400001526,
+    "low": 15.0200004578,
+    "close": 15.3800001144,
+    "volume": 17590.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.1999998093,
+    "high": 15.3999996185,
+    "low": 14.1999998093,
+    "close": 14.6000003815,
+    "volume": 9865.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.3599996567,
+    "high": 14.5200004578,
+    "low": 13.0,
+    "close": 13.3999996185,
+    "volume": 14305.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.8599996567,
+    "high": 13.2600002289,
+    "low": 12.5399999619,
+    "close": 12.6000003815,
+    "volume": 9235.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.3999996185,
+    "high": 13.0600004196,
+    "low": 12.1999998093,
+    "close": 12.5799999237,
+    "volume": 5440.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.0,
+    "high": 13.6000003815,
+    "low": 12.3999996185,
+    "close": 12.9399995804,
+    "volume": 11560.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,29,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.0,
+    "high": 13.3000001907,
+    "low": 12.6999998093,
+    "close": 13.0,
+    "volume": 6090.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,09,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.8000001907,
+    "high": 13.4600000381,
+    "low": 12.1999998093,
+    "close": 12.5600004196,
+    "volume": 11255.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.3400001526,
+    "high": 14.3400001526,
+    "low": 10.8599996567,
+    "close": 11.0,
+    "volume": 29755.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,04,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.5200004578,
+    "high": 12.8999996185,
+    "low": 11.0,
+    "close": 12.1599998474,
+    "volume": 35025.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.1599998474,
+    "high": 12.6400003433,
+    "low": 12.0,
+    "close": 12.4200000763,
+    "volume": 6480.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.3999996185,
+    "high": 13.5200004578,
+    "low": 12.1999998093,
+    "close": 12.8999996185,
+    "volume": 6450.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.8000001907,
+    "high": 13.0,
+    "low": 12.6000003815,
+    "close": 12.720000267,
+    "volume": 5235.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.0,
+    "high": 12.6000003815,
+    "low": 11.9399995804,
+    "close": 12.2399997711,
+    "volume": 6610.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.1400003433,
+    "high": 12.5,
+    "low": 11.9399995804,
+    "close": 11.9399995804,
+    "volume": 3720.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.0,
+    "high": 12.6000003815,
+    "low": 11.3999996185,
+    "close": 11.7399997711,
+    "volume": 3970.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.1999998093,
+    "high": 12.0799999237,
+    "low": 11.1999998093,
+    "close": 11.8400001526,
+    "volume": 7330.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.8000001907,
+    "high": 11.9399995804,
+    "low": 11.1999998093,
+    "close": 11.1999998093,
+    "volume": 4695.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.3999996185,
+    "high": 12.0,
+    "low": 11.3400001526,
+    "close": 11.8999996185,
+    "volume": 8950.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.0,
+    "high": 12.4399995804,
+    "low": 11.5,
+    "close": 11.5399999619,
+    "volume": 9725.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,19,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.0,
+    "high": 12.1000003815,
+    "low": 11.2399997711,
+    "close": 11.3400001526,
+    "volume": 6030.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.3999996185,
+    "high": 11.9799995422,
+    "low": 11.1400003433,
+    "close": 11.4200000763,
+    "volume": 7540.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.0,
+    "high": 11.9399995804,
+    "low": 11.0,
+    "close": 11.3000001907,
+    "volume": 5315.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.8599996567,
+    "high": 12.0,
+    "low": 11.1999998093,
+    "close": 11.6000003815,
+    "volume": 13225.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.7399997711,
+    "high": 11.8400001526,
+    "low": 11.3999996185,
+    "close": 11.6000003815,
+    "volume": 11815.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.1999998093,
+    "high": 13.1999998093,
+    "low": 11.3000001907,
+    "close": 13.0,
+    "volume": 25170.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.6000003815,
+    "high": 13.6800003052,
+    "low": 13.0,
+    "close": 13.0799999237,
+    "volume": 10135.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.1599998474,
+    "high": 13.5399999619,
+    "low": 12.0799999237,
+    "close": 12.3400001526,
+    "volume": 9980.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,10,31,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.3999996185,
+    "high": 12.779999733,
+    "low": 11.9399995804,
+    "close": 12.3000001907,
+    "volume": 8535.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,01,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.220000267,
+    "high": 12.3999996185,
+    "low": 11.6999998093,
+    "close": 11.9200000763,
+    "volume": 9260.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.6999998093,
+    "high": 12.3800001144,
+    "low": 11.3000001907,
+    "close": 11.6199998856,
+    "volume": 6480.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.5200004578,
+    "high": 12.1199998856,
+    "low": 11.3000001907,
+    "close": 11.4600000381,
+    "volume": 8430.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,04,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.5799999237,
+    "high": 11.8800001144,
+    "low": 11.1999998093,
+    "close": 11.1999998093,
+    "volume": 10050.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.6800003052,
+    "high": 11.7600002289,
+    "low": 11.0,
+    "close": 11.1999998093,
+    "volume": 13600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.3999996185,
+    "high": 11.7600002289,
+    "low": 11.0,
+    "close": 11.0799999237,
+    "volume": 29835.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.1999998093,
+    "high": 11.3999996185,
+    "low": 10.5799999237,
+    "close": 10.6599998474,
+    "volume": 11135.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.8199996948,
+    "high": 11.1999998093,
+    "low": 10.6999998093,
+    "close": 11.1999998093,
+    "volume": 15970.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.8000001907,
+    "high": 11.1599998474,
+    "low": 10.3999996185,
+    "close": 11.0,
+    "volume": 21145.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.0,
+    "high": 11.6999998093,
+    "low": 10.6999998093,
+    "close": 11.6800003052,
+    "volume": 15610.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.6000003815,
+    "high": 12.5,
+    "low": 11.5,
+    "close": 12.5,
+    "volume": 13010.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.3400001526,
+    "high": 12.6000003815,
+    "low": 11.8999996185,
+    "close": 12.3000001907,
+    "volume": 9445.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.3800001144,
+    "high": 12.3999996185,
+    "low": 11.3599996567,
+    "close": 12.279999733,
+    "volume": 8545.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.1999998093,
+    "high": 12.3999996185,
+    "low": 11.8599996567,
+    "close": 12.1800003052,
+    "volume": 5565.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.0,
+    "high": 13.3800001144,
+    "low": 12.0,
+    "close": 13.0600004196,
+    "volume": 24655.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.3999996185,
+    "high": 14.6000003815,
+    "low": 12.8800001144,
+    "close": 14.0600004196,
+    "volume": 13170.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.779999733,
+    "high": 14.6400003433,
+    "low": 13.1999998093,
+    "close": 13.3000001907,
+    "volume": 22275.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.2399997711,
+    "high": 14.0,
+    "low": 12.6800003052,
+    "close": 13.8999996185,
+    "volume": 3805.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.8000001907,
+    "high": 14.8000001907,
+    "low": 13.8000001907,
+    "close": 14.1999998093,
+    "volume": 17725.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,29,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.0200004578,
+    "high": 14.1000003815,
+    "low": 13.1599998474,
+    "close": 13.5399999619,
+    "volume": 16885.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,11,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.5399999619,
+    "high": 13.5399999619,
+    "low": 12.1999998093,
+    "close": 12.8000001907,
+    "volume": 15960.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,01,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.3999996185,
+    "high": 13.3999996185,
+    "low": 12.4200000763,
+    "close": 13.0,
+    "volume": 15355.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.8000001907,
+    "high": 13.1000003815,
+    "low": 11.6999998093,
+    "close": 11.9799995422,
+    "volume": 18715.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2022,12,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.8000001907,
+    "high": 12.4200000763,
+    "low": 11.7399997711,
+    "close": 12.0,
+    "volume": 7570.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.8000001907,
+    "high": 12.0,
+    "low": 11.1999998093,
+    "close": 11.7600002289,
+    "volume": 10575.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.7600002289,
+    "high": 12.0,
+    "low": 10.8599996567,
+    "close": 11.1599998474,
+    "volume": 17675.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.220000267,
+    "high": 11.220000267,
+    "low": 9.1999998093,
+    "close": 9.6599998474,
+    "volume": 41215.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 9.6000003815,
+    "high": 10.1999998093,
+    "low": 9.3000001907,
+    "close": 9.6400003433,
+    "volume": 22315.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 9.6000003815,
+    "high": 11.6000003815,
+    "low": 9.6000003815,
+    "close": 10.5399999619,
+    "volume": 13275.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.6000003815,
+    "high": 11.3999996185,
+    "low": 10.6000003815,
+    "close": 10.779999733,
+    "volume": 14295.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.8000001907,
+    "high": 11.8000001907,
+    "low": 10.6000003815,
+    "close": 10.8400001526,
+    "volume": 13345.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.0,
+    "high": 11.8599996567,
+    "low": 9.8000001907,
+    "close": 10.0,
+    "volume": 23155.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.1199998856,
+    "high": 10.3599996567,
+    "low": 9.720000267,
+    "close": 9.7399997711,
+    "volume": 10965.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,19,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.3800001144,
+    "high": 11.0,
+    "low": 9.6000003815,
+    "close": 9.6400003433,
+    "volume": 8820.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 9.8000001907,
+    "high": 9.9399995804,
+    "low": 9.3000001907,
+    "close": 9.5200004578,
+    "volume": 15675.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 9.3999996185,
+    "high": 11.0,
+    "low": 9.3999996185,
+    "close": 10.4600000381,
+    "volume": 21125.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.6000003815,
+    "high": 13.5,
+    "low": 10.0399999619,
+    "close": 12.5,
+    "volume": 42690.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.3999996185,
+    "high": 13.8199996948,
+    "low": 12.0,
+    "close": 13.6000003815,
+    "volume": 26515.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.0200004578,
+    "high": 14.0,
+    "low": 12.9399995804,
+    "close": 13.220000267,
+    "volume": 22535.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.8599996567,
+    "high": 13.6000003815,
+    "low": 11.1999998093,
+    "close": 12.6199998856,
+    "volume": 23610.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,29,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.8199996948,
+    "high": 15.6000003815,
+    "low": 12.6199998856,
+    "close": 15.1000003815,
+    "volume": 21835.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2022,12,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.5600004196,
+    "high": 15.8000001907,
+    "low": 14.1999998093,
+    "close": 15.1199998856,
+    "volume": 32400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.5,
+    "high": 16.0,
+    "low": 14.6199998856,
+    "close": 15.0,
+    "volume": 25830.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,04,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.8000001907,
+    "high": 16.3600006104,
+    "low": 14.6199998856,
+    "close": 16.2800006866,
+    "volume": 18545.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.3999996185,
+    "high": 16.6000003815,
+    "low": 15.2600002289,
+    "close": 16.6000003815,
+    "volume": 24630.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.7000007629,
+    "high": 17.0,
+    "low": 15.9600000381,
+    "close": 16.4599990845,
+    "volume": 14370.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 17.2000007629,
+    "high": 20.3999996185,
+    "low": 16.3999996185,
+    "close": 18.7999992371,
+    "volume": 55510.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.3400001526,
+    "high": 20.0,
+    "low": 17.4200000763,
+    "close": 19.6000003815,
+    "volume": 33990.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.6000003815,
+    "high": 22.3999996185,
+    "low": 19.0,
+    "close": 22.3999996185,
+    "volume": 30775.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.0,
+    "high": 25.5799999237,
+    "low": 22.3999996185,
+    "close": 24.0,
+    "volume": 58575.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 24.3999996185,
+    "high": 26.6000003815,
+    "low": 24.2000007629,
+    "close": 26.3999996185,
+    "volume": 60380.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 27.6000003815,
+    "high": 32.0,
+    "low": 27.4200000763,
+    "close": 27.6000003815,
+    "volume": 98560.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 29.2000007629,
+    "high": 30.0,
+    "low": 23.6000003815,
+    "close": 25.3999996185,
+    "volume": 84830.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,19,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 25.2000007629,
+    "high": 26.9599990845,
+    "low": 24.0,
+    "close": 25.7999992371,
+    "volume": 34265.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 26.3999996185,
+    "high": 28.0,
+    "low": 15.0,
+    "close": 15.6599998474,
+    "volume": 408975.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,01,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.0,
+    "high": 18.6000003815,
+    "low": 16.0,
+    "close": 18.5599994659,
+    "volume": 143565.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.5599994659,
+    "high": 18.5599994659,
+    "low": 18.5599994659,
+    "close": 18.5599994659,
+    "volume": 2895.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.3999996185,
+    "high": 26.0,
+    "low": 19.0,
+    "close": 25.6000003815,
+    "volume": 1165150.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 24.6000003815,
+    "high": 27.0,
+    "low": 23.0,
+    "close": 24.2000007629,
+    "volume": 213175.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.6000003815,
+    "high": 24.5599994659,
+    "low": 22.7999992371,
+    "close": 24.2000007629,
+    "volume": 80490.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 24.2000007629,
+    "high": 25.6000003815,
+    "low": 23.2000007629,
+    "close": 24.2000007629,
+    "volume": 81820.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,01,31,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 24.2000007629,
+    "high": 25.2000007629,
+    "low": 23.3999996185,
+    "close": 24.6000003815,
+    "volume": 67570.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,01,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 24.6000003815,
+    "high": 26.2000007629,
+    "low": 23.7999992371,
+    "close": 25.7999992371,
+    "volume": 88740.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 25.7999992371,
+    "high": 28.2000007629,
+    "low": 25.5,
+    "close": 27.2000007629,
+    "volume": 98720.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 28.0,
+    "high": 32.5999984741,
+    "low": 27.7999992371,
+    "close": 30.2000007629,
+    "volume": 148060.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 32.7999992371,
+    "high": 34.7999992371,
+    "low": 29.2000007629,
+    "close": 34.4000015259,
+    "volume": 181375.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 35.2000007629,
+    "high": 36.0,
+    "low": 32.0,
+    "close": 34.0,
+    "volume": 120165.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 33.0,
+    "high": 36.0,
+    "low": 33.0,
+    "close": 34.2000007629,
+    "volume": 69545.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 34.4000015259,
+    "high": 35.2000007629,
+    "low": 32.0,
+    "close": 33.4000015259,
+    "volume": 72215.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 33.4000015259,
+    "high": 33.5999984741,
+    "low": 30.6000003815,
+    "close": 32.5999984741,
+    "volume": 58305.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 32.4799995422,
+    "high": 32.9799995422,
+    "low": 31.0,
+    "close": 32.4000015259,
+    "volume": 43345.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 31.7999992371,
+    "high": 33.2000007629,
+    "low": 31.2000007629,
+    "close": 31.7999992371,
+    "volume": 39225.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 31.7999992371,
+    "high": 32.0999984741,
+    "low": 29.5,
+    "close": 31.7999992371,
+    "volume": 96795.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 30.3999996185,
+    "high": 32.4000015259,
+    "low": 30.3999996185,
+    "close": 31.6000003815,
+    "volume": 31165.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 32.0,
+    "high": 33.0,
+    "low": 31.7999992371,
+    "close": 32.4000015259,
+    "volume": 36135.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 32.0,
+    "high": 34.4000015259,
+    "low": 31.6000003815,
+    "close": 32.0,
+    "volume": 64575.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 32.0,
+    "high": 33.0,
+    "low": 31.2000007629,
+    "close": 31.7999992371,
+    "volume": 37815.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 32.4000015259,
+    "high": 34.5200004578,
+    "low": 32.4000015259,
+    "close": 33.4000015259,
+    "volume": 58745.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 33.4000015259,
+    "high": 33.4000015259,
+    "low": 31.6000003815,
+    "close": 32.2000007629,
+    "volume": 52200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 33.4000015259,
+    "high": 33.4000015259,
+    "low": 28.3999996185,
+    "close": 29.2000007629,
+    "volume": 94960.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,02,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 29.2000007629,
+    "high": 30.6000003815,
+    "low": 27.0,
+    "close": 30.2000007629,
+    "volume": 56080.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,01,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 31.0,
+    "high": 39.5999984741,
+    "low": 31.0,
+    "close": 39.2000007629,
+    "volume": 316675.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 39.0,
+    "high": 39.7999992371,
+    "low": 35.0,
+    "close": 36.2000007629,
+    "volume": 173940.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 29.2000007629,
+    "high": 32.7999992371,
+    "low": 28.6000003815,
+    "close": 31.1000003815,
+    "volume": 444975.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,03,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 33.0,
+    "high": 33.7999992371,
+    "low": 30.8999996185,
+    "close": 31.0,
+    "volume": 261720.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 32.0,
+    "high": 34.5,
+    "low": 31.6000003815,
+    "close": 33.0,
+    "volume": 224425.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 34.5999984741,
+    "high": 35.5999984741,
+    "low": 31.6000003815,
+    "close": 32.2000007629,
+    "volume": 199770.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 32.5999984741,
+    "high": 32.7999992371,
+    "low": 29.3999996185,
+    "close": 30.0,
+    "volume": 212115.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,03,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 31.0,
+    "high": 35.7999992371,
+    "low": 29.0,
+    "close": 31.2000007629,
+    "volume": 248050.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 30.6000003815,
+    "high": 35.7999992371,
+    "low": 29.5400009155,
+    "close": 34.5999984741,
+    "volume": 252825.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 34.5999984741,
+    "high": 35.2000007629,
+    "low": 33.4000015259,
+    "close": 34.0,
+    "volume": 191150.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 33.4000015259,
+    "high": 34.4000015259,
+    "low": 32.7999992371,
+    "close": 33.5999984741,
+    "volume": 88770.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 33.7999992371,
+    "high": 33.7999992371,
+    "low": 32.0,
+    "close": 32.5999984741,
+    "volume": 93460.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 33.0,
+    "high": 35.4000015259,
+    "low": 32.0,
+    "close": 35.2000007629,
+    "volume": 207265.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,03,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 36.0,
+    "high": 37.0999984741,
+    "low": 33.4000015259,
+    "close": 35.4000015259,
+    "volume": 228620.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 36.2000007629,
+    "high": 42.0,
+    "low": 35.5999984741,
+    "close": 39.5999984741,
+    "volume": 532915.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 41.5999984741,
+    "high": 42.0,
+    "low": 36.2000007629,
+    "close": 38.0,
+    "volume": 646245.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 34.0,
+    "high": 34.4000015259,
+    "low": 26.2000007629,
+    "close": 28.6000003815,
+    "volume": 652825.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,03,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 28.6000003815,
+    "high": 28.6000003815,
+    "low": 22.6000003815,
+    "close": 23.2000007629,
+    "volume": 408070.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.0,
+    "high": 23.0,
+    "low": 18.6200008392,
+    "close": 20.2000007629,
+    "volume": 503640.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.3999996185,
+    "high": 24.7999992371,
+    "low": 20.6200008392,
+    "close": 23.7999992371,
+    "volume": 353925.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,29,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.2000007629,
+    "high": 27.0,
+    "low": 22.6000003815,
+    "close": 25.2000007629,
+    "volume": 354600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 25.6000003815,
+    "high": 27.7999992371,
+    "low": 25.0,
+    "close": 25.6000003815,
+    "volume": 177865.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,03,31,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 25.2000007629,
+    "high": 26.2000007629,
+    "low": 24.0,
+    "close": 25.3999996185,
+    "volume": 138990.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 25.6000003815,
+    "high": 25.6000003815,
+    "low": 23.2999992371,
+    "close": 24.3999996185,
+    "volume": 112420.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,04,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 24.0,
+    "high": 24.7999992371,
+    "low": 23.0,
+    "close": 24.6000003815,
+    "volume": 76000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 24.0,
+    "high": 24.2000007629,
+    "low": 22.3999996185,
+    "close": 23.0,
+    "volume": 89635.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.3999996185,
+    "high": 24.0,
+    "low": 21.4200000763,
+    "close": 24.0,
+    "volume": 94985.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.7999992371,
+    "high": 23.3999996185,
+    "low": 21.3999996185,
+    "close": 22.2000007629,
+    "volume": 102225.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.7999992371,
+    "high": 24.0,
+    "low": 21.6000003815,
+    "close": 23.6000003815,
+    "volume": 63180.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.6000003815,
+    "high": 23.6000003815,
+    "low": 21.6000003815,
+    "close": 21.7999992371,
+    "volume": 80525.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.2000007629,
+    "high": 23.2999992371,
+    "low": 22.0,
+    "close": 22.7999992371,
+    "volume": 65475.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.3999996185,
+    "high": 23.0,
+    "low": 21.2000007629,
+    "close": 21.6000003815,
+    "volume": 51760.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.6000003815,
+    "high": 23.3999996185,
+    "low": 21.2000007629,
+    "close": 22.7999992371,
+    "volume": 58095.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.0,
+    "high": 23.2999992371,
+    "low": 22.2000007629,
+    "close": 22.6000003815,
+    "volume": 47715.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,19,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.6000003815,
+    "high": 23.0,
+    "low": 21.7999992371,
+    "close": 22.3999996185,
+    "volume": 56135.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.7999992371,
+    "high": 23.0,
+    "low": 21.2000007629,
+    "close": 21.2000007629,
+    "volume": 57640.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.1000003815,
+    "high": 23.6000003815,
+    "low": 21.0,
+    "close": 22.6000003815,
+    "volume": 63920.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.6000003815,
+    "high": 23.0,
+    "low": 20.7999992371,
+    "close": 21.3999996185,
+    "volume": 108170.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.6000003815,
+    "high": 22.3999996185,
+    "low": 20.2000007629,
+    "close": 20.6000003815,
+    "volume": 146290.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.6000003815,
+    "high": 21.3999996185,
+    "low": 19.6000003815,
+    "close": 20.6000003815,
+    "volume": 55395.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.2000007629,
+    "high": 21.0,
+    "low": 20.0,
+    "close": 20.7999992371,
+    "volume": 48530.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,04,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.7999992371,
+    "high": 21.3999996185,
+    "low": 20.2000007629,
+    "close": 20.3999996185,
+    "volume": 38010.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,01,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.3999996185,
+    "high": 21.6000003815,
+    "low": 20.2000007629,
+    "close": 21.0,
+    "volume": 53050.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.0,
+    "high": 21.3999996185,
+    "low": 20.3999996185,
+    "close": 20.3999996185,
+    "volume": 33315.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.2000007629,
+    "high": 20.6000003815,
+    "low": 19.7000007629,
+    "close": 20.2000007629,
+    "volume": 43290.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,04,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.0,
+    "high": 20.6000003815,
+    "low": 19.4200000763,
+    "close": 20.2000007629,
+    "volume": 44265.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.0,
+    "high": 21.2000007629,
+    "low": 20.0,
+    "close": 21.0,
+    "volume": 42100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.7999992371,
+    "high": 21.7999992371,
+    "low": 20.7999992371,
+    "close": 21.2000007629,
+    "volume": 29205.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.2000007629,
+    "high": 22.2000007629,
+    "low": 20.6800003052,
+    "close": 22.2000007629,
+    "volume": 37390.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.6000003815,
+    "high": 23.0,
+    "low": 21.7000007629,
+    "close": 22.2000007629,
+    "volume": 47360.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.7999992371,
+    "high": 23.7999992371,
+    "low": 22.2000007629,
+    "close": 23.6000003815,
+    "volume": 61045.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 25.3999996185,
+    "high": 25.7999992371,
+    "low": 22.7000007629,
+    "close": 23.3999996185,
+    "volume": 283060.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.7999992371,
+    "high": 27.8999996185,
+    "low": 21.7999992371,
+    "close": 27.2000007629,
+    "volume": 167000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 27.2000007629,
+    "high": 28.3999996185,
+    "low": 25.7999992371,
+    "close": 26.3999996185,
+    "volume": 115655.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 26.3999996185,
+    "high": 27.3999996185,
+    "low": 25.1000003815,
+    "close": 27.0,
+    "volume": 68030.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 27.0,
+    "high": 27.0200004578,
+    "low": 25.0,
+    "close": 25.3999996185,
+    "volume": 70735.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,19,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 25.2000007629,
+    "high": 27.2000007629,
+    "low": 25.2000007629,
+    "close": 26.0,
+    "volume": 45430.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 26.0,
+    "high": 28.7999992371,
+    "low": 26.0,
+    "close": 28.3999996185,
+    "volume": 71215.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 28.0,
+    "high": 29.6000003815,
+    "low": 26.2000007629,
+    "close": 27.3999996185,
+    "volume": 54110.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 27.0,
+    "high": 27.3999996185,
+    "low": 25.6000003815,
+    "close": 26.7999992371,
+    "volume": 31005.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 27.2000007629,
+    "high": 27.3999996185,
+    "low": 25.2000007629,
+    "close": 25.6000003815,
+    "volume": 35865.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 26.0,
+    "high": 27.2600002289,
+    "low": 25.7999992371,
+    "close": 27.2000007629,
+    "volume": 45275.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 27.2000007629,
+    "high": 27.3999996185,
+    "low": 25.6000003815,
+    "close": 25.7999992371,
+    "volume": 35075.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,05,31,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 26.6000003815,
+    "high": 27.0,
+    "low": 24.6000003815,
+    "close": 26.6000003815,
+    "volume": 51530.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,01,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 26.6000003815,
+    "high": 27.2000007629,
+    "low": 25.8999996185,
+    "close": 26.3999996185,
+    "volume": 24065.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 26.3999996185,
+    "high": 26.7999992371,
+    "low": 25.6000003815,
+    "close": 26.2000007629,
+    "volume": 24890.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 26.3999996185,
+    "high": 27.6000003815,
+    "low": 25.3999996185,
+    "close": 26.0,
+    "volume": 59990.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 26.0,
+    "high": 26.7999992371,
+    "low": 26.0,
+    "close": 26.2000007629,
+    "volume": 23790.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 26.3999996185,
+    "high": 26.6000003815,
+    "low": 24.7999992371,
+    "close": 25.3999996185,
+    "volume": 51885.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,06,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 25.3999996185,
+    "high": 25.3999996185,
+    "low": 24.4400005341,
+    "close": 24.7999992371,
+    "volume": 34530.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 25.0,
+    "high": 25.2000007629,
+    "low": 24.0,
+    "close": 24.2000007629,
+    "volume": 29300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 24.2000007629,
+    "high": 25.2000007629,
+    "low": 24.1000003815,
+    "close": 24.6000003815,
+    "volume": 28045.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 24.3999996185,
+    "high": 25.0,
+    "low": 24.0,
+    "close": 24.0,
+    "volume": 25645.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 24.0,
+    "high": 24.0,
+    "low": 22.6000003815,
+    "close": 23.0,
+    "volume": 48475.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.0,
+    "high": 23.6000003815,
+    "low": 22.5,
+    "close": 22.7999992371,
+    "volume": 43665.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.0,
+    "high": 24.2000007629,
+    "low": 22.2000007629,
+    "close": 22.2000007629,
+    "volume": 62050.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.0,
+    "high": 23.0,
+    "low": 21.7999992371,
+    "close": 22.6000003815,
+    "volume": 28760.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.2000007629,
+    "high": 23.1399993896,
+    "low": 22.0,
+    "close": 22.0,
+    "volume": 17050.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 24.2000007629,
+    "high": 24.3999996185,
+    "low": 22.0,
+    "close": 23.3999996185,
+    "volume": 85570.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.0,
+    "high": 23.6000003815,
+    "low": 22.2999992371,
+    "close": 23.2000007629,
+    "volume": 47455.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.3999996185,
+    "high": 23.3999996185,
+    "low": 22.2000007629,
+    "close": 22.2000007629,
+    "volume": 17860.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.2000007629,
+    "high": 22.3999996185,
+    "low": 20.7999992371,
+    "close": 21.7999992371,
+    "volume": 45115.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.0,
+    "high": 22.5,
+    "low": 21.2000007629,
+    "close": 22.2000007629,
+    "volume": 20155.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,29,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.2000007629,
+    "high": 22.6000003815,
+    "low": 22.0,
+    "close": 22.6000003815,
+    "volume": 15080.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.3999996185,
+    "high": 23.0,
+    "low": 22.1000003815,
+    "close": 22.6000003815,
+    "volume": 15910.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.3999996185,
+    "high": 22.7999992371,
+    "low": 22.2000007629,
+    "close": 22.6000003815,
+    "volume": 12420.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.3999996185,
+    "high": 23.3999996185,
+    "low": 21.6000003815,
+    "close": 22.3999996185,
+    "volume": 31335.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.0,
+    "high": 22.3999996185,
+    "low": 21.6000003815,
+    "close": 22.2000007629,
+    "volume": 22575.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.2000007629,
+    "high": 22.3999996185,
+    "low": 21.7999992371,
+    "close": 22.2000007629,
+    "volume": 14730.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.3999996185,
+    "high": 22.6000003815,
+    "low": 22.1000003815,
+    "close": 22.2000007629,
+    "volume": 17545.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.6000003815,
+    "high": 22.7000007629,
+    "low": 21.6000003815,
+    "close": 22.0,
+    "volume": 23115.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.0,
+    "high": 22.3999996185,
+    "low": 22.0,
+    "close": 22.0,
+    "volume": 15125.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.0,
+    "high": 22.7000007629,
+    "low": 22.0,
+    "close": 22.6000003815,
+    "volume": 21410.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.2000007629,
+    "high": 22.3999996185,
+    "low": 21.7999992371,
+    "close": 22.0,
+    "volume": 29665.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.0,
+    "high": 22.7999992371,
+    "low": 21.9799995422,
+    "close": 22.6000003815,
+    "volume": 29780.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.6000003815,
+    "high": 23.2000007629,
+    "low": 22.3999996185,
+    "close": 23.2000007629,
+    "volume": 17915.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,07,19,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.0,
+    "high": 23.6000003815,
+    "low": 22.7999992371,
+    "close": 23.0,
+    "volume": 15855.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.2000007629,
+    "high": 23.2000007629,
+    "low": 22.0,
+    "close": 22.0,
+    "volume": 20525.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.0,
+    "high": 21.6000003815,
+    "low": 18.0,
+    "close": 21.2000007629,
+    "volume": 127075.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.7999992371,
+    "high": 20.7999992371,
+    "low": 19.3999996185,
+    "close": 19.6000003815,
+    "volume": 38685.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.7999992371,
+    "high": 20.6000003815,
+    "low": 19.2000007629,
+    "close": 19.2000007629,
+    "volume": 18355.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.3999996185,
+    "high": 20.3999996185,
+    "low": 18.6000003815,
+    "close": 19.9799995422,
+    "volume": 30560.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.7999992371,
+    "high": 20.3999996185,
+    "low": 18.6200008392,
+    "close": 18.7999992371,
+    "volume": 23040.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.7999992371,
+    "high": 20.2000007629,
+    "low": 18.7399997711,
+    "close": 19.4400005341,
+    "volume": 15110.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,31,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.6000003815,
+    "high": 20.3999996185,
+    "low": 19.2000007629,
+    "close": 19.8999996185,
+    "volume": 31895.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,01,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.0,
+    "high": 21.6000003815,
+    "low": 19.6000003815,
+    "close": 20.7999992371,
+    "volume": 41275.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.6000003815,
+    "high": 21.3999996185,
+    "low": 20.2000007629,
+    "close": 20.7999992371,
+    "volume": 35520.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.6000003815,
+    "high": 21.2000007629,
+    "low": 20.3999996185,
+    "close": 20.3999996185,
+    "volume": 12520.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,04,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.8999996185,
+    "high": 20.2000007629,
+    "low": 18.7999992371,
+    "close": 19.5200004578,
+    "volume": 25880.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.5200004578,
+    "high": 19.9400005341,
+    "low": 18.2000007629,
+    "close": 18.6000003815,
+    "volume": 38355.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.2000007629,
+    "high": 19.6000003815,
+    "low": 18.2000007629,
+    "close": 18.7999992371,
+    "volume": 21185.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.7999992371,
+    "high": 20.6000003815,
+    "low": 19.2000007629,
+    "close": 19.5,
+    "volume": 19665.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.6399993896,
+    "high": 19.7999992371,
+    "low": 19.0,
+    "close": 19.7399997711,
+    "volume": 9350.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.1000003815,
+    "high": 19.9799995422,
+    "low": 19.1000003815,
+    "close": 19.6000003815,
+    "volume": 8560.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.2999992371,
+    "high": 19.6000003815,
+    "low": 17.6800003052,
+    "close": 18.3199996948,
+    "volume": 36940.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.7800006866,
+    "high": 18.7999992371,
+    "low": 18.0,
+    "close": 18.1599998474,
+    "volume": 18505.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.0400009155,
+    "high": 18.6000003815,
+    "low": 16.7000007629,
+    "close": 17.3999996185,
+    "volume": 39490.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 17.2000007629,
+    "high": 17.2000007629,
+    "low": 16.0,
+    "close": 16.2000007629,
+    "volume": 28605.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.0,
+    "high": 17.1000003815,
+    "low": 16.0,
+    "close": 16.2800006866,
+    "volume": 17520.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.0200004578,
+    "high": 17.5,
+    "low": 16.0200004578,
+    "close": 16.8600006104,
+    "volume": 14530.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.8999996185,
+    "high": 17.0,
+    "low": 16.0,
+    "close": 16.3999996185,
+    "volume": 21825.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.3999996185,
+    "high": 16.7999992371,
+    "low": 16.0,
+    "close": 16.4200000763,
+    "volume": 15715.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.4200000763,
+    "high": 16.7600002289,
+    "low": 15.1199998856,
+    "close": 15.3999996185,
+    "volume": 20300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.6000003815,
+    "high": 17.0,
+    "low": 14.8999996185,
+    "close": 15.5,
+    "volume": 24770.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.6000003815,
+    "high": 16.1599998474,
+    "low": 15.1999998093,
+    "close": 15.6999998093,
+    "volume": 16780.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,29,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.6000003815,
+    "high": 17.0,
+    "low": 15.0,
+    "close": 16.7999992371,
+    "volume": 18665.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.9799995422,
+    "high": 17.4200000763,
+    "low": 16.3999996185,
+    "close": 16.8600006104,
+    "volume": 9550.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,31,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.3999996185,
+    "high": 17.3600006104,
+    "low": 15.6000003815,
+    "close": 15.6800003052,
+    "volume": 15560.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,01,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.8199996948,
+    "high": 16.2199993134,
+    "low": 15.6199998856,
+    "close": 15.8000001907,
+    "volume": 7055.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.0,
+    "high": 16.5599994659,
+    "low": 15.6999998093,
+    "close": 15.8599996567,
+    "volume": 11945.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.7999992371,
+    "high": 20.7999992371,
+    "low": 18.4200000763,
+    "close": 20.0,
+    "volume": 350950.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.5200004578,
+    "high": 20.0,
+    "low": 17.7999992371,
+    "close": 19.7399997711,
+    "volume": 53500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.7399997711,
+    "high": 20.3999996185,
+    "low": 18.7999992371,
+    "close": 19.8600006104,
+    "volume": 21330.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.6000003815,
+    "high": 19.8600006104,
+    "low": 18.3999996185,
+    "close": 19.2399997711,
+    "volume": 27085.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.3799991608,
+    "high": 19.8199996948,
+    "low": 19.0400009155,
+    "close": 19.7000007629,
+    "volume": 14005.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.7999992371,
+    "high": 22.7999992371,
+    "low": 19.7600002289,
+    "close": 22.3999996185,
+    "volume": 44330.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.2000007629,
+    "high": 22.3999996185,
+    "low": 20.6000003815,
+    "close": 21.7999992371,
+    "volume": 29325.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.6000003815,
+    "high": 22.1800003052,
+    "low": 21.0,
+    "close": 21.3999996185,
+    "volume": 23645.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.3999996185,
+    "high": 21.7999992371,
+    "low": 20.6000003815,
+    "close": 21.3999996185,
+    "volume": 18695.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,19,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.0,
+    "high": 21.3999996185,
+    "low": 20.6000003815,
+    "close": 21.0,
+    "volume": 20050.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.0,
+    "high": 24.3999996185,
+    "low": 21.0,
+    "close": 22.7999992371,
+    "volume": 49070.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.2000007629,
+    "high": 23.3999996185,
+    "low": 19.7999992371,
+    "close": 20.3999996185,
+    "volume": 40530.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.7999992371,
+    "high": 22.0,
+    "low": 19.6000003815,
+    "close": 20.3999996185,
+    "volume": 22780.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.7999992371,
+    "high": 20.2000007629,
+    "low": 19.0599994659,
+    "close": 19.3999996185,
+    "volume": 13770.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,09,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.2199993134,
+    "high": 20.0200004578,
+    "low": 19.2000007629,
+    "close": 19.6000003815,
+    "volume": 9855.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.4599990845,
+    "high": 20.0200004578,
+    "low": 19.2000007629,
+    "close": 19.3999996185,
+    "volume": 13575.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.6000003815,
+    "high": 19.7399997711,
+    "low": 18.7999992371,
+    "close": 18.7999992371,
+    "volume": 10515.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,29,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.9799995422,
+    "high": 19.5599994659,
+    "low": 18.5,
+    "close": 18.8400001526,
+    "volume": 11400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.8600006104,
+    "high": 19.5,
+    "low": 18.2000007629,
+    "close": 18.3999996185,
+    "volume": 15615.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.2000007629,
+    "high": 18.7999992371,
+    "low": 18.2000007629,
+    "close": 18.5,
+    "volume": 4400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,04,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.6000003815,
+    "high": 19.0,
+    "low": 17.6200008392,
+    "close": 18.6000003815,
+    "volume": 12505.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.6800003052,
+    "high": 20.6000003815,
+    "low": 18.5,
+    "close": 19.3999996185,
+    "volume": 22625.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.0799999237,
+    "high": 19.7800006866,
+    "low": 18.6000003815,
+    "close": 19.2000007629,
+    "volume": 12850.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.2000007629,
+    "high": 19.3999996185,
+    "low": 18.0,
+    "close": 18.7999992371,
+    "volume": 9825.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.7999992371,
+    "high": 19.7999992371,
+    "low": 18.7999992371,
+    "close": 19.2999992371,
+    "volume": 9720.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.7999992371,
+    "high": 19.8799991608,
+    "low": 18.1399993896,
+    "close": 18.5,
+    "volume": 14910.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.7800006866,
+    "high": 19.0,
+    "low": 17.9200000763,
+    "close": 18.3999996185,
+    "volume": 16735.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 17.7199993134,
+    "high": 20.3999996185,
+    "low": 17.7000007629,
+    "close": 18.3999996185,
+    "volume": 21400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.6000003815,
+    "high": 19.0,
+    "low": 17.7999992371,
+    "close": 18.7999992371,
+    "volume": 14955.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.4599990845,
+    "high": 19.2000007629,
+    "low": 18.2800006866,
+    "close": 18.2800006866,
+    "volume": 17790.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.1000003815,
+    "high": 18.2600002289,
+    "low": 17.0,
+    "close": 17.2000007629,
+    "volume": 17920.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,19,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 17.2000007629,
+    "high": 18.0,
+    "low": 16.6000003815,
+    "close": 17.5,
+    "volume": 16855.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 17.5799999237,
+    "high": 18.2000007629,
+    "low": 17.0,
+    "close": 17.1200008392,
+    "volume": 9125.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.9799995422,
+    "high": 17.6000003815,
+    "low": 16.4400005341,
+    "close": 16.8199996948,
+    "volume": 10765.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.8199996948,
+    "high": 17.5599994659,
+    "low": 16.4200000763,
+    "close": 16.8999996185,
+    "volume": 13495.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.6599998474,
+    "high": 17.3400001526,
+    "low": 16.6000003815,
+    "close": 16.6000003815,
+    "volume": 9760.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 17.0,
+    "high": 17.2000007629,
+    "low": 15.6000003815,
+    "close": 16.1800003052,
+    "volume": 14445.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.8199996948,
+    "high": 16.1000003815,
+    "low": 15.1400003433,
+    "close": 15.5200004578,
+    "volume": 19635.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.6000003815,
+    "high": 15.8000001907,
+    "low": 14.5200004578,
+    "close": 15.279999733,
+    "volume": 18595.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,31,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.3999996185,
+    "high": 15.8000001907,
+    "low": 15.0,
+    "close": 15.3400001526,
+    "volume": 13300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,01,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.8000001907,
+    "high": 16.3999996185,
+    "low": 14.6000003815,
+    "close": 16.0799999237,
+    "volume": 8700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.6400003433,
+    "high": 18.3400001526,
+    "low": 15.6400003433,
+    "close": 17.2999992371,
+    "volume": 12695.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 17.7999992371,
+    "high": 18.1599998474,
+    "low": 16.0200004578,
+    "close": 16.2000007629,
+    "volume": 27630.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.2000007629,
+    "high": 16.3999996185,
+    "low": 15.8000001907,
+    "close": 16.0,
+    "volume": 7105.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.3799991608,
+    "high": 16.3799991608,
+    "low": 15.5200004578,
+    "close": 16.0,
+    "volume": 6720.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.9799995422,
+    "high": 16.3600006104,
+    "low": 15.6000003815,
+    "close": 15.6000003815,
+    "volume": 5880.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.6000003815,
+    "high": 16.0400009155,
+    "low": 15.0,
+    "close": 15.0600004196,
+    "volume": 8000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.0,
+    "high": 16.0,
+    "low": 14.8000001907,
+    "close": 15.3999996185,
+    "volume": 7485.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.0799999237,
+    "high": 15.9399995804,
+    "low": 14.8000001907,
+    "close": 15.6000003815,
+    "volume": 13880.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.3999996185,
+    "high": 16.0400009155,
+    "low": 15.1999998093,
+    "close": 15.8000001907,
+    "volume": 9640.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.3999996185,
+    "high": 16.3999996185,
+    "low": 15.3999996185,
+    "close": 15.5,
+    "volume": 9555.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.8000001907,
+    "high": 16.7999992371,
+    "low": 15.2600002289,
+    "close": 16.0599994659,
+    "volume": 17490.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.3999996185,
+    "high": 15.720000267,
+    "low": 11.8599996567,
+    "close": 15.6000003815,
+    "volume": 46690.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.3999996185,
+    "high": 15.8000001907,
+    "low": 14.3199996948,
+    "close": 14.9799995422,
+    "volume": 17515.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.0,
+    "high": 15.1999998093,
+    "low": 14.6000003815,
+    "close": 14.6599998474,
+    "volume": 10390.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.4200000763,
+    "high": 14.8000001907,
+    "low": 14.0,
+    "close": 14.3000001907,
+    "volume": 8225.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.1800003052,
+    "high": 15.3599996567,
+    "low": 13.8999996185,
+    "close": 14.1999998093,
+    "volume": 9535.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.3000001907,
+    "high": 14.8199996948,
+    "low": 14.0600004196,
+    "close": 14.0600004196,
+    "volume": 14200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.8000001907,
+    "high": 14.8000001907,
+    "low": 13.6000003815,
+    "close": 13.6400003433,
+    "volume": 19320.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,29,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.8999996185,
+    "high": 14.1999998093,
+    "low": 13.6400003433,
+    "close": 13.8199996948,
+    "volume": 12770.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.1999998093,
+    "high": 14.1999998093,
+    "low": 13.8000001907,
+    "close": 14.1800003052,
+    "volume": 14790.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,01,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.8199996948,
+    "high": 15.8000001907,
+    "low": 13.6000003815,
+    "close": 15.6199998856,
+    "volume": 26595.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,04,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.1999998093,
+    "high": 16.0,
+    "low": 14.6599998474,
+    "close": 15.279999733,
+    "volume": 18770.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.4399995804,
+    "high": 16.3999996185,
+    "low": 15.0,
+    "close": 15.6000003815,
+    "volume": 31630.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.5,
+    "high": 15.6999998093,
+    "low": 15.0200004578,
+    "close": 15.1800003052,
+    "volume": 15530.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.0,
+    "high": 16.2000007629,
+    "low": 14.6400003433,
+    "close": 14.8199996948,
+    "volume": 26835.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.8000001907,
+    "high": 15.0,
+    "low": 14.4200000763,
+    "close": 14.8000001907,
+    "volume": 20700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.6000003815,
+    "high": 15.1000003815,
+    "low": 14.1199998856,
+    "close": 14.9399995804,
+    "volume": 17170.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.9399995804,
+    "high": 14.9600000381,
+    "low": 14.1000003815,
+    "close": 14.3000001907,
+    "volume": 19605.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,12,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.5799999237,
+    "high": 14.7600002289,
+    "low": 14.0200004578,
+    "close": 14.3599996567,
+    "volume": 13595.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.3999996185,
+    "high": 15.0,
+    "low": 14.3599996567,
+    "close": 14.8999996185,
+    "volume": 23490.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.0,
+    "high": 15.220000267,
+    "low": 14.3199996948,
+    "close": 14.3199996948,
+    "volume": 16580.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.8000001907,
+    "high": 15.3599996567,
+    "low": 14.3999996185,
+    "close": 14.6599998474,
+    "volume": 27465.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,19,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.8400001526,
+    "high": 15.1999998093,
+    "low": 14.0200004578,
+    "close": 14.3999996185,
+    "volume": 42665.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.4200000763,
+    "high": 15.0,
+    "low": 14.3999996185,
+    "close": 15.0,
+    "volume": 21250.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,12,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.0,
+    "high": 15.279999733,
+    "low": 14.2399997711,
+    "close": 14.7600002289,
+    "volume": 25435.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 17.5599994659,
+    "high": 18.8799991608,
+    "low": 15.4600000381,
+    "close": 16.3999996185,
+    "volume": 592630.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.3999996185,
+    "high": 16.3999996185,
+    "low": 15.3999996185,
+    "close": 15.5,
+    "volume": 83500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.1400003433,
+    "high": 16.3999996185,
+    "low": 15.1400003433,
+    "close": 15.9600000381,
+    "volume": 42605.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.5799999237,
+    "high": 16.2000007629,
+    "low": 15.1999998093,
+    "close": 16.2000007629,
+    "volume": 42330.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,29,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.5799999237,
+    "high": 16.5799999237,
+    "low": 15.3999996185,
+    "close": 15.8800001144,
+    "volume": 30135.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.6999998093,
+    "high": 16.2000007629,
+    "low": 15.1199998856,
+    "close": 16.0200004578,
+    "volume": 30305.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.0,
+    "high": 16.2600002289,
+    "low": 15.1999998093,
+    "close": 15.6599998474,
+    "volume": 20485.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,04,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.6999998093,
+    "high": 16.1000003815,
+    "low": 15.2399997711,
+    "close": 15.6199998856,
+    "volume": 17365.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.9799995422,
+    "high": 15.9799995422,
+    "low": 15.2600002289,
+    "close": 15.5600004196,
+    "volume": 18545.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.3999996185,
+    "high": 15.4600000381,
+    "low": 14.8999996185,
+    "close": 15.3599996567,
+    "volume": 21145.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,01,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.3999996185,
+    "high": 16.3999996185,
+    "low": 15.1000003815,
+    "close": 16.0,
+    "volume": 34175.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.2199993134,
+    "high": 16.2399997711,
+    "low": 15.6000003815,
+    "close": 15.8599996567,
+    "volume": 17405.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.8999996185,
+    "high": 16.1000003815,
+    "low": 15.3999996185,
+    "close": 15.6400003433,
+    "volume": 24935.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.3999996185,
+    "high": 15.8000001907,
+    "low": 15.1999998093,
+    "close": 15.3199996948,
+    "volume": 16650.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,01,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.3999996185,
+    "high": 15.6800003052,
+    "low": 14.8000001907,
+    "close": 14.8199996948,
+    "volume": 20305.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.6999998093,
+    "high": 15.1999998093,
+    "low": 14.2399997711,
+    "close": 14.2399997711,
+    "volume": 15650.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.5,
+    "high": 15.0,
+    "low": 14.0200004578,
+    "close": 15.0,
+    "volume": 27425.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,19,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.6999998093,
+    "high": 14.8000001907,
+    "low": 13.8000001907,
+    "close": 14.3199996948,
+    "volume": 23560.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.3999996185,
+    "high": 14.6999998093,
+    "low": 13.8199996948,
+    "close": 14.3000001907,
+    "volume": 19090.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.1999998093,
+    "high": 14.3999996185,
+    "low": 13.7399997711,
+    "close": 13.8599996567,
+    "volume": 11950.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.8599996567,
+    "high": 14.0,
+    "low": 12.8599996567,
+    "close": 13.8000001907,
+    "volume": 22815.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.4399995804,
+    "high": 14.0,
+    "low": 13.3199996948,
+    "close": 13.5,
+    "volume": 11690.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.5200004578,
+    "high": 14.0,
+    "low": 13.0200004578,
+    "close": 13.3000001907,
+    "volume": 24255.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,29,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.3999996185,
+    "high": 13.6999998093,
+    "low": 13.0200004578,
+    "close": 13.4600000381,
+    "volume": 103875.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.6000003815,
+    "high": 14.1400003433,
+    "low": 13.0200004578,
+    "close": 13.1599998474,
+    "volume": 79175.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,31,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.0,
+    "high": 13.3999996185,
+    "low": 12.6999998093,
+    "close": 12.8199996948,
+    "volume": 28790.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,01,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.1999998093,
+    "high": 13.1999998093,
+    "low": 12.5,
+    "close": 13.0799999237,
+    "volume": 31075.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.1999998093,
+    "high": 13.9799995422,
+    "low": 12.8000001907,
+    "close": 13.9799995422,
+    "volume": 31575.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.0,
+    "high": 14.0,
+    "low": 13.0399999619,
+    "close": 13.3999996185,
+    "volume": 17435.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.3800001144,
+    "high": 13.9799995422,
+    "low": 13.1999998093,
+    "close": 13.4200000763,
+    "volume": 14020.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.6000003815,
+    "high": 13.6000003815,
+    "low": 13.1000003815,
+    "close": 13.1000003815,
+    "volume": 11895.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.3999996185,
+    "high": 13.6000003815,
+    "low": 12.8999996185,
+    "close": 13.4200000763,
+    "volume": 21765.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.6000003815,
+    "high": 14.5799999237,
+    "low": 13.4399995804,
+    "close": 14.5600004196,
+    "volume": 43635.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.6000003815,
+    "high": 15.1999998093,
+    "low": 13.9799995422,
+    "close": 14.1000003815,
+    "volume": 24525.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.3000001907,
+    "high": 14.6000003815,
+    "low": 13.3999996185,
+    "close": 13.6000003815,
+    "volume": 13325.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.5600004196,
+    "high": 14.0,
+    "low": 13.3000001907,
+    "close": 13.5799999237,
+    "volume": 13515.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.0,
+    "high": 14.1999998093,
+    "low": 13.1599998474,
+    "close": 13.8400001526,
+    "volume": 22650.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.1999998093,
+    "high": 14.4799995422,
+    "low": 13.6000003815,
+    "close": 14.3000001907,
+    "volume": 23460.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.1999998093,
+    "high": 14.3999996185,
+    "low": 13.8000001907,
+    "close": 14.1800003052,
+    "volume": 16430.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.8599996567,
+    "high": 14.0,
+    "low": 13.6199998856,
+    "close": 13.8000001907,
+    "volume": 17175.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.7600002289,
+    "high": 14.5,
+    "low": 13.6999998093,
+    "close": 13.8199996948,
+    "volume": 11035.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.0,
+    "high": 14.0,
+    "low": 13.6199998856,
+    "close": 14.0,
+    "volume": 24135.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,02,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.0,
+    "high": 14.6000003815,
+    "low": 13.3999996185,
+    "close": 14.3800001144,
+    "volume": 21995.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.0,
+    "high": 15.0,
+    "low": 14.0,
+    "close": 14.5799999237,
+    "volume": 21305.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.6000003815,
+    "high": 14.8800001144,
+    "low": 14.2399997711,
+    "close": 14.3999996185,
+    "volume": 12990.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,29,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.5600004196,
+    "high": 14.720000267,
+    "low": 14.0,
+    "close": 14.1599998474,
+    "volume": 23240.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,01,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.2399997711,
+    "high": 14.779999733,
+    "low": 14.0799999237,
+    "close": 14.2399997711,
+    "volume": 11910.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,04,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.5799999237,
+    "high": 14.5799999237,
+    "low": 13.6000003815,
+    "close": 14.1400003433,
+    "volume": 18450.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.8000001907,
+    "high": 14.0,
+    "low": 13.3999996185,
+    "close": 14.0,
+    "volume": 18270.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,03,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.6199998856,
+    "high": 14.1999998093,
+    "low": 13.6199998856,
+    "close": 13.9799995422,
+    "volume": 11120.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.8999996185,
+    "high": 13.9799995422,
+    "low": 13.6000003815,
+    "close": 13.6599998474,
+    "volume": 4810.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.8800001144,
+    "high": 14.1800003052,
+    "low": 13.779999733,
+    "close": 13.8199996948,
+    "volume": 13205.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.6000003815,
+    "high": 13.8000001907,
+    "low": 13.0200004578,
+    "close": 13.220000267,
+    "volume": 26730.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.3800001144,
+    "high": 13.9600000381,
+    "low": 13.1999998093,
+    "close": 13.6800003052,
+    "volume": 19875.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.4200000763,
+    "high": 14.1400003433,
+    "low": 13.3000001907,
+    "close": 13.3000001907,
+    "volume": 35600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.5200004578,
+    "high": 13.8999996185,
+    "low": 12.8000001907,
+    "close": 12.8199996948,
+    "volume": 40255.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.3000001907,
+    "high": 14.9399995804,
+    "low": 13.279999733,
+    "close": 13.6999998093,
+    "volume": 67235.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.3000001907,
+    "high": 14.6000003815,
+    "low": 13.720000267,
+    "close": 13.8800001144,
+    "volume": 31060.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,19,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.9799995422,
+    "high": 14.8800001144,
+    "low": 13.6400003433,
+    "close": 14.279999733,
+    "volume": 32795.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.3400001526,
+    "high": 15.5600004196,
+    "low": 14.3199996948,
+    "close": 15.2600002289,
+    "volume": 44090.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.6000003815,
+    "high": 16.3999996185,
+    "low": 15.6000003815,
+    "close": 16.0599994659,
+    "volume": 37095.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.3799991608,
+    "high": 16.3799991608,
+    "low": 15.1999998093,
+    "close": 15.5399999619,
+    "volume": 33740.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.6000003815,
+    "high": 15.8999996185,
+    "low": 14.4200000763,
+    "close": 14.9200000763,
+    "volume": 24990.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.779999733,
+    "high": 15.0,
+    "low": 14.3999996185,
+    "close": 14.8000001907,
+    "volume": 23070.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.0200004578,
+    "high": 17.0,
+    "low": 14.8000001907,
+    "close": 16.8400001526,
+    "volume": 72315.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 17.2000007629,
+    "high": 19.1800003052,
+    "low": 17.0,
+    "close": 18.3999996185,
+    "volume": 75450.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,01,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.2000007629,
+    "high": 20.0,
+    "low": 15.6199998856,
+    "close": 19.3600006104,
+    "volume": 87370.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.6000003815,
+    "high": 21.7999992371,
+    "low": 18.6399993896,
+    "close": 21.3999996185,
+    "volume": 71270.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.7999992371,
+    "high": 24.3999996185,
+    "low": 20.7000007629,
+    "close": 21.0,
+    "volume": 132040.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,04,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.0,
+    "high": 23.0,
+    "low": 20.3999996185,
+    "close": 21.6000003815,
+    "volume": 44165.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.7999992371,
+    "high": 24.2000007629,
+    "low": 20.0,
+    "close": 23.2000007629,
+    "volume": 114600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.2000007629,
+    "high": 24.0,
+    "low": 20.7999992371,
+    "close": 21.3999996185,
+    "volume": 70165.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.3999996185,
+    "high": 22.0,
+    "low": 17.2999992371,
+    "close": 17.5,
+    "volume": 84580.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,04,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.3999996185,
+    "high": 19.5599994659,
+    "low": 15.6000003815,
+    "close": 18.3999996185,
+    "volume": 46050.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.6000003815,
+    "high": 19.2000007629,
+    "low": 16.3999996185,
+    "close": 17.2800006866,
+    "volume": 26255.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,04,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 17.2800006866,
+    "high": 17.8199996948,
+    "low": 15.7600002289,
+    "close": 16.2000007629,
+    "volume": 26925.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 17.3999996185,
+    "high": 17.6000003815,
+    "low": 16.3999996185,
+    "close": 16.5,
+    "volume": 15245.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 17.0,
+    "high": 17.3999996185,
+    "low": 13.8000001907,
+    "close": 14.6000003815,
+    "volume": 63500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.4600000381,
+    "high": 16.0,
+    "low": 14.1999998093,
+    "close": 14.4399995804,
+    "volume": 21490.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.3999996185,
+    "high": 15.0,
+    "low": 14.3000001907,
+    "close": 14.4399995804,
+    "volume": 13710.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,19,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.1000003815,
+    "high": 14.8000001907,
+    "low": 13.6000003815,
+    "close": 13.6199998856,
+    "volume": 18245.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.0,
+    "high": 12.9600000381,
+    "low": 10.0,
+    "close": 10.279999733,
+    "volume": 192655.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.8199996948,
+    "high": 11.6000003815,
+    "low": 10.0,
+    "close": 10.2600002289,
+    "volume": 96085.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.1800003052,
+    "high": 12.5900001526,
+    "low": 10.1059999466,
+    "close": 12.2899999619,
+    "volume": 326400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.5,
+    "high": 14.9600000381,
+    "low": 12.1330003738,
+    "close": 13.0,
+    "volume": 753800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.6499996185,
+    "high": 13.4300003052,
+    "low": 11.5699996948,
+    "close": 12.6300001144,
+    "volume": 200100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,29,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.5900001526,
+    "high": 12.8199996948,
+    "low": 11.8999996185,
+    "close": 12.3249998093,
+    "volume": 112400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.1999998093,
+    "high": 12.6350002289,
+    "low": 11.720000267,
+    "close": 11.9799995422,
+    "volume": 76400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,01,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.8500003815,
+    "high": 11.8599996567,
+    "low": 11.015999794,
+    "close": 11.8100004196,
+    "volume": 107700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.8400001526,
+    "high": 12.8500003815,
+    "low": 11.5200004578,
+    "close": 12.6800003052,
+    "volume": 65200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.75,
+    "high": 13.1999998093,
+    "low": 11.75,
+    "close": 12.5100002289,
+    "volume": 54000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.6000003815,
+    "high": 14.0900001526,
+    "low": 12.6000003815,
+    "close": 13.6099996567,
+    "volume": 102200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.7299995422,
+    "high": 14.1210002899,
+    "low": 13.404999733,
+    "close": 13.4399995804,
+    "volume": 40700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.3900003433,
+    "high": 13.5900001526,
+    "low": 13.0399999619,
+    "close": 13.0500001907,
+    "volume": 17200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.3199996948,
+    "high": 13.5699996948,
+    "low": 12.6000003815,
+    "close": 12.6000003815,
+    "volume": 27800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.6000003815,
+    "high": 13.0399999619,
+    "low": 12.1599998474,
+    "close": 12.1599998474,
+    "volume": 30400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.25,
+    "high": 12.6999998093,
+    "low": 12.25,
+    "close": 12.6999998093,
+    "volume": 14700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.6000003815,
+    "high": 13.4399995804,
+    "low": 12.3299999237,
+    "close": 13.0900001526,
+    "volume": 28600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.1300001144,
+    "high": 13.1300001144,
+    "low": 12.5369997025,
+    "close": 12.7100000381,
+    "volume": 22100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.279999733,
+    "high": 12.6999998093,
+    "low": 11.8500003815,
+    "close": 12.0,
+    "volume": 46200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.0,
+    "high": 12.0,
+    "low": 10.8800001144,
+    "close": 11.2100000381,
+    "volume": 60800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.220000267,
+    "high": 12.0,
+    "low": 10.8199996948,
+    "close": 11.2600002289,
+    "volume": 54000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.123000145,
+    "high": 11.1499996185,
+    "low": 10.6199998856,
+    "close": 10.6199998856,
+    "volume": 41500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.5799999237,
+    "high": 13.1700000763,
+    "low": 10.5,
+    "close": 12.3400001526,
+    "volume": 197600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.6000003815,
+    "high": 12.6999998093,
+    "low": 11.8400001526,
+    "close": 11.9200000763,
+    "volume": 73200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.0,
+    "high": 12.2049999237,
+    "low": 11.6499996185,
+    "close": 12.0200004578,
+    "volume": 29400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.0,
+    "high": 12.267999649,
+    "low": 11.529999733,
+    "close": 11.7700004578,
+    "volume": 33000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,29,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.6300001144,
+    "high": 12.2899999619,
+    "low": 11.3999996185,
+    "close": 11.8199996948,
+    "volume": 38800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.0900001526,
+    "high": 12.779999733,
+    "low": 11.9289999008,
+    "close": 12.4200000763,
+    "volume": 38200.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,05,31,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.7100000381,
+    "high": 13.4899997711,
+    "low": 12.3299999237,
+    "close": 12.6899995804,
+    "volume": 35300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.2399997711,
+    "high": 13.2399997711,
+    "low": 12.1000003815,
+    "close": 12.4099998474,
+    "volume": 18100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,04,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.1459999084,
+    "high": 12.5649995804,
+    "low": 12.1450004578,
+    "close": 12.3400001526,
+    "volume": 16500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.3400001526,
+    "high": 12.9750003815,
+    "low": 11.5,
+    "close": 12.5,
+    "volume": 51100.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,06,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.5,
+    "high": 13.470000267,
+    "low": 12.5,
+    "close": 13.3800001144,
+    "volume": 91100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.2100000381,
+    "high": 13.4399995804,
+    "low": 12.6450004578,
+    "close": 12.8400001526,
+    "volume": 46400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.6499996185,
+    "high": 13.5500001907,
+    "low": 12.6499996185,
+    "close": 13.4300003052,
+    "volume": 34400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.2700004578,
+    "high": 13.6499996185,
+    "low": 12.8299999237,
+    "close": 13.5500001907,
+    "volume": 37100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.9200000763,
+    "high": 14.5450000763,
+    "low": 13.8199996948,
+    "close": 14.3699998856,
+    "volume": 66200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.1499996185,
+    "high": 14.4899997711,
+    "low": 14.0,
+    "close": 14.1599998474,
+    "volume": 26100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.8500003815,
+    "high": 14.25,
+    "low": 13.3579998016,
+    "close": 13.4399995804,
+    "volume": 59000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.279999733,
+    "high": 13.6700000763,
+    "low": 12.5200004578,
+    "close": 12.5900001526,
+    "volume": 41800.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,06,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.5799999237,
+    "high": 13.0,
+    "low": 11.8500003815,
+    "close": 12.1000003815,
+    "volume": 40300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.970000267,
+    "high": 12.4399995804,
+    "low": 11.529999733,
+    "close": 11.6999998093,
+    "volume": 69200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.0799999237,
+    "high": 12.1999998093,
+    "low": 11.25,
+    "close": 11.6199998856,
+    "volume": 54000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.3699998856,
+    "high": 11.8500003815,
+    "low": 10.4499998093,
+    "close": 11.2899999619,
+    "volume": 163700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.1599998474,
+    "high": 11.9499998093,
+    "low": 11.1599998474,
+    "close": 11.9499998093,
+    "volume": 72300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.8649997711,
+    "high": 11.8699998856,
+    "low": 11.1199998856,
+    "close": 11.1999998093,
+    "volume": 21700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.4449996948,
+    "high": 11.6599998474,
+    "low": 11.111000061,
+    "close": 11.1899995804,
+    "volume": 23300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.4899997711,
+    "high": 11.9399995804,
+    "low": 11.1499996185,
+    "close": 11.9399995804,
+    "volume": 52700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,01,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.9600000381,
+    "high": 12.3500003815,
+    "low": 11.5500001907,
+    "close": 12.0399999619,
+    "volume": 65400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.970000267,
+    "high": 12.1000003815,
+    "low": 11.1999998093,
+    "close": 11.9300003052,
+    "volume": 25200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.7700004578,
+    "high": 12.2449998856,
+    "low": 11.7700004578,
+    "close": 12.1599998474,
+    "volume": 20000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.1520004272,
+    "high": 12.1520004272,
+    "low": 11.7600002289,
+    "close": 12.0500001907,
+    "volume": 37500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.0500001907,
+    "high": 12.1300001144,
+    "low": 11.4200000763,
+    "close": 11.779999733,
+    "volume": 33000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.8000001907,
+    "high": 11.8000001907,
+    "low": 11.3299999237,
+    "close": 11.5249996185,
+    "volume": 38700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.5,
+    "high": 11.7709999084,
+    "low": 11.220000267,
+    "close": 11.3199996948,
+    "volume": 29200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.3299999237,
+    "high": 11.5100002289,
+    "low": 11.1350002289,
+    "close": 11.2600002289,
+    "volume": 43800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.6800003052,
+    "high": 11.6800003052,
+    "low": 11.2550001144,
+    "close": 11.4799995422,
+    "volume": 17100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.6800003052,
+    "high": 12.5349998474,
+    "low": 11.6199998856,
+    "close": 12.5,
+    "volume": 57000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.3699998856,
+    "high": 13.0749998093,
+    "low": 12.3699998856,
+    "close": 12.9399995804,
+    "volume": 25900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.5100002289,
+    "high": 13.029999733,
+    "low": 12.5100002289,
+    "close": 13.0100002289,
+    "volume": 18800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.0399999619,
+    "high": 13.0399999619,
+    "low": 12.529999733,
+    "close": 12.6400003433,
+    "volume": 9700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,19,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.5500001907,
+    "high": 12.5500001907,
+    "low": 11.8000001907,
+    "close": 11.8100004196,
+    "volume": 8800.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,07,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.6999998093,
+    "high": 11.9899997711,
+    "low": 11.5100002289,
+    "close": 11.7399997711,
+    "volume": 15100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.5100002289,
+    "high": 11.9499998093,
+    "low": 11.2159996033,
+    "close": 11.4799995422,
+    "volume": 20800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.470000267,
+    "high": 11.904999733,
+    "low": 11.470000267,
+    "close": 11.8400001526,
+    "volume": 26700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.7250003815,
+    "high": 12.1499996185,
+    "low": 11.6300001144,
+    "close": 11.9499998093,
+    "volume": 30600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.2100000381,
+    "high": 13.3420000076,
+    "low": 11.8800001144,
+    "close": 13.2399997711,
+    "volume": 71000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,29,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.029999733,
+    "high": 13.2030000687,
+    "low": 12.7600002289,
+    "close": 13.0500001907,
+    "volume": 13200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.3669996262,
+    "high": 13.3669996262,
+    "low": 13.0,
+    "close": 13.1300001144,
+    "volume": 4900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,31,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.1300001144,
+    "high": 13.2700004578,
+    "low": 12.8500003815,
+    "close": 13.1099996567,
+    "volume": 8200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,01,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.8800001144,
+    "high": 13.0699996948,
+    "low": 12.5399999619,
+    "close": 12.8900003433,
+    "volume": 11200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.7950000763,
+    "high": 12.7950000763,
+    "low": 11.5900001526,
+    "close": 11.8800001144,
+    "volume": 14600.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,08,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.1099996567,
+    "high": 11.8500003815,
+    "low": 11.1000003815,
+    "close": 11.6800003052,
+    "volume": 16700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.7899999619,
+    "high": 11.8149995804,
+    "low": 11.1000003815,
+    "close": 11.4300003052,
+    "volume": 22100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.0100002289,
+    "high": 11.529999733,
+    "low": 11.0100002289,
+    "close": 11.2899999619,
+    "volume": 9200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.0500001907,
+    "high": 11.8299999237,
+    "low": 10.7700004578,
+    "close": 11.5900001526,
+    "volume": 16600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.779999733,
+    "high": 11.8500003815,
+    "low": 11.279999733,
+    "close": 11.8100004196,
+    "volume": 16800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.3699998856,
+    "high": 11.7899999619,
+    "low": 11.3699998856,
+    "close": 11.7250003815,
+    "volume": 8300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.470000267,
+    "high": 12.3950004578,
+    "low": 11.470000267,
+    "close": 12.1499996185,
+    "volume": 14700.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,08,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.5399999619,
+    "high": 13.0,
+    "low": 12.0100002289,
+    "close": 12.8599996567,
+    "volume": 46400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.5799999237,
+    "high": 13.3599996567,
+    "low": 11.5799999237,
+    "close": 12.6400003433,
+    "volume": 26400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.4449996948,
+    "high": 12.8199996948,
+    "low": 12.2700004578,
+    "close": 12.7899999619,
+    "volume": 11700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,19,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.6999998093,
+    "high": 12.9600000381,
+    "low": 12.0100002289,
+    "close": 12.9600000381,
+    "volume": 21200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.6599998474,
+    "high": 12.9650001526,
+    "low": 12.3100004196,
+    "close": 12.9499998093,
+    "volume": 11500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.3420000076,
+    "high": 13.0100002289,
+    "low": 12.3420000076,
+    "close": 13.0,
+    "volume": 21000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.4799995422,
+    "high": 13.0,
+    "low": 12.4449996948,
+    "close": 13.0,
+    "volume": 15000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.0,
+    "high": 13.0,
+    "low": 12.6099996567,
+    "close": 12.9799995422,
+    "volume": 16400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.765999794,
+    "high": 12.8649997711,
+    "low": 12.5100002289,
+    "close": 12.8649997711,
+    "volume": 9000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.4180002213,
+    "high": 13.0,
+    "low": 12.4180002213,
+    "close": 12.970000267,
+    "volume": 52100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.7299995422,
+    "high": 12.9899997711,
+    "low": 12.5100002289,
+    "close": 12.9589996338,
+    "volume": 57700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,29,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.4399995804,
+    "high": 12.970000267,
+    "low": 12.4399995804,
+    "close": 12.9499998093,
+    "volume": 7500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.4600000381,
+    "high": 12.7550001144,
+    "low": 11.5100002289,
+    "close": 11.8900003433,
+    "volume": 40600.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,09,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.7700004578,
+    "high": 11.9899997711,
+    "low": 11.5,
+    "close": 11.5900001526,
+    "volume": 10400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,04,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.3199996948,
+    "high": 11.5399999619,
+    "low": 10.7600002289,
+    "close": 11.3149995804,
+    "volume": 42600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.4300003052,
+    "high": 11.5600004196,
+    "low": 11.2600002289,
+    "close": 11.5500001907,
+    "volume": 4200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.6000003815,
+    "high": 11.6000003815,
+    "low": 11.25,
+    "close": 11.4399995804,
+    "volume": 4300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.5799999237,
+    "high": 11.7299995422,
+    "low": 10.970000267,
+    "close": 11.6999998093,
+    "volume": 10000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.529999733,
+    "high": 11.9899997711,
+    "low": 11.4499998093,
+    "close": 11.9499998093,
+    "volume": 5400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.6400003433,
+    "high": 11.8599996567,
+    "low": 11.4200000763,
+    "close": 11.6199998856,
+    "volume": 24300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.7600002289,
+    "high": 11.7969999313,
+    "low": 11.3299999237,
+    "close": 11.3500003815,
+    "volume": 18200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.2100000381,
+    "high": 12.6800003052,
+    "low": 11.2100000381,
+    "close": 11.9399995804,
+    "volume": 32900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.0100002289,
+    "high": 12.1000003815,
+    "low": 11.5100002289,
+    "close": 11.8000001907,
+    "volume": 6400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.6000003815,
+    "high": 11.9750003815,
+    "low": 11.6000003815,
+    "close": 11.6300001144,
+    "volume": 7200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.6300001144,
+    "high": 12.3299999237,
+    "low": 11.5579996109,
+    "close": 11.6199998856,
+    "volume": 29900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,19,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.9099998474,
+    "high": 12.2700004578,
+    "low": 11.6899995804,
+    "close": 11.720000267,
+    "volume": 28000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.6999998093,
+    "high": 11.8800001144,
+    "low": 10.9399995804,
+    "close": 11.2700004578,
+    "volume": 40300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.1800003052,
+    "high": 11.279999733,
+    "low": 10.8699998856,
+    "close": 10.8699998856,
+    "volume": 21600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.0,
+    "high": 11.1899995804,
+    "low": 10.75,
+    "close": 10.7700004578,
+    "volume": 22500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.9799995422,
+    "high": 11.2399997711,
+    "low": 10.8100004196,
+    "close": 10.8199996948,
+    "volume": 10100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.8549995422,
+    "high": 11.279999733,
+    "low": 10.6000003815,
+    "close": 10.7899999619,
+    "volume": 22700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.6499996185,
+    "high": 10.7899999619,
+    "low": 10.6099996567,
+    "close": 10.7399997711,
+    "volume": 12700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.7399997711,
+    "high": 10.8800001144,
+    "low": 10.5,
+    "close": 10.75,
+    "volume": 14400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,01,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.6099996567,
+    "high": 10.7069997787,
+    "low": 10.4139995575,
+    "close": 10.6099996567,
+    "volume": 17200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.5200004578,
+    "high": 10.6809997559,
+    "low": 10.4119997025,
+    "close": 10.5500001907,
+    "volume": 8300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.4600000381,
+    "high": 10.6999998093,
+    "low": 10.2600002289,
+    "close": 10.6999998093,
+    "volume": 17800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,04,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.5200004578,
+    "high": 10.9250001907,
+    "low": 10.4200000763,
+    "close": 10.8999996185,
+    "volume": 17700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.7299995422,
+    "high": 11.1499996185,
+    "low": 10.720000267,
+    "close": 11.1300001144,
+    "volume": 10000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.9799995422,
+    "high": 11.1499996185,
+    "low": 10.513999939,
+    "close": 10.7100000381,
+    "volume": 17200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.7899999619,
+    "high": 10.970000267,
+    "low": 10.5699996948,
+    "close": 10.8500003815,
+    "volume": 7100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.6999998093,
+    "high": 10.8199996948,
+    "low": 10.4499998093,
+    "close": 10.5200004578,
+    "volume": 19700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.75,
+    "high": 10.9499998093,
+    "low": 10.376999855,
+    "close": 10.6099996567,
+    "volume": 12700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.6899995804,
+    "high": 10.6899995804,
+    "low": 10.2899999619,
+    "close": 10.3000001907,
+    "volume": 10900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.3000001907,
+    "high": 10.4799995422,
+    "low": 10.1400003433,
+    "close": 10.1700000763,
+    "volume": 25800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.4350004196,
+    "high": 10.9739999771,
+    "low": 10.2840003967,
+    "close": 10.7399997711,
+    "volume": 28600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 10.6499996185,
+    "high": 11.1499996185,
+    "low": 10.6000003815,
+    "close": 11.1499996185,
+    "volume": 19400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.0100002289,
+    "high": 11.5799999237,
+    "low": 10.3699998856,
+    "close": 11.2600002289,
+    "volume": 42900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.4899997711,
+    "high": 11.4899997711,
+    "low": 11.0699996948,
+    "close": 11.220000267,
+    "volume": 16700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.0900001526,
+    "high": 11.3900003433,
+    "low": 11.0900001526,
+    "close": 11.3800001144,
+    "volume": 3000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.1099996567,
+    "high": 11.4099998474,
+    "low": 11.0699996948,
+    "close": 11.3000001907,
+    "volume": 18400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.4040002823,
+    "high": 11.6999998093,
+    "low": 11.1160001755,
+    "close": 11.1599998474,
+    "volume": 10800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 11.3000001907,
+    "high": 13.25,
+    "low": 11.2849998474,
+    "close": 12.6000003815,
+    "volume": 75000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.9200000763,
+    "high": 12.9200000763,
+    "low": 12.1000003815,
+    "close": 12.470000267,
+    "volume": 8400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,29,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.6099996567,
+    "high": 13.9200000763,
+    "low": 12.5399999619,
+    "close": 13.3900003433,
+    "volume": 25500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.3900003433,
+    "high": 13.3900003433,
+    "low": 12.6459999084,
+    "close": 12.8299999237,
+    "volume": 28100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,31,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.7700004578,
+    "high": 13.0,
+    "low": 12.6999998093,
+    "close": 13.0,
+    "volume": 5600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,01,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.8500003815,
+    "high": 13.1300001144,
+    "low": 12.6610002518,
+    "close": 13.0900001526,
+    "volume": 10600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,04,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.0900001526,
+    "high": 13.4499998093,
+    "low": 13.0,
+    "close": 13.029999733,
+    "volume": 20200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.029999733,
+    "high": 13.2600002289,
+    "low": 13.0,
+    "close": 13.2600002289,
+    "volume": 14200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.470000267,
+    "high": 13.470000267,
+    "low": 12.779999733,
+    "close": 13.2600002289,
+    "volume": 10400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 12.9099998474,
+    "high": 13.3999996185,
+    "low": 12.7399997711,
+    "close": 13.1099996567,
+    "volume": 31700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.279999733,
+    "high": 13.779999733,
+    "low": 13.029999733,
+    "close": 13.5,
+    "volume": 23500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.5100002289,
+    "high": 13.6800003052,
+    "low": 12.8900003433,
+    "close": 13.3500003815,
+    "volume": 10800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.5839996338,
+    "high": 13.7299995422,
+    "low": 13.1400003433,
+    "close": 13.4499998093,
+    "volume": 19400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 13.3100004196,
+    "high": 14.0,
+    "low": 13.2700004578,
+    "close": 13.8999996185,
+    "volume": 27100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.0799999237,
+    "high": 14.75,
+    "low": 13.8199996948,
+    "close": 14.4799995422,
+    "volume": 30000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.5,
+    "high": 14.970000267,
+    "low": 13.8999996185,
+    "close": 14.3699998856,
+    "volume": 31600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.3299999237,
+    "high": 14.9899997711,
+    "low": 14.3299999237,
+    "close": 14.9600000381,
+    "volume": 47800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,19,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 14.9300003052,
+    "high": 15.6300001144,
+    "low": 14.9300003052,
+    "close": 15.6300001144,
+    "volume": 14700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 15.6800003052,
+    "high": 16.6369991302,
+    "low": 15.0200004578,
+    "close": 15.1199998856,
+    "volume": 45600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.9799995422,
+    "high": 19.9799995422,
+    "low": 17.1669998169,
+    "close": 17.4500007629,
+    "volume": 451700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 17.7299995422,
+    "high": 21.2840003967,
+    "low": 17.5200004578,
+    "close": 20.3999996185,
+    "volume": 255700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.3899993896,
+    "high": 20.5,
+    "low": 17.25,
+    "close": 18.6900005341,
+    "volume": 147600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.6000003815,
+    "high": 20.2000007629,
+    "low": 17.8199996948,
+    "close": 19.5900001526,
+    "volume": 32900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.5300006866,
+    "high": 20.2000007629,
+    "low": 19.25,
+    "close": 20.2000007629,
+    "volume": 26700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,29,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.2099990845,
+    "high": 20.5,
+    "low": 19.5620002747,
+    "close": 20.2099990845,
+    "volume": 10100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.2000007629,
+    "high": 20.4599990845,
+    "low": 18.7099990845,
+    "close": 18.7600002289,
+    "volume": 30800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.7999992371,
+    "high": 18.9599990845,
+    "low": 17.4099998474,
+    "close": 17.7099990845,
+    "volume": 62700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,04,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 17.9500007629,
+    "high": 20.3299999237,
+    "low": 17.8299999237,
+    "close": 19.9500007629,
+    "volume": 96500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.8400001526,
+    "high": 20.6599998474,
+    "low": 18.0279998779,
+    "close": 19.9300003052,
+    "volume": 39400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.2700004578,
+    "high": 24.0,
+    "low": 18.4249992371,
+    "close": 23.7299995422,
+    "volume": 120100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.5100002289,
+    "high": 24.0,
+    "low": 22.1399993896,
+    "close": 22.5100002289,
+    "volume": 49800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.1700000763,
+    "high": 24.0,
+    "low": 22.1499996185,
+    "close": 22.1700000763,
+    "volume": 24600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.9400005341,
+    "high": 22.25,
+    "low": 21.2150001526,
+    "close": 21.8199996948,
+    "volume": 36800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.4799995422,
+    "high": 22.0799999237,
+    "low": 21.1499996185,
+    "close": 21.6399993896,
+    "volume": 45800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.7800006866,
+    "high": 23.8899993896,
+    "low": 22.2019996643,
+    "close": 22.8799991608,
+    "volume": 101300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.8299999237,
+    "high": 23.6599998474,
+    "low": 22.7999992371,
+    "close": 23.2600002289,
+    "volume": 37500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.1700000763,
+    "high": 24.9899997711,
+    "low": 22.1000003815,
+    "close": 22.8099994659,
+    "volume": 59000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.4699993134,
+    "high": 22.7800006866,
+    "low": 19.2399997711,
+    "close": 20.5300006866,
+    "volume": 90500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,19,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.4899997711,
+    "high": 23.2099990845,
+    "low": 20.2390003204,
+    "close": 22.5100002289,
+    "volume": 85900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.1200008392,
+    "high": 24.0,
+    "low": 21.2000007629,
+    "close": 23.2199993134,
+    "volume": 148400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.8999996185,
+    "high": 24.3099994659,
+    "low": 21.8799991608,
+    "close": 23.3999996185,
+    "volume": 75000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.2600002289,
+    "high": 23.7000007629,
+    "low": 22.6299991608,
+    "close": 23.4300003052,
+    "volume": 31900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.2000007629,
+    "high": 23.4239997864,
+    "low": 22.7000007629,
+    "close": 23.2199993134,
+    "volume": 49500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.4400005341,
+    "high": 24.25,
+    "low": 22.8500003815,
+    "close": 23.6900005341,
+    "volume": 134400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.9899997711,
+    "high": 25.3199996948,
+    "low": 23.2600002289,
+    "close": 25.25,
+    "volume": 116700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,31,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 25.6100006104,
+    "high": 27.4400005341,
+    "low": 25.1079998016,
+    "close": 26.8799991608,
+    "volume": 183300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 27.1100006104,
+    "high": 28.4200000763,
+    "low": 26.0100002289,
+    "close": 27.2999992371,
+    "volume": 134300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 27.2999992371,
+    "high": 27.6849994659,
+    "low": 25.4099998474,
+    "close": 26.6200008392,
+    "volume": 118500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 26.5699996948,
+    "high": 27.0,
+    "low": 25.1100006104,
+    "close": 26.8099994659,
+    "volume": 171500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 27.1200008392,
+    "high": 27.7000007629,
+    "low": 26.1210002899,
+    "close": 27.0,
+    "volume": 234000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 27.6000003815,
+    "high": 27.6000003815,
+    "low": 21.5,
+    "close": 24.8799991608,
+    "volume": 231600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 24.7900009155,
+    "high": 25.4500007629,
+    "low": 22.5,
+    "close": 24.0,
+    "volume": 136400.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,01,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.9400005341,
+    "high": 24.3850002289,
+    "low": 21.1100006104,
+    "close": 21.1900005341,
+    "volume": 95100.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,01,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.0200004578,
+    "high": 22.3500003815,
+    "low": 20.8199996948,
+    "close": 20.9200000763,
+    "volume": 74800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.0900001526,
+    "high": 21.9200000763,
+    "low": 19.8700008392,
+    "close": 20.4200000763,
+    "volume": 93200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.4200000763,
+    "high": 21.7999992371,
+    "low": 20.2649993896,
+    "close": 21.25,
+    "volume": 113500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.0400009155,
+    "high": 22.0,
+    "low": 20.7619991302,
+    "close": 21.7000007629,
+    "volume": 229200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.8999996185,
+    "high": 22.6749992371,
+    "low": 21.6350002289,
+    "close": 22.1800003052,
+    "volume": 82700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.0,
+    "high": 22.2199993134,
+    "low": 21.6299991608,
+    "close": 21.9899997711,
+    "volume": 125200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.8999996185,
+    "high": 22.6499996185,
+    "low": 21.5499992371,
+    "close": 21.7999992371,
+    "volume": 148000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.5900001526,
+    "high": 21.6000003815,
+    "low": 18.5699996948,
+    "close": 18.9099998474,
+    "volume": 72900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.0200004578,
+    "high": 19.2800006866,
+    "low": 18.1100006104,
+    "close": 18.1200008392,
+    "volume": 51500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 17.9699993134,
+    "high": 19.2399997711,
+    "low": 17.5900001526,
+    "close": 18.9200000763,
+    "volume": 74100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,29,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.8099994659,
+    "high": 18.8099994659,
+    "low": 17.6830005646,
+    "close": 17.8500003815,
+    "volume": 31700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 17.6499996185,
+    "high": 18.1200008392,
+    "low": 17.1700000763,
+    "close": 18.1000003815,
+    "volume": 72500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,31,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.0699996948,
+    "high": 19.0,
+    "low": 17.9160003662,
+    "close": 18.5750007629,
+    "volume": 77200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.3299999237,
+    "high": 19.4979991913,
+    "low": 18.0400009155,
+    "close": 18.9500007629,
+    "volume": 134300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,04,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.8700008392,
+    "high": 20.2900009155,
+    "low": 18.7549991608,
+    "close": 20.0400009155,
+    "volume": 168800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.1900005341,
+    "high": 21.4599990845,
+    "low": 20.1900005341,
+    "close": 20.2199993134,
+    "volume": 35000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.0,
+    "high": 21.3899993896,
+    "low": 19.7240009308,
+    "close": 21.2299995422,
+    "volume": 77300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.3799991608,
+    "high": 21.9400005341,
+    "low": 21.0599994659,
+    "close": 21.6800003052,
+    "volume": 157400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.7000007629,
+    "high": 22.6200008392,
+    "low": 21.4899997711,
+    "close": 21.7299995422,
+    "volume": 79000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.5,
+    "high": 22.9300003052,
+    "low": 21.1520004272,
+    "close": 21.9899997711,
+    "volume": 40500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.7399997711,
+    "high": 24.8099994659,
+    "low": 21.7399997711,
+    "close": 23.4650001526,
+    "volume": 125700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.0,
+    "high": 24.9899997711,
+    "low": 22.7999992371,
+    "close": 23.3299999237,
+    "volume": 126600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.2199993134,
+    "high": 24.2999992371,
+    "low": 22.3400001526,
+    "close": 23.9400005341,
+    "volume": 106400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.8799991608,
+    "high": 24.3199996948,
+    "low": 23.6000003815,
+    "close": 24.0,
+    "volume": 86500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,19,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.9400005341,
+    "high": 24.9500007629,
+    "low": 23.3999996185,
+    "close": 23.8099994659,
+    "volume": 168700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.3999996185,
+    "high": 23.3999996185,
+    "low": 20.5,
+    "close": 22.3799991608,
+    "volume": 84300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.2900009155,
+    "high": 22.2999992371,
+    "low": 21.2280006409,
+    "close": 21.5400009155,
+    "volume": 51800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.5,
+    "high": 21.5200004578,
+    "low": 19.9580001831,
+    "close": 20.5,
+    "volume": 71100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.4699993134,
+    "high": 22.1550006866,
+    "low": 20.1100006104,
+    "close": 21.4200000763,
+    "volume": 105700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.5300006866,
+    "high": 22.5900001526,
+    "low": 21.4230003357,
+    "close": 22.1299991608,
+    "volume": 102600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.1100006104,
+    "high": 24.1350002289,
+    "low": 21.8169994354,
+    "close": 23.8500003815,
+    "volume": 61500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.75,
+    "high": 25.2399997711,
+    "low": 23.1599998474,
+    "close": 24.8999996185,
+    "volume": 257200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 24.8600006104,
+    "high": 25.7770004272,
+    "low": 23.0200004578,
+    "close": 23.0499992371,
+    "volume": 150200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,04,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.5599994659,
+    "high": 24.0,
+    "low": 22.2800006866,
+    "close": 23.1599998474,
+    "volume": 98000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.9599990845,
+    "high": 23.6350002289,
+    "low": 22.6200008392,
+    "close": 23.5,
+    "volume": 51400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.3700008392,
+    "high": 24.0,
+    "low": 23.1100006104,
+    "close": 23.6100006104,
+    "volume": 51200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.8500003815,
+    "high": 23.9400005341,
+    "low": 21.8500003815,
+    "close": 23.6599998474,
+    "volume": 52900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 24.1399993896,
+    "high": 24.1399993896,
+    "low": 21.7800006866,
+    "close": 22.3899993896,
+    "volume": 106500.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,03,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.9599990845,
+    "high": 21.9599990845,
+    "low": 20.1499996185,
+    "close": 21.0,
+    "volume": 126900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.9200000763,
+    "high": 23.658000946,
+    "low": 21.0,
+    "close": 23.0,
+    "volume": 148700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.1499996185,
+    "high": 23.4400005341,
+    "low": 21.7600002289,
+    "close": 22.3600006104,
+    "volume": 85000.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,03,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.3099994659,
+    "high": 22.7000007629,
+    "low": 22.0400009155,
+    "close": 22.0499992371,
+    "volume": 60700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.4500007629,
+    "high": 22.5849990845,
+    "low": 21.2999992371,
+    "close": 22.2700004578,
+    "volume": 90700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.2700004578,
+    "high": 23.25,
+    "low": 21.9050006866,
+    "close": 22.75,
+    "volume": 82500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,19,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.8400001526,
+    "high": 23.2150001526,
+    "low": 22.0400009155,
+    "close": 22.75,
+    "volume": 188700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.2800006866,
+    "high": 23.4899997711,
+    "low": 22.2800006866,
+    "close": 23.1000003815,
+    "volume": 816800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.0599994659,
+    "high": 23.4979991913,
+    "low": 21.2000007629,
+    "close": 22.4699993134,
+    "volume": 197900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.5799999237,
+    "high": 23.7600002289,
+    "low": 22.3999996185,
+    "close": 23.6299991608,
+    "volume": 104500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.5,
+    "high": 23.5,
+    "low": 21.7600002289,
+    "close": 22.0300006866,
+    "volume": 210600.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,03,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.8299999237,
+    "high": 22.2299995422,
+    "low": 20.6700000763,
+    "close": 20.8299999237,
+    "volume": 201500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.5499992371,
+    "high": 21.9249992371,
+    "low": 19.8299999237,
+    "close": 21.5799999237,
+    "volume": 67500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.8099994659,
+    "high": 22.6399993896,
+    "low": 21.5,
+    "close": 22.3899993896,
+    "volume": 77400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,31,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.8799991608,
+    "high": 22.6399993896,
+    "low": 21.0349998474,
+    "close": 21.5400009155,
+    "volume": 88100.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,04,01,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.3899993896,
+    "high": 22.0400009155,
+    "low": 18.7800006866,
+    "close": 18.9200000763,
+    "volume": 151500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.3400001526,
+    "high": 19.2099990845,
+    "low": 18.0300006866,
+    "close": 18.3700008392,
+    "volume": 135100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 17.75,
+    "high": 18.4150009155,
+    "low": 17.5,
+    "close": 17.8199996948,
+    "volume": 168600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,04,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 17.2000007629,
+    "high": 17.2000007629,
+    "low": 16.1000003815,
+    "close": 16.4300003052,
+    "volume": 119500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.1000003815,
+    "high": 16.7900009155,
+    "low": 15.220000267,
+    "close": 16.5200004578,
+    "volume": 139100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.9200000763,
+    "high": 17.7450008392,
+    "low": 16.3199996948,
+    "close": 17.1000003815,
+    "volume": 468500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 16.7700004578,
+    "high": 18.0100002289,
+    "low": 15.7600002289,
+    "close": 17.4699993134,
+    "volume": 575800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 17.0400009155,
+    "high": 18.4799995422,
+    "low": 16.5049991608,
+    "close": 17.0900001526,
+    "volume": 341100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 17.1900005341,
+    "high": 18.3400001526,
+    "low": 16.6900005341,
+    "close": 18.2049999237,
+    "volume": 213100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.5,
+    "high": 19.3099994659,
+    "low": 18.3799991608,
+    "close": 18.7399997711,
+    "volume": 82100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.7199993134,
+    "high": 20.1700000763,
+    "low": 18.7199993134,
+    "close": 20.0,
+    "volume": 117400.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,04,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.6399993896,
+    "high": 19.8299999237,
+    "low": 18.8999996185,
+    "close": 19.1800003052,
+    "volume": 57100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.25,
+    "high": 19.5799999237,
+    "low": 18.6900005341,
+    "close": 19.4400005341,
+    "volume": 112600.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,04,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.1800003052,
+    "high": 21.0,
+    "low": 19.1800003052,
+    "close": 20.6849994659,
+    "volume": 62800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.75,
+    "high": 22.6599998474,
+    "low": 20.5,
+    "close": 21.9799995422,
+    "volume": 131600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.1200008392,
+    "high": 22.8199996948,
+    "low": 21.2299995422,
+    "close": 21.8999996185,
+    "volume": 147500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.8999996185,
+    "high": 22.0300006866,
+    "low": 20.4340000153,
+    "close": 21.4799995422,
+    "volume": 101300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.3700008392,
+    "high": 22.0599994659,
+    "low": 20.9500007629,
+    "close": 21.5400009155,
+    "volume": 50800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.6599998474,
+    "high": 21.6599998474,
+    "low": 20.6499996185,
+    "close": 21.0300006866,
+    "volume": 149400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,29,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.7900009155,
+    "high": 21.4500007629,
+    "low": 19.9699993134,
+    "close": 21.1200008392,
+    "volume": 79500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.7900009155,
+    "high": 21.0499992371,
+    "low": 20.0,
+    "close": 20.8850002289,
+    "volume": 59400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,01,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.7999992371,
+    "high": 22.7999992371,
+    "low": 20.7980003357,
+    "close": 21.75,
+    "volume": 138600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.9300003052,
+    "high": 22.2999992371,
+    "low": 21.1599998474,
+    "close": 21.6900005341,
+    "volume": 132700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.5499992371,
+    "high": 22.0,
+    "low": 21.2199993134,
+    "close": 21.5,
+    "volume": 27300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.3099994659,
+    "high": 21.5949993134,
+    "low": 19.6700000763,
+    "close": 19.6949996948,
+    "volume": 56800.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,05,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.7099990845,
+    "high": 19.7099990845,
+    "low": 18.8799991608,
+    "close": 18.9799995422,
+    "volume": 50200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 18.8700008392,
+    "high": 20.2150001526,
+    "low": 18.7549991608,
+    "close": 19.1499996185,
+    "volume": 55600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 20.9699993134,
+    "high": 20.9699993134,
+    "low": 18.5049991608,
+    "close": 18.6299991608,
+    "volume": 61600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.1100006104,
+    "high": 20.2900009155,
+    "low": 18.6900005341,
+    "close": 19.4300003052,
+    "volume": 216500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.8600006104,
+    "high": 20.1299991608,
+    "low": 19.1599998474,
+    "close": 19.3600006104,
+    "volume": 64200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.2099990845,
+    "high": 19.5,
+    "low": 18.908000946,
+    "close": 19.3050003052,
+    "volume": 66200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 19.3299999237,
+    "high": 21.1849994659,
+    "low": 19.1000003815,
+    "close": 21.0400009155,
+    "volume": 277100.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,05,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.5200004578,
+    "high": 25.5799999237,
+    "low": 21.4799995422,
+    "close": 25.5,
+    "volume": 278700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,19,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 24.9899997711,
+    "high": 27.6399993896,
+    "low": 24.1800003052,
+    "close": 26.4899997711,
+    "volume": 382400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 26.2800006866,
+    "high": 27.4899997711,
+    "low": 25.8199996948,
+    "close": 26.8999996185,
+    "volume": 285400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 26.9300003052,
+    "high": 27.0,
+    "low": 25.2910003662,
+    "close": 26.25,
+    "volume": 262600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 26.1100006104,
+    "high": 26.5450000763,
+    "low": 25.2080001831,
+    "close": 25.7000007629,
+    "volume": 159800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 25.9500007629,
+    "high": 25.9500007629,
+    "low": 24.1200008392,
+    "close": 24.2800006866,
+    "volume": 163500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 24.5699996948,
+    "high": 24.6450004578,
+    "low": 22.9599990845,
+    "close": 24.0,
+    "volume": 170100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 24.0699996948,
+    "high": 24.9099998474,
+    "low": 21.8400001526,
+    "close": 22.6900005341,
+    "volume": 211400.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,05,29,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.5400009155,
+    "high": 22.7800006866,
+    "low": 21.5809993744,
+    "close": 22.0200004578,
+    "volume": 111900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.9899997711,
+    "high": 22.3449993134,
+    "low": 21.5699996948,
+    "close": 21.6800003052,
+    "volume": 116400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.4599990845,
+    "high": 22.9400005341,
+    "low": 21.4599990845,
+    "close": 22.6650009155,
+    "volume": 188500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.8099994659,
+    "high": 23.6200008392,
+    "low": 22.5,
+    "close": 23.2999992371,
+    "volume": 79000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,04,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.7299995422,
+    "high": 24.7700004578,
+    "low": 23.7299995422,
+    "close": 24.0499992371,
+    "volume": 363100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,05,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 25.0599994659,
+    "high": 25.0599994659,
+    "low": 23.5799999237,
+    "close": 24.0499992371,
+    "volume": 225700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,06,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 24.1299991608,
+    "high": 25.2999992371,
+    "low": 23.8500003815,
+    "close": 25.2199993134,
+    "volume": 192800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 25.5300006866,
+    "high": 25.875,
+    "low": 23.5599994659,
+    "close": 25.3799991608,
+    "volume": 252900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 25.2199993134,
+    "high": 26.1900005341,
+    "low": 23.8899993896,
+    "close": 26.1700000763,
+    "volume": 248800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 26.2000007629,
+    "high": 27.0,
+    "low": 25.2950000763,
+    "close": 25.9300003052,
+    "volume": 319200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,12,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 25.4400005341,
+    "high": 25.9400005341,
+    "low": 24.2000007629,
+    "close": 24.2600002289,
+    "volume": 151000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,13,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.7900009155,
+    "high": 24.1900005341,
+    "low": 22.8400001526,
+    "close": 22.8400001526,
+    "volume": 239400.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,06,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 23.0400009155,
+    "high": 23.8600006104,
+    "low": 22.2999992371,
+    "close": 22.4099998474,
+    "volume": 120300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.0300006866,
+    "high": 22.4409999847,
+    "low": 21.1399993896,
+    "close": 22.1000003815,
+    "volume": 204100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 22.6000003815,
+    "high": 22.6000003815,
+    "low": 21.25,
+    "close": 21.3099994659,
+    "volume": 127800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,20,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 21.4099998474,
+    "high": 21.5300006866,
+    "low": 20.1599998474,
+    "close": 21.0200004578,
+    "volume": 397000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 40.6300010681,
+    "high": 45.3899993896,
+    "low": 37.7599983215,
+    "close": 44.9500007629,
+    "volume": 6741800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 49.7099990845,
+    "high": 56.8289985657,
+    "low": 43.0400009155,
+    "close": 46.8400001526,
+    "volume": 3484000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 43.6800003052,
+    "high": 50.0,
+    "low": 43.0,
+    "close": 49.3300018311,
+    "volume": 3651000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,26,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 48.9199981689,
+    "high": 51.4599990845,
+    "low": 47.0999984741,
+    "close": 48.0299987793,
+    "volume": 1937900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,27,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 46.75,
+    "high": 49.5,
+    "low": 45.4160003662,
+    "close": 49.4500007629,
+    "volume": 3751000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 48.5,
+    "high": 50.4799995422,
+    "low": 46.1800003052,
+    "close": 48.7099990845,
+    "volume": 1157300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,01,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 48.9500007629,
+    "high": 49.25,
+    "low": 45.0099983215,
+    "close": 49.0299987793,
+    "volume": 832668.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,02,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 47.5999984741,
+    "high": 48.7550010681,
+    "low": 44.4599990845,
+    "close": 47.8699989319,
+    "volume": 1157980.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,03,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 47.4599990845,
+    "high": 49.3699989319,
+    "low": 46.3899993896,
+    "close": 48.7799987793,
+    "volume": 412729.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,07,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 48.0,
+    "high": 48.5153999329,
+    "low": 45.5896987915,
+    "close": 48.2999992371,
+    "volume": 760683.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,08,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 46.0099983215,
+    "high": 50.5900001526,
+    "low": 45.8699989319,
+    "close": 50.4500007629,
+    "volume": 1167717.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,09,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 51.4373016357,
+    "high": 52.3300018311,
+    "low": 47.6899986267,
+    "close": 50.9599990845,
+    "volume": 1236556.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,10,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 50.8800010681,
+    "high": 52.3100013733,
+    "low": 49.3650016785,
+    "close": 50.8800010681,
+    "volume": 394263.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,11,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 52.0,
+    "high": 52.1500015259,
+    "low": 48.3650016785,
+    "close": 50.5349998474,
+    "volume": 464749.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,14,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 50.4500007629,
+    "high": 55.75,
+    "low": 49.4277992249,
+    "close": 55.3199996948,
+    "volume": 1331922.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,15,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 54.9300003052,
+    "high": 55.310798645,
+    "low": 50.9399986267,
+    "close": 51.4949989319,
+    "volume": 678409.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,16,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 52.0499992371,
+    "high": 52.5250015259,
+    "low": 50.2498016357,
+    "close": 52.2599983215,
+    "volume": 435189.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,17,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 52.5200004578,
+    "high": 56.4889984131,
+    "low": 51.7099990845,
+    "close": 56.1500015259,
+    "volume": 580479.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,18,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 56.4700012207,
+    "high": 61.5400009155,
+    "low": 54.5182991028,
+    "close": 59.9599990845,
+    "volume": 1113466.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,21,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 59.9500007629,
+    "high": 60.3450012207,
+    "low": 56.1699981689,
+    "close": 57.0499992371,
+    "volume": 904148.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,22,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 56.9099998474,
+    "high": 62.1599998474,
+    "low": 54.9099998474,
+    "close": 61.5299987793,
+    "volume": 694408.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,23,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 62.8699989319,
+    "high": 66.9449996948,
+    "low": 61.0,
+    "close": 64.8499984741,
+    "volume": 835138.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,24,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 64.3199996948,
+    "high": 65.1733016968,
+    "low": 62.0,
+    "close": 62.8199996948,
+    "volume": 654755.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,25,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 62.9099998474,
+    "high": 63.8375015259,
+    "low": 60.7308998108,
+    "close": 61.8499984741,
+    "volume": 353201.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,28,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 62.6199989319,
+    "high": 63.1949996948,
+    "low": 60.7099990845,
+    "close": 62.6800003052,
+    "volume": 282035.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,29,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 62.8499984741,
+    "high": 63.0499992371,
+    "low": 61.0299987793,
+    "close": 61.9300003052,
+    "volume": 202725.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,30,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 61.9300003052,
+    "high": 63.8800010681,
+    "low": 61.1850013733,
+    "close": 61.7900009155,
+    "volume": 291879.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,31,00,00,00,000000",
+    "ticker": "CDTX",
+    "open": 61.4700012207,
+    "high": 64.9499969482,
+    "low": 61.4300003052,
+    "close": 63.3100013733,
+    "volume": 359415.0,
+    "wedge_status": "none"
+  }
+]
