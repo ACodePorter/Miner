@@ -20,6 +20,4 @@ RUN uv pip install --system /miner_release/Detonator /miner_release/DataMiner /m
 
 COPY --chown=miner:miner miner.json $HOME/.miner/miner.json
 
-USER root
-
 ENTRYPOINT /miner_release/docker_entry.sh

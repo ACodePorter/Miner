@@ -158,7 +158,10 @@ def update_indicators_for_tickers_task(tickers: List[str]) -> bool:
 def update_wedge_pop_for_index_task() -> bool:
     _logger.debug('update_wedge_pop_for_index_task')
     wedge_pop: WedgePop = WedgePop.get_instance()
-    return wedge_pop.update_wedge_pop_for_index('spx') and wedge_pop.update_wedge_pop_for_index('iwd') and wedge_pop.update_wedge_pop_for_index('iwf') and wedge_pop.update_wedge_pop_for_index('iwm')
+    return all([wedge_pop.update_wedge_pop_for_index('spx'),
+                wedge_pop.update_wedge_pop_for_index('iwd'),
+                wedge_pop.update_wedge_pop_for_index('iwf'),
+                wedge_pop.update_wedge_pop_for_index('iwm')])
 
 
 @app.task

@@ -14,7 +14,7 @@ from ._market_data_shovel import MarketDataShovel
 from ._trade_cal import TradeCalendarShovel
 from .models import TickerDailyInfo
 
-_l = get_logger('WedgePop', level=logging.INFO)
+_l = get_logger('WedgePop', level=logging.NOTSET)
 
 
 class WedgeConfig:
@@ -66,7 +66,6 @@ class WedgePop(SingletonParent):
                 return DataFrame()
             data = data[['_id', 'trade_date', 'ticker', 'open', 'high',
                          'low', 'close', 'volume', 'ema10', 'ema20']]
-            _l.debug(f'data:\n{data}\n')
             return data
         except Exception as e:
             _l.error(f"Error preparing data for ticker {ticker}: {str(e)}")
@@ -174,8 +173,9 @@ class WedgePop(SingletonParent):
             else:
                 # Handle string representation from mongo_2_df
                 object_id = ObjectId(object_id['$oid'])
-            TickerDailyInfo.objects(id=object_id).update(
+            result = TickerDailyInfo.objects(id=object_id).update(
                 wedge_status=data['wedge_status'].iloc[i])
+            _l.info(f'{ticker} on {data.iloc[i]["trade_date"]} {object_id} to {data["wedge_status"].iloc[i]} result: {result}')
         return True  # Return True to indicate successful processing
 
     def update_wedge_pop_for_index(self, idx: Literal['spx', 'iwd', 'iwf', 'iwm']) -> bool:
