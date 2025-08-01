@@ -7508,5 +7508,15 @@
     "close": 714.9199829102,
     "volume": 874230.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,31,00,00,00,000000",
+    "ticker": "MCK",
+    "open": 711.1900024414,
+    "high": 717.0,
+    "low": 686.5,
+    "close": 693.5399780273,
+    "volume": 865108.0,
+    "wedge_status": "drop"
   }
 ]

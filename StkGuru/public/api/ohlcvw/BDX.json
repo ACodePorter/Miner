@@ -7508,5 +7508,15 @@
     "close": 181.6000061035,
     "volume": 1542643.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,31,00,00,00,000000",
+    "ticker": "BDX",
+    "open": 180.5,
+    "high": 182.2599945068,
+    "low": 178.25,
+    "close": 178.25,
+    "volume": 2369094.0,
+    "wedge_status": "drop"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 120.0,
     "volume": 735062.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,31,00,00,00,000000",
+    "ticker": "KEX",
+    "open": 112.0,
+    "high": 112.0,
+    "low": 92.5411987305,
+    "close": 95.3099975586,
+    "volume": 3807444.0,
+    "wedge_status": "drop"
   }
 ]
