@@ -22,7 +22,7 @@ function App() {
                 displayName="S&P 500 (SPX)" 
                 color="#60A5FA"
                 autoRefresh={true}
-                refreshInterval={5 * 60 * 1000} // 5 minutes
+                refreshInterval={60 * 60 * 1000} // 1 hour
               />
             </Suspense>
             <Suspense fallback={<LoadingSpinner text="Loading HSI Chart..." />}>
@@ -31,7 +31,7 @@ function App() {
                 displayName="Hang Seng Index (HSI)" 
                 color="#A78BFA"
                 autoRefresh={true}
-                refreshInterval={5 * 60 * 1000} // 5 minutes
+                refreshInterval={60 * 60 * 1000} // 1 hour
               />
             </Suspense>
           </div>
@@ -48,7 +48,7 @@ function App() {
             <Suspense fallback={<LoadingSpinner text="Loading OHLCV Chart..." />}>
               <OHLCVChart 
                 autoRefresh={true}
-                refreshInterval={5 * 60 * 1000} // 5 minutes
+                refreshInterval={60 * 60 * 1000} // 1 hour
               />
             </Suspense>
           </div>

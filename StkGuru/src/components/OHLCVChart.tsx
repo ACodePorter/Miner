@@ -89,7 +89,7 @@ interface OHLCVChartProps {
 
 const OHLCVChart: React.FC<OHLCVChartProps> = ({
   autoRefresh = false,
-  refreshInterval = 5 * 60 * 1000, // 5 minutes
+  refreshInterval = 60 * 60 * 1000, // 1 hour
   className = "",
 }) => {
   const [selectedTicker, setSelectedTicker] = useState<string>("");
