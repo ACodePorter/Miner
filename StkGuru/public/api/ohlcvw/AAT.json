@@ -7508,5 +7508,15 @@
     "close": 19.0300006866,
     "volume": 699700.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,01,00,00,00,000000",
+    "ticker": "AAT",
+    "open": 19.0,
+    "high": 19.0750007629,
+    "low": 18.5100002289,
+    "close": 18.7000007629,
+    "volume": 595466.0,
+    "wedge_status": "none"
   }
 ]

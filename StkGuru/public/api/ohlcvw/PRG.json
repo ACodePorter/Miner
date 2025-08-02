@@ -7508,5 +7508,15 @@
     "close": 31.8400001526,
     "volume": 591754.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,01,00,00,00,000000",
+    "ticker": "PRG",
+    "open": 31.3899993896,
+    "high": 31.8099994659,
+    "low": 30.2749996185,
+    "close": 30.5,
+    "volume": 517827.0,
+    "wedge_status": "drop"
   }
 ]

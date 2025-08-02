@@ -7508,5 +7508,15 @@
     "close": 0.5500000119,
     "volume": 558.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,01,00,00,00,000000",
+    "ticker": "WLLBW",
+    "open": 0.5,
+    "high": 0.5,
+    "low": 0.5,
+    "close": 0.5,
+    "volume": 5432.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 14.5,
     "volume": 50283521.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,01,00,00,00,000000",
+    "ticker": "RGTI",
+    "open": 14.029999733,
+    "high": 14.3699998856,
+    "low": 13.6099996567,
+    "close": 14.1199998856,
+    "volume": 31691413.0,
+    "wedge_status": "drop"
   }
 ]

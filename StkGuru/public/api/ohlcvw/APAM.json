@@ -7508,5 +7508,15 @@
     "close": 45.25,
     "volume": 934320.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,01,00,00,00,000000",
+    "ticker": "APAM",
+    "open": 44.3800010681,
+    "high": 44.9000015259,
+    "low": 43.5849990845,
+    "close": 44.8400001526,
+    "volume": 566937.0,
+    "wedge_status": "none"
   }
 ]

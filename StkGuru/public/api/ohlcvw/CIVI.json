@@ -7508,5 +7508,15 @@
     "close": 30.3600006104,
     "volume": 1518851.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,01,00,00,00,000000",
+    "ticker": "CIVI",
+    "open": 29.9799995422,
+    "high": 30.1749992371,
+    "low": 28.625,
+    "close": 28.7299995422,
+    "volume": 1775740.0,
+    "wedge_status": "none"
   }
 ]

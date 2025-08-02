@@ -7508,5 +7508,15 @@
     "close": 41.0,
     "volume": 1936.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,01,00,00,00,000000",
+    "ticker": "TCI",
+    "open": 40.4099998474,
+    "high": 40.6300010681,
+    "low": 39.7799987793,
+    "close": 39.7799987793,
+    "volume": 3118.0,
+    "wedge_status": "none"
   }
 ]

@@ -4678,5 +4678,15 @@
     "close": 1.5700000525,
     "volume": 2481969.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,01,00,00,00,000000",
+    "ticker": "SPWR",
+    "open": 1.5700000525,
+    "high": 1.6204999685,
+    "low": 1.4700000286,
+    "close": 1.4800000191,
+    "volume": 952481.0,
+    "wedge_status": "none"
   }
 ]

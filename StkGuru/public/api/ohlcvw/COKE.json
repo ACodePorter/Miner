@@ -7508,5 +7508,15 @@
     "close": 111.75,
     "volume": 476052.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,01,00,00,00,000000",
+    "ticker": "COKE",
+    "open": 112.1900024414,
+    "high": 113.0,
+    "low": 110.5500030518,
+    "close": 112.4100036621,
+    "volume": 541904.0,
+    "wedge_status": "none"
   }
 ]

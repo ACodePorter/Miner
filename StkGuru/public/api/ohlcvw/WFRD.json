@@ -7508,5 +7508,15 @@
     "close": 56.5499992371,
     "volume": 928198.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,01,00,00,00,000000",
+    "ticker": "WFRD",
+    "open": 55.1599998474,
+    "high": 55.5900001526,
+    "low": 53.5,
+    "close": 54.7400016785,
+    "volume": 966130.0,
+    "wedge_status": "drop"
   }
 ]

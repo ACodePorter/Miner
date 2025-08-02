@@ -7508,5 +7508,15 @@
     "close": 127.5,
     "volume": 202343.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,01,00,00,00,000000",
+    "ticker": "PLXS",
+    "open": 125.6299972534,
+    "high": 126.9100036621,
+    "low": 124.4899978638,
+    "close": 125.1600036621,
+    "volume": 190953.0,
+    "wedge_status": "none"
   }
 ]

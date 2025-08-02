@@ -2298,5 +2298,15 @@
     "close": 10.0399999619,
     "volume": 312289.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,01,00,00,00,000000",
+    "ticker": "WBTN",
+    "open": 9.7600002289,
+    "high": 9.7899999619,
+    "low": 9.1800003052,
+    "close": 9.2299995422,
+    "volume": 234558.0,
+    "wedge_status": "drop"
   }
 ]
