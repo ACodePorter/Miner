@@ -1170,6 +1170,403 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
     };
   }, [chartData, selectedTicker]);
 
+  // Generate wedge statistics chart options
+  const wedgeStatsChartOptions = useMemo(() => {
+    if (!categorizedTickers.length) return null;
+
+    // Sort categorized tickers by date (oldest first for proper timeline)
+    const sortedCategorizedTickers = [...categorizedTickers].sort((a, b) => {
+      const dateA = new Date(a.date.substring(0, 4) + '-' + a.date.substring(4, 6) + '-' + a.date.substring(6, 8));
+      const dateB = new Date(b.date.substring(0, 4) + '-' + b.date.substring(4, 6) + '-' + b.date.substring(6, 8));
+      return dateA.getTime() - dateB.getTime();
+    });
+
+    // Create data for the stacked area chart
+    const popData = sortedCategorizedTickers.map(item => {
+      const timestamp = new Date(
+        item.date.substring(0, 4) + '-' + 
+        item.date.substring(4, 6) + '-' + 
+        item.date.substring(6, 8)
+      ).getTime();
+      return [timestamp, item.pop.length];
+    });
+
+    const dropData = sortedCategorizedTickers.map(item => {
+      const timestamp = new Date(
+        item.date.substring(0, 4) + '-' + 
+        item.date.substring(4, 6) + '-' + 
+        item.date.substring(6, 8)
+      ).getTime();
+      return [timestamp, item.drop.length];
+    });
+
+    // Create total data for reference line
+    const totalData = sortedCategorizedTickers.map(item => {
+      const timestamp = new Date(
+        item.date.substring(0, 4) + '-' + 
+        item.date.substring(4, 6) + '-' + 
+        item.date.substring(6, 8)
+      ).getTime();
+      return [timestamp, item.pop.length + item.drop.length];
+    });
+
+    return {
+      chart: {
+        type: 'area',
+        height: 400,
+        backgroundColor: 'rgba(0, 0, 0, 0.3)',
+        zoomType: 'x',
+        panning: {
+          enabled: true,
+          type: 'x',
+        },
+        style: {
+          fontFamily: 'inherit',
+        },
+        plotBackgroundColor: 'rgba(0, 0, 0, 0.2)',
+        plotBorderWidth: 0,
+        plotShadow: false,
+        spacing: [5, 5, 5, 5],
+        reflow: true,
+      },
+      title: {
+        text: 'Wedge Statistics',
+        style: { 
+          fontSize: '16px', 
+          fontWeight: '700', 
+          color: '#E5E7EB' 
+        },
+        align: 'left',
+        x: 10,
+        y: 8,
+      },
+              xAxis: {
+          type: 'datetime',
+          labels: {
+            format: '{value:%Y-%m-%d}',
+            style: { fontSize: '14px', color: '#D1D5DB', fontWeight: '500' },
+            rotation: 0,
+            step: 2,
+          },
+          gridLineWidth: 2,
+          gridLineColor: 'rgba(107, 114, 128, 0.4)',
+          lineColor: 'rgba(156, 163, 175, 0.6)',
+          tickColor: 'rgba(156, 163, 175, 0.6)',
+          tickWidth: 2,
+          tickLength: 6,
+          crosshair: {
+            color: 'rgba(96, 165, 250, 0.7)',
+            width: 2,
+            dashStyle: 'shortdot'
+          }
+        },
+      yAxis: {
+        title: {
+          text: 'Number of Events',
+          style: { fontSize: '14px', fontWeight: '700', color: '#E5E7EB' },
+        },
+        labels: {
+          style: { fontSize: '12px', color: '#D1D5DB', fontWeight: '500' },
+        },
+        gridLineWidth: 1,
+        gridLineColor: 'rgba(107, 114, 128, 0.3)',
+        lineColor: 'rgba(156, 163, 175, 0.6)',
+        tickColor: 'rgba(156, 163, 175, 0.6)',
+        tickWidth: 1,
+        tickLength: 4,
+        crosshair: {
+          color: 'rgba(96, 165, 250, 0.7)',
+          width: 1,
+          dashStyle: 'shortdot'
+        }
+      },
+      series: [
+        {
+          name: 'DROP Events',
+          data: dropData,
+          type: 'areaspline',
+          color: '#F92672', // Monokai red
+          fillColor: {
+            linearGradient: {
+              x1: 0,
+              y1: 0,
+              x2: 0,
+              y2: 1
+            },
+            stops: [
+              [0, 'rgba(249, 38, 114, 0.8)'], // Monokai red with opacity
+              [1, 'rgba(249, 38, 114, 0.1)']
+            ]
+          },
+          lineColor: '#F92672',
+          lineWidth: 2,
+          marker: {
+            enabled: false,
+          },
+          tooltip: {
+            pointFormat: '{point.series.name}: {point.y} events',
+          },
+        },
+        {
+          name: 'POP Events',
+          data: popData,
+          type: 'areaspline',
+          color: '#A6E22E', // Monokai green
+          fillColor: {
+            linearGradient: {
+              x1: 0,
+              y1: 0,
+              x2: 0,
+              y2: 1
+            },
+            stops: [
+              [0, 'rgba(166, 226, 46, 0.8)'], // Monokai green with opacity
+              [1, 'rgba(166, 226, 46, 0.1)']
+            ]
+          },
+          lineColor: '#A6E22E',
+          lineWidth: 2,
+          marker: {
+            enabled: false,
+          },
+          tooltip: {
+            pointFormat: '{point.series.name}: {point.y} events',
+          },
+        },
+        {
+          name: 'Total Events',
+          data: totalData,
+          type: 'spline',
+          color: '#66D9EF', // Monokai blue
+          lineWidth: 3,
+          marker: {
+            enabled: false,
+          },
+          tooltip: {
+            pointFormat: '{point.series.name}: {point.y} events',
+          },
+          zIndex: 10, // Higher z-index to appear above stacked areas
+        }
+      ],
+      tooltip: {
+        shared: true,
+        backgroundColor: 'rgba(17, 24, 39, 0.98)',
+        borderWidth: 0,
+        shadow: true,
+        borderRadius: 8,
+        style: { fontSize: '13px', color: '#ffffff' },
+        formatter: function(this: any) {
+          const date = Highcharts.dateFormat('%Y-%m-%d', this.x);
+          let tooltip = `<div style="padding: 4px 0;"><b style="color: #F92672; font-size: 14px;">${date}</b></div><br/>`;
+          
+          this.points?.forEach((point: any) => {
+            const seriesName = point.series.name;
+            const value = point.y;
+            let color = '#75715E'; // Default gray
+            
+            if (seriesName.includes('POP')) {
+              color = '#A6E22E';
+            } else if (seriesName.includes('DROP')) {
+              color = '#F92672';
+            } else if (seriesName.includes('Total')) {
+              color = '#66D9EF';
+            }
+            
+            tooltip += `<span style="color: ${color}; font-size: 16px;">●</span> <span style="color: ${color}; font-weight: 500;">${seriesName}:</span> <span style="color: #F8F8F2; font-weight: bold;">${value}</span><br/>`;
+          });
+          
+          return tooltip;
+        },
+      },
+      legend: {
+        enabled: true,
+        align: 'center',
+        verticalAlign: 'bottom',
+        layout: 'horizontal',
+        itemStyle: { 
+          fontSize: '12px',
+          color: '#F8F8F2',
+          fontWeight: '600'
+        },
+        itemHoverStyle: {
+          color: '#F92672'
+        },
+        symbolHeight: 10,
+        symbolWidth: 20,
+        symbolRadius: 2,
+        backgroundColor: '#272822',
+        borderWidth: 1,
+        borderColor: '#75715E',
+        borderRadius: 6,
+        shadow: true,
+        itemDistance: 15,
+        padding: 8,
+        width: '100%',
+        height: 40,
+        itemWidth: 120,
+        useHTML: false,
+        floating: false,
+        x: 0,
+        y: 0,
+      },
+      plotOptions: {
+        area: {
+          stacking: 'normal',
+          lineWidth: 2,
+          marker: {
+            enabled: true,
+            radius: 3,
+            symbol: 'circle',
+            states: {
+              hover: {
+                enabled: true,
+                radius: 5,
+                brightness: 0.3
+              }
+            }
+          },
+          tooltip: {
+            enabled: true,
+          },
+        },
+        series: {
+          animation: {
+            duration: 1000,
+          },
+          tooltip: {
+            enabled: true,
+          },
+        },
+      },
+      rangeSelector: {
+        enabled: true,
+        selected: 0, // 6m button (first button)
+        inputEnabled: false,
+        buttonTheme: {
+          fill: 'rgba(0, 0, 0, 0.9)',
+          stroke: 'rgba(75, 85, 99, 0.6)',
+          r: 6,
+          states: {
+            hover: {
+              fill: 'rgba(31, 41, 55, 0.9)',
+              style: {
+                color: '#ffffff',
+              },
+            },
+            select: {
+              fill: 'rgba(96, 165, 250, 0.8)',
+              style: {
+                color: '#ffffff',
+                fontWeight: 'bold',
+              },
+            },
+          },
+          style: {
+            color: '#9ca3af',
+            fontSize: '11px',
+            fontWeight: '500',
+          },
+        },
+        buttons: [
+          { type: 'month', count: 6, text: '6m' },
+          { type: 'year', count: 1, text: '1y' },
+          { type: 'year', count: 3, text: '3y' },
+          { type: 'year', count: 5, text: '5y' },
+          { type: 'all', text: 'All' },
+        ],
+      },
+      navigator: {
+        enabled: true,
+        height: 30,
+        margin: 5,
+        outlineWidth: 0,
+        outlineColor: 'transparent',
+        handles: {
+          backgroundColor: 'rgba(96, 165, 250, 0.8)',
+          borderColor: 'rgba(96, 165, 250, 1)',
+          lineColor: 'rgba(96, 165, 250, 0.5)',
+          rifleColor: 'rgba(96, 165, 250, 0.8)',
+        },
+        xAxis: {
+          gridLineColor: 'rgba(0, 0, 0, 0.3)',
+          lineColor: 'rgba(75, 85, 99, 0.6)',
+          tickColor: 'rgba(75, 85, 99, 0.4)',
+          labels: {
+            style: {
+              color: '#9ca3af',
+              fontSize: '9px',
+            },
+          },
+        },
+      },
+      scrollbar: {
+        enabled: true,
+        barBackgroundColor: 'rgba(75, 85, 99, 0.5)',
+        barBorderColor: 'rgba(75, 85, 99, 0.8)',
+        buttonBackgroundColor: 'rgba(55, 65, 81, 0.8)',
+        buttonBorderColor: 'rgba(75, 85, 99, 0.8)',
+        buttonArrowColor: '#9ca3af',
+        rifleColor: 'rgba(96, 165, 250, 0.8)',
+        trackBackgroundColor: 'rgba(31, 41, 55, 0.3)',
+        trackBorderColor: 'rgba(75, 85, 99, 0.3)',
+      },
+      responsive: {
+        rules: [{
+          condition: {
+            maxWidth: 768
+          },
+          chartOptions: {
+            legend: {
+              enabled: false
+            },
+            chart: {
+              height: 200
+            },
+            rangeSelector: {
+              enabled: false
+            },
+            navigator: {
+              enabled: false
+            },
+            scrollbar: {
+              enabled: false
+            }
+          }
+        }]
+      },
+      credits: {
+        enabled: false,
+      },
+      exporting: {
+        enabled: true,
+        buttons: {
+          contextButton: {
+            symbol: 'menu',
+            symbolX: 12,
+            symbolY: 10,
+            symbolSize: 12,
+            symbolStrokeWidth: 2,
+            symbolStroke: '#9ca3af',
+            symbolFill: 'rgba(31, 41, 55, 0.8)',
+            menuItems: ['downloadPNG', 'downloadPDF', 'downloadCSV'],
+            theme: {
+              fill: 'rgba(31, 41, 55, 0.95)',
+              stroke: 'rgba(75, 85, 99, 0.5)',
+              states: {
+                hover: {
+                  fill: 'rgba(55, 65, 81, 0.95)',
+                  style: {
+                    color: '#ffffff'
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    };
+  }, [categorizedTickers]);
+
   const handleTickerChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedTicker(event.target.value);
   };
@@ -1454,6 +1851,16 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
           <HighchartsReact
             highcharts={Highcharts}
             options={chartOptions}
+            constructorType="stockChart"
+          />
+        )}
+      </div>
+
+      <div className="mt-4">
+        {wedgeStatsChartOptions && (
+          <HighchartsReact
+            highcharts={Highcharts}
+            options={wedgeStatsChartOptions}
             constructorType="stockChart"
           />
         )}
