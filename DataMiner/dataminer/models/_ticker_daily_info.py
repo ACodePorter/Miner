@@ -141,6 +141,7 @@ class TickerDailyInfo(Document):
             {'fields': ['ticker', 'interval', 'sma200']},
             {'fields': ['interval', 'ticker', 'trade_date']},
             {'fields': ['wedge_status', '-ticker', '-trade_date']},
+            {'fields': ['trade_date', 'wedge_status', 'ticker']},
             {'fields': ['trade_date', 'wedge_status']},
         ]
     }
