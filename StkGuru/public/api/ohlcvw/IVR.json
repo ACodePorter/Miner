@@ -7488,5 +7488,15 @@
     "close": 7.5799999237,
     "volume": 1372314.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,04,00,00,00,000000",
+    "ticker": "IVR",
+    "open": 7.6199998856,
+    "high": 7.75,
+    "low": 7.6050000191,
+    "close": 7.7100000381,
+    "volume": 761501.0,
+    "wedge_status": "pop"
   }
 ]

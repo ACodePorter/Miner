@@ -7488,5 +7488,15 @@
     "close": 8.7600002289,
     "volume": 1308425.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,04,00,00,00,000000",
+    "ticker": "ADTN",
+    "open": 8.8100004196,
+    "high": 9.4849996567,
+    "low": 8.8100004196,
+    "close": 9.470000267,
+    "volume": 1040483.0,
+    "wedge_status": "none"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 88.0,
     "volume": 2786232.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,04,00,00,00,000000",
+    "ticker": "ACGL",
+    "open": 87.9000015259,
+    "high": 89.0400009155,
+    "low": 87.8899993896,
+    "close": 88.5100021362,
+    "volume": 2200933.0,
+    "wedge_status": "pop"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 17.4099998474,
     "volume": 648253.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,04,00,00,00,000000",
+    "ticker": "VRDN",
+    "open": 17.4099998474,
+    "high": 17.6599998474,
+    "low": 16.625,
+    "close": 16.8600006104,
+    "volume": 479651.0,
+    "wedge_status": "drop"
   }
 ]

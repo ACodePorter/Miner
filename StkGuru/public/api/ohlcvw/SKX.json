@@ -7488,5 +7488,15 @@
     "close": 63.0,
     "volume": 7925477.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,04,00,00,00,000000",
+    "ticker": "SKX",
+    "open": 63.1599998474,
+    "high": 63.1899986267,
+    "low": 63.0299987793,
+    "close": 63.0699996948,
+    "volume": 1942059.0,
+    "wedge_status": "none"
   }
 ]

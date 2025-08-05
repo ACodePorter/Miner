@@ -7488,5 +7488,15 @@
     "close": 11.1099996567,
     "volume": 14031925.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,04,00,00,00,000000",
+    "ticker": "PATH",
+    "open": 11.25,
+    "high": 11.3500003815,
+    "low": 11.1499996185,
+    "close": 11.3400001526,
+    "volume": 8475552.0,
+    "wedge_status": "none"
   }
 ]

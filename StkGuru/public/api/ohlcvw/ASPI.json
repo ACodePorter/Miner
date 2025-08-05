@@ -6378,5 +6378,15 @@
     "close": 8.9300003052,
     "volume": 3018660.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,04,00,00,00,000000",
+    "ticker": "ASPI",
+    "open": 9.029999733,
+    "high": 9.3999996185,
+    "low": 8.9399995804,
+    "close": 9.3999996185,
+    "volume": 2017612.0,
+    "wedge_status": "none"
   }
 ]

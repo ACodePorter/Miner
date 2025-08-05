@@ -7488,5 +7488,15 @@
     "close": 45.2799987793,
     "volume": 2417292.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,04,00,00,00,000000",
+    "ticker": "VAL",
+    "open": 45.5299987793,
+    "high": 46.0,
+    "low": 44.9315986633,
+    "close": 45.5800018311,
+    "volume": 1378788.0,
+    "wedge_status": "none"
   }
 ]

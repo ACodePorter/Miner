@@ -7488,5 +7488,15 @@
     "close": 10.3900003433,
     "volume": 9360067.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,04,00,00,00,000000",
+    "ticker": "OLO",
+    "open": 10.5,
+    "high": 10.4750003815,
+    "low": 10.3599996567,
+    "close": 10.3599996567,
+    "volume": 4575919.0,
+    "wedge_status": "none"
   }
 ]

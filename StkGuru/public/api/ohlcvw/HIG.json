@@ -7488,5 +7488,15 @@
     "close": 123.0,
     "volume": 1489335.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,04,00,00,00,000000",
+    "ticker": "HIG",
+    "open": 123.5,
+    "high": 126.3000030518,
+    "low": 123.1050033569,
+    "close": 126.2099990845,
+    "volume": 981606.0,
+    "wedge_status": "none"
   }
 ]

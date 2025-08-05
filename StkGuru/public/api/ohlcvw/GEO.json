@@ -7488,5 +7488,15 @@
     "close": 25.0,
     "volume": 1997079.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,04,00,00,00,000000",
+    "ticker": "GEO",
+    "open": 25.1800003052,
+    "high": 25.1998996735,
+    "low": 24.3299999237,
+    "close": 24.8999996185,
+    "volume": 2663220.0,
+    "wedge_status": "none"
   }
 ]
