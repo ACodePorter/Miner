@@ -7498,5 +7498,15 @@
     "close": 321.25,
     "volume": 885702.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,05,00,00,00,000000",
+    "ticker": "APPF",
+    "open": 321.700012207,
+    "high": 323.3349914551,
+    "low": 310.3200073242,
+    "close": 313.700012207,
+    "volume": 549342.0,
+    "wedge_status": "none"
   }
 ]

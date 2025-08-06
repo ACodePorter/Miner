@@ -7498,5 +7498,15 @@
     "close": 31.5,
     "volume": 17441.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,05,00,00,00,000000",
+    "ticker": "CBFV",
+    "open": 31.6000003815,
+    "high": 31.7450008392,
+    "low": 30.5900001526,
+    "close": 31.4899997711,
+    "volume": 9563.0,
+    "wedge_status": "none"
   }
 ]

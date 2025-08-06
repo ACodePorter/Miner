@@ -7498,5 +7498,15 @@
     "close": 15.75,
     "volume": 5531989.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,05,00,00,00,000000",
+    "ticker": "COLD",
+    "open": 15.75,
+    "high": 16.4599990845,
+    "low": 15.6949996948,
+    "close": 16.4400005341,
+    "volume": 5710003.0,
+    "wedge_status": "none"
   }
 ]
