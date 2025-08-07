@@ -7508,5 +7508,15 @@
     "close": 300.0799865723,
     "volume": 2583552.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,06,00,00,00,000000",
+    "ticker": "AMGN",
+    "open": 295.5,
+    "high": 298.5,
+    "low": 281.6600036621,
+    "close": 284.6700134277,
+    "volume": 4478609.0,
+    "wedge_status": "drop"
   }
 ]

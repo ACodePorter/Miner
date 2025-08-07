@@ -7508,5 +7508,15 @@
     "close": 99.0899963379,
     "volume": 49799.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,06,00,00,00,000000",
+    "ticker": "NPK",
+    "open": 98.6699981689,
+    "high": 100.9899978638,
+    "low": 99.016998291,
+    "close": 100.0,
+    "volume": 47320.0,
+    "wedge_status": "none"
   }
 ]

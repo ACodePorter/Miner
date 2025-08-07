@@ -7508,5 +7508,15 @@
     "close": 30.75,
     "volume": 2155201.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,06,00,00,00,000000",
+    "ticker": "EPRT",
+    "open": 30.75,
+    "high": 30.9599990845,
+    "low": 30.0,
+    "close": 30.0200004578,
+    "volume": 1568609.0,
+    "wedge_status": "none"
   }
 ]

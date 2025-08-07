@@ -7508,5 +7508,15 @@
     "close": 6.4200000763,
     "volume": 3856295.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,06,00,00,00,000000",
+    "ticker": "PGRE",
+    "open": 6.3800001144,
+    "high": 6.5399999619,
+    "low": 6.3049998283,
+    "close": 6.5,
+    "volume": 2304088.0,
+    "wedge_status": "none"
   }
 ]

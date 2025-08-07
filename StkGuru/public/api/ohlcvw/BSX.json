@@ -7508,5 +7508,15 @@
     "close": 104.8050003052,
     "volume": 3736895.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,06,00,00,00,000000",
+    "ticker": "BSX",
+    "open": 105.0,
+    "high": 105.375,
+    "low": 101.6399993896,
+    "close": 102.9499969482,
+    "volume": 7957534.0,
+    "wedge_status": "none"
   }
 ]
