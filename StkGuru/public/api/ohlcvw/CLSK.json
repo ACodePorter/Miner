@@ -7508,5 +7508,15 @@
     "close": 11.0,
     "volume": 19155834.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,07,00,00,00,000000",
+    "ticker": "CLSK",
+    "open": 11.1400003433,
+    "high": 11.4399995804,
+    "low": 10.4399995804,
+    "close": 10.720000267,
+    "volume": 25089013.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 48.4199981689,
     "volume": 4989551.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,07,00,00,00,000000",
+    "ticker": "KMPR",
+    "open": 48.5,
+    "high": 50.6699981689,
+    "low": 48.5000991821,
+    "close": 50.6199989319,
+    "volume": 2601280.0,
+    "wedge_status": "none"
   }
 ]

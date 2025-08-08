@@ -7508,5 +7508,15 @@
     "close": 16.5,
     "volume": 60220.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,07,00,00,00,000000",
+    "ticker": "VEL",
+    "open": 16.6399993896,
+    "high": 16.8299999237,
+    "low": 16.2700996399,
+    "close": 16.3299999237,
+    "volume": 78796.0,
+    "wedge_status": "none"
   }
 ]

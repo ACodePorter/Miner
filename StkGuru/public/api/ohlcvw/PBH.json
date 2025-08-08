@@ -7508,5 +7508,15 @@
     "close": 75.1600036621,
     "volume": 451267.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,07,00,00,00,000000",
+    "ticker": "PBH",
+    "open": 71.0,
+    "high": 72.8899993896,
+    "low": 66.5400009155,
+    "close": 67.6100006104,
+    "volume": 920689.0,
+    "wedge_status": "drop"
   }
 ]

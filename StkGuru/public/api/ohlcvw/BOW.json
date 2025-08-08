@@ -2568,5 +2568,15 @@
     "close": 32.0999984741,
     "volume": 285835.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,07,00,00,00,000000",
+    "ticker": "BOW",
+    "open": 30.5,
+    "high": 31.3299999237,
+    "low": 30.0100002289,
+    "close": 31.2299995422,
+    "volume": 1445984.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 225.5700073242,
     "volume": 425054.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,07,00,00,00,000000",
+    "ticker": "GWRE",
+    "open": 226.1999969482,
+    "high": 226.75,
+    "low": 211.0,
+    "close": 217.4299926758,
+    "volume": 925117.0,
+    "wedge_status": "drop"
   }
 ]

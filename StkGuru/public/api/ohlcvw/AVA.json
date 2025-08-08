@@ -7508,5 +7508,15 @@
     "close": 36.6699981689,
     "volume": 1845402.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,07,00,00,00,000000",
+    "ticker": "AVA",
+    "open": 36.6399993896,
+    "high": 37.4300003052,
+    "low": 36.5,
+    "close": 37.4300003052,
+    "volume": 934551.0,
+    "wedge_status": "none"
   }
 ]
