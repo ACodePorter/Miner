@@ -7508,5 +7508,15 @@
     "close": 123.2399978638,
     "volume": 271560.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,08,00,00,00,000000",
+    "ticker": "CHH",
+    "open": 123.9599990845,
+    "high": 123.5800018311,
+    "low": 120.75,
+    "close": 120.75,
+    "volume": 261668.0,
+    "wedge_status": "none"
   }
 ]

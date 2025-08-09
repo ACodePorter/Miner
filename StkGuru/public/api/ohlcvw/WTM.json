@@ -7508,5 +7508,15 @@
     "close": 1750.3499755859,
     "volume": 49066.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,08,00,00,00,000000",
+    "ticker": "WTM",
+    "open": 1759.0,
+    "high": 1789.0,
+    "low": 1750.2099609375,
+    "close": 1751.6199951172,
+    "volume": 24358.0,
+    "wedge_status": "none"
   }
 ]

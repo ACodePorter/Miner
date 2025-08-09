@@ -7508,5 +7508,15 @@
     "close": 4.5799999237,
     "volume": 3522910.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,08,08,00,00,00,000000",
+    "ticker": "AXL",
+    "open": 4.4699997902,
+    "high": 5.3249998093,
+    "low": 4.5,
+    "close": 5.2800002098,
+    "volume": 7657497.0,
+    "wedge_status": "none"
   }
 ]

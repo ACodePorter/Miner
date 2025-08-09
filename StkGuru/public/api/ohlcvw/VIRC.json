@@ -7508,5 +7508,15 @@
     "close": 8.0799999237,
     "volume": 53272.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,08,00,00,00,000000",
+    "ticker": "VIRC",
+    "open": 8.1300001144,
+    "high": 8.1300001144,
+    "low": 7.9400000572,
+    "close": 7.9899997711,
+    "volume": 30293.0,
+    "wedge_status": "drop"
   }
 ]

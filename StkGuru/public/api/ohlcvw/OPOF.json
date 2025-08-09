@@ -7508,5 +7508,15 @@
     "close": 40.0200004578,
     "volume": 48241.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,08,00,00,00,000000",
+    "ticker": "OPOF",
+    "open": 40.3050003052,
+    "high": 40.4150009155,
+    "low": 40.2000007629,
+    "close": 40.25,
+    "volume": 28077.0,
+    "wedge_status": "none"
   }
 ]

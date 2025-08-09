@@ -7508,5 +7508,15 @@
     "close": 25.6900005341,
     "volume": 660123.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,08,00,00,00,000000",
+    "ticker": "PLAY",
+    "open": 25.5,
+    "high": 25.5100002289,
+    "low": 23.6700000763,
+    "close": 23.8899993896,
+    "volume": 1148499.0,
+    "wedge_status": "none"
   }
 ]

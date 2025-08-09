@@ -7508,5 +7508,15 @@
     "close": 28.7399997711,
     "volume": 198782.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,08,00,00,00,000000",
+    "ticker": "MMI",
+    "open": 29.0,
+    "high": 29.6900005341,
+    "low": 28.9300003052,
+    "close": 29.0699996948,
+    "volume": 162411.0,
+    "wedge_status": "none"
   }
 ]

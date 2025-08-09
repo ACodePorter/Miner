@@ -7508,5 +7508,15 @@
     "close": 12.0,
     "volume": 506117.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,08,00,00,00,000000",
+    "ticker": "GCMG",
+    "open": 12.1899995804,
+    "high": 12.7700004578,
+    "low": 12.1400003433,
+    "close": 12.5900001526,
+    "volume": 1478035.0,
+    "wedge_status": "none"
   }
 ]

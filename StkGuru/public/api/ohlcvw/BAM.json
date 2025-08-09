@@ -6278,5 +6278,15 @@
     "close": 60.9199981689,
     "volume": 1750578.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,08,00,00,00,000000",
+    "ticker": "BAM",
+    "open": 61.3800010681,
+    "high": 62.0,
+    "low": 61.2000007629,
+    "close": 61.2599983215,
+    "volume": 1234909.0,
+    "wedge_status": "none"
   }
 ]
