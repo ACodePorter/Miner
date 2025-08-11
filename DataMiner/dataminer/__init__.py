@@ -1,3 +1,4 @@
+from ._bars_manager import BarsManager
 from ._financial_shovel import FinancialShovel
 from ._indicators import Indicators
 from ._ishares_scraper import IsharesScraper
@@ -10,6 +11,7 @@ from .models import (Balancesheet, CashflowTable, Financials, Ticker,
                      TradeCalendar)
 
 __all__ = [
+    'BarsManager',
     'version',
     'Indicators',
     'IsharesScraper',

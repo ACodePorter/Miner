@@ -55,11 +55,7 @@
 }
 
 .App {
-  @apply min-h-screen bg-gradient-to-br from-black via-gray-950 to-gray-900 text-white;
-  background-image: 
-    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.15) 0%, transparent 50%);
+  @apply min-h-screen bg-gray-50 text-gray-900;
 }
 
 .App-header {
@@ -87,7 +83,7 @@
 }
 
 main {
-  @apply w-full px-4 py-3 space-y-4;
+  @apply w-full;
 }
 
 /* Responsive design */
