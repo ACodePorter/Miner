@@ -327,9 +327,14 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
       },
       candlestick: {
         dataGrouping: { enabled: false },
+        // Reduce spacing between bars to half of defaults
+        pointPadding: 0.05,
+        groupPadding: 0.1,
       },
       column: {
         dataGrouping: { enabled: false },
+        pointPadding: 0.05,
+        groupPadding: 0.1,
       },
       line: {
         dataGrouping: { enabled: false },
