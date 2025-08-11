@@ -3,7 +3,7 @@ import Highcharts from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
 import { apiConfig } from '../config/environment';
 import { useInView } from 'react-intersection-observer';
-import { wsClient, type QuotePayload } from '../utils/wsClient';
+import { wsClient, type QuotePayload, type BarsPayload } from '../utils/wsClient';
 
 type IndicatorType = 'EMA' | 'SMA' | 'MACD' | 'RSI';
 
@@ -204,20 +204,105 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
 
   useEffect(() => {
     if (!inView) return;
-    const jitter = Math.floor(Math.random() * 1500);
-    let bTimer: any;
-    const unsubscribe = subscribeQuote();
+    const unsubscribeQuote = subscribeQuote();
     const start = async () => {
       await fetchBars();
-      bTimer = setInterval(() => fetchBars(), 60000 + jitter);
     };
     start();
+    // subscribe to live bars over WS
+    const unsubscribeBars = wsClient.subscribeBars(ticker, timeframe, (payload: BarsPayload) => {
+      console.log('ChartTile received bars payload:', payload);
+      if (!payload?.bars?.length) {
+        console.log('No bars in payload or empty bars array');
+        return;
+      }
+      
+      console.log('Processing bars update:', {
+        is_snapshot: payload.is_snapshot,
+        bars_count: payload.bars.length,
+        first_bar: payload.bars[0],
+        last_bar: payload.bars[payload.bars.length - 1]
+      });
+      
+      setBars(prev => {
+        console.log('Current bars state:', prev.length, 'bars');
+        
+        // Handle initial snapshot
+        if (payload.is_snapshot) {
+          console.log('Handling snapshot - replacing all bars');
+          return payload.bars.map(b => ({ ...b, timestamp: convertUtcToNewYorkTimestamp(b.timestamp) }));
+        }
+        
+        // Handle incremental updates
+        if (!prev.length) {
+          console.log('No previous bars, using incoming bars');
+          return payload.bars.map(b => ({ ...b, timestamp: convertUtcToNewYorkTimestamp(b.timestamp) }));
+        }
+        
+        const lastTs = prev[prev.length - 1].timestamp;
+        const incoming = payload.bars.map(b => ({ ...b, timestamp: convertUtcToNewYorkTimestamp(b.timestamp) }));
+        
+        console.log('Incremental update:', {
+          lastTs,
+          incomingTs: incoming[incoming.length - 1].timestamp,
+          timeframe
+        });
+        
+        // For minute bars, we might get updates to the last forming bar
+        if (timeframe.includes('m')) {
+          const lastIncomingTs = incoming[incoming.length - 1].timestamp;
+          if (lastIncomingTs === lastTs) {
+            // Replace the last forming bar
+            console.log('Replacing last forming bar');
+            const newBars = [...prev.slice(0, prev.length - 1), incoming[incoming.length - 1]];
+            console.log('New bars after replacement:', newBars.length);
+            return newBars;
+          } else if (lastIncomingTs > lastTs) {
+            // New bar completed, append it
+            console.log('Appending new completed bar');
+            return [...prev, incoming[incoming.length - 1]];
+          } else {
+            console.log('Incoming timestamp is older than current, skipping');
+          }
+        } else {
+          // For daily/weekly bars, just append new ones
+          const updates: Bar[] = [];
+          for (const b of incoming) {
+            if (b.timestamp > lastTs) {
+              updates.push(b);
+            }
+          }
+          if (updates.length > 0) {
+            console.log('Appending new daily/weekly bars:', updates.length);
+            return [...prev, ...updates];
+          }
+        }
+        
+        console.log('No bars to update');
+        return prev;
+      });
+    });
     return () => {
-      if (bTimer) clearInterval(bTimer);
       if (barsAbortRef.current) barsAbortRef.current.abort();
-      unsubscribe();
+      unsubscribeQuote();
+      unsubscribeBars();
     };
   }, [ticker, timeframe, inView, subscribeQuote]);
+
+  // Monitor bars state changes for debugging
+  useEffect(() => {
+    console.log('Bars state changed:', bars.length, 'bars');
+    if (bars.length > 0) {
+      console.log('Latest bar:', bars[bars.length - 1]);
+    }
+    
+    // Trigger chart update when bars change
+    const chart = (chartRef as any)?.current?.chart as Highcharts.Chart | undefined;
+    if (chart && bars.length > 0) {
+      console.log('Triggering chart update');
+      chart.redraw();
+    }
+  }, [bars]);
 
   // Apply default zoom to the latest 128 bars once per ticker/interval
   useEffect(() => {
@@ -234,9 +319,20 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
     defaultZoomAppliedRef.current = true;
   }, [bars]);
 
-  const ohlc = useMemo(() => bars.map(b => [b.timestamp, b.open, b.high, b.low, b.close] as [number, number, number, number, number]), [bars]);
-  const volumes = useMemo(() => bars.map(b => [b.timestamp, b.volume] as [number, number]), [bars]);
-  const closes = useMemo(() => bars.map(b => b.close), [bars]);
+  const ohlc = useMemo(() => {
+    console.log('Computing OHLC data from', bars.length, 'bars');
+    return bars.map(b => [b.timestamp, b.open, b.high, b.low, b.close] as [number, number, number, number, number]);
+  }, [bars]);
+  
+  const volumes = useMemo(() => {
+    console.log('Computing volumes data from', bars.length, 'bars');
+    return bars.map(b => [b.timestamp, b.volume] as [number, number]);
+  }, [bars]);
+  
+  const closes = useMemo(() => {
+    console.log('Computing closes data from', bars.length, 'bars');
+    return bars.map(b => b.close);
+  }, [bars]);
 
   const hasMACD = useMemo(() => indicators.some(i => i.type === 'MACD'), [indicators]);
   const hasRSI = useMemo(() => indicators.some(i => i.type === 'RSI'), [indicators]);
@@ -318,8 +414,8 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
     rangeSelector: { enabled: false },
     navigator: { enabled: false },
     scrollbar: { enabled: false },
-    title: { text: `${ticker} • ${timeframe}${price ? ` • $${price.toFixed(2)}` : ''}` },
-    chart: { height: 360, backgroundColor: 'transparent' },
+    title: { text: undefined },
+    chart: { height: 360, backgroundColor: 'transparent', spacingTop: 0, marginTop: 0, spacing: [0, 0, 0, 0] },
     xAxis: { ordinal: true },
     plotOptions: {
       series: {

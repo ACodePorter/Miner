@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Literal
+from typing import Callable, Dict, Literal
 
 import pandas as pd
 import yfinance as yf
@@ -8,6 +8,14 @@ from pandas import DataFrame
 
 
 class BarsManager(SingletonParent):
+    """
+    BarsManager for fetching and managing bar data from yfinance.
+
+    Usage Rules:
+    1. get_bars(): Use for fetching full historical data (e.g., initial chart load)
+    2. get_recent_bars(): Use for incremental updates and real-time comparison
+    """
+
     def __init__(self):
         self.bars = {}
 
@@ -40,8 +48,8 @@ class BarsManager(SingletonParent):
 
         Args:
             ticker (str): ticker symbol
-            interval (Literal[&#39;1m&#39;, &#39;2m&#39;, &#39;5m&#39;, &#39;15m&#39;, &#39;30m&#39;, &#39;65m&#39;, &#39;90m&#39;, &#39;1h&#39;, &#39;1d&#39;, &#39;5d&#39;, &#39;1wk&#39;, &#39;1mo&#39;, &#39;3mo&#39;], optional): interval. Defaults to '1d'.
-            period (Literal[&#39;1d&#39;, &#39;5d&#39;, &#39;1mo&#39;, &#39;3mo&#39;, &#39;6mo&#39;, &#39;1y&#39;, &#39;2y&#39;, &#39;5y&#39;, &#39;10y&#39;, &#39;ytd&#39;, &#39;max&#39;], optional): period. Defaults to '1y'.
+            interval (Literal['1m', '2m', '5m', '15m', '30m', '65m', '90m', '1h', '1d', '5d', '1wk', '1mo', '3mo'], optional): interval. Defaults to '1d'.
+            period (Literal['1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y', 'ytd', 'max'], optional): period. Defaults to '1y'.
             start_date (Literal[str, datetime, None], optional): start date. Defaults to None, if str, it should be in format YYYYMMDD or YYYY-MM-DD.
 
         Returns:
@@ -70,3 +78,27 @@ class BarsManager(SingletonParent):
             )
 
         return bars
+
+    def get_recent_bars(self, ticker: str, interval: str, count: int = 10) -> DataFrame:
+        """Get the most recent bars for incremental updates and comparison
+
+        Args:
+            ticker (str): ticker symbol
+            interval (str): interval string
+            count (int): number of recent bars to return
+
+        Returns:
+            DataFrame: recent bars DataFrame optimized for incremental updates
+        """
+        # For minute intervals, get enough data to ensure we have current session
+        if interval in ['1m', '2m', '5m', '15m', '30m', '65m', '90m', '1h']:
+            period = '1d'  # Get 1 day for current session data
+        else:
+            period = '3d'  # Get 3 days for daily/weekly data
+
+        bars = self.get_bars(ticker, interval, period)
+        if bars.empty:
+            return bars
+
+        # Return the last N bars for incremental comparison
+        return bars.tail(count)

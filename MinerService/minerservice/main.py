@@ -1,13 +1,10 @@
 import asyncio
 import json
 import os
-import random
-import signal
-import sys
 import uuid
 from contextlib import asynccontextmanager
 from datetime import datetime, timedelta
-from typing import Any, Dict, List, Optional, Set
+from typing import Any, Dict, List, Optional, Set, Tuple
 
 import pytz
 import redis.asyncio as redis
@@ -51,8 +48,9 @@ async def lifespan(app: FastAPI):
     manager = RedisConnectionManager()
     await manager.startup()
 
-    # Start background quote updates simulation
-    quote_updates_task = asyncio.create_task(simulate_quote_updates())
+    # Start background tasks
+    quote_updates_task = asyncio.create_task(update_real_quotes())
+    bars_updates_task = asyncio.create_task(monitor_bars_updates())
 
     yield
 
@@ -61,6 +59,13 @@ async def lifespan(app: FastAPI):
         quote_updates_task.cancel()
         try:
             await quote_updates_task
+        except asyncio.CancelledError:
+            pass
+
+    if bars_updates_task:
+        bars_updates_task.cancel()
+        try:
+            await bars_updates_task
         except asyncio.CancelledError:
             pass
 
@@ -78,7 +83,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# WebSocket connection manager with Redis support
+# WebSocket connection manager with Redis support and bars broadcasting
 
 
 class RedisConnectionManager:
@@ -87,6 +92,10 @@ class RedisConnectionManager:
         self.process_id = str(uuid.uuid4())
         self.local_connections: Dict[str, WebSocket] = {}
         self.subscribed_symbols: Set[str] = set()
+        # bars subscriptions: key is (symbol, interval)
+        self.subscribed_bars: Set[Tuple[str, str]] = set()
+        # last sent bar timestamp (ms) per (symbol, interval)
+        self.last_bars_ts: Dict[Tuple[str, str], int] = {}
         self.broadcast_task = None
         self.heartbeat_task = None
         self.running = False
@@ -232,6 +241,28 @@ class RedisConnectionManager:
                 print(f"Subscribed to symbol: {symbol}")
             except Exception as e:
                 print(f"Error subscribing to symbol {symbol}: {e}")
+
+    async def subscribe_bars(self, symbol: str, interval: str):
+        key = (symbol.upper(), interval)
+        if key not in self.subscribed_bars:
+            self.subscribed_bars.add(key)
+            try:
+                # Store subscription in Redis
+                redis_client = await self.get_redis()
+                await redis_client.sadd('websocket:subscribed_bars', f"{key[0]}|{key[1]}")
+                print(f"Subscribed to bars: {key[0]} {key[1]}")
+            except Exception as e:
+                print(f"Error subscribing to bars {key}: {e}")
+
+    async def unsubscribe_bars(self, symbol: str, interval: str):
+        key = (symbol.upper(), interval)
+        if key in self.subscribed_bars:
+            self.subscribed_bars.remove(key)
+            try:
+                redis_client = await self.get_redis()
+                await redis_client.srem('websocket:subscribed_bars', f"{key[0]}|{key[1]}")
+            except Exception:
+                pass
 
     async def get_all_connections(self):
         """Get all active connections across all processes"""
@@ -495,18 +526,40 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                             if cached_quote:
                                 quote_data = json.loads(cached_quote)
                             else:
-                                # Generate mock quote for testing
-                                quote_data = {
-                                    'symbol': symbol,
-                                    'price': 150.0,
-                                    'change': 1.5,
-                                    'changePercent': 1.0,
-                                    'volume': 1000000,
-                                    'marketCap': 2500000000000,
-                                    'timestamp': datetime.now().isoformat()
-                                }
-                                # Cache the mock quote
-                                await redis_client.setex(quote_key, 60, json.dumps(quote_data))
+                                # Get real quote data from yfinance
+                                try:
+                                    clean_symbol = ''.join(
+                                        ch for ch in symbol if ch.isalnum() or ch in ['.', '='])
+                                    ticker = yf.Ticker(clean_symbol)
+                                    info = ticker.info
+
+                                    quote_data = {
+                                        'symbol': clean_symbol,
+                                        'price': info.get('regularMarketPrice', 0),
+                                        'change': info.get('regularMarketChange', 0),
+                                        'changePercent': info.get('regularMarketChangePercent', 0),
+                                        'volume': info.get('volume', 0),
+                                        'marketCap': info.get('marketCap', 0),
+                                        'timestamp': datetime.now().isoformat()
+                                    }
+
+                                    # Cache the real quote data
+                                    await redis_client.setex(quote_key, 60, json.dumps(quote_data))
+                                    print(
+                                        f"Fetched real quote for {symbol}: ${quote_data['price']}")
+                                except Exception as e:
+                                    print(
+                                        f"Error fetching real quote for {symbol}: {e}")
+                                    # Fallback to a default quote structure
+                                    quote_data = {
+                                        'symbol': symbol,
+                                        'price': 0,
+                                        'change': 0,
+                                        'changePercent': 0,
+                                        'volume': 0,
+                                        'marketCap': 0,
+                                        'timestamp': datetime.now().isoformat()
+                                    }
 
                             await websocket.send_text(json.dumps({
                                 'type': 'quote',
@@ -537,7 +590,7 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                         }))
                         continue
 
-                    # Get quote from Redis cache or generate mock
+                    # Get quote from Redis cache or fetch real data
                     try:
                         redis_client = await manager.get_redis()
                         quote_key = f"quote:{symbol}"
@@ -551,20 +604,44 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                                 'timestamp': datetime.now().isoformat()
                             }))
                         else:
-                            # Send a mock quote for testing
-                            mock_quote = {
-                                'symbol': symbol,
-                                'price': 150.0,
-                                'change': 1.5,
-                                'changePercent': 1.0,
-                                'volume': 1000000,
-                                'timestamp': datetime.now().isoformat()
-                            }
-                            # Cache the mock quote
-                            await redis_client.setex(quote_key, 60, json.dumps(mock_quote))
+                            # Get real quote data from yfinance
+                            try:
+                                clean_symbol = ''.join(
+                                    ch for ch in symbol if ch.isalnum() or ch in ['.', '='])
+                                ticker = yf.Ticker(clean_symbol)
+                                info = ticker.info
+
+                                quote_data = {
+                                    'symbol': clean_symbol,
+                                    'price': info.get('regularMarketPrice', 0),
+                                    'change': info.get('regularMarketChange', 0),
+                                    'changePercent': info.get('regularMarketChangePercent', 0),
+                                    'volume': info.get('volume', 0),
+                                    'marketCap': info.get('marketCap', 0),
+                                    'timestamp': datetime.now().isoformat()
+                                }
+
+                                # Cache the real quote data
+                                await redis_client.setex(quote_key, 60, json.dumps(quote_data))
+                                print(
+                                    f"Fetched real quote for {symbol}: ${quote_data['price']}")
+                            except Exception as e:
+                                print(
+                                    f"Error fetching real quote for {symbol}: {e}")
+                                # Fallback to a default quote structure
+                                quote_data = {
+                                    'symbol': symbol,
+                                    'price': 0,
+                                    'change': 0,
+                                    'changePercent': 0,
+                                    'volume': 0,
+                                    'marketCap': 0,
+                                    'timestamp': datetime.now().isoformat()
+                                }
+
                             await websocket.send_text(json.dumps({
                                 'type': 'quote',
-                                'data': mock_quote,
+                                'data': quote_data,
                                 'timestamp': datetime.now().isoformat()
                             }))
                     except Exception as e:
@@ -572,6 +649,74 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                         await websocket.send_text(json.dumps({
                             'type': 'error',
                             'message': f'Error getting quote: {str(e)}'
+                        }))
+
+                elif message.get('type') == 'subscribe_bars':
+                    symbol = message.get('symbol')
+                    interval = message.get('interval')
+                    if symbol and interval:
+                        print(
+                            f"Client {client_id} subscribing to bars: {symbol} {interval}")
+                        await manager.subscribe_bars(symbol, interval)
+                        await websocket.send_text(json.dumps({
+                            'type': 'subscribed_bars',
+                            'symbol': symbol,
+                            'interval': interval,
+                            'timestamp': datetime.now().isoformat()
+                        }))
+
+                        # Immediately send initial bars snapshot
+                        try:
+                            # Get full bars for initial snapshot using get_bars
+                            hist = BarsManager.get_instance().get_bars(symbol, interval, 'max')
+                            if not hist.empty:
+                                bars = []
+                                for index, row in hist.iterrows():
+                                    bars.append({
+                                        'timestamp': int(index.timestamp() * 1000),
+                                        'open': float(row['Open']),
+                                        'high': float(row['High']),
+                                        'low': float(row['Low']),
+                                        'close': float(row['Close']),
+                                        'volume': int(row['Volume'])
+                                    })
+
+                                print(
+                                    f"Sending initial bars snapshot for {symbol} {interval}: {len(bars)} bars")
+
+                                # Send initial snapshot
+                                await websocket.send_text(json.dumps({
+                                    'type': 'bars',
+                                    'data': {
+                                        'symbol': symbol,
+                                        'interval': interval,
+                                        'bars': bars,
+                                        'is_snapshot': True
+                                    }
+                                }))
+
+                                # Store the last timestamp for this stream
+                                if bars:
+                                    last_ts = bars[-1]['timestamp']
+                                    manager.last_bars_ts[(
+                                        symbol.upper(), interval)] = last_ts
+                                    print(
+                                        f"Stored last timestamp for {symbol} {interval}: {last_ts}")
+
+                        except Exception as e:
+                            print(
+                                f"Error sending initial bars for {symbol} {interval}: {e}")
+
+                elif message.get('type') == 'unsubscribe_bars':
+                    symbol = message.get('symbol')
+                    interval = message.get('interval')
+                    if symbol and interval:
+                        await manager.unsubscribe_bars(symbol, interval)
+                        await websocket.send_text(json.dumps({
+                            'type': 'unsubscribed_bars',
+                            'symbol': symbol,
+                            'interval': interval,
+                            'timestamp': datetime.now().isoformat()
                         }))
 
                 elif message.get('type') == 'ping':
@@ -623,11 +768,229 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
         except:
             pass
 
-# Background task to simulate real-time quote updates
+# Background task for real-time bars updates
 
 
-async def simulate_quote_updates():
-    """Simulate real-time quote updates for subscribed symbols"""
+async def monitor_bars_updates():
+    """Monitor and broadcast real-time bars updates for subscribed symbols"""
+    print("Starting bars monitoring service...")
+    while True:
+        try:
+            if manager:
+                redis_client = await manager.get_redis()
+                subscribed_bars = await redis_client.smembers('websocket:subscribed_bars')
+
+                if subscribed_bars:
+                    print(
+                        f"Monitoring {len(subscribed_bars)} bars subscriptions: {[key.decode('utf-8') if isinstance(key, bytes) else key for key in subscribed_bars]}")
+                else:
+                    print("No bars subscriptions to monitor")
+
+                for key in subscribed_bars:
+                    try:
+                        key_str = key.decode(
+                            'utf-8') if isinstance(key, bytes) else key
+                        sym, interval = key_str.split('|')
+
+                        print(f"Checking bars for {sym} {interval}...")
+
+                        # Get recent bars for comparison
+                        hist = BarsManager.get_instance().get_recent_bars(sym, interval, 10)
+                        if hist.empty:
+                            print(f"No bars data for {sym} {interval}")
+                            continue
+
+                        print(
+                            f"Got {len(hist)} recent bars for {sym} {interval}")
+
+                        # Get the latest bar
+                        last_row = hist.iloc[-1]
+                        last_idx = hist.index[-1]
+
+                        # Debug: Show the actual data we're getting
+                        print(f"Latest bar data for {sym} {interval}:")
+                        print(f"  Index: {last_idx}")
+                        print(f"  Open: {last_row['Open']}")
+                        print(f"  High: {last_row['High']}")
+                        print(f"  Low: {last_row['Low']}")
+                        print(f"  Close: {last_row['Close']}")
+                        print(f"  Volume: {last_row['Volume']}")
+
+                        # Check if this is the same data as last time we checked
+                        current_data_hash = hash(
+                            f"{last_row['Open']}{last_row['High']}{last_row['Low']}{last_row['Close']}{last_row['Volume']}")
+                        last_check_hash_key = f"bars:{sym}:{interval}:last_check_hash"
+                        last_check_hash = await redis_client.get(last_check_hash_key)
+
+                        if last_check_hash and int(last_check_hash) == current_data_hash:
+                            print(
+                                f"Data unchanged from last check for {sym} {interval} - skipping entire check")
+                            continue
+                        else:
+                            # Store the new hash for next comparison
+                            await redis_client.setex(last_check_hash_key, 60, str(current_data_hash))
+                            print(
+                                f"Data changed from last check for {sym} {interval} - proceeding with update check")
+
+                        last_ts_ms = int(last_idx.timestamp() * 1000)
+                        prev_ts_ms = manager.last_bars_ts.get((sym, interval))
+
+                        # Check if the bar is too old (market closed)
+                        current_time = datetime.now()
+                        bar_time = datetime.fromtimestamp(last_idx.timestamp())
+                        time_diff = current_time - bar_time
+
+                        # Skip if bar is older than 1 hour for minute intervals, 1 day for others
+                        max_age_hours = 1 if interval in [
+                            '1m', '5m', '15m', '30m', '60m', '65m'] else 24
+                        if time_diff.total_seconds() > max_age_hours * 3600:
+                            print(
+                                f"Bar too old for {sym} {interval}: {time_diff.total_seconds()/3600:.1f} hours, skipping")
+                            continue
+
+                        print(
+                            f"Latest bar timestamp: {last_ts_ms}, Previous: {prev_ts_ms}, Age: {time_diff.total_seconds()/60:.1f} minutes")
+
+                        # Check if we have new data to send
+                        bars = []
+
+                        if prev_ts_ms is None:
+                            # First time - don't send anything, just store timestamp
+                            # The initial snapshot was already sent during subscription
+                            manager.last_bars_ts[(sym, interval)] = last_ts_ms
+                            print(
+                                f"Initial timestamp stored for {sym} {interval}: {last_ts_ms}")
+
+                            # Cache current data for future comparison
+                            current_data = {
+                                'open': float(last_row['Open']),
+                                'high': float(last_row['High']),
+                                'low': float(last_row['Low']),
+                                'close': float(last_row['Close']),
+                                'volume': int(last_row['Volume'])
+                            }
+                            prev_data_key = f"bars:{sym}:{interval}:{last_ts_ms}"
+                            await redis_client.setex(prev_data_key, 300, json.dumps(current_data))
+
+                        elif last_ts_ms > prev_ts_ms:
+                            # New bar completed - this is truly incremental
+                            bars.append({
+                                'timestamp': last_ts_ms,
+                                'open': float(last_row['Open']),
+                                'high': float(last_row['High']),
+                                'low': float(last_row['Low']),
+                                'close': float(last_row['Close']),
+                                'volume': int(last_row['Volume'])
+                            })
+                            manager.last_bars_ts[(sym, interval)] = last_ts_ms
+                            print(
+                                f"New incremental bar sent for {sym} {interval}: {last_ts_ms}")
+
+                            # Cache current data for future comparison
+                            current_data = {
+                                'open': float(last_row['Open']),
+                                'high': float(last_row['High']),
+                                'low': float(last_row['Low']),
+                                'close': float(last_row['Close']),
+                                'volume': int(last_row['Volume'])
+                            }
+                            prev_data_key = f"bars:{sym}:{interval}:{last_ts_ms}"
+                            await redis_client.setex(prev_data_key, 300, json.dumps(current_data))
+
+                        elif last_ts_ms == prev_ts_ms:
+                            # Same timestamp - check if data actually changed (for forming bars)
+                            current_data = {
+                                'open': float(last_row['Open']),
+                                'high': float(last_row['High']),
+                                'low': float(last_row['Low']),
+                                'close': float(last_row['Close']),
+                                'volume': int(last_row['Volume'])
+                            }
+
+                            # Get previous data from cache to compare
+                            prev_data_key = f"bars:{sym}:{interval}:{prev_ts_ms}"
+                            prev_data_str = await redis_client.get(prev_data_key)
+
+                            if prev_data_str:
+                                prev_data = json.loads(prev_data_str)
+
+                                # Check if data actually changed
+                                data_changed = False
+                                if (abs(current_data['high'] - prev_data['high']) > 0.001 or
+                                    abs(current_data['low'] - prev_data['low']) > 0.001 or
+                                    abs(current_data['close'] - prev_data['close']) > 0.001 or
+                                        abs(current_data['volume'] - prev_data['volume']) > 0):
+                                    data_changed = True
+
+                                print(f"Data comparison for {sym} {interval}:")
+                                print(
+                                    f"  Current: O:{current_data['open']:.4f} H:{current_data['high']:.4f} L:{current_data['low']:.4f} C:{current_data['close']:.4f} V:{current_data['volume']}")
+                                print(
+                                    f"  Previous: O:{prev_data['open']:.4f} H:{prev_data['high']:.4f} L:{prev_data['low']:.4f} C:{prev_data['close']:.4f} V:{prev_data['volume']}")
+                                print(f"  Data changed: {data_changed}")
+
+                                if data_changed:
+                                    # Check if we already sent this exact data recently
+                                    data_hash = hash(
+                                        f"{current_data['open']:.4f}{current_data['high']:.4f}{current_data['low']:.4f}{current_data['close']:.4f}{current_data['volume']}")
+                                    last_sent_hash_key = f"bars:{sym}:{interval}:{prev_ts_ms}:hash"
+                                    last_sent_hash = await redis_client.get(last_sent_hash_key)
+
+                                    if last_sent_hash and int(last_sent_hash) == data_hash:
+                                        print(
+                                            f"Data already sent for {sym} {interval} - skipping duplicate")
+                                    else:
+                                        # Data changed and not duplicate, send incremental update
+                                        bars.append({
+                                            'timestamp': last_ts_ms,
+                                            **current_data
+                                        })
+                                        print(
+                                            f"Forming bar update sent for {sym} {interval} - data changed")
+
+                                        # Store the hash to prevent duplicates
+                                        await redis_client.setex(last_sent_hash_key, 300, str(data_hash))
+                                else:
+                                    print(
+                                        f"No meaningful change for {sym} {interval} - skipping update")
+                            else:
+                                # No previous data to compare, cache current data
+                                await redis_client.setex(prev_data_key, 300, json.dumps(current_data))
+                                print(
+                                    f"Cached data for {sym} {interval} - no previous data to compare")
+
+                        # Broadcast bars if we have updates
+                        if bars:
+                            print(
+                                f"Broadcasting {len(bars)} incremental bars for {sym} {interval}")
+                            await manager.broadcast(json.dumps({
+                                'type': 'bars',
+                                'data': {
+                                    'symbol': sym,
+                                    'interval': interval,
+                                    'bars': bars,
+                                    'is_snapshot': False
+                                },
+                                'timestamp': datetime.now().isoformat()
+                            }))
+                        else:
+                            print(
+                                f"No incremental bars to broadcast for {sym} {interval}")
+
+                    except Exception as e:
+                        print(f"Error processing bars update for {key}: {e}")
+
+            # Wait before next check - adjust based on interval types
+            await asyncio.sleep(5)  # Check every 5 seconds
+
+        except Exception as e:
+            print(f"Error in bars monitoring: {e}")
+            await asyncio.sleep(10)  # Wait longer on error
+
+
+# Background task to simulate real-time quote updates (keeping this for now)
+async def update_real_quotes():
+    """Fetch and broadcast real-time quote updates for subscribed symbols"""
     while True:
         try:
             if manager:
@@ -638,46 +1001,79 @@ async def simulate_quote_updates():
                     symbol_str = symbol.decode(
                         'utf-8') if isinstance(symbol, bytes) else symbol
 
-                    # Generate simulated price movement
-                    quote_key = f"quote:{symbol_str}"
-                    cached_quote = await redis_client.get(quote_key)
+                    try:
+                        # Fetch real quote data from yfinance
+                        clean_symbol = ''.join(
+                            ch for ch in symbol_str if ch.isalnum() or ch in ['.', '='])
+                        ticker = yf.Ticker(clean_symbol)
+                        info = ticker.info
 
-                    if cached_quote:
-                        current_quote = json.loads(cached_quote)
+                        # Get current cached quote for comparison
+                        quote_key = f"quote:{symbol_str}"
+                        cached_quote = await redis_client.get(quote_key)
 
-                        # Simulate price movement (±2% max)
-                        price_change = current_quote['price'] * \
-                            (random.uniform(-0.02, 0.02))
-                        new_price = current_quote['price'] + price_change
-                        new_change = current_quote['change'] + price_change
-                        new_change_percent = (
-                            new_change / (new_price - new_change)) * 100
+                        if cached_quote:
+                            current_quote = json.loads(cached_quote)
+                            current_price = current_quote.get('price', 0)
+                        else:
+                            current_price = 0
 
-                        updated_quote = {
-                            'symbol': symbol_str,
-                            'price': round(new_price, 2),
-                            'change': round(new_change, 2),
-                            'changePercent': round(new_change_percent, 2),
-                            'volume': current_quote['volume'] + random.randint(-10000, 10000),
-                            'marketCap': current_quote['marketCap'],
-                            'timestamp': datetime.now().isoformat()
-                        }
+                        # Fetch new quote data
+                        new_price = info.get('regularMarketPrice', 0)
+                        new_change = info.get('regularMarketChange', 0)
+                        new_change_percent = info.get(
+                            'regularMarketChangePercent', 0)
+                        new_volume = info.get('volume', 0)
+                        new_market_cap = info.get('marketCap', 0)
 
-                        # Update cache
-                        await redis_client.setex(quote_key, 60, json.dumps(updated_quote))
+                        # Only update if price actually changed (avoid unnecessary broadcasts)
+                        if abs(new_price - current_price) > 0.001:
+                            updated_quote = {
+                                'symbol': clean_symbol,
+                                'price': new_price,
+                                'change': new_change,
+                                'changePercent': new_change_percent,
+                                'volume': new_volume,
+                                'marketCap': new_market_cap,
+                                'timestamp': datetime.now().isoformat()
+                            }
 
-                        # Broadcast to all connected clients
-                        await manager.broadcast(json.dumps({
-                            'type': 'quote',
-                            'data': updated_quote,
-                            'timestamp': datetime.now().isoformat()
-                        }))
+                            # Update cache
+                            await redis_client.setex(quote_key, 60, json.dumps(updated_quote))
 
-            await asyncio.sleep(2)  # Update every 2 seconds
+                            # Broadcast to all connected clients
+                            await manager.broadcast(json.dumps({
+                                'type': 'quote',
+                                'data': updated_quote,
+                                'timestamp': datetime.now().isoformat()
+                            }))
+
+                            print(
+                                f"Updated real quote for {symbol_str}: ${new_price} (change: {new_change:+.2f})")
+                        else:
+                            # Update cache with current data even if price didn't change
+                            # This ensures we have fresh volume and other data
+                            updated_quote = {
+                                'symbol': clean_symbol,
+                                'price': new_price,
+                                'change': new_change,
+                                'changePercent': new_change_percent,
+                                'volume': new_volume,
+                                'marketCap': new_market_cap,
+                                'timestamp': datetime.now().isoformat()
+                            }
+                            await redis_client.setex(quote_key, 60, json.dumps(updated_quote))
+
+                    except Exception as e:
+                        print(f"Error updating quote for {symbol_str}: {e}")
+                        continue
+
+            # Update quotes every 10 seconds (more reasonable for real market data)
+            await asyncio.sleep(10)
 
         except Exception as e:
-            print(f"Error in quote updates simulation: {e}")
-            await asyncio.sleep(5)  # Wait longer on error
+            print(f"Error in real quote updates: {e}")
+            await asyncio.sleep(30)  # Wait longer on error
 
 
 @app.get('/api/realtime/quote/{symbol}')
