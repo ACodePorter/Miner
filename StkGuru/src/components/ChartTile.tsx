@@ -7,6 +7,35 @@ import { wsClient, type QuotePayload } from '../utils/wsClient';
 
 type IndicatorType = 'EMA' | 'SMA' | 'MACD' | 'RSI';
 
+// Utilities to convert UTC timestamps to America/New_York wall-clock timestamps
+const AMERICA_NEW_YORK_TZ = 'America/New_York';
+const nyPartsFormatter = new Intl.DateTimeFormat('en-US', {
+  timeZone: AMERICA_NEW_YORK_TZ,
+  year: 'numeric', month: '2-digit', day: '2-digit',
+  hour: '2-digit', minute: '2-digit', second: '2-digit',
+  hourCycle: 'h23',
+});
+
+function getNewYorkOffsetMinutes(utcTimestampMs: number): number {
+  // Returns (UTC - NewYorkLocal) in minutes at the given instant
+  const parts = nyPartsFormatter.formatToParts(new Date(utcTimestampMs));
+  const map: Record<string, string> = {};
+  for (const p of parts) map[p.type] = p.value;
+  const year = Number(map.year);
+  const month0 = Number(map.month) - 1;
+  const day = Number(map.day);
+  const hour = Number(map.hour);
+  const minute = Number(map.minute);
+  const second = Number(map.second);
+  const nyAsUTC = Date.UTC(year, month0, day, hour, minute, second);
+  return Math.round((utcTimestampMs - nyAsUTC) / 60000);
+}
+
+function convertUtcToNewYorkTimestamp(utcTimestampMs: number): number {
+  const offsetMinutes = getNewYorkOffsetMinutes(utcTimestampMs);
+  return utcTimestampMs - offsetMinutes * 60000;
+}
+
 export interface ChartTileProps {
   id: string;
   initialTicker: string;
@@ -125,6 +154,8 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
   const barsAbortRef = useRef<AbortController | null>(null);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const { ref: inViewRef, inView } = useInView({ rootMargin: '200px', triggerOnce: false });
+  const defaultZoomAppliedRef = useRef(false);
+
 
   const fetchBars = async () => {
     if (!ticker) return;
@@ -141,7 +172,8 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
       const res = await fetch(url, { signal: controller.signal });
       const data = await res.json();
       const raw: Bar[] = data?.bars || [];
-      setBars(raw);
+      const adjusted: Bar[] = raw.map(b => ({ ...b, timestamp: convertUtcToNewYorkTimestamp(b.timestamp) }));
+      setBars(adjusted);
       setErrorMsg(null);
     } catch (e: any) {
       // eslint-disable-next-line no-console
@@ -165,6 +197,11 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
     fetchBars();
   }, [ticker, timeframe, inView]);
 
+  // Reset default zoom flag when ticker or timeframe changes
+  useEffect(() => {
+    defaultZoomAppliedRef.current = false;
+  }, [ticker, timeframe]);
+
   useEffect(() => {
     if (!inView) return;
     const jitter = Math.floor(Math.random() * 1500);
@@ -181,6 +218,21 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
       unsubscribe();
     };
   }, [ticker, timeframe, inView, subscribeQuote]);
+
+  // Apply default zoom to the latest 128 bars once per ticker/interval
+  useEffect(() => {
+    if (defaultZoomAppliedRef.current) return;
+    if (!bars || bars.length < 2) return;
+    const chart = (chartRef as any)?.current?.chart as Highcharts.Chart | undefined;
+    const axis = chart?.xAxis && chart.xAxis[0];
+    if (!axis) return;
+    const endIndex = bars.length - 1;
+    const startIndex = Math.max(0, bars.length - 128);
+    const min = bars[startIndex].timestamp;
+    const max = bars[endIndex].timestamp;
+    axis.setExtremes(min, max, true, false);
+    defaultZoomAppliedRef.current = true;
+  }, [bars]);
 
   const ohlc = useMemo(() => bars.map(b => [b.timestamp, b.open, b.high, b.low, b.close] as [number, number, number, number, number]), [bars]);
   const volumes = useMemo(() => bars.map(b => [b.timestamp, b.volume] as [number, number]), [bars]);
