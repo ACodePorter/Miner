@@ -7,34 +7,8 @@ import { wsClient, type QuotePayload, type BarsPayload } from '../utils/wsClient
 
 type IndicatorType = 'EMA' | 'SMA' | 'MACD' | 'RSI';
 
-// Utilities to convert UTC timestamps to America/New_York wall-clock timestamps
+// Timezone constant for New York
 const AMERICA_NEW_YORK_TZ = 'America/New_York';
-const nyPartsFormatter = new Intl.DateTimeFormat('en-US', {
-  timeZone: AMERICA_NEW_YORK_TZ,
-  year: 'numeric', month: '2-digit', day: '2-digit',
-  hour: '2-digit', minute: '2-digit', second: '2-digit',
-  hourCycle: 'h23',
-});
-
-function getNewYorkOffsetMinutes(utcTimestampMs: number): number {
-  // Returns (UTC - NewYorkLocal) in minutes at the given instant
-  const parts = nyPartsFormatter.formatToParts(new Date(utcTimestampMs));
-  const map: Record<string, string> = {};
-  for (const p of parts) map[p.type] = p.value;
-  const year = Number(map.year);
-  const month0 = Number(map.month) - 1;
-  const day = Number(map.day);
-  const hour = Number(map.hour);
-  const minute = Number(map.minute);
-  const second = Number(map.second);
-  const nyAsUTC = Date.UTC(year, month0, day, hour, minute, second);
-  return Math.round((utcTimestampMs - nyAsUTC) / 60000);
-}
-
-function convertUtcToNewYorkTimestamp(utcTimestampMs: number): number {
-  const offsetMinutes = getNewYorkOffsetMinutes(utcTimestampMs);
-  return utcTimestampMs - offsetMinutes * 60000;
-}
 
 export interface ChartTileProps {
   id: string;
@@ -172,8 +146,8 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
       const res = await fetch(url, { signal: controller.signal });
       const data = await res.json();
       const raw: Bar[] = data?.bars || [];
-      const adjusted: Bar[] = raw.map(b => ({ ...b, timestamp: convertUtcToNewYorkTimestamp(b.timestamp) }));
-      setBars(adjusted);
+      // Keep original UTC timestamps, we'll format as NY time in display
+      setBars(raw);
       setErrorMsg(null);
     } catch (e: any) {
       // eslint-disable-next-line no-console
@@ -230,17 +204,17 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
         // Handle initial snapshot
         if (payload.is_snapshot) {
           console.log('Handling snapshot - replacing all bars');
-          return payload.bars.map(b => ({ ...b, timestamp: convertUtcToNewYorkTimestamp(b.timestamp) }));
+          return payload.bars; // Keep original UTC timestamps
         }
         
         // Handle incremental updates
         if (!prev.length) {
           console.log('No previous bars, using incoming bars');
-          return payload.bars.map(b => ({ ...b, timestamp: convertUtcToNewYorkTimestamp(b.timestamp) }));
+          return payload.bars; // Keep original UTC timestamps
         }
         
         const lastTs = prev[prev.length - 1].timestamp;
-        const incoming = payload.bars.map(b => ({ ...b, timestamp: convertUtcToNewYorkTimestamp(b.timestamp) }));
+        const incoming = payload.bars; // Keep original UTC timestamps
         
         console.log('Incremental update:', {
           lastTs,
@@ -381,12 +355,12 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
         const period = ind.params.period ?? 20;
         const ema = calculateEMAAligned(closes, period);
         const data = ema.map((v, i) => [bars[i]?.timestamp, v] as any);
-        series.push({ type: 'line', id: ind.id, name: `EMA(${period})`, data, yAxis: axisLayout.indices.price, color: '#8B5CF6' });
+        series.push({ type: 'line', id: ind.id, name: `EMA(${period})`, data, yAxis: axisLayout.indices.price, color: '#8B5CF6', lineWidth: 1 });
       } else if (ind.type === 'SMA') {
         const period = ind.params.period ?? 20;
         const sma = calculateSMA(closes, period);
         const data = sma.map((v, i) => [bars[i]?.timestamp, v] as any);
-        series.push({ type: 'line', id: ind.id, name: `SMA(${period})`, data, yAxis: axisLayout.indices.price, color: '#10B981' });
+        series.push({ type: 'line', id: ind.id, name: `SMA(${period})`, data, yAxis: axisLayout.indices.price, color: '#10B981', lineWidth: 1 });
       } else if (ind.type === 'MACD') {
         const fast = ind.params.fast ?? 10;
         const slow = ind.params.slow ?? 20;
@@ -396,15 +370,15 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
         const signalData = signalLine.map((v, i) => [bars[i]?.timestamp, v] as any);
         const histData = histogram.map((v, i) => [bars[i]?.timestamp, v] as any);
         const macdAxis = axisLayout.indices.macd ?? axisLayout.indices.price;
-        series.push({ type: 'line', id: `${ind.id}-macd`, name: `MACD`, data: macdData, yAxis: macdAxis, color: '#F59E0B' });
-        series.push({ type: 'line', id: `${ind.id}-signal`, name: `Signal`, data: signalData, yAxis: macdAxis, color: '#3B82F6' });
+        series.push({ type: 'line', id: `${ind.id}-macd`, name: `MACD`, data: macdData, yAxis: macdAxis, color: '#F59E0B', lineWidth: 1 });
+        series.push({ type: 'line', id: `${ind.id}-signal`, name: `Signal`, data: signalData, yAxis: macdAxis, color: '#3B82F6', lineWidth: 1 });
         series.push({ type: 'column', id: `${ind.id}-hist`, name: `Hist`, data: histData, yAxis: macdAxis, color: '#9CA3AF' });
       } else if (ind.type === 'RSI') {
         const period = ind.params.period ?? 14;
         const rsi = calculateRSI(closes, period);
         const data = rsi.map((v, i) => [bars[i]?.timestamp, v] as any);
         const rsiAxis = axisLayout.indices.rsi ?? axisLayout.indices.price;
-        series.push({ type: 'line', id: ind.id, name: `RSI(${period})`, data, yAxis: rsiAxis, color: '#EF4444' });
+        series.push({ type: 'line', id: ind.id, name: `RSI(${period})`, data, yAxis: rsiAxis, color: '#EF4444', lineWidth: 1 });
       }
     }
     return series;
@@ -416,10 +390,43 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
     scrollbar: { enabled: false },
     title: { text: undefined },
     chart: { height: 360, backgroundColor: 'transparent', spacingTop: 0, marginTop: 0, spacing: [0, 0, 0, 0] },
-    xAxis: { ordinal: true },
+    xAxis: { 
+      ordinal: true,
+      labels: {
+        rotation: 0,
+        step: 1, // Show every label to prevent overlap
+        style: {
+          fontSize: '10px' // Smaller font to prevent overlap
+        },
+        formatter: function() {
+          const date = new Date(this.value);
+          // For daily or larger timeframes, show date only
+          // For intraday timeframes, show date + time
+          const isIntraday = timeframe.includes('m');
+          
+          if (isIntraday) {
+            return date.toLocaleString('en-US', { 
+              timeZone: AMERICA_NEW_YORK_TZ,
+              month: '2-digit',
+              day: '2-digit',
+              hour: '2-digit',
+              minute: '2-digit',
+              hourCycle: 'h23' // Use 24-hour format
+            });
+          } else {
+            return date.toLocaleString('en-US', { 
+              timeZone: AMERICA_NEW_YORK_TZ,
+              month: '2-digit',
+              day: '2-digit'
+            });
+          }
+        }
+      }
+    },
     plotOptions: {
       series: {
         dataGrouping: { enabled: false },
+        lineWidth: 1, // Make indicator lines thinner
       },
       candlestick: {
         dataGrouping: { enabled: false },
@@ -434,12 +441,53 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
       },
       line: {
         dataGrouping: { enabled: false },
+        lineWidth: 1, // Ensure line indicators are thin
       },
     },
-    tooltip: { split: true, valueDecimals: 2 },
+    tooltip: { 
+      split: false, // Share tooltip across all series
+      shared: true, // Enable shared tooltip
+      valueDecimals: 2,
+              formatter: function() {
+          const date = new Date(this.x);
+          const nyTime = date.toLocaleString('en-US', { 
+            timeZone: AMERICA_NEW_YORK_TZ,
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hourCycle: 'h23'
+          });
+          
+          let tooltip = `<b>${nyTime}</b><br/>`;
+          
+          // Add OHLC data
+          if (this.points) {
+            this.points.forEach((point: any) => {
+              if (point.series.id === 'ohlc') {
+                tooltip += `<span style="color: ${point.color}">●</span> <b>${point.series.name}</b><br/>`;
+                tooltip += `O: <b>${point.point.open?.toFixed(2) || 'N/A'}</b><br/>`;
+                tooltip += `H: <b>${point.point.high?.toFixed(2) || 'N/A'}</b><br/>`;
+                tooltip += `L: <b>${point.point.low?.toFixed(2) || 'N/A'}</b><br/>`;
+                tooltip += `C: <b>${point.point.close?.toFixed(2) || 'N/A'}</b><br/>`;
+              } else if (point.series.id === 'volume') {
+                tooltip += `<span style="color: ${point.color}">●</span> <b>${point.series.name}</b>: <b>${Highcharts.numberFormat(point.y, 0)}</b><br/>`;
+              } else {
+                // Indicator series
+                const value = point.y !== null ? point.y.toFixed(2) : 'N/A';
+                tooltip += `<span style="color: ${point.color}">●</span> <b>${point.series.name}</b>: <b>${value}</b><br/>`;
+              }
+            });
+          }
+          
+          return tooltip;
+        }
+    },
     yAxis: axisLayout.yAxis,
     series: [
-      { type: 'candlestick', id: 'ohlc', name: ticker, data: ohlc },
+      { type: 'candlestick', id: 'ohlc', name: ticker, data: ohlc, lineWidth: 1 },
       { type: 'column', id: 'volume', name: 'Volume', data: volumes, yAxis: axisLayout.indices.volume, color: '#94A3B8', tooltip: { valueDecimals: 0 } },
       ...indicatorSeries,
     ],
