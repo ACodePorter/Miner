@@ -7488,5 +7488,15 @@
     "close": 54.2299995422,
     "volume": 104723496.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,11,00,00,00,000000",
+    "ticker": "TTD",
+    "open": 53.75,
+    "high": 56.75,
+    "low": 52.7900009155,
+    "close": 53.1749992371,
+    "volume": 37405200.0,
+    "wedge_status": "none"
   }
 ]

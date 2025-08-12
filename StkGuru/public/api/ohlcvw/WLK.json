@@ -7488,5 +7488,15 @@
     "close": 79.0,
     "volume": 1228874.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,11,00,00,00,000000",
+    "ticker": "WLK",
+    "open": 79.1699981689,
+    "high": 80.0699996948,
+    "low": 76.2300033569,
+    "close": 76.8899993896,
+    "volume": 997544.0,
+    "wedge_status": "none"
   }
 ]

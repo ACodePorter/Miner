@@ -7488,5 +7488,15 @@
     "close": 45.0,
     "volume": 118545.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,11,00,00,00,000000",
+    "ticker": "NTB",
+    "open": 44.7700004578,
+    "high": 45.1100006104,
+    "low": 44.5800018311,
+    "close": 44.9000015259,
+    "volume": 149904.0,
+    "wedge_status": "none"
   }
 ]

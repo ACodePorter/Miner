@@ -7488,5 +7488,15 @@
     "close": 112.5,
     "volume": 2619035.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,11,00,00,00,000000",
+    "ticker": "AEP",
+    "open": 112.6350021362,
+    "high": 112.7699966431,
+    "low": 111.6449966431,
+    "close": 112.0,
+    "volume": 2032476.0,
+    "wedge_status": "none"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 9.2399997711,
     "volume": 435260.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,11,00,00,00,000000",
+    "ticker": "KREF",
+    "open": 9.2399997711,
+    "high": 9.2600002289,
+    "low": 8.9899997711,
+    "close": 9.029999733,
+    "volume": 570579.0,
+    "wedge_status": "drop"
   }
 ]

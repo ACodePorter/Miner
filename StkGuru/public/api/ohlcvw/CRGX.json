@@ -3908,5 +3908,15 @@
     "close": 4.4899997711,
     "volume": 1242044.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,08,11,00,00,00,000000",
+    "ticker": "CRGX",
+    "open": 4.5,
+    "high": 4.5050001144,
+    "low": 4.4699997902,
+    "close": 4.4800000191,
+    "volume": 2399940.0,
+    "wedge_status": "none"
   }
 ]

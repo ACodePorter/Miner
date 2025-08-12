@@ -7488,5 +7488,15 @@
     "close": 24.0,
     "volume": 10826692.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,11,00,00,00,000000",
+    "ticker": "NCLH",
+    "open": 23.9300003052,
+    "high": 24.1149997711,
+    "low": 23.5750999451,
+    "close": 23.7299995422,
+    "volume": 10507212.0,
+    "wedge_status": "drop"
   }
 ]

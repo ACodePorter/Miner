@@ -7488,5 +7488,15 @@
     "close": 209.1799926758,
     "volume": 4076503.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,11,00,00,00,000000",
+    "ticker": "MDB",
+    "open": 207.0,
+    "high": 211.4700012207,
+    "low": 199.5899963379,
+    "close": 201.0,
+    "volume": 3117097.0,
+    "wedge_status": "none"
   }
 ]

@@ -1728,5 +1728,15 @@
     "close": 20.0,
     "volume": 378478.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,11,00,00,00,000000",
+    "ticker": "BKV",
+    "open": 20.1399993896,
+    "high": 20.1599998474,
+    "low": 19.7999992371,
+    "close": 20.0599994659,
+    "volume": 316828.0,
+    "wedge_status": "none"
   }
 ]
