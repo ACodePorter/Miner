@@ -124,6 +124,8 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
   const [price, setPrice] = useState<number | null>(null);
   const [indicators, setIndicators] = useState<IndicatorConfig[]>([]);
   const [indicatorToAdd, setIndicatorToAdd] = useState<IndicatorType>('EMA');
+  const [showIndicatorDialog, setShowIndicatorDialog] = useState(false);
+  const [indicatorParams, setIndicatorParams] = useState<Record<string, number>>({});
   const chartRef = useRef<HighchartsReact.RefObject>(null);
   const barsAbortRef = useRef<AbortController | null>(null);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
@@ -495,23 +497,58 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
   }), [ticker, timeframe, price, ohlc, volumes, indicatorSeries, axisLayout]);
 
   const handleAddIndicator = () => {
+    // Reset params and open dialog
+    setIndicatorParams({});
+    setShowIndicatorDialog(true);
+  };
+
+  const confirmAddIndicator = () => {
     const type = indicatorToAdd;
     const id = `${type}-${Date.now()}`;
+    
+    // Set default params if none provided
     let params: Record<string, number> = {};
     if (type === 'EMA' || type === 'SMA') {
-      const period = Number(window.prompt('Period', '20') || '20');
-      params = { period };
+      params = { period: indicatorParams.period || 20 };
     } else if (type === 'MACD') {
-      const fast = Number(window.prompt('Fast period', '10') || '10');
-      const slow = Number(window.prompt('Slow period', '20') || '20');
-      const signal = Number(window.prompt('Signal period', '5') || '5');
-      params = { fast, slow, signal };
+      params = { 
+        fast: indicatorParams.fast || 10, 
+        slow: indicatorParams.slow || 20, 
+        signal: indicatorParams.signal || 5 
+      };
     } else if (type === 'RSI') {
-      const period = Number(window.prompt('Period', '14') || '14');
-      params = { period };
+      params = { period: indicatorParams.period || 14 };
     }
+    
     setIndicators(prev => [...prev, { id, type, params }]);
+    setShowIndicatorDialog(false);
+    setIndicatorParams({});
   };
+
+  const cancelAddIndicator = () => {
+    setShowIndicatorDialog(false);
+    setIndicatorParams({});
+  };
+
+  const handleDialogBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget) {
+      cancelAddIndicator();
+    }
+  };
+
+  // Handle escape key to close dialog
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && showIndicatorDialog) {
+        cancelAddIndicator();
+      }
+    };
+
+    if (showIndicatorDialog) {
+      document.addEventListener('keydown', handleEscape);
+      return () => document.removeEventListener('keydown', handleEscape);
+    }
+  }, [showIndicatorDialog]);
 
   const removeIndicator = (id: string) => {
     setIndicators(prev => prev.filter(ind => ind.id !== id));
@@ -729,6 +766,102 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
           <HighchartsReact highcharts={Highcharts} constructorType="stockChart" options={options} ref={chartRef as any} />
         </div>
       </div>
+      
+      {/* Indicator Dialog */}
+      {showIndicatorDialog && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" onClick={handleDialogBackdropClick}>
+          <div className="bg-white rounded-lg p-6 w-80 max-w-sm">
+            <h3 className="text-lg font-semibold mb-4">Add {indicatorToAdd} Indicator</h3>
+            
+            {indicatorToAdd === 'EMA' || indicatorToAdd === 'SMA' ? (
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Period
+                </label>
+                <input
+                  type="number"
+                  value={indicatorParams.period || 20}
+                  onChange={(e) => setIndicatorParams(prev => ({ ...prev, period: Number(e.target.value) }))}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  min="1"
+                  max="200"
+                />
+              </div>
+            ) : indicatorToAdd === 'MACD' ? (
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Fast Period
+                  </label>
+                  <input
+                    type="number"
+                    value={indicatorParams.fast || 10}
+                    onChange={(e) => setIndicatorParams(prev => ({ ...prev, fast: Number(e.target.value) }))}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    min="1"
+                    max="100"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Slow Period
+                  </label>
+                  <input
+                    type="number"
+                    value={indicatorParams.slow || 20}
+                    onChange={(e) => setIndicatorParams(prev => ({ ...prev, slow: Number(e.target.value) }))}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    min="1"
+                    max="100"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Signal Period
+                  </label>
+                  <input
+                    type="number"
+                    value={indicatorParams.signal || 5}
+                    onChange={(e) => setIndicatorParams(prev => ({ ...prev, signal: Number(e.target.value) }))}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    min="1"
+                    max="50"
+                  />
+                </div>
+              </div>
+            ) : indicatorToAdd === 'RSI' ? (
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Period
+                </label>
+                <input
+                  type="number"
+                  value={indicatorParams.period || 14}
+                  onChange={(e) => setIndicatorParams(prev => ({ ...prev, period: Number(e.target.value) }))}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  min="1"
+                  max="100"
+                />
+              </div>
+            ) : null}
+            
+            <div className="flex justify-end space-x-3 mt-6">
+              <button
+                onClick={cancelAddIndicator}
+                className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={confirmAddIndicator}
+                className="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                Add Indicator
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
