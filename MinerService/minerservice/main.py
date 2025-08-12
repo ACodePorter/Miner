@@ -1,5 +1,6 @@
 import asyncio
 import json
+import math
 import os
 import uuid
 from contextlib import asynccontextmanager
@@ -1118,17 +1119,37 @@ async def get_bars(symbol: str, interval: str = '1m', period: str = '1d'):
         if hist.empty:
             return {'error': 'No data available'}
 
-        # Convert to OHLCV format
+        # Convert to OHLCV format with safe handling of nan values
         bars = []
         for index, row in hist.iterrows():
+            # Safely convert values, handling nan and inf
+            try:
+                open_price = float(row['Open']) if not math.isnan(
+                    row['Open']) else 0.0
+                high_price = float(row['High']) if not math.isnan(
+                    row['High']) else 0.0
+                low_price = float(row['Low']) if not math.isnan(
+                    row['Low']) else 0.0
+                close_price = float(row['Close']) if not math.isnan(
+                    row['Close']) else 0.0
+                volume = int(row['Volume']) if not math.isnan(
+                    row['Volume']) else 0
+            except (ValueError, TypeError):
+                # Skip this row if conversion fails
+                continue
+
+            # Skip bars with invalid data (all zeros might indicate bad data)
+            if all(price == 0.0 for price in [open_price, high_price, low_price, close_price]):
+                continue
+
             bars.append({
                 # Convert to milliseconds
                 'timestamp': int(index.timestamp() * 1000),
-                'open': float(row['Open']),
-                'high': float(row['High']),
-                'low': float(row['Low']),
-                'close': float(row['Close']),
-                'volume': int(row['Volume'])
+                'open': open_price,
+                'high': high_price,
+                'low': low_price,
+                'close': close_price,
+                'volume': volume
             })
 
         return {
