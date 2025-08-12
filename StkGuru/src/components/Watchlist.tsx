@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { useWatchlist } from '../hooks/useWatchlist';
 // apiConfig not needed for WS quotes
 import { wsClient, type QuotePayload } from '../utils/wsClient';
+import LoadingSpinner from './LoadingSpinner';
 
 interface QuoteData {
   symbol: string;
@@ -18,7 +19,7 @@ export interface WatchlistProps {
 }
 
 const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true }) => {
-  const { watchlist, addTicker, removeTicker } = useWatchlist();
+  const { watchlist, loading, addTicker, removeTicker } = useWatchlist();
   const [newTicker, setNewTicker] = useState('');
   const [quotes, setQuotes] = useState<Record<string, QuoteData>>({});
   const [sortBy, setSortBy] = useState<'ticker' | 'price' | 'changePct' | 'volume'>('ticker');
@@ -79,6 +80,11 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
       unsubscribers.forEach(unsub => unsub());
     };
   }, [watchlist]);
+
+  // Set loading to false when component mounts
+  useEffect(() => {
+    // setLoading(false); // This line is removed as loading state is now managed by useWatchlist
+  }, []);
 
   const handleAddTicker = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -143,8 +149,16 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
           </form>
         </div>
 
+        {/* Loading State */}
+        {loading && (
+          <div className="flex flex-col items-center justify-center py-8 text-center">
+            <LoadingSpinner />
+            <p className="text-sm text-slate-400 mt-2">Loading watchlist...</p>
+          </div>
+        )}
+
         {/* Empty State */}
-        {watchlist.length === 0 && (
+        {!loading && watchlist.length === 0 && (
           <div className="flex flex-col items-center justify-center py-8 text-center">
             <div className="w-16 h-16 bg-gradient-to-br from-slate-800 to-slate-700 rounded-full flex items-center justify-center mb-3">
               <svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -156,8 +170,8 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
           </div>
         )}
 
-                  {/* Watchlist Content */}
-          {watchlist.length > 0 && (
+        {/* Watchlist Content */}
+        {!loading && watchlist.length > 0 && (
             <div className="p-1">
             {/* Sorting Header */}
             <div className="flex items-center text-xs font-medium text-slate-400 mb-1 pb-1 border-b border-slate-600">
