@@ -644,12 +644,6 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
     setIndicatorParams({});
   };
 
-  const handleDialogBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (e.target === e.currentTarget) {
-      cancelAddIndicator();
-    }
-  };
-
   // Handle escape key to close dialog
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -803,69 +797,124 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
   }, []);
 
   return (
-    <div ref={inViewRef} className="bg-white border border-gray-200 rounded-md shadow-sm overflow-hidden">
-      <div className="flex items-center gap-2 px-2 py-1 border-b border-gray-200">
-        <input
-          value={ticker}
-          onChange={(e) => setTicker(e.target.value.toUpperCase())}
-          onBlur={fetchBars}
-          className="w-24 px-2 py-1 text-xs border border-gray-300 rounded"
-        />
-        <select
-          value={timeframe}
-          onChange={(e) => setTimeframe(e.target.value)}
-          className="px-2 py-1 text-xs border border-gray-300 rounded"
-        >
-          <option value="1m">1m</option>
-          <option value="5m">5m</option>
-          <option value="15m">15m</option>
-          <option value="30m">30m</option>
-          <option value="60m">60m</option>
-          <option value="65m">65m</option>
-          <option value="1d">1d</option>
-          <option value="1wk">1wk</option>
-          <option value="1mo">1mo</option>
-        </select>
-        <button onClick={fetchBars} className="px-2 py-1 text-xs bg-gray-100 rounded border border-gray-300">Reload</button>
-        <div className="ml-auto flex items-center gap-2">
+    <div ref={inViewRef} className="chart-container overflow-hidden card-hover">
+      {/* Enhanced Header */}
+      <div className="flex items-center justify-between gap-2 px-3 py-2 border-b border-slate-700 bg-gradient-to-br from-slate-800 to-slate-700">
+        <div className="flex items-center gap-2">
+          <input
+            type="text"
+            value={ticker}
+            onChange={(e) => setTicker(e.target.value.toUpperCase())}
+            onBlur={fetchBars}
+            className="w-20 px-2 py-1 text-xs bg-slate-700 border border-slate-600 rounded-lg focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 text-slate-100 font-medium"
+          />
+          <select
+            value={timeframe}
+            onChange={(e) => setTimeframe(e.target.value)}
+            className="px-2 py-1 text-xs bg-slate-700 border border-slate-600 rounded-lg focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 text-slate-100"
+          >
+            <option value="1m">1m</option>
+            <option value="5m">5m</option>
+            <option value="15m">15m</option>
+            <option value="30m">30m</option>
+            <option value="60m">60m</option>
+            <option value="65m">65m</option>
+            <option value="1d">1d</option>
+            <option value="1wk">1wk</option>
+            <option value="1mo">1mo</option>
+          </select>
+          <button 
+            onClick={fetchBars} 
+            className="px-2 py-1 text-xs bg-slate-700 border border-slate-600 rounded-lg hover:bg-slate-600 text-slate-300 hover:text-slate-100 transition-all duration-200 flex items-center gap-1.5"
+          >
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+            Reload
+          </button>
+        </div>
+        
+        <div className="flex items-center gap-2">
           <select
             value={indicatorToAdd}
             onChange={(e) => setIndicatorToAdd(e.target.value as IndicatorType)}
-            className="px-2 py-1 text-xs border border-gray-300 rounded"
+            className="px-2 py-1 text-xs bg-slate-700 border border-slate-600 rounded-lg focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 text-slate-100"
           >
             <option value="EMA">EMA</option>
             <option value="SMA">SMA</option>
             <option value="MACD">MACD</option>
             <option value="RSI">RSI</option>
           </select>
-          <button onClick={handleAddIndicator} className="px-2 py-1 text-xs bg-blue-600 text-white rounded">Add Indicator</button>
+          <button 
+            onClick={handleAddIndicator} 
+            className="btn-primary px-2 py-1 text-xs rounded-lg font-medium flex items-center gap-1.5"
+          >
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+            </svg>
+            Add
+          </button>
           {onRemove && (
-            <button onClick={() => onRemove(id)} className="p-1 text-gray-500 hover:text-red-600" title="Remove chart">✕</button>
+            <button 
+              onClick={() => onRemove(id)} 
+              className="p-1.5 text-slate-400 hover:text-red-400 hover:bg-red-950/20 rounded-lg transition-all duration-200" 
+              title="Remove chart"
+            >
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           )}
         </div>
       </div>
-      {/* Active indicators */}
+
+      {/* Enhanced Active Indicators */}
       {indicators.length > 0 && (
-        <div className="px-2 pb-1 border-b border-gray-200">
-          <div className="flex flex-wrap gap-1">
+        <div className="px-3 py-2 border-b border-slate-700 bg-slate-700">
+          <div className="flex flex-wrap gap-1.5">
             {indicators.map(ind => (
-              <span key={ind.id} className="inline-flex items-center gap-1 px-2 py-0.5 text-[11px] bg-gray-100 rounded border border-gray-300">
-                {getIndicatorLabel(ind)}
+              <span key={ind.id} className="inline-flex items-center gap-1.5 px-2 py-1 text-xs bg-gradient-to-br from-slate-800 to-slate-700 border border-slate-600 rounded-lg text-slate-100">
+                <span className="font-medium">{getIndicatorLabel(ind)}</span>
                 <button
-                  className="text-gray-500 hover:text-red-600"
+                  className="ml-1 text-slate-400 hover:text-red-400 transition-colors"
                   onClick={() => removeIndicator(ind.id)}
                   title="Remove indicator"
                 >
-                  ×
+                  <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
                 </button>
               </span>
             ))}
           </div>
         </div>
       )}
-      <div className="p-1">
-        {loading && <div className="text-xs text-gray-500 px-2 py-2">Loading...</div>}
-        {errorMsg && <div className="text-xs text-red-600 px-2 py-2">{errorMsg}</div>}
+
+      {/* Chart Content */}
+      <div className="p-3">
+        {loading && (
+          <div className="flex items-center justify-center py-6">
+            <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full flex items-center justify-center animate-spin">
+              <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+            </div>
+          </div>
+        )}
+        
+        {errorMsg && (
+          <div className="flex items-center justify-center py-6">
+            <div className="text-center">
+              <div className="w-8 h-8 mx-auto mb-2 bg-red-950/20 rounded-full flex items-center justify-center">
+                <svg className="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <p className="text-xs text-red-400">{errorMsg}</p>
+            </div>
+          </div>
+        )}
+
         <div
           tabIndex={0}
           onKeyDown={handleKeyDown}
@@ -874,101 +923,111 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
           onMouseMove={handleMouseMove}
-          className="outline-none"
+          className="outline-none rounded-lg overflow-hidden"
           style={{ cursor: 'grab' }}
         >
           <HighchartsReact highcharts={Highcharts} constructorType="stockChart" options={options} ref={chartRef as any} />
         </div>
       </div>
       
-      {/* Indicator Dialog */}
+      {/* Enhanced Indicator Dialog */}
       {showIndicatorDialog && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" onClick={handleDialogBackdropClick}>
-          <div className="bg-white rounded-lg p-6 w-80 max-w-sm">
-            <h3 className="text-lg font-semibold mb-4">Add {indicatorToAdd} Indicator</h3>
+        <div className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center z-50">
+          <div className="bg-gradient-to-br from-slate-800 to-slate-700 border border-slate-700 rounded-xl p-4 w-80 max-w-sm shadow-2xl animate-scale-in">
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-blue-400 rounded-lg flex items-center justify-center">
+                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-base font-semibold text-slate-100">Add Indicator</h3>
+                <p className="text-xs text-slate-400">Configure technical indicators</p>
+              </div>
+            </div>
             
             {indicatorToAdd === 'EMA' || indicatorToAdd === 'SMA' ? (
-              <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+              <div className="mb-3">
+                <label className="block text-xs font-medium text-slate-100 mb-1">
                   Period
                 </label>
                 <input
                   type="number"
                   value={indicatorParams.period || 20}
                   onChange={(e) => setIndicatorParams(prev => ({ ...prev, period: Number(e.target.value) }))}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-2 py-1.5 text-xs bg-slate-700 border border-slate-600 rounded-lg focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 text-slate-100"
                   min="1"
                   max="200"
                 />
               </div>
             ) : indicatorToAdd === 'MACD' ? (
-              <div className="space-y-4">
+              <div className="space-y-3">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-xs font-medium text-slate-100 mb-1">
                     Fast Period
                   </label>
                   <input
                     type="number"
                     value={indicatorParams.fast || 10}
                     onChange={(e) => setIndicatorParams(prev => ({ ...prev, fast: Number(e.target.value) }))}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-2 py-1.5 text-xs bg-slate-700 border border-slate-600 rounded-lg focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 text-slate-100"
                     min="1"
                     max="100"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-xs font-medium text-slate-100 mb-1">
                     Slow Period
                   </label>
                   <input
                     type="number"
                     value={indicatorParams.slow || 20}
                     onChange={(e) => setIndicatorParams(prev => ({ ...prev, slow: Number(e.target.value) }))}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-2 py-1.5 text-xs bg-slate-700 border border-slate-600 rounded-lg focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 text-slate-100"
                     min="1"
                     max="100"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-xs font-medium text-slate-100 mb-1">
                     Signal Period
                   </label>
                   <input
                     type="number"
                     value={indicatorParams.signal || 5}
                     onChange={(e) => setIndicatorParams(prev => ({ ...prev, signal: Number(e.target.value) }))}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-2 py-1.5 text-xs bg-slate-700 border border-slate-600 rounded-lg focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 text-slate-100"
                     min="1"
                     max="50"
                   />
                 </div>
               </div>
             ) : indicatorToAdd === 'RSI' ? (
-              <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+              <div className="mb-3">
+                <label className="block text-xs font-medium text-slate-100 mb-1">
                   Period
                 </label>
                 <input
                   type="number"
                   value={indicatorParams.period || 14}
                   onChange={(e) => setIndicatorParams(prev => ({ ...prev, period: Number(e.target.value) }))}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-2 py-1.5 text-xs bg-slate-700 border border-slate-600 rounded-lg focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 text-slate-100"
                   min="1"
                   max="100"
                 />
               </div>
             ) : null}
             
-            <div className="flex justify-end space-x-3 mt-6">
+            <div className="flex justify-end space-x-2 mt-4">
               <button
                 onClick={cancelAddIndicator}
-                className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                className="px-4 py-1.5 text-xs font-medium text-slate-300 bg-slate-700 border border-slate-600 rounded-lg hover:bg-slate-600 hover:text-slate-100 transition-all duration-200"
               >
                 Cancel
               </button>
               <button
                 onClick={confirmAddIndicator}
-                className="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="btn-primary px-4 py-1.5 text-xs font-medium rounded-lg"
               >
                 Add Indicator
               </button>

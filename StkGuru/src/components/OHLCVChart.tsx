@@ -1567,10 +1567,6 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
     };
   }, [categorizedTickers]);
 
-  const handleTickerChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedTicker(event.target.value);
-  };
-
   // Get visible data based on zoom window
   const getVisibleData = useCallback(() => {
     if (!chartData?.sortedData) return chartData?.sortedData || [];
@@ -1653,7 +1649,7 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
           <h2 className="chart-title">
             {selectedTicker ? `${selectedTicker} OHLCV Chart` : 'OHLCV Chart'}
           </h2>
-          <div className="flex items-center gap-2 text-sm text-gray-600">
+          <div className="flex items-center gap-2 text-sm text-text-tertiary">
             <button
               onClick={() => fetchCategorizedTickers()}
               disabled={loading}
@@ -1669,9 +1665,9 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
           </div>
         </div>
         
-        <div className="chart-controls mt-2">
+        <div className="chart-controls">
           <div className="flex items-center gap-6 flex-wrap">
-            <label className="flex items-center gap-2 text-sm font-medium">
+            <label className="flex items-center gap-2 text-sm font-medium text-text-primary">
               Date:
               <select
                 value={selectedDate}
@@ -1694,86 +1690,78 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
               </select>
             </label>
             
-            <label className="flex items-center gap-2 text-sm font-medium">
+            <label className="flex items-center gap-2 text-sm font-medium text-text-primary">
               Wedge Status:
               <select
                 value={selectedWedgeStatus}
                 onChange={(e) => setSelectedWedgeStatus(e.target.value as 'pop' | 'drop')}
                 className="input-field"
-                disabled={loading || !selectedDate}
+                disabled={loading}
               >
-                <option value="pop">POP ({(() => {
-                  const dateData = categorizedTickers.find(item => item.date === selectedDate);
-                  return dateData ? `${dateData.pop.length} tickers (${(dateData.pop_pct * 100).toFixed(1)}%)` : '0 tickers';
-                })()})</option>
-                <option value="drop">DROP ({(() => {
-                  const dateData = categorizedTickers.find(item => item.date === selectedDate);
-                  return dateData ? `${dateData.drop.length} tickers (${(dateData.drop_pct * 100).toFixed(1)}%)` : '0 tickers';
-                })()})</option>
+                <option value="pop">Pop</option>
+                <option value="drop">Drop</option>
               </select>
             </label>
             
-            <label className="flex items-center gap-2 text-sm font-medium">
+            <label className="flex items-center gap-2 text-sm font-medium text-text-primary">
               Ticker:
               <select
                 value={selectedTicker}
-                onChange={handleTickerChange}
+                onChange={(e) => setSelectedTicker(e.target.value)}
                 className="input-field"
-                disabled={loading || !selectedDate}
+                disabled={loading}
               >
-                {getAvailableTickers().length === 0 ? (
-                  <option value="">No tickers available</option>
-                ) : (
-                  <>
-                    <option value="">Select a ticker</option>
-                    {getAvailableTickers().map((ticker) => (
-                      <option key={ticker} value={ticker}>
-                        {ticker}
-                      </option>
-                    ))}
-                  </>
-                )}
+                {(() => {
+                  if (!selectedDate) return <option value="">Select a date first</option>;
+                  
+                  const dateData = categorizedTickers.find(item => item.date === selectedDate);
+                  if (!dateData) return <option value="">No data for selected date</option>;
+                  
+                  const tickers = selectedWedgeStatus === 'pop' ? dateData.pop : dateData.drop;
+                  if (tickers.length === 0) return <option value="">No {selectedWedgeStatus} tickers</option>;
+                  
+                  return (
+                    <>
+                      <option value="">Select a ticker</option>
+                      {tickers.map((ticker) => (
+                        <option key={ticker} value={ticker}>
+                          {ticker}
+                        </option>
+                      ))}
+                    </>
+                  );
+                })()}
               </select>
             </label>
           </div>
         </div>
       </div>
-
+      
       {chartData && (
-        <div className="chart-stats py-1 px-3">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            <div className="chart-stat" key="current-price">
-              <div className="chart-stat-label">Current Price</div>
+        <div className="chart-stats">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="chart-stat" key="price">
+              <div className="chart-stat-label">Price</div>
               <div className="chart-stat-value">
-                ${(() => {
+                {(() => {
                   const visibleData = getVisibleData();
-                  return visibleData[visibleData.length - 1]?.close?.toFixed(2) || 'N/A';
+                  if (visibleData.length === 0) return 'N/A';
+                  return `$${visibleData[visibleData.length - 1].close.toFixed(2)}`;
                 })()}
               </div>
             </div>
             <div className="chart-stat" key="change">
               <div className="chart-stat-label">Change</div>
-              <div className={`chart-stat-value ${
-                (() => {
-                  const visibleData = getVisibleData();
-                  const current = visibleData[visibleData.length - 1]?.close;
-                  const previous = visibleData[visibleData.length - 2]?.close;
-                  if (current && previous) {
-                    return current > previous ? 'text-green-600' : 'text-red-600';
-                  }
-                  return 'text-gray-600';
-                })()
-              }`}>
+              <div className="chart-stat-value">
                 {(() => {
                   const visibleData = getVisibleData();
-                  const current = visibleData[visibleData.length - 1]?.close;
-                  const previous = visibleData[visibleData.length - 2]?.close;
-                  if (current && previous) {
-                    const change = current - previous;
-                    const changePercent = (change / previous) * 100;
-                    return `${change >= 0 ? '+' : ''}${change.toFixed(2)} (${changePercent >= 0 ? '+' : ''}${changePercent.toFixed(2)}%)`;
-                  }
-                  return 'N/A';
+                  if (visibleData.length < 2) return 'N/A';
+                  
+                  const current = visibleData[visibleData.length - 1].close;
+                  const previous = visibleData[visibleData.length - 2].close;
+                  const change = current - previous;
+                  const changePercent = (change / previous) * 100;
+                  return `${change >= 0 ? '+' : ''}${change.toFixed(2)} (${changePercent >= 0 ? '+' : ''}${changePercent.toFixed(2)}%)`;
                 })()}
               </div>
             </div>
@@ -1810,12 +1798,12 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
                     formattedDate = new Date(lastWedge.date).toISOString().split('T')[0];
                   }
                   
-                  const statusColor = lastWedge.status === 'pop' ? 'text-green-600' : 'text-red-600';
+                  const statusColor = lastWedge.status === 'pop' ? 'text-success-400' : 'text-danger-400';
                   const statusText = lastWedge.status.toUpperCase();
                   
                   return (
                     <span>
-                      <span className="text-gray-400 text-xs">{formattedDate}</span>
+                      <span className="text-text-tertiary text-xs">{formattedDate}</span>
                       <br />
                       <span className={statusColor}>{statusText}</span>
                     </span>
@@ -1834,9 +1822,9 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
                   const formattedDate = `${selectedDate.substring(0, 4)}-${selectedDate.substring(4, 6)}-${selectedDate.substring(6, 8)}`;
                   return (
                     <span>
-                      <span className="text-gray-400 text-xs">{formattedDate}</span>
+                      <span className="text-text-tertiary text-xs">{formattedDate}</span>
                       <br />
-                      <span className="text-blue-600">{dateData.pop.length}P/{dateData.drop.length}D</span>
+                      <span className="text-primary-400">{dateData.pop.length}P/{dateData.drop.length}D</span>
                     </span>
                   );
                 })()}

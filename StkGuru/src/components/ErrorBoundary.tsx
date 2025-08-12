@@ -32,24 +32,29 @@ class ErrorBoundary extends Component<Props, State> {
       }
       
       return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-900 text-white p-8">
+        <div className="flex items-center justify-center min-h-screen bg-gradient-primary text-text-primary p-8">
           <div className="text-center max-w-md">
-            <h2 className="text-2xl font-bold text-red-400 mb-4">Something went wrong</h2>
-            <p className="text-gray-300 mb-6">
+            <div className="w-20 h-20 mx-auto mb-6 bg-danger-950/20 rounded-full flex items-center justify-center">
+              <svg className="w-10 h-10 text-danger-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h2 className="text-2xl font-bold text-danger-400 mb-4">Something went wrong</h2>
+            <p className="text-text-secondary mb-6">
               The application encountered an error. Please try refreshing the page.
             </p>
             <button
               onClick={() => window.location.reload()}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+              className="btn-primary px-6 py-3 rounded-lg font-medium"
             >
               Refresh Page
             </button>
             {import.meta.env.DEV && this.state.error && (
               <details className="mt-4 text-left">
-                <summary className="cursor-pointer text-gray-400 hover:text-gray-300">
+                <summary className="cursor-pointer text-text-tertiary hover:text-text-secondary">
                   Error Details (Development)
                 </summary>
-                <pre className="mt-2 text-xs text-red-300 bg-gray-800 p-3 rounded overflow-auto">
+                <pre className="mt-2 text-xs text-danger-300 bg-bg-tertiary p-3 rounded overflow-auto border border-border-primary">
                   {this.state.error.stack}
                 </pre>
               </details>

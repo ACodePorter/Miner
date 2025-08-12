@@ -615,7 +615,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
           <h2 className="chart-title">
             {data[0].index_name.toUpperCase()} Market Breadth
           </h2>
-          <div className="flex items-center gap-2 text-sm text-gray-600">
+          <div className="flex items-center gap-2 text-sm text-text-tertiary">
             <button
               onClick={handleRefresh}
               disabled={isRefreshing}
@@ -631,9 +631,9 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
           </div>
         </div>
         
-        <div className="chart-controls mt-2">
+        <div className="chart-controls">
           <div className="flex items-center gap-6 flex-wrap">
-            <label className="flex items-center gap-2 text-sm font-medium">
+            <label className="flex items-center gap-2 text-sm font-medium text-text-primary">
               N-year:
               <input
                 type="number"
@@ -651,8 +651,8 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
                 key={opt.key}
                 className={`flex items-center gap-2 cursor-pointer transition-colors duration-200 ${
                   idx === selectedSMA 
-                    ? "text-blue-400 font-semibold" 
-                    : "text-gray-400 hover:text-gray-300"
+                    ? "text-primary-400 font-semibold" 
+                    : "text-text-tertiary hover:text-text-secondary"
                 }`}
               >
                 <input
@@ -667,7 +667,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
               </label>
             ))}
             
-            <label className="flex items-center gap-2 text-sm font-medium cursor-pointer">
+            <label className="flex items-center gap-2 text-sm font-medium cursor-pointer text-text-primary">
               <input
                 type="checkbox"
                 checked={showSectorLines}
@@ -680,24 +680,24 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
       </div>
       
       {chartStats && (
-        <div className="chart-stats py-1 px-3">
+        <div className="chart-stats">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Progress Bar */}
             <div className="chart-stat flex flex-col justify-center">
               <div className="chart-stat-label text-center">Score</div>
               <div className="flex flex-col items-center py-2">
                 {/* Progress bar */}
-                <div className="w-full bg-gray-600 rounded-full h-4 mb-2 relative">
+                <div className="w-full bg-bg-tertiary rounded-full h-4 mb-2 relative">
                   {/* Background with extreme value markers */}
                   <div className="absolute inset-0 rounded-full overflow-hidden">
                     {/* Below 200 zone */}
                     <div 
-                      className="absolute left-0 h-full bg-red-900/50 border-r border-red-600/70"
+                      className="absolute left-0 h-full bg-danger-900/50 border-r border-danger-600/70"
                       style={{ width: `${(200 / 1100) * 100}%` }}
                     ></div>
                     {/* Above 950 zone */}
                     <div 
-                      className="absolute right-0 h-full bg-red-900/40 border-l border-red-600/60"
+                      className="absolute right-0 h-full bg-danger-900/40 border-l border-danger-600/60"
                       style={{ 
                         width: `${((1100 - 950) / 1100) * 100}%`,
                         left: `${(950 / 1100) * 100}%`
@@ -727,14 +727,14 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
                   </div>
                   
                   {/* Extreme value labels */}
-                  <div className="absolute -top-6 left-0 text-xs text-gray-300">0</div>
-                  <div className="absolute -top-6 left-0 text-xs text-red-400" style={{ left: `${(200 / 1100) * 100}%` }}>200</div>
-                  <div className="absolute -top-6 right-0 text-xs text-red-400" style={{ right: `${((1100 - 950) / 1100) * 100}%` }}>950</div>
-                  <div className="absolute -top-6 right-0 text-xs text-gray-300">1100</div>
+                  <div className="absolute -top-6 left-0 text-xs text-text-tertiary">0</div>
+                  <div className="absolute -top-6 left-0 text-xs text-danger-400" style={{ left: `${(200 / 1100) * 100}%` }}>200</div>
+                  <div className="absolute -top-6 right-0 text-xs text-danger-400" style={{ right: `${((1100 - 950) / 1100) * 100}%` }}>950</div>
+                  <div className="absolute -top-6 right-0 text-xs text-text-tertiary">1100</div>
                 </div>
                 
                 {/* Current value display */}
-                <div className="text-sm font-bold text-white">
+                <div className="text-sm font-bold text-text-primary">
                   {chartStats.current.toFixed(0)} / 1100
                 </div>
               </div>
@@ -745,7 +745,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
               <div className="grid grid-cols-3 gap-4 py-2">
                 {(() => {
                   if (!processedData) {
-                    return <div className="text-gray-400 text-xs col-span-3 text-center">No sector data</div>;
+                    return <div className="text-text-tertiary text-xs col-span-3 text-center">No sector data</div>;
                   }
 
                   const { smaOption } = processedData;
@@ -753,7 +753,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
                   const sectorScores = currentData[smaOption.sector as keyof MarketBreadthData] as SectorScore[];
                   
                   if (!sectorScores || sectorScores.length === 0) {
-                    return <div className="text-gray-400 text-xs col-span-3 text-center">No sector data</div>;
+                    return <div className="text-text-tertiary text-xs col-span-3 text-center">No sector data</div>;
                   }
 
                   // Sort by score and get top 3
@@ -762,17 +762,17 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
                     .slice(0, 3);
 
                   return topSectors.map((sector, idx) => (
-                    <div key={sector.sector_key} className="text-center flex flex-col items-center bg-gray-800/30 rounded-lg p-3 border border-gray-700/30">
+                    <div key={sector.sector_key} className="text-center flex flex-col items-center bg-bg-tertiary rounded-lg p-3 border border-border-secondary">
                       <div className="flex items-center gap-2 mb-2">
                         <div 
                           className="w-3 h-3 rounded-full flex-shrink-0"
                           style={{ backgroundColor: COLORS[(idx + 1) % COLORS.length] }}
                         ></div>
-                        <span className="font-semibold text-gray-200 text-sm whitespace-nowrap">
+                        <span className="font-semibold text-text-primary text-sm whitespace-nowrap">
                           {sector.sector_key}
                         </span>
                       </div>
-                      <div className="font-bold text-white text-xl">
+                      <div className="font-bold text-text-primary text-xl">
                         {sector.score.toFixed(0)}
                       </div>
                     </div>

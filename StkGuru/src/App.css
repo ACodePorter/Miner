@@ -2,326 +2,195 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom component styles */
+/* Custom component styles - Updated for new dark theme */
 @layer components {
-  .card {
-    @apply bg-gray-900/70 backdrop-blur-sm rounded-2xl border border-gray-800/70 px-3 py-2 shadow-2xl;
+  /* Chart container styling */
+  .chart-container {
+    @apply bg-gradient-to-br from-slate-800 to-slate-700 border border-slate-700 rounded-xl shadow-lg overflow-hidden;
   }
 
-  .card-header {
-    @apply flex items-center justify-between mb-6;
+  /* Chart header styling */
+  .chart-header {
+    @apply p-4 border-b border-slate-700 bg-gradient-to-br from-slate-800 to-slate-700;
   }
 
-  .card-title {
-    @apply text-xl font-bold text-white;
+  .chart-title {
+    @apply text-lg font-semibold text-slate-100;
   }
 
+  .chart-controls {
+    @apply flex items-center gap-4 flex-wrap mt-3;
+  }
+
+  /* Chart stats styling */
+  .chart-stats {
+    @apply bg-slate-700 rounded-lg p-4 mx-4 my-3 border border-slate-600;
+  }
+
+  .chart-stat {
+    @apply flex flex-col py-2 px-1;
+  }
+
+  .chart-stat-label {
+    @apply text-slate-400 font-medium text-sm;
+  }
+
+  .chart-stat-value {
+    @apply text-lg font-bold text-slate-100;
+  }
+
+  /* Button styling */
   .btn-primary {
-    @apply bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105;
+    @apply bg-gradient-to-r from-blue-500 to-blue-400 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:shadow-lg;
   }
 
   .btn-secondary {
-    @apply bg-gray-800/50 hover:bg-gray-700/50 text-gray-300 hover:text-white px-4 py-2 rounded-xl font-medium transition-all duration-300 border border-gray-700/50 hover:border-gray-600/50;
+    @apply bg-slate-700 border border-slate-600 text-slate-300 hover:text-slate-100 hover:bg-slate-600 px-4 py-2 rounded-lg font-medium transition-all duration-200;
   }
 
+  /* Input field styling */
   .input-field {
-    @apply bg-gray-800/40 backdrop-blur-sm border border-gray-700/40 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all duration-300 shadow-lg;
-    box-shadow: 
-      inset 0 1px 2px rgba(255, 255, 255, 0.05),
-      0 4px 6px -1px rgba(0, 0, 0, 0.1),
-      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    @apply bg-slate-700 border border-slate-600 rounded-lg px-3 py-2 text-slate-100 placeholder-slate-400 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50;
   }
 
-  .input-field:hover {
-    @apply bg-gray-700/40 border-gray-600/40;
-    box-shadow: 
-      inset 0 1px 2px rgba(255, 255, 255, 0.08),
-      0 6px 8px -1px rgba(0, 0, 0, 0.15),
-      0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  }
-
-  .input-field:focus {
-    @apply bg-gray-700/50 border-blue-500/50;
-    box-shadow: 
-      inset 0 1px 2px rgba(255, 255, 255, 0.1),
-      0 0 0 3px rgba(96, 165, 250, 0.1),
-      0 8px 12px -1px rgba(0, 0, 0, 0.2),
-      0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  }
-
+  /* Loading spinner styling */
   .loading-spinner {
-    @apply inline-block w-6 h-6 border-2 border-gray-600 border-t-blue-500 rounded-full animate-spin;
+    @apply inline-block w-4 h-4 border-2 border-slate-600 border-t-blue-400 rounded-full animate-spin;
   }
-}
 
-.App {
-  @apply min-h-screen bg-gray-50 text-gray-900;
-}
+  /* Custom checkbox styling */
+  input[type="checkbox"] {
+    @apply appearance-none w-4 h-4 bg-slate-700 border-2 border-slate-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400 transition-all duration-200 cursor-pointer relative;
+  }
 
-.App-header {
-  @apply text-center py-2 px-4 mb-1 relative;
-  /* Removed background, border, and box-shadow for header */
-  margin: 0 16px 8px 16px;
-}
+  input[type="checkbox"]:checked {
+    @apply bg-blue-500 border-blue-500;
+  }
 
-.App-header h1 {
-  @apply text-3xl md:text-4xl font-bold mb-2 text-white;
-  background: linear-gradient(135deg, rgba(96, 165, 250, 0.9), rgba(147, 51, 234, 0.9));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 
-    0 0 20px rgba(96, 165, 250, 0.3),
-    0 0 40px rgba(147, 51, 234, 0.2);
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-}
+  input[type="checkbox"]:checked::after {
+    content: '';
+    @apply absolute inset-0 flex items-center justify-center;
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
-.App-header p {
-  @apply text-lg md:text-xl text-gray-200 font-medium;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-}
+  input[type="checkbox"]:hover:not(:checked) {
+    @apply border-slate-500 bg-slate-600;
+  }
 
-main {
-  @apply w-full;
+  input[type="checkbox"]:disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+
+  /* Radio button styling */
+  input[type="radio"] {
+    @apply appearance-none w-4 h-4 bg-slate-700 border-2 border-slate-600 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400 transition-all duration-200 cursor-pointer relative;
+  }
+
+  input[type="radio"]:checked {
+    @apply bg-blue-500 border-blue-500;
+  }
+
+  input[type="radio"]:checked::after {
+    content: '';
+    @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-white rounded-full;
+  }
+
+  input[type="radio"]:hover:not(:checked) {
+    @apply border-slate-500 bg-slate-600;
+  }
+
+  input[type="radio"]:disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+
+  /* Number input styling */
+  input[type="number"] {
+    @apply bg-slate-700 border border-slate-600 rounded-lg px-3 py-2 text-slate-100 text-center focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50;
+  }
+
+  /* Hide spinner buttons on number inputs */
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    display: none;
+  }
+
+  /* Firefox - hide spinner buttons */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  /* Table styling */
+  .chart-stats table {
+    @apply w-full;
+  }
+
+  .chart-stats th {
+    @apply text-xs text-slate-400 font-semibold pb-3 border-b border-slate-600;
+  }
+
+  .chart-stats td {
+    @apply text-lg font-bold text-slate-100 py-3;
+  }
+
+  /* Loading and error states */
+  .loading-state {
+    @apply flex items-center justify-center py-16 text-slate-400;
+  }
+
+  .error-state {
+    @apply flex items-center justify-center py-16 text-red-400 bg-red-950/20 rounded-xl border border-red-800/30;
+  }
+
+  /* Market breadth section */
+  .market-breadth-section {
+    @apply space-y-6;
+  }
+
+  .market-breadth-title {
+    @apply text-3xl font-bold text-center text-gradient mb-8;
+  }
+
+  /* PE charts grid */
+  .pe-charts-grid {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-6;
+  }
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
-  .App-header h1 {
-    @apply text-2xl;
-  }
-  
-  .App-header p {
-    @apply text-base;
-  }
-  
-  main {
-    @apply px-4 py-6 space-y-6;
-  }
-}
-
-/* Chart container improvements */
-.chart-container {
-  @apply card w-full;
-  min-width: 0; /* Allow container to shrink below content size */
-}
-
-/* Ensure Highcharts containers are responsive */
-.chart-container .highcharts-container {
-  width: 100% !important;
-  height: auto !important;
-}
-
-.chart-header {
-  @apply flex items-center justify-between mb-2;
-}
-
-.chart-title {
-  @apply text-xl font-bold text-white;
-}
-
-.chart-controls {
-  @apply flex items-center gap-4 flex-wrap;
-}
-
-.chart-stats {
-  @apply bg-gray-800/50 rounded-2xl py-1 px-3 mt-2 border border-gray-700/50;
-}
-
-.chart-stat {
-  @apply flex flex-col py-2 px-1;
-}
-
-.chart-stat-label {
-  @apply text-gray-400 font-medium text-sm;
-}
-
-.chart-stat-value {
-  @apply text-xl font-bold text-white;
-}
-
-/* Loading and error states */
-.loading-state {
-  @apply flex items-center justify-center py-16 text-gray-400;
-}
-
-.error-state {
-  @apply flex items-center justify-center py-16 text-red-400 bg-red-900/20 rounded-2xl border border-red-800/30;
-}
-
-/* Market breadth section */
-.market-breadth-section {
-  @apply space-y-6;
-}
-
-.market-breadth-title {
-  @apply text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-8;
-}
-
-
-
-/* Custom checkbox styling */
-input[type="checkbox"] {
-  @apply appearance-none w-4 h-4 bg-gray-800 border-2 border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all duration-200 cursor-pointer relative;
-}
-
-input[type="checkbox"]:checked {
-  @apply bg-blue-500 border-blue-500;
-}
-
-input[type="checkbox"]:checked::after {
-  content: '';
-  @apply absolute inset-0 flex items-center justify-center;
-  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
-  background-size: 12px 12px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-input[type="checkbox"]:hover:not(:checked) {
-  @apply border-gray-500 bg-gray-700;
-}
-
-input[type="checkbox"]:disabled {
-  @apply opacity-50 cursor-not-allowed;
-}
-
-/* Radio button styling */
-input[type="radio"] {
-  @apply appearance-none w-4 h-4 bg-gray-800 border-2 border-gray-600 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all duration-200 cursor-pointer relative;
-}
-
-input[type="radio"]:checked {
-  @apply bg-blue-500 border-blue-500;
-}
-
-input[type="radio"]:checked::after {
-  content: '';
-  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-white rounded-full;
-}
-
-input[type="radio"]:hover:not(:checked) {
-  @apply border-gray-500 bg-gray-700;
-}
-
-input[type="radio"]:disabled {
-  @apply opacity-50 cursor-not-allowed;
-}
-
-input[type="number"] {
-  @apply bg-gray-800/40 backdrop-blur-sm border border-gray-700/40 rounded-xl px-3 py-2 text-white text-center focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all duration-300 shadow-lg;
-  box-shadow: 
-    inset 0 1px 2px rgba(255, 255, 255, 0.05),
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-input[type="number"]:hover {
-  @apply bg-gray-700/40 border-gray-600/40;
-  box-shadow: 
-    inset 0 1px 2px rgba(255, 255, 255, 0.08),
-    0 6px 8px -1px rgba(0, 0, 0, 0.15),
-    0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-input[type="number"]:focus {
-  @apply bg-gray-700/50 border-blue-500/50;
-  box-shadow: 
-    inset 0 1px 2px rgba(255, 255, 255, 0.1),
-    0 0 0 3px rgba(96, 165, 250, 0.1),
-    0 8px 12px -1px rgba(0, 0, 0, 0.2),
-    0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-/* Hide spinner buttons on number inputs */
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-  display: none;
-}
-
-/* Firefox - hide spinner buttons */
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
-/* Table styling */
-.chart-stats table {
-  @apply w-full;
-}
-
-.chart-stats th {
-  @apply text-xs text-gray-400 font-semibold pb-3 border-b border-gray-700/30;
-}
-
-.chart-stats td {
-  @apply text-lg font-bold text-white py-3;
-}
-
-/* Responsive chart layout */
-@media (max-width: 1024px) {
-  .chart-container {
-    @apply max-w-none;
-  }
-  
-  .chart-controls {
-    @apply flex-col items-start gap-4;
-  }
-  
-  .chart-stats table {
-    @apply text-sm;
-  }
-  
-  .chart-stats th,
-  .chart-stats td {
-    @apply px-2;
-  }
-}
-
-/* Ensure PE charts maintain 50% width on all screen sizes */
-@media (max-width: 768px) {
-  /* On smaller screens, stack the PE charts vertically but maintain full width */
   .pe-charts-grid {
     @apply grid-cols-1;
   }
   
-  .pe-charts-grid .chart-container {
-    @apply w-full;
-  }
-}
-
-/* Additional responsive adjustments for very small screens */
-@media (max-width: 480px) {
-  .pe-charts-grid {
-    @apply gap-4;
-  }
-  
   .chart-container {
-    @apply px-2;
+    @apply px-3;
   }
   
   .chart-controls {
-    @apply gap-2;
+    @apply flex-col items-start gap-3;
   }
   
-  .chart-controls label {
-    @apply text-xs;
+  .chart-stats {
+    @apply mx-2 my-2;
   }
 }
 
 @media (max-width: 640px) {
   .chart-header {
-    @apply flex-col items-start gap-2;
+    @apply flex-col items-start gap-3;
   }
   
   .chart-title {
-    @apply text-lg;
+    @apply text-base;
   }
   
   .chart-stats {
-    @apply py-1 px-3;
+    @apply p-3 mx-2 my-2;
   }
   
   .chart-stats table {
@@ -332,31 +201,6 @@ input[type="number"] {
   .chart-stats td {
     @apply px-1;
   }
-}
-
-/* Highcharts customization for dark theme */
-.highcharts-background {
-  fill: transparent !important;
-}
-
-.highcharts-grid-line {
-  stroke: rgba(75, 85, 99, 0.3) !important;
-}
-
-.highcharts-axis-line {
-  stroke: rgba(75, 85, 99, 0.5) !important;
-}
-
-.highcharts-tick {
-  stroke: rgba(75, 85, 99, 0.3) !important;
-}
-
-.highcharts-text {
-  fill: #9ca3af !important;
-}
-
-.highcharts-title {
-  fill: #ffffff !important;
 }
 
 /* Animation classes */
@@ -373,14 +217,4 @@ input[type="number"] {
 
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out;
-}
-
-/* Glass morphism effect */
-.glass {
-  @apply bg-white/5 backdrop-blur-md border border-white/10;
-}
-
-/* Gradient text utility */
-.gradient-text {
-  @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400;
 }

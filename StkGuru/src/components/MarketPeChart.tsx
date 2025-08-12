@@ -631,7 +631,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
           <h2 className="chart-title" style={{ color }}>
             {displayName}
           </h2>
-          <div className="flex items-center gap-2 text-sm text-gray-600">
+          <div className="flex items-center gap-2 text-sm text-text-tertiary">
             <button
               onClick={handleRefresh}
               disabled={isRefreshing}
@@ -647,9 +647,9 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
           </div>
         </div>
         
-        <div className="chart-controls mt-2">
+        <div className="chart-controls">
           <div className="flex items-center gap-6 flex-wrap">
-            <label className="flex items-center gap-2 text-sm font-medium">
+            <label className="flex items-center gap-2 text-sm font-medium text-text-primary">
               N-year:
               <input
                 type="number"
@@ -662,7 +662,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
               />
             </label>
             
-            <label className="flex items-center gap-2 text-sm font-medium cursor-pointer">
+            <label className="flex items-center gap-2 text-sm font-medium cursor-pointer text-text-primary">
               <input
                 type="checkbox"
                 checked={showStdDevLines}
@@ -671,7 +671,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
               Std Dev Lines
             </label>
             
-            <label className="flex items-center gap-2 text-sm font-medium cursor-pointer">
+            <label className="flex items-center gap-2 text-sm font-medium cursor-pointer text-text-primary">
               <input
                 type="checkbox"
                 checked={showPercentageLines}
@@ -684,7 +684,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
       </div>
       
       {peData && (
-        <div className="chart-stats py-1 px-3">
+        <div className="chart-stats">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="chart-stat">
               <div className="chart-stat-label">Current PE</div>
@@ -724,7 +724,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
             <div className="chart-stat">
               <div className="chart-stat-label">vs {nYears}Y Avg</div>
               <div className={`chart-stat-value ${
-                peData.stats.current_pe > (rollingStats?.avg && rollingStats.avg.length > 0 && rollingStats.avg[rollingStats.avg.length - 1]?.[1] || peData.stats.avg_20y) ? 'text-red-400' : 'text-green-400'
+                peData.stats.current_pe > (rollingStats?.avg && rollingStats.avg.length > 0 && rollingStats.avg[rollingStats.avg.length - 1]?.[1] || peData.stats.avg_20y) ? 'text-danger-400' : 'text-success-400'
               }`}>
                 {((peData.stats.current_pe / (rollingStats?.avg && rollingStats.avg.length > 0 && rollingStats.avg[rollingStats.avg.length - 1]?.[1] || peData.stats.avg_20y) - 1) * 100).toFixed(1)}%
               </div>

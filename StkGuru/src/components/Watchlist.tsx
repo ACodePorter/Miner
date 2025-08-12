@@ -15,11 +15,10 @@ interface QuoteData {
 export interface WatchlistProps {
   className?: string;
   fullHeight?: boolean; // if true, fills viewport height
-  title?: string;
 }
 
-const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true, title = 'Watchlist' }) => {
-  const { watchlist, loading, error, addTicker, removeTicker, clearError } = useWatchlist();
+const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true }) => {
+  const { watchlist, loading, error, addTicker, removeTicker } = useWatchlist();
   const [newTicker, setNewTicker] = useState('');
   const [quotes, setQuotes] = useState<Record<string, QuoteData>>({});
   const [isAdding, setIsAdding] = useState(false);
@@ -83,138 +82,158 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
   };
 
   const getPriceColor = (change: number) => {
-    if (change > 0) return 'text-green-600';
-    if (change < 0) return 'text-red-600';
-    return 'text-gray-600';
-  };
-
-  const getChangeIcon = (change: number) => {
-    if (change > 0) return '↗';
-    if (change < 0) return '↘';
-    return '→';
+    if (change > 0) return 'text-green-400';
+    if (change < 0) return 'text-red-400';
+    return 'text-slate-400';
   };
 
   return (
-    <div className={`${fullHeight ? 'h-screen' : ''} flex flex-col bg-gray-50 border-r border-gray-200 ${className}`}>
+    <div className={`${fullHeight ? 'h-full' : ''} flex flex-col bg-gradient-to-br from-slate-800 to-slate-700 border-r border-slate-700 ${className}`}>
       {/* Header */}
-      <div className="p-2 border-b border-gray-200 bg-white">
-        <h2 className="text-sm font-semibold text-gray-800 mb-2">{title}</h2>
-        
+      <div className="p-4 border-b border-slate-700 bg-gradient-to-br from-slate-800 to-slate-700">
+        <div className="flex items-center space-x-2 mb-3">
+          <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-blue-400 rounded-lg flex items-center justify-center">
+            <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <div>
+            <h3 className="text-base font-semibold text-slate-100">Watchlist</h3>
+            <p className="text-xs text-slate-400">Track your favorite stocks</p>
+          </div>
+        </div>
+
         {/* Add Ticker Form */}
-        <form onSubmit={handleAddTicker} className="flex gap-1">
+        <form onSubmit={handleAddTicker} className="flex space-x-2">
           <input
             type="text"
             value={newTicker}
             onChange={(e) => setNewTicker(e.target.value.toUpperCase())}
             placeholder="Add ticker..."
-            className="flex-1 px-2 py-1 text-xs border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
+            className="flex-1 px-2 py-1.5 bg-slate-700 border border-slate-600 rounded-lg focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 text-slate-100 placeholder-slate-400 pr-12 text-sm"
             disabled={isAdding}
           />
           <button
             type="submit"
             disabled={isAdding || !newTicker.trim()}
-            className="px-2 py-1 text-xs bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 bg-gradient-to-r from-blue-500 to-blue-400 rounded-lg flex items-center justify-center text-white hover:shadow-glow transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {isAdding ? '...' : 'Add'}
+            {isAdding ? (
+              <svg className="w-3 h-3 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+            ) : (
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+            )}
           </button>
         </form>
 
-        {/* Error Display */}
         {error && (
-          <div className="mt-2 p-2 text-xs text-red-600 bg-red-50 rounded border border-red-200">
+          <div className="mt-2 text-xs text-red-400 bg-red-950/20 px-2 py-1 rounded border border-red-800/30">
             {error}
-            <button
-              onClick={clearError}
-              className="ml-2 text-red-800 hover:text-red-900"
-            >
-              ×
-            </button>
           </div>
         )}
       </div>
 
-      {/* Watchlist Items */}
-      <div className="flex-1 overflow-y-auto">
-        {loading && watchlist.length === 0 ? (
-          <div className="p-4 text-center text-sm text-gray-500">
-            Loading...
+      {/* Watchlist Content */}
+      <div className="flex-1 overflow-auto">
+        {loading ? (
+          <div className="text-center py-8">
+            <div className="w-12 h-12 mx-auto mb-3 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full flex items-center justify-center animate-pulse">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+            </div>
+            <p className="text-sm text-slate-400">Loading watchlist...</p>
           </div>
         ) : watchlist.length === 0 ? (
-          <div className="p-4 text-center text-sm text-gray-500">
-            No tickers in watchlist
+          <div className="text-center py-8">
+            <div className="w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-slate-800 to-slate-700 rounded-full flex items-center justify-center">
+              <svg className="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <h3 className="text-base font-medium text-slate-100 mb-1">No tickers yet</h3>
+            <p className="text-slate-400 text-sm">Add your first ticker to get started</p>
           </div>
         ) : (
-          <div className="divide-y divide-gray-100">
-            {/* Header Row for Sorting */}
-            <div className="px-2 py-1 bg-white sticky top-0 z-10">
-              <div className="flex items-center text-[11px] font-medium text-gray-500 gap-2">
-                <button
-                  className={`w-16 text-left hover:text-gray-800 ${sortBy === 'ticker' ? 'text-gray-800' : ''}`}
-                  onClick={() => toggleSort('ticker')}
-                  title="Sort by ticker"
-                >
-                  Ticker{sortBy === 'ticker' ? (sortDir === 'asc' ? ' ▲' : ' ▼') : ''}
-                </button>
-                <span className="w-20 text-right">Price</span>
-                <span className="w-16 text-right">Chg</span>
-                <button
-                  className={`w-16 text-right hover:text-gray-800 ${sortBy === 'changePct' ? 'text-gray-800' : ''}`}
-                  onClick={() => toggleSort('changePct')}
-                  title="Sort by change %"
-                >
-                  Chg%{sortBy === 'changePct' ? (sortDir === 'asc' ? ' ▲' : ' ▼') : ''}
-                </button>
-                <span className="w-16 text-right">Vol</span>
-                <span className="ml-auto w-4" />
-              </div>
+          <div className="p-3">
+            {/* Sorting Header */}
+            <div className="flex items-center text-xs font-medium text-slate-400 gap-2 mb-2 pb-2 border-b border-slate-600">
+              <button
+                onClick={() => toggleSort('ticker')}
+                className={`w-16 text-left hover:text-slate-100 transition-colors duration-200 ${
+                  sortBy === 'ticker' ? 'text-slate-100' : ''
+                }`}
+              >
+                Ticker
+              </button>
+              <button
+                onClick={() => toggleSort('changePct')}
+                className="w-16 text-right hover:text-slate-100 transition-colors duration-200"
+              >
+                Price
+              </button>
+              <button
+                onClick={() => toggleSort('changePct')}
+                className={`w-16 text-right hover:text-slate-100 transition-colors duration-200 ${
+                  sortBy === 'changePct' ? 'text-slate-100' : ''
+                }`}
+              >
+                Change %
+              </button>
             </div>
 
-            {sortedWatchlist.map((item) => {
-              const quote = quotes[item.ticker];
-              const colorClass = quote ? getPriceColor(quote.change) : 'text-gray-400';
-              const priceText = quote ? `$${quote.price.toFixed(2)}` : '—';
-              const changeText = quote ? `${quote.change > 0 ? '+' : ''}${quote.change.toFixed(2)}` : '—';
-              const changePctText = quote ? `(${quote.changePercent.toFixed(2)}%)` : '—';
-              const formatVolume = (v?: number) => {
-                if (v === undefined || v === null) return '—';
-                if (v >= 1_000_000_000) return `${(v / 1_000_000_000).toFixed(1)}B`;
-                if (v >= 1_000_000) return `${(v / 1_000_000).toFixed(1)}M`;
-                if (v >= 1_000) return `${(v / 1_000).toFixed(1)}K`;
-                return String(v);
-              };
-              const volText = quote ? formatVolume(quote.volume) : '—';
-
-              return (
-                <div key={item.ticker} className="px-2 py-1 hover:bg-gray-50 transition-colors duration-150">
-                  <div className="flex items-center text-xs gap-2">
-                    <span className="w-16 font-bold text-gray-900 truncate">
+            {/* Watchlist Items */}
+            <div className="space-y-1">
+              {sortedWatchlist.map((item) => {
+                const quote = quotes[item.ticker];
+                const colorClass = quote ? getPriceColor(quote.change) : 'text-slate-400';
+                
+                return (
+                  <div
+                    key={item.ticker}
+                    className="group flex items-center justify-between p-2 hover:bg-slate-700/50 rounded-lg transition-colors duration-200"
+                  >
+                    <span className="w-16 font-bold text-slate-100 truncate group-hover:text-blue-400 transition-colors duration-200">
                       {item.ticker}
                     </span>
-                    <span className={`w-20 text-right font-semibold ${colorClass}`}>
-                      {priceText}
-                    </span>
-                    <span className={`w-16 text-right ${colorClass}`}>
-                      {changeText}
-                    </span>
-                    <span className={`w-16 text-right ${colorClass}`}>
-                      {changePctText}
-                    </span>
-                    <span className="w-16 text-right text-gray-500">
-                      {volText}
-                    </span>
+                    
+                    {quote ? (
+                      <>
+                        <span className="w-16 text-right text-slate-100">
+                          ${quote.price.toFixed(2)}
+                        </span>
+                        <span className={`w-16 text-right ${colorClass}`}>
+                          {quote.change > 0 ? '+' : ''}{quote.change.toFixed(2)}%
+                        </span>
+                      </>
+                    ) : (
+                      <>
+                        <span className="w-16 text-right text-slate-400">
+                          --
+                        </span>
+                        <span className="w-16 text-right text-slate-400">
+                          --
+                        </span>
+                      </>
+                    )}
+                    
                     <button
                       onClick={() => handleRemoveTicker(item.ticker)}
-                      className="ml-auto p-1 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded"
-                      title="Remove from watchlist"
+                      className="ml-auto p-1.5 text-slate-400 hover:text-red-400 hover:bg-red-950/20 rounded-lg transition-all duration-200 opacity-0 group-hover:opacity-100"
+                      title="Remove ticker"
                     >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                       </svg>
                     </button>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         )}
       </div>
