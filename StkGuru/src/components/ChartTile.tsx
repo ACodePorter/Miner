@@ -122,7 +122,10 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
   const [bars, setBars] = useState<Bar[]>([]);
   const [loading, setLoading] = useState(false);
   const [price, setPrice] = useState<number | null>(null);
-  const [indicators, setIndicators] = useState<IndicatorConfig[]>([]);
+  const [indicators, setIndicators] = useState<IndicatorConfig[]>([
+    { id: 'ema-10', type: 'EMA', params: { period: 10 } },
+    { id: 'ema-20', type: 'EMA', params: { period: 20 } }
+  ]);
   const [indicatorToAdd, setIndicatorToAdd] = useState<IndicatorType>('EMA');
   const [showIndicatorDialog, setShowIndicatorDialog] = useState(false);
   const [indicatorParams, setIndicatorParams] = useState<Record<string, number>>({});
@@ -446,47 +449,158 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
         lineWidth: 1, // Ensure line indicators are thin
       },
     },
-    tooltip: { 
-      split: false, // Share tooltip across all series
-      shared: true, // Enable shared tooltip
-      valueDecimals: 2,
-              formatter: function() {
-          const date = new Date(this.x);
-          const nyTime = date.toLocaleString('en-US', { 
-            timeZone: AMERICA_NEW_YORK_TZ,
-            year: 'numeric',
-            month: '2-digit',
-            day: '2-digit',
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
-            hourCycle: 'h23'
-          });
-          
-          let tooltip = `<b>${nyTime}</b><br/>`;
-          
-          // Add OHLC data
-          if (this.points) {
-            this.points.forEach((point: any) => {
-              if (point.series.id === 'ohlc') {
-                tooltip += `<span style="color: ${point.color}">●</span> <b>${point.series.name}</b><br/>`;
-                tooltip += `O: <b>${point.point.open?.toFixed(2) || 'N/A'}</b><br/>`;
-                tooltip += `H: <b>${point.point.high?.toFixed(2) || 'N/A'}</b><br/>`;
-                tooltip += `L: <b>${point.point.low?.toFixed(2) || 'N/A'}</b><br/>`;
-                tooltip += `C: <b>${point.point.close?.toFixed(2) || 'N/A'}</b><br/>`;
-              } else if (point.series.id === 'volume') {
-                tooltip += `<span style="color: ${point.color}">●</span> <b>${point.series.name}</b>: <b>${Highcharts.numberFormat(point.y, 0)}</b><br/>`;
-              } else {
-                // Indicator series
-                const value = point.y !== null ? point.y.toFixed(2) : 'N/A';
-                tooltip += `<span style="color: ${point.color}">●</span> <b>${point.series.name}</b>: <b>${value}</b><br/>`;
-              }
+        tooltip: { 
+          split: false, // Share tooltip across all series
+          shared: true, // Enable shared tooltip
+          useHTML: true, // Enable HTML in tooltip
+          valueDecimals: 2,
+          formatter: function() {
+            const date = new Date(this.x);
+            const nyTime = date.toLocaleString('en-US', { 
+              timeZone: AMERICA_NEW_YORK_TZ,
+              year: 'numeric',
+              month: '2-digit',
+              day: '2-digit',
+              hour: '2-digit',
+              minute: '2-digit',
+              second: '2-digit',
+              hourCycle: 'h23'
             });
+            
+            let tooltip = `<b>${ticker}: ${nyTime}</b><br/>`;
+            
+            // Debug: Log what we're working with
+            console.log('Tooltip formatter called with:', {
+              points: this.points,
+              pointsLength: this.points?.length,
+              x: this.x
+            });
+            
+            // Group data by series type
+            if (this.points && this.points.length > 0) {
+              // Find OHLC data first - look for candlestick series by type or name
+              const ohlcPoint = this.points.find((point: any) => 
+                point.series?.type === 'candlestick' || 
+                point.series?.name === ticker ||
+                (point.series?.options && point.series.options.type === 'candlestick')
+              );
+              console.log('Looking for OHLC point, found:', ohlcPoint);
+              console.log('All points:', this.points.map((p: any) => ({ 
+                id: p.series?.id, 
+                name: p.series?.name, 
+                type: p.series?.type,
+                optionsType: p.series?.options?.type 
+              })));
+              if (ohlcPoint) {
+                tooltip += `<b>OHLC:</b><br/>`;
+                // Access OHLC data from the point's options for candlestick series
+                const pointOptions = (ohlcPoint as any).options;
+                if (pointOptions) {
+                  tooltip += `&nbsp;&nbsp;O: <b>${pointOptions.open?.toFixed(2) || 'N/A'}</b><br/>`;
+                  tooltip += `&nbsp;&nbsp;H: <b>${pointOptions.high?.toFixed(2) || 'N/A'}</b><br/>`;
+                  tooltip += `&nbsp;&nbsp;L: <b>${pointOptions.low?.toFixed(2) || 'N/A'}</b><br/>`;
+                  tooltip += `&nbsp;&nbsp;C: <b>${pointOptions.close?.toFixed(2) || 'N/A'}</b><br/>`;
+                }
+              }
+              
+              // Find Volume data - look for column series by type or name
+              const volumePoint = this.points.find((point: any) => 
+                point.series?.type === 'column' || 
+                point.series?.name === 'Volume' ||
+                (point.series?.options && point.series.options.type === 'column')
+              );
+              if (volumePoint && volumePoint.y !== null && volumePoint.y !== undefined) {
+                tooltip += `<b>Volume:</b><br/>`;
+                tooltip += `&nbsp;&nbsp;V: <b>${Highcharts.numberFormat(volumePoint.y, 0)}</b><br/>`;
+              }
+              
+              // Group indicators by type - exclude candlestick and volume, but allow indicator columns
+              const indicatorPoints = this.points.filter((point: any) => 
+                point.series?.type !== 'candlestick' && 
+                point.series?.name !== ticker &&
+                point.series?.name !== 'Volume'
+              );
+              
+              if (indicatorPoints.length > 0) {
+                console.log('Indicator points found:', indicatorPoints.map(p => ({ 
+                  name: p.series?.name, 
+                  type: p.series?.type,
+                  y: p.y 
+                })));
+                
+                // Group indicators by their base type (remove suffixes like -macd, -signal, -hist)
+                const indicatorGroups: Record<string, any[]> = {};
+                
+                indicatorPoints.forEach((point: any) => {
+                  if (point.series?.name) {
+                    // Extract base indicator name by removing common suffixes
+                    let baseName = point.series.name;
+                    
+                    // Handle MACD components - group MACD, Signal, and Hist together
+                    if (baseName === 'MACD' || baseName === 'Signal' || baseName === 'Hist') {
+                      baseName = 'MACD';
+                    }
+                    // Handle EMA/SMA with period
+                    else if (baseName.includes('EMA(') || baseName.includes('SMA(')) {
+                      baseName = baseName.split('(')[0]; // Get EMA or SMA
+                    }
+                    // Handle RSI with period
+                    else if (baseName.includes('RSI(')) {
+                      baseName = 'RSI';
+                    }
+                    
+                    if (!indicatorGroups[baseName]) {
+                      indicatorGroups[baseName] = [];
+                    }
+                    indicatorGroups[baseName].push(point);
+                  }
+                });
+                
+                console.log('Indicator groups:', indicatorGroups);
+                
+                // Add each indicator group
+                Object.entries(indicatorGroups).forEach(([groupName, points]) => {
+                  tooltip += `<b>${groupName}:</b><br/>`;
+                  
+                  points.forEach((point: any) => {
+                    const value = point.y !== null ? point.y.toFixed(2) : 'N/A';
+                    let label = '';
+                    
+                    // Customize labels for different indicator types
+                    if (groupName === 'MACD') {
+                      // For MACD, use the series name to determine the component
+                      if (point.series?.name) {
+                        if (point.series.name.includes('MACD')) {
+                          label = 'MACD';
+                        } else if (point.series.name.includes('Signal')) {
+                          label = 'Signal';
+                        } else if (point.series.name.includes('Hist')) {
+                          label = 'Hist';
+                        } else {
+                          label = 'Value';
+                        }
+                      }
+                    } else if (groupName === 'EMA' || groupName === 'SMA') {
+                      // For EMA/SMA, show the period
+                      const period = point.series?.name?.match(/\((\d+)\)/)?.[1] || '';
+                      label = period ? `${groupName}(${period})` : groupName;
+                    } else if (groupName === 'RSI') {
+                      // For RSI, show the period
+                      const period = point.series?.name?.match(/\((\d+)\)/)?.[1] || '';
+                      label = period ? `RSI(${period})` : 'RSI';
+                    } else {
+                      label = 'Value';
+                    }
+                    
+                    tooltip += `&nbsp;&nbsp;${label}: <b>${value}</b><br/>`;
+                  });
+                });
+              }
+            }
+            
+            return tooltip;
           }
-          
-          return tooltip;
-        }
-    },
+        },
     yAxis: axisLayout.yAxis,
     series: [
       { type: 'candlestick', id: 'ohlc', name: ticker, data: ohlc, lineWidth: 1 },
