@@ -9,6 +9,7 @@ from ._env import is_in_daemon, is_in_docker, is_prod
 from ._exchanges import IDX_COUNTRY_EXCHANGE_MAP
 from ._hash import md5_iterable, md5_str
 from ._log import get_logger
+from ._redis import get_redis_client
 from ._run_utils import run_parallel, sleep
 from ._singleton_meta import SingletonMeta, SingletonParent
 from ._version import version
@@ -26,6 +27,7 @@ __all__ = [
     'IDX_COUNTRY_EXCHANGE_MAP',
     'md5_str', 'md5_iterable',
     'get_logger',
+    'get_redis_client',
     'sleep', 'run_parallel',
     'SingletonParent', 'SingletonMeta',
     'version',
