@@ -7498,5 +7498,15 @@
     "close": 4.2300000191,
     "volume": 1578357.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,08,12,00,00,00,000000",
+    "ticker": "BLDE",
+    "open": 4.2899999619,
+    "high": 4.5549998283,
+    "low": 4.2399997711,
+    "close": 4.5,
+    "volume": 1649239.0,
+    "wedge_status": "none"
   }
 ]

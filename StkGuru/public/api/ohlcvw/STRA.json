@@ -7498,5 +7498,15 @@
     "close": 75.9199981689,
     "volume": 141588.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,12,00,00,00,000000",
+    "ticker": "STRA",
+    "open": 76.25,
+    "high": 78.1299972534,
+    "low": 75.7699966431,
+    "close": 78.1100006104,
+    "volume": 133626.0,
+    "wedge_status": "pop"
   }
 ]

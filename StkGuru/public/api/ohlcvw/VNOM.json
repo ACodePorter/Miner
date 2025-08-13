@@ -7498,5 +7498,15 @@
     "close": 37.2900009155,
     "volume": 1680371.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,12,00,00,00,000000",
+    "ticker": "VNOM",
+    "open": 37.5,
+    "high": 38.4900016785,
+    "low": 37.4199981689,
+    "close": 38.1699981689,
+    "volume": 2038624.0,
+    "wedge_status": "none"
   }
 ]

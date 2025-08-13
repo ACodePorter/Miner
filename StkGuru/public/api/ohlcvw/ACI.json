@@ -7498,5 +7498,15 @@
     "close": 19.3600006104,
     "volume": 6823325.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,12,00,00,00,000000",
+    "ticker": "ACI",
+    "open": 19.3700008392,
+    "high": 19.5100002289,
+    "low": 19.25,
+    "close": 19.5,
+    "volume": 3483320.0,
+    "wedge_status": "none"
   }
 ]

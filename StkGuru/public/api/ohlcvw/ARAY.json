@@ -7498,5 +7498,15 @@
     "close": 1.3600000143,
     "volume": 675619.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,12,00,00,00,000000",
+    "ticker": "ARAY",
+    "open": 1.3700000048,
+    "high": 1.4900000095,
+    "low": 1.3700000048,
+    "close": 1.4800000191,
+    "volume": 838779.0,
+    "wedge_status": "none"
   }
 ]

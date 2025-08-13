@@ -7498,5 +7498,15 @@
     "close": 1.2400000095,
     "volume": 1281333.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,12,00,00,00,000000",
+    "ticker": "TE",
+    "open": 1.2400000095,
+    "high": 1.2699999809,
+    "low": 1.2299000025,
+    "close": 1.25,
+    "volume": 522803.0,
+    "wedge_status": "none"
   }
 ]

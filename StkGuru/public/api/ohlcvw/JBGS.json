@@ -7498,5 +7498,15 @@
     "close": 19.3999996185,
     "volume": 1075345.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,12,00,00,00,000000",
+    "ticker": "JBGS",
+    "open": 19.5,
+    "high": 20.1049995422,
+    "low": 19.4799995422,
+    "close": 19.8999996185,
+    "volume": 2861646.0,
+    "wedge_status": "none"
   }
 ]

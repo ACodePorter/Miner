@@ -7498,5 +7498,15 @@
     "close": 400.25,
     "volume": 10215778.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,12,00,00,00,000000",
+    "ticker": "MSTR",
+    "open": 400.5,
+    "high": 401.6700134277,
+    "low": 390.1400146484,
+    "close": 394.3900146484,
+    "volume": 8256845.0,
+    "wedge_status": "none"
   }
 ]
