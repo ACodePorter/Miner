@@ -184,3 +184,16 @@ class TradeCalendarShovel(SingletonParent):
             day = day.strftime('%Y%m%d')
         now = datetime.now(pytz.timezone('UTC'))
         return TradeCalendar.objects(cal_date__lte=day, is_open=True, country=country, exchange=exchange, close__lte=now).order_by('-cal_date').first().cal_date
+    
+    def is_mkt_open(self, dt: datetime | None = None, country: str = 'us', exchange: str = 'XNYS') -> bool:
+        '''
+        Check if the market is open at the given datetime
+        Args:
+            dt: datetime, utc datetime to check, if None, use current time
+            country: str, country code, e.g. 'us', 'hk'
+            exchange: str, exchange code, e.g. 'XNYS', 'XHKG'
+        Returns:
+            bool
+        '''
+        dt = dt or datetime.now(pytz.timezone('UTC'))
+        return TradeCalendar.objects(open__lte=dt, close__gte=dt,is_open=True, country=country, exchange=exchange).count() >0
