@@ -4,10 +4,14 @@ import asyncio
 import json
 import uuid
 from datetime import datetime
-from typing import Any, Dict, Optional, Set, Tuple
+from typing import Any, Callable, Dict, Optional, Set, Tuple
 
 import redis.asyncio as redis
+from detonator import get_logger, is_prod
 from fastapi import WebSocket
+
+from ..services.bars_manager_integration import BarsManagerIntegration
+from ..services.redis_subscription_service import RedisSubscriptionService
 
 
 class WebSocketConnectionManager:
@@ -26,6 +30,10 @@ class WebSocketConnectionManager:
         self.heartbeat_task: Optional[asyncio.Task] = None
         self.running = False
 
+        # Integration services
+        self.bars_manager_integration: Optional[BarsManagerIntegration] = None
+        self.redis_subscription_service: Optional[RedisSubscriptionService] = None
+
     async def get_redis(self) -> redis.Redis:
         """Get Redis client with connection pooling and health checks"""
         if self.redis_client is None:
@@ -42,7 +50,7 @@ class WebSocketConnectionManager:
         """Create new Redis connection"""
         try:
             self.redis_client = redis.Redis(
-                host='miner-redis',
+                host='miner-redis' if is_prod() else 'localhost',
                 port=6379,
                 db=0,
                 decode_responses=True,
@@ -75,6 +83,11 @@ class WebSocketConnectionManager:
 
             # Store connection info in Redis
             await self._store_connection_info(client_id)
+
+            # Clean up stale subscriptions on first connection
+            if len(self.local_connections) == 1:
+                await self.cleanup_stale_subscriptions()
+
             print(f"Client {client_id} connected to process {self.process_id}")
 
         except Exception as e:
@@ -113,6 +126,41 @@ class WebSocketConnectionManager:
         except Exception as e:
             print(f"Error disconnecting client {client_id}: {e}")
 
+    async def cleanup_stale_subscriptions(self) -> None:
+        """Clean up stale subscriptions that may exist in Redis but not in memory"""
+        try:
+            redis_client = await self.get_redis()
+
+            # Get all quote subscriptions from Redis
+            redis_quote_subs = await redis_client.smembers('websocket:subscribed_symbols')
+            redis_quote_subs = [sub.decode(
+                'utf-8') if isinstance(sub, bytes) else sub for sub in redis_quote_subs]
+
+            # Get all bars subscriptions from Redis
+            redis_bars_subs = await redis_client.smembers('websocket:subscribed_bars')
+            redis_bars_subs = [sub.decode(
+                'utf-8') if isinstance(sub, bytes) else sub for sub in redis_bars_subs]
+
+            # Clean up quote subscriptions that don't exist in memory
+            for symbol in redis_quote_subs:
+                if symbol not in self.subscribed_symbols:
+                    await redis_client.srem('websocket:subscribed_symbols', symbol)
+                    print(f"Cleaned up stale quote subscription: {symbol}")
+
+            # Clean up bars subscriptions that don't exist in memory
+            for key in redis_bars_subs:
+                if '|' in key:
+                    symbol, interval = key.split('|', 1)
+                    if (symbol, interval) not in self.subscribed_bars:
+                        await redis_client.srem('websocket:subscribed_bars', key)
+                        print(f"Cleaned up stale bars subscription: {key}")
+
+            print(
+                f"Subscription cleanup completed. Active quotes: {len(self.subscribed_symbols)}, Active bars: {len(self.subscribed_bars)}")
+
+        except Exception as e:
+            print(f"Error during subscription cleanup: {e}")
+
     async def _remove_connection_info(self, client_id: str) -> None:
         """Remove connection information from Redis"""
         redis_client = await self.get_redis()
@@ -137,17 +185,33 @@ class WebSocketConnectionManager:
 
     async def broadcast(self, message: str) -> None:
         """Broadcast to all connections in this process"""
+        print(f"Broadcasting message to {len(self.local_connections)} local connections: {message[:100]}...")
+        
+        # Log the message being broadcast
+        try:
+            parsed_message = json.loads(message)
+            print(f"Broadcasting parsed message: {parsed_message}")
+        except Exception as e:
+            print(f"Error parsing broadcast message: {e}")
+            print(f"Raw message: {message}")
+        
         disconnected_clients = []
 
         for client_id in list(self.local_connections.keys()):
+            print(f"Attempting to send to client {client_id}")
             success = await self.send_personal_message(message, client_id)
             if not success:
+                print(f"Failed to send to client {client_id}")
                 disconnected_clients.append(client_id)
+            else:
+                print(f"Successfully sent to client {client_id}")
 
         # Clean up disconnected clients
         for client_id in disconnected_clients:
             if client_id in self.local_connections:
                 await self.disconnect(self.local_connections[client_id], client_id)
+        
+        print(f"Broadcast completed. Sent to {len(self.local_connections) - len(disconnected_clients)} clients, {len(disconnected_clients)} disconnected.")
 
     async def broadcast_to_all_processes(self, message: str) -> None:
         """Broadcast message to all processes via Redis pub/sub"""
@@ -167,11 +231,55 @@ class WebSocketConnectionManager:
             self.subscribed_symbols.add(symbol)
 
             try:
+                # Subscribe via BarsManager integration
+                if self.bars_manager_integration:
+                    await self.bars_manager_integration.subscribe_to_quotes(symbol)
+                else:
+                    print("BarsManager integration not available")
+
+                # Subscribe via Redis subscription service
+                if self.redis_subscription_service:
+                    await self.redis_subscription_service.subscribe_to_quotes(symbol)
+                else:
+                    print("Redis subscription service not available")
+
+                # Persist subscription to Redis for monitoring and persistence
                 redis_client = await self.get_redis()
                 await redis_client.sadd('websocket:subscribed_symbols', symbol)
+
                 print(f"Subscribed to symbol: {symbol}")
             except Exception as e:
                 print(f"Error subscribing to symbol {symbol}: {e}")
+                # Rollback on error
+                self.subscribed_symbols.remove(symbol)
+
+    async def unsubscribe_symbol(self, symbol: str) -> None:
+        """Unsubscribe from a symbol for real-time quotes"""
+        if symbol in self.subscribed_symbols:
+            self.subscribed_symbols.remove(symbol)
+
+            try:
+                # Unsubscribe via BarsManager integration
+                if self.bars_manager_integration:
+                    await self.bars_manager_integration.unsubscribe_from_quotes(symbol)
+                else:
+                    print("BarsManager integration not available")
+
+                # Unsubscribe via Redis subscription service
+                if self.redis_subscription_service:
+                    await self.redis_subscription_service.unsubscribe_from_quotes(symbol)
+                else:
+                    print("Redis subscription service not available")
+
+                # Remove subscription from Redis
+                redis_client = await self.get_redis()
+                await redis_client.srem('websocket:subscribed_symbols', symbol)
+
+                print(f"Unsubscribed from symbol: {symbol}")
+            except Exception as e:
+                print(f"Error unsubscribing from symbol {symbol}: {e}")
+                # Rollback on error
+                self.subscribed_symbols.add(symbol)
 
     async def subscribe_bars(self, symbol: str, interval: str) -> None:
         """Subscribe to bars updates for a symbol and interval"""
@@ -179,11 +287,27 @@ class WebSocketConnectionManager:
         if key not in self.subscribed_bars:
             self.subscribed_bars.add(key)
             try:
-                redis_client = await self.get_redis()
-                await redis_client.sadd('websocket:subscribed_bars', f"{key[0]}|{key[1]}")
-                print(f"Subscribed to bars: {key[0]} {key[1]}")
+                # Subscribe via BarsManager integration
+                if self.bars_manager_integration:
+                    success = await self.bars_manager_integration.subscribe_to_bars(symbol, interval)
+                    if success:
+                        # Also subscribe to Redis subscription service
+                        if self.redis_subscription_service:
+                            await self.redis_subscription_service.subscribe_to_bars(symbol, interval)
+
+                        redis_client = await self.get_redis()
+                        await redis_client.sadd('websocket:subscribed_bars', f"{key[0]}|{key[1]}")
+                        print(f"Subscribed to bars: {key[0]} {key[1]}")
+                    else:
+                        print(
+                            f"Failed to subscribe to bars {key} via BarsManager")
+                        self.subscribed_bars.remove(key)
+                else:
+                    print(f"BarsManager integration not available for {key}")
+                    self.subscribed_bars.remove(key)
             except Exception as e:
                 print(f"Error subscribing to bars {key}: {e}")
+                self.subscribed_bars.remove(key)
 
     async def unsubscribe_bars(self, symbol: str, interval: str) -> None:
         """Unsubscribe from bars updates"""
@@ -191,10 +315,19 @@ class WebSocketConnectionManager:
         if key in self.subscribed_bars:
             self.subscribed_bars.remove(key)
             try:
+                # Unsubscribe via BarsManager integration
+                if self.bars_manager_integration:
+                    await self.bars_manager_integration.unsubscribe_from_bars(symbol, interval)
+
+                # Unsubscribe from Redis subscription service
+                if self.redis_subscription_service:
+                    await self.redis_subscription_service.unsubscribe_from_bars(symbol, interval)
+
                 redis_client = await self.get_redis()
                 await redis_client.srem('websocket:subscribed_bars', f"{key[0]}|{key[1]}")
-            except Exception:
-                pass
+                print(f"Unsubscribed from bars: {key[0]} {key[1]}")
+            except Exception as e:
+                print(f"Error unsubscribing from bars {key}: {e}")
 
     async def get_all_connections(self) -> list:
         """Get all active connections across all processes"""
@@ -205,6 +338,31 @@ class WebSocketConnectionManager:
         except Exception as e:
             print(f"Error getting connections: {e}")
             return []
+
+    async def get_subscription_status(self) -> dict:
+        """Get current subscription status for monitoring"""
+        try:
+            redis_client = await self.get_redis()
+
+            # Get Redis subscription counts
+            redis_quote_count = await redis_client.scard('websocket:subscribed_symbols')
+            redis_bars_count = await redis_client.scard('websocket:subscribed_bars')
+
+            return {
+                'memory_quotes': len(self.subscribed_symbols),
+                'memory_bars': len(self.subscribed_bars),
+                'redis_quotes': redis_quote_count,
+                'redis_bars': redis_bars_count,
+                'memory_quote_symbols': list(self.subscribed_symbols),
+                'memory_bars_keys': [f"{symbol}|{interval}" for symbol, interval in self.subscribed_bars]
+            }
+        except Exception as e:
+            print(f"Error getting subscription status: {e}")
+            return {
+                'error': str(e),
+                'memory_quotes': len(self.subscribed_symbols),
+                'memory_bars': len(self.subscribed_bars)
+            }
 
     async def start_broadcast_listener(self) -> None:
         """Start listening for broadcast messages from other processes"""
@@ -294,17 +452,83 @@ class WebSocketConnectionManager:
         except Exception as e:
             print(f"Error during cleanup: {e}")
 
+    async def get_total_connections(self) -> int:
+        """Get total number of connections across all processes"""
+        try:
+            redis_client = await self.get_redis()
+            # Get all process keys
+            process_keys = await redis_client.keys('websocket:processes:*:clients')
+            total = 0
+            for key in process_keys:
+                count = await redis_client.scard(key)
+                total += count
+            return total
+        except Exception as e:
+            print(f"Error getting total connections: {e}")
+            return len(self.local_connections)
+
+    async def get_redis_status(self) -> dict:
+        """Get Redis status information"""
+        try:
+            redis_client = await self.get_redis()
+            info = await redis_client.info()
+            return {
+                'connected_clients': info.get('connected_clients', 0),
+                'used_memory': info.get('used_memory_human', 'N/A'),
+                'uptime': info.get('uptime_in_seconds', 0)
+            }
+        except Exception as e:
+            print(f"Error getting Redis status: {e}")
+            return {'error': str(e)}
+
     async def startup(self) -> None:
         """Initialize the connection manager"""
         self.running = True
+
+        # Initialize integration services
+        await self._initialize_integration_services()
+
         await self.start_broadcast_listener()
         await self.start_heartbeat()
         print(
             f"WebSocketConnectionManager started for process {self.process_id}")
 
+    async def _initialize_integration_services(self) -> None:
+        """Initialize BarsManager integration and Redis subscription services"""
+        try:
+            # Initialize BarsManager integration
+            self.bars_manager_integration = BarsManagerIntegration()
+            print("BarsManager integration initialized")
+
+            # Initialize Redis subscription service
+            redis_client = await self.get_redis()
+            self.redis_subscription_service = RedisSubscriptionService(
+                redis_client,
+                self.broadcast
+            )
+            await self.redis_subscription_service.start()
+            print("Redis subscription service initialized and started")
+
+        except Exception as e:
+            print(f"Error initializing integration services: {e}")
+            # Continue without integration services - fallback to manual mode
+
     async def shutdown(self) -> None:
         """Clean shutdown of the connection manager"""
         self.running = False
+
+        # Clean up integration services
+        if self.bars_manager_integration:
+            try:
+                await self.bars_manager_integration.cleanup()
+            except Exception as e:
+                print(f"Error cleaning up BarsManager integration: {e}")
+
+        if self.redis_subscription_service:
+            try:
+                await self.redis_subscription_service.stop()
+            except Exception as e:
+                print(f"Error stopping Redis subscription service: {e}")
 
         # Close all local connections
         for client_id in list(self.local_connections.keys()):

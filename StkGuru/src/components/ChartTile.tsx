@@ -231,8 +231,8 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
         if (timeframe.includes('m')) {
           const lastIncomingTs = incoming[incoming.length - 1].timestamp;
           if (lastIncomingTs === lastTs) {
-            // Replace the last forming bar
-            console.log('Replacing last forming bar');
+            // Replace the last forming bar (real-time update)
+            console.log('Replacing last forming bar - real-time update');
             const newBars = [...prev.slice(0, prev.length - 1), incoming[incoming.length - 1]];
             console.log('New bars after replacement:', newBars.length);
             return newBars;
@@ -260,6 +260,15 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
         console.log('No bars to update');
         return prev;
       });
+      
+      // Trigger immediate chart update for real-time data
+      setTimeout(() => {
+        const chart = (chartRef as any)?.current?.chart as Highcharts.Chart | undefined;
+        if (chart) {
+          console.log('Triggering immediate chart update for real-time data');
+          chart.redraw(false); // false = no animation for real-time updates
+        }
+      }, 50); // Small delay to ensure state is updated
     });
     return () => {
       if (barsAbortRef.current) barsAbortRef.current.abort();
@@ -394,9 +403,28 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
     navigator: { enabled: false },
     scrollbar: { enabled: false },
     title: { text: undefined },
-    chart: { height: 360, backgroundColor: 'transparent', spacingTop: 0, marginTop: 0, spacing: [0, 0, 0, 0] },
+    chart: { 
+      height: 360, 
+      backgroundColor: 'transparent', 
+      spacingTop: 0, 
+      marginTop: 0, 
+      spacing: [0, 0, 0, 0],
+      // Optimize for real-time updates
+      animation: {
+        duration: 300, // Smooth animation for updates
+        easing: 'easeOutQuart'
+      },
+      // Enable live redraw for real-time updates
+      events: {
+        load: function() {
+          console.log('Chart loaded, ready for real-time updates');
+        }
+      }
+    },
     xAxis: { 
       ordinal: true,
+      // Optimize for real-time updates
+      type: 'datetime',
       labels: {
         rotation: 0,
         step: 1, // Show every label to prevent overlap
@@ -426,27 +454,54 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
             });
           }
         }
+      },
+      // Enable live updates for real-time data
+      events: {
+        afterSetExtremes: function() {
+          console.log('X-axis extremes updated for real-time data');
+        }
       }
     },
+    // Optimize for real-time data
     plotOptions: {
       series: {
         dataGrouping: { enabled: false },
-        lineWidth: 1, // Make indicator lines thinner
+        lineWidth: 1,
+        // Enable animation for real-time updates
+        animation: {
+          duration: 300,
+          easing: 'easeOutQuart'
+        },
+        // Enable live redraw for real-time updates
+        enableMouseTracking: true,
+        stickyTracking: false
       },
       candlestick: {
         dataGrouping: { enabled: false },
-        // Reduce spacing between bars to half of defaults
         pointPadding: 0.05,
         groupPadding: 0.1,
+        // Optimize candlestick updates
+        animation: {
+          duration: 300,
+          easing: 'easeOutQuart'
+        }
       },
       column: {
         dataGrouping: { enabled: false },
         pointPadding: 0.05,
         groupPadding: 0.1,
+        animation: {
+          duration: 300,
+          easing: 'easeOutQuart'
+        }
       },
       line: {
         dataGrouping: { enabled: false },
-        lineWidth: 1, // Ensure line indicators are thin
+        lineWidth: 1,
+        animation: {
+          duration: 300,
+          easing: 'easeOutQuart'
+        }
       },
     },
         tooltip: { 

@@ -18,6 +18,18 @@ export const useWatchlist = () => {
       } catch (e) {
         console.error('Failed to parse saved watchlist:', e);
       }
+    } else {
+      // Add default tickers if no saved watchlist
+      const defaultTickers = [
+        { ticker: 'SPY', added_at: new Date().toISOString() },
+        { ticker: 'QQQ', added_at: new Date().toISOString() },
+        { ticker: 'AAPL', added_at: new Date().toISOString() },
+        { ticker: 'NVDA', added_at: new Date().toISOString() },
+        { ticker: 'TSLA', added_at: new Date().toISOString() }
+      ];
+      console.log('Adding default tickers to watchlist:', defaultTickers.map(item => item.ticker));
+      setWatchlist(defaultTickers);
+      localStorage.setItem(WATCHLIST_STORAGE_KEY, JSON.stringify(defaultTickers));
     }
   }, []);
 

@@ -4,9 +4,9 @@ import threading
 import time
 from datetime import datetime, timedelta
 from typing import Any, Dict, List, Literal, Union
-import pytz
 
 import pandas as pd
+import pytz
 import yfinance as yf
 from detonator import SingletonParent, get_logger, get_redis_client
 from pandas import DataFrame
@@ -54,12 +54,12 @@ class BarsManager(SingletonParent):
         self.subscribed_tickers = set()
         self.ws = None
         self.redis_client = get_redis_client()
-        
+
         # Intraday bars subscription management
         self.intraday_subscriptions = {}  # {interval: set(tickers)}
         self.scheduling_thread = None
         self.scheduling_active = False
-        
+
         # Initialize supported intervals
         self.supported_intervals = ['1m', '5m', '15m', '30m', '65m']
 
@@ -149,8 +149,29 @@ class BarsManager(SingletonParent):
 
     def handle_quote(self, quote: Dict[str, Any]):
         """Handle incoming quote and publish to Redis for real-time distribution"""
-        self.logger.info(
-            f'{datetime.fromtimestamp(int(quote["time"])/1000).strftime("%H:%M:%S")} {quote["id"]}: {quote["price"]} {quote["change"]} {quote["change_percent"]}')
+        try:
+            # Safely extract quote fields with defaults for missing keys
+            time_str = quote.get('time', '')
+            ticker_id = quote.get('id', '')
+            price = quote.get('price', 0)
+            change = quote.get('change', 0)
+            change_percent = quote.get('change_percent', 0)
+            
+            # Format timestamp if available
+            if time_str:
+                try:
+                    timestamp = datetime.fromtimestamp(int(time_str)/1000).strftime("%H:%M:%S")
+                except (ValueError, TypeError):
+                    timestamp = "N/A"
+            else:
+                timestamp = "N/A"
+            
+            self.logger.info(
+                f'{timestamp} {ticker_id}: {price} {change} {change_percent}')
+        except Exception as e:
+            self.logger.warning(f"Error formatting quote log: {e}")
+            # Continue processing even if logging fails
+        
         # Extract ticker from quote (quote has 'id' field)
         ticker = quote.get('id')
         if not ticker:
@@ -208,7 +229,7 @@ class BarsManager(SingletonParent):
 
     def subscribe_intraday(self, tickers: Union[str, List[str]], intervals: Union[str, List[str]]):
         """Subscribe to intraday bars for specified tickers and intervals
-        
+
         Args:
             tickers: Single ticker or list of tickers
             intervals: Single interval or list of intervals from ['1m', '5m', '15m', '30m', '65m']
@@ -217,33 +238,34 @@ class BarsManager(SingletonParent):
             tickers = [tickers]
         if isinstance(intervals, str):
             intervals = [intervals]
-        
+
         # Normalize tickers and validate intervals
         tickers = [t.upper().replace('.', '-') for t in tickers]
         intervals = [i for i in intervals if i in self.supported_intervals]
-        
+
         if not intervals:
             self.logger.warning("No valid intervals provided")
             return
-        
+
         # Update subscriptions
         for interval in intervals:
             if interval not in self.intraday_subscriptions:
                 self.intraday_subscriptions[interval] = set()
             self.intraday_subscriptions[interval].update(tickers)
-        
+
         # Start scheduling if not already active
         if not self.scheduling_active:
             self._start_intraday_scheduling()
-        
+
         # Initialize Redis keys for new subscriptions
         self._init_redis_bar_keys()
-        
-        self.logger.info(f"Subscribed to intraday bars: {tickers} for intervals: {intervals}")
+
+        self.logger.info(
+            f"Subscribed to intraday bars: {tickers} for intervals: {intervals}")
 
     def unsubscribe_intraday(self, tickers: Union[str, List[str]], intervals: Union[str, List[str]]):
         """Unsubscribe from intraday bars for specified tickers and intervals
-        
+
         Args:
             tickers: Single ticker or list of tickers
             intervals: Single interval or list of intervals from ['1m', '5m', '15m', '30m', '65m']
@@ -252,29 +274,32 @@ class BarsManager(SingletonParent):
             tickers = [tickers]
         if isinstance(intervals, str):
             intervals = [intervals]
-        
+
         tickers = [t.upper().replace('.', '-') for t in tickers]
-        
+
         # Update subscriptions
         for interval in intervals:
             if interval in self.intraday_subscriptions:
-                self.intraday_subscriptions[interval].difference_update(tickers)
-                
+                self.intraday_subscriptions[interval].difference_update(
+                    tickers)
+
                 # Remove from Redis active set
                 for ticker in tickers:
                     self.redis_client.srem(f"bars:active:{interval}", ticker)
                     # Remove latest bar data
-                    self.redis_client.delete(f"bars:latest:{ticker}:{interval}")
-                
+                    self.redis_client.delete(
+                        f"bars:latest:{ticker}:{interval}")
+
                 # Clean up empty interval subscriptions
                 if not self.intraday_subscriptions[interval]:
                     del self.intraday_subscriptions[interval]
-        
+
         # Stop scheduling if no more subscriptions
         if not self.intraday_subscriptions and self.scheduling_active:
             self._stop_intraday_scheduling()
-        
-        self.logger.info(f"Unsubscribed from intraday bars: {tickers} for intervals: {intervals}")
+
+        self.logger.info(
+            f"Unsubscribed from intraday bars: {tickers} for intervals: {intervals}")
 
     def _on_error(self, e: Exception):
         self.logger.error(f"Error in WebSocket: {str(e)}, lets restart it")
@@ -312,7 +337,8 @@ class BarsManager(SingletonParent):
                 if tickers:
                     for ticker in tickers:
                         self.redis_client.sadd(active_key, ticker)
-            self.logger.info("Initialized Redis bar keys for intervals: %s", list(self.intraday_subscriptions.keys()))
+            self.logger.info("Initialized Redis bar keys for intervals: %s", list(
+                self.intraday_subscriptions.keys()))
         except Exception as e:
             self.logger.error("Failed to initialize Redis bar keys: %s", e)
 
@@ -320,7 +346,8 @@ class BarsManager(SingletonParent):
         """Start the background thread for intraday bar scheduling"""
         if self.scheduling_thread is None or not self.scheduling_thread.is_alive():
             self.scheduling_active = True
-            self.scheduling_thread = threading.Thread(target=self._schedule_bar_updates, daemon=True)
+            self.scheduling_thread = threading.Thread(
+                target=self._schedule_bar_updates, daemon=True)
             self.scheduling_thread.start()
             self.logger.info("Started intraday bar scheduling thread")
 
@@ -335,45 +362,47 @@ class BarsManager(SingletonParent):
     def _schedule_bar_updates(self):
         """Main scheduling loop for intraday bar updates with precise timing"""
         self.logger.info("Intraday bar scheduling started")
-        
+
         while self.scheduling_active:
             try:
                 now = datetime.now(pytz.timezone('America/New_York'))
-                
+
                 # Check which intervals need updates
                 intervals_to_update = []
                 for interval in list(self.intraday_subscriptions.keys()):
                     if self._is_time_for_update(now, interval):
                         intervals_to_update.append(interval)
-                
+
                 if intervals_to_update:
-                    self.logger.info(f"Updating bars for intervals: {intervals_to_update}")
+                    self.logger.info(
+                        f"Updating bars for intervals: {intervals_to_update}")
                     for interval in intervals_to_update:
                         self._update_bars_for_interval(interval)
                 else:
                     self.logger.info("No intervals to update")
-                
+
                 # Calculate optimal sleep time to align with next update opportunity
                 sleep_seconds = self._calculate_optimal_sleep_time(now)
-                
+
                 # Log timing information for debugging
                 if sleep_seconds > 10:  # Only log longer sleeps to avoid spam
-                    self.logger.debug(f"Sleeping for {sleep_seconds:.2f}s until next update opportunity")
-                
+                    self.logger.debug(
+                        f"Sleeping for {sleep_seconds:.2f}s until next update opportunity")
+
                 if sleep_seconds > 0:
                     time.sleep(sleep_seconds)
                 else:
                     # If we're already past the boundary, sleep for a short time
                     time.sleep(1)
-                    
+
             except Exception as e:
                 self.logger.error(f"Error in bar scheduling loop: {e}")
                 time.sleep(30)  # Wait longer on error
-                
+
             except Exception as e:
                 self.logger.error(f"Error in bar scheduling loop: {e}")
                 time.sleep(30)  # Wait longer on error
-        
+
         self.logger.info("Intraday bar scheduling stopped")
 
     def _is_time_for_update(self, current_time: datetime, interval: str) -> bool:
@@ -398,22 +427,24 @@ class BarsManager(SingletonParent):
         # Check if we're in a trading day
         if not self._is_trading_day(current_time):
             return False
-        
+
         # Market hours: 9:30 AM to 4:00 PM
-        market_open = current_time.replace(hour=9, minute=30, second=0, microsecond=0)
-        market_close = current_time.replace(hour=16, minute=0, second=0, microsecond=0)
-        
+        market_open = current_time.replace(
+            hour=9, minute=30, second=0, microsecond=0)
+        market_close = current_time.replace(
+            hour=16, minute=0, second=0, microsecond=0)
+
         if current_time < market_open or current_time >= market_close:
             return False
-        
+
         # Check if current time aligns with 65-minute boundaries
         elapsed_from_open = current_time - market_open
         elapsed_minutes = elapsed_from_open.total_seconds() / 60
-        
+
         # 65-minute boundaries: 0, 65, 130, 195, 260, 325 minutes from market open
         if elapsed_minutes % 65 == 0:
             return True
-        
+
         return False
 
     def _is_trading_day(self, dt: datetime) -> bool:
@@ -422,38 +453,38 @@ class BarsManager(SingletonParent):
 
     def _calculate_optimal_sleep_time(self, current_time: datetime) -> float:
         """Calculate optimal sleep time to align with next update opportunity
-        
+
         This method ensures the thread wakes up at exactly the right time
         for the next bar update, providing precise timing synchronization.
         """
         if not self.intraday_subscriptions:
             return 60.0  # Sleep for 1 minute if no subscriptions
-        
+
         # Find the next update time for any interval
         next_update_times = []
-        
+
         for interval in self.intraday_subscriptions.keys():
             next_time = self._get_next_update_time(current_time, interval)
             if next_time:
                 next_update_times.append(next_time)
-        
+
         if not next_update_times:
             return 60.0  # Default to 1 minute if no valid times
-        
+
         # Find the earliest next update time
         next_update = min(next_update_times)
-        
+
         # Calculate sleep time
         sleep_seconds = (next_update - current_time).total_seconds()
-        
+
         # Ensure we don't sleep for negative time
         if sleep_seconds < 0:
             return 1.0  # Sleep for 1 second if we're already past the time
-        
+
         # Add a small buffer (100ms) to ensure we wake up slightly before the target time
         # This helps compensate for any system scheduling delays
         sleep_seconds = max(0.1, sleep_seconds - 0.1)
-        
+
         return sleep_seconds
 
     def _get_next_update_time(self, current_time: datetime, interval: str) -> datetime:
@@ -461,7 +492,7 @@ class BarsManager(SingletonParent):
         if interval == '1m':
             # Next minute at :00 seconds
             return current_time.replace(second=0, microsecond=0) + timedelta(minutes=1)
-        
+
         elif interval == '5m':
             # Next 5-minute boundary (00, 05, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55)
             current_minute = current_time.minute
@@ -471,7 +502,7 @@ class BarsManager(SingletonParent):
                 return current_time.replace(minute=0, second=0, microsecond=0) + timedelta(hours=1)
             else:
                 return current_time.replace(minute=next_5min_boundary, second=0, microsecond=0)
-        
+
         elif interval == '15m':
             # Next 15-minute boundary (00, 15, 30, 45)
             current_minute = current_time.minute
@@ -481,7 +512,7 @@ class BarsManager(SingletonParent):
                 return current_time.replace(minute=0, second=0, microsecond=0) + timedelta(hours=1)
             else:
                 return current_time.replace(minute=next_15min_boundary, second=0, microsecond=0)
-        
+
         elif interval == '30m':
             # Next 30-minute boundary (00, 30)
             current_minute = current_time.minute
@@ -489,11 +520,11 @@ class BarsManager(SingletonParent):
                 return current_time.replace(minute=30, second=0, microsecond=0)
             else:
                 return current_time.replace(minute=0, second=0, microsecond=0) + timedelta(hours=1)
-        
+
         elif interval == '65m':
             # Market session based (09:30, 10:35, 11:40, 12:45, 13:50, 14:55, 16:00)
             return self._get_next_65m_update_time(current_time)
-        
+
         return current_time + timedelta(minutes=1)  # Default fallback
 
     def _get_next_65m_update_time(self, current_time: datetime) -> datetime:
@@ -501,20 +532,22 @@ class BarsManager(SingletonParent):
         # Check if we're in a trading day
         if not self._is_trading_day(current_time):
             return self._get_next_trading_day_market_open(current_time)
-        
+
         # Market hours: 9:30 AM to 4:00 PM
-        market_open = current_time.replace(hour=9, minute=30, second=0, microsecond=0)
-        market_close = current_time.replace(hour=16, minute=0, second=0, microsecond=0)
-        
+        market_open = current_time.replace(
+            hour=9, minute=30, second=0, microsecond=0)
+        market_close = current_time.replace(
+            hour=16, minute=0, second=0, microsecond=0)
+
         if current_time < market_open:
             return market_open
         elif current_time >= market_close:
             return self._get_next_trading_day_market_open(current_time)
-        
+
         # Check if current time aligns with 65-minute boundaries
         elapsed_from_open = current_time - market_open
         elapsed_minutes = elapsed_from_open.total_seconds() / 60
-        
+
         # 65-minute boundaries: 0, 65, 130, 195, 260, 325 minutes from market open
         if elapsed_minutes % 65 == 0:
             # We're exactly at a boundary, next update in 65 minutes
@@ -527,11 +560,11 @@ class BarsManager(SingletonParent):
     def _get_next_trading_day_market_open(self, current_time: datetime) -> datetime:
         """Get next trading day market open (9:30 AM)"""
         next_day = current_time + timedelta(days=1)
-        
+
         # Skip weekends
         while next_day.weekday() >= 5:  # Saturday=5, Sunday=6
             next_day += timedelta(days=1)
-        
+
         return next_day.replace(hour=9, minute=30, second=0, microsecond=0)
 
     def _update_bars_for_interval(self, interval: str):
@@ -539,25 +572,27 @@ class BarsManager(SingletonParent):
         tickers = self.intraday_subscriptions.get(interval, set())
         if not tickers:
             return
-        
+
         try:
-            self.logger.debug(f"Updating {interval} bars for {len(tickers)} tickers")
-            
+            self.logger.debug(
+                f"Updating {interval} bars for {len(tickers)} tickers")
+
             # Fetch bars for all tickers in this interval
             bars_data = self._fetch_intraday_bars(list(tickers), interval)
-            
+
             # Publish bars to Redis
             self._publish_bars_to_redis(bars_data, interval)
-            
-            self.logger.debug(f"Successfully updated {interval} bars for {len(tickers)} tickers")
-            
+
+            self.logger.debug(
+                f"Successfully updated {interval} bars for {len(tickers)} tickers")
+
         except Exception as e:
             self.logger.error(f"Error updating {interval} bars: {e}")
 
     def _fetch_intraday_bars(self, tickers: List[str], interval: str) -> Dict[str, DataFrame]:
         """Fetch intraday bars for multiple tickers"""
         bars_data = {}
-        
+
         try:
             # Use yf.Tickers for batch fetching
             ticker_objects = yf.Tickers(tickers)
@@ -566,33 +601,32 @@ class BarsManager(SingletonParent):
                 try:
                     # For 65m, we need to resample 5m data
                     if interval == '65m':
-                        bars:DataFrame = ticker_objects.tickers[ticker].history(
+                        bars: DataFrame = ticker_objects.tickers[ticker].history(
                             period='1d', interval='5m', actions=False, prepost=False, rounding=True
                         )
                         if not bars.empty:
                             bars = (
-                                    bars
-                                    .groupby(bars.index.normalize())
-                                    .apply(self.resample_session)
-                                    .droplevel(0)
-                                    .dropna(how="all")
-                                )
+                                bars
+                                .groupby(bars.index.normalize())
+                                .apply(self.resample_session)
+                                .droplevel(0)
+                                .dropna(how="all")
+                            )
                     else:
-                        bars:DataFrame = ticker_objects.tickers[ticker].history(
+                        bars: DataFrame = ticker_objects.tickers[ticker].history(
                             period='1d', interval=interval, actions=False, prepost=False, rounding=True
                         )
-                    
+
                     if not bars.empty:
                         bars_data[ticker] = bars
-                        
+
                 except Exception as e:
                     self.logger.error(f"Error fetching bars for {ticker}: {e}")
-                    
+
         except Exception as e:
             self.logger.error(f"Error in batch bar fetching: {e}")
-        
-        return bars_data
 
+        return bars_data
 
     def _publish_bars_to_redis(self, bars_data: Dict[str, DataFrame], interval: str):
         """Publish bars to Redis for real-time consumption"""
@@ -600,10 +634,10 @@ class BarsManager(SingletonParent):
             for ticker, bars in bars_data.items():
                 if bars.empty:
                     continue
-                
+
                 # Get the latest bar
                 latest_bar = bars.iloc[-1]
-                
+
                 # Create bar data structure
                 bar_data = {
                     'ticker': ticker,
@@ -615,18 +649,21 @@ class BarsManager(SingletonParent):
                     'close': float(latest_bar['Close']),
                     'volume': int(latest_bar['Volume'])
                 }
-                
+
                 # Publish to Redis
                 channel = f"bars:{ticker}:{interval}"
                 self.redis_client.publish(channel, json.dumps(bar_data))
-                self.redis_client.publish(f"bars:latest:{interval}", json.dumps(bar_data))
-                
+                self.redis_client.publish(
+                    f"bars:latest:{interval}", json.dumps(bar_data))
+
                 # Store latest bar data
                 latest_key = f"bars:latest:{ticker}:{interval}"
-                self.redis_client.setex(latest_key, 3600, json.dumps(bar_data))  # Expire in 1 hour
-                
-                self.logger.debug(f"Published {interval} bar for {ticker} to Redis")
-                
+                self.redis_client.setex(
+                    latest_key, 3600, json.dumps(bar_data))  # Expire in 1 hour
+
+                self.logger.debug(
+                    f"Published {interval} bar for {ticker} to Redis")
+
         except Exception as e:
             self.logger.error(f"Error publishing bars to Redis: {e}")
 
@@ -682,7 +719,8 @@ class BarsManager(SingletonParent):
             return {ticker.decode('utf-8') if isinstance(ticker, bytes) else ticker
                     for ticker in active_tickers}
         except Exception as e:
-            self.logger.error(f"Failed to get active {interval} tickers from Redis: %s", e)
+            self.logger.error(
+                f"Failed to get active {interval} tickers from Redis: %s", e)
             return set()
 
     def stop_live_quotes(self):
@@ -702,15 +740,16 @@ class BarsManager(SingletonParent):
     def stop_intraday_bars(self):
         """Stop intraday bar scheduling and cleanup"""
         self._stop_intraday_scheduling()
-        
+
         # Clear all active bar tickers from Redis
         try:
             for interval in self.supported_intervals:
                 self.redis_client.delete(f"bars:active:{interval}")
             self.logger.info("Cleared active bar tickers from Redis")
         except Exception as e:
-            self.logger.error("Failed to clear active bar tickers from Redis: %s", e)
-        
+            self.logger.error(
+                "Failed to clear active bar tickers from Redis: %s", e)
+
         # Clear subscriptions
         self.intraday_subscriptions.clear()
         self.logger.info("Stopped intraday bar subscriptions")

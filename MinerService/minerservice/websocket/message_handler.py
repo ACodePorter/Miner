@@ -139,6 +139,19 @@ class WebSocketMessageHandler:
     async def _send_initial_quote(self, websocket: WebSocket, symbol: str) -> None:
         """Send initial quote data for a subscribed symbol"""
         try:
+            # Try to get initial quote from BarsManager integration first
+            if (self.connection_manager.bars_manager_integration and
+                    self.connection_manager.bars_manager_integration.is_subscribed_to_quotes(symbol)):
+                quote_data = await self.connection_manager.bars_manager_integration.get_initial_quote(symbol)
+                if quote_data:
+                    await websocket.send_text(json.dumps({
+                        'type': 'quote',
+                        'data': quote_data,
+                        'timestamp': datetime.now().isoformat()
+                    }))
+                    return
+
+            # Fallback to existing quote service
             quote_data = await self._get_quote_data(symbol)
             await websocket.send_text(json.dumps({
                 'type': 'quote',
@@ -151,6 +164,35 @@ class WebSocketMessageHandler:
     async def _send_initial_bars(self, websocket: WebSocket, symbol: str, interval: str) -> None:
         """Send initial bars snapshot for a subscribed symbol"""
         try:
+            # Try to get initial bars from BarsManager integration first
+            if (self.connection_manager.bars_manager_integration and
+                    self.connection_manager.bars_manager_integration.is_subscribed_to_bars(symbol, interval)):
+                bars = await self.connection_manager.bars_manager_integration.get_initial_bars_snapshot(symbol, interval)
+                if bars:
+                    print(
+                        f"Sending initial bars snapshot for {symbol} {interval}: {len(bars)} bars")
+
+                    # Send initial snapshot
+                    await websocket.send_text(json.dumps({
+                        'type': 'bars',
+                        'data': {
+                            'symbol': symbol,
+                            'interval': interval,
+                            'bars': bars,
+                            'is_snapshot': True
+                        }
+                    }))
+
+                    # Store the last timestamp for this stream using the connection manager
+                    if bars:
+                        last_ts = bars[-1]['timestamp']
+                        self.connection_manager.set_last_bars_timestamp(
+                            symbol, interval, last_ts)
+                        print(
+                            f"Stored last timestamp for {symbol} {interval}: {last_ts}")
+                    return
+
+            # Fallback to existing bars service
             bars = self.bars_service.get_initial_bars_snapshot(
                 symbol, interval)
 

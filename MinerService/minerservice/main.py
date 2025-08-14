@@ -1,20 +1,18 @@
 import asyncio
 import json
-import math
+import logging
 import os
-import uuid
 from contextlib import asynccontextmanager
 from datetime import datetime, timedelta
-from typing import Any, Dict, List, Optional, Set, Tuple
+from typing import Any, List, Optional, Dict
 
 import pytz
-import redis.asyncio as redis
-import yfinance as yf
+# yfinance import removed - using BarsManager integration only
 from browserscraper.tasks import update_market_pe_task
 from celery import chain
-from dataminer import BarsManager, MarketDataShovel, WedgePop
+from dataminer import MarketDataShovel, WedgePop
 from dataminer.models import MarketPe
-from detonator import make_db_connection, mongo_2_df
+from detonator import get_logger, make_db_connection, mongo_2_df
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 from marketbreadth import MarketBreadth
@@ -35,9 +33,11 @@ from .tasks import (run_hk_daily_updates_task, run_us_daily_updates_task,
                     update_tickers_daily_info_task,
                     update_us_trade_calendar_task,
                     update_wedge_pop_for_index_task)
+from .websocket.connection_manager import WebSocketConnectionManager
 
 # Global manager instance
 manager = None
+_logger = get_logger('MinerService', logging.DEBUG)
 
 
 @asynccontextmanager
@@ -46,7 +46,7 @@ async def lifespan(app: FastAPI):
     global manager
 
     # Startup
-    manager = RedisConnectionManager()
+    manager = WebSocketConnectionManager()
     await manager.startup()
 
     # Start background tasks
@@ -84,318 +84,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# WebSocket connection manager with Redis support and bars broadcasting
-
-
-class RedisConnectionManager:
-    def __init__(self):
-        self.redis_client = None
-        self.process_id = str(uuid.uuid4())
-        self.local_connections: Dict[str, WebSocket] = {}
-        self.subscribed_symbols: Set[str] = set()
-        # bars subscriptions: key is (symbol, interval)
-        self.subscribed_bars: Set[Tuple[str, str]] = set()
-        # last sent bar timestamp (ms) per (symbol, interval)
-        self.last_bars_ts: Dict[Tuple[str, str], int] = {}
-        self.broadcast_task = None
-        self.heartbeat_task = None
-        self.running = False
-
-    async def get_redis(self):
-        """Get Redis client with connection pooling for multi-process support"""
-        if self.redis_client is None:
-            try:
-                self.redis_client = redis.Redis(
-                    host='miner-redis',
-                    port=6379,
-                    db=0,
-                    decode_responses=True,
-                    password=None,
-                    max_connections=20,
-                    retry_on_timeout=True,
-                    health_check_interval=30,
-                )
-                await self.redis_client.ping()
-                print(f"Redis connected for process {self.process_id}")
-            except Exception as e:
-                print(f"Failed to connect to Redis: {e}")
-                raise
-        else:
-            try:
-                await self.redis_client.ping()
-            except Exception:
-                try:
-                    await self.redis_client.close()
-                except Exception:
-                    pass
-                self.redis_client = redis.Redis(
-                    host='miner-redis',
-                    port=6379,
-                    db=0,
-                    decode_responses=True,
-                    password=None,
-                    max_connections=20,
-                    retry_on_timeout=True,
-                    health_check_interval=30,
-                )
-                await self.redis_client.ping()
-                print(f"Redis reconnected for process {self.process_id}")
-        return self.redis_client
-
-    async def connect(self, websocket: WebSocket, client_id: str):
-        """Connect a new WebSocket client"""
-        try:
-            await websocket.accept()
-            self.local_connections[client_id] = websocket
-
-            # Store connection info in Redis
-            redis_client = await self.get_redis()
-            connection_info = {
-                'client_id': client_id,
-                'process_id': self.process_id,
-                'connected_at': datetime.now().isoformat(),
-                'last_heartbeat': datetime.now().isoformat()
-            }
-
-            # Use pipeline for atomic operations
-            async with redis_client.pipeline() as pipe:
-                await pipe.hset(f"websocket:connections:{client_id}", mapping=connection_info)
-                # 1 hour TTL
-                await pipe.expire(f"websocket:connections:{client_id}", 3600)
-                await pipe.sadd(f"websocket:processes:{self.process_id}:clients", client_id)
-                await pipe.expire(f"websocket:processes:{self.process_id}:clients", 3600)
-                await pipe.execute()
-
-            print(f"Client {client_id} connected to process {self.process_id}")
-
-        except Exception as e:
-            print(f"Error connecting client {client_id}: {e}")
-            raise
-
-    async def disconnect(self, websocket: WebSocket, client_id: str):
-        """Disconnect a WebSocket client"""
-        try:
-            if client_id in self.local_connections:
-                del self.local_connections[client_id]
-
-            # Remove from Redis
-            redis_client = await self.get_redis()
-            async with redis_client.pipeline() as pipe:
-                await pipe.delete(f"websocket:connections:{client_id}")
-                await pipe.srem(f"websocket:processes:{self.process_id}:clients", client_id)
-                await pipe.execute()
-
-            print(
-                f"Client {client_id} disconnected from process {self.process_id}")
-
-        except Exception as e:
-            print(f"Error disconnecting client {client_id}: {e}")
-
-    async def send_personal_message(self, message: str, client_id: str):
-        """Send message to a specific client"""
-        if client_id in self.local_connections:
-            websocket = self.local_connections[client_id]
-            try:
-                await websocket.send_text(message)
-                return True
-            except Exception as e:
-                print(f"Error sending message to {client_id}: {e}")
-                # Remove broken connection
-                await self.disconnect(websocket, client_id)
-                return False
-        return False
-
-    async def broadcast_to_all_processes(self, message: str):
-        """Broadcast message to all processes via Redis pub/sub"""
-        try:
-            redis_client = await self.get_redis()
-            await redis_client.publish('websocket:broadcast', json.dumps({
-                'message': message,
-                'process_id': self.process_id,
-                'timestamp': datetime.now().isoformat()
-            }))
-        except Exception as e:
-            print(f"Error broadcasting message: {e}")
-
-    async def broadcast(self, message: str):
-        """Broadcast to all connections in this process"""
-        disconnected_clients = []
-        for client_id in list(self.local_connections.keys()):
-            success = await self.send_personal_message(message, client_id)
-            if not success:
-                disconnected_clients.append(client_id)
-
-        # Clean up disconnected clients
-        for client_id in disconnected_clients:
-            if client_id in self.local_connections:
-                await self.disconnect(self.local_connections[client_id], client_id)
-
-    async def subscribe_symbol(self, symbol: str):
-        """Subscribe to a symbol for real-time quotes"""
-        if symbol not in self.subscribed_symbols:
-            self.subscribed_symbols.add(symbol)
-
-            try:
-                # Store subscription in Redis
-                redis_client = await self.get_redis()
-                await redis_client.sadd('websocket:subscribed_symbols', symbol)
-                print(f"Subscribed to symbol: {symbol}")
-            except Exception as e:
-                print(f"Error subscribing to symbol {symbol}: {e}")
-
-    async def subscribe_bars(self, symbol: str, interval: str):
-        key = (symbol.upper(), interval)
-        if key not in self.subscribed_bars:
-            self.subscribed_bars.add(key)
-            try:
-                # Store subscription in Redis
-                redis_client = await self.get_redis()
-                await redis_client.sadd('websocket:subscribed_bars', f"{key[0]}|{key[1]}")
-                print(f"Subscribed to bars: {key[0]} {key[1]}")
-            except Exception as e:
-                print(f"Error subscribing to bars {key}: {e}")
-
-    async def unsubscribe_bars(self, symbol: str, interval: str):
-        key = (symbol.upper(), interval)
-        if key in self.subscribed_bars:
-            self.subscribed_bars.remove(key)
-            try:
-                redis_client = await self.get_redis()
-                await redis_client.srem('websocket:subscribed_bars', f"{key[0]}|{key[1]}")
-            except Exception:
-                pass
-
-    async def get_all_connections(self):
-        """Get all active connections across all processes"""
-        try:
-            redis_client = await self.get_redis()
-            connections = await redis_client.keys('websocket:connections:*')
-            return connections
-        except Exception as e:
-            print(f"Error getting connections: {e}")
-            return []
-
-    async def start_broadcast_listener(self):
-        """Start listening for broadcast messages from other processes"""
-        try:
-            redis_client = await self.get_redis()
-            pubsub = redis_client.pubsub()
-            await pubsub.subscribe('websocket:broadcast')
-
-            async def listen_for_broadcasts():
-                try:
-                    async for message in pubsub.listen():
-                        if message['type'] == 'message':
-                            try:
-                                data = json.loads(message['data'])
-                                # Only process messages from other processes
-                                if data.get('process_id') != self.process_id:
-                                    await self.broadcast(data['message'])
-                            except Exception as e:
-                                print(
-                                    f"Error processing broadcast message: {e}")
-                except Exception as e:
-                    print(f"Broadcast listener error: {e}")
-                finally:
-                    await pubsub.close()
-
-            self.broadcast_task = asyncio.create_task(listen_for_broadcasts())
-            print(f"Broadcast listener started for process {self.process_id}")
-
-        except Exception as e:
-            print(f"Error starting broadcast listener: {e}")
-
-    async def start_heartbeat(self):
-        """Start heartbeat mechanism to detect stale connections"""
-        async def heartbeat_loop():
-            while self.running:
-                try:
-                    await asyncio.sleep(30)  # Heartbeat every 30 seconds
-
-                    # Update heartbeat for all local connections
-                    redis_client = await self.get_redis()
-                    current_time = datetime.now().isoformat()
-
-                    for client_id in list(self.local_connections.keys()):
-                        try:
-                            await redis_client.hset(
-                                f"websocket:connections:{client_id}",
-                                'last_heartbeat',
-                                current_time
-                            )
-                        except Exception as e:
-                            print(
-                                f"Error updating heartbeat for {client_id}: {e}")
-
-                    # Clean up stale connections from other processes
-                    await self.cleanup_stale_connections()
-
-                except Exception as e:
-                    print(f"Heartbeat error: {e}")
-                    await asyncio.sleep(5)  # Wait before retrying
-
-        self.heartbeat_task = asyncio.create_task(heartbeat_loop())
-        print(f"Heartbeat started for process {self.process_id}")
-
-    async def cleanup_stale_connections(self):
-        """Clean up stale connections from other processes"""
-        try:
-            redis_client = await self.get_redis()
-            current_time = datetime.now()
-
-            # Get all connection keys
-            connection_keys = await redis_client.keys('websocket:connections:*')
-
-            for key in connection_keys:
-                try:
-                    # Check if connection is stale (no heartbeat for 2 minutes)
-                    last_heartbeat_str = await redis_client.hget(key, 'last_heartbeat')
-                    if last_heartbeat_str:
-                        last_heartbeat = datetime.fromisoformat(
-                            last_heartbeat_str)
-                        if (current_time - last_heartbeat).total_seconds() > 120:
-                            # Connection is stale, remove it
-                            await redis_client.delete(key)
-                            print(f"Cleaned up stale connection: {key}")
-                except Exception as e:
-                    print(f"Error checking connection {key}: {e}")
-
-        except Exception as e:
-            print(f"Error during cleanup: {e}")
-
-    async def startup(self):
-        """Initialize the connection manager"""
-        self.running = True
-        await self.start_broadcast_listener()
-        await self.start_heartbeat()
-        print(f"RedisConnectionManager started for process {self.process_id}")
-
-    async def shutdown(self):
-        """Clean shutdown of the connection manager"""
-        self.running = False
-
-        # Close all local connections
-        for client_id in list(self.local_connections.keys()):
-            try:
-                websocket = self.local_connections[client_id]
-                await websocket.close()
-            except:
-                pass
-
-        # Clean up Redis
-        if self.redis_client:
-            try:
-                await self.redis_client.close()
-            except:
-                pass
-
-        # Cancel background tasks
-        if self.broadcast_task:
-            self.broadcast_task.cancel()
-        if self.heartbeat_task:
-            self.heartbeat_task.cancel()
-
-        print(f"RedisConnectionManager shutdown for process {self.process_id}")
+# WebSocket connection manager with BarsManager integration
+# Uses WebSocketConnectionManager from websocket/connection_manager.py
 
 
 @app.get('/')
@@ -410,33 +100,31 @@ async def get_websocket_status():
         return {'status': 'unavailable', 'message': 'WebSocket service not initialized'}
 
     try:
-        redis_client = await manager.get_redis()
-
-        # Get connection counts
-        local_connections = len(manager.local_connections)
-        total_connections = len(await manager.get_all_connections())
-
-        # Get process info
-        process_info = {
+        # Get basic status
+        status = {
+            'status': 'healthy',
+            'process': {
             'process_id': manager.process_id,
-            'local_connections': local_connections,
-            'total_connections': total_connections,
+                'local_connections': len(manager.local_connections),
+                'total_connections': await manager.get_total_connections(),
             'subscribed_symbols': list(manager.subscribed_symbols),
             'running': manager.running
+            },
+            'redis': await manager.get_redis_status()
         }
 
-        # Get Redis info
-        redis_info = await redis_client.info()
-
-        return {
-            'status': 'healthy',
-            'process': process_info,
-            'redis': {
-                'connected_clients': redis_info.get('connected_clients', 0),
-                'used_memory': redis_info.get('used_memory_human', 'N/A'),
-                'uptime': redis_info.get('uptime_in_seconds', 0)
+        # Add RedisSubscriptionService status if available
+        if manager.redis_subscription_service:
+            redis_service_status = {
+                'running': manager.redis_subscription_service.running,
+                'active_quote_subscriptions': list(manager.redis_subscription_service.active_quote_subscriptions),
+                'active_bar_subscriptions': list(manager.redis_subscription_service.active_bar_subscriptions),
+                'pubsub_ready': manager.redis_subscription_service.pubsub is not None
             }
-        }
+            status['redis_subscription_service'] = redis_service_status
+
+        return status
+
     except Exception as e:
         return {'status': 'error', 'message': str(e)}
 
@@ -486,7 +174,7 @@ async def broadcast_message(message: str):
 
 @app.websocket("/ws/{client_id}")
 async def websocket_endpoint(websocket: WebSocket, client_id: str):
-    """WebSocket endpoint for real-time communication"""
+    """WebSocket endpoint for real-time communication with BarsManager integration"""
     if not manager:
         await websocket.close(code=1011, reason="Service unavailable")
         return
@@ -499,7 +187,8 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
         await websocket.send_text(json.dumps({
             'type': 'connected',
             'client_id': client_id,
-            'message': 'Connected to WebSocket service'
+            'message': 'Connected to WebSocket service with BarsManager integration',
+            'timestamp': datetime.now().isoformat()
         }))
 
         while True:
@@ -509,267 +198,275 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
 
                 if message.get('type') == 'subscribe':
                     symbol = message.get('symbol')
-                    if symbol:
+                    if not symbol:
+                        await websocket.send_text(json.dumps({
+                            'type': 'error',
+                            'message': 'Symbol is required for subscription',
+                            'timestamp': datetime.now().isoformat()
+                        }))
+                        continue
+                    
+                    # Validate symbol format (basic validation)
+                    if not isinstance(symbol, str) or len(symbol.strip()) == 0:
+                        await websocket.send_text(json.dumps({
+                            'type': 'error',
+                            'message': 'Invalid symbol format',
+                            'timestamp': datetime.now().isoformat()
+                        }))
+                        continue
+                    
+                    symbol = symbol.strip().upper()
+                    
+                    try:
                         await manager.subscribe_symbol(symbol)
                         await websocket.send_text(json.dumps({
                             'type': 'subscribed',
                             'symbol': symbol,
                             'timestamp': datetime.now().isoformat()
                         }))
-                        print(f"Subscribed {client_id} to {symbol}")
+                        _logger.debug('Subscribed %s to %s', client_id, symbol)
 
-                        # Send initial quote data
+                        # Send initial quote data via BarsManager integration
                         try:
-                            redis_client = await manager.get_redis()
-                            quote_key = f"quote:{symbol}"
-                            cached_quote = await redis_client.get(quote_key)
-
-                            if cached_quote:
-                                quote_data = json.loads(cached_quote)
+                            if manager.bars_manager_integration:
+                                quote_data = await manager.bars_manager_integration.get_initial_quote(symbol)
+                                if quote_data:
+                                    # Check if this is a placeholder for subscribed ticker
+                                    if quote_data.get('status') == 'subscribed_waiting_for_data':
+                                        await websocket.send_text(json.dumps({
+                                            'type': 'subscribed',
+                                            'symbol': symbol,
+                                            'message': f'{symbol} subscribed to live quotes, waiting for data...',
+                                            'timestamp': datetime.now().isoformat()
+                                        }))
+                                        print(f"Sent subscription confirmation for {symbol} (waiting for data)")
+                                    else:
+                                        await websocket.send_text(json.dumps({
+                                            'type': 'quote',
+                                            'data': quote_data,
+                                            'timestamp': datetime.now().isoformat()
+                                        }))
+                                        print(f"Sent initial quote for {symbol} via BarsManager")
+                                else:
+                                    # Send error if no data available
+                                    await websocket.send_text(json.dumps({
+                                        'type': 'error',
+                                        'message': f'No quote data available for {symbol}',
+                                        'timestamp': datetime.now().isoformat()
+                                    }))
                             else:
-                                # Get real quote data from yfinance
-                                try:
-                                    clean_symbol = ''.join(
-                                        ch for ch in symbol if ch.isalnum() or ch in ['.', '='])
-                                    ticker = yf.Ticker(clean_symbol)
-                                    info = ticker.info
-
-                                    quote_data = {
-                                        'symbol': clean_symbol,
-                                        'price': info.get('regularMarketPrice', 0),
-                                        'change': info.get('regularMarketChange', 0),
-                                        'changePercent': info.get('regularMarketChangePercent', 0),
-                                        'volume': info.get('volume', 0),
-                                        'marketCap': info.get('marketCap', 0),
-                                        'timestamp': datetime.now().isoformat()
-                                    }
-
-                                    # Cache the real quote data
-                                    await redis_client.setex(quote_key, 60, json.dumps(quote_data))
-                                    print(
-                                        f"Fetched real quote for {symbol}: ${quote_data['price']}")
-                                except Exception as e:
-                                    print(
-                                        f"Error fetching real quote for {symbol}: {e}")
-                                    # Fallback to a default quote structure
-                                    quote_data = {
-                                        'symbol': symbol,
-                                        'price': 0,
-                                        'change': 0,
-                                        'changePercent': 0,
-                                        'volume': 0,
-                                        'marketCap': 0,
-                                        'timestamp': datetime.now().isoformat()
-                                    }
-
+                                await websocket.send_text(json.dumps({
+                                    'type': 'error',
+                                    'message': 'BarsManager integration not available',
+                                    'timestamp': datetime.now().isoformat()
+                                }))
+                        except Exception as e:
+                            print(f"Error sending initial quote for {symbol}: {e}")
                             await websocket.send_text(json.dumps({
-                                'type': 'quote',
-                                'data': quote_data,
+                                'type': 'error',
+                                'message': f'Failed to get quote for {symbol}: {str(e)}',
                                 'timestamp': datetime.now().isoformat()
                             }))
+                    except Exception as e:
+                        print(f"Error subscribing to symbol {symbol}: {e}")
+                        await websocket.send_text(json.dumps({
+                            'type': 'error',
+                            'message': f'Failed to subscribe to {symbol}: {str(e)}',
+                            'timestamp': datetime.now().isoformat()
+                        }))
+
+                elif message.get('type') == 'subscribe_bars':
+                    symbol = message.get('symbol')
+                    interval = message.get('interval', '5m')
+                    
+                    if not symbol or not interval:
+                        await websocket.send_text(json.dumps({
+                            'type': 'error',
+                            'message': 'Both symbol and interval are required for bars subscription',
+                            'timestamp': datetime.now().isoformat()
+                        }))
+                        continue
+                    
+                    # Validate symbol and interval
+                    if not isinstance(symbol, str) or len(symbol.strip()) == 0:
+                        await websocket.send_text(json.dumps({
+                            'type': 'error',
+                            'message': 'Invalid symbol format',
+                            'timestamp': datetime.now().isoformat()
+                        }))
+                        continue
+                    
+                    symbol = symbol.strip().upper()
+                    
+                    # Validate interval
+                    allowed_intervals = {'1m', '5m', '15m', '30m', '65m', '1d', '1wk', '1mo', '3mo'}
+                    if interval not in allowed_intervals:
+                        await websocket.send_text(json.dumps({
+                            'type': 'error',
+                            'message': f'Invalid interval: {interval}. Allowed: {", ".join(sorted(allowed_intervals))}',
+                            'timestamp': datetime.now().isoformat()
+                        }))
+                        continue
+                    
+                    try:
+                        await manager.subscribe_bars(symbol, interval)
+                        await websocket.send_text(json.dumps({
+                            'type': 'bars_subscribed',
+                            'symbol': symbol,
+                            'interval': interval,
+                            'timestamp': datetime.now().isoformat()
+                        }))
+                        print(f"Subscribed {client_id} to {symbol} {interval} bars")
+
+                        # Send initial bars data via BarsManager integration
+                        try:
+                            if manager.bars_manager_integration:
+                                bars_data = await manager.bars_manager_integration.get_initial_bars_snapshot(symbol, interval)
+                                if bars_data:
+                                    await websocket.send_text(json.dumps({
+                                        'type': 'bars',
+                                        'data': {
+                                            'symbol': symbol,
+                                            'interval': interval,
+                                            'bars': bars_data,
+                                            'is_snapshot': True
+                                        },
+                                        'timestamp': datetime.now().isoformat()
+                                    }))
+                                    print(f"Sent initial bars for {symbol} {interval} via BarsManager")
+                                else:
+                                    await websocket.send_text(json.dumps({
+                                        'type': 'error',
+                                        'message': f'No bars data available for {symbol} {interval}',
+                                        'timestamp': datetime.now().isoformat()
+                                    }))
+                            else:
+                                await websocket.send_text(json.dumps({
+                                    'type': 'error',
+                                    'message': 'BarsManager integration not available',
+                                    'timestamp': datetime.now().isoformat()
+                                }))
                         except Exception as e:
-                            print(
-                                f"Error sending initial quote for {symbol}: {e}")
+                            print(f"Error sending initial bars for {symbol} {interval}: {e}")
+                            await websocket.send_text(json.dumps({
+                                'type': 'error',
+                                'message': f'Failed to get bars for {symbol} {interval}: {str(e)}',
+                                'timestamp': datetime.now().isoformat()
+                            }))
+                    except Exception as e:
+                        print(f"Error subscribing to bars for {symbol} {interval}: {e}")
+                        await websocket.send_text(json.dumps({
+                            'type': 'error',
+                            'message': f'Failed to subscribe to bars for {symbol} {interval}: {str(e)}',
+                            'timestamp': datetime.now().isoformat()
+                        }))
 
                 elif message.get('type') == 'unsubscribe':
                     symbol = message.get('symbol')
-                    if symbol:
-                        # Note: We'll implement proper unsubscribe logic later
+                    if not symbol:
+                        await websocket.send_text(json.dumps({
+                            'type': 'error',
+                            'message': 'Symbol is required for unsubscription',
+                            'timestamp': datetime.now().isoformat()
+                        }))
+                        continue
+                    
+                    symbol = symbol.strip().upper()
+                    
+                    try:
+                        await manager.unsubscribe_symbol(symbol)
                         await websocket.send_text(json.dumps({
                             'type': 'unsubscribed',
                             'symbol': symbol,
                             'timestamp': datetime.now().isoformat()
                         }))
                         print(f"Unsubscribed {client_id} from {symbol}")
-
-                elif message.get('type') == 'get_quote':
-                    symbol = message.get('symbol')
-                    if not symbol:
+                    except Exception as e:
+                        print(f"Error unsubscribing from symbol {symbol}: {e}")
                         await websocket.send_text(json.dumps({
                             'type': 'error',
-                            'message': 'Symbol is required for quote request'
+                            'message': f'Failed to unsubscribe from {symbol}: {str(e)}',
+                            'timestamp': datetime.now().isoformat()
+                        }))
+
+                elif message.get('type') == 'unsubscribe_bars':
+                    symbol = message.get('symbol')
+                    interval = message.get('interval', '5m')
+                    
+                    if not symbol or not interval:
+                        await websocket.send_text(json.dumps({
+                            'type': 'error',
+                            'message': 'Both symbol and interval are required for bars unsubscription',
+                            'timestamp': datetime.now().isoformat()
                         }))
                         continue
-
-                    # Get quote from Redis cache or fetch real data
+                    
+                    symbol = symbol.strip().upper()
+                    
                     try:
-                        redis_client = await manager.get_redis()
-                        quote_key = f"quote:{symbol}"
-                        cached_quote = await redis_client.get(quote_key)
-
-                        if cached_quote:
-                            quote_data = json.loads(cached_quote)
-                            await websocket.send_text(json.dumps({
-                                'type': 'quote',
-                                'data': quote_data,
-                                'timestamp': datetime.now().isoformat()
-                            }))
-                        else:
-                            # Get real quote data from yfinance
-                            try:
-                                clean_symbol = ''.join(
-                                    ch for ch in symbol if ch.isalnum() or ch in ['.', '='])
-                                ticker = yf.Ticker(clean_symbol)
-                                info = ticker.info
-
-                                quote_data = {
-                                    'symbol': clean_symbol,
-                                    'price': info.get('regularMarketPrice', 0),
-                                    'change': info.get('regularMarketChange', 0),
-                                    'changePercent': info.get('regularMarketChangePercent', 0),
-                                    'volume': info.get('volume', 0),
-                                    'marketCap': info.get('marketCap', 0),
-                                    'timestamp': datetime.now().isoformat()
-                                }
-
-                                # Cache the real quote data
-                                await redis_client.setex(quote_key, 60, json.dumps(quote_data))
-                                print(
-                                    f"Fetched real quote for {symbol}: ${quote_data['price']}")
-                            except Exception as e:
-                                print(
-                                    f"Error fetching real quote for {symbol}: {e}")
-                                # Fallback to a default quote structure
-                                quote_data = {
-                                    'symbol': symbol,
-                                    'price': 0,
-                                    'change': 0,
-                                    'changePercent': 0,
-                                    'volume': 0,
-                                    'marketCap': 0,
-                                    'timestamp': datetime.now().isoformat()
-                                }
-
-                            await websocket.send_text(json.dumps({
-                                'type': 'quote',
-                                'data': quote_data,
-                                'timestamp': datetime.now().isoformat()
-                            }))
-                    except Exception as e:
-                        print(f"Error getting quote for {symbol}: {e}")
+                        await manager.unsubscribe_bars(symbol, interval)
                         await websocket.send_text(json.dumps({
-                            'type': 'error',
-                            'message': f'Error getting quote: {str(e)}'
-                        }))
-
-                elif message.get('type') == 'subscribe_bars':
-                    symbol = message.get('symbol')
-                    interval = message.get('interval')
-                    if symbol and interval:
-                        print(
-                            f"Client {client_id} subscribing to bars: {symbol} {interval}")
-                        await manager.subscribe_bars(symbol, interval)
-                        await websocket.send_text(json.dumps({
-                            'type': 'subscribed_bars',
+                            'type': 'bars_unsubscribed',
                             'symbol': symbol,
                             'interval': interval,
                             'timestamp': datetime.now().isoformat()
                         }))
-
-                        # Immediately send initial bars snapshot
-                        try:
-                            # Get full bars for initial snapshot using get_bars
-                            hist = BarsManager.get_instance().get_bars(symbol, interval, 'max')
-                            if not hist.empty:
-                                bars = []
-                                for index, row in hist.iterrows():
-                                    bars.append({
-                                        'timestamp': int(index.timestamp() * 1000),
-                                        'open': float(row['Open']),
-                                        'high': float(row['High']),
-                                        'low': float(row['Low']),
-                                        'close': float(row['Close']),
-                                        'volume': int(row['Volume'])
-                                    })
-
-                                print(
-                                    f"Sending initial bars snapshot for {symbol} {interval}: {len(bars)} bars")
-
-                                # Send initial snapshot
-                                await websocket.send_text(json.dumps({
-                                    'type': 'bars',
-                                    'data': {
-                                        'symbol': symbol,
-                                        'interval': interval,
-                                        'bars': bars,
-                                        'is_snapshot': True
-                                    }
-                                }))
-
-                                # Store the last timestamp for this stream
-                                if bars:
-                                    last_ts = bars[-1]['timestamp']
-                                    manager.last_bars_ts[(
-                                        symbol.upper(), interval)] = last_ts
-                                    print(
-                                        f"Stored last timestamp for {symbol} {interval}: {last_ts}")
-
-                        except Exception as e:
-                            print(
-                                f"Error sending initial bars for {symbol} {interval}: {e}")
-
-                elif message.get('type') == 'unsubscribe_bars':
-                    symbol = message.get('symbol')
-                    interval = message.get('interval')
-                    if symbol and interval:
-                        await manager.unsubscribe_bars(symbol, interval)
+                        print(f"Unsubscribed {client_id} from {symbol} {interval} bars")
+                    except Exception as e:
+                        print(f"Error unsubscribing from bars for {symbol} {interval}: {e}")
                         await websocket.send_text(json.dumps({
-                            'type': 'unsubscribed_bars',
-                            'symbol': symbol,
-                            'interval': interval,
+                            'type': 'error',
+                            'message': f'Failed to unsubscribe from bars for {symbol} {interval}: {str(e)}',
                             'timestamp': datetime.now().isoformat()
                         }))
 
                 elif message.get('type') == 'ping':
-                    # Handle ping/pong for connection health
                     await websocket.send_text(json.dumps({
                         'type': 'pong',
                         'timestamp': datetime.now().isoformat()
                     }))
 
-                elif message.get('type') == 'broadcast':
-                    # Allow clients to broadcast messages to all other clients
-                    broadcast_message = message.get('message', '')
-                    if broadcast_message:
-                        await manager.broadcast_to_all_processes(broadcast_message)
-                        await websocket.send_text(json.dumps({
-                            'type': 'broadcast_sent',
-                            'message': broadcast_message,
-                            'timestamp': datetime.now().isoformat()
-                        }))
-
                 else:
+                    # Unknown message type
                     await websocket.send_text(json.dumps({
                         'type': 'error',
-                        'message': f'Unknown message type: {message.get("type")}'
+                        'message': f'Unknown message type: {message.get("type")}',
+                        'timestamp': datetime.now().isoformat()
                     }))
 
             except json.JSONDecodeError:
                 await websocket.send_text(json.dumps({
                     'type': 'error',
-                    'message': 'Invalid JSON format'
+                    'message': 'Invalid JSON format',
+                    'timestamp': datetime.now().isoformat()
                 }))
             except Exception as e:
                 print(f"Error processing message from {client_id}: {e}")
                 await websocket.send_text(json.dumps({
                     'type': 'error',
-                    'message': f'Internal server error: {str(e)}'
+                    'message': f'Internal server error: {str(e)}',
+                    'timestamp': datetime.now().isoformat()
                 }))
 
     except WebSocketDisconnect:
-        if manager:
-            await manager.disconnect(websocket, client_id)
         print(f"WebSocket client disconnected: {client_id}")
     except Exception as e:
         print(f"WebSocket error for {client_id}: {e}")
-        if manager:
-            await manager.disconnect(websocket, client_id)
+        # Try to send error message before closing
         try:
-            await websocket.close(code=1011, reason="Internal error")
+            await websocket.send_text(json.dumps({
+                'type': 'error',
+                'message': f'Connection error: {str(e)}',
+                'timestamp': datetime.now().isoformat()
+            }))
         except:
-            pass
-
-# Background task for real-time bars updates
+            pass  # Ignore errors when sending error message
+    finally:
+        if manager:
+            try:
+                await manager.disconnect(websocket, client_id)
+            except Exception as e:
+                print(f"Error during disconnect cleanup for {client_id}: {e}")
 
 
 async def monitor_bars_updates():
@@ -778,211 +475,28 @@ async def monitor_bars_updates():
     while True:
         try:
             if manager:
+                # Get active subscriptions from BarsManager integration
+                if manager.bars_manager_integration:
+                    active_subscriptions = manager.bars_manager_integration.get_active_subscriptions()
+                    print(f"Active subscriptions: {active_subscriptions}")
+                else:
+                    print("BarsManager integration not available")
+
+                # Get Redis subscription status
                 redis_client = await manager.get_redis()
                 subscribed_bars = await redis_client.smembers('websocket:subscribed_bars')
 
                 if subscribed_bars:
                     print(
-                        f"Monitoring {len(subscribed_bars)} bars subscriptions: {[key.decode('utf-8') if isinstance(key, bytes) else key for key in subscribed_bars]}")
+                        f"WebSocket bars subscriptions: {[key.decode('utf-8') if isinstance(key, bytes) else key for key in subscribed_bars]}")
                 else:
                     print("No bars subscriptions to monitor")
 
-                for key in subscribed_bars:
-                    try:
-                        key_str = key.decode(
-                            'utf-8') if isinstance(key, bytes) else key
-                        sym, interval = key_str.split('|')
+                # The actual data monitoring is now handled by BarsManager and Redis subscription service
+                # This function just provides status monitoring
 
-                        print(f"Checking bars for {sym} {interval}...")
-
-                        # Get recent bars for comparison
-                        hist = BarsManager.get_instance().get_recent_bars(sym, interval, 10)
-                        if hist.empty:
-                            print(f"No bars data for {sym} {interval}")
-                            continue
-
-                        print(
-                            f"Got {len(hist)} recent bars for {sym} {interval}")
-
-                        # Get the latest bar
-                        last_row = hist.iloc[-1]
-                        last_idx = hist.index[-1]
-
-                        # Debug: Show the actual data we're getting
-                        print(f"Latest bar data for {sym} {interval}:")
-                        print(f"  Index: {last_idx}")
-                        print(f"  Open: {last_row['Open']}")
-                        print(f"  High: {last_row['High']}")
-                        print(f"  Low: {last_row['Low']}")
-                        print(f"  Close: {last_row['Close']}")
-                        print(f"  Volume: {last_row['Volume']}")
-
-                        # Check if this is the same data as last time we checked
-                        current_data_hash = hash(
-                            f"{last_row['Open']}{last_row['High']}{last_row['Low']}{last_row['Close']}{last_row['Volume']}")
-                        last_check_hash_key = f"bars:{sym}:{interval}:last_check_hash"
-                        last_check_hash = await redis_client.get(last_check_hash_key)
-
-                        if last_check_hash and int(last_check_hash) == current_data_hash:
-                            print(
-                                f"Data unchanged from last check for {sym} {interval} - skipping entire check")
-                            continue
-                        else:
-                            # Store the new hash for next comparison
-                            await redis_client.setex(last_check_hash_key, 60, str(current_data_hash))
-                            print(
-                                f"Data changed from last check for {sym} {interval} - proceeding with update check")
-
-                        last_ts_ms = int(last_idx.timestamp() * 1000)
-                        prev_ts_ms = manager.last_bars_ts.get((sym, interval))
-
-                        # Check if the bar is too old (market closed)
-                        current_time = datetime.now()
-                        bar_time = datetime.fromtimestamp(last_idx.timestamp())
-                        time_diff = current_time - bar_time
-
-                        # Skip if bar is older than 1 hour for minute intervals, 1 day for others
-                        max_age_hours = 1 if interval in [
-                            '1m', '5m', '15m', '30m', '60m', '65m'] else 24
-                        if time_diff.total_seconds() > max_age_hours * 3600:
-                            print(
-                                f"Bar too old for {sym} {interval}: {time_diff.total_seconds()/3600:.1f} hours, skipping")
-                            continue
-
-                        print(
-                            f"Latest bar timestamp: {last_ts_ms}, Previous: {prev_ts_ms}, Age: {time_diff.total_seconds()/60:.1f} minutes")
-
-                        # Check if we have new data to send
-                        bars = []
-
-                        if prev_ts_ms is None:
-                            # First time - don't send anything, just store timestamp
-                            # The initial snapshot was already sent during subscription
-                            manager.last_bars_ts[(sym, interval)] = last_ts_ms
-                            print(
-                                f"Initial timestamp stored for {sym} {interval}: {last_ts_ms}")
-
-                            # Cache current data for future comparison
-                            current_data = {
-                                'open': float(last_row['Open']),
-                                'high': float(last_row['High']),
-                                'low': float(last_row['Low']),
-                                'close': float(last_row['Close']),
-                                'volume': int(last_row['Volume'])
-                            }
-                            prev_data_key = f"bars:{sym}:{interval}:{last_ts_ms}"
-                            await redis_client.setex(prev_data_key, 300, json.dumps(current_data))
-
-                        elif last_ts_ms > prev_ts_ms:
-                            # New bar completed - this is truly incremental
-                            bars.append({
-                                'timestamp': last_ts_ms,
-                                'open': float(last_row['Open']),
-                                'high': float(last_row['High']),
-                                'low': float(last_row['Low']),
-                                'close': float(last_row['Close']),
-                                'volume': int(last_row['Volume'])
-                            })
-                            manager.last_bars_ts[(sym, interval)] = last_ts_ms
-                            print(
-                                f"New incremental bar sent for {sym} {interval}: {last_ts_ms}")
-
-                            # Cache current data for future comparison
-                            current_data = {
-                                'open': float(last_row['Open']),
-                                'high': float(last_row['High']),
-                                'low': float(last_row['Low']),
-                                'close': float(last_row['Close']),
-                                'volume': int(last_row['Volume'])
-                            }
-                            prev_data_key = f"bars:{sym}:{interval}:{last_ts_ms}"
-                            await redis_client.setex(prev_data_key, 300, json.dumps(current_data))
-
-                        elif last_ts_ms == prev_ts_ms:
-                            # Same timestamp - check if data actually changed (for forming bars)
-                            current_data = {
-                                'open': float(last_row['Open']),
-                                'high': float(last_row['High']),
-                                'low': float(last_row['Low']),
-                                'close': float(last_row['Close']),
-                                'volume': int(last_row['Volume'])
-                            }
-
-                            # Get previous data from cache to compare
-                            prev_data_key = f"bars:{sym}:{interval}:{prev_ts_ms}"
-                            prev_data_str = await redis_client.get(prev_data_key)
-
-                            if prev_data_str:
-                                prev_data = json.loads(prev_data_str)
-
-                                # Check if data actually changed
-                                data_changed = False
-                                if (abs(current_data['high'] - prev_data['high']) > 0.001 or
-                                    abs(current_data['low'] - prev_data['low']) > 0.001 or
-                                    abs(current_data['close'] - prev_data['close']) > 0.001 or
-                                        abs(current_data['volume'] - prev_data['volume']) > 0):
-                                    data_changed = True
-
-                                print(f"Data comparison for {sym} {interval}:")
-                                print(
-                                    f"  Current: O:{current_data['open']:.4f} H:{current_data['high']:.4f} L:{current_data['low']:.4f} C:{current_data['close']:.4f} V:{current_data['volume']}")
-                                print(
-                                    f"  Previous: O:{prev_data['open']:.4f} H:{prev_data['high']:.4f} L:{prev_data['low']:.4f} C:{prev_data['close']:.4f} V:{prev_data['volume']}")
-                                print(f"  Data changed: {data_changed}")
-
-                                if data_changed:
-                                    # Check if we already sent this exact data recently
-                                    data_hash = hash(
-                                        f"{current_data['open']:.4f}{current_data['high']:.4f}{current_data['low']:.4f}{current_data['close']:.4f}{current_data['volume']}")
-                                    last_sent_hash_key = f"bars:{sym}:{interval}:{prev_ts_ms}:hash"
-                                    last_sent_hash = await redis_client.get(last_sent_hash_key)
-
-                                    if last_sent_hash and int(last_sent_hash) == data_hash:
-                                        print(
-                                            f"Data already sent for {sym} {interval} - skipping duplicate")
-                                    else:
-                                        # Data changed and not duplicate, send incremental update
-                                        bars.append({
-                                            'timestamp': last_ts_ms,
-                                            **current_data
-                                        })
-                                        print(
-                                            f"Forming bar update sent for {sym} {interval} - data changed")
-
-                                        # Store the hash to prevent duplicates
-                                        await redis_client.setex(last_sent_hash_key, 300, str(data_hash))
-                                else:
-                                    print(
-                                        f"No meaningful change for {sym} {interval} - skipping update")
-                            else:
-                                # No previous data to compare, cache current data
-                                await redis_client.setex(prev_data_key, 300, json.dumps(current_data))
-                                print(
-                                    f"Cached data for {sym} {interval} - no previous data to compare")
-
-                        # Broadcast bars if we have updates
-                        if bars:
-                            print(
-                                f"Broadcasting {len(bars)} incremental bars for {sym} {interval}")
-                            await manager.broadcast(json.dumps({
-                                'type': 'bars',
-                                'data': {
-                                    'symbol': sym,
-                                    'interval': interval,
-                                    'bars': bars,
-                                    'is_snapshot': False
-                                },
-                                'timestamp': datetime.now().isoformat()
-                            }))
-                        else:
-                            print(
-                                f"No incremental bars to broadcast for {sym} {interval}")
-
-                    except Exception as e:
-                        print(f"Error processing bars update for {key}: {e}")
-
-            # Wait before next check - adjust based on interval types
-            await asyncio.sleep(5)  # Check every 5 seconds
+            # Wait before next status check
+            await asyncio.sleep(30)  # Check status every 30 seconds
 
         except Exception as e:
             print(f"Error in bars monitoring: {e}")
@@ -995,82 +509,40 @@ async def update_real_quotes():
     while True:
         try:
             if manager:
-                redis_client = await manager.get_redis()
-                subscribed_symbols = await redis_client.smembers('websocket:subscribed_symbols')
+                # Get active quote subscriptions from BarsManager integration
+                if manager.bars_manager_integration:
+                    active_quotes = manager.bars_manager_integration.get_active_subscriptions()[
+                        'quotes']
+                    print(
+                        f"Active quote subscriptions via BarsManager: {active_quotes}")
+                else:
+                    print("BarsManager integration not available for quotes")
 
-                for symbol in subscribed_symbols:
-                    symbol_str = symbol.decode(
-                        'utf-8') if isinstance(symbol, bytes) else symbol
+                # Get detailed subscription status for monitoring
+                subscription_status = await manager.get_subscription_status()
+                print(f"Subscription Status: {subscription_status}")
 
-                    try:
-                        # Fetch real quote data from yfinance
-                        clean_symbol = ''.join(
-                            ch for ch in symbol_str if ch.isalnum() or ch in ['.', '='])
-                        ticker = yf.Ticker(clean_symbol)
-                        info = ticker.info
+                # Check for subscription mismatches
+                if subscription_status.get('memory_quotes') != subscription_status.get('redis_quotes'):
+                    print(
+                        f"⚠️  Quote subscription mismatch: Memory={subscription_status.get('memory_quotes')}, Redis={subscription_status.get('redis_quotes')}")
 
-                        # Get current cached quote for comparison
-                        quote_key = f"quote:{symbol_str}"
-                        cached_quote = await redis_client.get(quote_key)
+                if subscription_status.get('memory_bars') != subscription_status.get('redis_bars'):
+                    print(
+                        f"⚠️  Bars subscription mismatch: Memory={subscription_status.get('memory_bars')}, Redis={subscription_status.get('redis_bars')}")
 
-                        if cached_quote:
-                            current_quote = json.loads(cached_quote)
-                            current_price = current_quote.get('price', 0)
-                        else:
-                            current_price = 0
+                # Show active subscriptions
+                if subscription_status.get('memory_quote_symbols'):
+                    print(
+                        f"Active quote subscriptions: {subscription_status.get('memory_quote_symbols')}")
+                else:
+                    print("No active quote subscriptions")
 
-                        # Fetch new quote data
-                        new_price = info.get('regularMarketPrice', 0)
-                        new_change = info.get('regularMarketChange', 0)
-                        new_change_percent = info.get(
-                            'regularMarketChangePercent', 0)
-                        new_volume = info.get('volume', 0)
-                        new_market_cap = info.get('marketCap', 0)
+                # The actual quote updates are now handled by BarsManager and Redis subscription service
+                # This function just provides status monitoring
 
-                        # Only update if price actually changed (avoid unnecessary broadcasts)
-                        if abs(new_price - current_price) > 0.001:
-                            updated_quote = {
-                                'symbol': clean_symbol,
-                                'price': new_price,
-                                'change': new_change,
-                                'changePercent': new_change_percent,
-                                'volume': new_volume,
-                                'marketCap': new_market_cap,
-                                'timestamp': datetime.now().isoformat()
-                            }
-
-                            # Update cache
-                            await redis_client.setex(quote_key, 60, json.dumps(updated_quote))
-
-                            # Broadcast to all connected clients
-                            await manager.broadcast(json.dumps({
-                                'type': 'quote',
-                                'data': updated_quote,
-                                'timestamp': datetime.now().isoformat()
-                            }))
-
-                            print(
-                                f"Updated real quote for {symbol_str}: ${new_price} (change: {new_change:+.2f})")
-                        else:
-                            # Update cache with current data even if price didn't change
-                            # This ensures we have fresh volume and other data
-                            updated_quote = {
-                                'symbol': clean_symbol,
-                                'price': new_price,
-                                'change': new_change,
-                                'changePercent': new_change_percent,
-                                'volume': new_volume,
-                                'marketCap': new_market_cap,
-                                'timestamp': datetime.now().isoformat()
-                            }
-                            await redis_client.setex(quote_key, 60, json.dumps(updated_quote))
-
-                    except Exception as e:
-                        print(f"Error updating quote for {symbol_str}: {e}")
-                        continue
-
-            # Update quotes every 10 seconds (more reasonable for real market data)
-            await asyncio.sleep(10)
+            # Wait before next status check
+            await asyncio.sleep(30)  # Check status every 30 seconds
 
         except Exception as e:
             print(f"Error in real quote updates: {e}")
@@ -1079,30 +551,29 @@ async def update_real_quotes():
 
 @app.get('/api/realtime/quote/{symbol}')
 async def get_realtime_quote(symbol: str):
-    """Get real-time quote for a symbol"""
+    """Get real-time quote for a symbol via BarsManager"""
     try:
         # Sanitize symbol (remove leading $ or other non-alphanumerics except . and =)
         clean_symbol = ''.join(
             ch for ch in symbol if ch.isalnum() or ch in ['.', '='])
-        ticker = yf.Ticker(clean_symbol)
-        info = ticker.info
-        quote = {
-            'symbol': clean_symbol,
-            'price': info.get('regularMarketPrice', 0),
-            'change': info.get('regularMarketChange', 0),
-            'changePercent': info.get('regularMarketChangePercent', 0),
-            'volume': info.get('volume', 0),
-            'marketCap': info.get('marketCap', 0),
-            'timestamp': datetime.now().isoformat()
-        }
-        return quote
+
+        # Get quote from BarsManager integration
+        if manager and manager.bars_manager_integration:
+            quote_data = await manager.bars_manager_integration.get_initial_quote(clean_symbol)
+            if quote_data:
+                return quote_data
+            else:
+                return {'error': f'No quote data available for {clean_symbol}'}
+        else:
+            return {'error': 'BarsManager integration not available'}
+
     except Exception as e:
-        return {'error': str(e)}
+        return {'error': f'Failed to fetch quote for {symbol}: {str(e)}'}
 
 
 @app.get('/api/bars/{symbol}/{interval}')
 async def get_bars(symbol: str, interval: str = '1m', period: str = '1d'):
-    """Get bar data for a symbol with specified interval"""
+    """Get bar data for a symbol with specified interval via BarsManager"""
     try:
         # Sanitize symbol
         clean_symbol = ''.join(
@@ -1115,50 +586,22 @@ async def get_bars(symbol: str, interval: str = '1m', period: str = '1d'):
         if interval not in allowed_intervals:
             return {'error': f'Invalid interval: {interval}'}
 
-        hist = BarsManager.get_instance().get_bars(clean_symbol, interval, period)
-        if hist.empty:
-            return {'error': 'No data available'}
+        # Get bars from BarsManager integration
+        if manager and manager.bars_manager_integration:
+            bars_data = await manager.bars_manager_integration.get_initial_bars_snapshot(clean_symbol, interval)
+            if bars_data:
+                return {
+                    'symbol': clean_symbol,
+                    'interval': interval,
+                    'bars': bars_data
+                }
+            else:
+                return {'error': f'No bars data available for {clean_symbol} {interval}'}
+        else:
+            return {'error': 'BarsManager integration not available'}
 
-        # Convert to OHLCV format with safe handling of nan values
-        bars = []
-        for index, row in hist.iterrows():
-            # Safely convert values, handling nan and inf
-            try:
-                open_price = float(row['Open']) if not math.isnan(
-                    row['Open']) else 0.0
-                high_price = float(row['High']) if not math.isnan(
-                    row['High']) else 0.0
-                low_price = float(row['Low']) if not math.isnan(
-                    row['Low']) else 0.0
-                close_price = float(row['Close']) if not math.isnan(
-                    row['Close']) else 0.0
-                volume = int(row['Volume']) if not math.isnan(
-                    row['Volume']) else 0
-            except (ValueError, TypeError):
-                # Skip this row if conversion fails
-                continue
-
-            # Skip bars with invalid data (all zeros might indicate bad data)
-            if all(price == 0.0 for price in [open_price, high_price, low_price, close_price]):
-                continue
-
-            bars.append({
-                # Convert to milliseconds
-                'timestamp': int(index.timestamp() * 1000),
-                'open': open_price,
-                'high': high_price,
-                'low': low_price,
-                'close': close_price,
-                'volume': volume
-            })
-
-        return {
-            'symbol': clean_symbol,
-            'interval': interval,
-            'bars': bars
-        }
     except Exception as e:
-        return {'error': str(e)}
+        return {'error': f'Failed to fetch bars for {symbol} {interval}: {str(e)}'}
 
 
 @app.get('/update_us_trade_calendar')
@@ -1174,7 +617,7 @@ async def update_spx_tickers_info() -> str:
 
 
 @app.get('/update_iwd_tickers_info')
-async def update_iwf_tickers_info() -> str:
+async def update_iwd_tickers_info() -> str:
     chain(update_iwd_tickers_task.si(), update_iwd_tickers_info_task.si())()
     return 'GOOD'
 
@@ -1269,8 +712,211 @@ async def update_indicators_for_tickers(tickers: List[str]) -> str:
     return 'GOOD'
 
 
+@app.get('/cleanup_subscriptions')
+async def cleanup_subscriptions() -> Dict[str, Any]:
+    """Clean up stale subscriptions and return status"""
+    try:
+        if manager:
+            await manager.cleanup_stale_subscriptions()
+            subscription_status = await manager.get_subscription_status()
+            return {
+                'status': 'success',
+                'message': 'Subscription cleanup completed',
+                'subscription_status': subscription_status
+            }
+        else:
+            return {'error': 'Manager not available'}
+    except Exception as e:
+        return {'error': f'Failed to cleanup subscriptions: {str(e)}'}
+
+
+@app.get('/test_quote_flow/{symbol}')
+async def test_quote_flow(symbol: str) -> Dict[str, Any]:
+    """Test the quote flow for a specific symbol"""
+    try:
+        if not manager:
+            return {'error': 'Manager not available'}
+
+        # Check if symbol is subscribed
+        is_subscribed = symbol.upper() in manager.subscribed_symbols
+
+        # Get subscription status
+        subscription_status = await manager.get_subscription_status()
+
+        # Check Redis for active quotes
+        redis_client = await manager.get_redis()
+        active_quotes = await redis_client.smembers('quotes:active')
+        active_quotes = [
+            q.decode('utf-8') if isinstance(q, bytes) else q for q in active_quotes]
+
+        # Check if there are any recent quotes for this symbol
+        latest_quote_key = f'quote:latest:{symbol.upper()}'
+        latest_quote = await redis_client.get(latest_quote_key)
+
+        # Get Redis subscription service health
+        redis_service_health = None
+        if manager.redis_subscription_service:
+            redis_service_health = manager.redis_subscription_service.get_health_status()
+
+        return {
+            'symbol': symbol.upper(),
+            'is_subscribed': is_subscribed,
+            'subscription_status': subscription_status,
+            'redis_service_health': redis_service_health,
+            'active_quotes_in_redis': active_quotes,
+            'latest_quote_available': latest_quote is not None,
+            'latest_quote_data': latest_quote.decode('utf-8') if latest_quote else None
+        }
+    except Exception as e:
+        return {'error': f'Failed to test quote flow: {str(e)}'}
+
+
+@app.get('/redis_service_health')
+async def redis_service_health() -> Dict[str, Any]:
+    """Get health status of Redis subscription service"""
+    try:
+        if not manager or not manager.redis_subscription_service:
+            return {'error': 'Redis subscription service not available'}
+
+        health = manager.redis_subscription_service.get_health_status()
+        return {
+            'status': 'success',
+            'health': health
+        }
+    except Exception as e:
+        return {'error': f'Failed to get health status: {str(e)}'}
+
+
+@app.post('/refresh_redis_subscriptions')
+async def refresh_redis_subscriptions() -> Dict[str, Any]:
+    """Manually refresh Redis subscriptions"""
+    try:
+        if not manager or not manager.redis_subscription_service:
+            return {'error': 'Redis subscription service not available'}
+
+        # Refresh subscriptions
+        await manager.redis_subscription_service.refresh_subscriptions()
+
+        # Get updated health status
+        health = manager.redis_subscription_service.get_health_status()
+
+        return {
+            'status': 'success',
+            'message': 'Redis subscriptions refreshed',
+            'health': health
+        }
+    except Exception as e:
+        return {'error': f'Failed to refresh subscriptions: {str(e)}'}
+
+
+@app.post('/test_quote_flow_manual/{symbol}')
+async def test_quote_flow_manual(symbol: str) -> Dict[str, Any]:
+    """Manually test the complete quote flow for a symbol"""
+    try:
+        if not manager:
+            return {'error': 'Manager not available'}
+
+        # Step 1: Check if symbol is subscribed
+        is_subscribed = symbol.upper() in manager.subscribed_symbols
+
+        # Step 2: Check BarsManager subscription
+        bars_manager_subscribed = False
+        if manager.bars_manager_integration:
+            bars_manager_subscribed = symbol.upper(
+            ) in manager.bars_manager_integration.bars_manager.subscribed_tickers
+
+        # Step 3: Check Redis for active quotes
+        redis_client = await manager.get_redis()
+        active_quotes = await redis_client.smembers('quotes:active')
+        active_quotes = [
+            q.decode('utf-8') if isinstance(q, bytes) else q for q in active_quotes]
+
+        # Step 4: Check latest quote in Redis
+        latest_quote_key = f'quote:latest:{symbol.upper()}'
+        latest_quote = await redis_client.get(latest_quote_key)
+
+        # Step 5: Check Redis subscription service health
+        redis_service_health = None
+        if manager.redis_subscription_service:
+            redis_service_health = manager.redis_subscription_service.get_health_status()
+
+        # Step 6: Try to get initial quote
+        initial_quote = None
+        if manager.bars_manager_integration:
+            initial_quote = await manager.bars_manager_integration.get_initial_quote(symbol)
+
+        return {
+            'symbol': symbol.upper(),
+            'test_results': {
+                'websocket_subscribed': is_subscribed,
+                'bars_manager_subscribed': bars_manager_subscribed,
+                'redis_active_quotes': active_quotes,
+                'redis_latest_quote_available': latest_quote is not None,
+                'redis_latest_quote_data': latest_quote.decode('utf-8') if latest_quote else None,
+                'initial_quote_available': initial_quote is not None,
+                'initial_quote_data': initial_quote
+            },
+            'redis_service_health': redis_service_health,
+            'diagnosis': {
+                'issue': 'quote_flow_breakdown' if not is_subscribed or not bars_manager_subscribed else 'redis_subscription_issue' if not redis_service_health.get('running', False) else 'data_flow_issue',
+                'recommendation': 'Check subscription flow' if not is_subscribed else 'Check BarsManager integration' if not bars_manager_subscribed else 'Check Redis subscription service' if not redis_service_health.get('running', False) else 'Check data flow from BarsManager to Redis'
+            }
+        }
+    except Exception as e:
+        return {'error': f'Failed to test quote flow: {str(e)}'}
+
+
+@app.get('/debug_redis_subscriptions')
+async def debug_redis_subscriptions() -> Dict[str, Any]:
+    """Debug Redis subscription service status"""
+    try:
+        if not manager or not manager.redis_subscription_service:
+            return {'error': 'Redis subscription service not available'}
+
+        # Get detailed subscription status
+        status = await manager.redis_subscription_service.debug_subscription_status()
+        
+        # Also check BarsManager integration status
+        bars_manager_status = None
+        if manager.bars_manager_integration:
+            bars_manager_status = manager.bars_manager_integration.get_active_subscriptions()
+        
+        return {
+            'status': 'success',
+            'redis_subscription_service': status,
+            'bars_manager_integration': bars_manager_status,
+            'websocket_connections': len(manager.local_connections),
+            'websocket_subscribed_symbols': list(manager.subscribed_symbols),
+            'websocket_subscribed_bars': [f"{ticker}:{interval}" for ticker, interval in manager.subscribed_bars]
+        }
+    except Exception as e:
+        return {'error': f'Failed to get debug status: {str(e)}'}
+
+
+@app.post('/force_redis_resubscribe')
+async def force_redis_resubscribe() -> Dict[str, Any]:
+    """Force Redis subscription service to resubscribe to all channels"""
+    try:
+        if not manager or not manager.redis_subscription_service:
+            return {'error': 'Redis subscription service not available'}
+
+        # Force resubscribe
+        await manager.redis_subscription_service.force_resubscribe()
+        
+        # Get updated status
+        status = await manager.redis_subscription_service.debug_subscription_status()
+        
+        return {
+            'status': 'success',
+            'message': 'Redis subscriptions refreshed',
+            'updated_status': status
+        }
+    except Exception as e:
+        return {'error': f'Failed to force resubscribe: {str(e)}'}
+
+
 @app.get('/api/mbs/{market_index}.json')
-async def get_mbs(market_index: str = 'spx', start_date: str = None, end_date: str = None) -> list | dict:
+async def get_mbs(market_index: str = 'spx', start_date: Optional[str] = None, end_date: Optional[str] = None) -> List[Dict[str, Any]] | Dict[str, Any]:
     '''
     获取市场宽度分数
     :return:
@@ -1281,7 +927,7 @@ async def get_mbs(market_index: str = 'spx', start_date: str = None, end_date: s
 
 
 @app.get('/api/market_pe/{index}.json')
-async def get_market_pe(index: str = 'spx', start_date: str = None, end_date: str = None) -> dict:
+async def get_market_pe(index: str = 'spx', start_date: Optional[str] = None, end_date: Optional[str] = None) -> Dict[str, Any]:
     '''
     Get market PE data for visualization
     :param index: 'spx' or 'qqq'
@@ -1372,13 +1018,13 @@ async def get_market_pe(index: str = 'spx', start_date: str = None, end_date: st
 
 
 @app.get('/api/wedge_pop/latest.json', description='Get all wedge pop tickers of today')
-async def get_wedge_pop_tickers_of_today() -> dict | list:
+async def get_wedge_pop_tickers_of_today() -> Dict[str, Any] | List[Any]:
     wedge_pop: WedgePop = WedgePop.get_instance()
     return wedge_pop.get_wedge_tickers_on_today()
 
 
 @app.get('/api/wedge_pop/wedges.json', description='Get wedge pop tickers since 1 year ago')
-async def get_wedge_pop_tickers() -> dict | list:
+async def get_wedge_pop_tickers() -> Dict[str, Any] | List[Any]:
     wedge_pop: WedgePop = WedgePop.get_instance()
     start_date = datetime.now(tz=pytz.timezone(
         'America/New_York')) - timedelta(days=365)
@@ -1386,20 +1032,20 @@ async def get_wedge_pop_tickers() -> dict | list:
 
 
 @app.get('/api/wedge_pop/stats.json', description='Get wedge pop stats')
-async def get_wedge_pop_stats(start_date: Optional[str] = None, end_date: Optional[str] = None) -> dict | list:
+async def get_wedge_pop_stats(start_date: Optional[str] = None, end_date: Optional[str] = None) -> Dict[str, Any] | List[Any]:
     wedge_pop: WedgePop = WedgePop.get_instance()
     return wedge_pop.get_wedge_stats(start_date=start_date, end_date=end_date)
 
 
 @app.get('/api/ohlcvw/{ticker}.json', description='Get OHLCVW data for a ticker, default to 3 years ago')
-async def get_ohlcvw(ticker: str, start_date: Optional[str] = None, end_date: Optional[str] = None, interval: str = '1d') -> dict | list[Any]:
+async def get_ohlcvw(ticker: str, start_date: Optional[str] = None, end_date: Optional[str] = None, interval: str = '1d') -> Dict[str, Any] | List[Any]:
     md: MarketDataShovel = MarketDataShovel.get_instance()
     if start_date is None:
-        start_date = datetime.now(tz=pytz.timezone(
-            'America/New_York')) - timedelta(days=365*3)
+        start_date = (datetime.now(tz=pytz.timezone(
+            'America/New_York')) - timedelta(days=365*3)).strftime('%Y-%m-%d')
     if end_date is None:
-        end_date = datetime.now(tz=pytz.timezone(
-            'America/New_York'))
+        end_date = (datetime.now(tz=pytz.timezone(
+            'America/New_York'))).strftime('%Y-%m-%d')
     dailies_df = md.get_ticker_daily_info(
         ticker, start_date, end_date, interval=interval)
     dailies_df = dailies_df[['trade_date', 'ticker', 'open',
@@ -1409,7 +1055,7 @@ async def get_ohlcvw(ticker: str, start_date: Optional[str] = None, end_date: Op
 
 # Watchlist endpoints
 @app.get('/api/watchlist')
-async def get_watchlist() -> dict:
+async def get_watchlist() -> Dict[str, Any]:
     """Get the current watchlist"""
     try:
         # For now, we'll use a simple file-based storage
@@ -1426,7 +1072,7 @@ async def get_watchlist() -> dict:
 
 
 @app.post('/api/watchlist')
-async def add_to_watchlist(ticker: str) -> dict:
+async def add_to_watchlist(ticker: str) -> Dict[str, Any]:
     """Add a ticker to the watchlist"""
     try:
         watchlist_file = 'watchlist.json'
@@ -1455,7 +1101,7 @@ async def add_to_watchlist(ticker: str) -> dict:
 
 
 @app.delete('/api/watchlist/{ticker}')
-async def remove_from_watchlist(ticker: str) -> dict:
+async def remove_from_watchlist(ticker: str) -> Dict[str, Any]:
     """Remove a ticker from the watchlist"""
     try:
         watchlist_file = 'watchlist.json'

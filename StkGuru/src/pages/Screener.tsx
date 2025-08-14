@@ -1,6 +1,7 @@
 import React, { useCallback, useMemo, useState } from 'react';
 import Watchlist from '../components/Watchlist';
 import ChartTile from '../components/ChartTile';
+import RealTimeMonitor from '../components/RealTimeMonitor';
 
 const Screener: React.FC = () => {
   const [tiles, setTiles] = useState<{ id: string; ticker: string; timeframe: string }[]>([]);
@@ -200,6 +201,9 @@ const Screener: React.FC = () => {
           </div>
         </div>
       )}
+      
+      {/* Real-Time Performance Monitor */}
+      <RealTimeMonitor />
     </div>
   );
 };
