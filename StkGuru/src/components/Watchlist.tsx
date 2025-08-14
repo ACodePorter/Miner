@@ -79,20 +79,12 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
 
   // Subscribe to quotes via WebSocket, no HTTP polling
   useEffect(() => {
-    console.log(`Watchlist useEffect triggered with ${watchlist.length} items`);
-    console.log(`Watchlist contents:`, watchlist);
-    
     if (watchlist.length === 0) {
-      console.log(`Watchlist is empty, not subscribing to any tickers`);
       return;
     }
     
-    console.log(`Subscribing to ${watchlist.length} tickers for real-time quotes`);
-    console.log(`Watchlist tickers:`, watchlist.map(item => item.ticker));
-    
     // Check WebSocket connection status
     const connectionStatus = wsClient.getConnectionStatus();
-    console.log('WebSocket connection status:', connectionStatus);
     
     // Create a map of current tickers to avoid duplicate subscriptions
     const currentTickers = new Set(watchlist.map(item => item.ticker.toUpperCase()));
@@ -100,7 +92,6 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
     // Unsubscribe from tickers that are no longer in the watchlist
     for (const [ticker, unsubscribe] of subscriptionsRef.current.entries()) {
       if (!currentTickers.has(ticker)) {
-        console.log(`Unsubscribing from removed ticker: ${ticker}`);
         unsubscribe();
         subscriptionsRef.current.delete(ticker);
       }
@@ -112,18 +103,13 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
       
       // Skip if already subscribed
       if (subscriptionsRef.current.has(ticker)) {
-        console.log(`Already subscribed to ${ticker}, skipping`);
         return;
       }
       
-      console.log(`Subscribing to ticker: ${ticker}`);
       const unsubscribe = wsClient.subscribe(ticker, (q: QuotePayload) => {
-        console.log(`Watchlist received quote for ${ticker}:`, q);
-        
         // Update quotes state with new data
         setQuotes(prevQuotes => {
           const newQuotes = { ...prevQuotes, [ticker]: q as any };
-          console.log(`Updating quotes state for ${ticker}:`, newQuotes);
           return newQuotes;
         });
         
@@ -133,26 +119,11 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
       
       // Store the unsubscribe function
       subscriptionsRef.current.set(ticker, unsubscribe);
-      
-      // Debug: Check subscription status immediately after subscribing
-      setTimeout(() => {
-        const status = wsClient.getUpdateStatus(ticker);
-        const registry = wsClient.getSubscriptionRegistryStatus();
-        console.log(`=== Subscription Debug for ${ticker} ===`);
-        console.log(`Status:`, status);
-        console.log(`Registry:`, registry);
-        console.log(`Our ref has:`, Array.from(subscriptionsRef.current.keys()));
-      }, 100);
     });
-    
-    // Debug: Show current subscriptions
-    console.log(`Current subscriptions:`, Array.from(subscriptionsRef.current.keys()));
     
     // Cleanup function - only run on component unmount
     return () => {
-      console.log(`Component unmounting, cleaning up all subscriptions`);
       subscriptionsRef.current.forEach((unsubscribe, ticker) => {
-        console.log(`Unsubscribing from ${ticker} on unmount`);
         unsubscribe();
       });
       subscriptionsRef.current.clear();
@@ -163,15 +134,12 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
   useEffect(() => {
     if (watchlist.length === 0) return;
     
-    console.log(`Watchlist changed, managing subscriptions for:`, watchlist.map(item => item.ticker));
-    
     // Get current tickers
     const currentTickers = new Set(watchlist.map(item => item.ticker.toUpperCase()));
     
     // Unsubscribe from removed tickers
     for (const [ticker, unsubscribe] of subscriptionsRef.current.entries()) {
       if (!currentTickers.has(ticker)) {
-        console.log(`Watchlist change: Unsubscribing from removed ticker: ${ticker}`);
         unsubscribe();
         subscriptionsRef.current.delete(ticker);
       }
@@ -182,17 +150,12 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
       const ticker = item.ticker.toUpperCase();
       
       if (subscriptionsRef.current.has(ticker)) {
-        console.log(`Watchlist change: Already subscribed to ${ticker}, skipping`);
         return;
       }
       
-      console.log(`Watchlist change: Subscribing to new ticker: ${ticker}`);
       const unsubscribe = wsClient.subscribe(ticker, (q: QuotePayload) => {
-        console.log(`Watchlist received quote for ${ticker}:`, q);
-        
         setQuotes(prevQuotes => {
           const newQuotes = { ...prevQuotes, [ticker]: q as any };
-          console.log(`Updating quotes state for ${ticker}:`, newQuotes);
           return newQuotes;
         });
         
@@ -201,69 +164,7 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
       
       subscriptionsRef.current.set(ticker, unsubscribe);
     });
-    
-    console.log(`After watchlist change, subscriptions:`, Array.from(subscriptionsRef.current.keys()));
   }, [watchlist]); // This effect handles watchlist changes
-
-  // Debug effect to log quotes state changes
-  useEffect(() => {
-    console.log('Quotes state updated:', quotes);
-    console.log('Current watchlist:', watchlist);
-    console.log('Quotes keys:', Object.keys(quotes));
-    console.log('Force update count:', forceUpdate);
-    console.log('Component re-rendering at:', new Date().toISOString());
-  }, [quotes, watchlist, forceUpdate]);
-
-  // Debug effect to log sortedWatchlist changes
-  useEffect(() => {
-    console.log('SortedWatchlist updated:', sortedWatchlist);
-  }, [sortedWatchlist]);
-
-  // Debug effect to show component lifecycle
-  useEffect(() => {
-    console.log('Watchlist component mounted');
-    console.log('Initial watchlist:', watchlist);
-    console.log('Initial loading state:', loading);
-    
-    // Set up periodic WebSocket connection status check
-    const connectionCheckInterval = setInterval(() => {
-      const status = wsClient.getConnectionStatus();
-      console.log('WebSocket connection check:', status);
-      // Force re-render to update connection indicator
-      setForceUpdate(prev => prev + 1);
-    }, 5000); // Check every 5 seconds
-    
-    return () => {
-      clearInterval(connectionCheckInterval);
-    };
-  }, []);
-
-  // Debug effect to show watchlist changes
-  useEffect(() => {
-    console.log('Watchlist changed:', watchlist);
-    console.log('Watchlist length:', watchlist.length);
-    if (watchlist.length > 0) {
-      console.log('Watchlist tickers:', watchlist.map(item => item.ticker));
-      
-      // Show WebSocket subscription status for each ticker
-      watchlist.forEach(item => {
-        const status = wsClient.getUpdateStatus(item.ticker);
-        console.log(`Subscription status for ${item.ticker}:`, status);
-      });
-      
-      // Show overall subscription registry status
-      const registryStatus = wsClient.getSubscriptionRegistryStatus();
-      console.log('Overall subscription registry status:', registryStatus);
-      
-      // Show current subscriptions in our ref
-      console.log('Current subscriptions in ref:', Array.from(subscriptionsRef.current.keys()));
-    }
-  }, [watchlist]);
-
-  // Set loading to false when component mounts
-  useEffect(() => {
-    // setLoading(false); // This line is removed as loading state is now managed by useWatchlist
-  }, []);
 
   const handleAddTicker = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -314,52 +215,6 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
           ) : (
             <span>No quotes</span>
           )}
-          {/* Debug button */}
-          <button 
-            onClick={() => {
-              const status = wsClient.getConnectionStatus();
-              const registry = wsClient.getSubscriptionRegistryStatus();
-              console.log('=== WebSocket Debug Info ===');
-              console.log('Connection Status:', status);
-              console.log('Subscription Registry:', registry);
-              console.log('Current Quotes:', quotes);
-              console.log('Current Watchlist:', watchlist);
-              console.log('Our Subscriptions Ref:', Array.from(subscriptionsRef.current.keys()));
-              console.log('=== End Debug Info ===');
-              
-              // Also show alert with key info
-              alert(`WebSocket Status:\nConnected: ${status.connected}\nActive Subscriptions: ${status.activeQuoteSubscriptions}\nRegistry Entries: ${status.totalRegistryEntries}\nOur Ref: ${Array.from(subscriptionsRef.current.keys()).join(', ')}`);
-            }}
-            className="ml-2 px-2 py-1 bg-slate-600 hover:bg-slate-500 rounded text-xs"
-            title="Debug WebSocket Status"
-          >
-            🐛
-          </button>
-          
-          {/* Force Confirm Subscriptions button */}
-          <button 
-            onClick={() => {
-              console.log('=== Force Confirming All Subscriptions ===');
-              watchlist.forEach(item => {
-                const ticker = item.ticker.toUpperCase();
-                wsClient.forceConfirmSubscription(ticker);
-              });
-              
-              // Check status after forcing
-              setTimeout(() => {
-                const status = wsClient.getConnectionStatus();
-                const registry = wsClient.getSubscriptionRegistryStatus();
-                console.log('=== Status After Force Confirm ===');
-                console.log('Connection Status:', status);
-                console.log('Subscription Registry:', registry);
-                alert(`After Force Confirm:\nActive Subscriptions: ${status.activeQuoteSubscriptions}\nRegistry Entries: ${status.totalRegistryEntries}`);
-              }, 100);
-            }}
-            className="ml-2 px-2 py-1 bg-yellow-600 hover:bg-yellow-500 rounded text-xs"
-            title="Force Confirm All Subscriptions"
-          >
-            ⚡
-          </button>
         </div>
       </div>
 
@@ -408,17 +263,6 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
         {/* Watchlist Content */}
         {!loading && watchlist.length > 0 && (
             <div className="p-1">
-            {/* Debug info */}
-            <div className="text-xs text-slate-500 mb-2 p-1 bg-slate-800/50 rounded">
-              Debug: Watchlist has {watchlist.length} items, Quotes has {Object.keys(quotes).length} keys
-              <br />
-              Watchlist: {watchlist.map(item => item.ticker).join(', ')}
-              <br />
-              Quotes: {Object.keys(quotes).join(', ')}
-              <br />
-              Raw quotes: {JSON.stringify(quotes, null, 2)}
-            </div>
-            
             {/* Sorting Header */}
             <div className="flex items-center text-xs font-medium text-slate-400 mb-1 pb-1 border-b border-slate-600">
               <div className="w-1/5 text-left">
@@ -493,20 +337,6 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
               {sortedWatchlist.map((item, index) => {
                 const quote = quotes[item.ticker];
                 const colorClass = quote ? getPriceColor(quote.changePercent) : 'text-slate-400';
-                
-                // Debug logging for each item
-                console.log(`Rendering ${item.ticker}:`, { 
-                  quote, 
-                  hasQuote: !!quote, 
-                  price: quote?.price,
-                  changePercent: quote?.changePercent,
-                  volume: quote?.volume,
-                  quotesKeys: Object.keys(quotes),
-                  lookingFor: item.ticker,
-                  fullQuote: JSON.stringify(quote),
-                  storedQuote: quotes[item.ticker],
-                  allQuotes: quotes
-                });
                 
                 return (
                   <div
