@@ -7508,5 +7508,15 @@
     "close": 34.7599983215,
     "volume": 899190.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,13,00,00,00,000000",
+    "ticker": "STAG",
+    "open": 34.8499984741,
+    "high": 35.2599983215,
+    "low": 34.625,
+    "close": 35.1699981689,
+    "volume": 730373.0,
+    "wedge_status": "pop"
   }
 ]

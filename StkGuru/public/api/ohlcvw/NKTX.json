@@ -7508,5 +7508,15 @@
     "close": 1.9600000381,
     "volume": 359385.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,13,00,00,00,000000",
+    "ticker": "NKTX",
+    "open": 2.0,
+    "high": 2.2599999905,
+    "low": 2.0,
+    "close": 2.2100000381,
+    "volume": 1566731.0,
+    "wedge_status": "none"
   }
 ]

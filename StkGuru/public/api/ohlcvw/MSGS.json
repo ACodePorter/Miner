@@ -7508,5 +7508,15 @@
     "close": 195.3999938965,
     "volume": 396973.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,13,00,00,00,000000",
+    "ticker": "MSGS",
+    "open": 191.5,
+    "high": 195.5099945068,
+    "low": 188.6499938965,
+    "close": 194.5200042725,
+    "volume": 657406.0,
+    "wedge_status": "none"
   }
 ]

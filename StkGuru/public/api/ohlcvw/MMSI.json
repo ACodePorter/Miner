@@ -7508,5 +7508,15 @@
     "close": 84.7600021362,
     "volume": 416441.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,13,00,00,00,000000",
+    "ticker": "MMSI",
+    "open": 85.0,
+    "high": 86.3450012207,
+    "low": 84.9100036621,
+    "close": 86.1500015259,
+    "volume": 365996.0,
+    "wedge_status": "pop"
   }
 ]

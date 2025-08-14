@@ -7508,5 +7508,15 @@
     "close": 43.25,
     "volume": 9966451.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,13,00,00,00,000000",
+    "ticker": "VZ",
+    "open": 43.2000007629,
+    "high": 43.8349990845,
+    "low": 43.0,
+    "close": 43.7099990845,
+    "volume": 11507199.0,
+    "wedge_status": "none"
   }
 ]

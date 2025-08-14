@@ -7508,5 +7508,15 @@
     "close": 29.5,
     "volume": 513092.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,13,00,00,00,000000",
+    "ticker": "SPNS",
+    "open": 42.5800018311,
+    "high": 42.6800003052,
+    "low": 42.4199981689,
+    "close": 42.5600013733,
+    "volume": 19314775.0,
+    "wedge_status": "none"
   }
 ]
