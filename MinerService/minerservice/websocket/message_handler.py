@@ -6,7 +6,6 @@ from typing import Any, Dict, Optional
 
 from fastapi import WebSocket
 from minerservice.services.bars_service import BarsService
-from minerservice.services.quote_service import QuoteService
 from minerservice.websocket.connection_manager import \
     WebSocketConnectionManager
 
@@ -16,7 +15,6 @@ class WebSocketMessageHandler:
 
     def __init__(self, connection_manager: WebSocketConnectionManager):
         self.connection_manager = connection_manager
-        self.quote_service = QuoteService()
         self.bars_service = BarsService()
 
     async def handle_message(self, websocket: WebSocket, client_id: str, message_data: Dict[str, Any]) -> None:
@@ -223,27 +221,24 @@ class WebSocketMessageHandler:
             print(f"Error sending initial bars for {symbol} {interval}: {e}")
 
     async def _get_quote_data(self, symbol: str) -> Dict[str, Any]:
-        """Get quote data from cache or fetch from yfinance"""
+        """Get quote data from BarsManager integration or return fallback"""
         try:
-            redis_client = await self.connection_manager.get_redis()
-            quote_key = self.quote_service.create_quote_cache_key(symbol)
-            cached_quote = await redis_client.get(quote_key)
+            # Try to get quote from BarsManager integration first
+            if self.connection_manager.bars_manager_integration:
+                quote_data = await self.connection_manager.bars_manager_integration.get_initial_quote(symbol)
+                if quote_data:
+                    return quote_data
 
-            if cached_quote:
-                return self.quote_service.deserialize_quote(cached_quote)
-            else:
-                # Fetch real quote data
-                quote_data = self.quote_service.fetch_quote_from_yfinance(
-                    symbol)
-
-                # Cache the quote data
-                await redis_client.setex(
-                    quote_key,
-                    self.quote_service.cache_ttl,
-                    self.quote_service.serialize_quote(quote_data)
-                )
-
-                return quote_data
+            # Fallback: return placeholder data indicating no quote available
+            return {
+                'symbol': symbol,
+                'price': 0,
+                'change': 0,
+                'changePercent': 0,
+                'volume': 0,
+                'timestamp': datetime.now().isoformat(),
+                'status': 'no_data_available'
+            }
 
         except Exception as e:
             print(f"Error getting quote for {symbol}: {e}")
@@ -254,7 +249,6 @@ class WebSocketMessageHandler:
                 'change': 0,
                 'changePercent': 0,
                 'volume': 0,
-                'marketCap': 0,
                 'timestamp': datetime.now().isoformat(),
                 'error': str(e)
             }
