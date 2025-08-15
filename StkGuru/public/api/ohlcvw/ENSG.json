@@ -7508,5 +7508,15 @@
     "close": 166.2700042725,
     "volume": 336821.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,14,00,00,00,000000",
+    "ticker": "ENSG",
+    "open": 166.25,
+    "high": 166.7850036621,
+    "low": 164.5500030518,
+    "close": 166.0,
+    "volume": 246774.0,
+    "wedge_status": "none"
   }
 ]

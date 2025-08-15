@@ -7508,5 +7508,15 @@
     "close": 15.3400001526,
     "volume": 44032.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,08,14,00,00,00,000000",
+    "ticker": "BRT",
+    "open": 15.279999733,
+    "high": 15.375,
+    "low": 14.984000206,
+    "close": 15.2700004578,
+    "volume": 38080.0,
+    "wedge_status": "none"
   }
 ]

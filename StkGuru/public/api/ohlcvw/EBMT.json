@@ -7508,5 +7508,15 @@
     "close": 17.0,
     "volume": 33116.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,14,00,00,00,000000",
+    "ticker": "EBMT",
+    "open": 16.8999996185,
+    "high": 16.8999996185,
+    "low": 16.75,
+    "close": 16.8999996185,
+    "volume": 16885.0,
+    "wedge_status": "none"
   }
 ]

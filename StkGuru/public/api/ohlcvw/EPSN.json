@@ -7508,5 +7508,15 @@
     "close": 6.4699997902,
     "volume": 96783.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,14,00,00,00,000000",
+    "ticker": "EPSN",
+    "open": 6.25,
+    "high": 6.3840999603,
+    "low": 5.3301000595,
+    "close": 5.4699997902,
+    "volume": 307709.0,
+    "wedge_status": "drop"
   }
 ]

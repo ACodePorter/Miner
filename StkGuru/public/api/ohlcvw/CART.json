@@ -4328,5 +4328,15 @@
     "close": 45.1100006104,
     "volume": 17104805.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,14,00,00,00,000000",
+    "ticker": "CART",
+    "open": 44.7999992371,
+    "high": 45.3800010681,
+    "low": 43.0050010681,
+    "close": 43.875,
+    "volume": 7313523.0,
+    "wedge_status": "none"
   }
 ]

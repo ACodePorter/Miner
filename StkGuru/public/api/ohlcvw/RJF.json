@@ -7508,5 +7508,15 @@
     "close": 163.8399963379,
     "volume": 1457385.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,14,00,00,00,000000",
+    "ticker": "RJF",
+    "open": 164.6100006104,
+    "high": 165.0,
+    "low": 162.75,
+    "close": 164.6699981689,
+    "volume": 730299.0,
+    "wedge_status": "none"
   }
 ]
