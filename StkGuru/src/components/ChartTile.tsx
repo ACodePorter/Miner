@@ -509,6 +509,11 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
           shared: true, // Enable shared tooltip
           useHTML: true, // Enable HTML in tooltip
           valueDecimals: 2,
+          backgroundColor: 'rgba(17, 24, 39, 0.98)', // Match OHLCV chart style
+          borderWidth: 0,
+          shadow: true,
+          borderRadius: 8,
+          style: { fontSize: '13px', color: '#ffffff' }, // Match OHLCV chart style
           formatter: function() {
             const date = new Date(this.x);
             const nyTime = date.toLocaleString('en-US', { 
@@ -522,14 +527,7 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
               hourCycle: 'h23'
             });
             
-            let tooltip = `<b>${ticker}: ${nyTime}</b><br/>`;
-            
-            // Debug: Log what we're working with
-            console.log('Tooltip formatter called with:', {
-              points: this.points,
-              pointsLength: this.points?.length,
-              x: this.x
-            });
+            let tooltip = `<div style="padding: 4px 0;"><b style="color: #F92672; font-size: 14px;">${ticker}: ${nyTime}</b></div><br/>`;
             
             // Group data by series type
             if (this.points && this.points.length > 0) {
@@ -539,22 +537,16 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
                 point.series?.name === ticker ||
                 (point.series?.options && point.series.options.type === 'candlestick')
               );
-              console.log('Looking for OHLC point, found:', ohlcPoint);
-              console.log('All points:', this.points.map((p: any) => ({ 
-                id: p.series?.id, 
-                name: p.series?.name, 
-                type: p.series?.type,
-                optionsType: p.series?.options?.type 
-              })));
+              
               if (ohlcPoint) {
-                tooltip += `<b>OHLC:</b><br/>`;
+                tooltip += `<span style="color: #A6E22E; font-size: 16px;">●</span> <span style="color: #A6E22E; font-weight: 500;">OHLC:</span><br/>`;
                 // Access OHLC data from the point's options for candlestick series
                 const pointOptions = (ohlcPoint as any).options;
                 if (pointOptions) {
-                  tooltip += `&nbsp;&nbsp;O: <b>${pointOptions.open?.toFixed(2) || 'N/A'}</b><br/>`;
-                  tooltip += `&nbsp;&nbsp;H: <b>${pointOptions.high?.toFixed(2) || 'N/A'}</b><br/>`;
-                  tooltip += `&nbsp;&nbsp;L: <b>${pointOptions.low?.toFixed(2) || 'N/A'}</b><br/>`;
-                  tooltip += `&nbsp;&nbsp;C: <b>${pointOptions.close?.toFixed(2) || 'N/A'}</b><br/>`;
+                  tooltip += `&nbsp;&nbsp;<span style="color: #A6E22E; font-weight: 500;">O:</span> <span style="color: #F8F8F2; font-weight: bold;">$${pointOptions.open?.toFixed(2) || 'N/A'}</span><br/>`;
+                  tooltip += `&nbsp;&nbsp;<span style="color: #FD971F; font-weight: 500;">H:</span> <span style="color: #F8F8F2; font-weight: bold;">$${pointOptions.high?.toFixed(2) || 'N/A'}</span><br/>`;
+                  tooltip += `&nbsp;&nbsp;<span style="color: #F92672; font-weight: 500;">L:</span> <span style="color: #F8F8F2; font-weight: bold;">$${pointOptions.low?.toFixed(2) || 'N/A'}</span><br/>`;
+                  tooltip += `&nbsp;&nbsp;<span style="color: #66D9EF; font-weight: 500;">C:</span> <span style="color: #F8F8F2; font-weight: bold;">$${pointOptions.close?.toFixed(2) || 'N/A'}</span><br/>`;
                 }
               }
               
@@ -565,8 +557,8 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
                 (point.series?.options && point.series.options.type === 'column')
               );
               if (volumePoint && volumePoint.y !== null && volumePoint.y !== undefined) {
-                tooltip += `<b>Volume:</b><br/>`;
-                tooltip += `&nbsp;&nbsp;V: <b>${Highcharts.numberFormat(volumePoint.y, 0)}</b><br/>`;
+                tooltip += `<span style="color: #75715E; font-size: 16px;">●</span> <span style="color: #75715E; font-weight: 500;">Volume:</span><br/>`;
+                tooltip += `&nbsp;&nbsp;<span style="color: #75715E; font-weight: 500;">V:</span> <span style="color: #F8F8F2; font-weight: bold;">${Highcharts.numberFormat(volumePoint.y, 0)}</span><br/>`;
               }
               
               // Group indicators by type - exclude candlestick and volume, but allow indicator columns
@@ -577,12 +569,6 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
               );
               
               if (indicatorPoints.length > 0) {
-                console.log('Indicator points found:', indicatorPoints.map(p => ({ 
-                  name: p.series?.name, 
-                  type: p.series?.type,
-                  y: p.y 
-                })));
-                
                 // Group indicators by their base type (remove suffixes like -macd, -signal, -hist)
                 const indicatorGroups: Record<string, any[]> = {};
                 
@@ -611,43 +597,54 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
                   }
                 });
                 
-                console.log('Indicator groups:', indicatorGroups);
-                
                 // Add each indicator group
                 Object.entries(indicatorGroups).forEach(([groupName, points]) => {
-                  tooltip += `<b>${groupName}:</b><br/>`;
+                  tooltip += `<span style="color: #FD971F; font-size: 16px;">●</span> <span style="color: #FD971F; font-weight: 500;">${groupName}:</span><br/>`;
                   
                   points.forEach((point: any) => {
                     const value = point.y !== null ? point.y.toFixed(2) : 'N/A';
                     let label = '';
+                    let color = '#75715E'; // Default gray
                     
-                    // Customize labels for different indicator types
+                    // Customize labels and colors for different indicator types
                     if (groupName === 'MACD') {
                       // For MACD, use the series name to determine the component
                       if (point.series?.name) {
                         if (point.series.name.includes('MACD')) {
                           label = 'MACD';
+                          color = '#A6E22E'; // Green
                         } else if (point.series.name.includes('Signal')) {
                           label = 'Signal';
+                          color = '#F92672'; // Red
                         } else if (point.series.name.includes('Hist')) {
                           label = 'Hist';
+                          color = '#75715E'; // Gray
                         } else {
                           label = 'Value';
+                          color = '#75715E';
                         }
                       }
-                    } else if (groupName === 'EMA' || groupName === 'SMA') {
-                      // For EMA/SMA, show the period
+                    } else if (groupName === 'EMA') {
+                      // For EMA, show the period
                       const period = point.series?.name?.match(/\((\d+)\)/)?.[1] || '';
-                      label = period ? `${groupName}(${period})` : groupName;
+                      label = period ? `EMA(${period})` : 'EMA';
+                      color = '#8B5CF6'; // Purple
+                    } else if (groupName === 'SMA') {
+                      // For SMA, show the period
+                      const period = point.series?.name?.match(/\((\d+)\)/)?.[1] || '';
+                      label = period ? `SMA(${period})` : 'SMA';
+                      color = '#10B981'; // Green
                     } else if (groupName === 'RSI') {
                       // For RSI, show the period
                       const period = point.series?.name?.match(/\((\d+)\)/)?.[1] || '';
                       label = period ? `RSI(${period})` : 'RSI';
+                      color = '#EF4444'; // Red
                     } else {
                       label = 'Value';
+                      color = '#75715E';
                     }
                     
-                    tooltip += `&nbsp;&nbsp;${label}: <b>${value}</b><br/>`;
+                    tooltip += `&nbsp;&nbsp;<span style="color: ${color}; font-weight: 500;">${label}:</span> <span style="color: #F8F8F2; font-weight: bold;">${value}</span><br/>`;
                   });
                 });
               }
@@ -946,30 +943,7 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
       )}
 
       {/* Chart Content */}
-      <div className="p-3">
-        {loading && (
-          <div className="flex items-center justify-center py-6">
-            <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full flex items-center justify-center animate-spin">
-              <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-              </svg>
-            </div>
-          </div>
-        )}
-        
-        {errorMsg && (
-          <div className="flex items-center justify-center py-6">
-            <div className="text-center">
-              <div className="w-8 h-8 mx-auto mb-2 bg-red-950/20 rounded-full flex items-center justify-center">
-                <svg className="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <p className="text-xs text-red-400">{errorMsg}</p>
-            </div>
-          </div>
-        )}
-
+      <div className="p-3 relative">
         <div
           tabIndex={0}
           onKeyDown={handleKeyDown}
@@ -983,6 +957,31 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
         >
           <HighchartsReact highcharts={Highcharts} constructorType="stockChart" options={options} ref={chartRef as any} />
         </div>
+        
+        {/* Loading Overlay */}
+        {loading && (
+          <div className="absolute inset-0 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center rounded-lg z-10">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full flex items-center justify-center animate-spin shadow-lg">
+              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+            </div>
+          </div>
+        )}
+        
+        {/* Error Overlay */}
+        {errorMsg && (
+          <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center rounded-lg z-10">
+            <div className="text-center bg-slate-800/90 p-4 rounded-lg border border-slate-700 shadow-xl">
+              <div className="w-8 h-8 mx-auto mb-2 bg-red-950/20 rounded-full flex items-center justify-center">
+                <svg className="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <p className="text-xs text-red-400">{errorMsg}</p>
+            </div>
+          </div>
+        )}
       </div>
       
       {/* Enhanced Indicator Dialog */}
