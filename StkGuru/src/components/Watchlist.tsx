@@ -83,9 +83,6 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
       return;
     }
     
-    // Check WebSocket connection status
-    const connectionStatus = wsClient.getConnectionStatus();
-    
     // Create a map of current tickers to avoid duplicate subscriptions
     const currentTickers = new Set(watchlist.map(item => item.ticker.toUpperCase()));
     
@@ -123,7 +120,7 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
     
     // Cleanup function - only run on component unmount
     return () => {
-      subscriptionsRef.current.forEach((unsubscribe, ticker) => {
+      subscriptionsRef.current.forEach((unsubscribe) => {
         unsubscribe();
       });
       subscriptionsRef.current.clear();

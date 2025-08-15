@@ -500,7 +500,7 @@ class WSClient {
   
   // Check if WebSocket is ready for subscriptions
   isReady(): boolean {
-    return this.connected && this.ws && this.ws.readyState === WebSocket.OPEN;
+    return !!(this.connected && this.ws && this.ws.readyState === WebSocket.OPEN);
   }
   
   // Get connection status
