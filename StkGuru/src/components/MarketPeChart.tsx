@@ -626,12 +626,40 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
 
   return (
     <div className="chart-container">
-      <div className="chart-header">
+      <div className="chart-header py-1">
         <div className="flex items-center justify-between">
-          <h2 className="chart-title" style={{ color }}>
+          <h2 className="chart-title text-lg" style={{ color }}>
             {displayName}
           </h2>
-          <div className="flex items-center gap-2 text-sm text-text-tertiary">
+          <div className="flex items-center gap-4">
+            <label className="flex items-center gap-2 text-sm font-medium text-text-primary">
+              N-year:
+              <input
+                type="number"
+                min={1}
+                max={100}
+                value={nYears}
+                onChange={(e) => handleNYearsChange(Number(e.target.value))}
+                className="input-field w-16 text-center"
+                aria-label="N-year window"
+              />
+            </label>
+            <label className="flex items-center gap-2 text-sm font-medium cursor-pointer text-text-primary">
+              <input
+                type="checkbox"
+                checked={showStdDevLines}
+                onChange={(e) => setShowStdDevLines(e.target.checked)}
+              />
+              Std Dev Lines
+            </label>
+            <label className="flex items-center gap-2 text-sm font-medium cursor-pointer text-text-primary">
+              <input
+                type="checkbox"
+                checked={showPercentageLines}
+                onChange={(e) => setShowPercentageLines(e.target.checked)}
+              />
+              Percentage Lines
+            </label>
             <button
               onClick={handleRefresh}
               disabled={isRefreshing}
@@ -646,53 +674,18 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
             </button>
           </div>
         </div>
-        
-        <div className="chart-controls">
-          <div className="flex items-center gap-6 flex-wrap">
-            <label className="flex items-center gap-2 text-sm font-medium text-text-primary">
-              N-year:
-              <input
-                type="number"
-                min={1}
-                max={100}
-                value={nYears}
-                onChange={(e) => handleNYearsChange(Number(e.target.value))}
-                className="input-field w-16 text-center"
-                aria-label="N-year window"
-              />
-            </label>
-            
-            <label className="flex items-center gap-2 text-sm font-medium cursor-pointer text-text-primary">
-              <input
-                type="checkbox"
-                checked={showStdDevLines}
-                onChange={(e) => setShowStdDevLines(e.target.checked)}
-              />
-              Std Dev Lines
-            </label>
-            
-            <label className="flex items-center gap-2 text-sm font-medium cursor-pointer text-text-primary">
-              <input
-                type="checkbox"
-                checked={showPercentageLines}
-                onChange={(e) => setShowPercentageLines(e.target.checked)}
-              />
-              Percentage Lines
-            </label>
-          </div>
-        </div>
       </div>
       
       {peData && (
-        <div className="chart-stats">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="chart-stats py-0.5">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
             <div className="chart-stat">
-              <div className="chart-stat-label">Current PE</div>
-              <div className="chart-stat-value">{peData.stats.current_pe.toFixed(2)}</div>
+              <div className="chart-stat-label text-xs leading-tight">Current PE</div>
+              <div className="chart-stat-value text-sm leading-tight">{peData.stats.current_pe.toFixed(2)}</div>
             </div>
             <div className="chart-stat">
-              <div className="chart-stat-label">{nYears}-Year Avg</div>
-              <div className="chart-stat-value">
+              <div className="chart-stat-label text-xs leading-tight">{nYears}-Year Avg</div>
+              <div className="chart-stat-value text-sm leading-tight">
                 {rollingStats?.avg && rollingStats.avg.length > 0 && rollingStats.avg[rollingStats.avg.length - 1]?.[1] 
                   ? rollingStats.avg[rollingStats.avg.length - 1][1]?.toFixed(2)
                   : peData.stats.avg_20y.toFixed(2)
@@ -700,8 +693,8 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
               </div>
             </div>
             <div className="chart-stat">
-              <div className="chart-stat-label">Range</div>
-              <div className="chart-stat-value text-sm">
+              <div className="chart-stat-label text-xs leading-tight">Range</div>
+              <div className="chart-stat-value text-xs leading-tight">
                 {(() => {
                   // Calculate range from current view range
                   const visibleData = peData.data.filter(([timestamp]) => {
@@ -722,8 +715,8 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
               </div>
             </div>
             <div className="chart-stat">
-              <div className="chart-stat-label">vs {nYears}Y Avg</div>
-              <div className={`chart-stat-value ${
+              <div className="chart-stat-label text-xs leading-tight">vs {nYears}Y Avg</div>
+              <div className={`chart-stat-value text-sm leading-tight ${
                 peData.stats.current_pe > (rollingStats?.avg && rollingStats.avg.length > 0 && rollingStats.avg[rollingStats.avg.length - 1]?.[1] || peData.stats.avg_20y) ? 'text-danger-400' : 'text-success-400'
               }`}>
                 {((peData.stats.current_pe / (rollingStats?.avg && rollingStats.avg.length > 0 && rollingStats.avg[rollingStats.avg.length - 1]?.[1] || peData.stats.avg_20y) - 1) * 100).toFixed(1)}%

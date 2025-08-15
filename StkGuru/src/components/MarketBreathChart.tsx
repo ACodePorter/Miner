@@ -610,29 +610,12 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
 
   return (
     <div className="chart-container">
-      <div className="chart-header">
+      <div className="chart-header py-1">
         <div className="flex items-center justify-between">
-          <h2 className="chart-title">
+          <h2 className="chart-title text-lg">
             {data[0].index_name.toUpperCase()} Market Breadth
           </h2>
-          <div className="flex items-center gap-2 text-sm text-text-tertiary">
-            <button
-              onClick={handleRefresh}
-              disabled={isRefreshing}
-              className="btn-secondary text-xs"
-              title="Refresh data"
-            >
-              {isRefreshing ? (
-                <div className="loading-spinner w-4 h-4" />
-              ) : (
-                '↻'
-              )}
-            </button>
-          </div>
-        </div>
-        
-        <div className="chart-controls">
-          <div className="flex items-center gap-6 flex-wrap">
+          <div className="flex items-center gap-4">
             <label className="flex items-center gap-2 text-sm font-medium text-text-primary">
               N-year:
               <input
@@ -675,19 +658,32 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
               />
               Sector Lines
             </label>
+            
+            <button
+              onClick={handleRefresh}
+              disabled={isRefreshing}
+              className="btn-secondary text-xs"
+              title="Refresh data"
+            >
+              {isRefreshing ? (
+                <div className="loading-spinner w-4 h-4" />
+              ) : (
+                '↻'
+              )}
+            </button>
           </div>
         </div>
       </div>
       
       {chartStats && (
-        <div className="chart-stats">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="chart-stats py-0.5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
             {/* Progress Bar */}
             <div className="chart-stat flex flex-col justify-center">
-              <div className="chart-stat-label text-center">Score</div>
-              <div className="flex flex-col items-center py-2">
+              <div className="chart-stat-label text-center text-xs leading-tight">Score</div>
+              <div className="flex flex-col items-center py-1">
                 {/* Progress bar */}
-                <div className="w-full bg-bg-tertiary rounded-full h-4 mb-2 relative">
+                <div className="w-full bg-bg-tertiary rounded-full h-3 mb-1 relative">
                   {/* Background with extreme value markers */}
                   <div className="absolute inset-0 rounded-full overflow-hidden">
                     {/* Below 200 zone */}
@@ -727,14 +723,14 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
                   </div>
                   
                   {/* Extreme value labels */}
-                  <div className="absolute -top-6 left-0 text-xs text-text-tertiary">0</div>
-                  <div className="absolute -top-6 left-0 text-xs text-danger-400" style={{ left: `${(200 / 1100) * 100}%` }}>200</div>
-                  <div className="absolute -top-6 right-0 text-xs text-danger-400" style={{ right: `${((1100 - 950) / 1100) * 100}%` }}>950</div>
-                  <div className="absolute -top-6 right-0 text-xs text-text-tertiary">1100</div>
+                  <div className="absolute -top-5 left-0 text-xs text-text-tertiary">0</div>
+                  <div className="absolute -top-5 left-0 text-xs text-danger-400" style={{ left: `${(200 / 1100) * 100}%` }}>200</div>
+                  <div className="absolute -top-5 right-0 text-xs text-danger-400" style={{ right: `${((1100 - 950) / 1100) * 100}%` }}>950</div>
+                  <div className="absolute -top-5 right-0 text-xs text-text-tertiary">1100</div>
                 </div>
                 
                 {/* Current value display */}
-                <div className="text-sm font-bold text-text-primary">
+                <div className="text-sm font-bold text-text-primary leading-tight">
                   {chartStats.current.toFixed(0)} / 1100
                 </div>
               </div>
@@ -742,7 +738,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
 
             {/* Top 3 Sectors - Enhanced */}
             <div className="chart-stat md:col-span-2 flex flex-col justify-center">
-              <div className="grid grid-cols-3 gap-4 py-2">
+              <div className="grid grid-cols-3 gap-2 py-1">
                 {(() => {
                   if (!processedData) {
                     return <div className="text-text-tertiary text-xs col-span-3 text-center">No sector data</div>;
@@ -762,17 +758,17 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
                     .slice(0, 3);
 
                   return topSectors.map((sector, idx) => (
-                    <div key={sector.sector_key} className="text-center flex flex-col items-center bg-bg-tertiary rounded-lg p-3 border border-border-secondary">
-                      <div className="flex items-center gap-2 mb-2">
+                    <div key={sector.sector_key} className="text-center flex flex-col items-center bg-bg-tertiary rounded-lg p-2 border border-border-secondary">
+                      <div className="flex items-center gap-1 mb-1">
                         <div 
-                          className="w-3 h-3 rounded-full flex-shrink-0"
+                          className="w-2 h-2 rounded-full flex-shrink-0"
                           style={{ backgroundColor: COLORS[(idx + 1) % COLORS.length] }}
                         ></div>
-                        <span className="font-semibold text-text-primary text-sm whitespace-nowrap">
+                        <span className="font-semibold text-text-primary text-xs whitespace-nowrap leading-tight">
                           {sector.sector_key}
                         </span>
                       </div>
-                      <div className="font-bold text-text-primary text-xl">
+                      <div className="font-bold text-text-primary text-lg leading-tight">
                         {sector.score.toFixed(0)}
                       </div>
                     </div>

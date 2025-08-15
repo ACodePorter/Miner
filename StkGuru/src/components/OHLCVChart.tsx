@@ -1644,29 +1644,12 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
 
   return (
     <div className={`chart-container ${className}`}>
-      <div className="chart-header">
+      <div className="chart-header py-1">
         <div className="flex items-center justify-between">
-          <h2 className="chart-title">
-            {selectedTicker ? `${selectedTicker} OHLCV Chart` : 'OHLCV Chart'}
+          <h2 className="chart-title text-lg">
+            {selectedTicker ? selectedTicker : 'OHLCV Chart'}
           </h2>
-          <div className="flex items-center gap-2 text-sm text-text-tertiary">
-            <button
-              onClick={() => fetchCategorizedTickers()}
-              disabled={loading}
-              className="btn-secondary text-xs"
-              title="Refresh data"
-            >
-              {loading ? (
-                <div className="loading-spinner w-4 h-4" />
-              ) : (
-                '↻'
-              )}
-            </button>
-          </div>
-        </div>
-        
-        <div className="chart-controls">
-          <div className="flex items-center gap-6 flex-wrap">
+          <div className="flex items-center gap-4">
             <label className="flex items-center gap-2 text-sm font-medium text-text-primary">
               Date:
               <select
@@ -1733,16 +1716,29 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
                 })()}
               </select>
             </label>
+            
+            <button
+              onClick={() => fetchCategorizedTickers()}
+              disabled={loading}
+              className="btn-secondary text-xs"
+              title="Refresh data"
+            >
+              {loading ? (
+                <div className="loading-spinner w-4 h-4" />
+              ) : (
+                '↻'
+              )}
+            </button>
           </div>
         </div>
       </div>
       
       {chartData && (
-        <div className="chart-stats">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="chart-stats py-0.5">
+          <div className="grid grid-cols-5 gap-2">
             <div className="chart-stat" key="price">
-              <div className="chart-stat-label">Price</div>
-              <div className="chart-stat-value">
+              <div className="chart-stat-label text-xs leading-tight">Price</div>
+              <div className="chart-stat-value text-sm leading-tight">
                 {(() => {
                   const visibleData = getVisibleData();
                   if (visibleData.length === 0) return 'N/A';
@@ -1751,8 +1747,8 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
               </div>
             </div>
             <div className="chart-stat" key="change">
-              <div className="chart-stat-label">Change</div>
-              <div className="chart-stat-value">
+              <div className="chart-stat-label text-xs leading-tight">Change</div>
+              <div className="chart-stat-value text-sm leading-tight">
                 {(() => {
                   const visibleData = getVisibleData();
                   if (visibleData.length < 2) return 'N/A';
@@ -1766,8 +1762,8 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
               </div>
             </div>
             <div className="chart-stat" key="range">
-              <div className="chart-stat-label">Range</div>
-              <div className="chart-stat-value">
+              <div className="chart-stat-label text-xs leading-tight">Range</div>
+              <div className="chart-stat-value text-sm leading-tight">
                 {(() => {
                   const visibleData = getVisibleData();
                   const prices = visibleData.map(d => d.close);
@@ -1779,8 +1775,8 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
               </div>
             </div>
             <div className="chart-stat" key="last-wedge">
-              <div className="chart-stat-label">Last Wedge</div>
-              <div className="chart-stat-value">
+              <div className="chart-stat-label text-xs leading-tight">Last Wedge</div>
+              <div className="chart-stat-value text-sm leading-tight">
                 {(() => {
                   const lastWedge = getLastWedgeStatus();
                   if (!lastWedge) return 'None';
@@ -1812,8 +1808,8 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
               </div>
             </div>
             <div className="chart-stat" key="date-stats">
-              <div className="chart-stat-label">Date Stats</div>
-              <div className="chart-stat-value">
+              <div className="chart-stat-label text-xs leading-tight">Date Stats</div>
+              <div className="chart-stat-value text-sm leading-tight">
                 {(() => {
                   if (!selectedDate) return 'N/A';
                   const dateData = categorizedTickers.find(item => item.date === selectedDate);
