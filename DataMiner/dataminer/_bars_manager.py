@@ -156,22 +156,23 @@ class BarsManager(SingletonParent):
             price = quote.get('price', 0)
             change = quote.get('change', 0)
             change_percent = quote.get('change_percent', 0)
-            
+
             # Format timestamp if available
             if time_str:
                 try:
-                    timestamp = datetime.fromtimestamp(int(time_str)/1000).strftime("%H:%M:%S")
+                    timestamp = datetime.fromtimestamp(
+                        int(time_str)/1000).strftime("%H:%M:%S")
                 except (ValueError, TypeError):
                     timestamp = "N/A"
             else:
                 timestamp = "N/A"
-            
+
             self.logger.info(
                 f'{timestamp} {ticker_id}: {price} {change} {change_percent}')
         except Exception as e:
             self.logger.warning(f"Error formatting quote log: {e}")
             # Continue processing even if logging fails
-        
+
         # Extract ticker from quote (quote has 'id' field)
         ticker = quote.get('id')
         if not ticker:

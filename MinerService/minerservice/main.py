@@ -4,7 +4,7 @@ import logging
 import os
 from contextlib import asynccontextmanager
 from datetime import datetime, timedelta
-from typing import Any, List, Optional, Dict
+from typing import Any, Dict, List, Optional
 
 import pytz
 # yfinance import removed - using BarsManager integration only
@@ -104,11 +104,11 @@ async def get_websocket_status():
         status = {
             'status': 'healthy',
             'process': {
-            'process_id': manager.process_id,
+                'process_id': manager.process_id,
                 'local_connections': len(manager.local_connections),
                 'total_connections': await manager.get_total_connections(),
-            'subscribed_symbols': list(manager.subscribed_symbols),
-            'running': manager.running
+                'subscribed_symbols': list(manager.subscribed_symbols),
+                'running': manager.running
             },
             'redis': await manager.get_redis_status()
         }
@@ -205,7 +205,7 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                             'timestamp': datetime.now().isoformat()
                         }))
                         continue
-                    
+
                     # Validate symbol format (basic validation)
                     if not isinstance(symbol, str) or len(symbol.strip()) == 0:
                         await websocket.send_text(json.dumps({
@@ -214,9 +214,9 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                             'timestamp': datetime.now().isoformat()
                         }))
                         continue
-                    
+
                     symbol = symbol.strip().upper()
-                    
+
                     try:
                         await manager.subscribe_symbol(symbol)
                         await websocket.send_text(json.dumps({
@@ -239,14 +239,16 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                                             'message': f'{symbol} subscribed to live quotes, waiting for data...',
                                             'timestamp': datetime.now().isoformat()
                                         }))
-                                        print(f"Sent subscription confirmation for {symbol} (waiting for data)")
+                                        print(
+                                            f"Sent subscription confirmation for {symbol} (waiting for data)")
                                     else:
                                         await websocket.send_text(json.dumps({
                                             'type': 'quote',
                                             'data': quote_data,
                                             'timestamp': datetime.now().isoformat()
                                         }))
-                                        print(f"Sent initial quote for {symbol} via BarsManager")
+                                        print(
+                                            f"Sent initial quote for {symbol} via BarsManager")
                                 else:
                                     # Send error if no data available
                                     await websocket.send_text(json.dumps({
@@ -261,7 +263,8 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                                     'timestamp': datetime.now().isoformat()
                                 }))
                         except Exception as e:
-                            print(f"Error sending initial quote for {symbol}: {e}")
+                            print(
+                                f"Error sending initial quote for {symbol}: {e}")
                             await websocket.send_text(json.dumps({
                                 'type': 'error',
                                 'message': f'Failed to get quote for {symbol}: {str(e)}',
@@ -278,7 +281,7 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                 elif message.get('type') == 'subscribe_bars':
                     symbol = message.get('symbol')
                     interval = message.get('interval', '5m')
-                    
+
                     if not symbol or not interval:
                         await websocket.send_text(json.dumps({
                             'type': 'error',
@@ -286,7 +289,7 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                             'timestamp': datetime.now().isoformat()
                         }))
                         continue
-                    
+
                     # Validate symbol and interval
                     if not isinstance(symbol, str) or len(symbol.strip()) == 0:
                         await websocket.send_text(json.dumps({
@@ -295,11 +298,12 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                             'timestamp': datetime.now().isoformat()
                         }))
                         continue
-                    
+
                     symbol = symbol.strip().upper()
-                    
+
                     # Validate interval
-                    allowed_intervals = {'1m', '5m', '15m', '30m', '65m', '1d', '1wk', '1mo', '3mo'}
+                    allowed_intervals = {'1m', '5m', '15m',
+                                         '30m', '65m', '1d', '1wk', '1mo', '3mo'}
                     if interval not in allowed_intervals:
                         await websocket.send_text(json.dumps({
                             'type': 'error',
@@ -307,7 +311,7 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                             'timestamp': datetime.now().isoformat()
                         }))
                         continue
-                    
+
                     try:
                         await manager.subscribe_bars(symbol, interval)
                         await websocket.send_text(json.dumps({
@@ -316,7 +320,8 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                             'interval': interval,
                             'timestamp': datetime.now().isoformat()
                         }))
-                        print(f"Subscribed {client_id} to {symbol} {interval} bars")
+                        print(
+                            f"Subscribed {client_id} to {symbol} {interval} bars")
 
                         # Send initial bars data via BarsManager integration
                         try:
@@ -333,7 +338,8 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                                         },
                                         'timestamp': datetime.now().isoformat()
                                     }))
-                                    print(f"Sent initial bars for {symbol} {interval} via BarsManager")
+                                    print(
+                                        f"Sent initial bars for {symbol} {interval} via BarsManager")
                                 else:
                                     await websocket.send_text(json.dumps({
                                         'type': 'error',
@@ -347,14 +353,16 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                                     'timestamp': datetime.now().isoformat()
                                 }))
                         except Exception as e:
-                            print(f"Error sending initial bars for {symbol} {interval}: {e}")
+                            print(
+                                f"Error sending initial bars for {symbol} {interval}: {e}")
                             await websocket.send_text(json.dumps({
                                 'type': 'error',
                                 'message': f'Failed to get bars for {symbol} {interval}: {str(e)}',
                                 'timestamp': datetime.now().isoformat()
                             }))
                     except Exception as e:
-                        print(f"Error subscribing to bars for {symbol} {interval}: {e}")
+                        print(
+                            f"Error subscribing to bars for {symbol} {interval}: {e}")
                         await websocket.send_text(json.dumps({
                             'type': 'error',
                             'message': f'Failed to subscribe to bars for {symbol} {interval}: {str(e)}',
@@ -370,9 +378,9 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                             'timestamp': datetime.now().isoformat()
                         }))
                         continue
-                    
+
                     symbol = symbol.strip().upper()
-                    
+
                     try:
                         await manager.unsubscribe_symbol(symbol)
                         await websocket.send_text(json.dumps({
@@ -392,7 +400,7 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                 elif message.get('type') == 'unsubscribe_bars':
                     symbol = message.get('symbol')
                     interval = message.get('interval', '5m')
-                    
+
                     if not symbol or not interval:
                         await websocket.send_text(json.dumps({
                             'type': 'error',
@@ -400,9 +408,9 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                             'timestamp': datetime.now().isoformat()
                         }))
                         continue
-                    
+
                     symbol = symbol.strip().upper()
-                    
+
                     try:
                         await manager.unsubscribe_bars(symbol, interval)
                         await websocket.send_text(json.dumps({
@@ -411,9 +419,11 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                             'interval': interval,
                             'timestamp': datetime.now().isoformat()
                         }))
-                        print(f"Unsubscribed {client_id} from {symbol} {interval} bars")
+                        print(
+                            f"Unsubscribed {client_id} from {symbol} {interval} bars")
                     except Exception as e:
-                        print(f"Error unsubscribing from bars for {symbol} {interval}: {e}")
+                        print(
+                            f"Error unsubscribing from bars for {symbol} {interval}: {e}")
                         await websocket.send_text(json.dumps({
                             'type': 'error',
                             'message': f'Failed to unsubscribe from bars for {symbol} {interval}: {str(e)}',
@@ -875,12 +885,12 @@ async def debug_redis_subscriptions() -> Dict[str, Any]:
 
         # Get detailed subscription status
         status = await manager.redis_subscription_service.debug_subscription_status()
-        
+
         # Also check BarsManager integration status
         bars_manager_status = None
         if manager.bars_manager_integration:
             bars_manager_status = manager.bars_manager_integration.get_active_subscriptions()
-        
+
         return {
             'status': 'success',
             'redis_subscription_service': status,
@@ -902,10 +912,10 @@ async def force_redis_resubscribe() -> Dict[str, Any]:
 
         # Force resubscribe
         await manager.redis_subscription_service.force_resubscribe()
-        
+
         # Get updated status
         status = await manager.redis_subscription_service.debug_subscription_status()
-        
+
         return {
             'status': 'success',
             'message': 'Redis subscriptions refreshed',

@@ -415,13 +415,33 @@ class MarketDataShovel(SingletonParent):
         ticker = ticker.replace('-', '.').upper()
         if isinstance(start_date, str):
             try:
-                start_date = datetime.strptime(
-                    start_date, '%Y,%m,%d,%H,%M,%S,%f')
+                # Try common date formats in order of preference
+                if ',' in start_date:
+                    start_date = datetime.strptime(
+                        start_date, '%Y,%m,%d,%H,%M,%S,%f')
+                else:
+                    start_date = datetime_from_str(start_date)
+                    if start_date is None:
+                        raise ValueError(
+                            f"Invalid start_date format: {start_date}")
             except Exception as e:
-                start_date = datetime.strptime(start_date, '%Y%m%d')
+                _logger.error(
+                    f"Failed to parse start_date '{start_date}': {e}")
+                raise ValueError(
+                    f"Invalid start_date format: {start_date}. Expected YYYY-MM-DD, YYYYMMDD, or YYYY,MM,DD,HH,MM,SS,fff")
         if isinstance(end_date, str):
             try:
-                end_date = datetime.strptime(end_date, '%Y,%m,%d,%H,%M,%S,%f')
+                # Try common date formats in order of preference
+                if ',' in end_date:
+                    end_date = datetime.strptime(
+                        end_date, '%Y,%m,%d,%H,%M,%S,%f')
+                else:
+                    end_date = datetime_from_str(end_date)
+                    if end_date is None:
+                        raise ValueError(
+                            f"Invalid end_date format: {end_date}")
             except Exception as e:
-                end_date = datetime.strptime(end_date, '%Y%m%d')
+                _logger.error(f"Failed to parse end_date '{end_date}': {e}")
+                raise ValueError(
+                    f"Invalid end_date format: {end_date}. Expected YYYY-MM-DD, YYYYMMDD, or YYYY,MM,DD,HH,MM,SS,fff")
         return mongo_2_df(TickerDailyInfo.objects(ticker=ticker, trade_date__gte=start_date, trade_date__lte=end_date, interval=interval).order_by('trade_date'))

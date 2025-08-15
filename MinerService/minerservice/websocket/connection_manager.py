@@ -185,8 +185,9 @@ class WebSocketConnectionManager:
 
     async def broadcast(self, message: str) -> None:
         """Broadcast to all connections in this process"""
-        print(f"Broadcasting message to {len(self.local_connections)} local connections: {message[:100]}...")
-        
+        print(
+            f"Broadcasting message to {len(self.local_connections)} local connections: {message[:100]}...")
+
         # Log the message being broadcast
         try:
             parsed_message = json.loads(message)
@@ -194,7 +195,7 @@ class WebSocketConnectionManager:
         except Exception as e:
             print(f"Error parsing broadcast message: {e}")
             print(f"Raw message: {message}")
-        
+
         disconnected_clients = []
 
         for client_id in list(self.local_connections.keys()):
@@ -210,8 +211,9 @@ class WebSocketConnectionManager:
         for client_id in disconnected_clients:
             if client_id in self.local_connections:
                 await self.disconnect(self.local_connections[client_id], client_id)
-        
-        print(f"Broadcast completed. Sent to {len(self.local_connections) - len(disconnected_clients)} clients, {len(disconnected_clients)} disconnected.")
+
+        print(
+            f"Broadcast completed. Sent to {len(self.local_connections) - len(disconnected_clients)} clients, {len(disconnected_clients)} disconnected.")
 
     async def broadcast_to_all_processes(self, message: str) -> None:
         """Broadcast message to all processes via Redis pub/sub"""
