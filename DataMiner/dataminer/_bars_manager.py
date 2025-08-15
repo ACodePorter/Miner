@@ -221,6 +221,8 @@ class BarsManager(SingletonParent):
         if self.ws is not None:
             try:
                 self.ws.unsubscribe(ticker)
+                if not self.subscribed_tickers:
+                    self.stop_live_quotes()
             except Exception as e:
                 self.logger.error(f"Error unsubscribing from {ticker}: {e}")
                 self.subscribed_tickers.update(ticker)
