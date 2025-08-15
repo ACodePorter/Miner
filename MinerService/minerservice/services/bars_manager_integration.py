@@ -25,6 +25,47 @@ class BarsManagerIntegration:
         # Supported intervals from BarsManager
         self.supported_intervals = ['1m', '5m', '15m', '30m', '65m']
 
+        # Sync with existing BarsManager subscriptions
+        self._sync_existing_subscriptions()
+
+    def _sync_existing_subscriptions(self) -> None:
+        """Sync with existing BarsManager subscriptions"""
+        try:
+            self.logger.info(f"Starting subscription sync...")
+            self.logger.info(f"BarsManager instance: {self.bars_manager}")
+            self.logger.info(f"BarsManager type: {type(self.bars_manager)}")
+            self.logger.info(f"BarsManager dir: {dir(self.bars_manager)}")
+
+            # Get existing quote subscriptions from BarsManager
+            if hasattr(self.bars_manager, 'subscribed_tickers'):
+                existing_quotes = self.bars_manager.subscribed_tickers
+                self.logger.info(
+                    f"Found subscribed_tickers attribute: {existing_quotes}")
+                self.logger.info(
+                    f"Type of subscribed_tickers: {type(existing_quotes)}")
+
+                for ticker in existing_quotes:
+                    if ticker not in self.active_quote_subscriptions:
+                        self.active_quote_subscriptions.add(ticker)
+                        self.logger.info(
+                            f"Synced existing quote subscription: {ticker}")
+
+                self.logger.info(
+                    f"Synced {len(existing_quotes)} existing quote subscriptions: {list(existing_quotes)}")
+            else:
+                self.logger.warning(
+                    f"BarsManager does not have subscribed_tickers attribute")
+                self.logger.info(
+                    f"Available attributes: {[attr for attr in dir(self.bars_manager) if not attr.startswith('_')]}")
+
+            # Note: BarsManager doesn't have a subscribed_intraday attribute
+            # Bar subscriptions are handled separately when clients subscribe
+
+        except Exception as e:
+            self.logger.error(f"Error syncing existing subscriptions: {e}")
+            import traceback
+            self.logger.error(f"Traceback: {traceback.format_exc()}")
+
     async def subscribe_to_quotes(self, ticker: str) -> bool:
         """Subscribe to quotes for a specific ticker via BarsManager"""
         max_retries = 3

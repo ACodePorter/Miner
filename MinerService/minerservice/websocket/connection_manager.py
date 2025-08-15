@@ -511,9 +511,51 @@ class WebSocketConnectionManager:
             await self.redis_subscription_service.start()
             print("Redis subscription service initialized and started")
 
+            # Sync existing subscriptions from BarsManager integration
+            await self._sync_existing_subscriptions()
+            print("Synced existing subscriptions from BarsManager")
+
         except Exception as e:
             print(f"Error initializing integration services: {e}")
             # Continue without integration services - fallback to manual mode
+
+    async def _sync_existing_subscriptions(self) -> None:
+        """Sync existing subscriptions from BarsManager integration to Redis subscription service"""
+        try:
+            if not self.bars_manager_integration or not self.redis_subscription_service:
+                print("Cannot sync subscriptions - services not initialized")
+                return
+
+            # Get existing quote subscriptions
+            active_quotes = self.bars_manager_integration.active_quote_subscriptions
+            for symbol in active_quotes:
+                if symbol not in self.subscribed_symbols:
+                    self.subscribed_symbols.add(symbol)
+                    print(f"Synced existing quote subscription: {symbol}")
+
+                # Subscribe to Redis subscription service
+                await self.redis_subscription_service.subscribe_to_quotes(symbol)
+                print(f"Subscribed {symbol} to Redis subscription service")
+
+            # Get existing bar subscriptions
+            active_bars = self.bars_manager_integration.active_bar_subscriptions
+            for symbol, interval in active_bars:
+                key = (symbol.upper(), interval)
+                if key not in self.subscribed_bars:
+                    self.subscribed_bars.add(key)
+                    print(
+                        f"Synced existing bar subscription: {symbol}:{interval}")
+
+                # Subscribe to Redis subscription service
+                await self.redis_subscription_service.subscribe_to_bars(symbol, interval)
+                print(
+                    f"Subscribed {symbol}:{interval} to Redis subscription service")
+
+            print(
+                f"Synced {len(active_quotes)} quote and {len(active_bars)} bar subscriptions")
+
+        except Exception as e:
+            print(f"Error syncing existing subscriptions: {e}")
 
     async def shutdown(self) -> None:
         """Clean shutdown of the connection manager"""
