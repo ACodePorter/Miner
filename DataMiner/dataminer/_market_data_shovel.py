@@ -288,8 +288,12 @@ class MarketDataShovel(SingletonParent):
             earliest_gap_trade_date = trade_dates[-1]
             _logger.info('Update ticker daily info for %s %s',
                          ticker, (datetime.now() - now).total_seconds())
+            last_closed_trade_date = self._tcs.last_closed_trade_date(country=country, exchange=exchange)
+            if earliest_gap_trade_date >= last_closed_trade_date:
+                _logger.info('No update ticker daily info for %s since %s', ticker, earliest_gap_trade_date)
+                return True
             return self.fetch_ticker_daily_info_to_db(yticker=yticker, start_date=earliest_gap_trade_date,
-                                                      end_date=tomorrow_of(self._tcs.last_closed_trade_date(country=country, exchange=exchange)).strftime(
+                                                      end_date=tomorrow_of(last_closed_trade_date).strftime(
                                                           '%Y%m%d'))
         else:
             _logger.info(
