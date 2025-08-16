@@ -7498,5 +7498,15 @@
     "close": 12.1899995804,
     "volume": 180453.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,15,00,00,00,000000",
+    "ticker": "HONE",
+    "open": 12.25,
+    "high": 12.25,
+    "low": 12.029999733,
+    "close": 12.029999733,
+    "volume": 177000.0,
+    "wedge_status": "none"
   }
 ]

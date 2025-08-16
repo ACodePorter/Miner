@@ -7498,5 +7498,15 @@
     "close": 83.1100006104,
     "volume": 1258245.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,15,00,00,00,000000",
+    "ticker": "AAON",
+    "open": 83.5,
+    "high": 83.9599990845,
+    "low": 79.4899978638,
+    "close": 79.5500030518,
+    "volume": 1315200.0,
+    "wedge_status": "drop"
   }
 ]

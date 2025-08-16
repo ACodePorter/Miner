@@ -7498,5 +7498,15 @@
     "close": 3.0,
     "volume": 4691571.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,15,00,00,00,000000",
+    "ticker": "ABSI",
+    "open": 3.0099999905,
+    "high": 3.0250000954,
+    "low": 2.8199999332,
+    "close": 2.9300000668,
+    "volume": 6132900.0,
+    "wedge_status": "drop"
   }
 ]

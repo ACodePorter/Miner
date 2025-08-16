@@ -7498,5 +7498,15 @@
     "close": 32.3400001526,
     "volume": 3795366.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,15,00,00,00,000000",
+    "ticker": "AR",
+    "open": 32.5999984741,
+    "high": 32.9300003052,
+    "low": 32.0,
+    "close": 32.0,
+    "volume": 5642088.0,
+    "wedge_status": "none"
   }
 ]

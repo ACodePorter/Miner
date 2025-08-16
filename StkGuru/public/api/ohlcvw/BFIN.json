@@ -7498,5 +7498,15 @@
     "close": 11.6800003052,
     "volume": 73594.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,15,00,00,00,000000",
+    "ticker": "BFIN",
+    "open": 11.6400003433,
+    "high": 11.6499996185,
+    "low": 11.470000267,
+    "close": 11.5,
+    "volume": 105400.0,
+    "wedge_status": "none"
   }
 ]

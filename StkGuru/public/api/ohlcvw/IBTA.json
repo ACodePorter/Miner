@@ -2868,5 +2868,15 @@
     "close": 23.6200008392,
     "volume": 4325493.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,15,00,00,00,000000",
+    "ticker": "IBTA",
+    "open": 23.7800006866,
+    "high": 25.0,
+    "low": 23.6210002899,
+    "close": 24.1100006104,
+    "volume": 1708000.0,
+    "wedge_status": "none"
   }
 ]
