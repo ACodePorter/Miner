@@ -45,24 +45,6 @@ export const config: AppConfig = {
 
 // Logger utility
 export const logger = {
-  debug: (message: string, ...args: any[]) => {
-    if (config.enableDebug && config.logLevel === 'debug') {
-      // eslint-disable-next-line no-console
-      console.log(`[DEBUG] ${message}`, ...args);
-    }
-  },
-  info: (message: string, ...args: any[]) => {
-    if (['debug', 'info'].includes(config.logLevel)) {
-      // eslint-disable-next-line no-console
-      console.info(`[INFO] ${message}`, ...args);
-    }
-  },
-  warn: (message: string, ...args: any[]) => {
-    if (['debug', 'info', 'warn'].includes(config.logLevel)) {
-      // eslint-disable-next-line no-console
-      console.warn(`[WARN] ${message}`, ...args);
-    }
-  },
   error: (message: string, ...args: any[]) => {
     // eslint-disable-next-line no-console
     console.error(`[ERROR] ${message}`, ...args);

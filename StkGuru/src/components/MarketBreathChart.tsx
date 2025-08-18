@@ -566,9 +566,6 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
         events: {
           click: function(e: any) {
             // Handle range selector button clicks (development only)
-            if (import.meta.env.DEV) {
-              console.log('Range selector clicked:', e);
-            }
           }
         }
       },
@@ -778,9 +775,6 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
               // Initialize chart if needed
               if (chart) {
                 // Chart is ready - rangeSelector should work automatically
-                if (import.meta.env.DEV) {
-                  console.log('Chart initialized with rangeSelector');
-                }
               }
             }}
           />

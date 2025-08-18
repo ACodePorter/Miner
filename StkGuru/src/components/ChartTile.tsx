@@ -32,6 +32,51 @@ interface IndicatorConfig {
   params: Record<string, number>;
 }
 
+// Highcharts live candlestick configuration
+const LIVE_CANDLESTICK_CONFIG = {
+  // Optimize for real-time updates
+  chart: {
+    animation: {
+      duration: 300,
+      easing: 'easeOutQuart'
+    },
+    events: {
+      load: function() {
+        // Chart loaded, ready for live updates
+        console.log('Chart loaded and ready for live updates');
+      }
+    }
+  },
+  
+  // Optimize series for live updates
+  plotOptions: {
+    candlestick: {
+      dataGrouping: { enabled: false }, // Disable grouping for live data
+      animation: {
+        duration: 300,
+        easing: 'easeOutQuart'
+      },
+      // Enable live updates
+      enableMouseTracking: true,
+      stickyTracking: false
+    },
+    column: {
+      dataGrouping: { enabled: false },
+      animation: {
+        duration: 300,
+        easing: 'easeOutQuart'
+      }
+    },
+    line: {
+      dataGrouping: { enabled: false },
+      animation: {
+        duration: 300,
+        easing: 'easeOutQuart'
+      }
+    }
+  }
+};
+
 function calculateEMAAligned(values: number[], period: number): (number | null)[] {
   // Wilder-style aligned EMA: keep index alignment and handle nulls gracefully
   const out: (number | null)[] = new Array(values.length).fill(null);
@@ -139,6 +184,7 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
   const fetchBars = async () => {
     if (!ticker) return;
     setLoading(true);
+    setErrorMsg(null);
     try {
       if (barsAbortRef.current) {
         barsAbortRef.current.abort();
@@ -172,123 +218,250 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
     });
   }, [ticker]);
 
+  // Helper function to update indicators with new data
+  const updateIndicators = useCallback((chart: Highcharts.Chart, newBars: Bar[]) => {
+    if (!newBars.length) return;
+    
+    const closes = newBars.map(b => b.close);
+    
+    // Update each indicator series
+    indicators.forEach(indicator => {
+      if (indicator.type === 'EMA') {
+        const period = indicator.params.period ?? 20;
+        const ema = calculateEMAAligned(closes, period);
+        const emaSeries = chart.series.find(s => s.name === `EMA(${period})`);
+        
+        if (emaSeries) {
+          const data = ema.map((v, i) => [newBars[i]?.timestamp, v] as any);
+          emaSeries.setData(data, false, false, true);
+        }
+      } else if (indicator.type === 'SMA') {
+        const period = indicator.params.period ?? 20;
+        const sma = calculateSMA(closes, period);
+        const smaSeries = chart.series.find(s => s.name === `SMA(${period})`);
+        
+        if (smaSeries) {
+          const data = sma.map((v, i) => [newBars[i]?.timestamp, v] as any);
+          smaSeries.setData(data, false, false, true);
+        }
+      } else if (indicator.type === 'MACD') {
+        const fast = indicator.params.fast ?? 10;
+        const slow = indicator.params.slow ?? 20;
+        const signal = indicator.params.signal ?? 5;
+        const { macdLine, signalLine, histogram } = calculateMACD(closes, fast, slow, signal);
+        
+        const macdSeries = chart.series.find(s => s.name === 'MACD');
+        const signalSeries = chart.series.find(s => s.name === 'Signal');
+        const histSeries = chart.series.find(s => s.name === 'Hist');
+        
+        if (macdSeries) {
+          const data = macdLine.map((v, i) => [newBars[i]?.timestamp, v] as any);
+          macdSeries.setData(data, false, false, true);
+        }
+        if (signalSeries) {
+          const data = signalLine.map((v, i) => [newBars[i]?.timestamp, v] as any);
+          signalSeries.setData(data, false, false, true);
+        }
+        if (histSeries) {
+          const data = histogram.map((v, i) => [newBars[i]?.timestamp, v] as any);
+          histSeries.setData(data, false, false, true);
+        }
+      } else if (indicator.type === 'RSI') {
+        const period = indicator.params.period ?? 14;
+        const rsi = calculateRSI(closes, period);
+        const rsiSeries = chart.series.find(s => s.name === `RSI(${period})`);
+        
+        if (rsiSeries) {
+          const data = rsi.map((v, i) => [newBars[i]?.timestamp, v] as any);
+          rsiSeries.setData(data, false, false, true);
+        }
+      }
+    });
+  }, [indicators]);
+
+  // WebSocket bars update handler
+  const handleBarsUpdate = useCallback((payload: BarsPayload) => {
+    if (!payload?.bars?.length) {
+      return;
+    }
+    
+    const chart = (chartRef as any)?.current?.chart as Highcharts.Chart | undefined;
+    if (!chart) return;
+    
+    // Handle initial snapshot (room join)
+    if (payload.is_snapshot) {
+      // Set initial data from WebSocket snapshot
+      setBars(payload.bars);
+      setLoading(false); // Clear loading when we get snapshot
+      setErrorMsg(null);
+      
+      // Update chart with snapshot data
+      const ohlcSeries = chart.series.find(s => s.type === 'candlestick');
+      const volumeSeries = chart.series.find(s => s.type === 'column' && s.name === 'Volume');
+      
+      if (ohlcSeries) {
+        const ohlcData = payload.bars.map(bar => [
+          bar.timestamp,
+          bar.open,
+          bar.high,
+          bar.low,
+          bar.close
+        ] as [number, number, number, number, number]);
+        ohlcSeries.setData(ohlcData, false, false, true);
+      }
+      
+      if (volumeSeries) {
+        const volumeData = payload.bars.map(bar => [
+          bar.timestamp,
+          bar.volume
+        ] as [number, number]);
+        volumeSeries.setData(volumeData, false, false, true);
+      }
+      
+      // Update indicators with new data
+      updateIndicators(chart, payload.bars);
+      
+      // Trigger final redraw
+      chart.redraw(false);
+      return;
+    }
+    
+    // Handle real-time updates (live room updates)
+    const incoming = payload.bars;
+    const lastIncomingBar = incoming[incoming.length - 1];
+    
+    if (!lastIncomingBar) return;
+    
+    // For minute bars, we might get updates to the last forming bar
+    if (timeframe.includes('m')) {
+      const ohlcSeries = chart.series.find(s => s.type === 'candlestick');
+      const volumeSeries = chart.series.find(s => s.type === 'column' && s.name === 'Volume');
+      
+      if (ohlcSeries && ohlcSeries.data.length > 0) {
+        const lastPoint = ohlcSeries.data[ohlcSeries.data.length - 1];
+        const lastTs = lastPoint.x;
+        
+        if (lastIncomingBar.timestamp === lastTs) {
+          // Update the last forming bar (real-time update)
+          const newPoint = [
+            lastIncomingBar.timestamp,
+            lastIncomingBar.open,
+            lastIncomingBar.high,
+            lastIncomingBar.low,
+            lastIncomingBar.close
+          ] as [number, number, number, number, number];
+          
+          // Use removePoint and addPoint for updating
+          ohlcSeries.removePoint(ohlcSeries.data.length - 1, false);
+          ohlcSeries.addPoint(newPoint, false, false, true);
+        } else if (lastIncomingBar.timestamp > lastTs) {
+          // New bar completed, add it
+          const newPoint = [
+            lastIncomingBar.timestamp,
+            lastIncomingBar.open,
+            lastIncomingBar.high,
+            lastIncomingBar.low,
+            lastIncomingBar.close
+          ] as [number, number, number, number, number];
+          
+          ohlcSeries.addPoint(newPoint, false, false, true);
+        }
+      }
+      
+      if (volumeSeries && volumeSeries.data.length > 0) {
+        const lastPoint = volumeSeries.data[volumeSeries.data.length - 1];
+        const lastTs = lastPoint.x;
+        
+        if (lastIncomingBar.timestamp === lastTs) {
+          // Update the last forming bar volume
+          volumeSeries.removePoint(volumeSeries.data.length - 1, false);
+          volumeSeries.addPoint([lastIncomingBar.timestamp, lastIncomingBar.volume], false, false, true);
+        } else if (lastIncomingBar.timestamp > lastTs) {
+          // New bar completed, add volume
+          volumeSeries.addPoint([lastIncomingBar.timestamp, lastIncomingBar.volume], false, false, true);
+        }
+      }
+    } else {
+      // For daily/weekly bars, just append new ones
+      const ohlcSeries = chart.series.find(s => s.type === 'candlestick');
+      const volumeSeries = chart.series.find(s => s.type === 'column' && s.name === 'Volume');
+      
+      if (ohlcSeries && ohlcSeries.data.length > 0) {
+        const lastTs = ohlcSeries.data[ohlcSeries.data.length - 1].x;
+        
+        for (const bar of incoming) {
+          if (bar.timestamp > lastTs) {
+            const newPoint = [
+              bar.timestamp,
+              bar.open,
+              bar.high,
+              bar.low,
+              bar.close
+            ] as [number, number, number, number, number];
+            
+            ohlcSeries.addPoint(newPoint, false, false, true);
+          }
+        }
+      }
+      
+      if (volumeSeries && volumeSeries.data.length > 0) {
+        const lastTs = volumeSeries.data[volumeSeries.data.length - 1].x;
+        
+        for (const bar of incoming) {
+          if (bar.timestamp > lastTs) {
+            volumeSeries.addPoint([bar.timestamp, bar.volume], false, false, true);
+          }
+        }
+      }
+    }
+    
+    // Update indicators with new data
+    updateIndicators(chart, [...bars, ...incoming]);
+    
+    // Trigger chart update for real-time data
+    chart.redraw(false); // false = no animation for real-time updates
+  }, [timeframe, bars, updateIndicators]);
+
+  // Clear data and show loading when ticker or timeframe changes
+  useEffect(() => {
+    setBars([]);
+    setLoading(true);
+    setErrorMsg(null);
+    defaultZoomAppliedRef.current = false;
+  }, [ticker, timeframe]);
+
+  // Initial load only - fetch bars when component first comes into view
   useEffect(() => {
     if (!inView) return;
     fetchBars();
-  }, [ticker, timeframe, inView]);
+  }, [inView]); // Only depend on inView, not ticker/timeframe
 
   // Reset default zoom flag when ticker or timeframe changes
   useEffect(() => {
     defaultZoomAppliedRef.current = false;
   }, [ticker, timeframe]);
 
+  // WebSocket subscription - join room for ticker/timeframe
   useEffect(() => {
     if (!inView) return;
+    
+    // Subscribe to quotes
     const unsubscribeQuote = subscribeQuote();
-    const start = async () => {
-      await fetchBars();
-    };
-    start();
-    // subscribe to live bars over WS using room management
-    const unsubscribeBars = wsClient.subscribeBars(ticker, timeframe, (payload: BarsPayload) => {
-      console.log('ChartTile received bars payload:', payload);
-      if (!payload?.bars?.length) {
-        console.log('No bars in payload or empty bars array');
-        return;
-      }
-      
-      console.log('Processing bars update:', {
-        is_snapshot: payload.is_snapshot,
-        bars_count: payload.bars.length,
-        first_bar: payload.bars[0],
-        last_bar: payload.bars[payload.bars.length - 1]
-      });
-      
-      setBars(prev => {
-        console.log('Current bars state:', prev.length, 'bars');
-        
-        // Handle initial snapshot
-        if (payload.is_snapshot) {
-          console.log('Handling snapshot - replacing all bars');
-          return payload.bars; // Keep original UTC timestamps
-        }
-        
-        // Handle incremental updates
-        if (!prev.length) {
-          console.log('No previous bars, using incoming bars');
-          return payload.bars; // Keep original UTC timestamps
-        }
-        
-        const lastTs = prev[prev.length - 1].timestamp;
-        const incoming = payload.bars; // Keep original UTC timestamps
-        
-        console.log('Incremental update:', {
-          lastTs,
-          incomingTs: incoming[incoming.length - 1].timestamp,
-          timeframe
-        });
-        
-        // For minute bars, we might get updates to the last forming bar
-        if (timeframe.includes('m')) {
-          const lastIncomingTs = incoming[incoming.length - 1].timestamp;
-          if (lastIncomingTs === lastTs) {
-            // Replace the last forming bar (real-time update)
-            console.log('Replacing last forming bar - real-time update');
-            const newBars = [...prev.slice(0, prev.length - 1), incoming[incoming.length - 1]];
-            console.log('New bars after replacement:', newBars.length);
-            return newBars;
-          } else if (lastIncomingTs > lastTs) {
-            // New bar completed, append it
-            console.log('Appending new completed bar');
-            return [...prev, incoming[incoming.length - 1]];
-          } else {
-            console.log('Incoming timestamp is older than current, skipping');
-          }
-        } else {
-          // For daily/weekly bars, just append new ones
-          const updates: Bar[] = [];
-          for (const b of incoming) {
-            if (b.timestamp > lastTs) {
-              updates.push(b);
-            }
-          }
-          if (updates.length > 0) {
-            console.log('Appending new daily/weekly bars:', updates.length);
-            return [...prev, ...updates];
-          }
-        }
-        
-        console.log('No bars to update');
-        return prev;
-      });
-      
-      // Trigger immediate chart update for real-time data
-      setTimeout(() => {
-        const chart = (chartRef as any)?.current?.chart as Highcharts.Chart | undefined;
-        if (chart) {
-          console.log('Triggering immediate chart update for real-time data');
-          chart.redraw(false); // false = no animation for real-time updates
-        }
-      }, 50); // Small delay to ensure state is updated
-    });
+    
+    // Subscribe to bars (join room)
+    const unsubscribeBars = wsClient.subscribeBars(ticker, timeframe, handleBarsUpdate);
+    
     return () => {
-      if (barsAbortRef.current) barsAbortRef.current.abort();
       unsubscribeQuote();
       unsubscribeBars();
     };
-  }, [ticker, timeframe, inView, subscribeQuote]);
+  }, [ticker, timeframe, inView, subscribeQuote, handleBarsUpdate]);
 
-  // Monitor bars state changes for debugging
+  // Monitor bars state changes
   useEffect(() => {
-    console.log('Bars state changed:', bars.length, 'bars');
-    if (bars.length > 0) {
-      console.log('Latest bar:', bars[bars.length - 1]);
-    }
-    
     // Trigger chart update when bars change
     const chart = (chartRef as any)?.current?.chart as Highcharts.Chart | undefined;
     if (chart && bars.length > 0) {
-      console.log('Triggering chart update');
       chart.redraw();
     }
   }, [bars]);
@@ -309,17 +482,14 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
   }, [bars]);
 
   const ohlc = useMemo(() => {
-    console.log('Computing OHLC data from', bars.length, 'bars');
     return bars.map(b => [b.timestamp, b.open, b.high, b.low, b.close] as [number, number, number, number, number]);
   }, [bars]);
   
   const volumes = useMemo(() => {
-    console.log('Computing volumes data from', bars.length, 'bars');
     return bars.map(b => [b.timestamp, b.volume] as [number, number]);
   }, [bars]);
   
   const closes = useMemo(() => {
-    console.log('Computing closes data from', bars.length, 'bars');
     return bars.map(b => b.close);
   }, [bars]);
 
@@ -410,15 +580,17 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
       spacingTop: 0, 
       marginTop: 0, 
       spacing: [0, 0, 0, 0],
-      // Optimize for real-time updates
-      animation: {
-        duration: 300, // Smooth animation for updates
-        easing: 'easeOutQuart'
-      },
+      // Use live candlestick configuration
+      ...LIVE_CANDLESTICK_CONFIG.chart,
       // Enable live redraw for real-time updates
       events: {
         load: function() {
-          console.log('Chart loaded, ready for real-time updates');
+          // Chart loaded, ready for real-time updates
+          console.log('Chart loaded and ready for live updates');
+        },
+        // Optimize for real-time updates
+        redraw: function() {
+          // Chart redrawn, ensure smooth updates
         }
       }
     },
@@ -459,14 +631,15 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
       // Enable live updates for real-time data
       events: {
         afterSetExtremes: function() {
-          console.log('X-axis extremes updated for real-time data');
+          // X-axis extremes updated for real-time data
         }
       }
     },
-    // Optimize for real-time data
+    // Use live candlestick plot options
     plotOptions: {
+      ...LIVE_CANDLESTICK_CONFIG.plotOptions,
       series: {
-        dataGrouping: { enabled: false },
+        dataGrouping: { enabled: false }, // Disable grouping for live data
         lineWidth: 1,
         // Enable animation for real-time updates
         animation: {
@@ -476,34 +649,7 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
         // Enable live redraw for real-time updates
         enableMouseTracking: true,
         stickyTracking: false
-      },
-      candlestick: {
-        dataGrouping: { enabled: false },
-        pointPadding: 0.05,
-        groupPadding: 0.1,
-        // Optimize candlestick updates
-        animation: {
-          duration: 300,
-          easing: 'easeOutQuart'
-        }
-      },
-      column: {
-        dataGrouping: { enabled: false },
-        pointPadding: 0.05,
-        groupPadding: 0.1,
-        animation: {
-          duration: 300,
-          easing: 'easeOutQuart'
-        }
-      },
-      line: {
-        dataGrouping: { enabled: false },
-        lineWidth: 1,
-        animation: {
-          duration: 300,
-          easing: 'easeOutQuart'
-        }
-      },
+      }
     },
         tooltip: { 
           split: false, // Share tooltip across all series
@@ -888,14 +1034,6 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
         </div>
         
         <div className="flex items-center gap-2">
-          {/* Room Status Display */}
-          <div className="flex items-center gap-1 px-2 py-1 text-xs bg-slate-700/50 border border-slate-600 rounded-lg">
-            <div className={`w-2 h-2 rounded-full ${wsClient.isReady() ? 'bg-green-400' : 'bg-red-400'}`}></div>
-            <span className="text-slate-300">
-              {wsClient.isReady() ? 'WS' : 'Off'}
-            </span>
-          </div>
-          
           <select
             value={indicatorToAdd}
             onChange={(e) => setIndicatorToAdd(e.target.value as IndicatorType)}

@@ -39,7 +39,7 @@ export const clearExtensionInterference = async (): Promise<void> => {
       );
     } catch (error) {
       // Ignore cache clearing errors
-      console.warn('Could not clear extension caches:', error);
+
     }
   }
   
@@ -57,7 +57,7 @@ export const clearExtensionInterference = async (): Promise<void> => {
       );
     } catch (error) {
       // Ignore service worker errors
-      console.warn('Could not unregister extension service workers:', error);
+
     }
   }
 };

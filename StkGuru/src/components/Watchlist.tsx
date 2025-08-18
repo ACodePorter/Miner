@@ -79,13 +79,9 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
 
   // Subscribe to quotes via WebSocket using room management
   useEffect(() => {
-    console.log('🔄 Watchlist: Initial subscription effect triggered');
     if (watchlist.length === 0) {
-      console.log('⚠️ Watchlist: No tickers in watchlist, skipping initial subscriptions');
       return;
     }
-    
-    console.log(`🔌 Watchlist: Setting up subscriptions for ${watchlist.length} tickers:`, watchlist.map(item => item.ticker));
     
     // Create a map of current tickers to avoid duplicate subscriptions
     const currentTickers = new Set(watchlist.map(item => item.ticker.toUpperCase()));
@@ -93,7 +89,6 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
     // Unsubscribe from tickers that are no longer in the watchlist
     for (const [ticker, unsubscribe] of subscriptionsRef.current.entries()) {
       if (!currentTickers.has(ticker)) {
-        console.log(`🚪 Watchlist: Unsubscribing from ${ticker} - no longer in watchlist`);
         unsubscribe();
         subscriptionsRef.current.delete(ticker);
       }
@@ -105,13 +100,10 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
       
       // Skip if already subscribed
       if (subscriptionsRef.current.has(ticker)) {
-        console.log(`✅ Watchlist: Already subscribed to ${ticker}, skipping`);
         return;
       }
       
-      console.log(`🔌 Watchlist: Creating new subscription for ${ticker}`);
       const unsubscribe = wsClient.subscribe(ticker, (q: QuotePayload) => {
-        console.log(`📊 Watchlist: Quote received for ${ticker}:`, q);
         setQuotes(prevQuotes => {
           const newQuotes = { ...prevQuotes, [ticker]: q as any };
           return newQuotes;
@@ -123,14 +115,10 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
       
       // Store the unsubscribe function
       subscriptionsRef.current.set(ticker, unsubscribe);
-      console.log(`💾 Watchlist: Stored unsubscribe function for ${ticker}`);
     });
-    
-    console.log(`🏁 Watchlist: Initial subscription setup completed. Total subscriptions: ${subscriptionsRef.current.size}`);
     
     // Cleanup function - only run on component unmount
     return () => {
-      console.log('🧹 Watchlist: Component unmounting, cleaning up subscriptions');
       subscriptionsRef.current.forEach((unsubscribe) => {
         unsubscribe();
       });
@@ -141,27 +129,15 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
   // Sync subscriptions when WebSocket connection is ready
   useEffect(() => {
     const checkAndSyncSubscriptions = () => {
-      console.log(`🔄 Watchlist: Checking WebSocket connection status: ${wsClient.getStatus()}`);
-      
       if (wsClient.getStatus() === 'connected' && watchlist.length > 0) {
-        console.log(`🔌 Watchlist: WebSocket connected, checking subscription sync...`);
-        
         const currentTickers = new Set(watchlist.map(item => item.ticker.toUpperCase()));
         const currentSubscriptions = new Set(subscriptionsRef.current.keys());
-        
-        console.log(`📊 Watchlist: Current tickers:`, Array.from(currentTickers));
-        console.log(`🔌 Watchlist: Current subscriptions:`, Array.from(currentSubscriptions));
         
         // Check for missing subscriptions
         const missingSubscriptions = Array.from(currentTickers).filter(ticker => !currentSubscriptions.has(ticker));
         if (missingSubscriptions.length > 0) {
-          console.log(`⚠️ Watchlist: Missing subscriptions for:`, missingSubscriptions);
-          console.log(`🔄 Watchlist: Triggering subscription sync...`);
-          
           // Force a re-run of the subscription effect
           setForceUpdate(prev => prev + 1);
-        } else {
-          console.log(`✅ Watchlist: All subscriptions are properly synced`);
         }
       }
     };
@@ -177,65 +153,44 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
 
   // Listen for WebSocket connection state changes
   useEffect(() => {
-    console.log('🔄 Watchlist: Setting up WebSocket connection state listener');
-    
     // Subscribe to room state change events from WebSocket client (includes connection status)
     const unsubscribeRoomStateChange = wsClient.onRoomStateChange(() => {
-      console.log('🔄 Watchlist: WebSocket state change detected, triggering update');
       // Force a re-render to update connection status indicators
       setForceUpdate(prev => prev + 1);
     });
 
     return () => {
-      console.log('🔄 Watchlist: Cleaning up WebSocket connection state listener');
       unsubscribeRoomStateChange();
     };
   }, []); // Only run once on mount
 
   // Handle watchlist changes without clearing subscriptions
   useEffect(() => {
-    console.log(`🔄 Watchlist: Change effect triggered - watchlist length: ${watchlist.length}`);
-    console.log(`📊 Watchlist: Current watchlist:`, watchlist.map(item => item.ticker));
-    console.log(`🔌 Watchlist: Current subscriptions:`, Array.from(subscriptionsRef.current.keys()));
-    
     // Get current tickers (even if empty)
     const currentTickers = new Set(watchlist.map(item => item.ticker.toUpperCase()));
-    console.log(`🎯 Watchlist: Current tickers set:`, Array.from(currentTickers));
     
     // Unsubscribe from removed tickers (this should always run)
-    console.log(`🔍 Watchlist: Checking for tickers to unsubscribe...`);
     for (const [ticker, unsubscribe] of subscriptionsRef.current.entries()) {
-      console.log(`🔍 Watchlist: Checking subscription for ${ticker}...`);
       if (!currentTickers.has(ticker)) {
-        console.log(`🚪 Watchlist: Unsubscribing from ${ticker} - no longer in watchlist`);
-        console.log(`🔌 Watchlist: Calling unsubscribe function for ${ticker}...`);
         try {
           unsubscribe();
-          console.log(`✅ Watchlist: Unsubscribe function completed for ${ticker}`);
         } catch (error) {
           console.error(`❌ Watchlist: Error calling unsubscribe for ${ticker}:`, error);
         }
         subscriptionsRef.current.delete(ticker);
-        console.log(`🗑️ Watchlist: Removed ${ticker} from subscriptionsRef`);
-      } else {
-        console.log(`✅ Watchlist: Keeping subscription for ${ticker} - still in watchlist`);
       }
     }
     
     // Only subscribe to new tickers if watchlist is not empty
     if (watchlist.length > 0) {
-      console.log(`🔌 Watchlist: Checking for new tickers to subscribe...`);
       watchlist.forEach(item => {
         const ticker = item.ticker.toUpperCase();
         
         if (subscriptionsRef.current.has(ticker)) {
-          console.log(`✅ Watchlist: Already subscribed to ${ticker}, skipping`);
           return;
         }
         
-        console.log(`🔌 Watchlist: Creating new subscription for ${ticker}...`);
         const unsubscribe = wsClient.subscribe(ticker, (q: QuotePayload) => {
-          console.log(`📊 Watchlist: Quote received for ${ticker}:`, q);
           setQuotes(prevQuotes => {
             const newQuotes = { ...prevQuotes, [ticker]: q as any };
             return newQuotes;
@@ -246,14 +201,8 @@ const Watchlist: React.FC<WatchlistProps> = ({ className = '', fullHeight = true
         
         // Store the unsubscribe function
         subscriptionsRef.current.set(ticker, unsubscribe);
-        console.log(`💾 Watchlist: Stored unsubscribe function for ${ticker}`);
       });
-    } else {
-      console.log(`⚠️ Watchlist: Watchlist is empty, skipping new subscriptions but cleanup was done above`);
     }
-    
-    console.log(`🏁 Watchlist: Change effect completed`);
-    console.log(`🔌 Watchlist: Final subscriptions:`, Array.from(subscriptionsRef.current.keys()));
   }, [watchlist]); // This effect handles watchlist changes
 
   const handleAddTicker = async (e: React.FormEvent) => {

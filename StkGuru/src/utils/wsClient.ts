@@ -138,7 +138,7 @@ class WebSocketClient {
     const wsUrl = `${this.baseUrl}/ws/${this.clientId}`;
     
     try {
-      console.log(`🔌 Attempting WebSocket connection to: ${wsUrl}`);
+
       this.ws = new WebSocket(wsUrl);
       this.ws.onopen = this.handleOpen.bind(this);
       this.ws.onmessage = this.handleMessage.bind(this);
@@ -154,7 +154,7 @@ class WebSocketClient {
   }
 
   private handleOpen() {
-    console.log('WebSocket connected');
+
     this.isConnecting = false;
     this.isDisconnecting = false;
     this.reconnectAttempts = 0; // Reset reconnect attempts on successful connection
@@ -168,55 +168,38 @@ class WebSocketClient {
   private handleMessage(event: MessageEvent) {
     try {
       const data: RoomMessage = JSON.parse(event.data);
-      console.log('📨 WebSocket message received:', data);
+
       
       switch (data.type) {
         case 'connected':
-          console.log('✅ Connected to WebSocket service');
+
           break;
           
         case 'room_joined':
           if (data.room_id && data.success) {
             this.connectedRooms.add(data.room_id);
-            console.log(`🚪 Joined room: ${data.room_id}`);
-            console.log(`🔌 Total connected rooms: ${this.connectedRooms.size}`);
-            console.log(`🔌 Connected rooms:`, Array.from(this.connectedRooms));
+
             this.notifyRoomStateChange(); // Notify listeners
           }
           break;
           
         case 'room_left':
-          console.log(`🔍 Processing room_left message:`, data);
           if (data.room_id) {  // Remove the success check since backend doesn't send it
-            console.log(`🗑️ Removing room ${data.room_id} from connectedRooms`);
             this.connectedRooms.delete(data.room_id);
-            console.log(`🚪 Left room: ${data.room_id}`);
-            console.log(`🔌 Total connected rooms: ${this.connectedRooms.size}`);
-            console.log(`🔌 Connected rooms:`, Array.from(this.connectedRooms));
             this.notifyRoomStateChange(); // Notify listeners
-            console.log(`📢 Room state change notification sent after leaving room ${data.room_id}`);
-          } else {
-            console.log(`⚠️ room_left message missing room_id:`, data);
           }
           break;
           
         case 'subscribed':
           if (data.room_id && data.symbol) {
-            console.log(`🔌 Subscribed to quotes for ${data.symbol} in room ${data.room_id}`);
             this.connectedRooms.add(data.room_id);
-            console.log(`🔌 Total connected rooms: ${this.connectedRooms.size}`);
-            console.log(`🔌 Connected rooms:`, Array.from(this.connectedRooms));
             this.notifyRoomStateChange(); // Notify listeners
-            console.log(`📢 Room state change notification sent after subscribing to ${data.symbol}`);
           }
           break;
           
         case 'bars_subscribed':
           if (data.room_id && data.symbol && data.interval) {
-            console.log(`🔌 Subscribed to ${data.interval} bars for ${data.symbol} in room ${data.room_id}`);
             this.connectedRooms.add(data.room_id);
-            console.log(`🔌 Total connected rooms: ${this.connectedRooms.size}`);
-            console.log(`🔌 Connected rooms:`, Array.from(this.connectedRooms));
             this.notifyRoomStateChange(); // Notify listeners
           }
           break;
@@ -373,7 +356,7 @@ class WebSocketClient {
   }
 
   private handleClose(event: CloseEvent) {
-    console.log('WebSocket disconnected:', event.code, event.reason);
+
     this.isConnecting = false;
     this.isDisconnecting = false;
     this.lastConnectionStatus = 'disconnected';
@@ -383,12 +366,8 @@ class WebSocketClient {
     this.connectedRooms.clear();
     
     // Schedule reconnection if enabled
-    console.log(`🔍 Reconnection check: shouldReconnect=${this.shouldReconnect}, reconnectAttempts=${this.reconnectAttempts}, maxReconnectAttempts=${this.maxReconnectAttempts}`);
     if (this.shouldReconnect) {
-      console.log(`🔄 Scheduling reconnection after disconnect...`);
       this.scheduleReconnect();
-    } else {
-      console.log(`⚠️ Reconnection disabled, not scheduling reconnect`);
     }
   }
 
@@ -400,7 +379,6 @@ class WebSocketClient {
       
       // Also try to reconnect on error if not already reconnecting
       if (this.shouldReconnect && !this.reconnectTimer) {
-        console.log(`🔄 Scheduling reconnection after error...`);
         this.scheduleReconnect();
       }
     }
@@ -408,7 +386,6 @@ class WebSocketClient {
 
   // Method to gracefully disconnect
   disconnect() {
-    console.log('🔄 Manual disconnect initiated');
     this.isDisconnecting = true;
     this.lastConnectionStatus = 'disconnecting';
     this.shouldReconnect = false; // Stop automatic reconnection
@@ -425,15 +402,11 @@ class WebSocketClient {
   }
 
   private scheduleReconnect() {
-    console.log(`🔍 scheduleReconnect called: reconnectTimer=${!!this.reconnectTimer}, reconnectAttempts=${this.reconnectAttempts}, maxReconnectAttempts=${this.maxReconnectAttempts}, shouldReconnect=${this.shouldReconnect}`);
-    
     if (this.reconnectTimer) {
-      console.log(`⚠️ Reconnection timer already exists, skipping`);
       return;
     }
     
     if (this.reconnectAttempts >= this.maxReconnectAttempts) {
-      console.log(`❌ Max reconnection attempts reached (${this.reconnectAttempts}/${this.maxReconnectAttempts}), stopping reconnection`);
       this.shouldReconnect = false;
       return;
     }
@@ -441,29 +414,19 @@ class WebSocketClient {
     this.reconnectAttempts++;
     const delay = Math.min(this.reconnectDelay * Math.pow(2, this.reconnectAttempts - 1), 30000); // Exponential backoff, max 30s
     
-    console.log(`🔄 Scheduling reconnection attempt ${this.reconnectAttempts}/${this.maxReconnectAttempts} in ${delay}ms`);
-    
     this.reconnectTimer = setTimeout(() => {
-      console.log(`⏰ Reconnection timer fired for attempt ${this.reconnectAttempts}`);
       this.reconnectTimer = null;
       if (this.shouldReconnect) {
-        console.log(`🔄 Attempting reconnection ${this.reconnectAttempts}/${this.maxReconnectAttempts}`);
         this.connect();
-      } else {
-        console.log(`⚠️ Reconnection disabled, not attempting to connect`);
       }
     }, delay);
   }
 
   private resubscribeAll() {
-    console.log('🔄 Re-subscribing to all active subscriptions after reconnection');
-    console.log(`📊 Total subscriptions to restore: ${this.subscriptions.size + this.barsSubscriptions.size}`);
-    
     let restoredCount = 0;
     
     // Re-subscribe to all active subscriptions
     this.subscriptions.forEach((_callback, symbol) => {
-      console.log(`🔄 Re-subscribing to quotes for ${symbol}`);
       try {
         this.subscribeToQuotes(symbol);
         restoredCount++;
@@ -475,7 +438,6 @@ class WebSocketClient {
     this.barsSubscriptions.forEach((_callback, key) => {
       const [symbol, interval] = key.split(':');
       if (symbol && interval) {
-        console.log(`🔄 Re-subscribing to bars for ${symbol}:${interval}`);
         try {
           this.subscribeToBars(symbol, interval);
           restoredCount++;
@@ -485,11 +447,8 @@ class WebSocketClient {
       }
     });
     
-    console.log(`✅ Successfully restored ${restoredCount} subscriptions`);
-    
     // Notify components that subscriptions have been restored
     setTimeout(() => {
-      console.log(`📢 Notifying components of subscription restoration`);
       this.notifyRoomStateChange();
     }, 100); // Small delay to ensure backend has processed subscriptions
   }
@@ -497,35 +456,24 @@ class WebSocketClient {
   // Subscribe to quotes
   subscribe(symbol: string, callback: (data: QuotePayload) => void): () => void {
     const upperSymbol = symbol.toUpperCase();
-    console.log(`🔌 wsClient.subscribe called for ${upperSymbol}`);
     
     // Store the subscription
     this.subscriptions.set(upperSymbol, callback);
-    console.log(`💾 Stored subscription for ${upperSymbol}, total subscriptions: ${this.subscriptions.size}`);
     
     // Subscribe if connected
     if (this.isReady()) {
-      console.log(`🌐 WebSocket ready, calling subscribeToQuotes for ${upperSymbol}`);
       this.subscribeToQuotes(upperSymbol);
-    } else {
-      console.log(`⚠️ WebSocket not ready, will subscribe later for ${upperSymbol}`);
     }
     
     // Return unsubscribe function
     const unsubscribeFn = () => {
-      console.log(`🚪 Unsubscribe function called for ${upperSymbol}`);
-      console.log(`🔍 Removing subscription for ${upperSymbol}...`);
       this.subscriptions.delete(upperSymbol);
-      console.log(`🗑️ Subscription removed for ${upperSymbol}, remaining subscriptions: ${this.subscriptions.size}`);
-      console.log(`🔌 Calling unsubscribeFromQuotes for ${upperSymbol}...`);
       this.unsubscribeFromQuotes(upperSymbol);
-      console.log(`✅ Unsubscribe function completed for ${upperSymbol}`);
       
       // 🔥 Notify room state change after subscription removal
       this.notifyRoomStateChange();
     };
     
-    console.log(`📤 Returning unsubscribe function for ${upperSymbol}`);
     return unsubscribeFn;
   }
 
@@ -551,7 +499,6 @@ class WebSocketClient {
 
   private subscribeToQuotes(symbol: string) {
     if (!this.isReady()) {
-      console.log(`❌ WebSocket not ready, cannot subscribe to quotes for ${symbol}`);
       return;
     }
     
@@ -560,10 +507,8 @@ class WebSocketClient {
       symbol: symbol
     };
     
-    console.log(`📤 Sending subscribe message for ${symbol}:`, message);
     try {
       this.ws?.send(JSON.stringify(message));
-      console.log(`✅ Subscribe message sent successfully for ${symbol}`);
     } catch (error) {
       console.error(`❌ Error sending subscribe message for ${symbol}:`, error);
     }
@@ -582,41 +527,25 @@ class WebSocketClient {
   }
 
   private unsubscribeFromQuotes(symbol: string) {
-    console.log(`🔌 unsubscribeFromQuotes called for ${symbol}`);
     // Find the room for this symbol and leave it
     const roomId = `quotes:${symbol}`;
-    console.log(`🔍 Looking for room: ${roomId}`);
-    console.log(`🔌 Current connected rooms:`, Array.from(this.connectedRooms));
     
     if (this.connectedRooms.has(roomId)) {
-      console.log(`✅ Found room ${roomId}, leaving it...`);
       this.leaveRoom(roomId);
-    } else {
-      console.log(`⚠️ Room ${roomId} not found in connectedRooms`);
-      console.log(`🔍 This might mean the room was never joined or already left`);
     }
   }
 
   private unsubscribeFromBars(symbol: string, interval: string) {
-    console.log(`🔌 unsubscribeFromBars called for ${symbol}:${interval}`);
     // Find the room for this symbol/interval and leave it
     const roomId = `bars:${symbol}:${interval}`;
-    console.log(`🔍 Looking for room: ${roomId}`);
-    console.log(`🔌 Current connected rooms:`, Array.from(this.connectedRooms));
     
     if (this.connectedRooms.has(roomId)) {
-      console.log(`✅ Found room ${roomId}, leaving it...`);
       this.leaveRoom(roomId);
-    } else {
-      console.log(`⚠️ Room ${roomId} not found in connectedRooms`);
-      console.log(`🔍 This might mean the room was never joined or already left`);
     }
   }
 
   private leaveRoom(roomId: string) {
-    console.log(`🚪 leaveRoom called for room: ${roomId}`);
     if (!this.isReady()) {
-      console.log(`❌ WebSocket not ready, cannot leave room ${roomId}`);
       return;
     }
     
@@ -625,10 +554,8 @@ class WebSocketClient {
       room_id: roomId
     };
     
-    console.log(`📤 Sending leave_room message to backend:`, message);
     try {
       this.ws?.send(JSON.stringify(message));
-      console.log(`✅ leave_room message sent successfully for ${roomId}`);
       
       // 🔥 Notify room state change after leaving room
       // Note: We don't remove from connectedRooms here because the backend will send a 'room_left' message
@@ -676,13 +603,11 @@ class WebSocketClient {
 
   // Manually trigger room state change notification (for testing)
   triggerRoomStateChange() {
-    console.log(`🔔 Manual room state change trigger called`);
     this.notifyRoomStateChange();
   }
 
   // Manually trigger reconnection
   triggerReconnect() {
-    console.log(`🔄 Manual reconnection triggered`);
     if (this.reconnectTimer) {
       clearTimeout(this.reconnectTimer);
       this.reconnectTimer = null;
@@ -694,24 +619,17 @@ class WebSocketClient {
 
   // Check reconnection state and force if needed
   checkAndForceReconnect() {
-    console.log(`🔍 Checking reconnection state: shouldReconnect=${this.shouldReconnect}, reconnectAttempts=${this.reconnectAttempts}, reconnectTimer=${!!this.reconnectTimer}, status=${this.getStatus()}`);
-    
     if (this.getStatus() === 'disconnected' && this.shouldReconnect && !this.reconnectTimer) {
-      console.log(`🔄 Force reconnection needed, calling scheduleReconnect`);
       this.scheduleReconnect();
     } else if (this.getStatus() === 'disconnected' && !this.shouldReconnect) {
-      console.log(`⚠️ Reconnection disabled, enabling and scheduling reconnect`);
       this.shouldReconnect = true;
       this.reconnectAttempts = 0;
       this.scheduleReconnect();
-    } else {
-      console.log(`ℹ️ Reconnection state OK or already in progress`);
     }
   }
 
   // Reset reconnection settings
   resetReconnection() {
-    console.log(`🔄 Resetting reconnection settings`);
     if (this.reconnectTimer) {
       clearTimeout(this.reconnectTimer);
       this.reconnectTimer = null;
@@ -722,12 +640,8 @@ class WebSocketClient {
 
   // Manually sync all subscriptions
   syncSubscriptions() {
-    console.log(`🔄 Manual subscription sync triggered`);
     if (this.isReady()) {
-      console.log(`📊 Current subscriptions: ${this.subscriptions.size} quotes, ${this.barsSubscriptions.size} bars`);
       this.resubscribeAll();
-    } else {
-      console.log(`❌ WebSocket not ready, cannot sync subscriptions`);
     }
   }
 

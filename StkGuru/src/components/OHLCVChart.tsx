@@ -100,9 +100,7 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
       setLoading(true);
       setError(null);
       
-      console.log('Fetching categorized tickers from new API');
       const data = await dataApi.getWedgePopStats();
-      console.log('Categorized tickers data:', data);
       
       if (!data || !Array.isArray(data)) {
         throw new Error('Invalid data format received');
@@ -124,7 +122,6 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
       }));
       
       setCategorizedTickers(categorized);
-      console.log('Processed categorized tickers:', categorized);
       
       // Set default selections
       if (categorized.length > 0) {
@@ -166,9 +163,7 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
       setLoading(true);
       setError(null);
       
-      console.log('Fetching OHLCV data for ticker:', ticker);
       const data = await dataApi.getOHLCVW(ticker);
-      console.log('OHLCV data:', data);
       
       if (!data || !Array.isArray(data)) {
         throw new Error('Invalid OHLCV data format received');
@@ -176,7 +171,6 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
       
       // Data is already an array from the API
       setOhlcvData(data);
-      console.log('Processed OHLCV data:', data);
     } catch (err) {
       console.error('Failed to fetch OHLCV data:', err);
       setError('Failed to fetch OHLCV data');
@@ -222,13 +216,9 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
 
   // Process chart data
   const chartData = useMemo(() => {
-    console.log('Processing chart data, ohlcvData length:', ohlcvData.length);
     if (!ohlcvData.length) {
-      console.log('No OHLCV data available');
       return null;
     }
-
-    console.log('Sample OHLCV data:', ohlcvData[0]);
 
     // Sort data by date
     const sortedData = [...ohlcvData].sort((a, b) => {
@@ -237,7 +227,7 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
       return dateA.getTime() - dateB.getTime();
     });
 
-    console.log('Sorted data length:', sortedData.length);
+
 
     // Convert to Highcharts candlestick format [timestamp, open, high, low, close]
     const candlestickData = sortedData.map(item => {
@@ -257,7 +247,7 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
       return [timestamp, item.open, item.high, item.low, item.close];
     });
 
-    console.log('Candlestick data length:', candlestickData.length);
+
 
     // Calculate EMA10 and EMA20
     const closePrices = sortedData.map(item => item.close);
@@ -430,7 +420,7 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
       return null;
     }).filter(Boolean);
 
-    console.log('Wedge markers count:', wedgeMarkers.length);
+
 
     return { 
       candlestickData, 
@@ -1576,13 +1566,7 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
     return null;
   }, [chartData, getVisibleData]);
 
-  // Debug logging
-  useEffect(() => {
-    console.log('Debug - categorizedTickers count:', categorizedTickers.length);
-    console.log('Debug - selectedTicker:', selectedTicker);
-    console.log('Debug - chartData:', chartData);
-    console.log('Debug - chartOptions:', chartOptions);
-  }, [categorizedTickers.length, selectedTicker, chartData, chartOptions]);
+
 
   if (loading && !ohlcvData.length) {
     return (

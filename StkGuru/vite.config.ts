@@ -63,16 +63,13 @@ export default defineConfig(({ mode }) => {
             secure: false,
             configure: (proxy) => {
               proxy.on('error', (err) => {
-                // eslint-disable-next-line no-console
-                console.log('Proxy error:', err)
+                // Proxy error handling
               })
               proxy.on('proxyReq', (_, req) => {
-                // eslint-disable-next-line no-console
-                console.log('Sending Request to the Target:', req.method, req.url)
+                // Proxy request handling
               })
               proxy.on('proxyRes', (proxyRes, req) => {
-                // eslint-disable-next-line no-console
-                console.log('Received Response from the Target:', proxyRes.statusCode, req.url)
+                // Proxy response handling
               })
             },
           },

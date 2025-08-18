@@ -10,7 +10,8 @@ from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 
 from .api.v1 import api_v1_router
-from .ws.connection_manager import WebSocketConnectionManager, manager
+from .ws.connection_manager import (WebSocketConnectionManager, manager,
+                                    set_websocket_manager)
 
 _logger = get_logger('MinerService', logging.DEBUG)
 
@@ -22,6 +23,7 @@ async def lifespan(app: FastAPI):
 
     # Startup
     manager = WebSocketConnectionManager()
+    set_websocket_manager(manager)  # Set the global manager instance
     await manager.startup()
 
     # Start background tasks
@@ -47,6 +49,7 @@ async def lifespan(app: FastAPI):
 
     if manager:
         await manager.shutdown()
+        set_websocket_manager(None)  # Clear the global manager instance
 
 app = FastAPI(lifespan=lifespan)
 
@@ -75,7 +78,7 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
 
     try:
         await manager.connect(websocket, client_id)
-        print(f"WebSocket client connected: {client_id}")
+        _logger.info(f"WebSocket client connected: {client_id}")
 
         # Send welcome message
         await websocket.send_text(json.dumps({
@@ -127,7 +130,7 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                                 'message': f'Subscribed to {symbol} quotes and joined room {room_id}',
                                 'timestamp': datetime.now().isoformat()
                             }))
-                            print(
+                            _logger.info(
                                 f"Client {client_id} subscribed to {symbol} quotes and joined room {room_id}")
                         else:
                             # Fallback to old method
@@ -137,7 +140,7 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                                 'symbol': symbol,
                                 'timestamp': datetime.now().isoformat()
                             }))
-                            print(
+                            _logger.info(
                                 f"Client {client_id} subscribed to {symbol} (fallback method)")
 
                         # Send initial quote data
@@ -165,11 +168,12 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                                         'timestamp': datetime.now().isoformat()
                                     }))
                         except Exception as e:
-                            print(
+                            _logger.error(
                                 f"Error sending initial quote for {symbol}: {e}")
 
                     except Exception as e:
-                        print(f"Error subscribing to symbol {symbol}: {e}")
+                        _logger.error(
+                            f"Error subscribing to symbol {symbol}: {e}")
                         await websocket.send_text(json.dumps({
                             'type': 'error',
                             'message': f'Failed to subscribe to {symbol}: {str(e)}',
@@ -226,7 +230,7 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                                 'message': f'Subscribed to {symbol} {interval} bars and joined room {room_id}',
                                 'timestamp': datetime.now().isoformat()
                             }))
-                            print(
+                            _logger.info(
                                 f"Client {client_id} subscribed to {symbol} {interval} bars and joined room {room_id}")
                         else:
                             # Fallback to old method
@@ -237,7 +241,7 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                                 'interval': interval,
                                 'timestamp': datetime.now().isoformat()
                             }))
-                            print(
+                            _logger.info(
                                 f"Client {client_id} subscribed to {symbol} {interval} bars (fallback method)")
 
                         # Send initial bars data
@@ -262,11 +266,11 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                                         'timestamp': datetime.now().isoformat()
                                     }))
                         except Exception as e:
-                            print(
+                            _logger.error(
                                 f"Error sending initial bars for {symbol} {interval}: {e}")
 
                     except Exception as e:
-                        print(
+                        _logger.error(
                             f"Error subscribing to bars for {symbol} {interval}: {e}")
                         await websocket.send_text(json.dumps({
                             'type': 'error',
@@ -293,9 +297,10 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                             'symbol': symbol,
                             'timestamp': datetime.now().isoformat()
                         }))
-                        print(f"Unsubscribed {client_id} from {symbol}")
+                        _logger.info(f"Unsubscribed {client_id} from {symbol}")
                     except Exception as e:
-                        print(f"Error unsubscribing from symbol {symbol}: {e}")
+                        _logger.error(
+                            f"Error unsubscribing from symbol {symbol}: {e}")
                         await websocket.send_text(json.dumps({
                             'type': 'error',
                             'message': f'Failed to unsubscribe from {symbol}: {str(e)}',
@@ -324,10 +329,10 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                             'interval': interval,
                             'timestamp': datetime.now().isoformat()
                         }))
-                        print(
+                        _logger.info(
                             f"Unsubscribed {client_id} from {symbol} {interval} bars")
                     except Exception as e:
-                        print(
+                        _logger.error(
                             f"Error unsubscribing from bars for {symbol} {interval}: {e}")
                         await websocket.send_text(json.dumps({
                             'type': 'error',
@@ -359,7 +364,8 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                                 'room_id': room_id,
                                 'timestamp': datetime.now().isoformat()
                             }))
-                            print(f"Client {client_id} joined room {room_id}")
+                            _logger.info(
+                                f"Client {client_id} joined room {room_id}")
                         else:
                             await websocket.send_text(json.dumps({
                                 'type': 'error',
@@ -367,7 +373,7 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                                 'timestamp': datetime.now().isoformat()
                             }))
                     except Exception as e:
-                        print(f"Error joining room {room_id}: {e}")
+                        _logger.error(f"Error joining room {room_id}: {e}")
                         await websocket.send_text(json.dumps({
                             'type': 'error',
                             'message': f'Failed to join room {room_id}: {str(e)}',
@@ -426,10 +432,11 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                             'client_count': client_count,
                             'timestamp': datetime.now().isoformat()
                         }))
-                        print(
+                        _logger.info(
                             f"Room broadcast sent to {client_count} clients in room {room_id}")
                     except Exception as e:
-                        print(f"Error broadcasting to room {room_id}: {e}")
+                        _logger.error(
+                            f"Error broadcasting to room {room_id}: {e}")
                         await websocket.send_text(json.dumps({
                             'type': 'error',
                             'message': f'Failed to broadcast to room {room_id}: {str(e)}',
@@ -445,7 +452,7 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                             'timestamp': datetime.now().isoformat()
                         }))
                     except Exception as e:
-                        print(
+                        _logger.error(
                             f"Error getting rooms for client {client_id}: {e}")
                         await websocket.send_text(json.dumps({
                             'type': 'error',
@@ -468,7 +475,8 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                     'timestamp': datetime.now().isoformat()
                 }))
             except Exception as e:
-                print(f"Error processing message from {client_id}: {e}")
+                _logger.error(
+                    f"Error processing message from {client_id}: {e}")
                 await websocket.send_text(json.dumps({
                     'type': 'error',
                     'message': f'Internal server error: {str(e)}',
@@ -476,9 +484,9 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                 }))
 
     except WebSocketDisconnect:
-        print(f"WebSocket client disconnected: {client_id}")
+        _logger.info(f"WebSocket client disconnected: {client_id}")
     except Exception as e:
-        print(f"WebSocket error for {client_id}: {e}")
+        _logger.error(f"WebSocket error for {client_id}: {e}")
         # Try to send error message before closing
         try:
             await websocket.send_text(json.dumps({
@@ -489,14 +497,15 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
         except:
             pass  # Ignore errors when sending error message
     finally:
-        print(f"🔄 Starting cleanup for disconnected client: {client_id}")
+        _logger.info(
+            f"🔄 Starting cleanup for disconnected client: {client_id}")
         if manager:
             try:
                 # Comprehensive cleanup through the manager
                 await manager.disconnect(websocket, client_id)
-                print(f"✅ Cleanup completed for client: {client_id}")
+                _logger.info(f"✅ Cleanup completed for client: {client_id}")
             except Exception as e:
-                print(
+                _logger.error(
                     f"❌ Error during disconnect cleanup for {client_id}: {e}")
                 # Try to force cleanup even if manager fails
                 try:
@@ -505,7 +514,7 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
                 except:
                     pass
         else:
-            print(
+            _logger.warning(
                 f"⚠️  Manager not available for cleanup of client: {client_id}")
             try:
                 if websocket:
@@ -516,26 +525,27 @@ async def websocket_endpoint(websocket: WebSocket, client_id: str):
 
 async def monitor_bars_updates():
     """Monitor and broadcast real-time bars updates for subscribed symbols"""
-    print("Starting bars monitoring service...")
+    _logger.info("Starting bars monitoring service...")
     while True:
         try:
             if manager:
                 # Get active subscriptions from BarsManager integration
                 if manager.bars_manager_integration:
                     active_subscriptions = manager.bars_manager_integration.get_active_subscriptions()
-                    print(f"Active subscriptions: {active_subscriptions}")
+                    _logger.debug(
+                        f"Active subscriptions: {active_subscriptions}")
                 else:
-                    print("BarsManager integration not available")
+                    _logger.warning("BarsManager integration not available")
 
                 # Get Redis subscription status
                 redis_client = await manager.get_redis()
                 subscribed_bars = await redis_client.smembers('websocket:subscribed_bars')
 
                 if subscribed_bars:
-                    print(
+                    _logger.debug(
                         f"WebSocket bars subscriptions: {[key.decode('utf-8') if isinstance(key, bytes) else key for key in subscribed_bars]}")
                 else:
-                    print("No bars subscriptions to monitor")
+                    _logger.debug("No bars subscriptions to monitor")
 
                 # The actual data monitoring is now handled by BarsManager and Redis subscription service
                 # This function just provides status monitoring
@@ -544,7 +554,7 @@ async def monitor_bars_updates():
             await asyncio.sleep(30)  # Check status every 30 seconds
 
         except Exception as e:
-            print(f"Error in bars monitoring: {e}")
+            _logger.error(f"Error in bars monitoring: {e}")
             await asyncio.sleep(10)  # Wait longer on error
 
 
@@ -558,30 +568,31 @@ async def update_real_quotes():
                 if manager.bars_manager_integration:
                     active_quotes = manager.bars_manager_integration.get_active_subscriptions()[
                         'quotes']
-                    print(
+                    _logger.debug(
                         f"Active quote subscriptions via BarsManager: {active_quotes}")
                 else:
-                    print("BarsManager integration not available for quotes")
+                    _logger.warning(
+                        "BarsManager integration not available for quotes")
 
                 # Get detailed subscription status for monitoring
                 subscription_status = await manager.get_subscription_status()
-                print(f"Subscription Status: {subscription_status}")
+                _logger.debug(f"Subscription Status: {subscription_status}")
 
                 # Check for subscription mismatches
                 if subscription_status.get('memory_quotes') != subscription_status.get('redis_quotes'):
-                    print(
+                    _logger.warning(
                         f"⚠️  Quote subscription mismatch: Memory={subscription_status.get('memory_quotes')}, Redis={subscription_status.get('redis_quotes')}")
 
                 if subscription_status.get('memory_bars') != subscription_status.get('redis_bars'):
-                    print(
+                    _logger.warning(
                         f"⚠️  Bars subscription mismatch: Memory={subscription_status.get('memory_bars')}, Redis={subscription_status.get('redis_bars')}")
 
                 # Show active subscriptions
                 if subscription_status.get('memory_quote_symbols'):
-                    print(
+                    _logger.debug(
                         f"Active quote subscriptions: {subscription_status.get('memory_quote_symbols')}")
                 else:
-                    print("No active quote subscriptions")
+                    _logger.debug("No active quote subscriptions")
 
                 # The actual quote updates are now handled by BarsManager and Redis subscription service
                 # This function just provides status monitoring
@@ -590,7 +601,7 @@ async def update_real_quotes():
             await asyncio.sleep(30)  # Check status every 30 seconds
 
         except Exception as e:
-            print(f"Error in real quote updates: {e}")
+            _logger.error(f"Error in real quote updates: {e}")
             await asyncio.sleep(30)  # Wait longer on error
 
 
@@ -608,3 +619,5 @@ async def update_real_quotes():
 # @app.delete('/api/watchlist/{ticker}')
 
 # Keep only the WebSocket endpoint and background functions
+
+# WebSocket endpoint is already registered via @app.websocket decorator above

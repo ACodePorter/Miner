@@ -7,7 +7,6 @@ from bs4 import BeautifulSoup
 from detonator import SingletonParent, get_logger
 from pandas import DataFrame
 
-
 _logger = get_logger('IsharesScraper')
 
 

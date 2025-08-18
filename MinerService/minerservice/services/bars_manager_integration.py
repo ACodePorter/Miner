@@ -132,6 +132,11 @@ class BarsManagerIntegration:
     async def unsubscribe_from_quotes(self, ticker: str) -> bool:
         """Unsubscribe from quotes for a specific ticker via BarsManager"""
         try:
+            if not self.bars_manager:
+                self.logger.warning(
+                    f"BarsManager not available, cannot unsubscribe from quotes for {ticker}")
+                return False
+
             if ticker in self.active_quote_subscriptions:
                 # Remove from BarsManager subscription
                 self.bars_manager.unsubscribe(ticker)
@@ -149,6 +154,11 @@ class BarsManagerIntegration:
 
     async def subscribe_to_bars(self, ticker: str, interval: str) -> bool:
         """Subscribe to bars for a specific ticker and interval via BarsManager"""
+        if not self.bars_manager:
+            self.logger.warning(
+                f"BarsManager not available, cannot subscribe to bars for {ticker} {interval}")
+            return False
+
         max_retries = 3
         retry_delay = 1
 
@@ -198,6 +208,11 @@ class BarsManagerIntegration:
     async def unsubscribe_from_bars(self, ticker: str, interval: str) -> bool:
         """Unsubscribe from bars for a specific ticker and interval via BarsManager"""
         try:
+            if not self.bars_manager:
+                self.logger.warning(
+                    f"BarsManager not available, cannot unsubscribe from bars for {ticker} {interval}")
+                return False
+
             subscription_key = (ticker, interval)
             if subscription_key in self.active_bar_subscriptions:
                 # Remove from BarsManager intraday subscription
@@ -217,6 +232,12 @@ class BarsManagerIntegration:
     async def get_initial_bars_snapshot(self, ticker: str, interval: str) -> Optional[List[Dict[str, Any]]]:
         """Get initial bars snapshot for a ticker and interval"""
         try:
+            # Check if BarsManager is available
+            if not self.bars_manager:
+                self.logger.warning(
+                    f"BarsManager not available, cannot get bars for {ticker} {interval}")
+                return None
+
             # Get maximum available bars from BarsManager for initial chart loading
             # Use 'max' period to get all available historical data
             bars_df = self.bars_manager.get_bars(ticker, interval, 'max')
@@ -251,6 +272,12 @@ class BarsManagerIntegration:
     async def get_initial_quote(self, ticker: str) -> Optional[Dict[str, Any]]:
         """Get initial quote data for a ticker"""
         try:
+            # Check if BarsManager is available
+            if not self.bars_manager:
+                self.logger.warning(
+                    f"BarsManager not available, cannot get quote for {ticker}")
+                return None
+
             # First try to get recent quote from BarsManager (Redis)
             quote_data = self.bars_manager.get_latest_quote(ticker)
 

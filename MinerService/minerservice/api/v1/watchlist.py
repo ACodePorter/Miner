@@ -3,9 +3,9 @@
 import json
 import os
 from datetime import datetime
-from typing import Any, Dict
+from typing import Any, Dict, List
 
-from fastapi import APIRouter
+from fastapi import APIRouter, Query
 
 router = APIRouter(prefix="/watchlist", tags=["watchlist"])
 
@@ -19,20 +19,20 @@ async def get_watchlist() -> Dict[str, Any]:
         watchlist_file = 'watchlist.json'
         if os.path.exists(watchlist_file):
             with open(watchlist_file, 'r') as f:
-                watchlist = json.load(f)
+                watchlist: List[Dict[str, Any]] = json.load(f)
         else:
-            watchlist = []
+            watchlist: List[Dict[str, Any]] = []
         return {'watchlist': watchlist}
     except Exception as e:
         return {'error': str(e), 'watchlist': []}
 
 
 @router.post('')
-async def add_to_watchlist(ticker: str) -> Dict[str, Any]:
+async def add_to_watchlist(ticker: str = Query(..., description="Ticker symbol to add to watchlist")) -> Dict[str, Any]:
     """Add a ticker to the watchlist"""
     try:
         watchlist_file = 'watchlist.json'
-        watchlist = []
+        watchlist: List[Dict[str, Any]] = []
 
         if os.path.exists(watchlist_file):
             with open(watchlist_file, 'r') as f:
@@ -65,7 +65,7 @@ async def remove_from_watchlist(ticker: str) -> Dict[str, Any]:
             return {'status': 'error', 'message': 'Watchlist not found'}
 
         with open(watchlist_file, 'r') as f:
-            watchlist = json.load(f)
+            watchlist: List[Dict[str, Any]] = json.load(f)
 
         # Remove the ticker
         original_length = len(watchlist)

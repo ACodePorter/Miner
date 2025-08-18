@@ -16,13 +16,21 @@ from ..services.redis_subscription_service import RedisSubscriptionService
 from .room_manager import RoomManager
 
 # Global manager instance
-manager = None
+manager: Optional['WebSocketConnectionManager'] = None
 _logger = get_logger('MinerService', logging.DEBUG)
 
 
-def get_websocket_manager():
+def get_websocket_manager() -> Optional['WebSocketConnectionManager']:
     """Get the global WebSocket manager instance"""
     return manager
+
+
+def set_websocket_manager(manager_instance: 'WebSocketConnectionManager') -> None:
+    """Set the global WebSocket manager instance"""
+    global manager
+    manager = manager_instance
+    _logger.info(
+        f"Global WebSocket manager set: {manager_instance.process_id if manager_instance else 'None'}")
 
 
 class WebSocketConnectionManager:
@@ -64,8 +72,8 @@ class WebSocketConnectionManager:
         try:
             # Force localhost for testing
             redis_host = 'miner-redis' if is_prod() else 'localhost'
-            print(
-                f"DEBUG: is_prod() = {is_prod()}, using Redis host: {redis_host}")
+            self.logger.debug(
+                f"is_prod() = {is_prod()}, using Redis host: {redis_host}")
 
             self.redis_client = redis.Redis(
                 host=redis_host,
@@ -78,9 +86,9 @@ class WebSocketConnectionManager:
                 health_check_interval=30,
             )
             await self.redis_client.ping()
-            print(f"Redis connected for process {self.process_id}")
+            self.logger.info(f"Redis connected for process {self.process_id}")
         except Exception as e:
-            print(f"Failed to connect to Redis: {e}")
+            self.logger.error(f"Failed to connect to Redis: {e}")
             raise
 
     async def _reconnect_redis(self) -> None:
@@ -91,7 +99,7 @@ class WebSocketConnectionManager:
             pass
 
         await self._create_redis_connection()
-        print(f"Redis reconnected for process {self.process_id}")
+        self.logger.info(f"Redis reconnected for process {self.process_id}")
 
     async def connect(self, websocket: WebSocket, client_id: str) -> None:
         """Connect a new WebSocket client"""
@@ -106,10 +114,11 @@ class WebSocketConnectionManager:
             if len(self.local_connections) == 1:
                 await self.cleanup_stale_subscriptions()
 
-            print(f"Client {client_id} connected to process {self.process_id}")
+            self.logger.info(
+                f"Client {client_id} connected to process {self.process_id}")
 
         except Exception as e:
-            print(f"Error connecting client {client_id}: {e}")
+            self.logger.error(f"Error connecting client {client_id}: {e}")
             raise
 
     async def _store_connection_info(self, client_id: str) -> None:
@@ -133,75 +142,84 @@ class WebSocketConnectionManager:
     async def disconnect(self, websocket: WebSocket, client_id: str) -> None:
         """Disconnect a WebSocket client with comprehensive cleanup"""
         try:
-            print(
+            self.logger.info(
                 f"🔄 Starting comprehensive cleanup for disconnected client: {client_id}")
 
             # Step 1: Clean up local connection tracking
             if client_id in self.local_connections:
                 del self.local_connections[client_id]
-                print(f"✅ Removed {client_id} from local connections")
+                self.logger.info(
+                    f"✅ Removed {client_id} from local connections")
 
             # Step 2: Clean up room memberships (comprehensive cross-process cleanup)
             if self.room_manager:
                 try:
-                    print(f"🏠 Starting room cleanup for {client_id}")
+                    self.logger.info(
+                        f"🏠 Starting room cleanup for {client_id}")
                     await self.room_manager.cleanup_client(client_id)
-                    print(f"✅ Room cleanup completed for {client_id}")
+                    self.logger.info(
+                        f"✅ Room cleanup completed for {client_id}")
                 except Exception as e:
-                    print(f"❌ Error during room cleanup for {client_id}: {e}")
+                    self.logger.error(
+                        f"❌ Error during room cleanup for {client_id}: {e}")
                     import traceback
-                    print(
+                    self.logger.error(
                         f"❌ Room cleanup traceback: {traceback.format_exc()}")
                     # Continue with other cleanup steps even if room cleanup fails
 
             # Step 3: Clean up symbol subscriptions if this was the last client
             try:
                 await self._cleanup_client_subscriptions(client_id)
-                print(f"✅ Subscription cleanup completed for {client_id}")
+                self.logger.info(
+                    f"✅ Subscription cleanup completed for {client_id}")
             except Exception as e:
-                print(
+                self.logger.error(
                     f"❌ Error during subscription cleanup for {client_id}: {e}")
 
             # Step 4: Remove from Redis connection tracking
             try:
                 await self._remove_connection_info(client_id)
-                print(f"✅ Removed {client_id} from Redis tracking")
+                self.logger.info(f"✅ Removed {client_id} from Redis tracking")
             except Exception as e:
-                print(f"❌ Error removing {client_id} from Redis tracking: {e}")
+                self.logger.error(
+                    f"❌ Error removing {client_id} from Redis tracking: {e}")
 
             # Step 5: Clean up any client-specific data
             try:
                 await self._cleanup_client_data(client_id)
-                print(f"✅ Client data cleanup completed for {client_id}")
+                self.logger.info(
+                    f"✅ Client data cleanup completed for {client_id}")
             except Exception as e:
-                print(
+                self.logger.error(
                     f"❌ Error during client data cleanup for {client_id}: {e}")
 
             # Step 6: Final verification - ensure client is completely cleaned up
             try:
                 await self._verify_final_cleanup(client_id)
-                print(
+                self.logger.info(
                     f"✅ Final cleanup verification completed for {client_id}")
             except Exception as e:
-                print(
+                self.logger.error(
                     f"❌ Error during final cleanup verification for {client_id}: {e}")
 
-            print(
+            self.logger.info(
                 f"🎉 Client {client_id} fully disconnected and cleaned up from process {self.process_id}")
 
         except Exception as e:
-            print(
+            self.logger.error(
                 f"❌ Critical error during disconnect cleanup for {client_id}: {e}")
             import traceback
-            print(f"❌ Critical error traceback: {traceback.format_exc()}")
+            self.logger.error(
+                f"❌ Critical error traceback: {traceback.format_exc()}")
 
             # Emergency cleanup - try to at least remove from local connections
             try:
                 self.local_connections.pop(client_id, None)
-                print(
+                self.logger.warning(
                     f"🆘 Emergency cleanup: removed {client_id} from local connections")
             except:
-                print(f"🆘 Emergency cleanup failed for {client_id}")
+                self.logger.error(
+                    f"🆘 Emergency cleanup failed for {client_id}")
 
     async def cleanup_stale_subscriptions(self) -> None:
         """Clean up stale subscriptions that may exist in Redis but not in memory"""
@@ -222,7 +240,8 @@ class WebSocketConnectionManager:
             for symbol in redis_quote_subs:
                 if symbol not in self.subscribed_symbols:
                     await redis_client.srem('websocket:subscribed_symbols', symbol)
-                    print(f"Cleaned up stale quote subscription: {symbol}")
+                    self.logger.info(
+                        f"Cleaned up stale quote subscription: {symbol}")
 
             # Clean up bars subscriptions that don't exist in memory
             for key in redis_bars_subs:
@@ -230,13 +249,14 @@ class WebSocketConnectionManager:
                     symbol, interval = key.split('|', 1)
                     if (symbol, interval) not in self.subscribed_bars:
                         await redis_client.srem('websocket:subscribed_bars', key)
-                        print(f"Cleaned up stale bars subscription: {key}")
+                        self.logger.info(
+                            f"Cleaned up stale bars subscription: {key}")
 
-            print(
+            self.logger.info(
                 f"Subscription cleanup completed. Active quotes: {len(self.subscribed_symbols)}, Active bars: {len(self.subscribed_bars)}")
 
         except Exception as e:
-            print(f"Error during subscription cleanup: {e}")
+            self.logger.error(f"Error during subscription cleanup: {e}")
 
     async def _remove_connection_info(self, client_id: str) -> None:
         """Remove connection information from Redis"""
@@ -249,16 +269,17 @@ class WebSocketConnectionManager:
     async def _cleanup_client_subscriptions(self, client_id: str) -> None:
         """Clean up symbol subscriptions if this was the last client interested"""
         try:
-            print(f"🔄 Starting subscription cleanup for client: {client_id}")
+            self.logger.info(
+                f"🔄 Starting subscription cleanup for client: {client_id}")
 
             # Get all active subscriptions for this client
             client_subscriptions = await self._get_client_subscriptions(client_id)
-            print(
+            self.logger.info(
                 f"Client {client_id} had {len(client_subscriptions['quotes'])} quote and {len(client_subscriptions['bars'])} bar subscriptions")
 
             # Use a flag to prevent race conditions during cleanup
             if hasattr(self, '_subscription_cleanup_in_progress'):
-                print(
+                self.logger.warning(
                     f"⚠️ Subscription cleanup already in progress for {client_id}, skipping")
                 return
 
@@ -276,12 +297,14 @@ class WebSocketConnectionManager:
                 # Always clear the flag
                 self._subscription_cleanup_in_progress = False
 
-            print(f"✅ Subscription cleanup completed for client: {client_id}")
+            self.logger.info(
+                f"✅ Subscription cleanup completed for client: {client_id}")
 
         except Exception as e:
-            print(f"❌ Error during subscription cleanup for {client_id}: {e}")
+            self.logger.error(
+                f"❌ Error during subscription cleanup for {client_id}: {e}")
             import traceback
-            print(
+            self.logger.error(
                 f"❌ Subscription cleanup traceback: {traceback.format_exc()}")
             # Ensure flag is cleared even on error
             if hasattr(self, '_subscription_cleanup_in_progress'):
@@ -312,13 +335,14 @@ class WebSocketConnectionManager:
             return client_subscriptions
 
         except Exception as e:
-            print(f"Error getting client subscriptions for {client_id}: {e}")
+            self.logger.error(
+                f"Error getting client subscriptions for {client_id}: {e}")
             return {'quotes': set(), 'bars': set()}
 
     async def _check_and_cleanup_quote_subscription(self, symbol: str, disconnected_client_id: str) -> None:
         """Check if quote subscription should be cleaned up and clean up if needed - RACE CONDITION SAFE"""
         try:
-            print(
+            self.logger.info(
                 f"🔍 Checking quote subscription for {symbol} after client {disconnected_client_id} disconnected")
 
             # Use atomic Redis operation to check room membership
@@ -335,60 +359,60 @@ class WebSocketConnectionManager:
                 other_clients = room_members - {disconnected_client_id}
 
                 if not other_clients:
-                    print(
+                    self.logger.info(
                         f"🗑️ No other clients interested in {symbol}, cleaning up subscription")
 
                     # Unsubscribe from BarsManager
                     if self.bars_manager_integration:
                         try:
                             await self.bars_manager_integration.unsubscribe_from_quotes(symbol)
-                            print(
+                            self.logger.info(
                                 f"✅ Unsubscribed from BarsManager quotes for {symbol}")
                         except Exception as e:
-                            print(
+                            self.logger.error(
                                 f"❌ Failed to unsubscribe from BarsManager quotes for {symbol}: {e}")
 
                     # Remove from Redis subscription tracking
                     try:
                         await redis_client.srem('websocket:subscribed_symbols', symbol)
-                        print(
+                        self.logger.info(
                             f"✅ Removed {symbol} from Redis quote subscriptions")
                     except Exception as e:
-                        print(
+                        self.logger.error(
                             f"❌ Failed to remove {symbol} from Redis quote subscriptions: {e}")
 
                     # Remove from local tracking
                     if symbol in self.subscribed_symbols:
                         self.subscribed_symbols.discard(symbol)
-                        print(
+                        self.logger.info(
                             f"✅ Removed {symbol} from local quote subscriptions")
                 else:
-                    print(
+                    self.logger.info(
                         f"✅ Other clients still interested in {symbol}, keeping subscription")
 
             except Exception as e:
-                print(
+                self.logger.error(
                     f"❌ Error checking Redis room membership for {symbol}: {e}")
                 # Fallback to local room check
                 if self.room_manager:
                     try:
                         other_clients_interested = await self._check_other_clients_quote_interest(symbol, disconnected_client_id)
                         if not other_clients_interested:
-                            print(
+                            self.logger.info(
                                 f"🗑️ Fallback check: No other clients interested in {symbol}, cleaning up subscription")
                             await self._force_cleanup_quote_subscription(symbol)
                     except Exception as fallback_error:
-                        print(
+                        self.logger.error(
                             f"❌ Fallback quote subscription check failed for {symbol}: {fallback_error}")
 
         except Exception as e:
-            print(
+            self.logger.error(
                 f"❌ Error checking quote subscription cleanup for {symbol}: {e}")
 
     async def _check_and_cleanup_bar_subscription(self, symbol: str, interval: str, disconnected_client_id: str) -> None:
         """Check if bar subscription should be cleaned up and clean up if needed - RACE CONDITION SAFE"""
         try:
-            print(
+            self.logger.info(
                 f"🔍 Checking bar subscription for {symbol}:{interval} after client {disconnected_client_id} disconnected")
 
             # Use atomic Redis operation to check room membership
@@ -405,107 +429,108 @@ class WebSocketConnectionManager:
                 other_clients = room_members - {disconnected_client_id}
 
                 if not other_clients:
-                    print(
+                    self.logger.info(
                         f"🗑️ No other clients interested in {symbol}:{interval}, cleaning up subscription")
 
                     # Unsubscribe from BarsManager
                     if self.bars_manager_integration:
                         try:
                             await self.bars_manager_integration.unsubscribe_from_bars(symbol, interval)
-                            print(
+                            self.logger.info(
                                 f"✅ Unsubscribed from BarsManager bars for {symbol}:{interval}")
                         except Exception as e:
-                            print(
+                            self.logger.error(
                                 f"❌ Failed to unsubscribe from BarsManager bars for {symbol}:{interval}: {e}")
 
                     # Remove from Redis subscription tracking
                     try:
                         subscription_key = f"{symbol}|{interval}"
                         await redis_client.srem('websocket:subscribed_bars', subscription_key)
-                        print(
+                        self.logger.info(
                             f"✅ Removed {symbol}:{interval} from Redis bar subscriptions")
                     except Exception as e:
-                        print(
+                        self.logger.error(
                             f"❌ Failed to remove {symbol}:{interval} from Redis bar subscriptions: {e}")
 
                     # Remove from local tracking
                     subscription_tuple = (symbol.upper(), interval)
                     if subscription_tuple in self.subscribed_bars:
                         self.subscribed_bars.discard(subscription_tuple)
-                        print(
+                        self.logger.info(
                             f"✅ Removed {symbol}:{interval} from local bar subscriptions")
                 else:
-                    print(
+                    self.logger.info(
                         f"✅ Other clients still interested in {symbol}:{interval}, keeping subscription")
 
             except Exception as e:
-                print(
+                self.logger.error(
                     f"❌ Error checking Redis room membership for {symbol}:{interval}: {e}")
                 # Fallback to local room check
                 if self.room_manager:
                     try:
                         other_clients_interested = await self._check_other_clients_bar_interest(symbol, interval, disconnected_client_id)
                         if not other_clients_interested:
-                            print(
+                            self.logger.info(
                                 f"🗑️ Fallback check: No other clients interested in {symbol}:{interval}, cleaning up subscription")
                             await self._force_cleanup_bar_subscription(symbol, interval)
                     except Exception as fallback_error:
-                        print(
+                        self.logger.error(
                             f"❌ Fallback bar subscription check failed for {symbol}:{interval}: {fallback_error}")
 
         except Exception as e:
-            print(
+            self.logger.error(
                 f"❌ Error checking bar subscription cleanup for {symbol}:{interval}: {e}")
 
     async def _force_cleanup_quote_subscription(self, symbol: str) -> None:
         """Force cleanup of quote subscription - used when fallback checks are needed"""
         try:
-            print(f"🔄 Force cleaning up quote subscription for {symbol}")
+            self.logger.info(
+                f"🔄 Force cleaning up quote subscription for {symbol}")
 
             # Unsubscribe from BarsManager
             if self.bars_manager_integration:
                 try:
                     await self.bars_manager_integration.unsubscribe_from_quotes(symbol)
-                    print(
+                    self.logger.info(
                         f"✅ Force unsubscribed from BarsManager quotes for {symbol}")
                 except Exception as e:
-                    print(
+                    self.logger.error(
                         f"❌ Force unsubscribe from BarsManager quotes failed for {symbol}: {e}")
 
             # Remove from Redis subscription tracking
             try:
                 redis_client = await self.get_redis()
                 await redis_client.srem('websocket:subscribed_symbols', symbol)
-                print(
+                self.logger.info(
                     f"✅ Force removed {symbol} from Redis quote subscriptions")
             except Exception as e:
-                print(
+                self.logger.error(
                     f"❌ Force remove from Redis quote subscriptions failed for {symbol}: {e}")
 
             # Remove from local tracking
             if symbol in self.subscribed_symbols:
                 self.subscribed_symbols.discard(symbol)
-                print(
+                self.logger.info(
                     f"✅ Force removed {symbol} from local quote subscriptions")
 
         except Exception as e:
-            print(
+            self.logger.error(
                 f"❌ Error in force quote subscription cleanup for {symbol}: {e}")
 
     async def _force_cleanup_bar_subscription(self, symbol: str, interval: str) -> None:
         """Force cleanup of bar subscription - used when fallback checks are needed"""
         try:
-            print(
+            self.logger.info(
                 f"🔄 Force cleaning up bar subscription for {symbol}:{interval}")
 
             # Unsubscribe from BarsManager
             if self.bars_manager_integration:
                 try:
                     await self.bars_manager_integration.unsubscribe_from_bars(symbol, interval)
-                    print(
+                    self.logger.info(
                         f"✅ Force unsubscribed from BarsManager bars for {symbol}:{interval}")
                 except Exception as e:
-                    print(
+                    self.logger.error(
                         f"❌ Force unsubscribe from BarsManager bars failed for {symbol}:{interval}: {e}")
 
             # Remove from Redis subscription tracking
@@ -513,21 +538,21 @@ class WebSocketConnectionManager:
                 redis_client = await self.get_redis()
                 subscription_key = f"{symbol}|{interval}"
                 await redis_client.srem('websocket:subscribed_bars', subscription_key)
-                print(
+                self.logger.info(
                     f"✅ Force removed {symbol}:{interval} from Redis bar subscriptions")
             except Exception as e:
-                print(
+                self.logger.error(
                     f"❌ Force remove from Redis bar subscriptions failed for {symbol}:{interval}: {e}")
 
             # Remove from local tracking
             subscription_tuple = (symbol.upper(), interval)
             if subscription_tuple in self.subscribed_bars:
                 self.subscribed_bars.discard(subscription_tuple)
-                print(
+                self.logger.info(
                     f"✅ Force removed {symbol}:{interval} from local bar subscriptions")
 
         except Exception as e:
-            print(
+            self.logger.error(
                 f"❌ Error in force bar subscription cleanup for {symbol}:{interval}: {e}")
 
     async def _check_other_clients_quote_interest(self, symbol: str, excluded_client_id: str) -> bool:
@@ -544,13 +569,13 @@ class WebSocketConnectionManager:
             other_clients = room_clients - {excluded_client_id}
 
             has_other_clients = len(other_clients) > 0
-            print(
+            self.logger.debug(
                 f"Quote room {room_id} has {len(other_clients)} other clients: {list(other_clients)}")
 
             return has_other_clients
 
         except Exception as e:
-            print(
+            self.logger.error(
                 f"Error checking other clients quote interest for {symbol}: {e}")
             return False
 
@@ -568,13 +593,13 @@ class WebSocketConnectionManager:
             other_clients = room_clients - {excluded_client_id}
 
             has_other_clients = len(other_clients) > 0
-            print(
+            self.logger.debug(
                 f"Bar room {room_id} has {len(other_clients)} other clients: {list(other_clients)}")
 
             return has_other_clients
 
         except Exception as e:
-            print(
+            self.logger.error(
                 f"Error checking other clients bar interest for {symbol}:{interval}: {e}")
             return False
 
@@ -587,25 +612,26 @@ class WebSocketConnectionManager:
             client_keys = await redis_client.keys(f"client:{client_id}:*")
             if client_keys:
                 await redis_client.delete(*client_keys)
-                print(
+                self.logger.info(
                     f"Cleaned up {len(client_keys)} client-specific keys for {client_id}")
 
             # Clean up any client preferences or settings
             preference_keys = await redis_client.keys(f"preferences:{client_id}:*")
             if preference_keys:
                 await redis_client.delete(*preference_keys)
-                print(
+                self.logger.info(
                     f"Cleaned up {len(preference_keys)} preference keys for {client_id}")
 
             # Clean up any client session data
             session_keys = await redis_client.keys(f"session:{client_id}:*")
             if session_keys:
                 await redis_client.delete(*session_keys)
-                print(
+                self.logger.info(
                     f"Cleaned up {len(session_keys)} session keys for {client_id}")
 
         except Exception as e:
-            print(f"Error cleaning up client data for {client_id}: {e}")
+            self.logger.error(
+                f"Error cleaning up client data for {client_id}: {e}")
 
     async def send_personal_message(self, message: str, client_id: str) -> bool:
         """Send message to a specific client"""
@@ -615,7 +641,7 @@ class WebSocketConnectionManager:
                 await websocket.send_text(message)
                 return True
             except Exception as e:
-                print(f"Error sending message to {client_id}: {e}")
+                self.logger.error(f"Error sending message to {client_id}: {e}")
                 # Remove broken connection
                 await self.disconnect(websocket, client_id)
                 return False
@@ -623,34 +649,34 @@ class WebSocketConnectionManager:
 
     async def broadcast(self, message: str) -> None:
         """Broadcast to all connections in this process"""
-        print(
+        self.logger.info(
             f"Broadcasting message to {len(self.local_connections)} local connections: {message[:100]}...")
 
         # Log the message being broadcast
         try:
             parsed_message = json.loads(message)
-            print(f"Broadcasting parsed message: {parsed_message}")
+            self.logger.debug(f"Broadcasting parsed message: {parsed_message}")
         except Exception as e:
-            print(f"Error parsing broadcast message: {e}")
-            print(f"Raw message: {message}")
+            self.logger.error(f"Error parsing broadcast message: {e}")
+            self.logger.debug(f"Raw message: {message}")
 
         disconnected_clients = []
 
         for client_id in list(self.local_connections.keys()):
-            print(f"Attempting to send to client {client_id}")
+            self.logger.debug(f"Attempting to send to client {client_id}")
             success = await self.send_personal_message(message, client_id)
             if not success:
-                print(f"Failed to send to client {client_id}")
+                self.logger.warning(f"Failed to send to client {client_id}")
                 disconnected_clients.append(client_id)
             else:
-                print(f"Successfully sent to client {client_id}")
+                self.logger.debug(f"Successfully sent to client {client_id}")
 
         # Clean up disconnected clients
         for client_id in disconnected_clients:
             if client_id in self.local_connections:
                 await self.disconnect(self.local_connections[client_id], client_id)
 
-        print(
+        self.logger.info(
             f"Broadcast completed. Sent to {len(self.local_connections) - len(disconnected_clients)} clients, {len(disconnected_clients)} disconnected.")
 
     async def broadcast_to_all_processes(self, message: str) -> None:
@@ -663,7 +689,7 @@ class WebSocketConnectionManager:
                 'timestamp': datetime.now().isoformat()
             }))
         except Exception as e:
-            print(f"Error broadcasting message: {e}")
+            self.logger.error(f"Error broadcasting message: {e}")
 
     async def subscribe_symbol(self, symbol: str) -> None:
         """Subscribe to a symbol for real-time quotes"""
@@ -675,21 +701,23 @@ class WebSocketConnectionManager:
                 if self.bars_manager_integration:
                     await self.bars_manager_integration.subscribe_to_quotes(symbol)
                 else:
-                    print("BarsManager integration not available")
+                    self.logger.warning(
+                        "BarsManager integration not available")
 
                 # Subscribe via Redis subscription service
                 if self.redis_subscription_service:
                     await self.redis_subscription_service.subscribe_to_quotes(symbol)
                 else:
-                    print("Redis subscription service not available")
+                    self.logger.warning(
+                        "Redis subscription service not available")
 
                 # Persist subscription to Redis for monitoring and persistence
                 redis_client = await self.get_redis()
                 await redis_client.sadd('websocket:subscribed_symbols', symbol)
 
-                print(f"Subscribed to symbol: {symbol}")
+                self.logger.info(f"Subscribed to symbol: {symbol}")
             except Exception as e:
-                print(f"Error subscribing to symbol {symbol}: {e}")
+                self.logger.error(f"Error subscribing to symbol {symbol}: {e}")
                 # Rollback on error
                 self.subscribed_symbols.remove(symbol)
 
@@ -703,21 +731,24 @@ class WebSocketConnectionManager:
                 if self.bars_manager_integration:
                     await self.bars_manager_integration.unsubscribe_from_quotes(symbol)
                 else:
-                    print("BarsManager integration not available")
+                    self.logger.warning(
+                        "BarsManager integration not available")
 
                 # Unsubscribe via Redis subscription service
                 if self.redis_subscription_service:
                     await self.redis_subscription_service.unsubscribe_from_quotes(symbol)
                 else:
-                    print("Redis subscription service not available")
+                    self.logger.warning(
+                        "Redis subscription service not available")
 
                 # Remove subscription from Redis
                 redis_client = await self.get_redis()
                 await redis_client.srem('websocket:subscribed_symbols', symbol)
 
-                print(f"Unsubscribed from symbol: {symbol}")
+                self.logger.info(f"Unsubscribed from symbol: {symbol}")
             except Exception as e:
-                print(f"Error unsubscribing from symbol {symbol}: {e}")
+                self.logger.error(
+                    f"Error unsubscribing from symbol {symbol}: {e}")
                 # Rollback on error
                 self.subscribed_symbols.add(symbol)
 
@@ -737,16 +768,18 @@ class WebSocketConnectionManager:
 
                         redis_client = await self.get_redis()
                         await redis_client.sadd('websocket:subscribed_bars', f"{key[0]}|{key[1]}")
-                        print(f"Subscribed to bars: {key[0]} {key[1]}")
+                        self.logger.info(
+                            f"Subscribed to bars: {key[0]} {key[1]}")
                     else:
-                        print(
+                        self.logger.error(
                             f"Failed to subscribe to bars {key} via BarsManager")
                         self.subscribed_bars.remove(key)
                 else:
-                    print(f"BarsManager integration not available for {key}")
+                    self.logger.warning(
+                        f"BarsManager integration not available for {key}")
                     self.subscribed_bars.remove(key)
             except Exception as e:
-                print(f"Error subscribing to bars {key}: {e}")
+                self.logger.error(f"Error subscribing to bars {key}: {e}")
                 self.subscribed_bars.remove(key)
 
     async def unsubscribe_bars(self, symbol: str, interval: str) -> None:
@@ -765,9 +798,9 @@ class WebSocketConnectionManager:
 
                 redis_client = await self.get_redis()
                 await redis_client.srem('websocket:subscribed_bars', f"{key[0]}|{key[1]}")
-                print(f"Unsubscribed from bars: {key[0]} {key[1]}")
+                self.logger.info(f"Unsubscribed from bars: {key[0]} {key[1]}")
             except Exception as e:
-                print(f"Error unsubscribing from bars {key}: {e}")
+                self.logger.error(f"Error unsubscribing from bars {key}: {e}")
 
     async def get_all_connections(self) -> list:
         """Get all active connections across all processes"""
@@ -776,7 +809,7 @@ class WebSocketConnectionManager:
             connections = await redis_client.keys('websocket:connections:*')
             return connections
         except Exception as e:
-            print(f"Error getting connections: {e}")
+            self.logger.error(f"Error getting connections: {e}")
             return []
 
     async def get_subscription_status(self) -> dict:
@@ -797,7 +830,7 @@ class WebSocketConnectionManager:
                 'memory_bars_keys': [f"{symbol}|{interval}" for symbol, interval in self.subscribed_bars]
             }
         except Exception as e:
-            print(f"Error getting subscription status: {e}")
+            self.logger.error(f"Error getting subscription status: {e}")
             return {
                 'error': str(e),
                 'memory_quotes': len(self.subscribed_symbols),
@@ -845,25 +878,26 @@ class WebSocketConnectionManager:
                                                 try:
                                                     await self.send_personal_message(room_message, client_id)
                                                 except Exception as e:
-                                                    print(
+                                                    self.logger.error(
                                                         f"Error sending room message to {client_id}: {e}")
 
-                                        print(
+                                        self.logger.debug(
                                             f"Processed room broadcast for {room_id}: {len(room_clients)} local clients")
 
                             except Exception as e:
-                                print(
+                                self.logger.error(
                                     f"Error processing broadcast message: {e}")
                 except Exception as e:
-                    print(f"Broadcast listener error: {e}")
+                    self.logger.error(f"Broadcast listener error: {e}")
                 finally:
                     await pubsub.close()
 
             self.broadcast_task = asyncio.create_task(listen_for_broadcasts())
-            print(f"Broadcast listener started for process {self.process_id}")
+            self.logger.info(
+                f"Broadcast listener started for process {self.process_id}")
 
         except Exception as e:
-            print(f"Error starting broadcast listener: {e}")
+            self.logger.error(f"Error starting broadcast listener: {e}")
 
     async def start_heartbeat(self) -> None:
         """Start heartbeat mechanism to detect stale connections"""
@@ -884,18 +918,18 @@ class WebSocketConnectionManager:
                                 current_time
                             )
                         except Exception as e:
-                            print(
+                            self.logger.error(
                                 f"Error updating heartbeat for {client_id}: {e}")
 
                     # Clean up stale connections from other processes
                     await self.cleanup_stale_connections()
 
                 except Exception as e:
-                    print(f"Heartbeat error: {e}")
+                    self.logger.error(f"Heartbeat error: {e}")
                     await asyncio.sleep(5)  # Wait before retrying
 
         self.heartbeat_task = asyncio.create_task(heartbeat_loop())
-        print(f"Heartbeat started for process {self.process_id}")
+        self.logger.info(f"Heartbeat started for process {self.process_id}")
 
     async def cleanup_stale_connections(self) -> None:
         """Clean up stale connections from other processes"""
@@ -916,12 +950,13 @@ class WebSocketConnectionManager:
                         if (current_time - last_heartbeat).total_seconds() > 120:
                             # Connection is stale, remove it
                             await redis_client.delete(key)
-                            print(f"Cleaned up stale connection: {key}")
+                            self.logger.info(
+                                f"Cleaned up stale connection: {key}")
                 except Exception as e:
-                    print(f"Error checking connection {key}: {e}")
+                    self.logger.error(f"Error checking connection {key}: {e}")
 
         except Exception as e:
-            print(f"Error during cleanup: {e}")
+            self.logger.error(f"Error during cleanup: {e}")
 
     async def get_total_connections(self) -> int:
         """Get total number of connections across all processes"""
@@ -935,7 +970,7 @@ class WebSocketConnectionManager:
                 total += count
             return total
         except Exception as e:
-            print(f"Error getting total connections: {e}")
+            self.logger.error(f"Error getting total connections: {e}")
             return len(self.local_connections)
 
     async def get_redis_status(self) -> dict:
@@ -949,7 +984,7 @@ class WebSocketConnectionManager:
                 'uptime': info.get('uptime_in_seconds', 0)
             }
         except Exception as e:
-            print(f"Error getting Redis status: {e}")
+            self.logger.error(f"Error getting Redis status: {e}")
             return {'error': str(e)}
 
     async def startup(self) -> None:
@@ -961,49 +996,83 @@ class WebSocketConnectionManager:
 
         await self.start_broadcast_listener()
         await self.start_heartbeat()
-        print(
+        self.logger.info(
             f"WebSocketConnectionManager started for process {self.process_id}")
+
+    async def _room_broadcast_callback(self, room_id: str, ticker: str, message: Dict[str, Any]) -> None:
+        """Callback for room-based broadcasting from Redis subscription service"""
+        try:
+            if self.room_manager:
+                # Update bar activity timestamp if this is a bars message
+                if message.get('type') == 'bars':
+                    await self.room_manager.update_bar_activity(room_id)
+                
+                # Use room manager to broadcast to specific room
+                await self.room_manager.broadcast_to_room(room_id, json.dumps(message))
+                self.logger.debug(f"Room broadcast to {room_id} for {ticker}: {message.get('type', 'unknown')}")
+            else:
+                # Fallback to global broadcast if room manager not available
+                await self.broadcast(json.dumps(message))
+                self.logger.debug(f"Fallback global broadcast for {ticker} (no room manager)")
+        except Exception as e:
+            self.logger.error(f"Error in room broadcast callback for {room_id}: {e}")
+            # Fallback to global broadcast on error
+            try:
+                await self.broadcast(json.dumps(message))
+            except Exception as fallback_error:
+                self.logger.error(f"Fallback broadcast also failed: {fallback_error}")
 
     async def _initialize_integration_services(self) -> None:
         """Initialize BarsManager integration and Redis subscription services"""
         try:
             # Initialize BarsManager integration
             self.bars_manager_integration = BarsManagerIntegration()
-            print("BarsManager integration initialized")
+            self.logger.info("BarsManager integration initialized")
 
             # Initialize Redis subscription service
             redis_client = await self.get_redis()
             self.redis_subscription_service = RedisSubscriptionService(
                 redis_client,
-                self.broadcast
+                self.broadcast,
+                self._room_broadcast_callback  # Add room broadcast callback
             )
             await self.redis_subscription_service.start()
-            print("Redis subscription service initialized and started")
+            self.logger.info(
+                "Redis subscription service initialized and started")
 
             # Initialize room manager
             self.room_manager = RoomManager(redis_client)
             await self.room_manager.start()
-            print("Room manager initialized and started")
+            self.logger.info("Room manager initialized and started")
 
             # Set up cross-references between services
             self.room_manager.set_bars_manager_integration(
                 self.bars_manager_integration)
+            self.room_manager.set_redis_subscription_service(
+                self.redis_subscription_service)
             self.bars_manager_integration.set_room_manager(self.room_manager)
-            print("Service cross-references established")
+            self.logger.info("Service cross-references established")
 
             # Sync existing subscriptions from BarsManager integration
             await self._sync_existing_subscriptions()
-            print("Synced existing subscriptions from BarsManager")
+            self.logger.info("Synced existing subscriptions from BarsManager")
 
         except Exception as e:
-            print(f"Error initializing integration services: {e}")
+            self.logger.error(f"Error initializing integration services: {e}")
+            # Ensure integration services are set to None on failure
+            self.bars_manager_integration = None
+            self.redis_subscription_service = None
+            self.room_manager = None
+            self.logger.warning(
+                "Integration services set to None due to initialization failure")
             # Continue without integration services - fallback to manual mode
 
     async def _sync_existing_subscriptions(self) -> None:
         """Sync existing subscriptions from BarsManager integration to Redis subscription service"""
         try:
             if not self.bars_manager_integration or not self.redis_subscription_service:
-                print("Cannot sync subscriptions - services not initialized")
+                self.logger.warning(
+                    "Cannot sync subscriptions - services not initialized")
                 return
 
             # Get existing quote subscriptions
@@ -1011,11 +1080,13 @@ class WebSocketConnectionManager:
             for symbol in active_quotes:
                 if symbol not in self.subscribed_symbols:
                     self.subscribed_symbols.add(symbol)
-                    print(f"Synced existing quote subscription: {symbol}")
+                    self.logger.info(
+                        f"Synced existing quote subscription: {symbol}")
 
                 # Subscribe to Redis subscription service
                 await self.redis_subscription_service.subscribe_to_quotes(symbol)
-                print(f"Subscribed {symbol} to Redis subscription service")
+                self.logger.info(
+                    f"Subscribed {symbol} to Redis subscription service")
 
             # Get existing bar subscriptions
             active_bars = self.bars_manager_integration.active_bar_subscriptions
@@ -1023,19 +1094,19 @@ class WebSocketConnectionManager:
                 key = (symbol.upper(), interval)
                 if key not in self.subscribed_bars:
                     self.subscribed_bars.add(key)
-                    print(
+                    self.logger.info(
                         f"Synced existing bar subscription: {symbol}:{interval}")
 
                 # Subscribe to Redis subscription service
                 await self.redis_subscription_service.subscribe_to_bars(symbol, interval)
-                print(
+                self.logger.info(
                     f"Subscribed {symbol}:{interval} to Redis subscription service")
 
-            print(
+            self.logger.info(
                 f"Synced {len(active_quotes)} quote and {len(active_bars)} bar subscriptions")
 
         except Exception as e:
-            print(f"Error syncing existing subscriptions: {e}")
+            self.logger.error(f"Error syncing existing subscriptions: {e}")
 
     async def shutdown(self) -> None:
         """Clean shutdown of the connection manager"""
@@ -1046,19 +1117,21 @@ class WebSocketConnectionManager:
             try:
                 await self.bars_manager_integration.cleanup()
             except Exception as e:
-                print(f"Error cleaning up BarsManager integration: {e}")
+                self.logger.error(
+                    f"Error cleaning up BarsManager integration: {e}")
 
         if self.redis_subscription_service:
             try:
                 await self.redis_subscription_service.stop()
             except Exception as e:
-                print(f"Error stopping Redis subscription service: {e}")
+                self.logger.error(
+                    f"Error stopping Redis subscription service: {e}")
 
         if self.room_manager:
             try:
                 await self.room_manager.stop()
             except Exception as e:
-                print(f"Error stopping room manager: {e}")
+                self.logger.error(f"Error stopping room manager: {e}")
 
         # Close all local connections
         for client_id in list(self.local_connections.keys()):
@@ -1081,7 +1154,7 @@ class WebSocketConnectionManager:
         if self.heartbeat_task:
             self.heartbeat_task.cancel()
 
-        print(
+        self.logger.info(
             f"WebSocketConnectionManager shutdown for process {self.process_id}")
 
     # Utility methods for external services to use
@@ -1117,28 +1190,28 @@ class WebSocketConnectionManager:
     async def create_room(self, room_id: str, metadata: Optional[Dict[str, Any]] = None) -> bool:
         """Create a new room"""
         if not self.room_manager:
-            print("Room manager not available")
+            self.logger.warning("Room manager not available")
             return False
         return await self.room_manager.create_room(room_id, metadata)
 
     async def join_room(self, client_id: str, room_id: str) -> bool:
         """Add a client to a room"""
         if not self.room_manager:
-            print("Room manager not available")
+            self.logger.warning("Room manager not available")
             return False
         return await self.room_manager.join_room(client_id, room_id)
 
     async def leave_room(self, client_id: str, room_id: str) -> bool:
         """Remove a client from a room"""
         if not self.room_manager:
-            print("Room manager not available")
+            self.logger.warning("Room manager not available")
             return False
         return await self.room_manager.leave_room(client_id, room_id)
 
     async def broadcast_to_room(self, room_id: str, message: str, exclude_client: Optional[str] = None) -> int:
         """Broadcast a message to all clients in a room"""
         if not self.room_manager:
-            print("Room manager not available")
+            self.logger.warning("Room manager not available")
             return 0
         return await self.room_manager.broadcast_to_room(room_id, message, exclude_client)
 
@@ -1169,14 +1242,15 @@ class WebSocketConnectionManager:
     async def _verify_final_cleanup(self, client_id: str) -> None:
         """Final verification that client cleanup was successful across all processes"""
         try:
-            print(f"🔍 Performing final cleanup verification for {client_id}")
+            self.logger.info(
+                f"🔍 Performing final cleanup verification for {client_id}")
 
             # Check 1: Verify client is not in local connections
             if client_id in self.local_connections:
-                print(
+                self.logger.warning(
                     f"⚠️ WARNING: Client {client_id} still in local connections")
             else:
-                print(
+                self.logger.info(
                     f"✅ Client {client_id} properly removed from local connections")
 
             # Check 2: Verify client is not in any rooms (if room manager available)
@@ -1184,7 +1258,7 @@ class WebSocketConnectionManager:
                 try:
                     # Use a flag to prevent infinite verification loops
                     if hasattr(self, '_final_verification_in_progress') and self._final_verification_in_progress:
-                        print(
+                        self.logger.warning(
                             f"⚠️ Final verification already in progress for {client_id}, skipping")
                         return
 
@@ -1195,10 +1269,10 @@ class WebSocketConnectionManager:
                         local_rooms = self.room_manager.client_rooms.get(
                             client_id, set())
                         if local_rooms:
-                            print(
+                            self.logger.warning(
                                 f"⚠️ WARNING: Client {client_id} still found in local room tracking: {list(local_rooms)}")
                         else:
-                            print(
+                            self.logger.info(
                                 f"✅ Client {client_id} properly removed from local room tracking")
 
                     finally:
@@ -1206,7 +1280,7 @@ class WebSocketConnectionManager:
                         self._final_verification_in_progress = False
 
                 except Exception as e:
-                    print(
+                    self.logger.error(
                         f"❌ Error during room verification for {client_id}: {e}")
 
             # Check 3: Verify client is not in any subscription tracking
@@ -1214,21 +1288,24 @@ class WebSocketConnectionManager:
                 # Check if client still has any active subscriptions
                 client_subscriptions = await self._get_client_subscriptions(client_id)
                 if client_subscriptions['quotes'] or client_subscriptions['bars']:
-                    print(
+                    self.logger.warning(
                         f"⚠️ WARNING: Client {client_id} still has active subscriptions")
-                    print(f"   Quotes: {client_subscriptions['quotes']}")
-                    print(f"   Bars: {client_subscriptions['bars']}")
+                    self.logger.warning(
+                        f"   Quotes: {client_subscriptions['quotes']}")
+                    self.logger.warning(
+                        f"   Bars: {client_subscriptions['bars']}")
                 else:
-                    print(
+                    self.logger.info(
                         f"✅ Client {client_id} properly removed from subscription tracking")
             except Exception as e:
-                print(
+                self.logger.error(
                     f"❌ Error checking subscription verification for {client_id}: {e}")
 
-            print(f"🔍 Final cleanup verification completed for {client_id}")
+            self.logger.info(
+                f"🔍 Final cleanup verification completed for {client_id}")
 
         except Exception as e:
-            print(
+            self.logger.error(
                 f"❌ Error during final cleanup verification for {client_id}: {e}")
             # Ensure flag is cleared even on error
             if hasattr(self, '_final_verification_in_progress'):
@@ -1237,11 +1314,11 @@ class WebSocketConnectionManager:
     async def verify_cleanup_integrity(self) -> Dict[str, Any]:
         """Verify cleanup system integrity across all processes - PREVENTS INFINITE LOOPS"""
         try:
-            print("🔍 Starting cleanup integrity verification...")
+            self.logger.info("🔍 Starting cleanup integrity verification...")
 
             # Use a flag to prevent infinite verification loops
             if hasattr(self, '_integrity_verification_in_progress') and self._integrity_verification_in_progress:
-                print(
+                self.logger.warning(
                     "⚠️ Integrity verification already in progress, skipping to prevent loops")
                 return {
                     'timestamp': datetime.now().isoformat(),
@@ -1266,7 +1343,7 @@ class WebSocketConnectionManager:
                     redis_consistency = await self._verify_redis_connection_consistency()
                     verification_results['redis_connections'] = redis_consistency
                 except Exception as e:
-                    print(
+                    self.logger.error(
                         f"❌ Error checking Redis connection consistency: {e}")
                     verification_results['redis_connections_error'] = str(e)
 
@@ -1276,7 +1353,8 @@ class WebSocketConnectionManager:
                         room_integrity = await self._verify_room_integrity()
                         verification_results['room_integrity'] = room_integrity
                     except Exception as e:
-                        print(f"❌ Error checking room integrity: {e}")
+                        self.logger.error(
+                            f"❌ Error checking room integrity: {e}")
                         verification_results['room_integrity_error'] = str(e)
 
                 # Check 3: Subscription integrity
@@ -1284,7 +1362,8 @@ class WebSocketConnectionManager:
                     subscription_integrity = await self._verify_subscription_integrity()
                     verification_results['subscription_integrity'] = subscription_integrity
                 except Exception as e:
-                    print(f"❌ Error checking subscription integrity: {e}")
+                    self.logger.error(
+                        f"❌ Error checking subscription integrity: {e}")
                     verification_results['subscription_integrity_error'] = str(
                         e)
 
@@ -1300,7 +1379,7 @@ class WebSocketConnectionManager:
 
                 verification_results['overall_status'] = 'healthy' if not has_errors else 'degraded'
 
-                print(
+                self.logger.info(
                     f"🔍 Cleanup integrity verification completed: {verification_results['overall_status']}")
                 return verification_results
 
@@ -1309,7 +1388,8 @@ class WebSocketConnectionManager:
                 self._integrity_verification_in_progress = False
 
         except Exception as e:
-            print(f"❌ Error during cleanup integrity verification: {e}")
+            self.logger.error(
+                f"❌ Error during cleanup integrity verification: {e}")
             # Ensure flag is cleared even on error
             if hasattr(self, '_integrity_verification_in_progress'):
                 self._integrity_verification_in_progress = False
@@ -1318,6 +1398,30 @@ class WebSocketConnectionManager:
                 'overall_status': 'error',
                 'error': str(e)
             }
+
+    async def _verify_redis_connection_consistency(self) -> Dict[str, Any]:
+        """Verify Redis connection consistency across local and Redis tracking"""
+        try:
+            redis_consistency = {
+                'local_connections': len(self.local_connections),
+                'redis_processes': 0,
+                'only_in_redis': [],
+                'only_in_local': []
+            }
+
+            # Get Redis process counts
+            redis_client = await self.get_redis()
+            process_keys = await redis_client.keys('websocket:processes:*:clients')
+            redis_consistency['redis_processes'] = len(process_keys)
+
+            # Check for inconsistencies (simplified check)
+            # This is a basic check - in a full implementation you'd compare individual clients
+            return redis_consistency
+
+        except Exception as e:
+            self.logger.error(
+                f"Error verifying Redis connection consistency: {e}")
+            return {'error': str(e)}
 
     async def _verify_room_integrity(self) -> Dict[str, Any]:
         """Verify room integrity across local and Redis tracking"""
@@ -1368,7 +1472,7 @@ class WebSocketConnectionManager:
             return room_integrity
 
         except Exception as e:
-            print(f"Error verifying room integrity: {e}")
+            self.logger.error(f"Error verifying room integrity: {e}")
             return {'error': str(e)}
 
     async def _verify_subscription_integrity(self) -> Dict[str, Any]:
@@ -1435,5 +1539,5 @@ class WebSocketConnectionManager:
             return subscription_integrity
 
         except Exception as e:
-            print(f"Error verifying subscription integrity: {e}")
+            self.logger.error(f"Error verifying subscription integrity: {e}")
             return {'error': str(e)}

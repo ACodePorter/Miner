@@ -17,14 +17,12 @@ else
 fi
 
 
-find "$mydir" -name requirements.txt -exec python -m pip install -q -U -r {} \;
-
-pip install -q $mydir/Detonator
-pip install -q $mydir/DataMiner
-pip install -q $mydir/MarketBreadth
-pip install -q $mydir/MinerWorkers
-pip install -q $mydir/BrowserScraper
-pip install -q $mydir/MinerService
+pip install -q -U $mydir/Detonator
+pip install -q -U $mydir/DataMiner
+pip install -q -U $mydir/MarketBreadth
+pip install -q -U $mydir/MinerWorkers
+pip install -q -U $mydir/BrowserScraper
+pip install -q -U $mydir/MinerService
 
 set +x
 set +e

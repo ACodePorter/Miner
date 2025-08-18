@@ -41,6 +41,15 @@ class RoomManager:
         self.data_broadcast_task: Optional[asyncio.Task] = None
         self.running = False
 
+    def set_bars_manager_integration(self, bars_manager_integration) -> None:
+        """Set the BarsManager integration reference"""
+        self.bars_manager_integration = bars_manager_integration
+        self.logger.info("BarsManager integration set for RoomManager")
+
+    def set_redis_subscription_service(self, redis_subscription_service):
+        """Set the RedisSubscriptionService reference"""
+        self.redis_subscription_service = redis_subscription_service
+
     async def start(self) -> None:
         """Start the room manager"""
         self.running = True
@@ -48,11 +57,6 @@ class RoomManager:
         self.data_broadcast_task = asyncio.create_task(
             self._data_broadcast_loop())
         self.logger.info(f"RoomManager started for process {self.process_id}")
-
-    def set_bars_manager_integration(self, bars_manager_integration) -> None:
-        """Set the BarsManager integration reference"""
-        self.bars_manager_integration = bars_manager_integration
-        self.logger.info("BarsManager integration set for RoomManager")
 
     async def manual_cleanup_empty_rooms(self) -> Dict[str, Any]:
         """Manually trigger cleanup of empty rooms and return cleanup results"""
@@ -207,6 +211,15 @@ class RoomManager:
                 self.logger.info(
                     f"Subscribed to bars for {ticker} {interval} via BarsManager")
 
+            # Subscribe to Redis channels via RedisSubscriptionService if available
+            if hasattr(self, 'redis_subscription_service') and self.redis_subscription_service:
+                await self.redis_subscription_service.subscribe_to_bars(ticker, interval)
+                self.logger.info(
+                    f"Subscribed to Redis bars channel for {ticker} {interval} via RedisSubscriptionService")
+            else:
+                self.logger.warning(
+                    f"RedisSubscriptionService not available - bars for {ticker} {interval} will not be received from Redis")
+
             return room_id
 
         except Exception as e:
@@ -256,6 +269,12 @@ class RoomManager:
                 await self.bars_manager_integration.unsubscribe_from_bars(ticker, interval)
                 self.logger.info(
                     f"Unsubscribed from bars for {ticker} {interval} via BarsManager")
+
+            # Unsubscribe from Redis channels via RedisSubscriptionService if available
+            if hasattr(self, 'redis_subscription_service') and self.redis_subscription_service:
+                await self.redis_subscription_service.unsubscribe_from_bars(ticker, interval)
+                self.logger.info(
+                    f"Unsubscribed from Redis bars channel for {ticker} {interval} via RedisSubscriptionService")
 
             # Remove from tracking
             self.bar_rooms.pop(subscription_key, None)
@@ -560,7 +579,7 @@ class RoomManager:
             local_clients = self.local_rooms.get(room_id, set())
             local_count = len(local_clients)
 
-            self.logger.info(
+            self.logger.debug(
                 f"Broadcasting to room {room_id}: {local_count} local clients, {len(clients)} total clients")
             return local_count
 
@@ -629,25 +648,35 @@ class RoomManager:
                 f"Failed to update metadata for room {room_id}: {e}")
             return False
 
+    async def update_bar_activity(self, room_id: str) -> None:
+        """Update the last bar activity timestamp for a room"""
+        try:
+            if room_id not in self.room_metadata:
+                self.room_metadata[room_id] = {}
+            self.room_metadata[room_id]['last_bar_update'] = datetime.now().timestamp()
+            self.room_metadata[room_id]['last_activity'] = datetime.now().isoformat()
+        except Exception as e:
+            self.logger.error(f"Error updating bar activity for room {room_id}: {e}")
+
     async def cleanup_client(self, client_id: str) -> None:
         """Clean up when a client disconnects - comprehensive cross-process cleanup"""
         try:
-            print(
+            self.logger.info(
                 f"Starting comprehensive room cleanup for client: {client_id}")
 
             # Step 1: Discover ALL rooms the client is in across ALL processes
             all_client_rooms = await self._discover_all_client_rooms(client_id)
-            print(
+            self.logger.info(
                 f"Client {client_id} discovered in {len(all_client_rooms)} rooms across all processes: {list(all_client_rooms)}")
 
             if not all_client_rooms:
-                print(
+                self.logger.info(
                     f"Client {client_id} not found in any rooms, skipping room cleanup")
                 # Still clean up local tracking
                 local_rooms_cleaned = len(
                     self.client_rooms.get(client_id, set()))
                 self.client_rooms.pop(client_id, None)
-                print(
+                self.logger.info(
                     f"Cleaned up local tracking for {client_id} ({local_rooms_cleaned} local rooms)")
                 return
 
@@ -674,10 +703,10 @@ class RoomManager:
                             redis_result = results[i * 2]  # srem result
                             if redis_result > 0:
                                 rooms_cleaned += 1
-                                print(
+                                self.logger.info(
                                     f"✅ Successfully removed {client_id} from Redis room {room_id}")
                             else:
-                                print(
+                                self.logger.warning(
                                     f"⚠️ Client {client_id} was not in Redis room {room_id}")
 
                             # Clean up local tracking regardless of Redis result
@@ -686,10 +715,11 @@ class RoomManager:
                         except Exception as e:
                             error_msg = f"Error processing room {room_id}: {e}"
                             cleanup_errors.append(error_msg)
-                            print(f"❌ {error_msg}")
+                            self.logger.error(f"❌ {error_msg}")
 
             except Exception as e:
-                print(f"❌ Critical error in atomic cleanup operation: {e}")
+                self.logger.error(
+                    f"❌ Critical error in atomic cleanup operation: {e}")
                 # Fallback to individual cleanup
                 for room_id in all_client_rooms:
                     try:
@@ -703,7 +733,7 @@ class RoomManager:
             # Step 3: Clean up local tracking (already done above, but ensure completeness)
             local_rooms_cleaned = len(self.client_rooms.get(client_id, set()))
             self.client_rooms.pop(client_id, None)
-            print(f"Cleaned up local tracking for {client_id}")
+            self.logger.info(f"Cleaned up local tracking for {client_id}")
 
             # Step 4: Clean up any empty rooms that resulted from this cleanup
             # Use a flag to prevent infinite recursion
@@ -712,24 +742,25 @@ class RoomManager:
             # Step 5: Verify cleanup was successful
             verification_result = await self._verify_client_cleanup_safe(client_id, all_client_rooms)
 
-            print(
+            self.logger.info(
                 f"✅ Comprehensive room cleanup completed for client {client_id}")
-            print(f"   - Rooms discovered: {len(all_client_rooms)}")
-            print(f"   - Rooms cleaned: {rooms_cleaned}")
-            print(f"   - Local rooms cleaned: {local_rooms_cleaned}")
-            print(
+            self.logger.info(f"   - Rooms discovered: {len(all_client_rooms)}")
+            self.logger.info(f"   - Rooms cleaned: {rooms_cleaned}")
+            self.logger.info(
+                f"   - Local rooms cleaned: {local_rooms_cleaned}")
+            self.logger.info(
                 f"   - Cleanup verification: {'PASSED' if verification_result else 'FAILED'}")
 
             if cleanup_errors:
-                print(
+                self.logger.warning(
                     f"⚠️ Cleanup completed with {len(cleanup_errors)} errors:")
                 for error in cleanup_errors:
-                    print(f"   - {error}")
+                    self.logger.warning(f"   - {error}")
 
         except Exception as e:
-            print(f"❌ Failed to cleanup client {client_id}: {e}")
+            self.logger.error(f"❌ Failed to cleanup client {client_id}: {e}")
             import traceback
-            print(f"❌ Traceback: {traceback.format_exc()}")
+            self.logger.error(f"❌ Traceback: {traceback.format_exc()}")
             # Try to at least clean up local tracking
             try:
                 self.client_rooms.pop(client_id, None)
@@ -760,22 +791,23 @@ class RoomManager:
                     try:
                         pattern_keys = await redis_client.keys(pattern)
                         all_room_keys.update(pattern_keys)
-                        print(
+                        self.logger.debug(
                             f"Pattern {pattern} found {len(pattern_keys)} rooms")
                     except Exception as e:
-                        print(
+                        self.logger.warning(
                             f"Warning: Could not scan pattern {pattern}: {e}")
                         continue
 
-                print(
+                self.logger.info(
                     f"Total unique rooms found across all patterns: {len(all_room_keys)}")
 
                 if not all_room_keys:
-                    print(f"No Redis rooms found for client {client_id}")
+                    self.logger.info(
+                        f"No Redis rooms found for client {client_id}")
                     # Check local tracking only
                     local_rooms = self.client_rooms.get(client_id, set())
                     if local_rooms:
-                        print(
+                        self.logger.info(
                             f"Client {client_id} found in {len(local_rooms)} local rooms: {list(local_rooms)}")
                         all_rooms.update(local_rooms)
                     return all_rooms
@@ -798,23 +830,24 @@ class RoomManager:
                                 room_id = self._extract_room_id_from_key(key)
                                 if room_id:
                                     all_rooms.add(room_id)
-                                    print(
+                                    self.logger.debug(
                                         f"Found client {client_id} in Redis room: {room_id} (key: {key})")
 
                         except Exception as e:
-                            print(f"Error processing room key {key}: {e}")
+                            self.logger.error(
+                                f"Error processing room key {key}: {e}")
                             continue
 
                 # Step 4: Also check for any other Redis patterns that might contain client IDs
                 await self._discover_additional_client_rooms(client_id, all_rooms, redis_client)
 
             except Exception as e:
-                print(
+                self.logger.warning(
                     f"Error in Redis-based room discovery: {e}, falling back to local tracking")
                 # Fallback to local tracking only
                 local_rooms = self.client_rooms.get(client_id, set())
                 if local_rooms:
-                    print(
+                    self.logger.info(
                         f"Client {client_id} found in {len(local_rooms)} local rooms: {list(local_rooms)}")
                     all_rooms.update(local_rooms)
                 return all_rooms
@@ -822,16 +855,16 @@ class RoomManager:
             # Step 5: Also check local tracking (in case there are discrepancies)
             local_rooms = self.client_rooms.get(client_id, set())
             if local_rooms:
-                print(
+                self.logger.info(
                     f"Client {client_id} also found in {len(local_rooms)} local rooms: {list(local_rooms)}")
                 all_rooms.update(local_rooms)
 
-            print(
+            self.logger.info(
                 f"Total rooms discovered for client {client_id}: {len(all_rooms)}")
             return all_rooms
 
         except Exception as e:
-            print(f"Error discovering client rooms: {e}")
+            self.logger.error(f"Error discovering client rooms: {e}")
             # Fallback to local tracking only
             return self.client_rooms.get(client_id, set()).copy()
 
@@ -877,7 +910,7 @@ class RoomManager:
             return key
 
         except Exception as e:
-            print(f"Error extracting room ID from key {key}: {e}")
+            self.logger.error(f"Error extracting room ID from key {key}: {e}")
             return None
 
     async def _discover_additional_client_rooms(self, client_id: str, all_rooms: Set[str], redis_client) -> None:
@@ -904,19 +937,19 @@ class RoomManager:
                                 room_id = self._extract_room_id_from_key(key)
                                 if room_id and room_id not in all_rooms:
                                     all_rooms.add(room_id)
-                                    print(
+                                    self.logger.info(
                                         f"Additional discovery: Client {client_id} found in room {room_id} via key {key}")
                     except Exception as e:
-                        print(
+                        self.logger.warning(
                             f"Warning: Could not scan pattern {pattern}: {e}")
                         continue
 
             except Exception as e:
-                print(
+                self.logger.warning(
                     f"Warning: Could not perform additional room discovery: {e}")
 
         except Exception as e:
-            print(f"Error in additional room discovery: {e}")
+            self.logger.error(f"Error in additional room discovery: {e}")
 
     async def _is_room_membership_key(self, key: str, client_id: str, redis_client) -> bool:
         """Check if a Redis key represents room membership for a client"""
@@ -943,7 +976,8 @@ class RoomManager:
             return False
 
         except Exception as e:
-            print(f"Error checking if key {key} is room membership: {e}")
+            self.logger.error(
+                f"Error checking if key {key} is room membership: {e}")
             return False
 
     async def _cleanup_local_room_tracking(self, client_id: str, room_id: str) -> None:
@@ -953,23 +987,24 @@ class RoomManager:
             if room_id in self.local_rooms:
                 if client_id in self.local_rooms[room_id]:
                     self.local_rooms[room_id].discard(client_id)
-                    print(f"Removed from local room tracking: {room_id}")
+                    self.logger.debug(
+                        f"Removed from local room tracking: {room_id}")
 
             # Remove from client room tracking
             if client_id in self.client_rooms:
                 if room_id in self.client_rooms[client_id]:
                     self.client_rooms[client_id].discard(room_id)
-                    print(
+                    self.logger.debug(
                         f"Removed room {room_id} from client {client_id} tracking")
 
         except Exception as e:
-            print(
+            self.logger.warning(
                 f"Warning: Error cleaning up local tracking for {client_id} in {room_id}: {e}")
 
     async def _force_remove_client_from_room_fallback(self, client_id: str, room_id: str) -> bool:
         """Fallback method for force removal when atomic operation fails"""
         try:
-            print(
+            self.logger.info(
                 f"Fallback: Force removing client {client_id} from room {room_id}")
 
             # Remove from Redis
@@ -983,14 +1018,15 @@ class RoomManager:
             try:
                 await redis_client.hset(f"room:{room_id}", 'last_activity', datetime.now().isoformat())
             except Exception as e:
-                print(f"Warning: Could not update room activity: {e}")
+                self.logger.warning(
+                    f"Warning: Could not update room activity: {e}")
 
-            print(
+            self.logger.info(
                 f"✅ Fallback removal completed for client {client_id} from room {room_id}")
             return True
 
         except Exception as e:
-            print(
+            self.logger.error(
                 f"❌ Error in fallback removal for client {client_id} from room {room_id}: {e}")
             return False
 
@@ -999,7 +1035,8 @@ class RoomManager:
         try:
             # Use a flag to prevent infinite recursion
             if hasattr(self, '_cleanup_in_progress') and self._cleanup_in_progress:
-                print("⚠️ Cleanup already in progress, skipping to prevent recursion")
+                self.logger.warning(
+                    "⚠️ Cleanup already in progress, skipping to prevent recursion")
                 return
 
             self._cleanup_in_progress = True
@@ -1011,7 +1048,7 @@ class RoomManager:
                 for room_id, clients in list(self.local_rooms.items()):
                     if not clients:
                         empty_rooms.append(room_id)
-                        print(f"Found empty local room: {room_id}")
+                        self.logger.info(f"Found empty local room: {room_id}")
 
                 # Clean up empty rooms
                 for room_id in empty_rooms:
@@ -1022,29 +1059,31 @@ class RoomManager:
                             # Room is empty across all processes, clean it up
                             await self._check_and_cleanup_empty_room(room_id)
                         else:
-                            print(
+                            self.logger.info(
                                 f"Room {room_id} has {len(redis_client_count)} clients in other processes")
 
                     except Exception as e:
-                        print(f"Error cleaning up empty room {room_id}: {e}")
+                        self.logger.error(
+                            f"Error cleaning up empty room {room_id}: {e}")
 
             finally:
                 # Always clear the flag
                 self._cleanup_in_progress = False
 
         except Exception as e:
-            print(f"Error in safe empty room cleanup: {e}")
+            self.logger.error(f"Error in safe empty room cleanup: {e}")
             # Ensure flag is cleared even on error
             self._cleanup_in_progress = False
 
     async def _verify_client_cleanup_safe(self, client_id: str, expected_rooms: Set[str]) -> bool:
         """Safe verification that client cleanup was successful - COMPREHENSIVE VERIFICATION"""
         try:
-            print(f"Verifying cleanup for client {client_id}...")
+            self.logger.info(f"Verifying cleanup for client {client_id}...")
 
             # Use a flag to prevent infinite verification loops
             if hasattr(self, '_verification_in_progress') and self._verification_in_progress:
-                print("⚠️ Verification already in progress, skipping to prevent loops")
+                self.logger.warning(
+                    "⚠️ Verification already in progress, skipping to prevent loops")
                 return True  # Assume success to prevent blocking
 
             self._verification_in_progress = True
@@ -1059,10 +1098,10 @@ class RoomManager:
                         is_member = await redis_client.sismember(f"room:{room_id}:clients", client_id)
                         if is_member:
                             remaining_rooms.add(room_id)
-                            print(
+                            self.logger.warning(
                                 f"⚠️ WARNING: Client {client_id} still found in expected room {room_id}")
                     except Exception as e:
-                        print(
+                        self.logger.error(
                             f"Error during verification for expected room {room_id}: {e}")
                         continue
 
@@ -1087,11 +1126,11 @@ class RoomManager:
                             pattern_keys = await redis_client.keys(pattern)
                             all_verification_keys.update(pattern_keys)
                         except Exception as e:
-                            print(
+                            self.logger.warning(
                                 f"Warning: Could not verify pattern {pattern}: {e}")
                             continue
 
-                    print(
+                    self.logger.info(
                         f"Comprehensive verification: Checking {len(all_verification_keys)} rooms across all patterns")
 
                     # Check client membership in ALL rooms found
@@ -1103,31 +1142,33 @@ class RoomManager:
                                 is_member = await redis_client.sismember(key, client_id)
                                 if is_member:
                                     remaining_rooms.add(room_id)
-                                    print(
+                                    self.logger.critical(
                                         f"🚨 CRITICAL: Client {client_id} found in UNEXPECTED room {room_id} (key: {key})")
-                                    print(
+                                    self.logger.critical(
                                         f"   This room was missed during discovery - potential cleanup failure!")
                         except Exception as e:
-                            print(
+                            self.logger.error(
                                 f"Error during comprehensive verification for key {key}: {e}")
                             continue
 
                 except Exception as e:
-                    print(f"Warning: Comprehensive verification failed: {e}")
+                    self.logger.warning(
+                        f"Warning: Comprehensive verification failed: {e}")
                     # Continue with local verification
 
                 # Step 3: Check local tracking
                 local_rooms = self.client_rooms.get(client_id, set())
                 if local_rooms:
-                    print(
+                    self.logger.warning(
                         f"⚠️ WARNING: Client {client_id} still found in local rooms: {list(local_rooms)}")
                     remaining_rooms.update(local_rooms)
 
                 # Step 4: Final assessment
                 if remaining_rooms:
-                    print(
+                    self.logger.error(
                         f"❌ Cleanup verification FAILED: Client {client_id} still in {len(remaining_rooms)} rooms")
-                    print(f"   Remaining rooms: {list(remaining_rooms)}")
+                    self.logger.error(
+                        f"   Remaining rooms: {list(remaining_rooms)}")
 
                     # Categorize remaining rooms
                     expected_remaining = remaining_rooms.intersection(
@@ -1135,20 +1176,22 @@ class RoomManager:
                     unexpected_remaining = remaining_rooms - expected_rooms
 
                     if expected_remaining:
-                        print(
+                        self.logger.error(
                             f"   Expected rooms that failed cleanup: {list(expected_remaining)}")
                     if unexpected_remaining:
-                        print(
+                        self.logger.critical(
                             f"   🚨 UNEXPECTED rooms that were missed during discovery: {list(unexpected_remaining)}")
-                        print(f"   This indicates a serious discovery failure!")
+                        self.logger.critical(
+                            f"   This indicates a serious discovery failure!")
 
                     return False
                 else:
-                    print(
+                    self.logger.info(
                         f"✅ Cleanup verification PASSED: Client {client_id} completely removed from all rooms")
-                    print(
+                    self.logger.info(
                         f"   - Expected rooms verified: {len(expected_rooms)}")
-                    print(f"   - Comprehensive verification completed")
+                    self.logger.info(
+                        f"   - Comprehensive verification completed")
                     return True
 
             finally:
@@ -1156,7 +1199,7 @@ class RoomManager:
                 self._verification_in_progress = False
 
         except Exception as e:
-            print(f"❌ Error during cleanup verification: {e}")
+            self.logger.error(f"❌ Error during cleanup verification: {e}")
             # Ensure flag is cleared even on error
             if hasattr(self, '_verification_in_progress'):
                 self._verification_in_progress = False
@@ -1169,7 +1212,7 @@ class RoomManager:
                 raise RuntimeError("Redis client not available")
             return self.redis_client
         except Exception as e:
-            print(f"Error getting Redis client: {e}")
+            self.logger.error(f"Error getting Redis client: {e}")
             raise
 
     async def _cleanup_loop(self) -> None:
@@ -1225,45 +1268,38 @@ class RoomManager:
                 if not self.bars_manager_integration:
                     continue
 
-                # Broadcast quotes to quote rooms
+                # Broadcast quotes to quote rooms (quotes are handled via Redis subscription service)
+                # This loop now only handles initial data and fallback scenarios
                 for ticker, room_id in self.quote_rooms.items():
                     try:
-                        # Get latest quote data
-                        quote_data = await self.bars_manager_integration.get_initial_quote(ticker)
-                        if quote_data and quote_data.get('status') != 'subscribed_waiting_for_data':
-                            # Broadcast quote to room
-                            message = json.dumps({
-                                'type': 'quote_update',
-                                'data': quote_data,
-                                'timestamp': datetime.now().isoformat()
-                            })
-                            await self.broadcast_to_room(room_id, message)
+                        # Only broadcast if we haven't received recent updates
+                        # This prevents spam when Redis subscription service is working
+                        last_activity = self.room_metadata.get(room_id, {}).get('last_quote_update', 0)
+                        current_time = datetime.now().timestamp()
+                        
+                        if current_time - last_activity > 30:  # Only if no recent updates
+                            # Get latest quote data
+                            quote_data = await self.bars_manager_integration.get_initial_quote(ticker)
+                            if quote_data and quote_data.get('status') != 'subscribed_waiting_for_data':
+                                # Broadcast quote to room
+                                message = json.dumps({
+                                    'type': 'quote_update',
+                                    'data': quote_data,
+                                    'timestamp': datetime.now().isoformat()
+                                })
+                                await self.broadcast_to_room(room_id, message)
+                                
+                                # Update last activity
+                                if room_id not in self.room_metadata:
+                                    self.room_metadata[room_id] = {}
+                                self.room_metadata[room_id]['last_quote_update'] = current_time
                     except Exception as e:
                         self.logger.error(
                             f"Error broadcasting quote for {ticker}: {e}")
 
-                # Broadcast bars to bar rooms (less frequent)
-                if int(datetime.now().timestamp()) % 5 == 0:  # Every 5 seconds
-                    for (ticker, interval), room_id in self.bar_rooms.items():
-                        try:
-                            # Get latest bars data
-                            bars_data = await self.bars_manager_integration.get_initial_bars_snapshot(ticker, interval)
-                            if bars_data and len(bars_data) > 0:
-                                # Get only the latest bar
-                                latest_bar = bars_data[-1]
-                                message = json.dumps({
-                                    'type': 'bar_update',
-                                    'data': {
-                                        'symbol': ticker,
-                                        'interval': interval,
-                                        'bar': latest_bar
-                                    },
-                                    'timestamp': datetime.now().isoformat()
-                                })
-                                await self.broadcast_to_room(room_id, message)
-                        except Exception as e:
-                            self.logger.error(
-                                f"Error broadcasting bar for {ticker} {interval}: {e}")
+                # Bars are now handled via Redis subscription service and room broadcast callback
+                # This eliminates the 5-second delay and ensures real-time updates
+                # The polling approach has been replaced with event-driven updates
 
             except Exception as e:
                 self.logger.error(f"Error in data broadcast loop: {e}")

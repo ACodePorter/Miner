@@ -13,9 +13,10 @@ from detonator import get_logger
 class RedisSubscriptionService:
     """Service to subscribe to BarsManager's Redis channels and forward data to WebSocket clients"""
 
-    def __init__(self, redis_client: redis.Redis, broadcast_callback: Callable[[str], Awaitable[None]]):
+    def __init__(self, redis_client: redis.Redis, broadcast_callback: Callable[[str], Awaitable[None]], room_broadcast_callback: Optional[Callable[[str, str, Dict[str, Any]], Awaitable[None]]] = None):
         self.redis_client = redis_client
         self.broadcast_callback = broadcast_callback
+        self.room_broadcast_callback = room_broadcast_callback  # New callback for room-based broadcasting
         self.logger = get_logger('RedisSubscriptionService', logging.DEBUG)
         self.running = False
         self.pubsub: Optional[redis.client.PubSub] = None
@@ -473,10 +474,18 @@ class RedisSubscriptionService:
                 'timestamp': datetime.now().isoformat()
             }
 
-            # Broadcast to WebSocket clients
-            await self.broadcast_callback(json.dumps(bar_message))
-            self.logger.debug(
-                f"Forwarded {interval} bar for {ticker} to WebSocket clients")
+            # Use room-based broadcasting if available, otherwise fall back to global broadcast
+            if self.room_broadcast_callback:
+                # Route to specific room for this ticker/interval combination
+                room_id = f"bars:{ticker}:{interval}"
+                await self.room_broadcast_callback(room_id, ticker, bar_message)
+                self.logger.debug(
+                    f"Routed {interval} bar for {ticker} to room {room_id}")
+            else:
+                # Fallback to global broadcast
+                await self.broadcast_callback(json.dumps(bar_message))
+                self.logger.debug(
+                    f"Forwarded {interval} bar for {ticker} via global broadcast")
 
         except Exception as e:
             self.logger.error(f"Error handling bar message: {e}")

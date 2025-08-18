@@ -50,7 +50,7 @@ class BarsManager(SingletonParent):
 
     def __init__(self):
         self.bars = {}
-        self.logger = get_logger('BarsManager', logging.NOTSET)
+        self.logger = get_logger('BarsManager', logging.DEBUG)
         self.subscribed_tickers = set()
         self.ws = None
         self.redis_client = get_redis_client()
@@ -167,7 +167,7 @@ class BarsManager(SingletonParent):
             else:
                 timestamp = "N/A"
 
-            self.logger.info(
+            self.logger.debug(
                 f'{timestamp} {ticker_id}: {price} {change} {change_percent}')
         except Exception as e:
             self.logger.warning(f"Error formatting quote log: {e}")
@@ -371,10 +371,17 @@ class BarsManager(SingletonParent):
             try:
                 now = datetime.now(pytz.timezone('America/New_York'))
 
+                # Log current time for debugging
+                self.logger.debug(
+                    f"Current time: {now.strftime('%H:%M:%S')} (weekday: {now.weekday()})")
+
                 # Check which intervals need updates
                 intervals_to_update = []
                 for interval in list(self.intraday_subscriptions.keys()):
-                    if self._is_time_for_update(now, interval):
+                    is_update_time = self._is_time_for_update(now, interval)
+                    self.logger.debug(
+                        f"Interval {interval}: is_update_time={is_update_time}")
+                    if is_update_time:
                         intervals_to_update.append(interval)
 
                 if intervals_to_update:
@@ -383,7 +390,7 @@ class BarsManager(SingletonParent):
                     for interval in intervals_to_update:
                         self._update_bars_for_interval(interval)
                 else:
-                    self.logger.info("No intervals to update")
+                    self.logger.debug("No intervals to update at this time")
 
                 # Calculate optimal sleep time to align with next update opportunity
                 sleep_seconds = self._calculate_optimal_sleep_time(now)
@@ -392,6 +399,8 @@ class BarsManager(SingletonParent):
                 if sleep_seconds > 10:  # Only log longer sleeps to avoid spam
                     self.logger.debug(
                         f"Sleeping for {sleep_seconds:.2f}s until next update opportunity")
+                else:
+                    self.logger.debug(f"Sleeping for {sleep_seconds:.2f}s")
 
                 if sleep_seconds > 0:
                     time.sleep(sleep_seconds)
@@ -403,57 +412,100 @@ class BarsManager(SingletonParent):
                 self.logger.error(f"Error in bar scheduling loop: {e}")
                 time.sleep(30)  # Wait longer on error
 
-            except Exception as e:
-                self.logger.error(f"Error in bar scheduling loop: {e}")
-                time.sleep(30)  # Wait longer on error
-
         self.logger.info("Intraday bar scheduling stopped")
 
     def _is_time_for_update(self, current_time: datetime, interval: str) -> bool:
         """Check if it's time to update bars for the given interval"""
         tc = TradeCalendarShovel.get_instance()
-        if not tc.is_mkt_open():
-            return False
+        market_open = tc.is_mkt_open()
+        self.logger.debug(f"Market open check result: {market_open}")
+
+        if not market_open:
+            # Fallback: check if we're in normal market hours (9:30 AM - 4:00 PM ET, Mon-Fri)
+            # This handles cases where the database might not have current trading day data
+            if self._is_in_normal_market_hours(current_time):
+                self.logger.debug(
+                    f"Market closed in DB but in normal hours, allowing updates for {interval}")
+                market_open = True
+            else:
+                self.logger.debug(
+                    f"Market is closed, no updates for {interval}")
+                return False
+
+        # Allow updates within a 5-second window around the boundary
+        # This makes the system more robust to slight timing variations
+        tolerance_seconds = 10
+
         if interval == '1m':
-            return current_time.second == 0
+            # For 1m, allow updates within 5 seconds of :00
+            is_update_time = current_time.second < tolerance_seconds
+            self.logger.debug(
+                f"1m interval: current_second={current_time.second}, tolerance={tolerance_seconds}, is_update_time={is_update_time}")
+            return is_update_time
         elif interval == '5m':
-            return current_time.minute % 5 == 0 and current_time.second == 0
+            # For 5m, allow updates within 5 seconds of :00, :05, :10, etc.
+            minute_check = current_time.minute % 5 == 0
+            second_check = current_time.second < tolerance_seconds
+            is_update_time = minute_check and second_check
+            self.logger.debug(
+                f"5m interval: current_minute={current_time.minute}, minute_check={minute_check}, current_second={current_time.second}, second_check={second_check}, is_update_time={is_update_time}")
+            return is_update_time
         elif interval == '15m':
-            return current_time.minute % 15 == 0 and current_time.second == 0
+            # For 15m, allow updates within 5 seconds of :00, :15, :30, :45
+            minute_check = current_time.minute % 15 == 0
+            second_check = current_time.second < tolerance_seconds
+            is_update_time = minute_check and second_check
+            self.logger.debug(
+                f"15m interval: current_minute={current_time.minute}, minute_check={minute_check}, current_second={current_time.second}, second_check={second_check}, is_update_time={is_update_time}")
+            return is_update_time
         elif interval == '30m':
-            return current_time.minute % 30 == 0 and current_time.second == 0
+            # For 30m, allow updates within 5 seconds of :00, :30
+            minute_check = current_time.minute % 30 == 0
+            second_check = current_time.second < tolerance_seconds
+            is_update_time = minute_check and second_check
+            self.logger.debug(
+                f"30m interval: current_minute={current_time.minute}, minute_check={minute_check}, current_second={current_time.second}, second_check={second_check}, is_update_time={is_update_time}")
+            return is_update_time
         elif interval == '65m':
-            return self._is_65m_update_time(current_time)
+            is_update_time = self._is_65m_update_time(current_time)
+            self.logger.debug(f"65m interval: is_update_time={is_update_time}")
+            return is_update_time
         return False
 
     def _is_65m_update_time(self, current_time: datetime) -> bool:
         """Check if it's time for 65m bar update (market session based)"""
-        # Check if we're in a trading day
-        if not self._is_trading_day(current_time):
-            return False
-
         # Market hours: 9:30 AM to 4:00 PM
         market_open = current_time.replace(
             hour=9, minute=30, second=0, microsecond=0)
         market_close = current_time.replace(
-            hour=16, minute=0, second=0, microsecond=0)
-
-        if current_time < market_open or current_time >= market_close:
+            hour=16, minute=1, second=0, microsecond=0)
+        if current_time < market_open or current_time > market_close:
             return False
-
         # Check if current time aligns with 65-minute boundaries
         elapsed_from_open = current_time - market_open
-        elapsed_minutes = elapsed_from_open.total_seconds() / 60
-
+        elapsed_minutes = int(elapsed_from_open.total_seconds() / 60)
         # 65-minute boundaries: 0, 65, 130, 195, 260, 325 minutes from market open
         if elapsed_minutes % 65 == 0:
             return True
-
         return False
 
     def _is_trading_day(self, dt: datetime) -> bool:
         """Check if date is a trading day (Monday-Friday)"""
         return dt.weekday() < 5  # Monday=0, Friday=4
+
+    def _is_in_normal_market_hours(self, current_time: datetime) -> bool:
+        """Fallback check for normal market hours (9:30 AM - 4:00 PM ET, Mon-Fri)"""
+        # Check if it's a weekday
+        if current_time.weekday() >= 5:  # Saturday=5, Sunday=6
+            return False
+
+        # Check if it's between 9:30 AM and 4:00 PM ET, allow 1 minute after market close
+        market_open = current_time.replace(
+            hour=9, minute=30, second=0, microsecond=0)
+        market_close = current_time.replace(
+            hour=16, minute=1, second=0, microsecond=0)
+
+        return market_open <= current_time <= market_close
 
     def _calculate_optimal_sleep_time(self, current_time: datetime) -> float:
         """Calculate optimal sleep time to align with next update opportunity
@@ -489,7 +541,7 @@ class BarsManager(SingletonParent):
         # This helps compensate for any system scheduling delays
         sleep_seconds = max(0.1, sleep_seconds - 0.1)
 
-        return sleep_seconds
+        return sleep_seconds + 3
 
     def _get_next_update_time(self, current_time: datetime, interval: str) -> datetime:
         """Calculate the next update time for a given interval"""
@@ -641,6 +693,8 @@ class BarsManager(SingletonParent):
 
                 # Get the latest bar
                 latest_bar = bars.iloc[-1]
+                if latest_bar['Volume'] == 0:
+                    latest_bar = bars.iloc[-2]
 
                 # Create bar data structure
                 bar_data = {

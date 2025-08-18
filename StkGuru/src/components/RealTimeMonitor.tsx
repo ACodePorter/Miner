@@ -23,12 +23,7 @@ const RealTimeMonitor: React.FC<RealTimeMonitorProps> = ({ className = '' }) => 
 
   // Force update function to trigger re-renders when WebSocket state changes
   const triggerUpdate = useCallback(() => {
-    console.log('RealTimeMonitor: 🔄 triggerUpdate called, incrementing forceUpdate');
-    setForceUpdate(prev => {
-      const newValue = prev + 1;
-      console.log('RealTimeMonitor: forceUpdate changed from', prev, 'to', newValue);
-      return newValue;
-    });
+    setForceUpdate(prev => prev + 1);
   }, []);
 
   // Update metrics function
@@ -36,11 +31,6 @@ const RealTimeMonitor: React.FC<RealTimeMonitorProps> = ({ className = '' }) => 
     const status = wsClient.getStatus();
     const connectedRooms = wsClient.getConnectedRooms();
     const roomCount = connectedRooms.length;
-    
-    console.log('RealTimeMonitor: 📊 updateMetrics called');
-    console.log('RealTimeMonitor: Current status:', status);
-    console.log('RealTimeMonitor: Current connected rooms:', connectedRooms);
-    console.log('RealTimeMonitor: Current room count:', roomCount);
     
     // Calculate uptime (simplified - just track when we started monitoring)
     const now = Date.now();
@@ -58,7 +48,6 @@ const RealTimeMonitor: React.FC<RealTimeMonitorProps> = ({ className = '' }) => 
       connectionStartTime
     };
     
-    console.log('RealTimeMonitor: Setting new metrics:', newMetrics);
     setMetrics(newMetrics);
   }, [metrics?.connectionStartTime]);
 
@@ -72,13 +61,8 @@ const RealTimeMonitor: React.FC<RealTimeMonitorProps> = ({ className = '' }) => 
 
   // Listen for WebSocket connection state changes and room events
   useEffect(() => {
-    console.log('RealTimeMonitor: Setting up WebSocket event listeners');
-    
     // Subscribe to room state change events from WebSocket client
     const unsubscribeRoomStateChange = wsClient.onRoomStateChange(() => {
-      console.log('RealTimeMonitor: 🚨 ROOM STATE CHANGE EVENT RECEIVED!');
-      console.log('RealTimeMonitor: Current WebSocket state:', wsClient.getStatus());
-      console.log('RealTimeMonitor: Current connected rooms:', wsClient.getConnectedRooms());
       triggerUpdate();
     });
 
@@ -92,10 +76,6 @@ const RealTimeMonitor: React.FC<RealTimeMonitorProps> = ({ className = '' }) => 
         if (currentStatus !== metrics.connectionStatus || 
             currentRooms.length !== metrics.roomCount ||
             JSON.stringify(currentRooms.sort()) !== JSON.stringify(metrics.connectedRooms.sort())) {
-          console.log('RealTimeMonitor: 🔍 State change detected via polling, triggering update');
-          console.log('RealTimeMonitor: Status change:', metrics.connectionStatus, '->', currentStatus);
-          console.log('RealTimeMonitor: Room count change:', metrics.roomCount, '->', currentRooms.length);
-          console.log('RealTimeMonitor: Rooms change:', metrics.connectedRooms, '->', currentRooms);
           triggerUpdate();
         }
       }
@@ -104,13 +84,11 @@ const RealTimeMonitor: React.FC<RealTimeMonitorProps> = ({ className = '' }) => 
     // Periodic reconnection check for disconnected state
     const reconnectionCheckInterval = setInterval(() => {
       if (wsClient.getStatus() === 'disconnected') {
-        console.log('RealTimeMonitor: 🔍 Periodic reconnection check - WebSocket is disconnected');
         wsClient.checkAndForceReconnect();
       }
     }, 5000); // Check every 5 seconds
 
     return () => {
-      console.log('RealTimeMonitor: Cleaning up WebSocket event listeners');
       unsubscribeRoomStateChange();
       clearInterval(wsStateInterval);
       clearInterval(reconnectionCheckInterval);
@@ -133,7 +111,6 @@ const RealTimeMonitor: React.FC<RealTimeMonitorProps> = ({ className = '' }) => 
 
   // Add manual refresh button
   const handleManualRefresh = () => {
-    console.log('RealTimeMonitor: Manual refresh triggered');
     triggerUpdate();
   };
 

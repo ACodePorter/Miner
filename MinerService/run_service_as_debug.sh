@@ -4,7 +4,7 @@ my_dir="$(realpath "$(dirname "$0")")"
 cur_dur=$(pwd)
 cd "$my_dir" || exit
 
-export PYTHONPATH="$my_dir:$my_dir/../DataMiner:$my_dir/../Detonator:$my_dir/../MarketBreadth:$my_dir/../MinerWorkers:$PYTHONPATH"
+export PYTHONPATH="$my_dir:$my_dir/../DataMiner:$my_dir/../Detonator:$my_dir/../MarketBreadth:$my_dir/../MinerWorkers:$my_dir/../BrowserScraper:$PYTHONPATH"
 
 
 uvicorn --host 127.0.0.1 --port 9999 --log-level debug \
@@ -14,6 +14,7 @@ uvicorn --host 127.0.0.1 --port 9999 --log-level debug \
         --reload-dir "$my_dir/../Detonator" \
         --reload-dir "$my_dir/../MarketBreadth" \
         --reload-dir "$my_dir/../MinerWorkers" \
+        --reload-dir "$my_dir/../BrowserScraper" \
         minerservice.main:app
 
 

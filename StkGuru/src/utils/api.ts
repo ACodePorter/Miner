@@ -92,7 +92,8 @@ export const marketDataApi = {
       console.error('Error fetching realtime quote:', response.error);
       return null;
     }
-    return response.data || null;
+    // Backend returns data directly, not wrapped in response.data
+    return response as QuoteData || null;
   },
 
   // Bar data for charts
@@ -103,7 +104,8 @@ export const marketDataApi = {
       console.error('Error fetching bars:', response.error);
       return null;
     }
-    return response.data || null;
+    // Backend returns data directly, not wrapped in response.data
+    return response as MarketDataResponse<BarData> || null;
   },
 };
 
@@ -134,9 +136,7 @@ export const dataApi = {
     if (startDate) params.append('start_date', startDate);
     if (endDate) params.append('end_date', endDate);
     
-    console.log('getMarketPE: Fetching from:', `/api/v1/data/market_pe/${index}.json?${params}`);
     const response = await api.get<any>(`/api/v1/data/market_pe/${index}.json?${params}`);
-    console.log('getMarketPE: Raw response:', response);
     
     if (response.error) {
       console.error('Error fetching market PE:', response.error);
@@ -148,7 +148,7 @@ export const dataApi = {
       console.error('Backend error:', response.error);
       return null;
     }
-    console.log('getMarketPE: Returning data:', response);
+
     return response;
   },
 

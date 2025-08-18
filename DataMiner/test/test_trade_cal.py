@@ -54,6 +54,10 @@ class TradeCalTestCase(unittest.TestCase):
         tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()
         _logger.info(tcs.last_closed_hk_trade_date())
 
+    def test_is_mkt_open(self):
+        tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()
+        _logger.info(tcs.is_mkt_open())
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -47,7 +47,6 @@ export const useRollingStatsWorker = (): UseRollingStatsWorkerReturn => {
           setIsLoading(false);
         };
       } catch (err) {
-        console.warn('Failed to create worker, falling back to main thread:', err);
         setError('Worker not available, using main thread');
       }
     }

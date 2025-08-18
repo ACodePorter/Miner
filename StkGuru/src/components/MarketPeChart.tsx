@@ -71,7 +71,7 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
       setIsRefreshing(true);
       setError(null);
       const data = await fetchPEData(indexId);
-      console.log('MarketPeChart: Received PE data:', data);
+
       if (data && data.stats && data.stats.current_pe !== undefined) {
         setPeData(data);
       } else {
