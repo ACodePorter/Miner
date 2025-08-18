@@ -160,30 +160,20 @@ class GhPagesMaintainer(SingletonParent):
 
     def _export_static_json(self, dir_of_miner: str):
         # Ensure all target directories exist
-        os.makedirs(os.path.join(dir_of_miner, 'StkGuru',
-                    'public', 'api', 'market_pe'), exist_ok=True)
-        os.makedirs(os.path.join(dir_of_miner, 'StkGuru',
-                    'public', 'api', 'mbs'), exist_ok=True)
-        os.makedirs(os.path.join(dir_of_miner, 'StkGuru',
-                    'public', 'api', 'ohlcvw'), exist_ok=True)
-        ohclvw_dir = os.path.join(dir_of_miner, 'StkGuru',
-                                  'public', 'api', 'ohlcvw')
-        if os.path.exists(ohclvw_dir):
-            shutil.rmtree(ohclvw_dir)
-        os.makedirs(ohclvw_dir, exist_ok=True)
-        os.makedirs(os.path.join(dir_of_miner, 'StkGuru',
-                    'public', 'api', 'wedge_pop'), exist_ok=True)
+        data_api_dir = os.path.join(dir_of_miner, 'StkGuru', 'public', 'api', 'v1', 'data')
+        os.makedirs(os.path.join(data_api_dir, 'market_pe'), exist_ok=True)
+        os.makedirs(os.path.join(data_api_dir, 'mbs'), exist_ok=True)
+        os.makedirs(os.path.join(data_api_dir, 'ohlcvw'), exist_ok=True)
+        os.makedirs(os.path.join(data_api_dir, 'wedge_pop'), exist_ok=True)
         self._export_market_pe('spx', os.path.join(
-            dir_of_miner, 'StkGuru', 'public', 'api', 'market_pe', 'spx.json'))
+            data_api_dir, 'market_pe', 'spx.json'))
         self._export_market_pe('hsi', os.path.join(
-            dir_of_miner, 'StkGuru', 'public', 'api', 'market_pe', 'hsi.json'))
+            data_api_dir, 'market_pe', 'hsi.json'))
         self._export_market_breadth('spx', os.path.join(
-            dir_of_miner, 'StkGuru', 'public', 'api', 'mbs', 'spx.json'))
-        self._export_ohlcvw(os.path.join(
-            dir_of_miner, 'StkGuru', 'public', 'api', 'wedge_pop', 'wedges.json'),
-            os.path.join(dir_of_miner, 'StkGuru', 'public',
-                         'api', 'wedge_pop', 'stats.json'),
-            ohclvw_dir)
+            data_api_dir, 'mbs', 'spx.json'))
+        self._export_ohlcvw(os.path.join(data_api_dir, 'wedge_pop', 'wedges.json'),
+            os.path.join(data_api_dir, 'wedge_pop', 'stats.json'),
+            os.path.join(data_api_dir, 'ohlcvw'))
 
     def update_gh_pages(self) -> bool:
         make_db_connection()
