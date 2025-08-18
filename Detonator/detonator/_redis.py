@@ -10,10 +10,8 @@ _reais_client: Optional[Redis] = None
 def get_redis_client(host: str = 'localhost', port: int = 6379, db: int = 0) -> Redis:
     global _reais_client
     if _reais_client is None:
-        if is_prod():
-            host = 'miner-redis'
         try:
-            _reais_client = Redis(host=host, port=port, db=db,
+            _reais_client = Redis(host='miner-redis' if is_prod() else host, port=port, db=db,
                                   decode_responses=True,
                                   health_check_interval=60,
                                   socket_keepalive=True, socket_connect_timeout=30,

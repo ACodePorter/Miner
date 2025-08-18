@@ -4,6 +4,7 @@ import HighchartsReact from "highcharts-react-official";
 import LoadingSpinner from "./LoadingSpinner";
 import ErrorMessage from "./ErrorMessage";
 import { useRollingStatsWorker } from "../hooks/useRollingStatsWorker";
+import { dataApi } from '../utils/api';
 
 interface PEData {
   index: string;
@@ -54,13 +55,13 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
   // Web Worker for heavy calculations
   const { rollingStats, isLoading: isCalculating, calculateStats } = useRollingStatsWorker();
 
-  // Memoized fetch function
+  // Memoized fetch function - updated to use new API structure
   const fetchPEData = useCallback(async (index: string): Promise<PEData> => {
-    const response = await fetch(`/api/market_pe/${index}.json`);
-    if (!response.ok) {
-      throw new Error(`Failed to fetch ${index} PE data: ${response.status}`);
+    const data = await dataApi.getMarketPE(index);
+    if (!data) {
+      throw new Error(`Failed to fetch ${index} PE data: No data available`);
     }
-    return response.json();
+    return data;
   }, []);
 
   // Memoized data loading function
@@ -70,8 +71,15 @@ const MarketPeChart: React.FC<MarketPeChartProps> = React.memo(({
       setIsRefreshing(true);
       setError(null);
       const data = await fetchPEData(indexId);
-      setPeData(data);
+      console.log('MarketPeChart: Received PE data:', data);
+      if (data && data.stats && data.stats.current_pe !== undefined) {
+        setPeData(data);
+      } else {
+        console.error('MarketPeChart: Invalid PE data structure:', data);
+        setError('Invalid data structure received from API');
+      }
     } catch (err) {
+      console.error('MarketPeChart: Error loading PE data:', err);
       setError(err instanceof Error ? err.message : "Failed to load PE data");
     } finally {
       setLoading(false);

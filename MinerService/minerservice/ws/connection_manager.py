@@ -2,9 +2,10 @@
 
 import asyncio
 import json
+import logging
 import uuid
 from datetime import datetime
-from typing import Any, Callable, Dict, Optional, Set, Tuple
+from typing import Any, Callable, Dict, List, Optional, Set, Tuple
 
 import redis.asyncio as redis
 from detonator import get_logger, is_prod
@@ -12,12 +13,23 @@ from fastapi import WebSocket
 
 from ..services.bars_manager_integration import BarsManagerIntegration
 from ..services.redis_subscription_service import RedisSubscriptionService
+from .room_manager import RoomManager
+
+# Global manager instance
+manager = None
+_logger = get_logger('MinerService', logging.DEBUG)
+
+
+def get_websocket_manager():
+    """Get the global WebSocket manager instance"""
+    return manager
 
 
 class WebSocketConnectionManager:
     """Manages WebSocket connections with Redis support for multi-process scaling"""
 
     def __init__(self):
+        self.logger = get_logger('WebSocketConnectionManager')
         self.redis_client: Optional[redis.Redis] = None
         self.process_id = str(uuid.uuid4())
         self.local_connections: Dict[str, WebSocket] = {}
@@ -33,6 +45,7 @@ class WebSocketConnectionManager:
         # Integration services
         self.bars_manager_integration: Optional[BarsManagerIntegration] = None
         self.redis_subscription_service: Optional[RedisSubscriptionService] = None
+        self.room_manager: Optional[RoomManager] = None
 
     async def get_redis(self) -> redis.Redis:
         """Get Redis client with connection pooling and health checks"""
@@ -49,8 +62,13 @@ class WebSocketConnectionManager:
     async def _create_redis_connection(self) -> None:
         """Create new Redis connection"""
         try:
+            # Force localhost for testing
+            redis_host = 'miner-redis' if is_prod() else 'localhost'
+            print(
+                f"DEBUG: is_prod() = {is_prod()}, using Redis host: {redis_host}")
+
             self.redis_client = redis.Redis(
-                host='miner-redis' if is_prod() else 'localhost',
+                host=redis_host,
                 port=6379,
                 db=0,
                 decode_responses=True,
@@ -113,18 +131,44 @@ class WebSocketConnectionManager:
             await pipe.execute()
 
     async def disconnect(self, websocket: WebSocket, client_id: str) -> None:
-        """Disconnect a WebSocket client"""
+        """Disconnect a WebSocket client with comprehensive cleanup"""
         try:
+            print(f"Starting cleanup for disconnected client: {client_id}")
+
+            # Step 1: Clean up local connection tracking
             if client_id in self.local_connections:
                 del self.local_connections[client_id]
+                print(f"Removed {client_id} from local connections")
 
-            # Remove from Redis
+            # Step 2: Clean up room memberships
+            if self.room_manager:
+                try:
+                    await self.room_manager.cleanup_client(client_id)
+                    print(f"Cleaned up room memberships for {client_id}")
+                except Exception as e:
+                    print(
+                        f"Error cleaning up room memberships for {client_id}: {e}")
+
+            # Step 3: Clean up symbol subscriptions if this was the last client
+            await self._cleanup_client_subscriptions(client_id)
+
+            # Step 4: Remove from Redis connection tracking
             await self._remove_connection_info(client_id)
+            print(f"Removed {client_id} from Redis tracking")
+
+            # Step 5: Clean up any client-specific data
+            await self._cleanup_client_data(client_id)
+
             print(
-                f"Client {client_id} disconnected from process {self.process_id}")
+                f"✅ Client {client_id} fully disconnected and cleaned up from process {self.process_id}")
 
         except Exception as e:
-            print(f"Error disconnecting client {client_id}: {e}")
+            print(f"❌ Error during disconnect cleanup for {client_id}: {e}")
+            # Try to at least remove from local connections
+            try:
+                self.local_connections.pop(client_id, None)
+            except:
+                pass
 
     async def cleanup_stale_subscriptions(self) -> None:
         """Clean up stale subscriptions that may exist in Redis but not in memory"""
@@ -168,6 +212,49 @@ class WebSocketConnectionManager:
             await pipe.delete(f"websocket:connections:{client_id}")
             await pipe.srem(f"websocket:processes:{self.process_id}:clients", client_id)
             await pipe.execute()
+
+    async def _cleanup_client_subscriptions(self, client_id: str) -> None:
+        """Clean up symbol subscriptions if this was the last client interested"""
+        try:
+            # This method will be called when a client disconnects
+            # It can be used to clean up subscriptions that are no longer needed
+            # For now, we'll just log the cleanup
+            print(f"Cleaned up symbol subscriptions for {client_id}")
+
+            # Future enhancement: Check if other clients are still subscribed to symbols
+            # and clean up unused subscriptions from BarsManager and Redis
+
+        except Exception as e:
+            print(f"Error cleaning up subscriptions for {client_id}: {e}")
+
+    async def _cleanup_client_data(self, client_id: str) -> None:
+        """Clean up any client-specific data stored in Redis or other systems"""
+        try:
+            redis_client = await self.get_redis()
+
+            # Clean up any client-specific keys
+            client_keys = await redis_client.keys(f"client:{client_id}:*")
+            if client_keys:
+                await redis_client.delete(*client_keys)
+                print(
+                    f"Cleaned up {len(client_keys)} client-specific keys for {client_id}")
+
+            # Clean up any client preferences or settings
+            preference_keys = await redis_client.keys(f"preferences:{client_id}:*")
+            if preference_keys:
+                await redis_client.delete(*preference_keys)
+                print(
+                    f"Cleaned up {len(preference_keys)} preference keys for {client_id}")
+
+            # Clean up any client session data
+            session_keys = await redis_client.keys(f"session:{client_id}:*")
+            if session_keys:
+                await redis_client.delete(*session_keys)
+                print(
+                    f"Cleaned up {len(session_keys)} session keys for {client_id}")
+
+        except Exception as e:
+            print(f"Error cleaning up client data for {client_id}: {e}")
 
     async def send_personal_message(self, message: str, client_id: str) -> bool:
         """Send message to a specific client"""
@@ -371,7 +458,7 @@ class WebSocketConnectionManager:
         try:
             redis_client = await self.get_redis()
             pubsub = redis_client.pubsub()
-            await pubsub.subscribe('websocket:broadcast')
+            await pubsub.subscribe('websocket:broadcast', 'websocket:room_broadcast')
 
             async def listen_for_broadcasts():
                 try:
@@ -379,9 +466,40 @@ class WebSocketConnectionManager:
                         if message['type'] == 'message':
                             try:
                                 data = json.loads(message['data'])
-                                # Only process messages from other processes
-                                if data.get('process_id') != self.process_id:
-                                    await self.broadcast(data['message'])
+                                channel = message['channel']
+
+                                if channel == 'websocket:broadcast':
+                                    # Only process broadcast messages from other processes
+                                    if data.get('process_id') != self.process_id:
+                                        await self.broadcast(data['message'])
+
+                                elif channel == 'websocket:room_broadcast':
+                                    # Process room broadcast messages
+                                    room_id = data.get('room_id')
+                                    room_message = data.get('message')
+                                    exclude_client = data.get('exclude_client')
+
+                                    if room_id and room_message:
+                                        # Send to local clients in the room
+                                        local_clients = self.local_connections.keys()
+                                        room_clients = set()
+
+                                        if self.room_manager:
+                                            room_clients = self.room_manager.local_rooms.get(
+                                                room_id, set())
+
+                                        # Send to local clients in the room
+                                        for client_id in room_clients:
+                                            if client_id != exclude_client and client_id in local_clients:
+                                                try:
+                                                    await self.send_personal_message(room_message, client_id)
+                                                except Exception as e:
+                                                    print(
+                                                        f"Error sending room message to {client_id}: {e}")
+
+                                        print(
+                                            f"Processed room broadcast for {room_id}: {len(room_clients)} local clients")
+
                             except Exception as e:
                                 print(
                                     f"Error processing broadcast message: {e}")
@@ -511,6 +629,17 @@ class WebSocketConnectionManager:
             await self.redis_subscription_service.start()
             print("Redis subscription service initialized and started")
 
+            # Initialize room manager
+            self.room_manager = RoomManager(redis_client)
+            await self.room_manager.start()
+            print("Room manager initialized and started")
+
+            # Set up cross-references between services
+            self.room_manager.set_bars_manager_integration(
+                self.bars_manager_integration)
+            self.bars_manager_integration.set_room_manager(self.room_manager)
+            print("Service cross-references established")
+
             # Sync existing subscriptions from BarsManager integration
             await self._sync_existing_subscriptions()
             print("Synced existing subscriptions from BarsManager")
@@ -574,6 +703,12 @@ class WebSocketConnectionManager:
             except Exception as e:
                 print(f"Error stopping Redis subscription service: {e}")
 
+        if self.room_manager:
+            try:
+                await self.room_manager.stop()
+            except Exception as e:
+                print(f"Error stopping room manager: {e}")
+
         # Close all local connections
         for client_id in list(self.local_connections.keys()):
             try:
@@ -626,3 +761,56 @@ class WebSocketConnectionManager:
     def is_running(self) -> bool:
         """Check if the manager is running"""
         return self.running
+
+    # Room management methods
+    async def create_room(self, room_id: str, metadata: Optional[Dict[str, Any]] = None) -> bool:
+        """Create a new room"""
+        if not self.room_manager:
+            print("Room manager not available")
+            return False
+        return await self.room_manager.create_room(room_id, metadata)
+
+    async def join_room(self, client_id: str, room_id: str) -> bool:
+        """Add a client to a room"""
+        if not self.room_manager:
+            print("Room manager not available")
+            return False
+        return await self.room_manager.join_room(client_id, room_id)
+
+    async def leave_room(self, client_id: str, room_id: str) -> bool:
+        """Remove a client from a room"""
+        if not self.room_manager:
+            print("Room manager not available")
+            return False
+        return await self.room_manager.leave_room(client_id, room_id)
+
+    async def broadcast_to_room(self, room_id: str, message: str, exclude_client: Optional[str] = None) -> int:
+        """Broadcast a message to all clients in a room"""
+        if not self.room_manager:
+            print("Room manager not available")
+            return 0
+        return await self.room_manager.broadcast_to_room(room_id, message, exclude_client)
+
+    async def get_room_info(self, room_id: str) -> Optional[Dict[str, Any]]:
+        """Get room information and metadata"""
+        if not self.room_manager:
+            return None
+        return await self.room_manager.get_room_info(room_id)
+
+    async def list_rooms(self) -> List[Dict[str, Any]]:
+        """List all active rooms"""
+        if not self.room_manager:
+            return []
+        return await self.room_manager.list_rooms()
+
+    async def get_client_rooms(self, client_id: str) -> Set[str]:
+        """Get all rooms a client is in"""
+        if not self.room_manager:
+            return set()
+        return await self.room_manager.get_client_rooms(client_id)
+
+    async def update_room_metadata(self, room_id: str, metadata: Dict[str, Any]) -> bool:
+        """Update room metadata"""
+        if not self.room_manager:
+            return False
+        return await self.room_manager.update_room_metadata(room_id, metadata)

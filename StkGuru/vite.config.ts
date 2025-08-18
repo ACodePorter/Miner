@@ -10,8 +10,8 @@ export default defineConfig(({ mode }) => {
   // Environment-specific configurations
   const envConfigs = {
     development: {
-      apiBaseUrl: 'http://localhost',
-      proxyTarget: 'http://localhost',
+      apiBaseUrl: 'http://localhost:80',
+      proxyTarget: 'http://localhost:80',
     },
     test: {
       apiBaseUrl: 'http://localhost:8080',

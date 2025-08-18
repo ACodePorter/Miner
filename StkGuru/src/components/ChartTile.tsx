@@ -4,6 +4,7 @@ import HighchartsReact from 'highcharts-react-official';
 import { apiConfig } from '../config/environment';
 import { useInView } from 'react-intersection-observer';
 import { wsClient, type QuotePayload, type BarsPayload } from '../utils/wsClient';
+import { marketDataApi } from '../utils/api';
 
 type IndicatorType = 'EMA' | 'SMA' | 'MACD' | 'RSI';
 
@@ -145,15 +146,16 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
       }
       const controller = new AbortController();
       barsAbortRef.current = controller;
-      let url: string;
-      const params = new URLSearchParams({ period: 'max' }).toString();
-      url = apiConfig.getApiUrl(`/api/bars/${ticker}/${timeframe}?${params}`);
-      const res = await fetch(url, { signal: controller.signal });
-      const data = await res.json();
-      const raw: Bar[] = data?.bars || [];
-      // Keep original UTC timestamps, we'll format as NY time in display
-      setBars(raw);
-      setErrorMsg(null);
+      
+      const data = await marketDataApi.getBars(ticker, timeframe, 'max');
+      if (data && data.bars) {
+        const raw: Bar[] = data.bars;
+        // Keep original UTC timestamps, we'll format as NY time in display
+        setBars(raw);
+        setErrorMsg(null);
+      } else {
+        throw new Error('No bars data available');
+      }
     } catch (e: any) {
       // eslint-disable-next-line no-console
       if (e?.name === 'AbortError') return;
@@ -188,7 +190,7 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
       await fetchBars();
     };
     start();
-    // subscribe to live bars over WS
+    // subscribe to live bars over WS using room management
     const unsubscribeBars = wsClient.subscribeBars(ticker, timeframe, (payload: BarsPayload) => {
       console.log('ChartTile received bars payload:', payload);
       if (!payload?.bars?.length) {
@@ -887,6 +889,14 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
         </div>
         
         <div className="flex items-center gap-2">
+          {/* Room Status Display */}
+          <div className="flex items-center gap-1 px-2 py-1 text-xs bg-slate-700/50 border border-slate-600 rounded-lg">
+            <div className={`w-2 h-2 rounded-full ${wsClient.isReady() ? 'bg-green-400' : 'bg-red-400'}`}></div>
+            <span className="text-slate-300">
+              {wsClient.isReady() ? 'WS' : 'Off'}
+            </span>
+          </div>
+          
           <select
             value={indicatorToAdd}
             onChange={(e) => setIndicatorToAdd(e.target.value as IndicatorType)}

@@ -97,25 +97,39 @@ export const useWatchlist = () => {
   }, [watchlist]);
 
   const removeTicker = useCallback(async (ticker: string) => {
+    console.log(`🔄 removeTicker called for: ${ticker}`);
+    console.log(`📊 Current watchlist before removal:`, watchlist.map(item => item.ticker));
+    
     setLoading(true);
     try {
+      console.log(`🌐 Calling backend API to remove ${ticker}...`);
       const response = await watchlistApi.removeFromWatchlist(ticker);
+      console.log(`📡 Backend response:`, response);
       
       if (response.status === 'success') {
-        setWatchlist(prev => prev.filter(item => item.ticker !== ticker));
+        console.log(`✅ Backend success, updating frontend state...`);
+        setWatchlist(prev => {
+          const newWatchlist = prev.filter(item => item.ticker !== ticker);
+          console.log(`🔄 setWatchlist called - old count: ${prev.length}, new count: ${newWatchlist.length}`);
+          console.log(`📊 New watchlist:`, newWatchlist.map(item => item.ticker));
+          return newWatchlist;
+        });
         setError(null);
+        console.log(`✅ removeTicker completed successfully for ${ticker}`);
         return true;
       } else {
+        console.log(`❌ Backend failed:`, response.message);
         setError(response.message || 'Failed to remove ticker');
         return false;
       }
     } catch (e) {
+      console.error(`💥 Error in removeTicker for ${ticker}:`, e);
       setError('Failed to remove ticker');
       return false;
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [watchlist]);
 
   const clearError = useCallback(() => {
     setError(null);

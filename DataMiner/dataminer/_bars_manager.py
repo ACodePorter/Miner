@@ -310,6 +310,7 @@ class BarsManager(SingletonParent):
 
     def _start_live_quotes(self):
         if self.ws is None:
+            self.logger.info("Starting live quotes")
             self.ws = LiveQuoteSource(self.handle_quote, self._on_error)
             self.ws.subscribe(list(self.subscribed_tickers))
         else:

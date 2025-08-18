@@ -12,7 +12,8 @@ __all__ = [
 
 _logger = get_logger('MinerService')
 
-app.autodiscover_tasks(['minerservice', 'marketbreadth'], force=True)
+app.autodiscover_tasks(
+    ['minerservice', 'minerservice.api.v1', 'marketbreadth'], force=True)
 
 
 @app.on_after_configure.connect

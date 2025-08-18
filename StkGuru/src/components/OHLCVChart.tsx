@@ -3,6 +3,7 @@ import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
 import LoadingSpinner from "./LoadingSpinner";
 import ErrorMessage from "./ErrorMessage";
+import { dataApi } from '../utils/api';
 
 interface OHLCVData {
   trade_date: string;
@@ -107,25 +108,22 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
       setLoading(true);
       setError(null);
       
-      console.log('Fetching categorized tickers from /api/wedge_pop/stats.json');
-      const response = await fetch('/api/wedge_pop/stats.json');
-      console.log('Response status:', response.status);
-      
-      if (!response.ok) {
-        throw new Error(`Failed to fetch categorized tickers: ${response.status}`);
-      }
-      
-      const data: WedgeStats[] = await response.json();
+      console.log('Fetching categorized tickers from new API');
+      const data = await dataApi.getWedgePopStats();
       console.log('Categorized tickers data:', data);
       
+      if (!data || !Array.isArray(data)) {
+        throw new Error('Invalid data format received');
+      }
+      
       // Sort by date (newest first)
-      const sortedData = data.sort((a, b) => {
+      const sortedData = data.sort((a: any, b: any) => {
         const dateA = new Date(a.date.substring(0, 4) + '-' + a.date.substring(4, 6) + '-' + a.date.substring(6, 8));
         const dateB = new Date(b.date.substring(0, 4) + '-' + b.date.substring(4, 6) + '-' + b.date.substring(6, 8));
         return dateB.getTime() - dateA.getTime();
       });
       
-      const categorized: CategorizedTickers[] = sortedData.map(item => ({
+      const categorized: CategorizedTickers[] = sortedData.map((item: any) => ({
         date: item.date,
         pop: item.pop,
         drop: item.drop,
@@ -177,39 +175,16 @@ const OHLCVChart: React.FC<OHLCVChartProps> = ({
       setError(null);
       
       console.log('Fetching OHLCV data for ticker:', ticker);
-      const response = await fetch(`/api/ohlcvw/${ticker}.json`);
-      console.log('OHLCV response status:', response.status);
-      
-      if (!response.ok) {
-        throw new Error(`Failed to fetch OHLCV data: ${response.status}`);
-      }
-      
-      const data = await response.json();
+      const data = await dataApi.getOHLCVW(ticker);
       console.log('OHLCV data:', data);
       
-      // Handle different data structures
-      let ohlcvList: OHLCVData[] = [];
-      if (Array.isArray(data)) {
-        ohlcvList = data;
-      } else if (data && typeof data === 'object') {
-        if (data.data && Array.isArray(data.data)) {
-          ohlcvList = data.data;
-        } else if (data.ohlcv && Array.isArray(data.ohlcv)) {
-          ohlcvList = data.ohlcv;
-        } else {
-          // Try to find OHLCV data in the object
-          const keys = Object.keys(data);
-          for (const key of keys) {
-            if (Array.isArray(data[key])) {
-              ohlcvList = data[key];
-              break;
-            }
-          }
-        }
+      if (!data || !Array.isArray(data)) {
+        throw new Error('Invalid OHLCV data format received');
       }
       
-      setOhlcvData(ohlcvList);
-      console.log('Processed OHLCV data:', ohlcvList);
+      // Data is already an array from the API
+      setOhlcvData(data);
+      console.log('Processed OHLCV data:', data);
     } catch (err) {
       console.error('Failed to fetch OHLCV data:', err);
       setError('Failed to fetch OHLCV data');

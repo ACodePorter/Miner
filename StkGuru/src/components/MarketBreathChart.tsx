@@ -3,6 +3,7 @@ import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
 import LoadingSpinner from "./LoadingSpinner";
 import ErrorMessage from "./ErrorMessage";
+import { dataApi } from '../utils/api';
 
 export interface SectorScore {
   sector_key: string;
@@ -71,13 +72,9 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
   
 
 
-  // Memoized fetch function
+  // Memoized fetch function - updated to use new API structure
   const fetchMarketBreadthData = useCallback(async (index: string): Promise<MarketBreadthData[]> => {
-    const response = await fetch(`/api/mbs/${index}.json`);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const arr = await response.json();
+    const arr = await dataApi.getMarketBreadth(index);
     if (Array.isArray(arr) && arr.length > 0) {
       return arr;
     } else {
@@ -91,7 +88,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
       if (showLoading) setLoading(true);
       setIsRefreshing(true);
       setError(null);
-      const arr = await fetchMarketBreadthData(indexId);
+      const arr = await dataApi.getMarketBreadth(indexId);
       setData(arr);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to load market breadth data");
@@ -100,7 +97,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
       setLoading(false);
       setIsRefreshing(false);
     }
-  }, [fetchMarketBreadthData, indexId]);
+  }, [indexId]);
 
   // Initial data load
   useEffect(() => {

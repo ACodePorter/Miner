@@ -15,7 +15,14 @@ class BarsManagerIntegration:
 
     def __init__(self):
         self.logger = get_logger('BarsManagerIntegration', logging.DEBUG)
-        self.bars_manager = BarsManager.get_instance()
+
+        # Temporarily disable BarsManager to avoid Redis connection issues
+        try:
+            self.bars_manager = BarsManager.get_instance()
+            print("BarsManager initialized successfully")
+        except Exception as e:
+            print(f"Warning: BarsManager initialization failed: {e}")
+            self.bars_manager = None
 
         # Track active subscriptions
         self.active_quote_subscriptions: Set[str] = set()
@@ -25,8 +32,19 @@ class BarsManagerIntegration:
         # Supported intervals from BarsManager
         self.supported_intervals = ['1m', '5m', '15m', '30m', '65m']
 
+        # Room manager reference for automatic data broadcasting
+        self.room_manager = None
+
         # Sync with existing BarsManager subscriptions
-        self._sync_existing_subscriptions()
+        if self.bars_manager:
+            self._sync_existing_subscriptions()
+        else:
+            print("Skipping subscription sync - BarsManager not available")
+
+    def set_room_manager(self, room_manager) -> None:
+        """Set the room manager reference for automatic data broadcasting"""
+        self.room_manager = room_manager
+        self.logger.info("Room manager set for BarsManager integration")
 
     def _sync_existing_subscriptions(self) -> None:
         """Sync with existing BarsManager subscriptions"""
@@ -68,6 +86,11 @@ class BarsManagerIntegration:
 
     async def subscribe_to_quotes(self, ticker: str) -> bool:
         """Subscribe to quotes for a specific ticker via BarsManager"""
+        if not self.bars_manager:
+            self.logger.warning(
+                f"BarsManager not available, cannot subscribe to quotes for {ticker}")
+            return False
+
         max_retries = 3
         retry_delay = 1
 
@@ -79,6 +102,16 @@ class BarsManagerIntegration:
                     self.active_quote_subscriptions.add(ticker)
                     self.logger.info(
                         f"Subscribed to quotes for {ticker} via BarsManager")
+
+                    # Notify room manager if available
+                    if self.room_manager:
+                        try:
+                            await self.room_manager.subscribe_to_quotes(ticker)
+                            self.logger.info(
+                                f"Room manager notified of quote subscription for {ticker}")
+                        except Exception as e:
+                            self.logger.warning(
+                                f"Failed to notify room manager for {ticker}: {e}")
                 else:
                     self.logger.info(
                         f"Already subscribed to quotes for {ticker} via BarsManager")
@@ -135,6 +168,16 @@ class BarsManagerIntegration:
                     self.active_bar_subscriptions.add(subscription_key)
                     self.logger.info(
                         f"Subscribed to {interval} bars for {ticker} via BarsManager")
+
+                    # Notify room manager if available
+                    if self.room_manager:
+                        try:
+                            await self.room_manager.subscribe_to_bars(ticker, interval)
+                            self.logger.info(
+                                f"Room manager notified of bar subscription for {ticker} {interval}")
+                        except Exception as e:
+                            self.logger.warning(
+                                f"Failed to notify room manager for {ticker} {interval}: {e}")
                 else:
                     self.logger.info(
                         f"Already subscribed to {interval} bars for {ticker} via BarsManager")
