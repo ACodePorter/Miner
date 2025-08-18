@@ -5,7 +5,7 @@ from minerworkers import app
 
 from ._market_valuation_scraper import MarketValuationScraper
 from ._version import __version__
-from .tasks import update_hk_market_pe_task, update_market_pe_task
+from .tasks import update_market_pe_task
 
 _logger = get_logger('BrowserScraper')
 

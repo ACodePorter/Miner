@@ -1,8 +1,6 @@
 from unittest import TestCase
 
-import pandas as pd
 from browserscraper import MarketValuationScraper
-from dataminer import MarketDataShovel
 from dataminer.models import MarketPe
 from detonator import get_logger, make_db_connection
 

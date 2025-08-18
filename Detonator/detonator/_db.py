@@ -1,4 +1,4 @@
-from functools import partial, wraps
+from functools import wraps
 
 from mongoengine import connect, get_connection
 from mongoengine.connection import DEFAULT_CONNECTION_NAME

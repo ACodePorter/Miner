@@ -5,7 +5,7 @@ import json
 import logging
 import uuid
 from datetime import datetime
-from typing import Any, Callable, Dict, List, Optional, Set, Tuple
+from typing import Any, Dict, List, Optional, Set, Tuple
 
 import redis.asyncio as redis
 from detonator import get_logger, is_prod

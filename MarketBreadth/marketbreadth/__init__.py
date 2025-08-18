@@ -1,4 +1,3 @@
-from minerworkers import app
 
 from ._market_breadth import MarketBreadth
 from ._version import version

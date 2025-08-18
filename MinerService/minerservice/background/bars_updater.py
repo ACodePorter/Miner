@@ -3,7 +3,7 @@
 import asyncio
 import json
 from datetime import datetime
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List
 
 from minerservice.services.bars_service import BarsService
 from minerservice.websocket.connection_manager import \

@@ -17,7 +17,7 @@ from multiprocessing import Pool
 from typing import Any, Dict, List
 
 from dataminer import TradeCalendarShovel
-from dataminer.models import TickerDailyInfo, TradeCalendar
+from dataminer.models import TickerDailyInfo
 from detonator import get_logger, make_db_connection
 from mongoengine import disconnect
 

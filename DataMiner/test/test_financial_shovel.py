@@ -10,7 +10,6 @@ _logger = get_logger('FinancialShovelTestCase')
 class FinancialShovelTestCase(TestCase):
     def setUp(self):
         make_db_connection(db='miner-test')
-        pass
         os.environ['HTTP_PROXY'] = 'socks5://localhost:8001'
         os.environ['HTTPS_PROXY'] = 'socks5://localhost:8001'
 

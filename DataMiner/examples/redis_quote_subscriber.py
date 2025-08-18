@@ -8,7 +8,6 @@ via Redis pub/sub channels.
 
 import json
 import sys
-import time
 from typing import List
 
 from dataminer import BarsManager

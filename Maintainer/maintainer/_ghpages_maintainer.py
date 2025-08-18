@@ -1,6 +1,5 @@
 import json
 import os
-import shutil
 import tempfile
 from datetime import datetime, timedelta
 from typing import Literal, Optional

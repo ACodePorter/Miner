@@ -4,7 +4,7 @@ import hashlib
 import json
 import math
 from datetime import datetime
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional
 
 from dataminer import BarsManager
 

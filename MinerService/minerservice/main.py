@@ -1,37 +1,15 @@
 import asyncio
 import json
 import logging
-import os
 from contextlib import asynccontextmanager
-from datetime import datetime, timedelta
-from typing import Any, Dict, List, Optional
+from datetime import datetime
 
-import pytz
 # yfinance import removed - using BarsManager integration only
-from browserscraper.tasks import update_market_pe_task
-from celery import chain
-from dataminer import MarketDataShovel, WedgePop
-from dataminer.models import MarketPe
-from detonator import get_logger, make_db_connection, mongo_2_df
+from detonator import get_logger
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
-from marketbreadth import MarketBreadth
-from marketbreadth.tasks import update_spx_market_breadth_task
 
 from .api.v1 import api_v1_router
-from .tasks import (run_hk_daily_updates_task, run_us_daily_updates_task,
-                    update_indicators_for_tickers_task,
-                    update_iw_daily_ma_task,
-                    update_iwd_tickers_daily_info_task,
-                    update_iwd_tickers_info_task, update_iwd_tickers_task,
-                    update_iwf_tickers_info_task, update_iwf_tickers_task,
-                    update_iwm_tickers_info_task, update_iwm_tickers_task,
-                    update_spx_daily_ma_task,
-                    update_spx_tickers_daily_info_task,
-                    update_spx_tickers_info_task, update_spx_tickers_task,
-                    update_tickers_daily_info_task,
-                    update_us_trade_calendar_task,
-                    update_wedge_pop_for_index_task)
 from .ws.connection_manager import WebSocketConnectionManager, manager
 
 _logger = get_logger('MinerService', logging.DEBUG)

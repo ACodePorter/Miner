@@ -1,4 +1,4 @@
-from datetime import date, datetime, timedelta
+from datetime import date, datetime
 from typing import List
 
 import exchange_calendars as xcals

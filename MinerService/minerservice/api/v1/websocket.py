@@ -1,8 +1,8 @@
 """WebSocket management endpoints"""
 
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, Optional
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter
 from minerservice.ws.connection_manager import get_websocket_manager
 
 router = APIRouter(prefix="/websocket", tags=["websocket"])

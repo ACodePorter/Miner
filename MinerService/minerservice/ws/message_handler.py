@@ -2,7 +2,7 @@
 
 import json
 from datetime import datetime
-from typing import Any, Dict, Optional
+from typing import Any, Dict
 
 from fastapi import WebSocket
 from minerservice.services.bars_service import BarsService
