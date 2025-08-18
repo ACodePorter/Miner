@@ -72,15 +72,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
   
 
 
-  // Memoized fetch function - updated to use new API structure
-  const fetchMarketBreadthData = useCallback(async (index: string): Promise<MarketBreadthData[]> => {
-    const arr = await dataApi.getMarketBreadth(index);
-    if (Array.isArray(arr) && arr.length > 0) {
-      return arr;
-    } else {
-      throw new Error("No market breadth data available");
-    }
-  }, []);
+
 
   // Memoized data loading function
   const loadData = useCallback(async (showLoading = true) => {

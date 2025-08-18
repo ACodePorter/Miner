@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Highcharts from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
-import { apiConfig } from '../config/environment';
 import { useInView } from 'react-intersection-observer';
 import { wsClient, type QuotePayload, type BarsPayload } from '../utils/wsClient';
 import { marketDataApi } from '../utils/api';

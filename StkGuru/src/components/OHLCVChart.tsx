@@ -16,15 +16,7 @@ interface OHLCVData {
   wedge_status: 'pop' | 'drop' | 'none';
 }
 
-// New interfaces for the stats.json structure
-interface WedgeStats {
-  date: string;
-  total: number;
-  pop: string[];
-  drop: string[];
-  pop_pct: number;
-  drop_pct: number;
-}
+
 
 interface CategorizedTickers {
   date: string;
