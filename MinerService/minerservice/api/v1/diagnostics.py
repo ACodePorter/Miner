@@ -192,3 +192,54 @@ async def force_redis_resubscribe() -> Dict[str, Any]:
         }
     except Exception as e:
         return {'error': f'Failed to force resubscribe: {str(e)}'}
+
+
+@router.get('/verify_cleanup_integrity')
+async def verify_cleanup_integrity() -> Dict[str, Any]:
+    """Verify the overall integrity of the cleanup system"""
+    manager = get_websocket_manager()
+    try:
+        if not manager:
+            return {'error': 'WebSocket manager not available'}
+
+        # Perform comprehensive cleanup integrity verification
+        verification_results = await manager.verify_cleanup_integrity()
+
+        return {
+            'status': 'success',
+            'verification_results': verification_results
+        }
+    except Exception as e:
+        return {'error': f'Failed to verify cleanup integrity: {str(e)}'}
+
+
+@router.post('/force_cleanup_disconnected')
+async def force_cleanup_disconnected() -> Dict[str, Any]:
+    """Force cleanup of all disconnected clients and stale data"""
+    manager = get_websocket_manager()
+    try:
+        if not manager:
+            return {'error': 'WebSocket manager not available'}
+
+        # Get current status before cleanup
+        before_cleanup = await manager.verify_cleanup_integrity()
+
+        # Trigger comprehensive cleanup
+        await manager.cleanup_stale_subscriptions()
+
+        # Get status after cleanup
+        after_cleanup = await manager.verify_cleanup_integrity()
+
+        return {
+            'status': 'success',
+            'message': 'Forced cleanup completed',
+            'before_cleanup': before_cleanup,
+            'after_cleanup': after_cleanup,
+            'cleanup_summary': {
+                'before_status': before_cleanup.get('overall_status'),
+                'after_status': after_cleanup.get('overall_status'),
+                'improvement': before_cleanup.get('overall_status') != after_cleanup.get('overall_status')
+            }
+        }
+    except Exception as e:
+        return {'error': f'Failed to force cleanup: {str(e)}'}

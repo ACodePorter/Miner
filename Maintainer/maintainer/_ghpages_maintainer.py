@@ -160,7 +160,8 @@ class GhPagesMaintainer(SingletonParent):
 
     def _export_static_json(self, dir_of_miner: str):
         # Ensure all target directories exist
-        data_api_dir = os.path.join(dir_of_miner, 'StkGuru', 'public', 'api', 'v1', 'data')
+        data_api_dir = os.path.join(
+            dir_of_miner, 'StkGuru', 'public', 'api', 'v1', 'data')
         os.makedirs(os.path.join(data_api_dir, 'market_pe'), exist_ok=True)
         os.makedirs(os.path.join(data_api_dir, 'mbs'), exist_ok=True)
         os.makedirs(os.path.join(data_api_dir, 'ohlcvw'), exist_ok=True)
@@ -172,8 +173,9 @@ class GhPagesMaintainer(SingletonParent):
         self._export_market_breadth('spx', os.path.join(
             data_api_dir, 'mbs', 'spx.json'))
         self._export_ohlcvw(os.path.join(data_api_dir, 'wedge_pop', 'wedges.json'),
-            os.path.join(data_api_dir, 'wedge_pop', 'stats.json'),
-            os.path.join(data_api_dir, 'ohlcvw'))
+                            os.path.join(
+                                data_api_dir, 'wedge_pop', 'stats.json'),
+                            os.path.join(data_api_dir, 'ohlcvw'))
 
     def update_gh_pages(self) -> bool:
         make_db_connection()
