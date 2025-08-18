@@ -201,7 +201,7 @@ class GhPagesMaintainer(SingletonParent):
                         _logger.error(f'Push failed: no push results')
                         return False
                     else:
-                        _logger.info(f'\n{repo.git.show()}\n')
+                        _logger.info(f'\n{repo.git.show("--stat")}\n')
                 else:
                     # No changes to commit
                     _logger.info('No changes to commit')
