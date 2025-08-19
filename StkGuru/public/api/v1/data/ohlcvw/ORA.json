@@ -7488,5 +7488,15 @@
     "close": 89.75,
     "volume": 605000.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,18,00,00,00,000000",
+    "ticker": "ORA",
+    "open": 90.2200012207,
+    "high": 92.0699996948,
+    "low": 90.0299987793,
+    "close": 92.0199966431,
+    "volume": 931133.0,
+    "wedge_status": "none"
   }
 ]

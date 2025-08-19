@@ -7488,5 +7488,15 @@
     "close": 64.9800033569,
     "volume": 819800.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,18,00,00,00,000000",
+    "ticker": "ALE",
+    "open": 64.9199981689,
+    "high": 65.0,
+    "low": 64.7799987793,
+    "close": 64.8300018311,
+    "volume": 366150.0,
+    "wedge_status": "none"
   }
 ]

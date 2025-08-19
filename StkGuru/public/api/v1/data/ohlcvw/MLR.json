@@ -7488,5 +7488,15 @@
     "close": 43.0,
     "volume": 239000.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,18,00,00,00,000000",
+    "ticker": "MLR",
+    "open": 42.9300003052,
+    "high": 43.6300010681,
+    "low": 42.9599990845,
+    "close": 43.1100006104,
+    "volume": 124541.0,
+    "wedge_status": "none"
   }
 ]

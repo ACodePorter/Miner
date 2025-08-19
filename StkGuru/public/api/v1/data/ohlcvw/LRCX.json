@@ -7488,5 +7488,15 @@
     "close": 99.5100021362,
     "volume": 23142373.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,18,00,00,00,000000",
+    "ticker": "LRCX",
+    "open": 99.0,
+    "high": 99.7949981689,
+    "low": 98.4000015259,
+    "close": 98.8799972534,
+    "volume": 15109840.0,
+    "wedge_status": "none"
   }
 ]

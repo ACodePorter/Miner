@@ -7488,5 +7488,15 @@
     "close": 32.0,
     "volume": 424500.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,18,00,00,00,000000",
+    "ticker": "HTH",
+    "open": 31.9599990845,
+    "high": 32.2299995422,
+    "low": 31.7749996185,
+    "close": 32.1800003052,
+    "volume": 383120.0,
+    "wedge_status": "none"
   }
 ]

@@ -7478,5 +7478,25 @@
     "close": 1.75,
     "volume": 888303.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,15,00,00,00,000000",
+    "ticker": "WTI",
+    "open": 1.7599999905,
+    "high": 1.7699999809,
+    "low": 1.7200000286,
+    "close": 1.7200000286,
+    "volume": 653300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,18,00,00,00,000000",
+    "ticker": "WTI",
+    "open": 1.7200000286,
+    "high": 1.75,
+    "low": 1.7000000477,
+    "close": 1.7400000095,
+    "volume": 687337.0,
+    "wedge_status": "none"
   }
 ]

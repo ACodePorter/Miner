@@ -7488,5 +7488,15 @@
     "close": 21.1299991608,
     "volume": 91700.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,18,00,00,00,000000",
+    "ticker": "FRGE",
+    "open": 21.0,
+    "high": 21.2800006866,
+    "low": 20.2900009155,
+    "close": 20.4500007629,
+    "volume": 93969.0,
+    "wedge_status": "drop"
   }
 ]

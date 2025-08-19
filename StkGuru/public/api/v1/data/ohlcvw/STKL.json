@@ -7478,5 +7478,25 @@
     "close": 6.1300001144,
     "volume": 697580.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,15,00,00,00,000000",
+    "ticker": "STKL",
+    "open": 6.1700000763,
+    "high": 6.1700000763,
+    "low": 6.0,
+    "close": 6.1300001144,
+    "volume": 641000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,18,00,00,00,000000",
+    "ticker": "STKL",
+    "open": 6.1700000763,
+    "high": 6.2950000763,
+    "low": 6.1539998055,
+    "close": 6.2699999809,
+    "volume": 637318.0,
+    "wedge_status": "none"
   }
 ]

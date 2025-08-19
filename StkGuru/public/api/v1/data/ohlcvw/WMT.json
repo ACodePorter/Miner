@@ -7488,5 +7488,15 @@
     "close": 100.0,
     "volume": 10028284.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,18,00,00,00,000000",
+    "ticker": "WMT",
+    "open": 100.0,
+    "high": 100.875,
+    "low": 99.9449996948,
+    "close": 100.6999969482,
+    "volume": 9596317.0,
+    "wedge_status": "none"
   }
 ]

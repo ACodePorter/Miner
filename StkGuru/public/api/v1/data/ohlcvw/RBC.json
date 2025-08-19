@@ -7488,5 +7488,15 @@
     "close": 394.75,
     "volume": 141300.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,18,00,00,00,000000",
+    "ticker": "RBC",
+    "open": 394.75,
+    "high": 399.4700012207,
+    "low": 393.2074890137,
+    "close": 398.9299926758,
+    "volume": 168441.0,
+    "wedge_status": "none"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 1.4700000286,
     "volume": 194500.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,18,00,00,00,000000",
+    "ticker": "KLTR",
+    "open": 1.4600000381,
+    "high": 1.5199999809,
+    "low": 1.4600000381,
+    "close": 1.4800000191,
+    "volume": 186360.0,
+    "wedge_status": "none"
   }
 ]

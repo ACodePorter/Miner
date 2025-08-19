@@ -7488,5 +7488,15 @@
     "close": 147.5,
     "volume": 743900.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,18,00,00,00,000000",
+    "ticker": "SNX",
+    "open": 147.5,
+    "high": 149.0749969482,
+    "low": 146.4799957275,
+    "close": 147.5299987793,
+    "volume": 496963.0,
+    "wedge_status": "none"
   }
 ]

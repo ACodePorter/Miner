@@ -7488,5 +7488,15 @@
     "close": 4.5999999046,
     "volume": 230100.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,18,00,00,00,000000",
+    "ticker": "SCPH",
+    "open": 4.5999999046,
+    "high": 4.8000001907,
+    "low": 4.5999999046,
+    "close": 4.7800002098,
+    "volume": 265374.0,
+    "wedge_status": "none"
   }
 ]

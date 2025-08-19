@@ -7488,5 +7488,15 @@
     "close": 45.5,
     "volume": 47600.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,18,00,00,00,000000",
+    "ticker": "GNTY",
+    "open": 45.3699989319,
+    "high": 46.2799987793,
+    "low": 45.2900009155,
+    "close": 46.2400016785,
+    "volume": 62549.0,
+    "wedge_status": "none"
   }
 ]

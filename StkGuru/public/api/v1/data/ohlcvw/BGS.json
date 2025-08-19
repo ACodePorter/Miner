@@ -7488,5 +7488,15 @@
     "close": 4.2100000381,
     "volume": 1432900.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,18,00,00,00,000000",
+    "ticker": "BGS",
+    "open": 4.2300000191,
+    "high": 4.3699998856,
+    "low": 4.2189998627,
+    "close": 4.25,
+    "volume": 1639812.0,
+    "wedge_status": "none"
   }
 ]

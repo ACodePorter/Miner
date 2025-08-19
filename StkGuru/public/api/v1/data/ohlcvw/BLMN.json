@@ -7488,5 +7488,15 @@
     "close": 7.0,
     "volume": 3157200.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,18,00,00,00,000000",
+    "ticker": "BLMN",
+    "open": 7.0999999046,
+    "high": 7.3200001717,
+    "low": 7.0264000893,
+    "close": 7.1999998093,
+    "volume": 3742326.0,
+    "wedge_status": "none"
   }
 ]

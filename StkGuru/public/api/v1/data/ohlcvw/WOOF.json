@@ -7478,5 +7478,25 @@
     "close": 3.4200000763,
     "volume": 1517453.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,15,00,00,00,000000",
+    "ticker": "WOOF",
+    "open": 3.4500000477,
+    "high": 3.4749999046,
+    "low": 3.3299999237,
+    "close": 3.3399999142,
+    "volume": 1417600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,18,00,00,00,000000",
+    "ticker": "WOOF",
+    "open": 3.3499999046,
+    "high": 3.5,
+    "low": 3.3306000233,
+    "close": 3.4700000286,
+    "volume": 1905642.0,
+    "wedge_status": "none"
   }
 ]

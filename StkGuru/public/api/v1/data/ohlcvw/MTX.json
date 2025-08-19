@@ -7488,5 +7488,15 @@
     "close": 60.7299995422,
     "volume": 340800.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,18,00,00,00,000000",
+    "ticker": "MTX",
+    "open": 60.5400009155,
+    "high": 61.1800003052,
+    "low": 60.25,
+    "close": 60.5,
+    "volume": 177238.0,
+    "wedge_status": "none"
   }
 ]

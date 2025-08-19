@@ -7478,5 +7478,25 @@
     "close": 9.1300001144,
     "volume": 29591.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,15,00,00,00,000000",
+    "ticker": "SNFCA",
+    "open": 9.2399997711,
+    "high": 9.2399997711,
+    "low": 8.2600002289,
+    "close": 8.470000267,
+    "volume": 124700.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,18,00,00,00,000000",
+    "ticker": "SNFCA",
+    "open": 8.5,
+    "high": 8.6049995422,
+    "low": 8.3200998306,
+    "close": 8.4499998093,
+    "volume": 32478.0,
+    "wedge_status": "none"
   }
 ]
