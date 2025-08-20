@@ -149,31 +149,6 @@ class BarsManager(SingletonParent):
 
     def handle_quote(self, quote: Dict[str, Any]):
         """Handle incoming quote and publish to Redis for real-time distribution"""
-        try:
-            # Safely extract quote fields with defaults for missing keys
-            time_str = quote.get('time', '')
-            ticker_id = quote.get('id', '')
-            price = quote.get('price', 0)
-            change = quote.get('change', 0)
-            change_percent = quote.get('change_percent', 0)
-
-            # Format timestamp if available
-            if time_str:
-                try:
-                    timestamp = datetime.fromtimestamp(
-                        int(time_str)/1000).strftime("%H:%M:%S")
-                except (ValueError, TypeError):
-                    timestamp = "N/A"
-            else:
-                timestamp = "N/A"
-
-            self.logger.debug(
-                f'{timestamp} {ticker_id}: {price} {change} {change_percent}')
-        except Exception as e:
-            self.logger.warning(f"Error formatting quote log: {e}")
-            # Continue processing even if logging fails
-
-        # Extract ticker from quote (quote has 'id' field)
         ticker = quote.get('id')
         if not ticker:
             self.logger.warning(
@@ -182,15 +157,16 @@ class BarsManager(SingletonParent):
         try:
             # Publish quote to Redis pub/sub channel
             channel = f'quotes:{ticker}'
-            self.redis_client.publish(channel, json.dumps(quote))
-            self.redis_client.publish('quote:latest', json.dumps(quote))
+            quote_json = json.dumps(quote)
+            self.redis_client.publish(channel, quote_json)
+            self.redis_client.publish('quote:latest', quote_json)
             # Store latest quote for historical reference
             latest_key = f'quote:latest:{ticker}'
             self.redis_client.setex(
-                latest_key, 300, json.dumps(quote))  # Expire in 1 hour
+                latest_key, 10, quote_json)  # Expire in 1 hour
             # Add ticker to active quotes set
             self.redis_client.sadd('quotes:active', ticker)
-            self.logger.debug('Published quote for %s to Redis', ticker)
+            self.logger.debug('Published quote to %s -> %s', channel, quote_json )
         except Exception as e:
             self.logger.error('Failed to publish quote to Redis: %s', e)
 

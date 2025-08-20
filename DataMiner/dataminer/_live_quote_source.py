@@ -14,19 +14,23 @@ class LiveQuoteSource(Thread):
         self.on_error = on_error
         self.subscribed_tickers = set()
         self.closed = False
+        self.is_running = False
 
     def run(self):
+        self.is_running = True
         try:
             self.closed = False
             self.logger.info("Starting WebSocket listener")
             self.ws.subscribe(list(self.subscribed_tickers))
             self.ws.listen(self.handle_quote)
         except Exception as e:
+            self.is_running = False
             if self.on_error is not None and not self.closed:
                 self.logger.error(
                     "Error listening to WebSocket: %s", e)
                 self.on_error(e)
         finally:
+            self.is_running = False
             try:
                 if self.ws is not None:
                     self.ws.close()
@@ -46,7 +50,7 @@ class LiveQuoteSource(Thread):
             tickers = [tickers]
         tickers = [t.upper().replace('.', '-') for t in tickers]
         self.subscribed_tickers.update(tickers)
-        if self.is_alive():
+        if self.is_running:
             self.ws.subscribe(tickers)
         else:
             self.start()
