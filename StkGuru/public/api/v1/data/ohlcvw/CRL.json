@@ -7498,5 +7498,15 @@
     "close": 156.9700012207,
     "volume": 397890.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,19,00,00,00,000000",
+    "ticker": "CRL",
+    "open": 157.5899963379,
+    "high": 160.0,
+    "low": 156.8000030518,
+    "close": 158.5,
+    "volume": 409110.0,
+    "wedge_status": "pop"
   }
 ]

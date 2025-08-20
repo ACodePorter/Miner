@@ -7498,5 +7498,15 @@
     "close": 154.7700042725,
     "volume": 52381.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,19,00,00,00,000000",
+    "ticker": "WLFC",
+    "open": 153.25,
+    "high": 155.0399932861,
+    "low": 148.6999969482,
+    "close": 148.7299957275,
+    "volume": 42863.0,
+    "wedge_status": "drop"
   }
 ]

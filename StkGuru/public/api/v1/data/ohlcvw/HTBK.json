@@ -7498,5 +7498,15 @@
     "close": 9.8599996567,
     "volume": 413037.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,08,19,00,00,00,000000",
+    "ticker": "HTBK",
+    "open": 9.8199996948,
+    "high": 9.9600000381,
+    "low": 9.75,
+    "close": 9.8400001526,
+    "volume": 428432.0,
+    "wedge_status": "none"
   }
 ]

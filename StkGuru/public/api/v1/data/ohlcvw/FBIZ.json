@@ -7498,5 +7498,15 @@
     "close": 48.9399986267,
     "volume": 16073.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,19,00,00,00,000000",
+    "ticker": "FBIZ",
+    "open": 49.25,
+    "high": 50.1399993896,
+    "low": 49.0149993896,
+    "close": 49.4799995422,
+    "volume": 32251.0,
+    "wedge_status": "pop"
   }
 ]

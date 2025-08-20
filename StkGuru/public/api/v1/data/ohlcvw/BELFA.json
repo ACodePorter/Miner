@@ -7498,5 +7498,15 @@
     "close": 112.0100021362,
     "volume": 4357.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,19,00,00,00,000000",
+    "ticker": "BELFA",
+    "open": 112.0,
+    "high": 112.0,
+    "low": 107.9400024414,
+    "close": 107.9400024414,
+    "volume": 8075.0,
+    "wedge_status": "drop"
   }
 ]

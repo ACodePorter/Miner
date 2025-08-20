@@ -7498,5 +7498,15 @@
     "close": 49.7299995422,
     "volume": 292140.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,19,00,00,00,000000",
+    "ticker": "HTO",
+    "open": 50.0,
+    "high": 50.5800018311,
+    "low": 49.8800010681,
+    "close": 50.4300003052,
+    "volume": 250526.0,
+    "wedge_status": "pop"
   }
 ]

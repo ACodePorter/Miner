@@ -7498,5 +7498,15 @@
     "close": 155.5,
     "volume": 3201116.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,19,00,00,00,000000",
+    "ticker": "RTX",
+    "open": 154.5700073242,
+    "high": 155.125,
+    "low": 153.2100067139,
+    "close": 153.6600036621,
+    "volume": 2408244.0,
+    "wedge_status": "drop"
   }
 ]

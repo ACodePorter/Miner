@@ -7498,5 +7498,15 @@
     "close": 74.0100021362,
     "volume": 580684.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,19,00,00,00,000000",
+    "ticker": "OGS",
+    "open": 74.0,
+    "high": 74.8799972534,
+    "low": 74.0100021362,
+    "close": 74.8099975586,
+    "volume": 711930.0,
+    "wedge_status": "none"
   }
 ]

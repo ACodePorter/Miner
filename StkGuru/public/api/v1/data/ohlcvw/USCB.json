@@ -7498,5 +7498,15 @@
     "close": 17.0,
     "volume": 23014.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,19,00,00,00,000000",
+    "ticker": "USCB",
+    "open": 17.2549991608,
+    "high": 17.4500007629,
+    "low": 17.1723995209,
+    "close": 17.3899993896,
+    "volume": 9610.0,
+    "wedge_status": "none"
   }
 ]

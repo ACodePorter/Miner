@@ -7498,5 +7498,15 @@
     "close": 78.3000030518,
     "volume": 4257447.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,08,19,00,00,00,000000",
+    "ticker": "EW",
+    "open": 77.75,
+    "high": 79.3450012207,
+    "low": 77.75,
+    "close": 78.9300003052,
+    "volume": 3670924.0,
+    "wedge_status": "none"
   }
 ]

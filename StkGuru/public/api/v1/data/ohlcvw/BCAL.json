@@ -7498,5 +7498,15 @@
     "close": 16.0,
     "volume": 77845.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,19,00,00,00,000000",
+    "ticker": "BCAL",
+    "open": 16.0699996948,
+    "high": 16.3400001526,
+    "low": 16.0699996948,
+    "close": 16.2399997711,
+    "volume": 51850.0,
+    "wedge_status": "none"
   }
 ]

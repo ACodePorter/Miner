@@ -7498,5 +7498,15 @@
     "close": 4.1399998665,
     "volume": 6597753.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,19,00,00,00,000000",
+    "ticker": "MPW",
+    "open": 4.1700000763,
+    "high": 4.25,
+    "low": 4.1500000954,
+    "close": 4.2399997711,
+    "volume": 8064794.0,
+    "wedge_status": "pop"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 791.6199951172,
     "volume": 821526.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,19,00,00,00,000000",
+    "ticker": "AXON",
+    "open": 779.8300170898,
+    "high": 783.9949951172,
+    "low": 755.0,
+    "close": 758.2899780273,
+    "volume": 621039.0,
+    "wedge_status": "drop"
   }
 ]

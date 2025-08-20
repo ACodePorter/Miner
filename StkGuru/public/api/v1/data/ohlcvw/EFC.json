@@ -7498,5 +7498,15 @@
     "close": 13.7100000381,
     "volume": 860379.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,19,00,00,00,000000",
+    "ticker": "EFC",
+    "open": 13.75,
+    "high": 14.0542001724,
+    "low": 13.7399997711,
+    "close": 13.75,
+    "volume": 1437466.0,
+    "wedge_status": "none"
   }
 ]

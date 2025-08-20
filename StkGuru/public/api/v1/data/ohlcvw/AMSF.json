@@ -7498,5 +7498,15 @@
     "close": 45.1599998474,
     "volume": 52083.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,19,00,00,00,000000",
+    "ticker": "AMSF",
+    "open": 45.2999992371,
+    "high": 45.9650001526,
+    "low": 45.2200012207,
+    "close": 45.75,
+    "volume": 55023.0,
+    "wedge_status": "pop"
   }
 ]
