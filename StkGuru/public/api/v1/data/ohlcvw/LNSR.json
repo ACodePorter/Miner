@@ -7508,5 +7508,15 @@
     "close": 12.5,
     "volume": 82524.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,20,00,00,00,000000",
+    "ticker": "LNSR",
+    "open": 12.5,
+    "high": 12.5699996948,
+    "low": 12.4499998093,
+    "close": 12.5500001907,
+    "volume": 41233.0,
+    "wedge_status": "none"
   }
 ]

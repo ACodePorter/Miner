@@ -7508,5 +7508,15 @@
     "close": 30.4400005341,
     "volume": 886752.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,20,00,00,00,000000",
+    "ticker": "ENOV",
+    "open": 30.4300003052,
+    "high": 30.6987991333,
+    "low": 29.5900001526,
+    "close": 30.0,
+    "volume": 776962.0,
+    "wedge_status": "none"
   }
 ]

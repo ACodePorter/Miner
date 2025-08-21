@@ -7508,5 +7508,15 @@
     "close": 254.1000061035,
     "volume": 160877.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,20,00,00,00,000000",
+    "ticker": "POWL",
+    "open": 250.3500061035,
+    "high": 251.1150054932,
+    "low": 235.5,
+    "close": 246.5200042725,
+    "volume": 372398.0,
+    "wedge_status": "none"
   }
 ]

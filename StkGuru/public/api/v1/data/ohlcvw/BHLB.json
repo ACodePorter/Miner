@@ -7508,5 +7508,15 @@
     "close": 25.3400001526,
     "volume": 433338.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,08,20,00,00,00,000000",
+    "ticker": "BHLB",
+    "open": 25.3999996185,
+    "high": 25.5,
+    "low": 25.2700004578,
+    "close": 25.3999996185,
+    "volume": 251933.0,
+    "wedge_status": "none"
   }
 ]

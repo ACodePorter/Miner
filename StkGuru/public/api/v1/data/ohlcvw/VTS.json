@@ -6098,5 +6098,15 @@
     "close": 24.6800003052,
     "volume": 285455.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,20,00,00,00,000000",
+    "ticker": "VTS",
+    "open": 24.75,
+    "high": 25.0,
+    "low": 24.7028007507,
+    "close": 24.9200000763,
+    "volume": 223509.0,
+    "wedge_status": "none"
   }
 ]

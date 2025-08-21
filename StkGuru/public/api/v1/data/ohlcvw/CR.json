@@ -5558,5 +5558,15 @@
     "close": 191.9900054932,
     "volume": 136443.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,20,00,00,00,000000",
+    "ticker": "CR",
+    "open": 191.0,
+    "high": 192.1699981689,
+    "low": 189.1999969482,
+    "close": 190.0,
+    "volume": 268546.0,
+    "wedge_status": "none"
   }
 ]

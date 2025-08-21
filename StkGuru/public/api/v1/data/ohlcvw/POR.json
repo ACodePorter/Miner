@@ -7508,5 +7508,15 @@
     "close": 42.6500015259,
     "volume": 1345500.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,20,00,00,00,000000",
+    "ticker": "POR",
+    "open": 42.7099990845,
+    "high": 43.2599983215,
+    "low": 42.3400001526,
+    "close": 42.5,
+    "volume": 951544.0,
+    "wedge_status": "none"
   }
 ]

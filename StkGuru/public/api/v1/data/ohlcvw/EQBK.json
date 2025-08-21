@@ -7508,5 +7508,15 @@
     "close": 40.0,
     "volume": 98297.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,20,00,00,00,000000",
+    "ticker": "EQBK",
+    "open": 40.1100006104,
+    "high": 40.2099990845,
+    "low": 39.7700004578,
+    "close": 40.0999984741,
+    "volume": 77928.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 21.0,
     "volume": 193085.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,20,00,00,00,000000",
+    "ticker": "ODP",
+    "open": 20.8700008392,
+    "high": 21.1149997711,
+    "low": 20.5,
+    "close": 20.6000003815,
+    "volume": 259623.0,
+    "wedge_status": "none"
   }
 ]

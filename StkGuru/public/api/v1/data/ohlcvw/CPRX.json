@@ -7508,5 +7508,15 @@
     "close": 20.25,
     "volume": 835730.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,20,00,00,00,000000",
+    "ticker": "CPRX",
+    "open": 20.2900009155,
+    "high": 20.4699993134,
+    "low": 20.1800003052,
+    "close": 20.3400001526,
+    "volume": 605092.0,
+    "wedge_status": "none"
   }
 ]

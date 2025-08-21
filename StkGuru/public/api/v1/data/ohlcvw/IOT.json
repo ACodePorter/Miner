@@ -7508,5 +7508,15 @@
     "close": 33.1199989319,
     "volume": 3328960.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,20,00,00,00,000000",
+    "ticker": "IOT",
+    "open": 32.8300018311,
+    "high": 33.1100006104,
+    "low": 32.0600013733,
+    "close": 33.0,
+    "volume": 3046467.0,
+    "wedge_status": "none"
   }
 ]

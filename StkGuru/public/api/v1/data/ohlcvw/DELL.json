@@ -7508,5 +7508,15 @@
     "close": 135.1699981689,
     "volume": 2949602.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,20,00,00,00,000000",
+    "ticker": "DELL",
+    "open": 134.0,
+    "high": 134.0,
+    "low": 126.8399963379,
+    "close": 128.5149993896,
+    "volume": 6530192.0,
+    "wedge_status": "drop"
   }
 ]
