@@ -7508,5 +7508,15 @@
     "close": 58.0800018311,
     "volume": 654252.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,21,00,00,00,000000",
+    "ticker": "OMF",
+    "open": 57.75,
+    "high": 58.2299995422,
+    "low": 57.2099990845,
+    "close": 57.3400001526,
+    "volume": 861852.0,
+    "wedge_status": "drop"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 12.25,
     "volume": 123099.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,21,00,00,00,000000",
+    "ticker": "PBPB",
+    "open": 12.1000003815,
+    "high": 12.3800001144,
+    "low": 11.9072999954,
+    "close": 12.3800001144,
+    "volume": 157561.0,
+    "wedge_status": "none"
   }
 ]

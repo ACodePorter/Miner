@@ -7508,5 +7508,15 @@
     "close": 41.6500015259,
     "volume": 3750847.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,21,00,00,00,000000",
+    "ticker": "BILL",
+    "open": 41.1399993896,
+    "high": 41.4199981689,
+    "low": 40.1908988953,
+    "close": 41.25,
+    "volume": 3407023.0,
+    "wedge_status": "none"
   }
 ]

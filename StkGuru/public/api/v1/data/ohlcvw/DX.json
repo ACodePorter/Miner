@@ -7508,5 +7508,15 @@
     "close": 12.5200004578,
     "volume": 5393349.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,21,00,00,00,000000",
+    "ticker": "DX",
+    "open": 12.5,
+    "high": 12.5,
+    "low": 12.3900003433,
+    "close": 12.4300003052,
+    "volume": 5587251.0,
+    "wedge_status": "drop"
   }
 ]

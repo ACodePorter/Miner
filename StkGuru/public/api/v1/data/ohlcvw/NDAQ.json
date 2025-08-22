@@ -7508,5 +7508,15 @@
     "close": 94.5,
     "volume": 2342465.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,21,00,00,00,000000",
+    "ticker": "NDAQ",
+    "open": 94.1900024414,
+    "high": 94.5749969482,
+    "low": 93.9199981689,
+    "close": 93.9599990845,
+    "volume": 1763731.0,
+    "wedge_status": "drop"
   }
 ]
