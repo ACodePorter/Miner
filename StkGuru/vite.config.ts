@@ -62,13 +62,13 @@ export default defineConfig(({ mode }) => {
             changeOrigin: true,
             secure: false,
             configure: (proxy) => {
-              proxy.on('error', (err) => {
+              proxy.on('error', (_err) => {
                 // Proxy error handling
               })
-              proxy.on('proxyReq', (_, req) => {
+              proxy.on('proxyReq', (_, _req) => {
                 // Proxy request handling
               })
-              proxy.on('proxyRes', (proxyRes, req) => {
+              proxy.on('proxyRes', (_proxyRes, _req) => {
                 // Proxy response handling
               })
             },

@@ -355,7 +355,7 @@ class WebSocketClient {
            typeof (candidate.bar as Record<string, unknown>).volume === 'number';
   }
 
-  private handleClose(event: CloseEvent) {
+  private handleClose(_event: CloseEvent) {
 
     this.isConnecting = false;
     this.isDisconnecting = false;

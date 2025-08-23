@@ -564,7 +564,7 @@ const MarketBreathChart: React.FC<MarketBreathChartProps> = React.memo(({ indexI
           { type: "all", text: "All" },
         ],
         events: {
-          click: function(e: any) {
+          click: function(_e: any) {
             // Handle range selector button clicks (development only)
           }
         }
