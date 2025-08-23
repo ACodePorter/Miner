@@ -7508,5 +7508,15 @@
     "close": 6.25,
     "volume": 1261159.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,22,00,00,00,000000",
+    "ticker": "LION",
+    "open": 6.2800002098,
+    "high": 6.4650001526,
+    "low": 6.2300000191,
+    "close": 6.3099999428,
+    "volume": 4267824.0,
+    "wedge_status": "pop"
   }
 ]

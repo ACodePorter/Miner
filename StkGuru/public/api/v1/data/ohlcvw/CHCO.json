@@ -7508,5 +7508,15 @@
     "close": 123.9400024414,
     "volume": 69551.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,22,00,00,00,000000",
+    "ticker": "CHCO",
+    "open": 124.5500030518,
+    "high": 130.5099945068,
+    "low": 124.5500030518,
+    "close": 130.0,
+    "volume": 101443.0,
+    "wedge_status": "none"
   }
 ]

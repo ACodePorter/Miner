@@ -7508,5 +7508,15 @@
     "close": 42.5900001526,
     "volume": 519186.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,08,22,00,00,00,000000",
+    "ticker": "KYMR",
+    "open": 42.7999992371,
+    "high": 44.5,
+    "low": 42.0449981689,
+    "close": 44.0999984741,
+    "volume": 496485.0,
+    "wedge_status": "none"
   }
 ]

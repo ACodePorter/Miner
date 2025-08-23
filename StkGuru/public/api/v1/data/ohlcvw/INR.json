@@ -958,5 +958,15 @@
     "close": 13.6800003052,
     "volume": 245569.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,22,00,00,00,000000",
+    "ticker": "INR",
+    "open": 13.8599996567,
+    "high": 14.125,
+    "low": 13.7399997711,
+    "close": 13.75,
+    "volume": 349755.0,
+    "wedge_status": "none"
   }
 ]

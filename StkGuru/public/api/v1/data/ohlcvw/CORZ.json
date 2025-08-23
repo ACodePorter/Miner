@@ -3518,5 +3518,15 @@
     "close": 13.7899999619,
     "volume": 18303509.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,22,00,00,00,000000",
+    "ticker": "CORZ",
+    "open": 13.75,
+    "high": 14.5399999619,
+    "low": 13.529999733,
+    "close": 13.5500001907,
+    "volume": 19698135.0,
+    "wedge_status": "none"
   }
 ]
