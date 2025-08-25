@@ -3,7 +3,7 @@ import Highcharts from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
 import { useInView } from 'react-intersection-observer';
 import { wsClient, type QuotePayload, type BarsPayload } from '../utils/wsClient';
-import { marketDataApi } from '../utils/api';
+// Remove marketDataApi import since we're not using HTTP anymore
 
 type IndicatorType = 'EMA' | 'SMA' | 'MACD' | 'RSI';
 
@@ -175,41 +175,16 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
   const [showIndicatorDialog, setShowIndicatorDialog] = useState(false);
   const [indicatorParams, setIndicatorParams] = useState<Record<string, number>>({});
   const chartRef = useRef<HighchartsReact.RefObject>(null);
-  const barsAbortRef = useRef<AbortController | null>(null);
+  // barsAbortRef removed - no longer needed since we don't make HTTP requests
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const { ref: inViewRef, inView } = useInView({ rootMargin: '200px', triggerOnce: false });
   const defaultZoomAppliedRef = useRef(false);
+  const [reloadTrigger, setReloadTrigger] = useState(0); // Force WebSocket resubscription
+  const [wsStatus, setWsStatus] = useState(wsClient.getStatus()); // Track WebSocket connection status
 
 
-  const fetchBars = async () => {
-    if (!ticker) return;
-    setLoading(true);
-    setErrorMsg(null);
-    try {
-      if (barsAbortRef.current) {
-        barsAbortRef.current.abort();
-      }
-      const controller = new AbortController();
-      barsAbortRef.current = controller;
-      
-      const data = await marketDataApi.getBars(ticker, timeframe, 'max');
-      if (data && data.bars) {
-        const raw: Bar[] = data.bars;
-        // Keep original UTC timestamps, we'll format as NY time in display
-        setBars(raw);
-        setErrorMsg(null);
-      } else {
-        throw new Error('No bars data available');
-      }
-    } catch (e: any) {
-      // eslint-disable-next-line no-console
-      if (e?.name === 'AbortError') return;
-      console.error('fetchBars error', e);
-      setErrorMsg('Failed to load bars');
-    } finally {
-      setLoading(false);
-    }
-  };
+  // fetchBars function removed - we now rely entirely on WebSocket subscription
+  // Initial bars data comes from WebSocket snapshot, real-time updates come from room broadcasts
 
   const subscribeQuote = useCallback(() => {
     if (!ticker) return () => {};
@@ -281,15 +256,23 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
 
   // WebSocket bars update handler
   const handleBarsUpdate = useCallback((payload: BarsPayload) => {
+    console.log('ChartTile handleBarsUpdate called with:', payload);
+    
     if (!payload?.bars?.length) {
+      console.log('No bars data in payload, returning');
       return;
     }
     
     const chart = (chartRef as any)?.current?.chart as Highcharts.Chart | undefined;
-    if (!chart) return;
+    if (!chart) {
+      console.log('Chart not ready, returning');
+      return;
+    }
     
     // Handle initial snapshot (room join)
     if (payload.is_snapshot) {
+      console.log('Processing initial snapshot with', payload.bars.length, 'bars');
+      console.log('Setting bars data and clearing loading state');
       // Set initial data from WebSocket snapshot
       setBars(payload.bars);
       setLoading(false); // Clear loading when we get snapshot
@@ -415,26 +398,34 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
       }
     }
     
-    // Update indicators with new data
-    updateIndicators(chart, [...bars, ...incoming]);
+    // Update indicators with new data - use current bars state
+    setBars(currentBars => {
+      const newBars = [...currentBars, ...incoming];
+      // Update indicators after state update
+      setTimeout(() => {
+        const chart = (chartRef as any)?.current?.chart as Highcharts.Chart | undefined;
+        if (chart) {
+          updateIndicators(chart, newBars);
+        }
+      }, 0);
+      return newBars;
+    });
     
     // Trigger chart update for real-time data
     chart.redraw(false); // false = no animation for real-time updates
-  }, [timeframe, bars, updateIndicators]);
+  }, [timeframe, updateIndicators]);
 
   // Clear data and show loading when ticker or timeframe changes
   useEffect(() => {
+    console.log('Ticker/timeframe changed, clearing data and setting loading');
     setBars([]);
     setLoading(true);
     setErrorMsg(null);
     defaultZoomAppliedRef.current = false;
   }, [ticker, timeframe]);
 
-  // Initial load only - fetch bars when component first comes into view
-  useEffect(() => {
-    if (!inView) return;
-    fetchBars();
-  }, [inView]); // Only depend on inView, not ticker/timeframe
+  // Initial load - WebSocket subscription handles initial bars data
+  // useEffect removed - WebSocket subscription automatically provides initial data
 
   // Reset default zoom flag when ticker or timeframe changes
   useEffect(() => {
@@ -445,6 +436,20 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
   useEffect(() => {
     if (!inView) return;
     
+    console.log('WebSocket subscription effect running for:', ticker, timeframe);
+    console.log('Current loading state:', loading);
+    console.log('Current bars length:', bars.length);
+    
+    // Only set loading if we don't already have data
+    if (bars.length === 0) {
+      console.log('Setting loading to true - no bars data yet');
+      setLoading(true);
+    } else {
+      console.log('Not setting loading - already have bars data');
+    }
+    
+    setErrorMsg(null);
+    
     // Subscribe to quotes
     const unsubscribeQuote = subscribeQuote();
     
@@ -452,19 +457,84 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
     const unsubscribeBars = wsClient.subscribeBars(ticker, timeframe, handleBarsUpdate);
     
     return () => {
+      console.log('Cleaning up WebSocket subscriptions for:', ticker, timeframe);
       unsubscribeQuote();
       unsubscribeBars();
     };
-  }, [ticker, timeframe, inView, subscribeQuote, handleBarsUpdate]);
+  }, [ticker, timeframe, inView, subscribeQuote, handleBarsUpdate, reloadTrigger]);
+
+  // Monitor WebSocket connection status for error handling
+  useEffect(() => {
+    if (!inView) return;
+    
+    const checkConnectionStatus = () => {
+      const status = wsClient.getStatus();
+      setWsStatus(status); // Update connection status state
+      
+      if (status === 'disconnected' && loading) {
+        setErrorMsg('WebSocket connection lost. Trying to reconnect...');
+      } else if (status === 'connected' && errorMsg && errorMsg.includes('WebSocket connection lost')) {
+        setErrorMsg(null);
+      }
+    };
+    
+    // Check immediately
+    checkConnectionStatus();
+    
+    // Set up interval to check connection status
+    const interval = setInterval(checkConnectionStatus, 5000); // Check every 5 seconds
+    
+    return () => clearInterval(interval);
+  }, [inView, loading, errorMsg]);
+
+  // Subscribe to WebSocket room state changes for real-time connection status updates
+  useEffect(() => {
+    if (!inView) return;
+    
+    const unsubscribe = wsClient.onRoomStateChange(() => {
+      // Update connection status when room state changes
+      setWsStatus(wsClient.getStatus());
+    });
+    
+    return unsubscribe;
+  }, [inView]);
+
+  // Debug loading state changes
+  useEffect(() => {
+    console.log('Loading state changed to:', loading);
+  }, [loading]);
+
+  // Timeout mechanism for WebSocket subscription to prevent indefinite loading
+  useEffect(() => {
+    if (!inView || !loading) return;
+    
+    // Set a timeout for receiving initial bars data
+    const timeout = setTimeout(() => {
+      if (loading && bars.length === 0) {
+        setErrorMsg('Timeout waiting for bars data. Please check your connection and try again.');
+        setLoading(false);
+      }
+    }, 30000); // 30 second timeout
+    
+    return () => clearTimeout(timeout);
+  }, [inView, loading, bars.length]);
 
   // Monitor bars state changes
   useEffect(() => {
+    console.log('Bars state changed, length:', bars.length);
+    
+    // Clear loading state if we have bars data
+    if (bars.length > 0 && loading) {
+      console.log('Clearing loading state - bars data received');
+      setLoading(false);
+    }
+    
     // Trigger chart update when bars change
     const chart = (chartRef as any)?.current?.chart as Highcharts.Chart | undefined;
     if (chart && bars.length > 0) {
       chart.redraw();
     }
-  }, [bars]);
+  }, [bars, loading]);
 
   // Apply default zoom to the latest 128 bars once per ticker/interval
   useEffect(() => {
@@ -1004,7 +1074,7 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
             type="text"
             value={ticker}
             onChange={(e) => setTicker(e.target.value.toUpperCase())}
-            onBlur={fetchBars}
+            // onBlur removed - ticker change now triggers WebSocket resubscription automatically
             className="w-20 px-2 py-1 text-xs bg-slate-700 border border-slate-600 rounded-lg focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 text-slate-100 font-medium"
           />
           <select
@@ -1023,14 +1093,36 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
             <option value="1mo">1mo</option>
           </select>
           <button 
-            onClick={fetchBars} 
+            onClick={() => {
+              // Reload button triggers WebSocket resubscription to get fresh data
+              setLoading(true);
+              setErrorMsg(null);
+              // Force resubscription by incrementing reloadTrigger
+              setReloadTrigger(prev => prev + 1);
+            }} 
             className="px-2 py-1 text-xs bg-slate-700 border border-slate-600 rounded-lg hover:bg-slate-600 text-slate-300 hover:text-slate-100 transition-all duration-200 flex items-center gap-1.5"
           >
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
             </svg>
-            Reload
           </button>
+          
+          {/* Connection Status Indicator */}
+          <div className="flex items-center gap-1.5 px-2 py-1 text-xs">
+            <div 
+              className={`w-2 h-2 rounded-full ${
+                wsStatus === 'connected' 
+                  ? 'bg-green-400' 
+                  : wsStatus === 'connecting' 
+                  ? 'bg-yellow-400' 
+                  : 'bg-red-400'
+              }`} 
+            />
+            <span className="text-slate-300">
+              {wsStatus === 'connected' ? '' : 
+               wsStatus === 'connecting' ? 'Connecting...' : 'Disconnected'}
+            </span>
+          </div>
         </div>
         
         <div className="flex items-center gap-2">

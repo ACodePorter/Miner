@@ -47,7 +47,7 @@ interface BarsDataCandidate {
 }
 
 interface RoomMessage {
-  type: 'connected' | 'room_joined' | 'room_left' | 'client_rooms' | 'subscribed' | 'bars_subscribed' | 'quote_update' | 'bar_update' | 'pong' | 'error';
+  type: 'connected' | 'room_joined' | 'room_left' | 'client_rooms' | 'subscribed' | 'bars_subscribed' | 'unsubscribed' | 'bars_unsubscribed' | 'bars' | 'quote' | 'quote_update' | 'bar_update' | 'pong' | 'error';
   message?: string;
   room_id?: string;
   success?: boolean;
@@ -55,7 +55,7 @@ interface RoomMessage {
   symbol?: string;
   interval?: string;
   timestamp: string;
-  data?: QuoteDataCandidate | BarUpdateDataCandidate;
+  data?: QuoteDataCandidate | BarUpdateDataCandidate | BarsDataCandidate;
 }
 
 interface BarUpdateDataCandidate {
@@ -193,6 +193,7 @@ class WebSocketClient {
         case 'subscribed':
           if (data.room_id && data.symbol) {
             this.connectedRooms.add(data.room_id);
+            console.log(`Joined room ${data.room_id} for symbol ${data.symbol}`);
             this.notifyRoomStateChange(); // Notify listeners
           }
           break;
@@ -204,10 +205,55 @@ class WebSocketClient {
           }
           break;
           
+        case 'unsubscribed':
+          // Handle quote unsubscription confirmation
+          if (data.symbol) {
+            const roomId = `quotes:${data.symbol.toUpperCase()}`;
+            this.connectedRooms.delete(roomId);
+            console.log(`Unsubscribed from quotes for ${data.symbol}, removed room: ${roomId}`);
+            this.notifyRoomStateChange(); // Notify listeners
+          }
+          break;
+          
+        case 'bars_unsubscribed':
+          // Handle bars unsubscription confirmation
+          if (data.symbol && data.interval) {
+            const roomId = `bars:${data.symbol.toUpperCase()}:${data.interval}`;
+            this.connectedRooms.delete(roomId);
+            console.log(`Unsubscribed from bars for ${data.symbol}:${data.interval}, removed room: ${roomId}`);
+            this.notifyRoomStateChange(); // Notify listeners
+          }
+          break;
+          
         case 'quote_update':
           // Handle real-time quote updates from room broadcasting
           if (data.data && this.isQuoteData(data.data)) {
             this.handleQuoteUpdate(data.data);
+          }
+          break;
+          
+        case 'quote':
+          // Handle quote messages (direct from backend)
+          console.log('WebSocket received quote message:', data);
+          console.log('Current connected rooms:', Array.from(this.connectedRooms));
+          if (data.data && this.isQuoteData(data.data)) {
+            console.log('Quote data validation passed, calling handleQuoteUpdate');
+            this.handleQuoteUpdate(data.data);
+          } else {
+            console.log('Quote data validation failed:', data.data);
+            console.log('isQuoteData result:', this.isQuoteData(data.data));
+          }
+          break;
+          
+        case 'bars':
+          // Handle bars data (initial snapshot or updates)
+          console.log('WebSocket received bars message:', data);
+          if (data.data && this.isBarsData(data.data)) {
+            console.log('Bars data validation passed, calling handleBarsData');
+            this.handleBarsData(data.data);
+          } else {
+            console.log('Bars data validation failed:', data.data);
+            console.log('isBarsData result:', this.isBarsData(data.data));
           }
           break;
           
@@ -279,14 +325,45 @@ class WebSocketClient {
       price: quoteData.price,
       change: quoteData.change || 0,
       changePercent: quoteData.changePercent || 0,
-      volume: quoteData.volume || 0,
+      volume: typeof quoteData.volume === 'string' ? parseInt(quoteData.volume, 10) || 0 : (quoteData.volume || 0),
       timestamp: quoteData.timestamp || new Date().toISOString()
     };
+    
+    console.log(`Processing quote update for ${quoteData.symbol}:`, formattedQuote);
     
     // Emit to specific symbol subscribers
     const symbol = quoteData.symbol.toUpperCase();
     if (this.subscriptions.has(symbol)) {
+      console.log(`Emitting quote to subscription for ${symbol}`);
       this.subscriptions.get(symbol)!(formattedQuote);
+    } else {
+      console.log(`No subscription found for ${symbol}. Available subscriptions:`, Array.from(this.subscriptions.keys()));
+    }
+  }
+
+  private handleBarsData(barsData: BarsDataCandidate) {
+    // Handle bars data (initial snapshot or updates)
+    console.log('handleBarsData called with:', barsData);
+    
+    const formattedBars: BarsPayload = {
+      symbol: barsData.symbol,
+      interval: barsData.interval,
+      bars: barsData.bars,
+      is_snapshot: barsData.is_snapshot || false
+    };
+    
+    console.log('Formatted bars payload:', formattedBars);
+    
+    // Emit to specific bars subscribers
+    const key = `${barsData.symbol.toUpperCase()}:${barsData.interval}`;
+    console.log('Looking for bars subscription with key:', key);
+    console.log('Available bars subscriptions:', Array.from(this.barsSubscriptions.keys()));
+    
+    if (this.barsSubscriptions.has(key)) {
+      console.log('Found bars subscription, emitting data');
+      this.barsSubscriptions.get(key)!(formattedBars);
+    } else {
+      console.log('No bars subscription found for key:', key);
     }
   }
 
@@ -309,7 +386,27 @@ class WebSocketClient {
   private isQuoteData(data: unknown): data is QuoteDataCandidate {
     if (typeof data !== 'object' || data === null) return false;
     const candidate = data as Record<string, unknown>;
-    return typeof candidate.symbol === 'string' && typeof candidate.price === 'number';
+    
+    // Check required fields
+    if (typeof candidate.symbol !== 'string' || typeof candidate.price !== 'number') {
+      return false;
+    }
+    
+    // Optional fields can be string or number (backend sends volume as string)
+    if (candidate.change !== undefined && typeof candidate.change !== 'number') {
+      return false;
+    }
+    if (candidate.changePercent !== undefined && typeof candidate.changePercent !== 'number') {
+      return false;
+    }
+    if (candidate.volume !== undefined && typeof candidate.volume !== 'number' && typeof candidate.volume !== 'string') {
+      return false;
+    }
+    if (candidate.timestamp !== undefined && typeof candidate.timestamp !== 'string') {
+      return false;
+    }
+    
+    return true;
   }
 
   private isBarsData(data: unknown): data is BarsDataCandidate {
@@ -527,43 +624,56 @@ class WebSocketClient {
   }
 
   private unsubscribeFromQuotes(symbol: string) {
-    // Find the room for this symbol and leave it
-    const roomId = `quotes:${symbol}`;
-    
-    if (this.connectedRooms.has(roomId)) {
-      this.leaveRoom(roomId);
-    }
-  }
-
-  private unsubscribeFromBars(symbol: string, interval: string) {
-    // Find the room for this symbol/interval and leave it
-    const roomId = `bars:${symbol}:${interval}`;
-    
-    if (this.connectedRooms.has(roomId)) {
-      this.leaveRoom(roomId);
-    }
-  }
-
-  private leaveRoom(roomId: string) {
+    // Send unsubscribe message to backend
     if (!this.isReady()) {
+      console.log(`WebSocket not ready, cannot unsubscribe from quotes: ${symbol}`);
       return;
     }
     
     const message = {
-      type: 'leave_room',
-      room_id: roomId
+      type: 'unsubscribe',
+      symbol: symbol
     };
     
     try {
       this.ws?.send(JSON.stringify(message));
+      console.log(`Sent unsubscribe message for quotes: ${symbol}`);
       
-      // 🔥 Notify room state change after leaving room
-      // Note: We don't remove from connectedRooms here because the backend will send a 'room_left' message
-      // which will handle the removal and trigger another notification
+      // Remove from local subscriptions immediately
+      this.subscriptions.delete(symbol.toUpperCase());
+      console.log(`Removed quote subscription for: ${symbol}`);
     } catch (error) {
-      console.error(`❌ Error sending leave_room message for ${roomId}:`, error);
+      console.error(`❌ Error sending unsubscribe message for ${symbol}:`, error);
     }
   }
+
+  private unsubscribeFromBars(symbol: string, interval: string) {
+    // Send unsubscribe_bars message to backend
+    if (!this.isReady()) {
+      console.log(`WebSocket not ready, cannot unsubscribe from bars: ${symbol}:${interval}`);
+      return;
+    }
+    
+    const message = {
+      type: 'unsubscribe_bars',
+      symbol: symbol,
+      interval: interval
+    };
+    
+    try {
+      this.ws?.send(JSON.stringify(message));
+      console.log(`Sent unsubscribe_bars message for: ${symbol}:${interval}`);
+      
+      // Remove from local subscriptions immediately
+      const key = `${symbol.toUpperCase()}:${interval}`;
+      this.barsSubscriptions.delete(key);
+      console.log(`Removed bars subscription for: ${key}`);
+    } catch (error) {
+      console.error(`❌ Error sending unsubscribe_bars message for ${symbol}:${interval}:`, error);
+    }
+  }
+
+  // leaveRoom method removed - now using proper unsubscribe messages
 
   // Check if WebSocket is ready
   isReady(): boolean {

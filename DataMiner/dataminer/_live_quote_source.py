@@ -23,9 +23,12 @@ class LiveQuoteSource(Thread):
             self.logger.info("Starting WebSocket listener")
             self.ws.subscribe(list(self.subscribed_tickers))
             self.ws.listen(self.handle_quote)
+            self.is_running = False
+            if self.on_error and not self.closed:
+                self.on_error(Exception('Something went wrong with the socket'))
         except Exception as e:
             self.is_running = False
-            if self.on_error is not None and not self.closed:
+            if self.on_error and not self.closed:
                 self.logger.error(
                     "Error listening to WebSocket: %s", e)
                 self.on_error(e)

@@ -1,6 +1,7 @@
 """Redis subscription service for consuming BarsManager published data"""
 
 import asyncio
+import enum
 import json
 import logging
 from datetime import datetime
@@ -10,19 +11,29 @@ import redis.asyncio as redis
 from detonator import get_logger
 
 
+class RedisKeys(enum.StrEnum):
+    KEY_WS_SUBSCRIBED_SYMBOLS = 'websocket:subscribed_symbols'
+    KEY_WS_SUBSCRIBED_BARS = 'websocket:subscribed_bars'
+    KEY_WS_BROADCAST = 'websocket:broadcast'
+    KEY_WS_ROOM_BROADCAST = 'websocket:room_broadcast'
+
+
 class RedisSubscriptionService:
     """Service to subscribe to BarsManager's Redis channels and forward data to WebSocket clients"""
 
-    def __init__(self, redis_client: redis.Redis, broadcast_callback: Callable[[str], Awaitable[None]], room_broadcast_callback: Optional[Callable[[str, str, Dict[str, Any]], Awaitable[None]]] = None):
+    def __init__(self, redis_client: redis.Redis,
+                 room_broadcast_callback: Optional[Callable[[str, Dict[str, Any]], Awaitable[None]]] = None):
         self.redis_client = redis_client
-        self.broadcast_callback = broadcast_callback
-        self.room_broadcast_callback = room_broadcast_callback  # New callback for room-based broadcasting
-        self.logger = get_logger('RedisSubscriptionService', logging.DEBUG)
+        if not room_broadcast_callback:
+            raise Exception('room_broadcast_callback cannot be None')
+        self.room_broadcast_callback: Optional[Callable[[str, Dict[str, Any]], Awaitable[
+            None]]] = room_broadcast_callback  # New callback for room-based broadcasting
+        self.logger = get_logger('RedisSubscriptionService', logging.NOTSET)
         self.running = False
         self.pubsub: Optional[redis.client.PubSub] = None
         self.subscription_task: Optional[asyncio.Task[None]] = None
 
-        # Track active subscriptions
+        # Track active quote subscriptions
         self.active_quote_subscriptions: set[str] = set()
         # (ticker, interval)
         self.active_bar_subscriptions: set[tuple[str, str]] = set()
@@ -120,16 +131,6 @@ class RedisSubscriptionService:
                 f"Service is ready, ensuring new subscription is active")
             await self._ensure_all_subscriptions_active()
 
-            # If this is the first subscription, remove dummy subscription
-            if len(self.active_quote_subscriptions) == 1 and len(self.active_bar_subscriptions) == 0:
-                try:
-                    await self.pubsub.unsubscribe('__dummy__')
-                    self.logger.info(
-                        "Removed dummy subscription as we now have real subscriptions")
-                except Exception as e:
-                    self.logger.warning(
-                        f"Failed to remove dummy subscription: {e}")
-
     async def unsubscribe_from_quotes(self, ticker: str) -> None:
         """Unsubscribe from quotes for a specific ticker"""
         if ticker in self.active_quote_subscriptions:
@@ -194,45 +195,38 @@ class RedisSubscriptionService:
 
             # Create pubsub connection
             self.pubsub = self.redis_client.pubsub()
-            self.logger.info("PubSub connection created")
-
             # Subscribe to any existing active channels
             await self._subscribe_to_active_channels()
-            self.logger.info("Initial channel subscriptions completed")
-
             # Listen for messages - keep connection open until service stops
             self.logger.info("Starting message listening loop...")
             last_subscription_check = 0
-            subscription_check_interval = 30  # Check every 30 seconds
+            subscription_check_interval = 60  # Check every 30 seconds
 
             # Ensure we have at least one dummy subscription to keep the loop alive
             if not self.active_quote_subscriptions and not self.active_bar_subscriptions:
                 self.logger.info(
                     "No active subscriptions, subscribing to dummy channel to keep loop alive")
                 await self.pubsub.subscribe('__dummy__')
-
             async for message in self.pubsub.listen():
                 if not self.running:
                     self.logger.info("Service stopped, breaking message loop")
                     break
-
                 try:
+                    self.logger.debug("Received message: {}".format(message))
                     # Skip dummy messages
                     if message.get('channel') == '__dummy__':
                         continue
-
                     # Periodic subscription check
                     current_time = asyncio.get_event_loop().time()
                     if current_time - last_subscription_check > subscription_check_interval:
                         last_subscription_check = current_time
                         await self._ensure_all_subscriptions_active()
-
                     # Log all message types for debugging
                     if message['type'] == 'subscribe':
-                        self.logger.info(
+                        self.logger.debug(
                             f"Subscribed to channel: {message['channel']}")
                     elif message['type'] == 'unsubscribe':
-                        self.logger.info(
+                        self.logger.debug(
                             f"Unsubscribed from channel: {message['channel']}")
                     elif message['type'] == 'message':
                         self.logger.info(
@@ -241,18 +235,12 @@ class RedisSubscriptionService:
                     else:
                         self.logger.debug(
                             f"Redis message type: {message['type']} on channel: {message.get('channel', 'N/A')}")
-
                 except Exception as e:
                     self.logger.error(f"Error handling Redis message: {e}")
-
         except asyncio.CancelledError:
             self.logger.info("Subscription loop cancelled")
         except Exception as e:
             self.logger.error(f"Error in subscription loop: {e}")
-            self.logger.error(
-                f"Exception details: {type(e).__name__}: {str(e)}")
-            import traceback
-            self.logger.error(f"Traceback: {traceback.format_exc()}")
         finally:
             # Only close pubsub if we're stopping the service
             # Don't close it here as it will be closed in the stop() method
@@ -268,16 +256,8 @@ class RedisSubscriptionService:
                 channels.append(f"bars:{ticker}:{interval}")
 
             if channels:
-                self.logger.info(
-                    f"Subscribing to {len(channels)} Redis channels: {channels}")
                 await self.pubsub.subscribe(*channels)
-                self.logger.info(
-                    f"Subscribed to {len(channels)} Redis channels: {channels}")
-                # Log active subscriptions for debugging
-                self.logger.info(
-                    f"Active quote subscriptions: {list(self.active_quote_subscriptions)}")
-                self.logger.info(
-                    f"Active bar subscriptions: {list(self.active_bar_subscriptions)}")
+                self.logger.debug(f'Subscribed to active {channels}')
             else:
                 self.logger.info(
                     "No active channels to subscribe to - waiting for subscriptions to be added")
@@ -292,7 +272,7 @@ class RedisSubscriptionService:
         max_attempts = 10
         attempt = 0
 
-        while attempt < max_attempts and (not self.pubsub or not self.running):
+        while attempt < max_attempts and ((not self.pubsub) or (not self.running)):
             attempt += 1
             self.logger.info(
                 f"Waiting for service to be ready (attempt {attempt}/{max_attempts})")
@@ -318,7 +298,7 @@ class RedisSubscriptionService:
             await self.stop()
 
             # Wait a moment
-            await asyncio.sleep(0.5)
+            await asyncio.sleep(1)
 
             # Restart service
             await self.start()
@@ -327,10 +307,10 @@ class RedisSubscriptionService:
             max_wait = 10  # seconds
             wait_count = 0
             while not self.pubsub and self.running and wait_count < max_wait:
-                await asyncio.sleep(0.5)
+                await asyncio.sleep(1)
                 wait_count += 1
 
-            if not self.pubsub or not self.running:
+            if (not self.pubsub) or (not self.running):
                 raise RuntimeError(
                     "Failed to establish pubsub connection during refresh")
 
@@ -384,8 +364,9 @@ class RedisSubscriptionService:
     async def _handle_quote_message(self, channel: str, data: Dict[str, Any]) -> None:
         """Handle quote message from Redis and format for WebSocket"""
         try:
-            self.logger.info(f"Handling quote message from {channel}: {data}")
+            self.logger.debug(f"Handling quote message from {channel}: {data}")
             # Extract ticker from channel (quotes:AAPL -> AAPL)
+            room_id = channel
             ticker = channel.split(':', 1)[1]
 
             # BarsManager sends quotes with different field names
@@ -393,7 +374,7 @@ class RedisSubscriptionService:
             price = data.get('price', 0)
             change = data.get('change', 0)
             change_percent = data.get('change_percent', 0)
-            volume = data.get('volume', 0)
+            volume = data.get('day_volume', 0)
 
             # BarsManager uses 'time' field for timestamp
             timestamp = data.get('time')
@@ -428,13 +409,9 @@ class RedisSubscriptionService:
                 },
                 'timestamp': datetime.now().isoformat()
             }
-
-            self.logger.info(
+            self.logger.debug(
                 f"Formatted quote message for WebSocket: {quote_message}")
-
-            # Broadcast to WebSocket clients
-            self.logger.info(f"Calling broadcast callback for {ticker}")
-            await self.broadcast_callback(json.dumps(quote_message))
+            await self.room_broadcast_callback(room_id, quote_message)
             self.logger.info(
                 f"Successfully forwarded quote for {ticker}: ${price} ({change_percent:+.2f}%)")
 
@@ -475,18 +452,11 @@ class RedisSubscriptionService:
             }
 
             # Use room-based broadcasting if available, otherwise fall back to global broadcast
-            if self.room_broadcast_callback:
-                # Route to specific room for this ticker/interval combination
-                room_id = f"bars:{ticker}:{interval}"
-                await self.room_broadcast_callback(room_id, ticker, bar_message)
-                self.logger.debug(
-                    f"Routed {interval} bar for {ticker} to room {room_id}")
-            else:
-                # Fallback to global broadcast
-                await self.broadcast_callback(json.dumps(bar_message))
-                self.logger.debug(
-                    f"Forwarded {interval} bar for {ticker} via global broadcast")
-
+            # Route to specific room for this ticker/interval combination
+            room_id = channel
+            await self.room_broadcast_callback(room_id, bar_message)
+            self.logger.debug(
+                f"Routed {interval} bar for {ticker} to room {room_id}")
         except Exception as e:
             self.logger.error(f"Error handling bar message: {e}")
             self.logger.error(f"Bar data: {data}")
@@ -517,7 +487,8 @@ class RedisSubscriptionService:
                 'service_running': self.running,
                 'pubsub_ready': self.pubsub is not None,
                 'active_quote_subscriptions': list(self.active_quote_subscriptions),
-                'active_bar_subscriptions': [f"{ticker}:{interval}" for ticker, interval in self.active_bar_subscriptions],
+                'active_bar_subscriptions': [f"{ticker}:{interval}" for ticker, interval in
+                                             self.active_bar_subscriptions],
                 'subscription_task_running': self.subscription_task is not None and not self.subscription_task.done(),
             }
 
@@ -636,3 +607,12 @@ class RedisSubscriptionService:
             self.logger.error(f"Error during force refresh: {e}")
             import traceback
             self.logger.error(f"Traceback: {traceback.format_exc()}")
+
+    def dump(self) -> Dict[str, Any]:
+        """Dump current state of service"""
+        return {
+            'locale_quote_subscriptions': self.active_quote_subscriptions,
+            'local_bar_subscriptions': self.active_bar_subscriptions,
+            'pubsub_channels': self.pubsub.channels if self.pubsub else 'N/A',
+            'running': self.running,
+        }

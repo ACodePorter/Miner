@@ -48,12 +48,22 @@ class BarsManager(SingletonParent):
         redis_client.subscribe("bars:*:1m")     # Subscribe to all 1-minute bars
     """
 
+    KEY_QUOTES_ACTIVE = 'quotes:active'
+    KEY_QUOTES_SUBSCRIBED = 'quotes:subscribed'
+    KEY_BARS_ACTIVE = 'bars:active'
+    KEY_BARS_SUBSCRIBED = 'bars:subscribed'
+
+
     def __init__(self):
         self.bars = {}
         self.logger = get_logger('BarsManager', logging.DEBUG)
         self.subscribed_tickers = set()
         self.ws = None
         self.redis_client = get_redis_client()
+        self.redis_client.delete(BarsManager.KEY_QUOTES_ACTIVE)
+        self.redis_client.delete(BarsManager.KEY_QUOTES_SUBSCRIBED)
+        self.redis_client.delete(BarsManager.KEY_BARS_ACTIVE)
+        self.redis_client.delete(BarsManager.KEY_BARS_SUBSCRIBED)
 
         # Intraday bars subscription management
         self.intraday_subscriptions = {}  # {interval: set(tickers)}
@@ -84,9 +94,9 @@ class BarsManager(SingletonParent):
 
     def get_bars(self, ticker: str,
                  interval: Literal['1m', '2m', '5m', '15m', '30m', '65m',
-                                   '90m', '1h', '1d', '5d', '1wk', '1mo', '3mo'] = '1d',
+                 '90m', '1h', '1d', '5d', '1wk', '1mo', '3mo'] = '1d',
                  period: Literal['1d', '5d', '1mo', '3mo', '6mo',
-                                 '1y', '2y', '5y', '10y', 'ytd', 'max'] = '1y',
+                 '1y', '2y', '5y', '10y', 'ytd', 'max'] = '1y',
                  start_date: Union[str, datetime, None] = None) -> DataFrame:
         """ get bars from yfinance
 
@@ -166,15 +176,26 @@ class BarsManager(SingletonParent):
                 latest_key, 10, quote_json)  # Expire in 1 hour
             # Add ticker to active quotes set
             self.redis_client.sadd('quotes:active', ticker)
-            self.logger.debug('Published quote to %s -> %s', channel, quote_json )
+            self.logger.debug('Published quote to %s -> %s', channel, quote_json)
         except Exception as e:
             self.logger.error('Failed to publish quote to Redis: %s', e)
+
+    def _sync_subscribed_quotes_to_redis(self):
+        try:
+            with self.redis_client.pipeline() as pipe:
+                pipe.delete(BarsManager.KEY_QUOTES_ACTIVE)
+                for t in self.subscribed_tickers:
+                    pipe.sadd(BarsManager.KEY_QUOTES_SUBSCRIBED, t)
+                pipe.execute()
+        except Exception as e:
+            self.logger.error('Failed to update subscribes tickers to Redis: %s', e)
 
     def subscribe(self, ticker: Union[str, List[str]]):
         if isinstance(ticker, str):
             ticker = [ticker]
         ticker = [t.upper().replace('.', '-') for t in ticker]
         self.subscribed_tickers.update(ticker)
+        self._sync_subscribed_quotes_to_redis()
         if self.ws is None:
             self._start_live_quotes()
         else:
@@ -189,7 +210,7 @@ class BarsManager(SingletonParent):
             ticker = [ticker]
         ticker = [t.upper().replace('.', '-') for t in ticker]
         self.subscribed_tickers.difference_update(ticker)
-
+        self._sync_subscribed_quotes_to_redis()
         # Remove from Redis active set
         for t in ticker:
             self.redis_client.srem("quotes:active", t)
@@ -205,6 +226,25 @@ class BarsManager(SingletonParent):
                 # Re-add to Redis active set if subscription failed
                 for t in ticker:
                     self.redis_client.sadd("quotes:active", t)
+
+    def get_subscribed_quotes_tickers(self) -> List[str]:
+        '''
+        Get list of subscribed tickers of all processes
+        '''
+        try:
+            return list(self.redis_client.smembers(BarsManager.KEY_QUOTES_ACTIVE))
+        except Exception as _:
+            return list(self.subscribed_tickers)
+
+    def _sync_subscribed_bars_to_redis(self):
+        try:
+            bars = {k: list(v) for k, v in self.intraday_subscriptions.items()}
+            with self.redis_client.pipeline() as pipe:
+                pipe.delete(BarsManager.KEY_BARS_SUBSCRIBED)
+                pipe.hset(BarsManager.KEY_BARS_SUBSCRIBED, mapping=bars)
+                pipe.execute()
+        except Exception as e:
+            self.logger.error('Failed to update subscribed bars to Redis: %s', e)
 
     def subscribe_intraday(self, tickers: Union[str, List[str]], intervals: Union[str, List[str]]):
         """Subscribe to intraday bars for specified tickers and intervals
@@ -231,7 +271,7 @@ class BarsManager(SingletonParent):
             if interval not in self.intraday_subscriptions:
                 self.intraday_subscriptions[interval] = set()
             self.intraday_subscriptions[interval].update(tickers)
-
+        self._sync_subscribed_bars_to_redis()
         # Start scheduling if not already active
         if not self.scheduling_active:
             self._start_intraday_scheduling()
@@ -272,13 +312,19 @@ class BarsManager(SingletonParent):
                 # Clean up empty interval subscriptions
                 if not self.intraday_subscriptions[interval]:
                     del self.intraday_subscriptions[interval]
-
+        self._sync_subscribed_bars_to_redis()
         # Stop scheduling if no more subscriptions
-        if not self.intraday_subscriptions and self.scheduling_active:
+        if (not self.intraday_subscriptions) and self.scheduling_active:
             self._stop_intraday_scheduling()
 
         self.logger.info(
             f"Unsubscribed from intraday bars: {tickers} for intervals: {intervals}")
+
+    def get_subscribed_intraday(self) -> Dict[str, List[str]]:
+        try:
+            return self.redis_client.hgetall(BarsManager.KEY_BARS_SUBSCRIBED)
+        except Exception as e:
+            return {K: list(V) for K, V in self.intraday_subscriptions.items()}
 
     def _on_error(self, e: Exception):
         self.logger.error(f"Error in WebSocket: {str(e)}, lets restart it")
