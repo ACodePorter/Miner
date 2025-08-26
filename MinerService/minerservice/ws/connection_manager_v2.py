@@ -14,9 +14,10 @@ from detonator import get_logger, is_prod
 from fastapi import WebSocket
 from starlette.websockets import WebSocketState
 
-from .room_manager import RoomManager
 from ..services.bars_manager_integration import BarsManagerIntegration
-from ..services.redis_subscription_service import RedisSubscriptionService, RedisKeys
+from ..services.redis_subscription_service import (RedisKeys,
+                                                   RedisSubscriptionService)
+from .room_manager import RoomManager
 
 
 class WsMsgTypes(enum.StrEnum):
@@ -77,10 +78,12 @@ def get_websocket_manager() -> Optional['WebSocketConnectionManager']:
     with _lock:
         global manager
         if manager is None:
-            _logger.warning("WebSocket manager not initialized, creating new instance")
+            _logger.warning(
+                "WebSocket manager not initialized, creating new instance")
             manager = WebSocketConnectionManager()
         else:
-            _logger.debug(f"Using existing WebSocket manager: {manager.process_id}")
+            _logger.debug(
+                f"Using existing WebSocket manager: {manager.process_id}")
     return manager
 
 
@@ -804,7 +807,8 @@ class WebSocketConnectionManager:
                                     room_id = data.get('room_id')
                                     room_message = data.get('message')
                                     exclude_client = data.get('exclude_client')
-                                    self.logger.debug(f'Sending {room_id} <- {room_message}')
+                                    self.logger.debug(
+                                        f'Sending {room_id} <- {room_message}')
 
                                     if room_id:
                                         # Send to local clients in the room
@@ -951,9 +955,11 @@ class WebSocketConnectionManager:
 
             # Use room manager to broadcast to specific room
             await self.room_manager.broadcast_to_room(room_id, json.dumps(message))
-            self.logger.debug(f"Room broadcast to {room_id} for {message.get('type', 'unknown')}")
+            self.logger.debug(
+                f"Room broadcast to {room_id} for {message.get('type', 'unknown')}")
         except Exception as e:
-            self.logger.error(f"Error in room broadcast callback for {room_id}: {e}")
+            self.logger.error(
+                f"Error in room broadcast callback for {room_id}: {e}")
 
     async def _initialize_integration_services(self) -> None:
         """Initialize BarsManager integration and Redis subscription services"""
@@ -973,7 +979,8 @@ class WebSocketConnectionManager:
                 "Redis subscription service initialized and started")
 
             # Initialize room manager
-            self.room_manager = RoomManager(redis_client, self.bars_manager_integration)
+            self.room_manager = RoomManager(
+                redis_client, self.bars_manager_integration)
             await self.room_manager.start()
             self.logger.info("Room manager initialized and started")
 
@@ -1351,11 +1358,10 @@ class WebSocketConnectionManager:
             self.logger.error(f"Error verifying subscription integrity: {e}")
             return {'error': str(e)}
 
-
     def dump(self):
         return {
             'process_id': self.process_id,
-            'local_conntions':self.local_connections,
-            'redis_subscripion_service':self.redis_subscription_service.dump(),
-            'room_manager_service':self.room_manager.dump(),
+            'local_conntions': self.local_connections,
+            'redis_subscripion_service': self.redis_subscription_service.dump(),
+            'room_manager_service': self.room_manager.dump(),
         }

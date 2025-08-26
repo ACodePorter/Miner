@@ -53,7 +53,6 @@ class BarsManager(SingletonParent):
     KEY_BARS_ACTIVE = 'bars:active'
     KEY_BARS_SUBSCRIBED = 'bars:subscribed'
 
-
     def __init__(self):
         self.bars = {}
         self.logger = get_logger('BarsManager', logging.DEBUG)
@@ -94,9 +93,9 @@ class BarsManager(SingletonParent):
 
     def get_bars(self, ticker: str,
                  interval: Literal['1m', '2m', '5m', '15m', '30m', '65m',
-                 '90m', '1h', '1d', '5d', '1wk', '1mo', '3mo'] = '1d',
+                                   '90m', '1h', '1d', '5d', '1wk', '1mo', '3mo'] = '1d',
                  period: Literal['1d', '5d', '1mo', '3mo', '6mo',
-                 '1y', '2y', '5y', '10y', 'ytd', 'max'] = '1y',
+                                 '1y', '2y', '5y', '10y', 'ytd', 'max'] = '1y',
                  start_date: Union[str, datetime, None] = None) -> DataFrame:
         """ get bars from yfinance
 
@@ -176,7 +175,8 @@ class BarsManager(SingletonParent):
                 latest_key, 10, quote_json)  # Expire in 1 hour
             # Add ticker to active quotes set
             self.redis_client.sadd('quotes:active', ticker)
-            self.logger.debug('Published quote to %s -> %s', channel, quote_json)
+            self.logger.debug('Published quote to %s -> %s',
+                              channel, quote_json)
         except Exception as e:
             self.logger.error('Failed to publish quote to Redis: %s', e)
 
@@ -188,7 +188,8 @@ class BarsManager(SingletonParent):
                     pipe.sadd(BarsManager.KEY_QUOTES_SUBSCRIBED, t)
                 pipe.execute()
         except Exception as e:
-            self.logger.error('Failed to update subscribes tickers to Redis: %s', e)
+            self.logger.error(
+                'Failed to update subscribes tickers to Redis: %s', e)
 
     def subscribe(self, ticker: Union[str, List[str]]):
         if isinstance(ticker, str):
@@ -244,7 +245,8 @@ class BarsManager(SingletonParent):
                 pipe.hset(BarsManager.KEY_BARS_SUBSCRIBED, mapping=bars)
                 pipe.execute()
         except Exception as e:
-            self.logger.error('Failed to update subscribed bars to Redis: %s', e)
+            self.logger.error(
+                'Failed to update subscribed bars to Redis: %s', e)
 
     def subscribe_intraday(self, tickers: Union[str, List[str]], intervals: Union[str, List[str]]):
         """Subscribe to intraday bars for specified tickers and intervals

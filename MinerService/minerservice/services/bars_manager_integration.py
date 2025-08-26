@@ -67,7 +67,7 @@ class BarsManagerIntegration:
                 f"Already subscribed to {interval} bars for {ticker} via BarsManager")
         return True
 
-    async def unsubscribe_from_bars(self, ticker: Optional[str], interval:Optional[str]) -> bool:
+    async def unsubscribe_from_bars(self, ticker: Optional[str], interval: Optional[str]) -> bool:
         """Unsubscribe from bars for a specific ticker and interval via BarsManager"""
         subscription_key = (ticker, interval)
         if subscription_key in self.active_bar_subscriptions:
@@ -146,11 +146,10 @@ class BarsManagerIntegration:
         }
         return quote
 
-
     def is_quote_subscribed(self, ticker: str) -> bool:
         return ticker in self.bars_manager.get_subscribed_quotes_tickers()
 
-    def is_bar_subscribed(self, ticker: str, interval:str) -> bool:
+    def is_bar_subscribed(self, ticker: str, interval: str) -> bool:
         bars = self.bars_manager.get_subscribed_intraday()
         return interval in bars and ticker in bars[interval]
 
@@ -186,9 +185,8 @@ class BarsManagerIntegration:
         """Check if subscribed to bars for a ticker and interval"""
         return (ticker, interval) in self.active_bar_subscriptions
 
-
     def dump(self):
         return {
-            'active_quote_subscriptions':self.active_quote_subscriptions,
-            'active_bar_subscriptions':self.active_bar_subscriptions,
+            'active_quote_subscriptions': self.active_quote_subscriptions,
+            'active_bar_subscriptions': self.active_bar_subscriptions,
         }

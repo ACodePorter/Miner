@@ -25,7 +25,8 @@ class LiveQuoteSource(Thread):
             self.ws.listen(self.handle_quote)
             self.is_running = False
             if self.on_error and not self.closed:
-                self.on_error(Exception('Something went wrong with the socket'))
+                self.on_error(
+                    Exception('Something went wrong with the socket'))
         except Exception as e:
             self.is_running = False
             if self.on_error and not self.closed:

@@ -82,7 +82,8 @@ class RoomManager:
                         cleanup_results['rooms_cleaned'] += 1
 
                         # Count BarsManager unsubscriptions
-                        room_metadata = self.local_rooms_metadata.get(room_id, {})
+                        room_metadata = self.local_rooms_metadata.get(
+                            room_id, {})
                         if room_metadata.get('type') in ['quote', 'bars']:
                             cleanup_results['bars_manager_unsubscriptions'] += 1
 
@@ -166,7 +167,8 @@ class RoomManager:
             # Subscribe to BarsManager if integration is available
             if not self.bars_manager_integration.is_quote_subscribed(ticker):
                 await self.bars_manager_integration.subscribe_to_quotes(ticker)
-                self.logger.info(f"Subscribed to quotes for {ticker} via BarsManager")
+                self.logger.info(
+                    f"Subscribed to quotes for {ticker} via BarsManager")
             else:
                 self.logger.debug(f'{ticker} already subscribed')
             return room_id
@@ -175,7 +177,7 @@ class RoomManager:
                 f"Failed to subscribe to quotes for {ticker}: {e}")
             raise
 
-    async def subscribe_to_bars(self, ticker: str, interval: str, client_id:str) -> Optional[str]:
+    async def subscribe_to_bars(self, ticker: str, interval: str, client_id: str) -> Optional[str]:
         """Subscribe to bars and create/join bar room"""
         try:
             # Create bar room if it doesn't exist
@@ -207,7 +209,7 @@ class RoomManager:
                 f"Failed to unsubscribe from quotes for {ticker}: {e}")
             return False
 
-    async def unsubscribe_from_bars(self, ticker: str, interval: str, client_id:str) -> bool:
+    async def unsubscribe_from_bars(self, ticker: str, interval: str, client_id: str) -> bool:
         """Unsubscribe from bars and clean up bar room"""
         try:
             room_id = f'bars:{ticker.upper()}:{interval}'
@@ -242,7 +244,8 @@ class RoomManager:
                     self.local_rooms_metadata[room_id] = metadata or {}
                     self.logger.info(f"Created room: {room_id}")
                 else:
-                    self.logger.warning('%s already exists in local rooms', room_id)
+                    self.logger.warning(
+                        '%s already exists in local rooms', room_id)
             return True
         except Exception as e:
             self.logger.error(f"Failed to create room {room_id}: {e}")
@@ -254,7 +257,8 @@ class RoomManager:
             # Get all clients in the room
             clients = await self.get_room_clients(room_id)
             if clients:
-                self.logger.info(f"Failed to deletem room: {room_id}, room not empty")
+                self.logger.info(
+                    f"Failed to deletem room: {room_id}, room not empty")
                 return False
             # Remove room from Redis
             await self.redis_client.delete(f"room:{room_id}")
@@ -333,7 +337,8 @@ class RoomManager:
                     f"🔍 Room type: {room_type}, metadata: {room_metadata}")
 
                 if room_type == 'quote':
-                    ticker = room_metadata.get('ticker', None) or room_id.split(':')[-1]
+                    ticker = room_metadata.get(
+                        'ticker', None) or room_id.split(':')[-1]
                     if ticker:
                         try:
                             await self.bars_manager_integration.unsubscribe_from_quotes(ticker)
@@ -488,10 +493,13 @@ class RoomManager:
         try:
             if room_id not in self.local_rooms_metadata:
                 self.local_rooms_metadata[room_id] = {}
-            self.local_rooms_metadata[room_id]['last_bar_update'] = datetime.now().timestamp()
-            self.local_rooms_metadata[room_id]['last_activity'] = datetime.now().isoformat()
+            self.local_rooms_metadata[room_id]['last_bar_update'] = datetime.now(
+            ).timestamp()
+            self.local_rooms_metadata[room_id]['last_activity'] = datetime.now(
+            ).isoformat()
         except Exception as e:
-            self.logger.error(f"Error updating bar activity for room {room_id}: {e}")
+            self.logger.error(
+                f"Error updating bar activity for room {room_id}: {e}")
 
     async def cleanup_client(self, client_id: str) -> None:
         """Clean up when a client disconnects - comprehensive cross-process cleanup"""
@@ -566,7 +574,8 @@ class RoomManager:
                             f"Fallback error for {room_id}: {fallback_error}")
 
             # Step 3: Clean up local tracking (already done above, but ensure completeness)
-            local_rooms_cleaned = len(self.local_clients_rooms.get(client_id, set()))
+            local_rooms_cleaned = len(
+                self.local_clients_rooms.get(client_id, set()))
             self.local_clients_rooms.pop(client_id, None)
             self.logger.info(f"Cleaned up local tracking for {client_id}")
 
@@ -640,7 +649,8 @@ class RoomManager:
                     self.logger.info(
                         f"No Redis rooms found for client {client_id}")
                     # Check local tracking only
-                    local_rooms = self.local_clients_rooms.get(client_id, set())
+                    local_rooms = self.local_clients_rooms.get(
+                        client_id, set())
                     if local_rooms:
                         self.logger.info(
                             f"Client {client_id} found in {len(local_rooms)} local rooms: {list(local_rooms)}")
@@ -1093,12 +1103,14 @@ class RoomManager:
                 await asyncio.sleep(30)  # Check every second for new data
                 # Broadcast quotes to quote rooms (quotes are handled via Redis subscription service)
                 # This loop now only handles initial data and fallback scenarios
-                quote_rooms = [k  for k, _ in self.local_rooms_clients.items() if 'quotes:' in k]
+                quote_rooms = [
+                    k for k, _ in self.local_rooms_clients.items() if 'quotes:' in k]
                 for room_id in quote_rooms:
                     try:
                         # Only broadcast if we haven't received recent updates
                         # This prevents spam when Redis subscription service is working
-                        last_activity = self.local_rooms_metadata.get(room_id, {}).get('last_quote_update', 0)
+                        last_activity = self.local_rooms_metadata.get(
+                            room_id, {}).get('last_quote_update', 0)
                         current_time = datetime.now().timestamp()
 
                         if current_time - last_activity > 30:  # Only if no recent updates
@@ -1142,7 +1154,6 @@ class RoomManager:
                 for room_id, clients in self.local_rooms_clients.items()
             }
         }
-
 
     def dump(self):
         return {

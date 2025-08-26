@@ -12,9 +12,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from .api.v1 import api_v1_router
 from .services.redis_subscription_service import RedisKeys
 from .utils import send_message
-from .ws.connection_manager_v2 import (WebSocketConnectionManager, get_websocket_manager,
-                                       WsMsgTypes
-                                       )
+from .ws.connection_manager_v2 import (WebSocketConnectionManager, WsMsgTypes,
+                                       get_websocket_manager)
 
 _logger = get_logger('MinerService', logging.DEBUG)
 
@@ -368,5 +367,3 @@ async def monitor_running_status():
         except Exception as e:
             _logger.error(f"Error in bars monitoring: {e}")
             await asyncio.sleep(60)  # Wait longer on error
-
-
