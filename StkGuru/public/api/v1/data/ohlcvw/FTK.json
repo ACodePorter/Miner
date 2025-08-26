@@ -7488,5 +7488,15 @@
     "close": 11.9200000763,
     "volume": 387444.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,25,00,00,00,000000",
+    "ticker": "FTK",
+    "open": 11.9499998093,
+    "high": 12.6300001144,
+    "low": 12.0,
+    "close": 12.4499998093,
+    "volume": 298934.0,
+    "wedge_status": "pop"
   }
 ]

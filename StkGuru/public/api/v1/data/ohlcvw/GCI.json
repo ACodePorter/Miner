@@ -7488,5 +7488,15 @@
     "close": 4.25,
     "volume": 3273331.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,25,00,00,00,000000",
+    "ticker": "GCI",
+    "open": 4.2100000381,
+    "high": 4.2239999771,
+    "low": 3.9749999046,
+    "close": 4.0300002098,
+    "volume": 1595526.0,
+    "wedge_status": "drop"
   }
 ]

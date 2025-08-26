@@ -7488,5 +7488,15 @@
     "close": 23.9599990845,
     "volume": 544401.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,08,25,00,00,00,000000",
+    "ticker": "EPC",
+    "open": 23.8299999237,
+    "high": 23.8449993134,
+    "low": 23.5,
+    "close": 23.5,
+    "volume": 573846.0,
+    "wedge_status": "none"
   }
 ]

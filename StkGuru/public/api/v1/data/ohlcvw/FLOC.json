@@ -1068,5 +1068,15 @@
     "close": 16.5200004578,
     "volume": 730555.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,25,00,00,00,000000",
+    "ticker": "FLOC",
+    "open": 16.5,
+    "high": 16.375,
+    "low": 15.9200000763,
+    "close": 15.9499998093,
+    "volume": 314093.0,
+    "wedge_status": "none"
   }
 ]

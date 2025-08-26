@@ -7488,5 +7488,15 @@
     "close": 85.9300003052,
     "volume": 3217068.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,25,00,00,00,000000",
+    "ticker": "CL",
+    "open": 85.8199996948,
+    "high": 86.0,
+    "low": 84.0,
+    "close": 84.0599975586,
+    "volume": 3291495.0,
+    "wedge_status": "drop"
   }
 ]

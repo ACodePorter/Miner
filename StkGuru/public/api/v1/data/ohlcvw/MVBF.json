@@ -7488,5 +7488,15 @@
     "close": 24.0,
     "volume": 61105.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,25,00,00,00,000000",
+    "ticker": "MVBF",
+    "open": 24.2900009155,
+    "high": 24.2999992371,
+    "low": 23.8099994659,
+    "close": 23.9200000763,
+    "volume": 27036.0,
+    "wedge_status": "none"
   }
 ]
