@@ -188,7 +188,7 @@ const Screener: React.FC = () => {
       
       {/* Main Content Area */}
       <main className="flex-1 overflow-auto">
-        <div className="p-2 md:p-4">
+        <div className="p-2 md:p-1">
           {/* Header Section */}
           <div className="mb-1 mt-12 md:mt-0">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2 space-y-1 sm:space-y-0">
@@ -234,7 +234,7 @@ const Screener: React.FC = () => {
             </div>
           ) : (
             <div className="w-full">
-              <div className={`grid ${gridCols} gap-2 md:gap-3 lg:gap-4 chart-grid-mobile`}>
+              <div className={`grid ${gridCols} gap-2 md:gap-3 lg:gap-1 chart-grid-mobile`}>
                 {tiles.map((tile) => (
                   <ChartTile
                     key={tile.id}
