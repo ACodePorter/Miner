@@ -1,19 +1,163 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+
+// Import Highcharts and React wrapper
 import Highcharts from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
+
+// Import all technical indicators (side effect import - automatically registers with Highcharts)
+import 'highcharts/indicators/indicators-all';
+
 import { useInView } from 'react-intersection-observer';
 import { wsClient, type QuotePayload, type BarsPayload } from '../utils/wsClient';
-// Remove marketDataApi import since we're not using HTTP anymore
+import { subscriptionManager } from '../utils/subscriptionManager';
 
-type IndicatorType = 'EMA' | 'SMA' | 'MACD' | 'RSI';
+// Disable data grouping globally for all Highcharts charts
+// This ensures that all data points are displayed individually without grouping,
+// which is important for real-time trading charts where every tick matters
+Highcharts.setOptions({
+  plotOptions: {
+    series: {
+      dataGrouping: {
+        enabled: false
+      }
+    },
+    candlestick: {
+      dataGrouping: {
+        enabled: false
+      }
+    },
+    column: {
+      dataGrouping: {
+        enabled: false
+      }
+    },
+    line: {
+      dataGrouping: {
+        enabled: false
+      }
+    }
+  }
+});
 
 // Timezone constant for New York
 const AMERICA_NEW_YORK_TZ = 'America/New_York';
 
+// Helper function to convert UTC timestamp to New York time
+// This handles the case where backend returns UTC timestamps but we want to display in NY time
+function convertUTCToNYTime(utcTimestamp: number): string {
+  try {
+    const utcDate = new Date(utcTimestamp);
+    return utcDate.toLocaleString('en-US', { 
+      timeZone: AMERICA_NEW_YORK_TZ,
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hourCycle: 'h23'
+    });
+  } catch (error) {
+    // Fallback to UTC if timezone conversion fails
+    console.warn('Timezone conversion failed, falling back to UTC:', error);
+    return new Date(utcTimestamp).toLocaleString('en-US', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hourCycle: 'h23'
+    });
+  }
+}
+
+// Helper function to convert UTC timestamp to New York time (date only)
+function convertUTCToNYDate(utcTimestamp: number): string {
+  try {
+    const utcDate = new Date(utcTimestamp);
+    return utcDate.toLocaleString('en-US', { 
+      timeZone: AMERICA_NEW_YORK_TZ,
+      month: '2-digit',
+      day: '2-digit'
+    });
+  } catch (error) {
+    // Fallback to UTC if timezone conversion fails
+    console.warn('Timezone conversion failed, falling back to UTC:', error);
+    return new Date(utcTimestamp).toLocaleString('en-US', {
+      month: '2-digit',
+      day: '2-digit'
+    });
+  }
+}
+
+// Helper function to convert UTC timestamp to New York time (date + time, no seconds)
+function convertUTCToNYDateTime(utcTimestamp: number): string {
+  try {
+    const utcDate = new Date(utcTimestamp);
+    return utcDate.toLocaleString('en-US', { 
+      timeZone: AMERICA_NEW_YORK_TZ,
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      hourCycle: 'h23'
+    });
+  } catch (error) {
+    // Fallback to UTC if timezone conversion fails
+    console.warn('Timezone conversion failed, falling back to UTC:', error);
+    return new Date(utcTimestamp).toLocaleString('en-US', {
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      hourCycle: 'h23'
+    });
+  }
+}
+
+// Helper function to get time window for different timeframes
+function getTimeWindowForTimeframe(timeframe: string): number {
+  switch (timeframe) {
+    case '1m': return 4 * 60 * 60 * 1000;      // 4 hours
+    case '5m': return 5 * 24 * 60 * 60 * 1000;      // 4 hours  
+    case '15m': return 9 * 24 * 60 * 60 * 1000;     // 4 hours
+    case '30m': return 18 * 24 * 60 * 60 * 1000;     // 8 hours
+    case '65m': return 40 * 24 * 60 * 60 * 1000;    // 24 hours
+    case '1d': return 250 * 24 * 60 * 60 * 1000; // 7 days
+    case '1wk': return 250 * 5 * 24 * 60 * 60 * 1000; // 30 days
+    case '1mo': return 250 * 30 * 24 * 60 * 60 * 1000; // 90 days
+    default: return 5 * 24 * 60 * 60 * 1000;        // 4 hours default
+  }
+}
+
+// Helper function to calculate xAxis range based on time, not bar count
+function calculateXAxisRange(bars: Bar[], timeframe: string) {
+  if (bars.length === 0) return { min: undefined, max: undefined };
+  
+  const timeWindow = getTimeWindowForTimeframe(timeframe);
+  const now = Date.now();
+  const targetStartTime = now - timeWindow;
+  
+  // Find the first bar that's within our time window
+  let startIndex = 0;
+  for (let i = 0; i < bars.length; i++) {
+    if (bars[i].timestamp >= targetStartTime) {
+      startIndex = i;
+      break;
+    }
+  }
+  
+  return {
+    min: bars[startIndex]?.timestamp,
+    max: bars[bars.length - 1]?.timestamp
+  };
+}
+
 export interface ChartTileProps {
   id: string;
   initialTicker: string;
-  initialInterval?: string; // e.g., '1m', '5m', '65m', '1d'
+  initialInterval?: string; // e.g., '1m', '5m', '15m', '30m', '65m', '1d', '1wk', '1mo'
   onRemove?: (id: string) => void;
 }
 
@@ -26,235 +170,109 @@ interface Bar {
   volume: number;
 }
 
-interface IndicatorConfig {
+// Technical indicator interface
+interface TechnicalIndicator {
   id: string;
-  type: IndicatorType;
-  params: Record<string, number>;
+  type: string;
+  name: string;
+  params: Record<string, any>;
+  yAxis?: number;
+  linkedTo?: string;
 }
 
-// Highcharts live candlestick configuration
-const LIVE_CANDLESTICK_CONFIG = {
-  // Optimize for real-time updates
-  chart: {
-    animation: {
-      duration: 300,
-      easing: 'easeOutQuart'
-    },
-    events: {
-      load: function() {
-        // Chart loaded, ready for live updates
-        console.log('Chart loaded and ready for live updates');
-      }
-    }
-  },
-  
-  // Optimize series for live updates
-  plotOptions: {
-    candlestick: {
-      dataGrouping: { enabled: false }, // Disable grouping for live data
-      animation: {
-        duration: 300,
-        easing: 'easeOutQuart'
-      },
-      // Enable live updates
-      enableMouseTracking: true,
-      stickyTracking: false
-    },
-    column: {
-      dataGrouping: { enabled: false },
-      animation: {
-        duration: 300,
-        easing: 'easeOutQuart'
-      }
-    },
-    line: {
-      dataGrouping: { enabled: false },
-      animation: {
-        duration: 300,
-        easing: 'easeOutQuart'
-      }
-    }
-  }
-};
+// Available technical indicators with their parameters
+const AVAILABLE_INDICATORS = [
+  { type: 'sma', name: 'Simple Moving Average (SMA)', params: { period: 14 } },
+  { type: 'ema', name: 'Exponential Moving Average (EMA)', params: { period: 14 } },
+  { type: 'bb', name: 'Bollinger Bands (BB)', params: { period: 20, standardDeviation: 2 } },
+  { type: 'rsi', name: 'Relative Strength Index (RSI)', params: { period: 14 } },
+  { type: 'macd', name: 'MACD', params: { fastPeriod: 12, slowPeriod: 26, signalPeriod: 9 } },
+  { type: 'stochastic', name: 'Stochastic', params: { period: 14, kPeriod: 3, dPeriod: 3 } },
+  { type: 'atr', name: 'Average True Range (ATR)', params: { period: 14 } },
+  { type: 'ad', name: 'Accumulation/Distribution', params: {} },
+  { type: 'obv', name: 'On Balance Volume (OBV)', params: {} },
+  { type: 'vwap', name: 'Volume Weighted Average Price (VWAP)', params: {} },
+  { type: 'natr', name: 'Normalized ATR', params: { period: 14 } },
+  { type: 'mfi', name: 'Money Flow Index (MFI)', params: { period: 14 } },
+  { type: 'williamsR', name: 'Williams %R', params: { period: 14 } },
+  { type: 'cci', name: 'Commodity Channel Index (CCI)', params: { period: 14 } },
+  { type: 'aroon', name: 'Aroon', params: { period: 14 } },
+  { type: 'aroonOscillator', name: 'Aroon Oscillator', params: { period: 14 } },
+  { type: 'chaikin', name: 'Chaikin Oscillator', params: {} },
+  { type: 'cmf', name: 'Chaikin Money Flow (CMF)', params: { period: 14 } },
+  { type: 'dmi', name: 'Directional Movement Index (DMI)', params: { period: 14 } },
+  { type: 'klinger', name: 'Klinger Oscillator', params: { fastPeriod: 34, slowPeriod: 55 } },
+  { type: 'ppo', name: 'Percentage Price Oscillator (PPO)', params: { fastPeriod: 12, slowPeriod: 26 } },
+  { type: 'roc', name: 'Rate of Change (ROC)', params: { period: 14 } },
+  { type: 'trix', name: 'TRIX', params: { period: 14 } },
+  { type: 'zigzag', name: 'Zig Zag', params: { deviation: 5, highLowIndex: 2 } }
+];
 
-function calculateEMAAligned(values: number[], period: number): (number | null)[] {
-  // Wilder-style aligned EMA: keep index alignment and handle nulls gracefully
-  const out: (number | null)[] = new Array(values.length).fill(null);
-  if (period <= 1) return values.map(v => (Number.isFinite(v) ? v : null));
-  const k = 2 / (period + 1);
-  let emaPrev: number | null = null;
-  for (let i = 0; i < values.length; i++) {
-    const v = values[i];
-    if (!Number.isFinite(v)) {
-      // keep output null if no price
-      continue;
-    }
-    if (emaPrev == null) {
-      // seed with first valid value (avoids SMA seeding discrepancies across providers)
-      emaPrev = v;
-    } else {
-      emaPrev = k * v + (1 - k) * emaPrev;
-    }
-    out[i] = emaPrev;
-  }
-  return out;
-}
-
-function calculateSMA(values: number[], period: number): number[] {
-  const result: number[] = new Array(values.length).fill(NaN);
-  let sum = 0;
-  for (let i = 0; i < values.length; i++) {
-    sum += values[i];
-    if (i >= period) sum -= values[i - period];
-    if (i >= period - 1) result[i] = sum / period;
-  }
-  return result;
-}
-
-function calculateMACD(values: number[], fast = 10, slow = 20, signal = 5) {
-  // EMA aligned arrays
-  const emaFast = calculateEMAAligned(values, fast);
-  const emaSlow = calculateEMAAligned(values, slow);
-  const macdLine: (number | null)[] = values.map((_, i) =>
-    emaFast[i] != null && emaSlow[i] != null ? (emaFast[i]! - emaSlow[i]!) : null
-  );
-  // Signal EMA computed over macdLine, aligned without compressing indices
-  const signalLine: (number | null)[] = new Array(values.length).fill(null);
-  const k = 2 / (signal + 1);
-  let sigPrev: number | null = null;
-  for (let i = 0; i < macdLine.length; i++) {
-    const v = macdLine[i];
-    if (v == null) continue;
-    if (sigPrev == null) {
-      sigPrev = v;
-    } else {
-      sigPrev = k * v + (1 - k) * sigPrev;
-    }
-    signalLine[i] = sigPrev;
-  }
-  const histogram: (number | null)[] = macdLine.map((v, i) => (
-    v != null && signalLine[i] != null ? v - (signalLine[i] as number) : null
-  ));
-  return { macdLine, signalLine, histogram };
-}
-
-function calculateRSI(values: number[], period = 14): number[] {
-  const rsi: number[] = new Array(values.length).fill(NaN);
-  let gain = 0;
-  let loss = 0;
-  for (let i = 1; i < values.length; i++) {
-    const change = values[i] - values[i - 1];
-    gain += Math.max(change, 0);
-    loss += Math.max(-change, 0);
-    if (i >= period) {
-      const prevChange = values[i - period + 1] - values[i - period];
-      gain -= Math.max(prevChange, 0);
-      loss -= Math.max(-prevChange, 0);
-    }
-    if (i >= period) {
-      const avgGain = gain / period;
-      const avgLoss = loss / period;
-      const rs = avgLoss === 0 ? 100 : avgGain / avgLoss;
-      rsi[i] = 100 - 100 / (1 + rs);
-    }
-  }
-  return rsi;
-}
-
-export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initialInterval = '1d', onRemove }) => {
+export const ChartTile: React.FC<ChartTileProps> = ({ 
+  id, 
+  initialTicker, 
+  initialInterval = '1d', 
+  onRemove 
+}) => {
+  // Basic state
   const [ticker, setTicker] = useState(initialTicker.toUpperCase());
   const [timeframe, setTimeframe] = useState(initialInterval);
   const [bars, setBars] = useState<Bar[]>([]);
   const [loading, setLoading] = useState(false);
   const [price, setPrice] = useState<number | null>(null);
-  const [indicators, setIndicators] = useState<IndicatorConfig[]>([
-    { id: 'ema-10', type: 'EMA', params: { period: 10 } },
-    { id: 'ema-20', type: 'EMA', params: { period: 20 } }
-  ]);
-  const [indicatorToAdd, setIndicatorToAdd] = useState<IndicatorType>('EMA');
-  const [showIndicatorDialog, setShowIndicatorDialog] = useState(false);
-  const [indicatorParams, setIndicatorParams] = useState<Record<string, number>>({});
-  const chartRef = useRef<HighchartsReact.RefObject>(null);
-  // barsAbortRef removed - no longer needed since we don't make HTTP requests
+  const [change, setChange] = useState<number | null>(null);
+  const [changePercent, setChangePercent] = useState<number | null>(null);
+  const [volume, setVolume] = useState<number | null>(null);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const [wsStatus, setWsStatus] = useState(wsClient.getStatus());
+  
+  // Technical indicators state
+  const [indicators, setIndicators] = useState<TechnicalIndicator[]>([]);
+  const [showIndicatorModal, setShowIndicatorModal] = useState(false);
+  const [selectedIndicator, setSelectedIndicator] = useState<typeof AVAILABLE_INDICATORS[0] | null>(null);
+  
+  // Use ref to track if default indicators were added (won't cause re-renders)
+  const defaultIndicatorsAddedRef = useRef(false);
+
+  // Refs
+  const chartRef = useRef<HighchartsReact.RefObject>(null);
   const { ref: inViewRef, inView } = useInView({ rootMargin: '200px', triggerOnce: false });
-  const defaultZoomAppliedRef = useRef(false);
-  const [reloadTrigger, setReloadTrigger] = useState(0); // Force WebSocket resubscription
-  const [wsStatus, setWsStatus] = useState(wsClient.getStatus()); // Track WebSocket connection status
 
+  // Track current subscription to prevent duplicates
+  // This ensures we only subscribe once per ticker/timeframe combination
+  const currentSubscriptionRef = useRef<{ ticker: string; timeframe: string } | null>(null);
+  
+  // Store the unsubscribe function for bars so we can call it from refresh button
+  const unsubscribeBarsRef = useRef<(() => void) | null>(null);
 
-  // fetchBars function removed - we now rely entirely on WebSocket subscription
-  // Initial bars data comes from WebSocket snapshot, real-time updates come from room broadcasts
+  // Format volume with abbreviations (same as Watchlist)
+  const formatVolume = (volume: number) => {
+    if (volume >= 1_000_000_000) return `${(volume / 1_000_000_000).toFixed(1)}B`;
+    if (volume >= 1_000_000) return `${(volume / 1_000_000).toFixed(1)}M`;
+    if (volume >= 1_000) return `${(volume / 1_000).toFixed(1)}K`;
+    return volume.toString();
+  };
 
+  // WebSocket subscription handlers
   const subscribeQuote = useCallback(() => {
     if (!ticker) return () => {};
-    return wsClient.subscribe(ticker, (q: QuotePayload) => {
+    return subscriptionManager.subscribe(ticker, id, (q: QuotePayload) => {
       if (typeof q.price === 'number') setPrice(q.price);
+      if (typeof q.change === 'number') setChange(q.change);
+      if (typeof q.changePercent === 'number') setChangePercent(q.changePercent);
+      if (typeof q.volume === 'number') setVolume(q.volume);
     });
-  }, [ticker]);
+  }, [ticker, id]);
 
-  // Helper function to update indicators with new data
-  const updateIndicators = useCallback((chart: Highcharts.Chart, newBars: Bar[]) => {
-    if (!newBars.length) return;
-    
-    const closes = newBars.map(b => b.close);
-    
-    // Update each indicator series
-    indicators.forEach(indicator => {
-      if (indicator.type === 'EMA') {
-        const period = indicator.params.period ?? 20;
-        const ema = calculateEMAAligned(closes, period);
-        const emaSeries = chart.series.find(s => s.name === `EMA(${period})`);
-        
-        if (emaSeries) {
-          const data = ema.map((v, i) => [newBars[i]?.timestamp, v] as any);
-          emaSeries.setData(data, false, false, true);
-        }
-      } else if (indicator.type === 'SMA') {
-        const period = indicator.params.period ?? 20;
-        const sma = calculateSMA(closes, period);
-        const smaSeries = chart.series.find(s => s.name === `SMA(${period})`);
-        
-        if (smaSeries) {
-          const data = sma.map((v, i) => [newBars[i]?.timestamp, v] as any);
-          smaSeries.setData(data, false, false, true);
-        }
-      } else if (indicator.type === 'MACD') {
-        const fast = indicator.params.fast ?? 10;
-        const slow = indicator.params.slow ?? 20;
-        const signal = indicator.params.signal ?? 5;
-        const { macdLine, signalLine, histogram } = calculateMACD(closes, fast, slow, signal);
-        
-        const macdSeries = chart.series.find(s => s.name === 'MACD');
-        const signalSeries = chart.series.find(s => s.name === 'Signal');
-        const histSeries = chart.series.find(s => s.name === 'Hist');
-        
-        if (macdSeries) {
-          const data = macdLine.map((v, i) => [newBars[i]?.timestamp, v] as any);
-          macdSeries.setData(data, false, false, true);
-        }
-        if (signalSeries) {
-          const data = signalLine.map((v, i) => [newBars[i]?.timestamp, v] as any);
-          signalSeries.setData(data, false, false, true);
-        }
-        if (histSeries) {
-          const data = histogram.map((v, i) => [newBars[i]?.timestamp, v] as any);
-          histSeries.setData(data, false, false, true);
-        }
-      } else if (indicator.type === 'RSI') {
-        const period = indicator.params.period ?? 14;
-        const rsi = calculateRSI(closes, period);
-        const rsiSeries = chart.series.find(s => s.name === `RSI(${period})`);
-        
-        if (rsiSeries) {
-          const data = rsi.map((v, i) => [newBars[i]?.timestamp, v] as any);
-          rsiSeries.setData(data, false, false, true);
-        }
-      }
-    });
-  }, [indicators]);
+  // Cleanup subscriptions when component unmounts
+  useEffect(() => {
+    return () => {
+      subscriptionManager.unsubscribeComponentAll(id);
+    };
+  }, [id]);
 
-  // WebSocket bars update handler
+  // Single bars update handler - doesn't depend on ticker/timeframe to prevent recreation
+  // This function is created once and reused, preventing unnecessary WebSocket resubscriptions
   const handleBarsUpdate = useCallback((payload: BarsPayload) => {
     console.log('ChartTile handleBarsUpdate called with:', payload);
     
@@ -263,7 +281,7 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
       return;
     }
     
-    const chart = (chartRef as any)?.current?.chart as Highcharts.Chart | undefined;
+    const chart = chartRef.current?.chart;
     if (!chart) {
       console.log('Chart not ready, returning');
       return;
@@ -272,15 +290,13 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
     // Handle initial snapshot (room join)
     if (payload.is_snapshot) {
       console.log('Processing initial snapshot with', payload.bars.length, 'bars');
-      console.log('Setting bars data and clearing loading state');
-      // Set initial data from WebSocket snapshot
       setBars(payload.bars);
-      setLoading(false); // Clear loading when we get snapshot
+      setLoading(false);
       setErrorMsg(null);
       
       // Update chart with snapshot data
       const ohlcSeries = chart.series.find(s => s.type === 'candlestick');
-      const volumeSeries = chart.series.find(s => s.type === 'column' && s.name === 'Volume');
+      const volumeSeries = chart.series.find(s => s.type === 'column');
       
       if (ohlcSeries) {
         const ohlcData = payload.bars.map(bar => [
@@ -301,175 +317,115 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
         volumeSeries.setData(volumeData, false, false, true);
       }
       
-      // Update indicators with new data
-      updateIndicators(chart, payload.bars);
-      
-      // Trigger final redraw
       chart.redraw(false);
       return;
     }
     
-    // Handle real-time updates (live room updates)
+    // Handle real-time updates
     const incoming = payload.bars;
     const lastIncomingBar = incoming[incoming.length - 1];
     
     if (!lastIncomingBar) return;
     
-    // For minute bars, we might get updates to the last forming bar
-    if (timeframe.includes('m')) {
-      const ohlcSeries = chart.series.find(s => s.type === 'candlestick');
-      const volumeSeries = chart.series.find(s => s.type === 'column' && s.name === 'Volume');
+    const ohlcSeries = chart.series.find(s => s.type === 'candlestick');
+    const volumeSeries = chart.series.find(s => s.type === 'column');
+    
+    if (!ohlcSeries || !volumeSeries) return;
+    
+    // Check if we need to add new point or update existing
+    if (ohlcSeries.data.length > 0) {
+      const lastPoint = ohlcSeries.data[ohlcSeries.data.length - 1];
+      const lastTs = lastPoint.x;
       
-      if (ohlcSeries && ohlcSeries.data.length > 0) {
-        const lastPoint = ohlcSeries.data[ohlcSeries.data.length - 1];
-        const lastTs = lastPoint.x;
+      if (lastIncomingBar.timestamp === lastTs) {
+        // Update existing point (real-time update to forming bar)
+        const newPoint = [
+          lastIncomingBar.timestamp,
+          lastIncomingBar.open,
+          lastIncomingBar.high,
+          lastIncomingBar.low,
+          lastIncomingBar.close
+        ];
         
-        if (lastIncomingBar.timestamp === lastTs) {
-          // Update the last forming bar (real-time update)
-          const newPoint = [
-            lastIncomingBar.timestamp,
-            lastIncomingBar.open,
-            lastIncomingBar.high,
-            lastIncomingBar.low,
-            lastIncomingBar.close
-          ] as [number, number, number, number, number];
-          
-          // Use removePoint and addPoint for updating
-          ohlcSeries.removePoint(ohlcSeries.data.length - 1, false);
-          ohlcSeries.addPoint(newPoint, false, false, true);
-        } else if (lastIncomingBar.timestamp > lastTs) {
-          // New bar completed, add it
-          const newPoint = [
-            lastIncomingBar.timestamp,
-            lastIncomingBar.open,
-            lastIncomingBar.high,
-            lastIncomingBar.low,
-            lastIncomingBar.close
-          ] as [number, number, number, number, number];
-          
-          ohlcSeries.addPoint(newPoint, false, false, true);
-        }
-      }
-      
-      if (volumeSeries && volumeSeries.data.length > 0) {
-        const lastPoint = volumeSeries.data[volumeSeries.data.length - 1];
-        const lastTs = lastPoint.x;
+        // Update the last point
+        ohlcSeries.data[ohlcSeries.data.length - 1].update(newPoint, false);
         
-        if (lastIncomingBar.timestamp === lastTs) {
-          // Update the last forming bar volume
-          volumeSeries.removePoint(volumeSeries.data.length - 1, false);
-          volumeSeries.addPoint([lastIncomingBar.timestamp, lastIncomingBar.volume], false, false, true);
-        } else if (lastIncomingBar.timestamp > lastTs) {
-          // New bar completed, add volume
-          volumeSeries.addPoint([lastIncomingBar.timestamp, lastIncomingBar.volume], false, false, true);
+        // Update volume
+        if (volumeSeries.data.length > 0) {
+          volumeSeries.data[volumeSeries.data.length - 1].update([lastIncomingBar.timestamp, lastIncomingBar.volume], false);
         }
-      }
-    } else {
-      // For daily/weekly bars, just append new ones
-      const ohlcSeries = chart.series.find(s => s.type === 'candlestick');
-      const volumeSeries = chart.series.find(s => s.type === 'column' && s.name === 'Volume');
-      
-      if (ohlcSeries && ohlcSeries.data.length > 0) {
-        const lastTs = ohlcSeries.data[ohlcSeries.data.length - 1].x;
+      } else if (lastIncomingBar.timestamp > lastTs) {
+        // Add new point (completed bar)
+        ohlcSeries.addPoint([
+          lastIncomingBar.timestamp,
+          lastIncomingBar.open,
+          lastIncomingBar.high,
+          lastIncomingBar.low,
+          lastIncomingBar.close
+        ], false, false, true);
         
-        for (const bar of incoming) {
-          if (bar.timestamp > lastTs) {
-            const newPoint = [
-              bar.timestamp,
-              bar.open,
-              bar.high,
-              bar.low,
-              bar.close
-            ] as [number, number, number, number, number];
-            
-            ohlcSeries.addPoint(newPoint, false, false, true);
-          }
-        }
-      }
-      
-      if (volumeSeries && volumeSeries.data.length > 0) {
-        const lastTs = volumeSeries.data[volumeSeries.data.length - 1].x;
-        
-        for (const bar of incoming) {
-          if (bar.timestamp > lastTs) {
-            volumeSeries.addPoint([bar.timestamp, bar.volume], false, false, true);
-          }
-        }
+        volumeSeries.addPoint([lastIncomingBar.timestamp, lastIncomingBar.volume], false, false, true);
       }
     }
     
-    // Update indicators with new data - use current bars state
+    // Update bars state
     setBars(currentBars => {
       const newBars = [...currentBars, ...incoming];
-      // Update indicators after state update
-      setTimeout(() => {
-        const chart = (chartRef as any)?.current?.chart as Highcharts.Chart | undefined;
-        if (chart) {
-          updateIndicators(chart, newBars);
-        }
-      }, 0);
       return newBars;
     });
     
-    // Trigger chart update for real-time data
-    chart.redraw(false); // false = no animation for real-time updates
-  }, [timeframe, updateIndicators]);
+    chart.redraw(false);
+  }, []); // No dependencies - this prevents recreation
 
-  // Clear data and show loading when ticker or timeframe changes
-  useEffect(() => {
-    console.log('Ticker/timeframe changed, clearing data and setting loading');
-    setBars([]);
-    setLoading(true);
-    setErrorMsg(null);
-    defaultZoomAppliedRef.current = false;
-  }, [ticker, timeframe]);
+  // Data clearing is now handled in the WebSocket subscription effect
 
-  // Initial load - WebSocket subscription handles initial bars data
-  // useEffect removed - WebSocket subscription automatically provides initial data
-
-  // Reset default zoom flag when ticker or timeframe changes
-  useEffect(() => {
-    defaultZoomAppliedRef.current = false;
-  }, [ticker, timeframe]);
-
-  // WebSocket subscription - join room for ticker/timeframe
+  // WebSocket subscription - only subscribe once and update chart data
   useEffect(() => {
     if (!inView) return;
     
-    console.log('WebSocket subscription effect running for:', ticker, timeframe);
-    console.log('Current loading state:', loading);
-    console.log('Current bars length:', bars.length);
-    
-    // Only set loading if we don't already have data
-    if (bars.length === 0) {
-      console.log('Setting loading to true - no bars data yet');
-      setLoading(true);
-    } else {
-      console.log('Not setting loading - already have bars data');
+    // Check if we already have an active subscription for this ticker/timeframe
+    const currentSub = currentSubscriptionRef.current;
+    if (currentSub && currentSub.ticker === ticker && currentSub.timeframe === timeframe) {
+      console.log('Already subscribed to:', ticker, timeframe, '- skipping duplicate subscription');
+      return;
     }
     
+    console.log('WebSocket subscription effect running for:', ticker, timeframe);
+    
+    // Clear existing data when changing ticker/timeframe
+    setBars([]);
+      setLoading(true);
     setErrorMsg(null);
+    
+    // Update current subscription ref
+    currentSubscriptionRef.current = { ticker, timeframe };
     
     // Subscribe to quotes
     const unsubscribeQuote = subscribeQuote();
     
-    // Subscribe to bars (join room)
+    // Subscribe to bars
     const unsubscribeBars = wsClient.subscribeBars(ticker, timeframe, handleBarsUpdate);
+    unsubscribeBarsRef.current = unsubscribeBars;
     
     return () => {
       console.log('Cleaning up WebSocket subscriptions for:', ticker, timeframe);
       unsubscribeQuote();
       unsubscribeBars();
+      // Clear subscription ref
+      currentSubscriptionRef.current = null;
     };
-  }, [ticker, timeframe, inView, subscribeQuote, handleBarsUpdate, reloadTrigger]);
+  }, [ticker, timeframe, inView, subscribeQuote]); // Removed handleBarsUpdate dependency
 
-  // Monitor WebSocket connection status for error handling
+  // Monitor WebSocket connection status
   useEffect(() => {
-    if (!inView) return;
+    if (!inView) {
+      console.log('Not in view, skipping WebSocket connection status check');
+      return;
+    }
     
     const checkConnectionStatus = () => {
       const status = wsClient.getStatus();
-      setWsStatus(status); // Update connection status state
+      setWsStatus(status);
       
       if (status === 'disconnected' && loading) {
         setErrorMsg('WebSocket connection lost. Trying to reconnect...');
@@ -478,79 +434,125 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
       }
     };
     
-    // Check immediately
     checkConnectionStatus();
-    
-    // Set up interval to check connection status
-    const interval = setInterval(checkConnectionStatus, 5000); // Check every 5 seconds
+    const interval = setInterval(checkConnectionStatus, 5000);
     
     return () => clearInterval(interval);
   }, [inView, loading, errorMsg]);
 
-  // Subscribe to WebSocket room state changes for real-time connection status updates
+  // Subscribe to WebSocket room state changes
   useEffect(() => {
     if (!inView) return;
     
     const unsubscribe = wsClient.onRoomStateChange(() => {
-      // Update connection status when room state changes
       setWsStatus(wsClient.getStatus());
     });
     
     return unsubscribe;
   }, [inView]);
 
-  // Debug loading state changes
-  useEffect(() => {
-    console.log('Loading state changed to:', loading);
-  }, [loading]);
-
-  // Timeout mechanism for WebSocket subscription to prevent indefinite loading
+  // Timeout mechanism for WebSocket subscription
   useEffect(() => {
     if (!inView || !loading) return;
     
-    // Set a timeout for receiving initial bars data
     const timeout = setTimeout(() => {
       if (loading && bars.length === 0) {
         setErrorMsg('Timeout waiting for bars data. Please check your connection and try again.');
         setLoading(false);
       }
-    }, 30000); // 30 second timeout
+    }, 30000);
     
     return () => clearTimeout(timeout);
   }, [inView, loading, bars.length]);
 
-  // Monitor bars state changes
+  // Clear loading state when bars are received
   useEffect(() => {
-    console.log('Bars state changed, length:', bars.length);
-    
-    // Clear loading state if we have bars data
     if (bars.length > 0 && loading) {
-      console.log('Clearing loading state - bars data received');
       setLoading(false);
-    }
-    
-    // Trigger chart update when bars change
-    const chart = (chartRef as any)?.current?.chart as Highcharts.Chart | undefined;
-    if (chart && bars.length > 0) {
-      chart.redraw();
     }
   }, [bars, loading]);
 
-  // Apply default zoom to the latest 128 bars once per ticker/interval
-  useEffect(() => {
-    if (defaultZoomAppliedRef.current) return;
-    if (!bars || bars.length < 2) return;
-    const chart = (chartRef as any)?.current?.chart as Highcharts.Chart | undefined;
-    const axis = chart?.xAxis && chart.xAxis[0];
-    if (!axis) return;
-    const endIndex = bars.length - 1;
-    const startIndex = Math.max(0, bars.length - 128);
-    const min = bars[startIndex].timestamp;
-    const max = bars[endIndex].timestamp;
-    axis.setExtremes(min, max, true, false);
-    defaultZoomAppliedRef.current = true;
-  }, [bars]);
 
+
+  // Update chart when indicators change
+  useEffect(() => {
+    const chart = chartRef.current?.chart;
+    if (chart && bars.length > 0) {
+      // Force chart redraw when indicators change
+      chart.redraw();
+    }
+  }, [indicators, bars.length]);
+
+  // Technical indicator management functions
+  const addIndicator = useCallback((indicatorType: string, params: Record<string, any>) => {
+    console.log('addIndicator called with:', indicatorType, params);
+    
+    const indicator = AVAILABLE_INDICATORS.find(ind => ind.type === indicatorType);
+    if (!indicator) return;
+
+    // Generate unique ID with timestamp + random suffix to ensure uniqueness
+    const uniqueId = `${indicatorType}-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+    
+    // Generate short name for display: "type-param1, param2" or just "type" if no params
+    const shortName = Object.keys(params).length > 0 
+      ? `${indicatorType}-${Object.values(params).join(', ')}`
+      : indicatorType;
+    
+    const newIndicator: TechnicalIndicator = {
+      id: uniqueId,
+      type: indicatorType,
+      name: shortName,
+      params: { ...params },
+      linkedTo: 'ohlc'
+    };
+
+    // Determine yAxis based on indicator type
+    if (['rsi', 'stochastic', 'williamsR', 'cci', 'mfi', 'macd', 'ppo', 'roc', 'trix', 'aroonOscillator'].includes(indicatorType)) {
+      // Oscillators need separate yAxis
+      newIndicator.yAxis = 2;
+    } else {
+      // Overlay indicators use the same yAxis as price
+      newIndicator.yAxis = 0;
+    }
+
+    console.log('Adding new indicator:', newIndicator);
+    setIndicators(prev => {
+      const newIndicators = [...prev, newIndicator];
+      console.log('Updated indicators state:', newIndicators);
+      return newIndicators;
+    });
+    setShowIndicatorModal(false);
+    setSelectedIndicator(null);
+  }, []);
+
+  const removeIndicator = useCallback((indicatorId: string) => {
+    setIndicators(prev => prev.filter(ind => ind.id !== indicatorId));
+  }, []);
+
+  // Add default EMAs when component mounts (only once)
+  useEffect(() => {
+    console.log('Default indicators useEffect running, current ref value:', defaultIndicatorsAddedRef.current);
+    
+    if (defaultIndicatorsAddedRef.current) {
+      console.log('Default indicators already added, skipping');
+      return;
+    }
+    
+    console.log('Adding default EMAs...');
+    
+    // Add EMA 10
+    addIndicator('ema', { period: 10 });
+    
+    // Add EMA 20
+    addIndicator('ema', { period: 20 });
+    
+    defaultIndicatorsAddedRef.current = true;
+    console.log('Default indicators added, ref set to:', defaultIndicatorsAddedRef.current);
+  }, []); // Empty dependency array - only run once on mount
+
+
+
+  // Transform data for Highcharts
   const ohlc = useMemo(() => {
     return bars.map(b => [b.timestamp, b.open, b.high, b.low, b.close] as [number, number, number, number, number]);
   }, [bars]);
@@ -558,523 +560,307 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
   const volumes = useMemo(() => {
     return bars.map(b => [b.timestamp, b.volume] as [number, number]);
   }, [bars]);
-  
-  const closes = useMemo(() => {
-    return bars.map(b => b.close);
-  }, [bars]);
 
-  const hasMACD = useMemo(() => indicators.some(i => i.type === 'MACD'), [indicators]);
-  const hasRSI = useMemo(() => indicators.some(i => i.type === 'RSI'), [indicators]);
+  // Highcharts options
+  const options = useMemo<Highcharts.Options>(() => {
+    // Calculate xAxis range based on time, not bar count
+    const xAxisRange = calculateXAxisRange(bars, timeframe);
 
-  const axisLayout = useMemo(() => {
-    // Calculate dynamic heights
-    let price = 80, macd = 0, rsi = 0, volume = 20;
-    const count = (hasMACD ? 1 : 0) + (hasRSI ? 1 : 0);
-    if (count === 1) { price = 70; volume = 10; if (hasMACD) macd = 20; else rsi = 20; }
-    if (count === 2) { price = 55; macd = 20; rsi = 15; volume = 10; }
-    let top = 0;
-    const yAxis: Highcharts.YAxisOptions[] = [];
-    const indices: { price: number; volume: number; macd: number | null; rsi: number | null } = { price: 0, volume: 0, macd: null, rsi: null };
-    // Price axis (logarithmic for candlesticks)
-    yAxis.push({
-      top: `${top}%`, height: `${price}%`, offset: 0, lineWidth: 1,
-      type: 'logarithmic',
-      labels: { align: 'right', x: -3, format: '{value:.2f}' }, title: { text: 'Price (Log)' }
-    });
-    indices.price = 0; top += price;
-    // MACD axis
-    if (hasMACD) {
-      indices.macd = yAxis.length;
-      yAxis.push({ top: `${top}%`, height: `${macd}%`, offset: 0, lineWidth: 1,
-        labels: { align: 'right', x: -3, format: '{value:.2f}' }, title: { text: 'MACD' } });
-      top += macd;
-    }
-    // RSI axis
-    if (hasRSI) {
-      indices.rsi = yAxis.length;
-      yAxis.push({ top: `${top}%`, height: `${rsi}%`, offset: 0, lineWidth: 1,
-        labels: { align: 'right', x: -3, format: '{value:.2f}' }, title: { text: 'RSI' } });
-      top += rsi;
-    }
-    // Volume axis
-    indices.volume = yAxis.length;
-    yAxis.push({ top: `${top}%`, height: `${volume}%`, offset: 0, lineWidth: 1,
-      labels: { align: 'right', x: -3, formatter: function (this: any) { return Highcharts.numberFormat(this.value as number, 0); } }, title: { text: 'Volume' } });
-    return { yAxis, indices };
-  }, [hasMACD, hasRSI]);
-
-  const indicatorSeries = useMemo(() => {
-    const series: Highcharts.SeriesOptionsType[] = [];
-    for (const ind of indicators) {
-      if (ind.type === 'EMA') {
-        const period = ind.params.period ?? 20;
-        const ema = calculateEMAAligned(closes, period);
-        const data = ema.map((v, i) => [bars[i]?.timestamp, v] as any);
-        series.push({ type: 'line', id: ind.id, name: `EMA(${period})`, data, yAxis: axisLayout.indices.price, color: '#8B5CF6', lineWidth: 1 });
-      } else if (ind.type === 'SMA') {
-        const period = ind.params.period ?? 20;
-        const sma = calculateSMA(closes, period);
-        const data = sma.map((v, i) => [bars[i]?.timestamp, v] as any);
-        series.push({ type: 'line', id: ind.id, name: `SMA(${period})`, data, yAxis: axisLayout.indices.price, color: '#10B981', lineWidth: 1 });
-      } else if (ind.type === 'MACD') {
-        const fast = ind.params.fast ?? 10;
-        const slow = ind.params.slow ?? 20;
-        const signal = ind.params.signal ?? 5;
-        const { macdLine, signalLine, histogram } = calculateMACD(closes, fast, slow, signal);
-        const macdData = macdLine.map((v, i) => [bars[i]?.timestamp, v] as any);
-        const signalData = signalLine.map((v, i) => [bars[i]?.timestamp, v] as any);
-        const histData = histogram.map((v, i) => [bars[i]?.timestamp, v] as any);
-        const macdAxis = axisLayout.indices.macd ?? axisLayout.indices.price;
-        series.push({ type: 'line', id: `${ind.id}-macd`, name: `MACD`, data: macdData, yAxis: macdAxis, color: '#F59E0B', lineWidth: 1 });
-        series.push({ type: 'line', id: `${ind.id}-signal`, name: `Signal`, data: signalData, yAxis: macdAxis, color: '#3B82F6', lineWidth: 1 });
-        series.push({ type: 'column', id: `${ind.id}-hist`, name: `Hist`, data: histData, yAxis: macdAxis, color: '#9CA3AF' });
-      } else if (ind.type === 'RSI') {
-        const period = ind.params.period ?? 14;
-        const rsi = calculateRSI(closes, period);
-        const data = rsi.map((v, i) => [bars[i]?.timestamp, v] as any);
-        const rsiAxis = axisLayout.indices.rsi ?? axisLayout.indices.price;
-        series.push({ type: 'line', id: ind.id, name: `RSI(${period})`, data, yAxis: rsiAxis, color: '#EF4444', lineWidth: 1 });
-      }
-    }
-    return series;
-  }, [indicators, bars, closes, axisLayout]);
-
-  const options = useMemo<Highcharts.Options>(() => ({
-    rangeSelector: { enabled: false },
-    navigator: { enabled: false },
-    scrollbar: { enabled: false },
-    title: { text: undefined },
-    chart: { 
-      height: 360, 
-      backgroundColor: 'transparent', 
-      spacingTop: 0, 
-      marginTop: 0, 
-      spacing: [0, 0, 0, 0],
-      // Use live candlestick configuration
-      ...LIVE_CANDLESTICK_CONFIG.chart,
-      // Enable live redraw for real-time updates
-      events: {
-        load: function() {
-          // Chart loaded, ready for real-time updates
-          console.log('Chart loaded and ready for live updates');
-        },
-        // Optimize for real-time updates
-        redraw: function() {
-          // Chart redrawn, ensure smooth updates
-        }
-      }
-    },
-    xAxis: { 
-      ordinal: true,
-      // Optimize for real-time updates
-      type: 'datetime',
-      labels: {
-        rotation: 0,
-        step: 1, // Show every label to prevent overlap
+    return {
+      // Basic chart settings
+      chart: {
+        height: 360, 
+        backgroundColor: 'transparent',
+        spacingTop: 0, 
+        marginTop: 0, 
+        spacing: [0, 0, 0, 0],
         style: {
-          fontSize: '10px' // Smaller font to prevent overlap
+          fontFamily: 'ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace'
         },
-        formatter: function() {
-          const date = new Date(this.value);
-          // For daily or larger timeframes, show date only
-          // For intraday timeframes, show date + time
-          const isIntraday = timeframe.includes('m');
-          
-          if (isIntraday) {
-            return date.toLocaleString('en-US', { 
-              timeZone: AMERICA_NEW_YORK_TZ,
-              month: '2-digit',
-              day: '2-digit',
-              hour: '2-digit',
-              minute: '2-digit',
-              hourCycle: 'h23' // Use 24-hour format
-            });
-          } else {
-            return date.toLocaleString('en-US', { 
-              timeZone: AMERICA_NEW_YORK_TZ,
-              month: '2-digit',
-              day: '2-digit'
-            });
+        // Logarithmic chart options
+        type: 'stock',
+        // Ensure proper logarithmic rendering
+        animation: {
+          duration: 300
+        }
+      },
+      
+      // Disable accessibility to remove warning
+      accessibility: {
+        enabled: false
+      },
+      
+      // Disable built-in features for now (we'll add them step by step)
+      rangeSelector: { enabled: false },
+      navigator: { enabled: true },
+      scrollbar: { enabled: false },
+      
+      // Enable horizontal zooming but hide reset button
+      zoomType: 'x',
+      resetZoomButton: { enabled: false },
+      
+      // Plot options for better logarithmic display
+      plotOptions: {
+        candlestick: {
+          // Logarithmic-friendly candlestick options
+          color: '#FF7F7F', // Down color
+          upColor: '#90EE90', // Up color
+          lineWidth: 1,
+          // Ensure proper display with logarithmic scaling
+          pointPadding: 0.1,
+          groupPadding: 0.1,
+          // Animation for smooth updates
+          animation: {
+            duration: 300
+          }
+        },
+        series: {
+          // Global series options for logarithmic charts
+          animation: {
+            duration: 300
           }
         }
       },
-      // Enable live updates for real-time data
-      events: {
-        afterSetExtremes: function() {
-          // X-axis extremes updated for real-time data
-        }
-      }
-    },
-    // Use live candlestick plot options
-    plotOptions: {
-      ...LIVE_CANDLESTICK_CONFIG.plotOptions,
-      series: {
-        dataGrouping: { enabled: false }, // Disable grouping for live data
-        lineWidth: 1,
-        // Enable animation for real-time updates
-        animation: {
-          duration: 300,
-          easing: 'easeOutQuart'
-        },
-        // Enable live redraw for real-time updates
-        enableMouseTracking: true,
-        stickyTracking: false
-      }
-    },
-        tooltip: { 
-          split: false, // Share tooltip across all series
-          shared: true, // Enable shared tooltip
-          useHTML: true, // Enable HTML in tooltip
-          valueDecimals: 2,
-          backgroundColor: 'rgba(17, 24, 39, 0.98)', // Match OHLCV chart style
-          borderWidth: 0,
-          shadow: true,
-          borderRadius: 8,
-          style: { fontSize: '13px', color: '#ffffff' }, // Match OHLCV chart style
+
+      // Title
+      title: { text: undefined },
+      
+      // Subtitle with change and volume information
+      subtitle: { text: undefined },
+
+      // X-axis with zoom control
+      xAxis: {
+        type: 'datetime',
+        min: xAxisRange.min,
+        max: xAxisRange.max,
+        labels: {
+          rotation: 0,
+          style: {
+            fontSize: '10px',
+            color: '#F8F8F2'
+          },
           formatter: function() {
-            const date = new Date(this.x);
-            const nyTime = date.toLocaleString('en-US', { 
-              timeZone: AMERICA_NEW_YORK_TZ,
-              year: 'numeric',
-              month: '2-digit',
-              day: '2-digit',
-              hour: '2-digit',
-              minute: '2-digit',
-              second: '2-digit',
-              hourCycle: 'h23'
-            });
+            const isIntraday = timeframe.includes('m');
             
-            let tooltip = `<div style="padding: 4px 0;"><b style="color: #F92672; font-size: 14px;">${ticker}: ${nyTime}</b></div><br/>`;
-            
-            // Group data by series type
-            if (this.points && this.points.length > 0) {
-              // Find OHLC data first - look for candlestick series by type or name
-              const ohlcPoint = this.points.find((point: any) => 
-                point.series?.type === 'candlestick' || 
-                point.series?.name === ticker ||
-                (point.series?.options && point.series.options.type === 'candlestick')
-              );
-              
-              if (ohlcPoint) {
-                tooltip += `<span style="color: #A6E22E; font-size: 16px;">●</span> <span style="color: #A6E22E; font-weight: 500;">OHLC:</span><br/>`;
-                // Access OHLC data from the point's options for candlestick series
-                const pointOptions = (ohlcPoint as any).options;
-                if (pointOptions) {
-                  tooltip += `&nbsp;&nbsp;<span style="color: #A6E22E; font-weight: 500;">O:</span> <span style="color: #F8F8F2; font-weight: bold;">$${pointOptions.open?.toFixed(2) || 'N/A'}</span><br/>`;
-                  tooltip += `&nbsp;&nbsp;<span style="color: #FD971F; font-weight: 500;">H:</span> <span style="color: #F8F8F2; font-weight: bold;">$${pointOptions.high?.toFixed(2) || 'N/A'}</span><br/>`;
-                  tooltip += `&nbsp;&nbsp;<span style="color: #F92672; font-weight: 500;">L:</span> <span style="color: #F8F8F2; font-weight: bold;">$${pointOptions.low?.toFixed(2) || 'N/A'}</span><br/>`;
-                  tooltip += `&nbsp;&nbsp;<span style="color: #66D9EF; font-weight: 500;">C:</span> <span style="color: #F8F8F2; font-weight: bold;">$${pointOptions.close?.toFixed(2) || 'N/A'}</span><br/>`;
-                }
-              }
-              
-              // Find Volume data - look for column series by type or name
-              const volumePoint = this.points.find((point: any) => 
-                point.series?.type === 'column' || 
-                point.series?.name === 'Volume' ||
-                (point.series?.options && point.series.options.type === 'column')
-              );
-              if (volumePoint && volumePoint.y !== null && volumePoint.y !== undefined) {
-                tooltip += `<span style="color: #75715E; font-size: 16px;">●</span> <span style="color: #75715E; font-weight: 500;">Volume:</span><br/>`;
-                tooltip += `&nbsp;&nbsp;<span style="color: #75715E; font-weight: 500;">V:</span> <span style="color: #F8F8F2; font-weight: bold;">${Highcharts.numberFormat(volumePoint.y, 0)}</span><br/>`;
-              }
-              
-              // Group indicators by type - exclude candlestick and volume, but allow indicator columns
-              const indicatorPoints = this.points.filter((point: any) => 
-                point.series?.type !== 'candlestick' && 
-                point.series?.name !== ticker &&
-                point.series?.name !== 'Volume'
-              );
-              
-              if (indicatorPoints.length > 0) {
-                // Group indicators by their base type (remove suffixes like -macd, -signal, -hist)
-                const indicatorGroups: Record<string, any[]> = {};
-                
-                indicatorPoints.forEach((point: any) => {
-                  if (point.series?.name) {
-                    // Extract base indicator name by removing common suffixes
-                    let baseName = point.series.name;
-                    
-                    // Handle MACD components - group MACD, Signal, and Hist together
-                    if (baseName === 'MACD' || baseName === 'Signal' || baseName === 'Hist') {
-                      baseName = 'MACD';
-                    }
-                    // Handle EMA/SMA with period
-                    else if (baseName.includes('EMA(') || baseName.includes('SMA(')) {
-                      baseName = baseName.split('(')[0]; // Get EMA or SMA
-                    }
-                    // Handle RSI with period
-                    else if (baseName.includes('RSI(')) {
-                      baseName = 'RSI';
-                    }
-                    
-                    if (!indicatorGroups[baseName]) {
-                      indicatorGroups[baseName] = [];
-                    }
-                    indicatorGroups[baseName].push(point);
-                  }
-                });
-                
-                // Add each indicator group
-                Object.entries(indicatorGroups).forEach(([groupName, points]) => {
-                  tooltip += `<span style="color: #FD971F; font-size: 16px;">●</span> <span style="color: #FD971F; font-weight: 500;">${groupName}:</span><br/>`;
-                  
-                  points.forEach((point: any) => {
-                    const value = point.y !== null ? point.y.toFixed(2) : 'N/A';
-                    let label = '';
-                    let color = '#75715E'; // Default gray
-                    
-                    // Customize labels and colors for different indicator types
-                    if (groupName === 'MACD') {
-                      // For MACD, use the series name to determine the component
-                      if (point.series?.name) {
-                        if (point.series.name.includes('MACD')) {
-                          label = 'MACD';
-                          color = '#A6E22E'; // Green
-                        } else if (point.series.name.includes('Signal')) {
-                          label = 'Signal';
-                          color = '#F92672'; // Red
-                        } else if (point.series.name.includes('Hist')) {
-                          label = 'Hist';
-                          color = '#75715E'; // Gray
-                        } else {
-                          label = 'Value';
-                          color = '#75715E';
-                        }
-                      }
-                    } else if (groupName === 'EMA') {
-                      // For EMA, show the period
-                      const period = point.series?.name?.match(/\((\d+)\)/)?.[1] || '';
-                      label = period ? `EMA(${period})` : 'EMA';
-                      color = '#8B5CF6'; // Purple
-                    } else if (groupName === 'SMA') {
-                      // For SMA, show the period
-                      const period = point.series?.name?.match(/\((\d+)\)/)?.[1] || '';
-                      label = period ? `SMA(${period})` : 'SMA';
-                      color = '#10B981'; // Green
-                    } else if (groupName === 'RSI') {
-                      // For RSI, show the period
-                      const period = point.series?.name?.match(/\((\d+)\)/)?.[1] || '';
-                      label = period ? `RSI(${period})` : 'RSI';
-                      color = '#EF4444'; // Red
-                    } else {
-                      label = 'Value';
-                      color = '#75715E';
-                    }
-                    
-                    tooltip += `&nbsp;&nbsp;<span style="color: ${color}; font-weight: 500;">${label}:</span> <span style="color: #F8F8F2; font-weight: bold;">${value}</span><br/>`;
-                  });
-                });
-              }
+            if (isIntraday) {
+              return convertUTCToNYDateTime(this.value as number);
+            } else {
+              // For daily timeframes, show only date
+              return convertUTCToNYDate(this.value as number);
             }
-            
-            return tooltip;
           }
         },
-    yAxis: axisLayout.yAxis,
-    series: [
-      { type: 'candlestick', id: 'ohlc', name: ticker, data: ohlc, lineWidth: 1 },
-      { type: 'column', id: 'volume', name: 'Volume', data: volumes, yAxis: axisLayout.indices.volume, color: '#94A3B8', tooltip: { valueDecimals: 0 } },
-      ...indicatorSeries,
-    ],
-    credits: { enabled: false },
-  }), [ticker, timeframe, price, ohlc, volumes, indicatorSeries, axisLayout]);
+        lineColor: '#75715E',
+        tickColor: '#75715E',
+        crosshair: {
+          color: '#3B82F6',
+          width: 1,
+          zIndex: 10
+        }
+      },
 
-  const handleAddIndicator = () => {
-    // Reset params and open dialog
-    setIndicatorParams({});
-    setShowIndicatorDialog(true);
-  };
+      // Y-axes
+      yAxis: [
+        {
+          // Price axis (logarithmic)
+          // Logarithmic scaling makes percentage changes visually equal,
+          // which is ideal for financial charts where relative changes matter more than absolute values
+          top: '0%',
+          height: '80%',
+          offset: 0,
+          lineWidth: 1,
+          lineColor: '#75715E',
+          tickColor: '#75715E',
+          type: 'logarithmic',
+          minorTickInterval: 'auto',
+          minorGridLineWidth: 0,
+          // Logarithmic-specific options for better display
+          endOnTick: false,
+          startOnTick: false,
+          // Ensure logarithmic scaling works properly with candlestick data
+          min: undefined,
+          max: undefined,
+          // Logarithmic grid lines
+          gridLineWidth: 1,
+          gridLineColor: '#374151',
+          // Minor grid lines for better readability
+          minorGridLineColor: '#1F2937',
+          labels: {
+            align: 'right',
+            x: -3,
+            format: '{value:.2f}',
+            style: { color: '#F8F8F2' }
+          },
+          title: {
+            text: 'Price (Log)',
+            style: { color: '#F8F8F2' }
+          },
+          crosshair: {
+            color: '#3B82F6',
+            width: 1,
+            zIndex: 10
+          }
+        },
+        {
+          // Volume axis
+          top: '80%',
+          height: '20%',
+          offset: 0,
+          lineWidth: 1,
+          lineColor: '#75715E',
+          tickColor: '#75715E',
+          labels: {
+            align: 'right',
+            x: -3,
+            formatter: function() { 
+              return Highcharts.numberFormat(this.value as number, 0); 
+            },
+            style: { color: '#F8F8F2' }
+          },
+          title: {
+            text: 'Volume',
+            style: { color: '#F8F8F2' }
+          },
+          crosshair: {
+            color: '#3B82F6',
+            width: 1,
+            zIndex: 10
+          }
+        },
+        {
+          // Oscillator indicators axis (RSI, Stochastic, etc.)
+          top: '0%',
+          height: '80%',
+          offset: 0,
+          lineWidth: 1,
+          lineColor: '#75715E',
+          tickColor: '#75715E',
+          labels: {
+            align: 'left',
+            x: 3,
+            style: { color: '#F8F8F2' }
+          },
+          title: {
+            text: 'Oscillators',
+            style: { color: '#F8F8F2' }
+          },
+          crosshair: {
+            color: '#3B82F6',
+            width: 1,
+            zIndex: 10
+          },
+          // Hide this axis by default, only show when oscillators are added
+          visible: indicators.some(ind => ind.yAxis === 2)
+        }
+      ],
 
-  const confirmAddIndicator = () => {
-    const type = indicatorToAdd;
-    const id = `${type}-${Date.now()}`;
-    
-    // Set default params if none provided
-    let params: Record<string, number> = {};
-    if (type === 'EMA' || type === 'SMA') {
-      params = { period: indicatorParams.period || 20 };
-    } else if (type === 'MACD') {
-      params = { 
-        fast: indicatorParams.fast || 10, 
-        slow: indicatorParams.slow || 20, 
-        signal: indicatorParams.signal || 5 
-      };
-    } else if (type === 'RSI') {
-      params = { period: indicatorParams.period || 14 };
-    }
-    
-    setIndicators(prev => [...prev, { id, type, params }]);
-    setShowIndicatorDialog(false);
-    setIndicatorParams({});
-  };
+      // Series
+      series: [
+        {
+          type: 'candlestick',
+          id: 'ohlc',
+          name: ticker,
+          data: ohlc,
+          dataGrouping: {
+            enabled: false
+          }
+        },
+        {
+          type: 'column',
+          id: 'volume',
+          name: 'Volume',
+          data: volumes,
+          yAxis: 1,
+          color: '#94A3B8',
+          tooltip: { valueDecimals: 0 },
+          dataGrouping: {
+            enabled: false
+          }
+        },
+        // Add technical indicators
+        ...indicators.map(indicator => ({
+          type: indicator.type,
+          id: indicator.id,
+          name: indicator.name,
+          linkedTo: indicator.linkedTo,
+          yAxis: indicator.yAxis || 0,
+          params: indicator.params,
+          dataGrouping: {
+            enabled: false
+          },
+          // Style indicators with different colors and line styles
+          color: indicator.type === 'ema' ? '#FFD700' : 
+                 indicator.type === 'sma' ? '#00CED1' : 
+                 indicator.type === 'bb' ? '#FF69B4' : 
+                 indicator.type === 'rsi' ? '#FF6B6B' : 
+                 indicator.type === 'stochastic' ? '#4ECDC4' : 
+                 indicator.type === 'macd' ? '#45B7D1' : 
+                 indicator.type === 'atr' ? '#FF8C00' : 
+                 indicator.type === 'obv' ? '#9370DB' : 
+                 indicator.type === 'vwap' ? '#32CD32' : '#A8E6CF',
+          lineWidth: indicator.type === 'bb' ? 0.5 : 1,
+          // Add dash pattern for certain indicators
+          dashStyle: indicator.type === 'bb' ? 'Dash' : 'Solid',
+          // Disable point markers (dots) on indicator lines
+          marker: { enabled: false }
+        }))
+      ] as Highcharts.SeriesOptionsType[],
+      
+      // Tooltip
+      tooltip: {
+        backgroundColor: 'rgba(17, 24, 39, 0.98)',
+        borderWidth: 0,
+        shadow: true,
+        borderRadius: 8,
+        style: { fontSize: '13px', color: '#ffffff' },
+        formatter: function() {
+          const nyTime = convertUTCToNYTime(this.x);
+          
+          let tooltip = `<div style="padding: 4px 0;"><b style="color: #F92672; font-size: 14px;">${ticker}: ${nyTime}</b></div><br/>`;
+          
+          if (this.series.type === 'candlestick') {
+            const point = this as any; // Type assertion for candlestick point
+            tooltip += `
+              <span style="color: #A6E22E; font-weight: 500;">OHLC:</span><br/>
+              &nbsp;&nbsp;<span style="color: #F8F8F2;">Open: $${point.open}</span><br/>
+              &nbsp;&nbsp;<span style="color: #F8F8F2;">High: $${point.high}</span><br/>
+              &nbsp;&nbsp;<span style="color: #F8F8F2;">Low: $${point.low}</span><br/>
+              &nbsp;&nbsp;<span style="color: #F8F8F2;">Close: $${point.close}</span><br/>
+            `;
+          } else if (this.series.type === 'column') {
+            tooltip += `
+              <span style="color: #75715E; font-weight: 500;">Volume:</span><br/>
+              &nbsp;&nbsp;<span style="color: #F8F8F2;">${Highcharts.numberFormat(this.y || 0, 0)}</span><br/>
+            `;
+          } else {
+            // Technical indicator tooltip
+            const indicator = indicators.find(ind => ind.name === this.series.name);
+            if (indicator) {
+              tooltip += `
+                <span style="color: #A8E6CF; font-weight: 500;">${indicator.name}:</span><br/>
+                &nbsp;&nbsp;<span style="color: #F8F8F2;">Value: ${Highcharts.numberFormat(this.y || 0, 4)}</span><br/>
+              `;
+            }
+          }
+          
+          return tooltip;
+        }
+      },
 
-  const cancelAddIndicator = () => {
-    setShowIndicatorDialog(false);
-    setIndicatorParams({});
-  };
-
-  // Handle escape key to close dialog
-  useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && showIndicatorDialog) {
-        cancelAddIndicator();
-      }
+      // Credits
+      credits: { enabled: false }
     };
-
-    if (showIndicatorDialog) {
-      document.addEventListener('keydown', handleEscape);
-      return () => document.removeEventListener('keydown', handleEscape);
-    }
-  }, [showIndicatorDialog]);
-
-  const removeIndicator = (id: string) => {
-    setIndicators(prev => prev.filter(ind => ind.id !== id));
-  };
-
-  const getIndicatorLabel = (ind: IndicatorConfig): string => {
-    if (ind.type === 'EMA' || ind.type === 'SMA') {
-      return `${ind.type}(${ind.params.period ?? 20})`;
-    }
-    if (ind.type === 'MACD') {
-      const f = ind.params.fast ?? 10;
-      const s = ind.params.slow ?? 20;
-      const sig = ind.params.signal ?? 5;
-      return `MACD(${f},${s},${sig})`;
-    }
-    if (ind.type === 'RSI') {
-      return `RSI(${ind.params.period ?? 14})`;
-    }
-    return ind.type;
-  };
-
-  const panOrZoom = useCallback((action: 'panLeft' | 'panRight' | 'zoomIn' | 'zoomOut') => {
-    const chart = (chartRef as any)?.current?.chart as Highcharts.Chart | undefined;
-    if (!chart || !chart.xAxis || !chart.xAxis.length) return;
-    const axis = chart.xAxis[0];
-    const ext = axis.getExtremes();
-    const dataMin = ext.dataMin ?? ext.min;
-    const dataMax = ext.dataMax ?? ext.max;
-    let min = ext.min;
-    let max = ext.max;
-    const range = Math.max(1, max - min);
-    const step = range * 0.2; // 20% pan step
-    const zoomStep = range * 0.1; // 10% zoom step
-    if (action === 'panLeft') {
-      min = Math.max(dataMin, min - step);
-      max = min + range;
-      if (max > dataMax) { max = dataMax; min = max - range; }
-    } else if (action === 'panRight') {
-      max = Math.min(dataMax, max + step);
-      min = max - range;
-      if (min < dataMin) { min = dataMin; max = min + range; }
-    } else if (action === 'zoomIn') {
-      const center = (min + max) / 2;
-      let newRange = Math.max(10, range - zoomStep);
-      min = Math.max(dataMin, center - newRange / 2);
-      max = Math.min(dataMax, center + newRange / 2);
-    } else if (action === 'zoomOut') {
-      const center = (min + max) / 2;
-      let newRange = Math.min(dataMax - dataMin, range + zoomStep);
-      min = Math.max(dataMin, center - newRange / 2);
-      max = Math.min(dataMax, center + newRange / 2);
-    }
-    axis.setExtremes(min, max, true, false);
-  }, []);
-
-  const handleKeyDown = useCallback((e: React.KeyboardEvent<HTMLDivElement>) => {
-    if (e.key === 'ArrowLeft') { e.preventDefault(); panOrZoom('panLeft'); }
-    else if (e.key === 'ArrowRight') { e.preventDefault(); panOrZoom('panRight'); }
-    else if (e.key === 'ArrowUp') { e.preventDefault(); panOrZoom('zoomIn'); }
-    else if (e.key === 'ArrowDown') { e.preventDefault(); panOrZoom('zoomOut'); }
-  }, [panOrZoom]);
-
-  // Non-passive wheel listener to avoid browser warning and enable preventDefault
-  const wheelContainerRef = useRef<HTMLDivElement | null>(null);
-  const isPanningRef = useRef(false);
-  const panStartXRef = useRef(0);
-  const panStartMinRef = useRef<number | null>(null);
-  const panStartMaxRef = useRef<number | null>(null);
-  useEffect(() => {
-    const el = wheelContainerRef.current;
-    if (!el) return;
-    const handler = (ev: WheelEvent) => {
-      ev.preventDefault();
-      const chart = (chartRef as any)?.current?.chart as Highcharts.Chart | undefined;
-      const axis = chart?.xAxis && chart.xAxis[0];
-      if (!chart || !axis) {
-        // Fallback to zoom if chart not ready
-        if (ev.deltaY < 0) panOrZoom('zoomIn'); else panOrZoom('zoomOut');
-        return;
-      }
-      const ext = axis.getExtremes();
-      const range = Math.max(1, ext.max - ext.min);
-      const isHorizontal = Math.abs(ev.deltaX) > Math.abs(ev.deltaY);
-      if (isHorizontal) {
-        const plotWidth = chart.plotWidth || 1;
-        const deltaVal = -ev.deltaX / plotWidth * range;
-        let newMin = ext.min + deltaVal;
-        let newMax = ext.max + deltaVal;
-        const dataMin = ext.dataMin ?? newMin;
-        const dataMax = ext.dataMax ?? newMax;
-        if (newMin < dataMin) { newMin = dataMin; newMax = newMin + range; }
-        if (newMax > dataMax) { newMax = dataMax; newMin = newMax - range; }
-        axis.setExtremes(newMin, newMax, true, false);
-      } else {
-        if (ev.deltaY < 0) panOrZoom('zoomIn'); else panOrZoom('zoomOut');
-      }
-    };
-    el.addEventListener('wheel', handler, { passive: false });
-    return () => {
-      el.removeEventListener('wheel', handler as any);
-    };
-  }, [panOrZoom]);
-
-  const handleMouseDown = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    const chart = (chartRef as any)?.current?.chart as Highcharts.Chart | undefined;
-    if (!chart || !chart.xAxis || !chart.xAxis.length) return;
-    const axis = chart.xAxis[0];
-    const ext = axis.getExtremes();
-    isPanningRef.current = true;
-    panStartXRef.current = e.clientX;
-    panStartMinRef.current = ext.min;
-    panStartMaxRef.current = ext.max;
-    (e.currentTarget as HTMLDivElement).style.cursor = 'grabbing';
-    e.preventDefault();
-  }, []);
-
-  const handleMouseUp = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    isPanningRef.current = false;
-    (e.currentTarget as HTMLDivElement).style.cursor = 'default';
-  }, []);
-
-  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    if (!isPanningRef.current) return;
-    const chart = (chartRef as any)?.current?.chart as Highcharts.Chart | undefined;
-    if (!chart || !chart.xAxis || !chart.xAxis.length) return;
-    const axis = chart.xAxis[0];
-    const plotWidth = chart.plotWidth || 1;
-    const startMin = panStartMinRef.current;
-    const startMax = panStartMaxRef.current;
-    if (startMin == null || startMax == null) return;
-    const range = Math.max(1, startMax - startMin);
-    const deltaPx = e.clientX - panStartXRef.current;
-    const deltaVal = -deltaPx / plotWidth * range;
-    const newMin = startMin + deltaVal;
-    const newMax = startMax + deltaVal;
-    axis.setExtremes(newMin, newMax, true, false);
-    e.preventDefault();
-  }, []);
+  }, [ticker, timeframe, ohlc, volumes, bars, indicators]); // Removed quote dependencies since they're now in header
 
   return (
     <div ref={inViewRef} className="chart-container overflow-hidden card-hover">
-      {/* Enhanced Header */}
-      <div className="flex items-center justify-between gap-2 px-3 py-2 border-b border-slate-700 bg-gradient-to-br from-slate-800 to-slate-700">
+      {/* Header */}
+      <div className="relative flex items-center justify-between gap-2 px-3 py-2 border-b border-slate-700 bg-gradient-to-br from-slate-800 to-slate-700">
         <div className="flex items-center gap-2">
           <input
             type="text"
             value={ticker}
             onChange={(e) => setTicker(e.target.value.toUpperCase())}
-            // onBlur removed - ticker change now triggers WebSocket resubscription automatically
             className="w-20 px-2 py-1 text-xs bg-slate-700 border border-slate-600 rounded-lg focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 text-slate-100 font-medium"
           />
           <select
@@ -1086,7 +872,6 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
             <option value="5m">5m</option>
             <option value="15m">15m</option>
             <option value="30m">30m</option>
-            <option value="60m">60m</option>
             <option value="65m">65m</option>
             <option value="1d">1d</option>
             <option value="1wk">1wk</option>
@@ -1094,11 +879,22 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
           </select>
           <button 
             onClick={() => {
-              // Reload button triggers WebSocket resubscription to get fresh data
+              // Clear current data
+              setBars([]);
               setLoading(true);
               setErrorMsg(null);
-              // Force resubscription by incrementing reloadTrigger
-              setReloadTrigger(prev => prev + 1);
+              
+              // Unsubscribe and re-subscribe to bars to get fresh data
+              if (currentSubscriptionRef.current && unsubscribeBarsRef.current) {
+                // Unsubscribe from current bars subscription
+                unsubscribeBarsRef.current();
+                
+                // Re-subscribe to get fresh data
+                setTimeout(() => {
+                  const newUnsubscribeBars = wsClient.subscribeBars(ticker, timeframe, handleBarsUpdate);
+                  unsubscribeBarsRef.current = newUnsubscribeBars;
+                }, 100); // Small delay to ensure clean unsubscribe
+              }
             }} 
             className="px-2 py-1 text-xs bg-slate-700 border border-slate-600 rounded-lg hover:bg-slate-600 text-slate-300 hover:text-slate-100 transition-all duration-200 flex items-center gap-1.5"
           >
@@ -1123,78 +919,124 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
                wsStatus === 'connecting' ? 'Connecting...' : 'Disconnected'}
             </span>
           </div>
-        </div>
-        
-        <div className="flex items-center gap-2">
-          <select
-            value={indicatorToAdd}
-            onChange={(e) => setIndicatorToAdd(e.target.value as IndicatorType)}
-            className="px-2 py-1 text-xs bg-slate-700 border border-slate-600 rounded-lg focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 text-slate-100"
-          >
-            <option value="EMA">EMA</option>
-            <option value="SMA">SMA</option>
-            <option value="MACD">MACD</option>
-            <option value="RSI">RSI</option>
-          </select>
-          <button 
-            onClick={handleAddIndicator} 
-            className="btn-primary px-2 py-1 text-xs rounded-lg font-medium flex items-center gap-1.5"
-          >
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-            </svg>
-            Add
-          </button>
-          {onRemove && (
-            <button 
-              onClick={() => onRemove(id)} 
-              className="p-1.5 text-slate-400 hover:text-red-400 hover:bg-red-950/20 rounded-lg transition-all duration-200" 
-              title="Remove chart"
+          
+
+          
+          {/* Technical Indicators Management */}
+          <div className="flex items-center gap-2">
+            {/* Add Indicator Button */}
+            <button
+              onClick={() => setShowIndicatorModal(true)}
+              className="px-2 py-1 text-xs bg-blue-600 border border-blue-500 rounded-lg hover:bg-blue-700 text-white transition-all duration-200 flex items-center gap-1"
+              title="Add technical indicator"
             >
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
               </svg>
+              Add
             </button>
-          )}
-        </div>
-      </div>
-
-      {/* Enhanced Active Indicators */}
-      {indicators.length > 0 && (
-        <div className="px-3 py-2 border-b border-slate-700 bg-slate-700">
-          <div className="flex flex-wrap gap-1.5">
-            {indicators.map(ind => (
-              <span key={ind.id} className="inline-flex items-center gap-1.5 px-2 py-1 text-xs bg-gradient-to-br from-slate-800 to-slate-700 border border-slate-600 rounded-lg text-slate-100">
-                <span className="font-medium">{getIndicatorLabel(ind)}</span>
-                <button
-                  className="ml-1 text-slate-400 hover:text-red-400 transition-colors"
-                  onClick={() => removeIndicator(ind.id)}
-                  title="Remove indicator"
-                >
-                  <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </span>
-            ))}
+            
+            {/* Active Indicators List */}
+            {indicators.length > 0 && (
+              <div className="flex items-center gap-1">
+                {indicators.map(indicator => (
+                  <div
+                    key={indicator.id}
+                    className="flex items-center px-2 py-1 text-xs bg-slate-700 border border-slate-600 rounded-lg text-slate-300"
+                  >
+                    <span className="truncate max-w-20">{indicator.name}</span>
+                    <button
+                      onClick={() => removeIndicator(indicator.id)}
+                      className="text-slate-400 hover:text-red-400 transition-colors"
+                      title="Remove indicator"
+                    >
+                      ×
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+          
+          {/* Real-time Quote Information */}
+          <div className="flex items-center gap-2 px-2 py-1 bg-slate-700/50 border border-slate-600 rounded-lg">
+            {/* Ticker and Price */}
+            <div className="flex items-center gap-1.5">
+              <span className="text-xs font-bold text-slate-100">{ticker}</span>
+              {price !== null ? (
+                <span className="text-xs font-medium text-slate-200">
+                  ${price.toFixed(2)}
+                </span>
+              ) : (
+                <span className="text-xs text-slate-400">...</span>
+              )}
+            </div>
+            
+            {/* Change Percentage */}
+            {changePercent !== null ? (
+              <div className="flex items-center gap-1">
+                <span className={`text-xs ${changePercent >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                  {changePercent >= 0 ? '↗' : '↘'}
+                </span>
+                <span className={`text-xs font-medium ${changePercent >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                  {changePercent >= 0 ? '+' : ''}{changePercent.toFixed(2)}%
+                </span>
+              </div>
+            ) : (
+              <span className="text-xs text-slate-400">--</span>
+            )}
+            
+            {/* Change Amount */}
+            {change !== null ? (
+              <div className="flex items-center gap-1">
+                <span className={`text-xs font-medium ${change >= 0 ? 'text-green-400' : 'text-red-400'}`}>
+                  {change >= 0 ? '+' : ''}{change.toFixed(2)}
+                </span>
+              </div>
+            ) : (
+              <span className="text-xs text-slate-400">--</span>
+            )}
+            
+            {/* Volume */}
+            {volume !== null ? (
+              <div className="flex items-center gap-1">
+                <span className="text-xs text-slate-400">Vol:</span>
+                <span className="text-xs font-medium text-slate-300">
+                  {formatVolume(volume)}
+                </span>
+              </div>
+            ) : (
+              <div className="flex items-center gap-1">
+                <span className="text-xs text-slate-400">Vol:</span>
+                <span className="text-xs text-slate-400">--</span>
+              </div>
+            )}
           </div>
         </div>
-      )}
+        
+        {/* Close button - absolutely positioned to overlay indicators */}
+        {onRemove && (
+          <button 
+            onClick={() => onRemove(id)} 
+            className="absolute top-2 right-2 p-1.5 text-slate-400 hover:text-red-400 hover:bg-red-950/20 rounded-lg transition-all duration-200 z-20 bg-slate-800/90 border border-slate-600" 
+            title="Remove chart"
+          >
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        )}
+      </div>
 
       {/* Chart Content */}
       <div className="p-3 relative">
-        <div
-          tabIndex={0}
-          onKeyDown={handleKeyDown}
-          ref={wheelContainerRef}
-          onMouseDown={handleMouseDown}
-          onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseUp}
-          onMouseMove={handleMouseMove}
-          className="outline-none rounded-lg overflow-hidden"
-          style={{ cursor: 'grab' }}
-        >
-          <HighchartsReact highcharts={Highcharts} constructorType="stockChart" options={options} ref={chartRef as any} />
+        <div className="outline-none rounded-lg overflow-hidden">
+          <HighchartsReact 
+            highcharts={Highcharts} 
+            constructorType="stockChart" 
+            options={options} 
+            ref={chartRef} 
+          />
         </div>
         
         {/* Loading Overlay */}
@@ -1215,7 +1057,7 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
               <div className="w-8 h-8 mx-auto mb-2 bg-red-950/20 rounded-full flex items-center justify-center">
                 <svg className="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+              </svg>
               </div>
               <p className="text-xs text-red-400">{errorMsg}</p>
             </div>
@@ -1223,108 +1065,104 @@ export const ChartTile: React.FC<ChartTileProps> = ({ id, initialTicker, initial
         )}
       </div>
       
-      {/* Enhanced Indicator Dialog */}
-      {showIndicatorDialog && (
-        <div className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center z-50">
-          <div className="bg-gradient-to-br from-slate-800 to-slate-700 border border-slate-700 rounded-xl p-4 w-80 max-w-sm shadow-2xl animate-scale-in">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-blue-400 rounded-lg flex items-center justify-center">
-                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+      {/* Technical Indicator Modal */}
+      {showIndicatorModal && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+          <div className="bg-slate-800 border border-slate-700 rounded-lg p-6 max-w-md w-full mx-4 h-[360px] overflow-y-auto">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-lg font-semibold text-slate-100">Add Technical Indicator</h3>
+              <button
+                onClick={() => {
+                  setShowIndicatorModal(false);
+                  setSelectedIndicator(null);
+                }}
+                className="text-slate-400 hover:text-slate-300 transition-colors"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
-              </div>
-              <div>
-                <h3 className="text-base font-semibold text-slate-100">Add Indicator</h3>
-                <p className="text-xs text-slate-400">Configure technical indicators</p>
-              </div>
-            </div>
-            
-            {indicatorToAdd === 'EMA' || indicatorToAdd === 'SMA' ? (
-              <div className="mb-3">
-                <label className="block text-xs font-medium text-slate-100 mb-1">
-                  Period
-                </label>
-                <input
-                  type="number"
-                  value={indicatorParams.period || 20}
-                  onChange={(e) => setIndicatorParams(prev => ({ ...prev, period: Number(e.target.value) }))}
-                  className="w-full px-2 py-1.5 text-xs bg-slate-700 border border-slate-600 rounded-lg focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 text-slate-100"
-                  min="1"
-                  max="200"
-                />
-              </div>
-            ) : indicatorToAdd === 'MACD' ? (
-              <div className="space-y-3">
-                <div>
-                  <label className="block text-xs font-medium text-slate-100 mb-1">
-                    Fast Period
-                  </label>
-                  <input
-                    type="number"
-                    value={indicatorParams.fast || 10}
-                    onChange={(e) => setIndicatorParams(prev => ({ ...prev, fast: Number(e.target.value) }))}
-                    className="w-full px-2 py-1.5 text-xs bg-slate-700 border border-slate-600 rounded-lg focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 text-slate-100"
-                    min="1"
-                    max="100"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-medium text-slate-100 mb-1">
-                    Slow Period
-                  </label>
-                  <input
-                    type="number"
-                    value={indicatorParams.slow || 20}
-                    onChange={(e) => setIndicatorParams(prev => ({ ...prev, slow: Number(e.target.value) }))}
-                    className="w-full px-2 py-1.5 text-xs bg-slate-700 border border-slate-600 rounded-lg focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 text-slate-100"
-                    min="1"
-                    max="100"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-medium text-slate-100 mb-1">
-                    Signal Period
-                  </label>
-                  <input
-                    type="number"
-                    value={indicatorParams.signal || 5}
-                    onChange={(e) => setIndicatorParams(prev => ({ ...prev, signal: Number(e.target.value) }))}
-                    className="w-full px-2 py-1.5 text-xs bg-slate-700 border border-slate-600 rounded-lg focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 text-slate-100"
-                    min="1"
-                    max="50"
-                  />
-                </div>
-              </div>
-            ) : indicatorToAdd === 'RSI' ? (
-              <div className="mb-3">
-                <label className="block text-xs font-medium text-slate-100 mb-1">
-                  Period
-                </label>
-                <input
-                  type="number"
-                  value={indicatorParams.period || 14}
-                  onChange={(e) => setIndicatorParams(prev => ({ ...prev, period: Number(e.target.value) }))}
-                  className="w-full px-2 py-1.5 text-xs bg-slate-700 border border-slate-600 rounded-lg focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 text-slate-100"
-                  min="1"
-                  max="100"
-                />
-              </div>
-            ) : null}
-            
-            <div className="flex justify-end space-x-2 mt-4">
-              <button
-                onClick={cancelAddIndicator}
-                className="px-4 py-1.5 text-xs font-medium text-slate-300 bg-slate-700 border border-slate-600 rounded-lg hover:bg-slate-600 hover:text-slate-100 transition-all duration-200"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={confirmAddIndicator}
-                className="btn-primary px-4 py-1.5 text-xs font-medium rounded-lg"
-              >
-                Add Indicator
               </button>
             </div>
+            
+            {!selectedIndicator ? (
+              // Indicator selection
+              <div className="space-y-2">
+                <p className="text-sm text-slate-300 mb-4">Select a technical indicator to add:</p>
+                {AVAILABLE_INDICATORS.map(indicator => (
+                  <button
+                    key={indicator.type}
+                    onClick={() => setSelectedIndicator(indicator)}
+                    className="w-full text-left p-3 bg-slate-700 hover:bg-slate-600 border border-slate-600 rounded-lg transition-colors"
+                  >
+                    <div className="font-medium text-slate-100">{indicator.name}</div>
+                    <div className="text-xs text-slate-400 mt-1">
+                      {Object.keys(indicator.params).length > 0 
+                        ? `Parameters: ${Object.entries(indicator.params).map(([k, v]) => `${k}: ${v}`).join(', ')}`
+                        : 'No parameters required'
+                      }
+                    </div>
+                  </button>
+                ))}
+              </div>
+            ) : (
+              // Parameter configuration
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-medium text-slate-100 mb-2">{selectedIndicator.name}</h4>
+                  <p className="text-sm text-slate-400">Configure the indicator parameters:</p>
+                </div>
+                
+                <form onSubmit={(e) => {
+                  e.preventDefault();
+                  const formData = new FormData(e.currentTarget);
+                  const params: Record<string, any> = {};
+                  
+                  Object.keys(selectedIndicator.params).forEach(key => {
+                    const value = formData.get(key);
+                    if (value !== null) {
+                      params[key] = typeof selectedIndicator.params[key as keyof typeof selectedIndicator.params] === 'number' ? Number(value) : value;
+                    }
+                  });
+                  
+                  addIndicator(selectedIndicator.type, params);
+                }}>
+                  <div className="space-y-3">
+                    {Object.entries(selectedIndicator.params).map(([key, defaultValue]) => (
+                      <div key={key}>
+                        <label className="block text-sm font-medium text-slate-300 mb-1 capitalize">
+                          {key.replace(/([A-Z])/g, ' $1').trim()}
+                        </label>
+                        <input
+                          type="number"
+                          name={key}
+                          defaultValue={defaultValue}
+                          min="1"
+                          step="1"
+                          className="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg text-slate-100 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50"
+                          required
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="flex gap-3 mt-6">
+                    <button
+                      type="button"
+                      onClick={() => setSelectedIndicator(null)}
+                      className="flex-1 px-4 py-2 bg-slate-700 hover:bg-slate-600 border border-slate-600 rounded-lg text-slate-300 transition-colors"
+                    >
+                      Back
+                    </button>
+                    <button
+                      type="submit"
+                      className="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 border border-blue-500 rounded-lg text-white transition-colors"
+                    >
+                      Add Indicator
+                    </button>
+                  </div>
+                </form>
+              </div>
+            )}
           </div>
         </div>
       )}
