@@ -178,6 +178,16 @@
   .chart-stats {
     @apply mx-2 my-2;
   }
+  
+  /* Mobile chart grid optimization */
+  .chart-tile-mobile {
+    @apply w-full min-h-[400px];
+  }
+  
+  /* Ensure charts don't overflow on mobile */
+  .chart-container {
+    @apply overflow-hidden;
+  }
 }
 
 @media (max-width: 640px) {
@@ -201,6 +211,16 @@
   .chart-stats td {
     @apply px-1;
   }
+  
+  /* Mobile-first chart layout */
+  .chart-grid-mobile {
+    @apply grid-cols-1 gap-2;
+  }
+  
+  /* Optimize chart height for mobile */
+  .chart-container {
+    @apply min-h-[350px] max-h-[500px];
+  }
 }
 
 /* Animation classes */
@@ -215,6 +235,34 @@
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.2s ease-out;
 }
