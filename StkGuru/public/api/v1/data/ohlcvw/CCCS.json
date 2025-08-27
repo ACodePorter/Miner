@@ -7498,5 +7498,15 @@
     "close": 9.75,
     "volume": 3358798.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,26,00,00,00,000000",
+    "ticker": "CCCS",
+    "open": 9.75,
+    "high": 9.7899999619,
+    "low": 9.6099004745,
+    "close": 9.6800003052,
+    "volume": 9211171.0,
+    "wedge_status": "drop"
   }
 ]

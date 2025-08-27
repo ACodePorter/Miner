@@ -7498,5 +7498,15 @@
     "close": 360.4299926758,
     "volume": 530788.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,26,00,00,00,000000",
+    "ticker": "LPLA",
+    "open": 360.0,
+    "high": 368.125,
+    "low": 357.9739990234,
+    "close": 367.299987793,
+    "volume": 757136.0,
+    "wedge_status": "pop"
   }
 ]

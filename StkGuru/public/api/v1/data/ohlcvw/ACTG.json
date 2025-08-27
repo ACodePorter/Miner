@@ -7498,5 +7498,15 @@
     "close": 3.25,
     "volume": 110926.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,26,00,00,00,000000",
+    "ticker": "ACTG",
+    "open": 3.2400000095,
+    "high": 3.3290998936,
+    "low": 3.2400000095,
+    "close": 3.2899999619,
+    "volume": 107135.0,
+    "wedge_status": "none"
   }
 ]

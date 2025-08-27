@@ -7498,5 +7498,15 @@
     "close": 13.4899997711,
     "volume": 372639.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,26,00,00,00,000000",
+    "ticker": "THRY",
+    "open": 13.5,
+    "high": 13.7250003815,
+    "low": 13.0699996948,
+    "close": 13.1000003815,
+    "volume": 405603.0,
+    "wedge_status": "drop"
   }
 ]

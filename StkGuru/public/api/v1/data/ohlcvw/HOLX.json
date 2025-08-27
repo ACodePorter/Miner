@@ -7498,5 +7498,15 @@
     "close": 67.1299972534,
     "volume": 1295583.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,26,00,00,00,000000",
+    "ticker": "HOLX",
+    "open": 67.0,
+    "high": 67.2200012207,
+    "low": 66.4100036621,
+    "close": 66.6299972534,
+    "volume": 2423925.0,
+    "wedge_status": "none"
   }
 ]

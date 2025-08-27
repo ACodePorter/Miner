@@ -7498,5 +7498,15 @@
     "close": 58.5,
     "volume": 1688766.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,26,00,00,00,000000",
+    "ticker": "BMRN",
+    "open": 58.6500015259,
+    "high": 58.7249984741,
+    "low": 57.1500015259,
+    "close": 57.4500007629,
+    "volume": 2070375.0,
+    "wedge_status": "drop"
   }
 ]

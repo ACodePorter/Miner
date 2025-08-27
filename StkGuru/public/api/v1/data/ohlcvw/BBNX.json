@@ -988,5 +988,15 @@
     "close": 17.4500007629,
     "volume": 497808.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,26,00,00,00,000000",
+    "ticker": "BBNX",
+    "open": 17.4300003052,
+    "high": 18.5,
+    "low": 17.4300003052,
+    "close": 18.3299999237,
+    "volume": 342054.0,
+    "wedge_status": "none"
   }
 ]
