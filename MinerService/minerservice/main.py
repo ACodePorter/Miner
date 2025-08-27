@@ -10,7 +10,6 @@ from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 
 from .api.v1 import api_v1_router
-from .services.redis_subscription_service import RedisKeys
 from .utils import send_message
 from .ws.connection_manager_v2 import (WebSocketConnectionManager, WsMsgTypes,
                                        get_websocket_manager)
