@@ -7508,5 +7508,15 @@
     "close": 17.6900005341,
     "volume": 632889.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,27,00,00,00,000000",
+    "ticker": "THS",
+    "open": 17.5,
+    "high": 18.3999996185,
+    "low": 17.5928001404,
+    "close": 18.2900009155,
+    "volume": 651510.0,
+    "wedge_status": "none"
   }
 ]

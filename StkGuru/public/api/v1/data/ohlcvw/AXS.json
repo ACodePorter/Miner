@@ -7508,5 +7508,15 @@
     "close": 97.0,
     "volume": 638017.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,27,00,00,00,000000",
+    "ticker": "AXS",
+    "open": 97.3000030518,
+    "high": 98.9000015259,
+    "low": 96.9950027466,
+    "close": 98.3899993896,
+    "volume": 427134.0,
+    "wedge_status": "none"
   }
 ]

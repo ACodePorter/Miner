@@ -7508,5 +7508,15 @@
     "close": 50.3800010681,
     "volume": 67878.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,08,27,00,00,00,000000",
+    "ticker": "GHM",
+    "open": 50.8400001526,
+    "high": 51.0,
+    "low": 49.7849998474,
+    "close": 50.1500015259,
+    "volume": 72044.0,
+    "wedge_status": "none"
   }
 ]
