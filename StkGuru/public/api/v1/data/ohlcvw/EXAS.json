@@ -7508,5 +7508,15 @@
     "close": 46.7099990845,
     "volume": 2112316.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,08,28,00,00,00,000000",
+    "ticker": "EXAS",
+    "open": 47.0,
+    "high": 47.7599983215,
+    "low": 46.8800010681,
+    "close": 46.9500007629,
+    "volume": 2253218.0,
+    "wedge_status": "none"
   }
 ]

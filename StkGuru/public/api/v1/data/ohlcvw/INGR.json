@@ -7508,5 +7508,15 @@
     "close": 129.25,
     "volume": 373884.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,28,00,00,00,000000",
+    "ticker": "INGR",
+    "open": 129.4299926758,
+    "high": 129.5,
+    "low": 127.5500030518,
+    "close": 129.0500030518,
+    "volume": 384745.0,
+    "wedge_status": "none"
   }
 ]

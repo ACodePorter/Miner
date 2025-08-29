@@ -7508,5 +7508,15 @@
     "close": 26.0300006866,
     "volume": 44460.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,08,28,00,00,00,000000",
+    "ticker": "NGS",
+    "open": 25.9300003052,
+    "high": 26.5049991608,
+    "low": 25.4857006073,
+    "close": 26.5,
+    "volume": 43419.0,
+    "wedge_status": "none"
   }
 ]

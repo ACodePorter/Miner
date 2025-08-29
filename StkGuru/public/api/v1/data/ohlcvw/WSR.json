@@ -7508,5 +7508,15 @@
     "close": 13.0,
     "volume": 156179.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,28,00,00,00,000000",
+    "ticker": "WSR",
+    "open": 13.0200004578,
+    "high": 12.9799995422,
+    "low": 12.8599996567,
+    "close": 12.9600000381,
+    "volume": 174754.0,
+    "wedge_status": "none"
   }
 ]

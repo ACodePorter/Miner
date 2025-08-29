@@ -2648,5 +2648,15 @@
     "close": 27.3999996185,
     "volume": 172234.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,28,00,00,00,000000",
+    "ticker": "INBX",
+    "open": 27.5,
+    "high": 28.0006999969,
+    "low": 26.8899993896,
+    "close": 27.8799991608,
+    "volume": 125595.0,
+    "wedge_status": "none"
   }
 ]

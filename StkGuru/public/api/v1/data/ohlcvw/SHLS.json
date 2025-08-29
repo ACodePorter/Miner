@@ -7508,5 +7508,15 @@
     "close": 6.5,
     "volume": 6515445.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,28,00,00,00,000000",
+    "ticker": "SHLS",
+    "open": 6.5599999428,
+    "high": 6.7100000381,
+    "low": 6.4200000763,
+    "close": 6.5900001526,
+    "volume": 2051916.0,
+    "wedge_status": "none"
   }
 ]

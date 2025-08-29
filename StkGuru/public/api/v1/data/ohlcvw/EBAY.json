@@ -7508,5 +7508,15 @@
     "close": 93.6699981689,
     "volume": 5421585.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,08,28,00,00,00,000000",
+    "ticker": "EBAY",
+    "open": 93.6100006104,
+    "high": 93.75,
+    "low": 91.8706970215,
+    "close": 92.8000030518,
+    "volume": 5946613.0,
+    "wedge_status": "none"
   }
 ]

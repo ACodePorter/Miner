@@ -1358,5 +1358,15 @@
     "close": 10.0900001526,
     "volume": 15932.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,28,00,00,00,000000",
+    "ticker": "BALY",
+    "open": 10.1999998093,
+    "high": 10.2449998856,
+    "low": 9.8900003433,
+    "close": 10.0,
+    "volume": 24958.0,
+    "wedge_status": "none"
   }
 ]
