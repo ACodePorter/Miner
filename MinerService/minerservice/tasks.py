@@ -25,6 +25,13 @@ def update_spx_tickers_task() -> bool:
 
 
 @app.task
+def update_ndx_tickers_task() -> bool:
+    _logger.debug('update_ndx_tickers_task')
+    mds: MarketDataShovel = MarketDataShovel.get_instance()
+    return mds.update_ndx_tickers()
+
+
+@app.task
 def update_iwd_tickers_task() -> bool:
     _logger.debug('update_iwd_tickers_task')
     mds: MarketDataShovel = MarketDataShovel.get_instance()
@@ -50,6 +57,13 @@ def update_spx_tickers_info_task() -> bool:
     _logger.debug('update_spx_tickers_info_task')
     mds: MarketDataShovel = MarketDataShovel.get_instance()
     return mds.update_spx_tickers_info()
+
+
+@app.task
+def update_ndx_tickers_info_task() -> bool:
+    _logger.debug('update_ndx_tickers_info_task')
+    mds: MarketDataShovel = MarketDataShovel.get_instance()
+    return mds.update_ndx_tickers_info()
 
 
 @app.task
@@ -85,6 +99,13 @@ def update_spx_tickers_daily_info_task() -> bool:
     _logger.debug('update_spx_tickers_daily_info')
     mds: MarketDataShovel = MarketDataShovel.get_instance()
     return mds.update_spx_tickers_daily_info()
+
+
+@app.task
+def update_ndx_tickers_daily_info_task() -> bool:
+    _logger.debug('update_ndx_tickers_daily_info')
+    mds: MarketDataShovel = MarketDataShovel.get_instance()
+    return mds.update_ndx_tickers_daily_info()
 
 
 @app.task
@@ -127,7 +148,8 @@ def update_tickers_daily_info_task(tickers: List[str]) -> bool:
 def update_us_idxs_daily_info_task() -> bool:
     _logger.debug('update_us_idxs_daily_info_task')
     mds: MarketDataShovel = MarketDataShovel.get_instance()
-    return mds.update_ticker_daily_info('^SPX') & mds.update_ticker_daily_info('^NDX') & mds.update_ticker_daily_info('^RUT')
+    return mds.update_ticker_daily_info('^SPX') & mds.update_ticker_daily_info('^NDX') & mds.update_ticker_daily_info(
+        '^RUT')
 
 
 @app.task
@@ -181,22 +203,31 @@ def run_us_daily_updates_task() -> bool:
         # First update trade calendar
         update_us_trade_calendar_task.si(),
 
+        update_ndx_tickers_task.si(),
+        update_ndx_tickers_info_task.si(),
+        update_ndx_tickers_daily_info_task.si(),
+
         # Then update all ticker lists and their info
         update_spx_tickers_task.si(),
         update_spx_tickers_info_task.si(),
+        update_spx_tickers_daily_info_task.si(),
+        update_spx_daily_ma_task.si(),
+        # update market breadth
+        update_spx_market_breadth_task.si(),
+
         update_iwd_tickers_task.si(),
         update_iwd_tickers_info_task.si(),
+        update_iwd_tickers_daily_info_task.si(),
+
         update_iwf_tickers_task.si(),
         update_iwf_tickers_info_task.si(),
+        update_iwf_tickers_daily_info_task.si(),
+
         update_iwm_tickers_task.si(),
         update_iwm_tickers_info_task.si(),
+        update_iwm_tickers_daily_info_task.si(),
 
         # Then update daily info for all tickers
-        update_spx_tickers_daily_info_task.si(),
-        update_iwd_tickers_daily_info_task.si(),
-        update_iwf_tickers_daily_info_task.si(),
-        update_iwm_tickers_daily_info_task.si(),
-        update_spx_daily_ma_task.si(),
         update_iw_daily_ma_task.si(),
 
         # update wedge pop/drop for all tickers
@@ -205,8 +236,6 @@ def run_us_daily_updates_task() -> bool:
         # Then update idxs daily info
         update_us_idxs_daily_info_task.si(),
 
-        # update market breadth
-        update_spx_market_breadth_task.si(),
     )
 
     # Execute the chain
