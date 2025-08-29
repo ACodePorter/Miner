@@ -16,6 +16,11 @@ class MarketDataShvelTestCase(unittest.TestCase):
         self.assertTrue(md.update_spx_tickers(),
                         'Failed to update SPX tickers')
 
+    def test_update_ndx_tickers(self):
+        md: MarketDataShovel = MarketDataShovel.get_instance()
+        self.assertTrue(md.update_ndx_tickers(),
+                        'Failed to update NDX tickers')
+
     def test_update_iwd_tickers(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()
         self.assertTrue(md.update_iwd_tickers(),
@@ -84,9 +89,17 @@ class MarketDataShvelTestCase(unittest.TestCase):
         md: MarketDataShovel = MarketDataShovel.get_instance()
         md.update_spx_tickers_info()
 
+    def test_update_ndx_tickers_info(self):
+        md: MarketDataShovel = MarketDataShovel.get_instance()
+        md.update_ndx_tickers_info()
+
     def test_update_spx_tickers_daily_info(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()
         md.update_spx_tickers_daily_info()
+
+    def test_update_ndx_tickers_daily_info(self):
+        md: MarketDataShovel = MarketDataShovel.get_instance()
+        md.update_ndx_tickers_daily_info()
 
     def test_update_iwd_tickers_daily_info(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()
@@ -107,6 +120,18 @@ class MarketDataShvelTestCase(unittest.TestCase):
         md: MarketDataShovel = MarketDataShovel.get_instance()
         self.assertTrue(md.update_hsi_daily_info(),
                         'Failed to update HSI daily info')
+    def test_fetch_intraday_bars(self):
+        md: MarketDataShovel = MarketDataShovel.get_instance()
+        df = md.fetch_intraday_bars(['AAPL', 'GOOGL', 'MSFT'], period='1d', interval='5m')
+        self.assertTrue(len(df) == 234)
+
+    def test_update_intraday_bars(self):
+        md: MarketDataShovel = MarketDataShovel.get_instance()
+        md.update_intraday_bars(['AAPL', 'GOOGL', 'MSFT'], interval='5m')
+
+    def test_update_intraday_bars_by_idx(self):
+        md: MarketDataShovel = MarketDataShovel.get_instance()
+        md.update_intraday_bars_by_idx('ndx')
 
 
 if __name__ == '__main__':

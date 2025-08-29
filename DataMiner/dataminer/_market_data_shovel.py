@@ -11,10 +11,11 @@ from detonator import (SingletonParent, add_minus_to_YYYYmmdd,
                        tomorrow_of)
 from pandas import DataFrame
 from yfinance import Ticker as YTicker
+from yfinance import Tickers
 
 from ._ishares_scraper import IsharesScraper
 from ._trade_cal import TradeCalendarShovel
-from .models import (IndexTickers, Ticker, TickerDailyInfo,
+from .models import (Bar, IndexTickers, Ticker, TickerDailyInfo,
                      regulate_ticker_daily_info)
 from .utils import TickerRegulator
 
@@ -46,9 +47,13 @@ class MarketDataShovel(SingletonParent):
         else:
             return ('us', 'XNYS', pytz.timezone('America/New_York'))
 
-    def _fetch_spx_tickers(self) -> pd.DataFrame:
+    def _fetch_idx_tickers_from_slickcharts(self, idx: Literal['spx', 'ndx'] = 'spx') -> pd.DataFrame:
         # sourcery skip: extract-method, remove-unnecessary-else
-        url = 'https://www.slickcharts.com/sp500'
+        url_dict = {
+            'spx': 'https://www.slickcharts.com/sp500',
+            'ndx': 'https://www.slickcharts.com/nasdaq100'
+        }
+        url = url_dict[idx]
         headers = {
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
 
@@ -64,7 +69,7 @@ class MarketDataShovel(SingletonParent):
                             axis='columns', inplace=True)
                 data['ticker'] = data['ticker'].str.replace(
                     '.', '-', regex=False)
-                _logger.debug('spx tickers: %s', data)
+                _logger.debug(f'{idx} tickers: %s', data)
                 return data
             else:
                 _logger.error('Failed to get data from %s', url)
@@ -73,7 +78,7 @@ class MarketDataShovel(SingletonParent):
             _logger.error('Failed to get data from %s', url, exc_info=e)
             return DataFrame()
 
-    def _fetch_tickers_by_idx(self, index_name: Literal['spx', 'iwd', 'iwf', 'iwm'] = 'spx') -> pd.DataFrame:
+    def _fetch_tickers_by_idx(self, index_name: Literal['spx', 'ndx', 'iwd', 'iwf', 'iwm'] = 'spx') -> pd.DataFrame:
         """
         fetch component tickers by index name
         spx: S&P 500 Index
@@ -81,8 +86,8 @@ class MarketDataShovel(SingletonParent):
         iwf: iShares Russell 1000 Growth ETF
         iwm: iShares Russell 2000 ETF
         """
-        if index_name == 'spx':
-            return self._fetch_spx_tickers()
+        if index_name in ['spx', 'ndx']:
+            return self._fetch_idx_tickers_from_slickcharts(idx=index_name)
         elif index_name in ['iwd', 'iwf', 'iwm']:
             _logger.info('Fetching %s tickers from ishares_shovel', index_name)
             return self._ishares_shovel.fetch_tickers_by_idx(index_name=index_name)
@@ -90,7 +95,7 @@ class MarketDataShovel(SingletonParent):
             'Unknown index: %s, returning empty DataFrame', index_name)
         return DataFrame()
 
-    def update_tickers_by_idx(self, idx: Literal['spx', 'iwd', 'iwf', 'iwm'] = 'spx') -> bool:
+    def update_tickers_by_idx(self, idx: Literal['spx', 'ndx', 'iwd', 'iwf', 'iwm'] = 'spx') -> bool:
         make_db_connection()
         if self._is_index_tickers_latest(idx):
             _logger.info(f'{idx} index already latest, skip updating')
@@ -132,6 +137,9 @@ class MarketDataShovel(SingletonParent):
 
     def update_spx_tickers(self) -> bool:
         return self.update_tickers_by_idx(idx='spx')
+
+    def update_ndx_tickers(self) -> bool:
+        return self.update_tickers_by_idx(idx='ndx')
 
     def update_iwd_tickers(self) -> bool:
         return self.update_tickers_by_idx(idx='iwd')
@@ -255,6 +263,9 @@ class MarketDataShovel(SingletonParent):
     def update_spx_tickers_info(self) -> bool:
         return self.update_tickers_info_by_idx('spx')
 
+    def update_ndx_tickers_info(self) -> bool:
+        return self.update_tickers_info_by_idx('ndx')
+
     def update_iwd_tickers_info(self) -> bool:
         return self.update_tickers_info_by_idx('iwd')
 
@@ -282,7 +293,9 @@ class MarketDataShovel(SingletonParent):
         if tdi_time > 0.5:
             _logger.warning('Slow query %s: %s', ticker, tdi_time)
         country, exchange, _ = self._country_exchange_of(ticker)
-        if trade_dates := self._tcs.trade_dates_since(country=country, exchange=exchange, start_date=tdi.trade_date.strftime('%Y%m%d') if tdi else '00000000'):
+        if trade_dates := self._tcs.trade_dates_since(country=country, exchange=exchange,
+                                                      start_date=tdi.trade_date.strftime(
+                                                          '%Y%m%d') if tdi else '00000000'):
             earliest_gap_trade_date = trade_dates[-1]
             _logger.info('Update ticker daily info for %s %s',
                          ticker, (datetime.now() - now).total_seconds())
@@ -350,7 +363,7 @@ class MarketDataShovel(SingletonParent):
             make_db_connection()
             if not (tickers := self.get_latest_index_tickers(index_name=index_name)):
                 return False
-            _logger.debug('full: %s', tickers.tickers)
+            _logger.debug('index: %s len: %s', index_name, len(tickers.tickers))
             to_update = list(tickers.tickers)
             for i in range(6):
                 _logger.info(
@@ -371,6 +384,9 @@ class MarketDataShovel(SingletonParent):
 
     def update_spx_tickers_daily_info(self) -> bool:
         return self.update_tickers_daily_info_by_idx('spx')
+
+    def update_ndx_tickers_daily_info(self) -> bool:
+        return self.update_tickers_daily_info_by_idx('ndx')
 
     def update_iwd_tickers_daily_info(self) -> bool:
         return self.update_tickers_daily_info_by_idx('iwd')
@@ -393,7 +409,7 @@ class MarketDataShovel(SingletonParent):
                     _logger.info('%s loop time for %s', ticker,
                                  (datetime.now() - now).total_seconds())
                 filtered_dict = {key: value for key,
-                                 value in results.items() if not value}
+                value in results.items() if not value}
                 return list(filtered_dict.keys())
 
             else:
@@ -415,7 +431,8 @@ class MarketDataShovel(SingletonParent):
             return pd.DataFrame()
         return mongo_2_df(TickerDailyInfo.objects(ticker__in=tickers, trade_date=trade_date, interval=interval))
 
-    def get_ticker_daily_info(self, ticker: str, start_date: str | datetime, end_date: str | datetime, interval: str = '1d') -> DataFrame:
+    def get_ticker_daily_info(self, ticker: str, start_date: str | datetime, end_date: str | datetime,
+                              interval: str = '1d') -> DataFrame:
         ticker = ticker.replace('-', '.').upper()
         if isinstance(start_date, str):
             try:
@@ -448,4 +465,96 @@ class MarketDataShovel(SingletonParent):
                 _logger.error(f"Failed to parse end_date '{end_date}': {e}")
                 raise ValueError(
                     f"Invalid end_date format: {end_date}. Expected YYYY-MM-DD, YYYYMMDD, or YYYY,MM,DD,HH,MM,SS,fff")
-        return mongo_2_df(TickerDailyInfo.objects(ticker=ticker, trade_date__gte=start_date, trade_date__lte=end_date, interval=interval).order_by('trade_date'))
+        return mongo_2_df(TickerDailyInfo.objects(ticker=ticker, trade_date__gte=start_date, trade_date__lte=end_date,
+                                                  interval=interval).order_by('trade_date'))
+
+    def _convert_multi_level_to_single_level(self, df: DataFrame) -> DataFrame:
+        ohlcv_columns = ['Open', 'High', 'Low', 'Close', 'Volume']
+        df_ohlcv = df.loc[:, df.columns.get_level_values('Price').isin(ohlcv_columns)]
+        # Stack and reset index
+        stacked = df_ohlcv.stack(level='Ticker').reset_index()
+        # Rename columns to match desired format
+        stacked = stacked.rename(columns={
+            'Datetime': 'timestamp',
+            'Ticker': 'ticker',
+            'Open': 'open',
+            'High': 'high',
+            'Low': 'low',
+            'Close': 'close',
+            'Volume': 'volume'
+        })
+        # Reorder columns to match desired format and reset index to start from 0
+        column_order = ['timestamp', 'ticker', 'close', 'high', 'low', 'open', 'volume']
+        result = stacked[column_order].reset_index(drop=True)
+        # Remove the index name
+        result.index.name = None
+        # Reset column names to remove the 'Price' name from MultiIndex
+        result.columns.name = None
+        return result
+
+    def fetch_intraday_bars(self, tickers: str | list[str], period: str = '1d', interval: str = '5m') -> DataFrame:
+        _logger.debug('Fetching intraday bars %s %s %s', tickers, period, interval)
+        if tickers and isinstance(tickers, str):
+            tickers = [tickers]
+        if not tickers:
+            _logger.warning('No tickers provided.')
+            return DataFrame()
+        if period[-1] != 'd' or interval[-1] != 'm':
+            _logger.warning('Invalid period/interval: %s/%s', period, interval)
+            return DataFrame()
+        try:
+            tickers = Tickers(tickers)
+            df = tickers.history(period=period, interval=interval, repair=True, rounding=True, timeout=30)
+            df = self._convert_multi_level_to_single_level(df)
+            if not df.empty:
+                df['timestamp'] = df['timestamp'].apply(lambda x: int(x.timestamp()))
+                df['interval'] = interval
+            expected = len(tickers.tickers) * int(period[0:-1]) * (390 / int(interval[0:-1]))
+            if expected != len(df):
+                _logger.warning('Expected bars number: %s, actual: %s', expected, len(df))
+            return df
+        except Exception as e:
+            _logger.error('Failed to fetch intraday bars for %s', tickers, exc_info=e)
+            return DataFrame()
+
+    def update_intraday_bars(self, tickers: str | list[str], interval: str = '5m') -> bool:
+        if isinstance(tickers, str):
+            tickers = [tickers]
+        make_db_connection()
+        last_bar_date = Bar.objects(ticker__in=tickers).order_by('-timestamp').limit(1).first()
+        period = 'max'
+        if last_bar_date:
+            count = len(self._tcs.trade_dates_since(country='us', exchange='XNYS',
+                                                    start_date=datetime.fromtimestamp(last_bar_date.timestamp,
+                                                                                      pytz.timezone('UTC')),
+                                                    end_date=self._tcs.last_closed_us_trade_date()))
+            period = f'{count}d'
+        batch_size = 10
+        for i in range(0, len(tickers), batch_size):
+            start_time = datetime.now()
+            df = self.fetch_intraday_bars(tickers[i:i + batch_size], period=period, interval=interval)
+            if df.empty:
+                _logger.error('None bars available for %s', tickers[i:i + batch_size])
+                continue
+            df_2_mongo(df, Bar)
+            sleep()
+            _logger.debug('loop %s seconds', (datetime.now() - start_time).seconds)
+        return True
+
+    def update_intraday_bars_by_idx(self, idx: Literal['spx', 'ndx'], interval='5m') -> bool:
+        try:
+            _logger.info(idx)
+            if idx not in ['spx', 'ndx']:
+                _logger.error('Invalid index %s', idx)
+                return False
+            make_db_connection()
+            if tickers := self.get_latest_index_tickers(index_name=idx):
+                tickers = tickers.tickers
+                return self.update_intraday_bars(tickers, interval=interval)
+            else:
+                _logger.error('No tickers provided for %s', idx)
+                return False
+        except Exception as e:
+            _logger.error('Failed to update %s tickers info',
+                          idx, exc_info=e)
+            return False
