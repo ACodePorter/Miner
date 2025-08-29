@@ -363,7 +363,8 @@ class MarketDataShovel(SingletonParent):
             make_db_connection()
             if not (tickers := self.get_latest_index_tickers(index_name=index_name)):
                 return False
-            _logger.debug('index: %s len: %s', index_name, len(tickers.tickers))
+            _logger.debug('index: %s len: %s', index_name,
+                          len(tickers.tickers))
             to_update = list(tickers.tickers)
             for i in range(6):
                 _logger.info(
@@ -409,7 +410,7 @@ class MarketDataShovel(SingletonParent):
                     _logger.info('%s loop time for %s', ticker,
                                  (datetime.now() - now).total_seconds())
                 filtered_dict = {key: value for key,
-                value in results.items() if not value}
+                                 value in results.items() if not value}
                 return list(filtered_dict.keys())
 
             else:
@@ -470,9 +471,11 @@ class MarketDataShovel(SingletonParent):
 
     def _convert_multi_level_to_single_level(self, df: DataFrame) -> DataFrame:
         ohlcv_columns = ['Open', 'High', 'Low', 'Close', 'Volume']
-        df_ohlcv = df.loc[:, df.columns.get_level_values('Price').isin(ohlcv_columns)]
+        df_ohlcv = df.loc[:, df.columns.get_level_values(
+            'Price').isin(ohlcv_columns)]
         # Stack and reset index
-        stacked = df_ohlcv.stack(level='Ticker', future_stack=True).reset_index()
+        stacked = df_ohlcv.stack(
+            level='Ticker', future_stack=True).reset_index()
         # Rename columns to match desired format
         stacked = stacked.rename(columns={
             'Datetime': 'timestamp',
@@ -484,7 +487,8 @@ class MarketDataShovel(SingletonParent):
             'Volume': 'volume'
         })
         # Reorder columns to match desired format and reset index to start from 0
-        column_order = ['timestamp', 'ticker', 'close', 'high', 'low', 'open', 'volume']
+        column_order = ['timestamp', 'ticker',
+                        'close', 'high', 'low', 'open', 'volume']
         result = stacked[column_order].reset_index(drop=True)
         # Remove the index name
         result.index.name = None
@@ -493,7 +497,8 @@ class MarketDataShovel(SingletonParent):
         return result
 
     def fetch_intraday_bars(self, tickers: str | list[str], period: str = '1d', interval: str = '5m') -> DataFrame:
-        _logger.debug('Fetching intraday bars %s %s %s', tickers, period, interval)
+        _logger.debug('Fetching intraday bars %s %s %s',
+                      tickers, period, interval)
         if tickers and isinstance(tickers, str):
             tickers = [tickers]
         if not tickers:
@@ -504,24 +509,30 @@ class MarketDataShovel(SingletonParent):
             return DataFrame()
         try:
             tickers = Tickers(tickers)
-            df = tickers.history(period=period, interval=interval, repair=True, rounding=True, timeout=30)
+            df = tickers.history(
+                period=period, interval=interval, repair=True, rounding=True, timeout=30)
             df = self._convert_multi_level_to_single_level(df)
             if not df.empty:
-                df['timestamp'] = df['timestamp'].apply(lambda x: int(x.timestamp()))
+                df['timestamp'] = df['timestamp'].apply(
+                    lambda x: int(x.timestamp()))
                 df['interval'] = interval
-            expected = len(tickers.tickers) * int(period[0:-1]) * (390 / int(interval[0:-1]))
+            expected = len(tickers.tickers) * \
+                int(period[0:-1]) * (390 / int(interval[0:-1]))
             if expected != len(df):
-                _logger.warning('Expected bars number: %s, actual: %s', expected, len(df))
+                _logger.warning(
+                    'Expected bars number: %s, actual: %s', expected, len(df))
             return df
         except Exception as e:
-            _logger.error('Failed to fetch intraday bars for %s', tickers, exc_info=e)
+            _logger.error('Failed to fetch intraday bars for %s',
+                          tickers, exc_info=e)
             return DataFrame()
 
     def update_intraday_bars(self, tickers: str | list[str], interval: str = '5m') -> bool:
         if isinstance(tickers, str):
             tickers = [tickers]
         make_db_connection()
-        last_bar_date = Bar.objects(ticker__in=tickers).order_by('-timestamp').limit(1).first()
+        last_bar_date = Bar.objects(ticker__in=tickers).order_by(
+            '-timestamp').limit(1).first()
         period = 'max'
         if last_bar_date:
             count = len(self._tcs.trade_dates_since(country='us', exchange='XNYS',
@@ -529,19 +540,23 @@ class MarketDataShovel(SingletonParent):
                                                                                       pytz.timezone('UTC')),
                                                     end_date=self._tcs.last_closed_us_trade_date()))
             if count == 0:
-                _logger.info('No bars gap, do not have to update for %s', tickers)
+                _logger.info(
+                    'No bars gap, do not have to update for %s', tickers)
                 return True
             period = f'{count}d'
         batch_size = 10
         for i in range(0, len(tickers), batch_size):
             start_time = datetime.now()
-            df = self.fetch_intraday_bars(tickers[i:i + batch_size], period=period, interval=interval)
+            df = self.fetch_intraday_bars(
+                tickers[i:i + batch_size], period=period, interval=interval)
             if df.empty:
-                _logger.error('None bars available for %s', tickers[i:i + batch_size])
+                _logger.error('None bars available for %s',
+                              tickers[i:i + batch_size])
                 continue
             df_2_mongo(df, Bar)
             sleep()
-            _logger.debug('loop %s seconds', (datetime.now() - start_time).seconds)
+            _logger.debug('loop %s seconds',
+                          (datetime.now() - start_time).seconds)
         return True
 
     def update_intraday_bars_by_idx(self, idx: Literal['spx', 'ndx'], interval='5m') -> bool:

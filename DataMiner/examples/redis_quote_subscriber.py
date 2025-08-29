@@ -10,8 +10,9 @@ import json
 import sys
 from typing import List
 
-from dataminer import BarsManager
 from detonator import get_logger, get_redis_client
+
+from dataminer import BarsManager
 
 
 class RedisQuoteSubscriber:

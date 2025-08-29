@@ -1,7 +1,8 @@
 import unittest
 
-from dataminer import TickerManager
 from detonator import get_logger, make_db_connection
+
+from dataminer import TickerManager
 
 _logger = get_logger('TickerManagerTestCase')
 

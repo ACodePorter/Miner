@@ -1,9 +1,10 @@
 import unittest
 from datetime import datetime
 
-from dataminer import MarketDataShovel
 from detonator import make_db_connection
 from yfinance import Ticker as YTicker
+
+from dataminer import MarketDataShovel
 
 
 class MarketDataShvelTestCase(unittest.TestCase):
@@ -120,9 +121,11 @@ class MarketDataShvelTestCase(unittest.TestCase):
         md: MarketDataShovel = MarketDataShovel.get_instance()
         self.assertTrue(md.update_hsi_daily_info(),
                         'Failed to update HSI daily info')
+
     def test_fetch_intraday_bars(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()
-        df = md.fetch_intraday_bars(['AAPL', 'GOOGL', 'MSFT'], period='1d', interval='5m')
+        df = md.fetch_intraday_bars(
+            ['AAPL', 'GOOGL', 'MSFT'], period='1d', interval='5m')
         self.assertTrue(len(df) == 234)
 
     def test_update_intraday_bars(self):

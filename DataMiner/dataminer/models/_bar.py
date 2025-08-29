@@ -1,6 +1,5 @@
-from dataclasses import fields
 
-from mongoengine import Document, FloatField, StringField, LongField
+from mongoengine import Document, FloatField, LongField, StringField
 
 
 class Bar(Document):
