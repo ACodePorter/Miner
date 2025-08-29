@@ -472,7 +472,7 @@ class MarketDataShovel(SingletonParent):
         ohlcv_columns = ['Open', 'High', 'Low', 'Close', 'Volume']
         df_ohlcv = df.loc[:, df.columns.get_level_values('Price').isin(ohlcv_columns)]
         # Stack and reset index
-        stacked = df_ohlcv.stack(level='Ticker').reset_index()
+        stacked = df_ohlcv.stack(level='Ticker', future_stack=True).reset_index()
         # Rename columns to match desired format
         stacked = stacked.rename(columns={
             'Datetime': 'timestamp',
@@ -528,6 +528,9 @@ class MarketDataShovel(SingletonParent):
                                                     start_date=datetime.fromtimestamp(last_bar_date.timestamp,
                                                                                       pytz.timezone('UTC')),
                                                     end_date=self._tcs.last_closed_us_trade_date()))
+            if count == 0:
+                _logger.info('No bars gap, do not have to update for %s', tickers)
+                return True
             period = f'{count}d'
         batch_size = 10
         for i in range(0, len(tickers), batch_size):
