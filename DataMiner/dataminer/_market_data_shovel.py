@@ -289,6 +289,7 @@ class MarketDataShovel(SingletonParent):
         now = datetime.now()
         tdi = TickerDailyInfo.objects(
             ticker=ticker).order_by('-trade_date').limit(1).first()
+        _logger.debug(tdi.trade_date)
         tdi_time = (datetime.now() - now).total_seconds()
         if tdi_time > 0.5:
             _logger.warning('Slow query %s: %s', ticker, tdi_time)
@@ -297,11 +298,12 @@ class MarketDataShovel(SingletonParent):
                                                       start_date=tdi.trade_date.strftime(
                                                           '%Y%m%d') if tdi else '00000000'):
             earliest_gap_trade_date = trade_dates[-1]
+            _logger.debug('gap trade date: %s', earliest_gap_trade_date)
             _logger.info('Update ticker daily info for %s %s',
                          ticker, (datetime.now() - now).total_seconds())
             last_closed_trade_date = self._tcs.last_closed_trade_date(
                 country=country, exchange=exchange)
-            if earliest_gap_trade_date >= last_closed_trade_date:
+            if earliest_gap_trade_date > last_closed_trade_date:
                 _logger.info(
                     'No update ticker daily info for %s since %s', ticker, earliest_gap_trade_date)
                 return True
@@ -410,7 +412,7 @@ class MarketDataShovel(SingletonParent):
                     _logger.info('%s loop time for %s', ticker,
                                  (datetime.now() - now).total_seconds())
                 filtered_dict = {key: value for key,
-                                 value in results.items() if not value}
+                value in results.items() if not value}
                 return list(filtered_dict.keys())
 
             else:
@@ -504,7 +506,7 @@ class MarketDataShovel(SingletonParent):
         if not tickers:
             _logger.warning('No tickers provided.')
             return DataFrame()
-        if period[-1] != 'd' or interval[-1] != 'm':
+        if (period[-1] != 'd' or interval[-1] != 'm') and period != 'max':
             _logger.warning('Invalid period/interval: %s/%s', period, interval)
             return DataFrame()
         try:
@@ -516,11 +518,12 @@ class MarketDataShovel(SingletonParent):
                 df['timestamp'] = df['timestamp'].apply(
                     lambda x: int(x.timestamp()))
                 df['interval'] = interval
-            expected = len(tickers.tickers) * \
-                int(period[0:-1]) * (390 / int(interval[0:-1]))
-            if expected != len(df):
-                _logger.warning(
-                    'Expected bars number: %s, actual: %s', expected, len(df))
+            if period != 'max':
+                expected = len(tickers.tickers) * \
+                           int(period[0:-1]) * (390 / int(interval[0:-1]))
+                if expected != len(df):
+                    _logger.warning(
+                        'Expected bars number: %s, actual: %s', expected, len(df))
             return df
         except Exception as e:
             _logger.error('Failed to fetch intraday bars for %s',
@@ -576,3 +579,24 @@ class MarketDataShovel(SingletonParent):
             _logger.error('Failed to update %s tickers info',
                           idx, exc_info=e)
             return False
+
+    def get_intraday_bars(tickers: str | list[str], interval: str = '5m', period: str = 'max') -> DataFrame:
+        '''
+        Get intraday bars from either local database or remote API
+        Args:
+            tickers: str | list[str]
+            interval: str = '5m'
+            period: str = 'max', not used for now
+        Returns:
+            DataFrame
+        '''
+        mds = MarketDataShovel.get_instance()
+        tcs = TradeCalendarShovel.get_instance()
+        if isinstance(tickers, str):
+            tickers = [tickers]
+        local_bars: DataFrame = mongo_2_df(Bar.objects(ticker__in=tickers, interval=interval).order_by('timestamp'))
+        if tcs.is_mkt_open():
+            df: DataFrame = mds.fetch_intraday_bars(tickers=tickers, period='1d', interval=interval)
+            return pd.concat([local_bars, df]).sort_values(by='timestamp')
+        else:
+            return local_bars.sort_values(by='timestamp')

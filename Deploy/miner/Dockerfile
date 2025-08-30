@@ -11,7 +11,7 @@ USER miner
 
 COPY --chown=miner:miner release/ /miner_release/
 COPY --chown=miner:miner docker_entry.sh /miner_release/
-RUN chmod a+x /miner_release/*.sh
+RUN chmod a+x /miner_release/*.sh && mkdir -p $HOME/.cache/py-yfinance
 
 
 RUN uv pip install --system /miner_release/Detonator /miner_release/DataMiner /miner_release/MarketBreadth /miner_release/MinerWorkers /miner_release/BrowserScraper /miner_release/MinerService && \

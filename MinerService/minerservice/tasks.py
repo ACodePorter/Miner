@@ -187,6 +187,13 @@ def update_wedge_pop_for_index_task() -> bool:
 
 
 @app.task
+def update_ndx_intraday_bars_task() -> bool:
+    _logger.debug('update_ndx_intraday_bars_task')
+    mds: MarketDataShovel = MarketDataShovel.get_instance()
+    return mds.update_intraday_bars_by_idx('ndx')
+
+
+@app.task
 def run_us_daily_updates_task() -> bool:
     """
     Run all daily update tasks in sequence at 16:30 (with 5 min window)
@@ -206,6 +213,7 @@ def run_us_daily_updates_task() -> bool:
         update_ndx_tickers_task.si(),
         update_ndx_tickers_info_task.si(),
         update_ndx_tickers_daily_info_task.si(),
+        update_ndx_intraday_bars_task.task.si(),
 
         # Then update all ticker lists and their info
         update_spx_tickers_task.si(),

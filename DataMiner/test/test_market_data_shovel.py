@@ -6,6 +6,7 @@ from yfinance import Ticker as YTicker
 
 from dataminer import MarketDataShovel
 
+from mongoengine import disconnect_all
 
 class MarketDataShvelTestCase(unittest.TestCase):
 
@@ -64,8 +65,8 @@ class MarketDataShvelTestCase(unittest.TestCase):
     def test_update_ticker_daily_info(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()
         md.update_ticker_daily_info('TSLA')
-        md.update_ticker_daily_info('GOOGL')
-        md.update_ticker_daily_info('ZM')
+        # md.update_ticker_daily_info('GOOGL')
+        # md.update_ticker_daily_info('ZM')
 
     def test_get_latest_index_tickers(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()
@@ -136,6 +137,8 @@ class MarketDataShvelTestCase(unittest.TestCase):
         md: MarketDataShovel = MarketDataShovel.get_instance()
         md.update_intraday_bars_by_idx('ndx')
 
+    def tearDown(self):
+        disconnect_all()
 
 if __name__ == '__main__':
     unittest.main()
