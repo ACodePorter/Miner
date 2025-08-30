@@ -858,5 +858,15 @@
     "close": 67.4899978638,
     "volume": 41718.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,29,00,00,00,000000",
+    "ticker": "RHLD",
+    "open": 67.9899978638,
+    "high": 69.3899993896,
+    "low": 65.8399963379,
+    "close": 66.0899963379,
+    "volume": 30200.0,
+    "wedge_status": "none"
   }
 ]

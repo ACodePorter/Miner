@@ -1,15 +1,5 @@
 [
   {
-    "trade_date": "2022,08,31,00,00,00,000000",
-    "ticker": "LVWR",
-    "open": 10.0,
-    "high": 10.0100002289,
-    "low": 10.0,
-    "close": 10.0,
-    "volume": 163700.0,
-    "wedge_status": "none"
-  },
-  {
     "trade_date": "2022,09,01,00,00,00,000000",
     "ticker": "LVWR",
     "open": 10.0200004578,
@@ -7507,6 +7497,16 @@
     "low": 3.7999999523,
     "close": 4.0,
     "volume": 118569.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,29,00,00,00,000000",
+    "ticker": "LVWR",
+    "open": 3.9400000572,
+    "high": 4.0799999237,
+    "low": 3.8080000877,
+    "close": 3.8499999046,
+    "volume": 59400.0,
     "wedge_status": "none"
   }
 ]

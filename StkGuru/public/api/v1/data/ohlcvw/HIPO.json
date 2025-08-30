@@ -1,15 +1,5 @@
 [
   {
-    "trade_date": "2022,08,31,00,00,00,000000",
-    "ticker": "HIPO",
-    "open": 25.5,
-    "high": 26.25,
-    "low": 23.0,
-    "close": 24.25,
-    "volume": 208472.0,
-    "wedge_status": "none"
-  },
-  {
     "trade_date": "2022,09,01,00,00,00,000000",
     "ticker": "HIPO",
     "open": 23.5,
@@ -7507,6 +7497,16 @@
     "low": 33.3199996948,
     "close": 33.3800010681,
     "volume": 90316.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,29,00,00,00,000000",
+    "ticker": "HIPO",
+    "open": 33.4700012207,
+    "high": 33.9300003052,
+    "low": 33.0,
+    "close": 33.8100013733,
+    "volume": 144200.0,
     "wedge_status": "none"
   }
 ]

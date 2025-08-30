@@ -1,15 +1,5 @@
 [
   {
-    "trade_date": "2022,08,31,00,00,00,000000",
-    "ticker": "SNFCA",
-    "open": 6.9841270447,
-    "high": 6.9841270447,
-    "low": 6.7845802307,
-    "close": 6.8934240341,
-    "volume": 8930.0,
-    "wedge_status": "drop"
-  },
-  {
     "trade_date": "2022,09,01,00,00,00,000000",
     "ticker": "SNFCA",
     "open": 6.8117909431,
@@ -7508,5 +7498,15 @@
     "close": 8.779999733,
     "volume": 28083.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,29,00,00,00,000000",
+    "ticker": "SNFCA",
+    "open": 8.779999733,
+    "high": 9.0500001907,
+    "low": 8.7700004578,
+    "close": 9.0,
+    "volume": 79100.0,
+    "wedge_status": "pop"
   }
 ]
