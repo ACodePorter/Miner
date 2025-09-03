@@ -7488,5 +7488,15 @@
     "close": 227.1499938965,
     "volume": 341914.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,02,00,00,00,000000",
+    "ticker": "PAYC",
+    "open": 224.0200042725,
+    "high": 225.0,
+    "low": 216.2843017578,
+    "close": 220.0,
+    "volume": 768474.0,
+    "wedge_status": "drop"
   }
 ]

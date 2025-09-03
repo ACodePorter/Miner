@@ -7488,5 +7488,15 @@
     "close": 5.0,
     "volume": 10524500.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,02,00,00,00,000000",
+    "ticker": "UAA",
+    "open": 4.9499998093,
+    "high": 5.0700001717,
+    "low": 4.9499998093,
+    "close": 5.0300002098,
+    "volume": 11674904.0,
+    "wedge_status": "none"
   }
 ]

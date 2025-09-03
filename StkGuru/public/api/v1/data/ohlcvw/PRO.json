@@ -7488,5 +7488,15 @@
     "close": 15.5,
     "volume": 629500.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,02,00,00,00,000000",
+    "ticker": "PRO",
+    "open": 15.2899999619,
+    "high": 15.4799995422,
+    "low": 14.9499998093,
+    "close": 15.279999733,
+    "volume": 1085380.0,
+    "wedge_status": "none"
   }
 ]

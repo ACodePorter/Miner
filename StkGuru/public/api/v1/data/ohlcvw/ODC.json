@@ -7488,5 +7488,15 @@
     "close": 59.3800010681,
     "volume": 34300.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,02,00,00,00,000000",
+    "ticker": "ODC",
+    "open": 59.1599998474,
+    "high": 60.8100013733,
+    "low": 59.0,
+    "close": 60.5200004578,
+    "volume": 62500.0,
+    "wedge_status": "none"
   }
 ]

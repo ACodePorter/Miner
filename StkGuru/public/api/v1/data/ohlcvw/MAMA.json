@@ -7488,5 +7488,15 @@
     "close": 7.9800000191,
     "volume": 308600.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,02,00,00,00,000000",
+    "ticker": "MAMA",
+    "open": 8.1800003052,
+    "high": 9.1999998093,
+    "low": 8.1300001144,
+    "close": 9.1300001144,
+    "volume": 756914.0,
+    "wedge_status": "none"
   }
 ]

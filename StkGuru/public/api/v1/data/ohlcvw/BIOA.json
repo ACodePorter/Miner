@@ -1878,5 +1878,15 @@
     "close": 4.9299998283,
     "volume": 166400.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,02,00,00,00,000000",
+    "ticker": "BIOA",
+    "open": 4.9000000954,
+    "high": 4.9000000954,
+    "low": 4.6399998665,
+    "close": 4.6500000954,
+    "volume": 250576.0,
+    "wedge_status": "none"
   }
 ]

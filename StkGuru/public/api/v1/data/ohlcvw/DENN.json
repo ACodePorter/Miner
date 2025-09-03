@@ -7488,5 +7488,15 @@
     "close": 4.5700001717,
     "volume": 605700.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,02,00,00,00,000000",
+    "ticker": "DENN",
+    "open": 4.5100002289,
+    "high": 4.5250000954,
+    "low": 4.3600001335,
+    "close": 4.5,
+    "volume": 435889.0,
+    "wedge_status": "none"
   }
 ]

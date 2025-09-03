@@ -7488,5 +7488,15 @@
     "close": 1.3200000525,
     "volume": 548100.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,02,00,00,00,000000",
+    "ticker": "IRWD",
+    "open": 1.3099999428,
+    "high": 1.3487999439,
+    "low": 1.2999999523,
+    "close": 1.3099999428,
+    "volume": 1009958.0,
+    "wedge_status": "none"
   }
 ]

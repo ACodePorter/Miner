@@ -7488,5 +7488,15 @@
     "close": 73.7699966431,
     "volume": 2313200.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,02,00,00,00,000000",
+    "ticker": "RMBS",
+    "open": 71.75,
+    "high": 73.9000015259,
+    "low": 70.9000015259,
+    "close": 73.4850006104,
+    "volume": 1387001.0,
+    "wedge_status": "drop"
   }
 ]

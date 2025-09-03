@@ -7488,5 +7488,15 @@
     "close": 10.5900001526,
     "volume": 1073500.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,02,00,00,00,000000",
+    "ticker": "ARI",
+    "open": 10.4600000381,
+    "high": 10.5349998474,
+    "low": 10.4149999619,
+    "close": 10.5,
+    "volume": 782373.0,
+    "wedge_status": "none"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 7.9000000954,
     "volume": 48000.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,02,00,00,00,000000",
+    "ticker": "JBIO",
+    "open": 7.9000000954,
+    "high": 8.111000061,
+    "low": 7.5700001717,
+    "close": 7.6199998856,
+    "volume": 72062.0,
+    "wedge_status": "drop"
   }
 ]
