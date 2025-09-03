@@ -7498,5 +7498,15 @@
     "close": 49.5,
     "volume": 4499246.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,03,00,00,00,000000",
+    "ticker": "ASO",
+    "open": 49.0699996948,
+    "high": 50.6399993896,
+    "low": 49.0699996948,
+    "close": 49.7400016785,
+    "volume": 2208452.0,
+    "wedge_status": "none"
   }
 ]

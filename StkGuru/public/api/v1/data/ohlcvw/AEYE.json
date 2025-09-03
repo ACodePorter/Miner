@@ -7498,5 +7498,15 @@
     "close": 12.3500003815,
     "volume": 88051.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,03,00,00,00,000000",
+    "ticker": "AEYE",
+    "open": 12.3299999237,
+    "high": 12.5698003769,
+    "low": 12.029999733,
+    "close": 12.029999733,
+    "volume": 72057.0,
+    "wedge_status": "none"
   }
 ]

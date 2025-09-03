@@ -7498,5 +7498,15 @@
     "close": 42.1300010681,
     "volume": 1501253.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,03,00,00,00,000000",
+    "ticker": "NNN",
+    "open": 42.0,
+    "high": 42.5900001526,
+    "low": 41.9874992371,
+    "close": 42.5299987793,
+    "volume": 672645.0,
+    "wedge_status": "none"
   }
 ]

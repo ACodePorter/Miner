@@ -7498,5 +7498,15 @@
     "close": 180.0,
     "volume": 805816.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,03,00,00,00,000000",
+    "ticker": "MTZ",
+    "open": 180.0099945068,
+    "high": 181.2250061035,
+    "low": 177.7599945068,
+    "close": 179.5,
+    "volume": 432911.0,
+    "wedge_status": "none"
   }
 ]

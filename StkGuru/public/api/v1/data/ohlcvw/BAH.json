@@ -7498,5 +7498,15 @@
     "close": 110.0800018311,
     "volume": 1061073.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,03,00,00,00,000000",
+    "ticker": "BAH",
+    "open": 110.0,
+    "high": 110.5500030518,
+    "low": 106.2399978638,
+    "close": 106.75,
+    "volume": 1155362.0,
+    "wedge_status": "none"
   }
 ]
