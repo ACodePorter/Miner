@@ -7508,5 +7508,15 @@
     "close": 223.4499969482,
     "volume": 8746592.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,04,00,00,00,000000",
+    "ticker": "ORCL",
+    "open": 222.0,
+    "high": 223.5700073242,
+    "low": 219.5650024414,
+    "close": 223.0,
+    "volume": 10077253.0,
+    "wedge_status": "none"
   }
 ]

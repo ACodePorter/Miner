@@ -7508,5 +7508,15 @@
     "close": 44.8800010681,
     "volume": 23389.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,04,00,00,00,000000",
+    "ticker": "ACNB",
+    "open": 45.1100006104,
+    "high": 45.5,
+    "low": 45.0099983215,
+    "close": 45.5,
+    "volume": 9765.0,
+    "wedge_status": "none"
   }
 ]

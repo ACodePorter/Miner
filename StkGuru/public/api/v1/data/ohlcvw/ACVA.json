@@ -7508,5 +7508,15 @@
     "close": 11.25,
     "volume": 3070209.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,04,00,00,00,000000",
+    "ticker": "ACVA",
+    "open": 11.3100004196,
+    "high": 11.6850004196,
+    "low": 11.1899995804,
+    "close": 11.6599998474,
+    "volume": 1713884.0,
+    "wedge_status": "none"
   }
 ]
