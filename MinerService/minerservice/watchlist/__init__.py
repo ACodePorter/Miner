@@ -1,5 +1,7 @@
-from .model import Watchlist, Bar
-from typing import Dict, Any
+from typing import Any, Dict
+
+from .model import Bar, Watchlist
+
 
 async def add_bars_to_watchlist(user_id: str, ticker: str, interval: str):
     watchlist = Watchlist.objects(user_id=user_id).first()
@@ -8,6 +10,7 @@ async def add_bars_to_watchlist(user_id: str, ticker: str, interval: str):
     watchlist.bars.append(Bar(ticker=ticker, interval=interval))
     watchlist.save()
 
+
 async def get_all_watchlist(user_id: str) -> Dict[str, Any]:
     watchlist = Watchlist.objects(user_id=user_id).first()
     if not watchlist:
@@ -15,7 +18,4 @@ async def get_all_watchlist(user_id: str) -> Dict[str, Any]:
     return watchlist.as_dict()
 
 
-
-
 __all__ = ['add_bars_to_watchlist', 'get_all_watchlist']
-

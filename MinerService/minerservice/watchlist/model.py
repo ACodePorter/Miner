@@ -1,4 +1,6 @@
-from mongoengine import Document, StringField, ListField, EmbeddedDocument, EmbeddedDocumentField
+from mongoengine import (Document, EmbeddedDocument, EmbeddedDocumentField,
+                         ListField, StringField)
+
 
 class Bar(EmbeddedDocument):
     ticker = StringField(required=True)
@@ -21,7 +23,6 @@ class Bar(EmbeddedDocument):
     }
 
 
-
 class Watchlist(Document):
     user_id = StringField(required=True)
     tickers = ListField(StringField())
@@ -38,5 +39,3 @@ class Watchlist(Document):
             }
         ]
     }
-
-

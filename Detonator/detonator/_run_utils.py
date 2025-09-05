@@ -2,7 +2,9 @@ import logging
 import os
 import time
 from concurrent.futures import ThreadPoolExecutor
-from datetime import time as datetime_time, datetime, timezone, timedelta
+from datetime import datetime
+from datetime import time as datetime_time
+from datetime import timedelta, timezone
 from multiprocessing import Pool
 from random import random
 from threading import Thread
@@ -37,13 +39,13 @@ def run_parallel(func: Callable[[Any], Any], args: List[Any], num_workers: int =
 def _convert_to_utc_time(time_obj: datetime_time) -> datetime_time:
     """
     Convert a time object to UTC time.
-    
+
     Args:
         time_obj: The time object to convert
 
     Returns:
         UTC time object
-        
+
     """
     # Get current date
     today = datetime.now(time_obj.tzinfo).date()
@@ -71,7 +73,8 @@ class IntradayTaskScheduler:
         if isinstance(intervals, str):
             intervals = [intervals]
         if not all([i in self.SUPPORTED_INTERVALS for i in intervals]):
-            raise ValueError(f'intervals must be in {self.SUPPORTED_INTERVALS}')
+            raise ValueError(
+                f'intervals must be in {self.SUPPORTED_INTERVALS}')
         self.intervals = intervals
         self.intervals.sort()
         self.logger.debug(f'intervals: {self.intervals}')
@@ -168,7 +171,8 @@ class IntradayTaskScheduler:
         next_update_times = []
 
         for interval in self.intervals:
-            next_time = self._get_next_update_time(current_time, interval, start, end)
+            next_time = self._get_next_update_time(
+                current_time, interval, start, end)
             if next_time:
                 next_update_times.append(next_time)
 
@@ -193,20 +197,25 @@ class IntradayTaskScheduler:
         """Internal method to run the scheduler loop."""
         while self.running:
             current_time = datetime.now(tz=timezone.utc)
-            start = current_time.combine(current_time.date(), self.start_time, timezone.utc)
-            end = current_time.combine(current_time.date(), self.end_time, timezone.utc)
-            to_run_intervals = {i if self._is_time_to_run(i, current_time, start, end) else '' for i in self.intervals}
+            start = current_time.combine(
+                current_time.date(), self.start_time, timezone.utc)
+            end = current_time.combine(
+                current_time.date(), self.end_time, timezone.utc)
+            to_run_intervals = {i if self._is_time_to_run(
+                i, current_time, start, end) else '' for i in self.intervals}
             to_run_intervals.discard('')
             self.logger.debug(to_run_intervals)
             if to_run_intervals:
                 self.func(list(to_run_intervals))
-            to_sleep = self._calculate_optimal_sleep_time(datetime.now(tz=timezone.utc), start, end)
+            to_sleep = self._calculate_optimal_sleep_time(
+                datetime.now(tz=timezone.utc), start, end)
             self.logger.debug(to_sleep)
             time.sleep(to_sleep)
 
     def _is_time_to_run(self, interval: str, current_time: datetime, start_time: datetime, end_time: datetime) -> bool:
         end_time += timedelta(seconds=self.schedule_delay)
-        self.logger.debug('%s %s %s %s', interval, current_time, start_time, end_time)
+        self.logger.debug('%s %s %s %s', interval,
+                          current_time, start_time, end_time)
         if start_time <= current_time <= end_time:
             if interval == '1m':
                 return current_time.second <= self.TORLENCE_SECONDS
@@ -220,5 +229,5 @@ class IntradayTaskScheduler:
                 return current_time.minute % 30 == 0 and current_time.second <= self.TORLENCE_SECONDS
             elif interval == '65m':
                 return int((
-                                   current_time - start_time).total_seconds() / 60) % 65 == 0 and current_time.second <= self.TORLENCE_SECONDS
+                    current_time - start_time).total_seconds() / 60) % 65 == 0 and current_time.second <= self.TORLENCE_SECONDS
         return False

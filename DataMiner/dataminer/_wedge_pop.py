@@ -103,20 +103,20 @@ class WedgePop(SingletonParent):
                 0] if len(x) >= 3 else np.nan
         )
         bars['is_above_emas'] = (bars['close'] > bars['ema10'] * 0.999) & (
-                bars['close'] > bars['ema20'] * 0.999)
+            bars['close'] > bars['ema20'] * 0.999)
         bars['is_below_any_emas'] = (bars['close'] < bars['ema10'] * 1.001) | (
-                bars['close'] < bars['ema20'] * 1.001)
+            bars['close'] < bars['ema20'] * 1.001)
         bars['was_below_emas'] = bars['is_below_any_emas'].shift(1)
         bars['is_below_emas'] = (bars['close'] < bars['ema10'] * 1.001) & (
-                bars['close'] < bars['ema20'] * 1.001)
+            bars['close'] < bars['ema20'] * 1.001)
         bars['is_above_any_emas'] = (bars['close'] > bars['ema10'] * 0.999) | (
-                bars['close'] > bars['ema20'] * 0.999)
+            bars['close'] > bars['ema20'] * 0.999)
         bars['was_above_emas'] = bars['is_above_any_emas'].shift(1)
         # Calculate relative volume safely, avoiding division by zero or NaN
         bars['is_high_rvol'] = (
-                (bars['volume'] / bars['avg_volume'] >= WedgeConfig.MIN_RELATIVE_VOLUME) &
-                (bars['avg_volume'].notna()) &
-                (bars['avg_volume'] > 0)
+            (bars['volume'] / bars['avg_volume'] >= WedgeConfig.MIN_RELATIVE_VOLUME) &
+            (bars['avg_volume'].notna()) &
+            (bars['avg_volume'] > 0)
         )
         return bars
 

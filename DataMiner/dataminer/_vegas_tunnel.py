@@ -17,13 +17,14 @@ class VegasTunnel(SingletonParent):
 
     def _prepare_data(self, tickers: str | List[str],
                       intervals: Literal['5m', '10m', '15m', '30m', '65m'] | List[str] = '65m') -> Dict[
-        str, Dict[str, DataFrame]]:
+            str, Dict[str, DataFrame]]:
         if isinstance(tickers, str):
             tickers = [tickers]
         if isinstance(intervals, str):
             intervals = [intervals]
         mds: MarketDataShovel = MarketDataShovel.get_instance()
-        full_bars: Dict[str, Dict[str, DataFrame]] = mds.get_intraday_bars(tickers, intervals)
+        full_bars: Dict[str, Dict[str, DataFrame]
+                        ] = mds.get_intraday_bars(tickers, intervals)
 
         self.logger.debug(f'Raw bars shape: {len(full_bars)}')
 
@@ -33,9 +34,11 @@ class VegasTunnel(SingletonParent):
                 if bars.empty:
                     self.logger.warning(f'No intraday bars for {ticker}')
                     continue
-                self.logger.debug(f'Ticker: {ticker}:{bars.shape} ->\n{bars.head(1)}\n{bars.tail(1)}')
+                self.logger.debug(
+                    f'Ticker: {ticker}:{bars.shape} ->\n{bars.head(1)}\n{bars.tail(1)}')
                 for span in VegasTunnel.EMA_SPANS:
-                    bars[f'ema{span}'] = bars['close'].ewm(span=span, adjust=False, min_periods=1).mean()
+                    bars[f'ema{span}'] = bars['close'].ewm(
+                        span=span, adjust=False, min_periods=1).mean()
                 # Only drop rows where essential columns are NaN, not EMA columns
                 bars.dropna(how='any', inplace=False)
 
@@ -67,14 +70,17 @@ class VegasTunnel(SingletonParent):
         """
         required_cols = ['open', 'high', 'low', 'close']
         if not all(col in bars.columns for col in required_cols):
-            raise ValueError(f"Input DataFrame must contain {required_cols} columns.")
+            raise ValueError(
+                f"Input DataFrame must contain {required_cols} columns.")
 
         # --- 1. Vectorized Calculation of All EMAs ---
         # we already prepared bars, do not calculate here
 
         # Define the short-term tunnel boundaries
-        bars['short_term_tunnel_upper'] = bars[['ema144', 'ema169']].max(axis=1)
-        bars['short_term_tunnel_lower'] = bars[['ema144', 'ema169']].min(axis=1)
+        bars['short_term_tunnel_upper'] = bars[[
+            'ema144', 'ema169']].max(axis=1)
+        bars['short_term_tunnel_lower'] = bars[[
+            'ema144', 'ema169']].min(axis=1)
 
         # Define the long-term trend based on the EMA 576/676 relationship
         # 1 long, -1 short, 0 none
@@ -86,19 +92,19 @@ class VegasTunnel(SingletonParent):
                                            np.where(bars['close'] < bars['ema12'], -1, 0))
         # cross_filter:how close close cross filter line,  1 up cross, -1, down cross, 0 no cross
         bars['close_cross_filter'] = (
-                bars['close_to_filter'] - bars['close_to_filter'].shift(1).bfill()).astype(np.int64)
+            bars['close_to_filter'] - bars['close_to_filter'].shift(1).bfill()).astype(np.int64)
 
         # filter_to_short_uppper
         bars['filter_to_short_upper'] = np.where(bars['ema12'] > bars['short_term_tunnel_upper'], 1,
                                                  np.where(bars['ema12'] < bars['short_term_tunnel_upper'], -1, 0))
         bars['filter_cross_short_upper'] = (
-                bars['filter_to_short_upper'] - bars['filter_to_short_upper'].shift(1).bfill()).astype(np.int64)
+            bars['filter_to_short_upper'] - bars['filter_to_short_upper'].shift(1).bfill()).astype(np.int64)
 
         # filter_to_short_lower
         bars['filter_to_short_lower'] = np.where(bars['ema12'] < bars['short_term_tunnel_lower'], 1,
                                                  np.where(bars['ema12'] > bars['short_term_tunnel_lower'], -1, 0))
         bars['filter_cross_short_lower'] = (
-                bars['filter_to_short_lower'] - bars['filter_to_short_lower'].shift(1).bfill()).astype(np.int64)
+            bars['filter_to_short_lower'] - bars['filter_to_short_lower'].shift(1).bfill()).astype(np.int64)
 
         # --- 2. Vectorized Signal Generation ---
         # Use np.where for fast, vectorized conditional logic. This is much faster than a for loop.
@@ -159,17 +165,18 @@ class VegasTunnel(SingletonParent):
                 0] if len(x) >= 3 else np.nan
         )
         bars['is_above_emas'] = (bars['close'] > bars['ema10']) & (
-                bars['close'] > bars['ema20'])
+            bars['close'] > bars['ema20'])
         bars['is_below_any_emas'] = (bars['close'] < bars['ema10']) | (
-                bars['close'] < bars['ema20'])
+            bars['close'] < bars['ema20'])
         bars['was_below_emas'] = bars['is_below_any_emas'].shift(1).bfill()
         bars['is_below_emas'] = (bars['close'] < bars['ema10']) & (
-                bars['close'] < bars['ema20'])
+            bars['close'] < bars['ema20'])
         bars['is_above_any_emas'] = (bars['close'] > bars['ema10']) | (
-                bars['close'] > bars['ema20'])
+            bars['close'] > bars['ema20'])
         bars['was_above_emas'] = bars['is_above_any_emas'].shift(1).bfill()
         bars['wedge_signal'] = np.where(
-            bars['is_above_emas'] & bars['was_below_emas'] & (bars['ema_diff_slope'] > 0), 1,
+            bars['is_above_emas'] & bars['was_below_emas'] & (
+                bars['ema_diff_slope'] > 0), 1,
             np.where(bars['is_below_emas'] & bars['was_above_emas'] & (bars['ema_diff_slope'] < 0), -1, 0))
         return bars.drop(columns=['ema_diff', 'ema_diff_slope', 'is_above_emas', 'is_below_any_emas', 'was_below_emas',
                                   'is_below_emas', 'is_above_any_emas',
@@ -177,17 +184,19 @@ class VegasTunnel(SingletonParent):
 
     def update_signals(self, tickers: str | List[str],
                        intervals: Literal['5m', '10m', '15m', '30m', '65m'] | List[str]) -> Dict[
-        str, Dict[str, DataFrame]]:
+            str, Dict[str, DataFrame]]:
         batch_size = 110
         if isinstance(tickers, str):
             tickers = [tickers]
         if isinstance(intervals, str):
             intervals = [intervals]
         self.logger.info('%s %s', tickers, intervals)
-        full_bars: Dict[str, Dict[str, DataFrame]] = {interval: {} for interval in intervals}
+        full_bars: Dict[str, Dict[str, DataFrame]] = {
+            interval: {} for interval in intervals}
         for i in range(0, len(tickers), batch_size):
             batch_tickers = tickers[i:i + batch_size]
-            batch_bars: Dict[str, Dict[str, DataFrame]] = self._prepare_data(batch_tickers, intervals)
+            batch_bars: Dict[str, Dict[str, DataFrame]
+                             ] = self._prepare_data(batch_tickers, intervals)
             for interval, ticker_bars in batch_bars.items():
                 for ticker, bars in ticker_bars.items():
                     signal_bars = self._vegas_double_tunnel_signals(bars)
@@ -195,4 +204,3 @@ class VegasTunnel(SingletonParent):
                     batch_bars[interval][ticker] = signal_bars
                 full_bars[interval] |= batch_bars[interval]
         return full_bars
-

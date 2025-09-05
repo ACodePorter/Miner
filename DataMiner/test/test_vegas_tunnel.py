@@ -4,11 +4,10 @@ from unittest import TestCase
 import mplfinance as mpf
 import numpy as np
 import pandas as pd
+from dataminer import MarketDataShovel, VegasTunnel
 from detonator import make_db_connection
 from mongoengine import disconnect_all
 from pandas import DataFrame
-
-from dataminer import VegasTunnel, MarketDataShovel
 
 
 def plot_vegas_double_tunnel_signals(df: pd.DataFrame, title: str = 'Vegas Double Tunnel Strategy'):
@@ -25,21 +24,26 @@ def plot_vegas_double_tunnel_signals(df: pd.DataFrame, title: str = 'Vegas Doubl
         return
 
     if 'vegas_signal' not in df.columns:
-        raise ValueError("Input DataFrame must have a 'signal' column from the strategy function.")
+        raise ValueError(
+            "Input DataFrame must have a 'signal' column from the strategy function.")
 
     # Convert timestamp to datetime and set as index for mplfinance
     # df.index = pd.to_datetime(df['timestamp'])
 
     # Prepare bars for mplfinance. Columns must be capitalized.
-    df_plot = df.rename(columns={'open': 'Open', 'high': 'High', 'low': 'Low', 'close': 'Close', 'volume': 'Volume'})
+    df_plot = df.rename(columns={'open': 'Open', 'high': 'High',
+                        'low': 'Low', 'close': 'Close', 'volume': 'Volume'})
 
     # --- 1. Prepare additional plots for EMAs and signals ---
 
     # EMAs as a list of additional plots
     apds = [
-        mpf.make_addplot(df_plot['ema12'], color='blue', linestyle='--', label='EMA 12'),
-        mpf.make_addplot(df_plot['ema10'], color='green', linestyle='--', label='EMA 10'),
-        mpf.make_addplot(df_plot['ema20'], color='blue', linestyle='--', label='EMA 20'),
+        mpf.make_addplot(df_plot['ema12'], color='blue',
+                         linestyle='--', label='EMA 12'),
+        mpf.make_addplot(df_plot['ema10'], color='green',
+                         linestyle='--', label='EMA 10'),
+        mpf.make_addplot(df_plot['ema20'], color='blue',
+                         linestyle='--', label='EMA 20'),
         mpf.make_addplot(df_plot['ema144'], color='lime', label='EMA 144'),
         mpf.make_addplot(df_plot['ema169'], color='cyan', label='EMA 169'),
         mpf.make_addplot(df_plot['ema576'], color='magenta', label='EMA 576'),
@@ -47,10 +51,14 @@ def plot_vegas_double_tunnel_signals(df: pd.DataFrame, title: str = 'Vegas Doubl
     ]
 
     # Plotting signals as scatter plots on the chart
-    buy_signals = np.where(df_plot['vegas_signal'] == 2, df_plot['Low'] * 0.99, np.nan)
-    sell_signals = np.where(df_plot['vegas_signal'] == -2, df_plot['High'] * 1.01, np.nan)
-    increase_signals = np.where(df_plot['wedge_signal'] == 1, df_plot['Low'] * 0.99, np.nan)
-    decrease_signals = np.where(df_plot['wedge_signal'] == -1, df_plot['High'] * 1.01, np.nan)
+    buy_signals = np.where(
+        df_plot['vegas_signal'] == 2, df_plot['Low'] * 0.99, np.nan)
+    sell_signals = np.where(
+        df_plot['vegas_signal'] == -2, df_plot['High'] * 1.01, np.nan)
+    increase_signals = np.where(
+        df_plot['wedge_signal'] == 1, df_plot['Low'] * 0.99, np.nan)
+    decrease_signals = np.where(
+        df_plot['wedge_signal'] == -1, df_plot['High'] * 1.01, np.nan)
 
     # Convert signal arrays to mplfinance addplot dictionaries, but only if they contain actual signals
     signal_plots = []
@@ -105,7 +113,8 @@ class VegasTunnelTestCase(TestCase):
 
         tickers = mds.get_latest_index_tickers('ndx').tickers
 
-        full_bars: Dict[str, Dict[str, DataFrame]] = vt.update_signals(tickers=tickers, intervals=['30m', '65m'])
+        full_bars: Dict[str, Dict[str, DataFrame]] = vt.update_signals(
+            tickers=tickers, intervals=['30m', '65m'])
 
         for interval, ticker_bars in full_bars.items():
             for ticker, bars in ticker_bars.items():

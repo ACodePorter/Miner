@@ -10,10 +10,10 @@ from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 
 from .api.v1 import api_v1_router
+from .services.vegas_tunnel_integration import VegasTunnelIntegration
 from .utils import send_message
 from .ws.connection_manager_v2 import (WebSocketConnectionManager, WsMsgTypes,
                                        get_websocket_manager)
-from .services.vegas_tunnel_integration import VegasTunnelIntegration
 
 _logger = get_logger('MinerService', logging.DEBUG)
 
@@ -369,7 +369,7 @@ async def monitor_running_status():
         try:
             _logger.debug(manager.dump())
             # Wait before next status check
-            await asyncio.sleep(30)  # Check status every 30 seconds
+            await asyncio.sleep(60 * 60)  # Check status every 30 seconds
         except Exception as e:
             _logger.error(f"Error in bars monitoring: {e}")
             await asyncio.sleep(60)  # Wait longer on error

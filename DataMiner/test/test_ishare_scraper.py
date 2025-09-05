@@ -1,8 +1,7 @@
 import unittest
 
-from detonator import get_logger, make_db_connection
-
 from dataminer import IsharesScraper
+from detonator import get_logger, make_db_connection
 
 _logger = get_logger('IsharesScraperTestCase')
 

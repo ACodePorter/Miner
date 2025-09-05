@@ -1,8 +1,7 @@
 from unittest import TestCase
 
-from detonator import make_db_connection
-
 from dataminer import WedgePop
+from detonator import make_db_connection
 
 
 class WedgePopTestCase(TestCase):

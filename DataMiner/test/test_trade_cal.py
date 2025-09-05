@@ -1,9 +1,8 @@
 import unittest
 
+from dataminer import TradeCalendarShovel
 from detonator import get_logger, make_db_connection
 from mongoengine import disconnect_all
-
-from dataminer import TradeCalendarShovel
 
 _logger = get_logger('TradeCalTestCase')
 

@@ -1,31 +1,30 @@
 import json
 import os
+import smtplib
+import ssl
 from datetime import datetime, timedelta
+from email.message import EmailMessage
 from email.mime.image import MIMEImage
 from email.mime.text import MIMEText
 from time import sleep
 from typing import Dict
 from unittest import TestCase
 
-os.environ['MPLBACKEND'] = 'Agg'
-
+import matplotlib
+import mplfinance as mpf
 import numpy as np
 from detonator import get_logger
+from minerservice.services.vegas_tunnel_integration import \
+    VegasTunnelIntegration
 from pandas import DataFrame
 
-import matplotlib
+os.environ['MPLBACKEND'] = 'Agg'
+
 
 matplotlib.use('Agg', force=True)
-import mplfinance as mpf
 
-from minerservice.services.vegas_tunnel_integration import VegasTunnelIntegration
 
 pwd = 'xxxxx'
-
-import smtplib
-import ssl
-
-from email.message import EmailMessage
 
 
 def send_email(message: Dict[str, str]):
@@ -58,12 +57,13 @@ def send_email(message: Dict[str, str]):
                     # Read the file's data
                     image_mime = MIMEImage(f.read())
                     image_mime.add_header(
-                        'Content-ID', image )
+                        'Content-ID', image)
                     msg.attach(image_mime)
                     image_html += f'<p>{image}</p><img src="cid:{image}" style="max-width: 100%; height: auto; display: block; margin: 0 auto;"></br>'
                 print("Attachment added successfully!")
             except FileNotFoundError:
-                print(f"Error: The file '{interval}-{ticker}.png' was not found. Make sure it's in the same directory.")
+                print(
+                    f"Error: The file '{interval}-{ticker}.png' was not found. Make sure it's in the same directory.")
                 return
     html_content = f'''
 <html>
@@ -109,21 +109,26 @@ def plot_vegas_double_tunnel_signals(df: DataFrame, title: str = 'Vegas Double T
         return
 
     if 'vegas_signal' not in df.columns:
-        raise ValueError("Input DataFrame must have a 'signal' column from the strategy function.")
+        raise ValueError(
+            "Input DataFrame must have a 'signal' column from the strategy function.")
 
     # Convert timestamp to datetime and set as index for mplfinance
     # df.index = pd.to_datetime(df['timestamp'])
 
     # Prepare bars for mplfinance. Columns must be capitalized.
-    df_plot = df.rename(columns={'open': 'Open', 'high': 'High', 'low': 'Low', 'close': 'Close', 'volume': 'Volume'})
+    df_plot = df.rename(columns={'open': 'Open', 'high': 'High',
+                        'low': 'Low', 'close': 'Close', 'volume': 'Volume'})
 
     # --- 1. Prepare additional plots for EMAs and signals ---
 
     # EMAs as a list of additional plots
     apds = [
-        mpf.make_addplot(df_plot['ema12'], color='blue', linestyle='--', label='EMA 12'),
-        mpf.make_addplot(df_plot['ema10'], color='green', linestyle='--', label='EMA 10'),
-        mpf.make_addplot(df_plot['ema20'], color='blue', linestyle='--', label='EMA 20'),
+        mpf.make_addplot(df_plot['ema12'], color='blue',
+                         linestyle='--', label='EMA 12'),
+        mpf.make_addplot(df_plot['ema10'], color='green',
+                         linestyle='--', label='EMA 10'),
+        mpf.make_addplot(df_plot['ema20'], color='blue',
+                         linestyle='--', label='EMA 20'),
         mpf.make_addplot(df_plot['ema144'], color='lime', label='EMA 144'),
         mpf.make_addplot(df_plot['ema169'], color='cyan', label='EMA 169'),
         mpf.make_addplot(df_plot['ema576'], color='magenta', label='EMA 576'),
@@ -131,10 +136,14 @@ def plot_vegas_double_tunnel_signals(df: DataFrame, title: str = 'Vegas Double T
     ]
 
     # Plotting signals as scatter plots on the chart
-    buy_signals = np.where(df_plot['vegas_signal'] == 2, df_plot['Low'] * 0.99, np.nan)
-    sell_signals = np.where(df_plot['vegas_signal'] == -2, df_plot['High'] * 1.01, np.nan)
-    increase_signals = np.where(df_plot['wedge_signal'] == 1, df_plot['Low'] * 0.99, np.nan)
-    decrease_signals = np.where(df_plot['wedge_signal'] == -1, df_plot['High'] * 1.01, np.nan)
+    buy_signals = np.where(
+        df_plot['vegas_signal'] == 2, df_plot['Low'] * 0.99, np.nan)
+    sell_signals = np.where(
+        df_plot['vegas_signal'] == -2, df_plot['High'] * 1.01, np.nan)
+    increase_signals = np.where(
+        df_plot['wedge_signal'] == 1, df_plot['Low'] * 0.99, np.nan)
+    decrease_signals = np.where(
+        df_plot['wedge_signal'] == -1, df_plot['High'] * 1.01, np.nan)
 
     # Convert signal arrays to mplfinance addplot dictionaries, but only if they contain actual signals
     signal_plots = []

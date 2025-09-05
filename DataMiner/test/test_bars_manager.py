@@ -2,9 +2,8 @@ from datetime import datetime, timedelta
 from unittest import TestCase
 
 import pandas as pd
-from detonator import get_redis_client
-
 from dataminer import BarsManager
+from detonator import get_redis_client
 
 
 class BarsManagerTestCase(TestCase):

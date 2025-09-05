@@ -7,8 +7,8 @@ import pytz
 import requests
 from detonator import (SingletonParent, add_minus_to_YYYYmmdd,
                        datetime_from_str, df_2_mongo, get_logger,
-                       make_db_connection, md5_iterable, mongo_2_df, resample_ohlcv, sleep,
-                       tomorrow_of)
+                       make_db_connection, md5_iterable, mongo_2_df,
+                       resample_ohlcv, sleep, tomorrow_of)
 from pandas import DataFrame
 from yfinance import Ticker as YTicker
 from yfinance import Tickers
@@ -412,7 +412,7 @@ class MarketDataShovel(SingletonParent):
                     _logger.info('%s loop time for %s', ticker,
                                  (datetime.now() - now).total_seconds())
                 filtered_dict = {key: value for key,
-                value in results.items() if not value}
+                                 value in results.items() if not value}
                 return list(filtered_dict.keys())
 
             else:
@@ -523,7 +523,7 @@ class MarketDataShovel(SingletonParent):
                 return DataFrame()
             if period != 'max':
                 expected = len(tickers.tickers) * \
-                           int(period[0:-1]) * (390 / int(interval[0:-1]))
+                    int(period[0:-1]) * (390 / int(interval[0:-1]))
                 if expected != len(df):
                     _logger.warning(
                         'Expected bars number: %s, actual: %s', expected, len(df))
@@ -573,7 +573,8 @@ class MarketDataShovel(SingletonParent):
                 return False
             make_db_connection()
             if tickers := self.get_latest_index_tickers(index_name=idx):
-                tickers = [ticker.upper().replace('.', '-') for ticker in tickers.tickers]
+                tickers = [ticker.upper().replace('.', '-')
+                           for ticker in tickers.tickers]
                 return self.update_intraday_bars(tickers, interval=interval)
             else:
                 _logger.error('No tickers provided for %s', idx)
@@ -585,7 +586,7 @@ class MarketDataShovel(SingletonParent):
 
     def get_intraday_bars(self, tickers: str | List[str],
                           intervals: Literal['5m', '10m', '15m', '30m', '65m'] | List[str],
-                          period: str = 'max') -> Dict[str, Dict[str,DataFrame]]:
+                          period: str = 'max') -> Dict[str, Dict[str, DataFrame]]:
         '''
         Get intraday bars from either local database or remote API, mainly for
         TODO: this function is like the one in BarsManager, will merge the 2 function as one.
@@ -597,19 +598,22 @@ class MarketDataShovel(SingletonParent):
         Returns:
             Dict of List of Dict of ticker:DataFrame map,{"65m":[{"AAPL":DataFrame}, {"30m":DataFrame}], "30m":[{"AAPL":DataFrame}, {"NVDA":DataFrame}]}
         '''
-        _logger.debug('Getting intraday bars for %s %s %s', tickers, intervals, period)
+        _logger.debug('Getting intraday bars for %s %s %s',
+                      tickers, intervals, period)
         if isinstance(tickers, str):
             tickers = [tickers]
         if isinstance(intervals, str):
             intervals = [intervals]
         mds = MarketDataShovel.get_instance()
         tcs = TradeCalendarShovel.get_instance()
-        df:DataFrame = DataFrame()
+        df: DataFrame = DataFrame()
         if tcs.is_mkt_open():
-            df: DataFrame = mds.fetch_intraday_bars(tickers=tickers, period='1d', interval='5m')
+            df: DataFrame = mds.fetch_intraday_bars(
+                tickers=tickers, period='1d', interval='5m')
         else:
             _logger.debug('Market not open now %s', tickers)
-        bars: DataFrame = mongo_2_df(Bar.objects(ticker__in=tickers, interval='5m').order_by('timestamp'))
+        bars: DataFrame = mongo_2_df(Bar.objects(
+            ticker__in=tickers, interval='5m').order_by('timestamp'))
         if not df.empty:
             bars = pd.concat([bars, df])
         bars = bars.sort_values('timestamp')
@@ -621,7 +625,8 @@ class MarketDataShovel(SingletonParent):
             for ticker in tickers:
                 resampled_bars = bars[bars.ticker == ticker].copy(deep=True)
                 resampled_bars.set_index('timestamp', inplace=True)
-                resampled_bars = resample_ohlcv(resampled_bars, f'{interval[:-1]}min')
+                resampled_bars = resample_ohlcv(
+                    resampled_bars, f'{interval[:-1]}min')
                 resampled_bars['interval'] = interval
                 results[interval][ticker] = resampled_bars
         return results

@@ -1,13 +1,12 @@
 import datetime
 import unittest
 
-from detonator import get_logger, make_db_connection
-from pandas import DataFrame
-from pymongo import MongoClient
-
 from dataminer import Indicators
 from dataminer._indicators import (_calculate_indicator,
                                    _get_since_trade_date_for_indicator)
+from detonator import get_logger, make_db_connection
+from pandas import DataFrame
+from pymongo import MongoClient
 
 _l = get_logger('IndicatorsTestCase')
 

@@ -1,11 +1,9 @@
-from typing import Any
-from typing import Type
+import logging
+from typing import Any, Type
 
 import pandas as pd
 from mongoengine import Document, NotUniqueError, QuerySet
 from pandas import DataFrame, DatetimeIndex, PeriodIndex, TimedeltaIndex
-
-import logging
 
 from ._log import get_logger
 
@@ -62,7 +60,7 @@ def _resample_ohlcv_session(bars: DataFrame, rule: Any) -> DataFrame:
     # Anchor bins at 09:30 for this day
     _logger.debug('%s', rule)
     agg = {
-        'ticker':'first',
+        'ticker': 'first',
         'open': 'first',
         'high': 'max',
         'low': 'min',
@@ -89,18 +87,19 @@ def resample_ohlcv(bars: DataFrame, rule) -> DataFrame:
     _logger.debug('%s \n rule: %s', bars.columns, rule)
     # Check if required columns exist
     required_columns = ['open', 'high', 'low', 'close', 'volume']
-    
+
     if type(bars.index) in [DatetimeIndex, PeriodIndex, TimedeltaIndex]:
         if not all(col in bars.columns for col in required_columns):
-            _logger.warning('Columns %s not exist in DataFrame!', required_columns)
+            _logger.warning(
+                'Columns %s not exist in DataFrame!', required_columns)
             return DataFrame()
     else:
         # Check if timestamp column exists and other required columns
         if 'timestamp' not in bars.columns or not all(col in bars.columns for col in required_columns):
-            _logger.warning('timestamp and columns %s not exist in DataFrame!', required_columns)
+            _logger.warning(
+                'timestamp and columns %s not exist in DataFrame!', required_columns)
             return DataFrame()
         bars = bars.set_index('timestamp', drop=False)
-
 
     bars = (
         bars
