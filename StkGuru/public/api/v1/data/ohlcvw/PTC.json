@@ -7508,5 +7508,15 @@
     "close": 213.25,
     "volume": 638430.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,05,00,00,00,000000",
+    "ticker": "PTC",
+    "open": 213.5,
+    "high": 215.4900054932,
+    "low": 211.4199981689,
+    "close": 213.8999938965,
+    "volume": 614670.0,
+    "wedge_status": "none"
   }
 ]

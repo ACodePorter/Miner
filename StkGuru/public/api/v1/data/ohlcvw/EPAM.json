@@ -7508,5 +7508,15 @@
     "close": 168.0899963379,
     "volume": 527510.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,05,00,00,00,000000",
+    "ticker": "EPAM",
+    "open": 168.5,
+    "high": 173.2550048828,
+    "low": 167.75,
+    "close": 169.4600067139,
+    "volume": 867977.0,
+    "wedge_status": "none"
   }
 ]

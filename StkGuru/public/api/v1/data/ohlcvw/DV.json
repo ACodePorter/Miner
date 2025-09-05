@@ -7508,5 +7508,15 @@
     "close": 15.25,
     "volume": 2401265.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,05,00,00,00,000000",
+    "ticker": "DV",
+    "open": 15.3400001526,
+    "high": 15.5600004196,
+    "low": 14.9554004669,
+    "close": 15.0,
+    "volume": 2919597.0,
+    "wedge_status": "none"
   }
 ]
