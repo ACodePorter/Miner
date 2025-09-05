@@ -213,7 +213,7 @@ class IntradayTaskScheduler:
             time.sleep(to_sleep)
 
     def _is_time_to_run(self, interval: str, current_time: datetime, start_time: datetime, end_time: datetime) -> bool:
-        end_time += timedelta(seconds=self.schedule_delay)
+        end_time += timedelta(seconds=self.schedule_delay + 5)
         self.logger.debug('%s %s %s %s', interval,
                           current_time, start_time, end_time)
         if start_time <= current_time <= end_time:
