@@ -17,10 +17,10 @@ from ._trade_cal import TradeCalendarShovel
 
 class BarsManager(SingletonParent):
     """
-    BarsManager for fetching and managing bar data from yfinance.
+    BarsManager for fetching and managing bar bars from yfinance.
 
     Usage Rules:
-    1. get_bars(): Use for fetching full historical data (e.g., initial chart load)
+    1. get_bars(): Use for fetching full historical bars (e.g., initial chart load)
     2. get_recent_bars(): Use for incremental updates and real-time comparison
     3. subscribe_intraday(): Use for real-time intraday bar updates
 
@@ -30,7 +30,7 @@ class BarsManager(SingletonParent):
     Redis Key Structure:
     - Channel: "quotes:{ticker}" - Redis pub/sub channel for each ticker
     - Channel: "quote:latest" - Redis pub/sub channel for latest quote for all tickers
-    - Key: "quote:latest:{ticker}" - Latest quote data for each ticker
+    - Key: "quote:latest:{ticker}" - Latest quote bars for each ticker
     - Key: "quotes:active" - Set of currently active tickers with live quotes
 
     Redis Bar Publishing:
@@ -39,7 +39,7 @@ class BarsManager(SingletonParent):
     Redis Bar Key Structure:
     - Channel: "bars:{ticker}:{interval}" - Redis pub/sub channel for each ticker/interval
     - Channel: "bars:latest:{interval}" - Redis pub/sub channel for latest bars for all tickers
-    - Key: "bars:latest:{ticker}:{interval}" - Latest bar data for each ticker/interval
+    - Key: "bars:latest:{ticker}:{interval}" - Latest bar bars for each ticker/interval
     - Key: "bars:active:{interval}" - Set of currently active tickers with bars for each interval
 
     Example Redis subscription:
@@ -108,7 +108,7 @@ class BarsManager(SingletonParent):
         Returns:
             DataFrame: bars DataFrame
         """
-        # 1-min data; regular trading hours
+        # 1-min bars; regular trading hours
         resample_bars = interval == '65m'
         interval = '5m' if resample_bars else interval
         period = 'max' if resample_bars else period
@@ -143,11 +143,11 @@ class BarsManager(SingletonParent):
         Returns:
             DataFrame: recent bars DataFrame optimized for incremental updates
         """
-        # For minute intervals, get enough data to ensure we have current session
+        # For minute intervals, get enough bars to ensure we have current session
         if interval in ['1m', '2m', '5m', '15m', '30m', '65m', '90m', '1h']:
-            period = '1d'  # Get 1 day for current session data
+            period = '1d'  # Get 1 day for current session bars
         else:
-            period = '3d'  # Get 3 days for daily/weekly data
+            period = '3d'  # Get 3 days for daily/weekly bars
 
         bars = self.get_bars(ticker, interval, period)
         if bars.empty:
@@ -307,7 +307,7 @@ class BarsManager(SingletonParent):
                 # Remove from Redis active set
                 for ticker in tickers:
                     self.redis_client.srem(f"bars:active:{interval}", ticker)
-                    # Remove latest bar data
+                    # Remove latest bar bars
                     self.redis_client.delete(
                         f"bars:latest:{ticker}:{interval}")
 
@@ -446,7 +446,7 @@ class BarsManager(SingletonParent):
 
         if not market_open:
             # Fallback: check if we're in normal market hours (9:30 AM - 4:00 PM ET, Mon-Fri)
-            # This handles cases where the database might not have current trading day data
+            # This handles cases where the database might not have current trading day bars
             if self._is_in_normal_market_hours(current_time):
                 self.logger.debug(
                     f"Market closed in DB but in normal hours, allowing updates for {interval}")
@@ -679,7 +679,7 @@ class BarsManager(SingletonParent):
             # Get history for all tickers
             for ticker in tickers:
                 try:
-                    # For 65m, we need to resample 5m data
+                    # For 65m, we need to resample 5m bars
                     if interval == '65m':
                         bars: DataFrame = ticker_objects.tickers[ticker].history(
                             period='1d', interval='5m', actions=False, prepost=False, rounding=True
@@ -720,7 +720,7 @@ class BarsManager(SingletonParent):
                 if latest_bar['Volume'] == 0:
                     latest_bar = bars.iloc[-2]
 
-                # Create bar data structure
+                # Create bar bars structure
                 bar_data = {
                     'ticker': ticker,
                     'interval': interval,
@@ -738,7 +738,7 @@ class BarsManager(SingletonParent):
                 self.redis_client.publish(
                     f"bars:latest:{interval}", json.dumps(bar_data))
 
-                # Store latest bar data
+                # Store latest bar bars
                 latest_key = f"bars:latest:{ticker}:{interval}"
                 self.redis_client.setex(
                     latest_key, 3600, json.dumps(bar_data))  # Expire in 1 hour

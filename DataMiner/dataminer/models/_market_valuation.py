@@ -4,7 +4,7 @@ from mongoengine import ComplexDateTimeField, Document, FloatField, StringField
 class MarketPe(Document):
     '''Market PE Ratio Document Model.
     This model represents the Price-to-Earnings (PE) ratio for a specific market index on a given date.
-    It is used to store and retrieve PE ratio data from the database.'''
+    It is used to store and retrieve PE ratio bars from the database.'''
     idx = StringField(required=True)
     trade_date = ComplexDateTimeField(required=True)
     pe = FloatField(required=True)

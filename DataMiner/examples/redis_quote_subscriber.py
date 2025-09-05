@@ -41,23 +41,23 @@ class RedisQuoteSubscriber:
             for message in self.pubsub.listen():
                 if message and message.get('type') == 'message':
                     channel = message.get('channel')
-                    data = message.get('data')
+                    data = message.get('bars')
 
                     if not channel or not data:
                         continue
 
-                    # Decode data if it's bytes
+                    # Decode bars if it's bytes
                     if isinstance(data, bytes):
                         data = data.decode('utf-8')
 
-                    # Parse JSON data
+                    # Parse JSON bars
                     try:
                         quote = json.loads(data)
                         print(f"  Quote: {quote}")
                         print(f"  Channel: {channel}")
                     except json.JSONDecodeError:
                         self.logger.error(
-                            "Failed to parse quote data: %s", data)
+                            "Failed to parse quote bars: %s", data)
 
         except KeyboardInterrupt:
             self.logger.info("Interrupted by user")

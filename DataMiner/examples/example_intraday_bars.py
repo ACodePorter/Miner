@@ -103,7 +103,7 @@ class IntradayBarsExample:
 
                 if message['type'] == 'pmessage':
                     channel = self._safe_decode(message['channel'])
-                    data = self._safe_decode(message['data'])
+                    data = self._safe_decode(message['bars'])
                     bar_data = json.loads(data)
 
                     self._print_bar_update(bar_data, channel)
@@ -130,7 +130,7 @@ class IntradayBarsExample:
 
                 if message['type'] == 'message':
                     channel = self._safe_decode(message['channel'])
-                    data = self._safe_decode(message['data'])
+                    data = self._safe_decode(message['bars'])
                     bar_data = json.loads(data)
 
                     print(f"🆕 LATEST {bar_data['interval']} BAR: {bar_data['ticker']} "
@@ -203,7 +203,7 @@ class IntradayBarsExample:
                           f"{bar_data['volume']:<10,}")
                 else:
                     print(
-                        f"{ticker:<8} {interval:<6} {'No data':<20} {'N/A':<8} {'N/A':<8} {'N/A':<8} {'N/A':<8} {'N/A':<10}")
+                        f"{ticker:<8} {interval:<6} {'No bars':<20} {'N/A':<8} {'N/A':<8} {'N/A':<8} {'N/A':<8} {'N/A':<10}")
 
     def demonstrate_manual_fetching(self):
         """Demonstrate manual bar fetching for comparison"""

@@ -1,19 +1,16 @@
 import json
-import logging
 import os
-import smtplib
-import ssl
-from datetime import datetime
-from email.message import EmailMessage
+from datetime import datetime, timedelta
 from email.mime.image import MIMEImage
 from email.mime.text import MIMEText
-from typing import Any, Dict
+from time import sleep
+from typing import Dict
+from unittest import TestCase
 
 os.environ['MPLBACKEND'] = 'Agg'
 
 import numpy as np
 from detonator import get_logger
-from fastapi import WebSocket
 from pandas import DataFrame
 
 import matplotlib
@@ -21,24 +18,14 @@ import matplotlib
 matplotlib.use('Agg', force=True)
 import mplfinance as mpf
 
-_l = get_logger('Utils', logging.DEBUG)
+from minerservice.services.vegas_tunnel_integration import VegasTunnelIntegration
 
+pwd = 'xxxxx'
 
-async def send_message(websocket: WebSocket, client_id: str, type: str, message: Dict[str, Any]):
-    try:
-        d = message.copy()
-        d['type'] = type
-        d['timestamp']: datetime.now().isoformat()
-        _l.debug(f"{client_id} <- {json.dumps(d)}")
-        await websocket.send_text(json.dumps(d))
-    except Exception as e:
-        _l.error(f"{client_id} <- {e}")
-        raise Exception(f'Failed to send {message} to {client_id}') from e
+import smtplib
+import ssl
 
-
-app_password = os.environ.get('MAIL_SENDER_PWD', '')
-mail_sender = os.environ.get('MAIL_SENDER', '')
-mail_receivers = [r for r in os.environ.get('MAIL_RECEIVERS', '').split(',')]
+from email.message import EmailMessage
 
 
 def send_email(message: Dict[str, str]):
@@ -48,15 +35,16 @@ def send_email(message: Dict[str, str]):
         return
 
     _l.debug(message)
-
-    if (not app_password) or (not mail_sender) or (not mail_receivers):
-        _l.error('No credentials provided. check "MAIL_SENDER_PWD", "MAIL_SENDER", "MAIL_RECEIVERS"')
-        return
+    # Define sender and receiver email addresses
+    smtp_server = "smtp.gmail.com"
+    sender_email = "leran0222@gmail.com"  # Replace with your Gmail address
+    receiver_email = "leran0222@qq.com"  # Replace with the recipient's email
+    app_password = pwd  # Replace with your generated App Password
 
     msg = EmailMessage()
     msg['Subject'] = f'Signal @ {datetime.now()}'
     msg['From'] = 'Miner'
-    msg['To'] = 'Miner Subscriber'
+    msg['To'] = 'Leran0222'
     msg.set_content(json.dumps(message))
 
     msg.make_mixed()
@@ -70,7 +58,7 @@ def send_email(message: Dict[str, str]):
                     # Read the file's data
                     image_mime = MIMEImage(f.read())
                     image_mime.add_header(
-                        'Content-ID', image)
+                        'Content-ID', image )
                     msg.attach(image_mime)
                     image_html += f'<p>{image}</p><img src="cid:{image}" style="max-width: 100%; height: auto; display: block; margin: 0 auto;"></br>'
                 print("Attachment added successfully!")
@@ -86,21 +74,25 @@ def send_email(message: Dict[str, str]):
     </html>
 '''
     msg.attach(MIMEText(html_content, 'html'))
-    if mail_receivers:
-        # Create a secure SSL context
-        context = ssl.create_default_context()
-        try:
-            # Connect to the SMTP server and send the email
-            with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as server:
-                server.login(mail_sender, app_password)
-                for receiver in mail_receivers:
-                    server.sendmail(mail_sender, receiver, msg.as_string())
-                    _l.debug(f'Email sent to {receiver}')
-            _l.info("Email sent successfully! ✅")
-        except Exception as e:
-            _l.error(f"Error: {e} ❌")
-    else:
-        _l.warning('No mail receiver from "MAIL_RECEIVERS"')
+
+    # Create a secure SSL context
+    context = ssl.create_default_context()
+
+    try:
+        # Connect to the SMTP server and send the email
+        with smtplib.SMTP_SSL(smtp_server, 465, context=context) as server:
+            server.login(sender_email, app_password)
+            server.sendmail(sender_email, receiver_email, msg.as_string())
+        print("Email sent successfully! ✅")
+    except Exception as e:
+        print(f"Error: {e} ❌")
+
+
+# Run the function
+if __name__ == "__main__":
+    send_email()
+
+_l = get_logger('VegasTunnelIntergrationTestCase')
 
 
 def plot_vegas_double_tunnel_signals(df: DataFrame, title: str = 'Vegas Double Tunnel Strategy', interval: str = '30m'):
@@ -139,10 +131,10 @@ def plot_vegas_double_tunnel_signals(df: DataFrame, title: str = 'Vegas Double T
     ]
 
     # Plotting signals as scatter plots on the chart
-    buy_signals = np.where(df_plot['vegas_signal'] == 2, df_plot['Low'] * 0.999, np.nan)
-    sell_signals = np.where(df_plot['vegas_signal'] == -2, df_plot['High'] * 1.001, np.nan)
-    increase_signals = np.where(df_plot['wedge_signal'] == 1, df_plot['Low'] * 0.999, np.nan)
-    decrease_signals = np.where(df_plot['wedge_signal'] == -1, df_plot['High'] * 1.001, np.nan)
+    buy_signals = np.where(df_plot['vegas_signal'] == 2, df_plot['Low'] * 0.99, np.nan)
+    sell_signals = np.where(df_plot['vegas_signal'] == -2, df_plot['High'] * 1.01, np.nan)
+    increase_signals = np.where(df_plot['wedge_signal'] == 1, df_plot['Low'] * 0.99, np.nan)
+    decrease_signals = np.where(df_plot['wedge_signal'] == -1, df_plot['High'] * 1.01, np.nan)
 
     # Convert signal arrays to mplfinance addplot dictionaries, but only if they contain actual signals
     signal_plots = []
@@ -190,3 +182,32 @@ def plot_vegas_double_tunnel_signals(df: DataFrame, title: str = 'Vegas Double T
         figsize=(12, 8),
         tight_layout=True, savefig=save_params
     )
+
+
+class VegasTunnelIntergrationTestCase(TestCase):
+
+    def test_send_email(self):
+        send_email('test message')
+
+    def callback(self, all_bars: Dict[str, Dict[str, DataFrame]]):
+        interal_tickers = {}
+        for interval, ticker_bars in all_bars.items():
+            interal_tickers[interval] = []
+            for ticker, bars in ticker_bars.items():
+                last = bars.iloc[-1]
+                last_last = bars.iloc[-2]
+                if last['wedge_signal'] != 0 or last['vegas_signal'] != 0 or last_last['wedge_signal'] != 0 or \
+                        last_last['vegas_signal'] != 0:
+                    _l.debug(f'{ticker} -> signal{bars[-2:]}')
+                    plot_vegas_double_tunnel_signals(bars, ticker, interval)
+                    interal_tickers[interval].append(ticker)
+
+        send_email(interal_tickers)
+
+    def test_intergration(self):
+        vegas = VegasTunnelIntegration(self.callback)
+        vegas.start()
+        start = datetime.now()
+        while datetime.now() - start < timedelta(hours=5):
+            _l.debug(datetime.now())
+            sleep(60 * 60)

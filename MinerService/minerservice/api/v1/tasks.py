@@ -16,7 +16,7 @@ from ...tasks import (run_hk_daily_updates_task, run_us_daily_updates_task,
                       update_iwf_tickers_info_task, update_iwf_tickers_task,
                       update_iwm_tickers_daily_info_task,
                       update_iwm_tickers_info_task, update_iwm_tickers_task,
-                      update_ndx_intraday_bars_task,
+                      update_ndx_intraday_bars_task, update_spx_intraday_bars_task,
                       update_spx_daily_ma_task,
                       update_spx_tickers_daily_info_task,
                       update_spx_tickers_info_task, update_spx_tickers_task,
@@ -120,6 +120,12 @@ async def update_wedge_pop_for_index() -> str:
 @router.get('/update_ndx_intraday_bars')
 async def update_ndx_intraday_bars() -> str:
     update_ndx_intraday_bars_task.delay()
+    return 'GOOD'
+
+
+@router.get('/update_spx_intraday_bars')
+async def update_ndx_intraday_bars() -> str:
+    update_spx_intraday_bars_task.delay()
     return 'GOOD'
 
 

@@ -1,6 +1,7 @@
 import unittest
 
 from detonator import get_logger, make_db_connection
+from mongoengine import disconnect_all
 
 from dataminer import TradeCalendarShovel
 
@@ -58,6 +59,9 @@ class TradeCalTestCase(unittest.TestCase):
     def test_is_mkt_open(self):
         tcs: TradeCalendarShovel = TradeCalendarShovel.get_instance()
         _logger.info(tcs.is_mkt_open())
+
+    def tearDown(self):
+        disconnect_all()
 
 
 if __name__ == '__main__':

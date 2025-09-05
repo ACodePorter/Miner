@@ -125,7 +125,7 @@ class BarsManagerTestCase(TestCase):
                 print(f"================== Received message: {message}")
                 if message['type'] == 'message':
                     message_received = True
-                    print(f"        ========== Bar data: {message['data']}")
+                    print(f"        ========== Bar bars: {message['bars']}")
                     break
             time.sleep(1)
 

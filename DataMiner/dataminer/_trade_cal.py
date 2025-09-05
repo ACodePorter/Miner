@@ -14,7 +14,7 @@ _logger = get_logger('TradeCalendarShovel')
 
 class TradeCalendarShovel(SingletonParent):
     """
-    Trade calendar data source
+    Trade calendar bars source
     """
     DEF_START_DATE = '19800101'
     EXCHANGE_TZ_MAP = {
@@ -75,7 +75,7 @@ class TradeCalendarShovel(SingletonParent):
                     '%Y,%m,%d,%H,%M,%S,%f')
                 cal_df['close'] = cal_df['close'].dt.strftime(
                     '%Y,%m,%d,%H,%M,%S,%f')
-                _logger.debug(f'update_trade_calendar: {cal_df}')
+                # _logger.debug(f'update_trade_calendar: {cal_df}')
                 df_2_mongo(cal_df, TradeCalendar)
             else:
                 _logger.warning(
@@ -167,7 +167,7 @@ class TradeCalendarShovel(SingletonParent):
                 return this_cal_date.cal_date
             if not this_cal_date:
                 _logger.warning(
-                    f'{today_date} is not in trade calendar({country}, {exchange}, something may be wrong with data source), use last trade day before today')
+                    f'{today_date} is not in trade calendar({country}, {exchange}, something may be wrong with bars source), use last trade day before today')
             return self.last_trade_day_before_today(country=country, exchange=exchange)
         except Exception as e:
             _logger.error(
@@ -195,5 +195,6 @@ class TradeCalendarShovel(SingletonParent):
         Returns:
             bool
         '''
+        self.update_trade_calendar(country=country, exchange=exchange)
         dt = dt or datetime.now(pytz.timezone('UTC'))
         return TradeCalendar.objects(open__lte=dt, close__gte=dt, is_open=True, country=country, exchange=exchange).count() > 0

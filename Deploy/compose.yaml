@@ -144,6 +144,9 @@ services:
       - "127.0.0.1:8001:8001"
     environment:
       - RUNTIME_ENV=${RUNTIME_ENV}
+      - MAIL_SENDER=${MAIL_SENDER}
+      - MAIL_SENDER_PWD=${MAIL_SENDER_PWD}
+      - MAIL_RECEIVERS=${MAIL_RECEIVERS}
     privileged: true
     volumes:
       - miner-data:/data/miner

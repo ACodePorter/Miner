@@ -13,6 +13,7 @@ from .api.v1 import api_v1_router
 from .utils import send_message
 from .ws.connection_manager_v2 import (WebSocketConnectionManager, WsMsgTypes,
                                        get_websocket_manager)
+from .services.vegas_tunnel_integration import VegasTunnelIntegration
 
 _logger = get_logger('MinerService', logging.DEBUG)
 
@@ -31,7 +32,13 @@ async def lifespan(_: FastAPI):
     # Start background tasks
     monitoring_task = asyncio.create_task(monitor_running_status())
 
+    # Vegas Tunnel
+    vegas_tunnel_integration = VegasTunnelIntegration()
+    vegas_tunnel_integration.start()
+
     yield
+
+    vegas_tunnel_integration.start()
 
     if monitoring_task:
         monitoring_task.cancel()

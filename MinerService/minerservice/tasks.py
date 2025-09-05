@@ -194,6 +194,13 @@ def update_ndx_intraday_bars_task() -> bool:
 
 
 @app.task
+def update_spx_intraday_bars_task() -> bool:
+    _logger.debug('update_spx_intraday_bars_task')
+    mds: MarketDataShovel = MarketDataShovel.get_instance()
+    return mds.update_intraday_bars_by_idx('spx')
+
+
+@app.task
 def run_us_daily_updates_task() -> bool:
     """
     Run all daily update tasks in sequence at 16:30 (with 5 min window)
@@ -213,7 +220,7 @@ def run_us_daily_updates_task() -> bool:
         update_ndx_tickers_task.si(),
         update_ndx_tickers_info_task.si(),
         update_ndx_tickers_daily_info_task.si(),
-        update_ndx_intraday_bars_task.task.si(),
+        update_ndx_intraday_bars_task.si(),
 
         # Then update all ticker lists and their info
         update_spx_tickers_task.si(),
@@ -222,6 +229,8 @@ def run_us_daily_updates_task() -> bool:
         update_spx_daily_ma_task.si(),
         # update market breadth
         update_spx_market_breadth_task.si(),
+        # update spx intraday bars
+        # update_spx_intraday_bars_task.si(),
 
         update_iwd_tickers_task.si(),
         update_iwd_tickers_info_task.si(),
@@ -241,6 +250,7 @@ def run_us_daily_updates_task() -> bool:
         # update wedge pop/drop for all tickers
         update_wedge_pop_for_index_task.si(),
 
+        # the bellow tasks were not time insensitive
         # Then update idxs daily info
         update_us_idxs_daily_info_task.si(),
 

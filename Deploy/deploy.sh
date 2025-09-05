@@ -71,11 +71,20 @@ fi
 export GIT_USER_NAME=$(git config --get user.name)
 export GIT_USER_EMAIL=$(git config --get user.email)
 
+cd $MY_DIR
+
+set -o allexport
+[ -f .env ] && source .env
+set +o allexport
+
 echo "Github Token: $GITHUB_TOKEN"
 echo "Runtime Env: $RUNTIME_ENV"
 echo "Miner Data Dir: $MINER_DATA"
 echo "Git user name: $GIT_USER_NAME"
 echo "Git user email: $GIT_USER_EMAIL"
+echo "Mail sender: $MAIL_SENDER"
+echo "Mail sender pwd: $MAIL_SENDER_PWD"
+echo "Mail receivers: $MAIL_RECEIVERS"
 
 mkdir -p $MINER_DATA
 
@@ -88,7 +97,6 @@ if [ -n "$4" ]; then
     export MONGO_INITDB_ROOT_PASSWORD=$4
 fi
 
-cd $MY_DIR
 
 mkdir -p "$MY_DIR/base/bin/"
 wget -nv -c https://repo.anaconda.com/miniconda/Miniconda3-py312_24.11.1-0-Linux-x86_64.sh -O $MY_DIR/base/bin/Miniconda3.sh

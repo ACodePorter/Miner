@@ -71,54 +71,54 @@ class WedgePop(SingletonParent):
             _l.error(f"Error preparing data for ticker {ticker}: {str(e)}")
             return DataFrame()
 
-    def _preprocess_data(self, data: DataFrame) -> DataFrame:
+    def _preprocess_data(self, bars: DataFrame) -> DataFrame:
         # --- Indicator Calculations ---
         # Average volume calculation.
-        data['avg_volume'] = data['volume'].rolling(
+        bars['avg_volume'] = bars['volume'].rolling(
             window=WedgeConfig.VOLUME_ROLLING_WINDOW).mean()
 
         # --- Calculate Average True Range (ATR) for Volatility/Risk ---
         # ATR is a measure of volatility. It helps assess risk for setting stop-losses.
-        high_low = data['high'] - data['low']
-        high_close = np.abs(data['high'] - data['close'].shift())
-        low_close = np.abs(data['low'] - data['close'].shift())
+        high_low = bars['high'] - bars['low']
+        high_close = np.abs(bars['high'] - bars['close'].shift())
+        low_close = np.abs(bars['low'] - bars['close'].shift())
 
         # Calculate True Range as the maximum of the three ranges
         true_range = pd.concat(
             [high_low, high_close, low_close], axis=1).max(axis=1)
 
         # Calculate ATR using exponential moving average
-        data['atr'] = true_range.ewm(
+        bars['atr'] = true_range.ewm(
             alpha=1/WedgeConfig.ATR_PERIOD, adjust=False).mean()
 
-        data['atr_slope'] = data['atr'].rolling(window=3).apply(
+        bars['atr_slope'] = bars['atr'].rolling(window=3).apply(
             lambda x: np.polyfit(range(len(x)), x, 1)[
                 0] if len(x) >= 3 else np.nan
         )
 
-        data['ema_diff'] = data['ema10'] - data['ema20']
+        bars['ema_diff'] = bars['ema10'] - bars['ema20']
         # Calculate slope of EMA difference using polynomial fitting over a rolling window
-        data['ema_diff_slope'] = data['ema_diff'].rolling(window=3).apply(
+        bars['ema_diff_slope'] = bars['ema_diff'].rolling(window=3).apply(
             lambda x: np.polyfit(range(len(x)), x, 1)[
                 0] if len(x) >= 3 else np.nan
         )
-        data['is_above_emas'] = (data['close'] > data['ema10']*0.999) & (
-            data['close'] > data['ema20']*0.999)
-        data['is_below_any_emas'] = (data['close'] < data['ema10']*1.001) | (
-            data['close'] < data['ema20']*1.001)
-        data['was_below_emas'] = data['is_below_any_emas'].shift(1)
-        data['is_below_emas'] = (data['close'] < data['ema10']*1.001) & (
-            data['close'] < data['ema20']*1.001)
-        data['is_above_any_emas'] = (data['close'] > data['ema10']*0.999) | (
-            data['close'] > data['ema20']*0.999)
-        data['was_above_emas'] = data['is_above_any_emas'].shift(1)
+        bars['is_above_emas'] = (bars['close'] > bars['ema10'] * 0.999) & (
+                bars['close'] > bars['ema20'] * 0.999)
+        bars['is_below_any_emas'] = (bars['close'] < bars['ema10'] * 1.001) | (
+                bars['close'] < bars['ema20'] * 1.001)
+        bars['was_below_emas'] = bars['is_below_any_emas'].shift(1)
+        bars['is_below_emas'] = (bars['close'] < bars['ema10'] * 1.001) & (
+                bars['close'] < bars['ema20'] * 1.001)
+        bars['is_above_any_emas'] = (bars['close'] > bars['ema10'] * 0.999) | (
+                bars['close'] > bars['ema20'] * 0.999)
+        bars['was_above_emas'] = bars['is_above_any_emas'].shift(1)
         # Calculate relative volume safely, avoiding division by zero or NaN
-        data['is_high_rvol'] = (
-            (data['volume'] / data['avg_volume'] >= WedgeConfig.MIN_RELATIVE_VOLUME) &
-            (data['avg_volume'].notna()) &
-            (data['avg_volume'] > 0)
+        bars['is_high_rvol'] = (
+                (bars['volume'] / bars['avg_volume'] >= WedgeConfig.MIN_RELATIVE_VOLUME) &
+                (bars['avg_volume'].notna()) &
+                (bars['avg_volume'] > 0)
         )
-        return data
+        return bars
 
     def _is_wedge_pop(self, is_above_emas: bool, was_below_emas: bool, ema_diff_slope: float, volume_increased: bool, atr_slope: float) -> bool:
         return is_above_emas and was_below_emas and ema_diff_slope > 0 and volume_increased and atr_slope < 0

@@ -1,12 +1,14 @@
 import unittest
 from datetime import datetime
+from typing import Dict, List
 
 from detonator import make_db_connection
+from mongoengine import disconnect_all
+from pandas import DataFrame
 from yfinance import Ticker as YTicker
 
 from dataminer import MarketDataShovel
 
-from mongoengine import disconnect_all
 
 class MarketDataShvelTestCase(unittest.TestCase):
 
@@ -137,8 +139,19 @@ class MarketDataShvelTestCase(unittest.TestCase):
         md: MarketDataShovel = MarketDataShovel.get_instance()
         md.update_intraday_bars_by_idx('ndx')
 
+    def test_get_intraday_bars(self):
+        md: MarketDataShovel = MarketDataShovel.get_instance()
+        bars: Dict[str, List[DataFrame]] = md.get_intraday_bars(['AAPL', 'NVDA'], ['30m', '65m'])
+        for i, ds in bars.items():
+            print(i)
+            for t, d in ds.items():
+                print(t)
+                print(d)
+
+
     def tearDown(self):
         disconnect_all()
+
 
 if __name__ == '__main__':
     unittest.main()
