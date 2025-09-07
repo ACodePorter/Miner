@@ -1,5 +1,5 @@
-ARG BASE_IMAGE
-FROM ${BASE_IMAGE}
+ARG BASE_IMAGE=miner-base:latest
+FROM --platform=linux/amd64 ${BASE_IMAGE} AS base
 
 COPY --chown=miner:miner release/ /miner_release/
 COPY --chown=miner:miner docker_entry.sh /miner_release/
