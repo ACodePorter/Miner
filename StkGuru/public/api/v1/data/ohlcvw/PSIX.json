@@ -1,35 +1,5 @@
 [
   {
-    "trade_date": "2022,09,07,00,00,00,000000",
-    "ticker": "PSIX",
-    "open": 2.0,
-    "high": 2.0,
-    "low": 2.0,
-    "close": 2.0,
-    "volume": 0.0,
-    "wedge_status": "none"
-  },
-  {
-    "trade_date": "2022,09,08,00,00,00,000000",
-    "ticker": "PSIX",
-    "open": 2.0,
-    "high": 2.0,
-    "low": 2.0,
-    "close": 2.0,
-    "volume": 0.0,
-    "wedge_status": "none"
-  },
-  {
-    "trade_date": "2022,09,09,00,00,00,000000",
-    "ticker": "PSIX",
-    "open": 1.7999999523,
-    "high": 1.7999999523,
-    "low": 1.7999999523,
-    "close": 1.7999999523,
-    "volume": 800.0,
-    "wedge_status": "drop"
-  },
-  {
     "trade_date": "2022,09,12,00,00,00,000000",
     "ticker": "PSIX",
     "open": 2.0,
@@ -7487,6 +7457,36 @@
     "low": 77.25,
     "close": 81.0899963379,
     "volume": 733431.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,03,00,00,00,000000",
+    "ticker": "PSIX",
+    "open": 83.7699966431,
+    "high": 88.0800018311,
+    "low": 82.6800003052,
+    "close": 87.2600021362,
+    "volume": 854600.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,09,04,00,00,00,000000",
+    "ticker": "PSIX",
+    "open": 87.4000015259,
+    "high": 89.5100021362,
+    "low": 82.9199981689,
+    "close": 86.9199981689,
+    "volume": 680600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,05,00,00,00,000000",
+    "ticker": "PSIX",
+    "open": 88.1500015259,
+    "high": 89.0,
+    "low": 81.8199996948,
+    "close": 86.8399963379,
+    "volume": 508400.0,
     "wedge_status": "none"
   }
 ]

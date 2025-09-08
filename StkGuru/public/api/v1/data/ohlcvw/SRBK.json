@@ -4448,5 +4448,35 @@
     "close": 15.0,
     "volume": 24276.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,03,00,00,00,000000",
+    "ticker": "SRBK",
+    "open": 15.0100002289,
+    "high": 15.0100002289,
+    "low": 14.8800001144,
+    "close": 14.8800001144,
+    "volume": 21700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,04,00,00,00,000000",
+    "ticker": "SRBK",
+    "open": 14.9149999619,
+    "high": 15.1800003052,
+    "low": 14.9149999619,
+    "close": 15.1700000763,
+    "volume": 28400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,05,00,00,00,000000",
+    "ticker": "SRBK",
+    "open": 15.1300001144,
+    "high": 15.1800003052,
+    "low": 14.9149999619,
+    "close": 15.0,
+    "volume": 35800.0,
+    "wedge_status": "none"
   }
 ]

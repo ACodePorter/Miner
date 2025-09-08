@@ -4898,5 +4898,35 @@
     "close": 1.5,
     "volume": 343377.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,03,00,00,00,000000",
+    "ticker": "SPWR",
+    "open": 1.4800000191,
+    "high": 1.5199999809,
+    "low": 1.4400000572,
+    "close": 1.4900000095,
+    "volume": 880700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,04,00,00,00,000000",
+    "ticker": "SPWR",
+    "open": 1.4800000191,
+    "high": 1.5399999619,
+    "low": 1.4800000191,
+    "close": 1.5199999809,
+    "volume": 429000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,05,00,00,00,000000",
+    "ticker": "SPWR",
+    "open": 1.5599999428,
+    "high": 1.5700000525,
+    "low": 1.4800000191,
+    "close": 1.5,
+    "volume": 560600.0,
+    "wedge_status": "none"
   }
 ]

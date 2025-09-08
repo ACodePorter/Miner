@@ -1,35 +1,5 @@
 [
   {
-    "trade_date": "2022,09,07,00,00,00,000000",
-    "ticker": "KRRO",
-    "open": 103.5,
-    "high": 108.0,
-    "low": 102.5500030518,
-    "close": 106.5,
-    "volume": 1264.0,
-    "wedge_status": "none"
-  },
-  {
-    "trade_date": "2022,09,08,00,00,00,000000",
-    "ticker": "KRRO",
-    "open": 104.0,
-    "high": 109.0,
-    "low": 103.5,
-    "close": 107.0,
-    "volume": 1166.0,
-    "wedge_status": "none"
-  },
-  {
-    "trade_date": "2022,09,09,00,00,00,000000",
-    "ticker": "KRRO",
-    "open": 108.5,
-    "high": 110.5,
-    "low": 106.1500015259,
-    "close": 107.0,
-    "volume": 2064.0,
-    "wedge_status": "none"
-  },
-  {
     "trade_date": "2022,09,12,00,00,00,000000",
     "ticker": "KRRO",
     "open": 107.5,
@@ -7487,6 +7457,36 @@
     "low": 20.2700004578,
     "close": 22.2049999237,
     "volume": 248219.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,03,00,00,00,000000",
+    "ticker": "KRRO",
+    "open": 21.9899997711,
+    "high": 27.3400001526,
+    "low": 21.1200008392,
+    "close": 26.0349998474,
+    "volume": 378300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,04,00,00,00,000000",
+    "ticker": "KRRO",
+    "open": 25.8999996185,
+    "high": 28.2999992371,
+    "low": 24.0499992371,
+    "close": 28.0849990845,
+    "volume": 331100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,05,00,00,00,000000",
+    "ticker": "KRRO",
+    "open": 28.1399993896,
+    "high": 34.7400016785,
+    "low": 26.7099990845,
+    "close": 33.1800003052,
+    "volume": 1010800.0,
     "wedge_status": "none"
   }
 ]

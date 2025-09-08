@@ -1,35 +1,5 @@
 [
   {
-    "trade_date": "2022,09,07,00,00,00,000000",
-    "ticker": "HURA",
-    "open": 255.5,
-    "high": 262.5,
-    "low": 243.25,
-    "close": 259.0,
-    "volume": 777.0,
-    "wedge_status": "none"
-  },
-  {
-    "trade_date": "2022,09,08,00,00,00,000000",
-    "ticker": "HURA",
-    "open": 257.25,
-    "high": 259.0,
-    "low": 238.0,
-    "close": 255.5,
-    "volume": 669.0,
-    "wedge_status": "none"
-  },
-  {
-    "trade_date": "2022,09,09,00,00,00,000000",
-    "ticker": "HURA",
-    "open": 260.75,
-    "high": 320.25,
-    "low": 250.25,
-    "close": 295.75,
-    "volume": 2769.0,
-    "wedge_status": "none"
-  },
-  {
     "trade_date": "2022,09,12,00,00,00,000000",
     "ticker": "HURA",
     "open": 306.25,
@@ -7487,6 +7457,36 @@
     "low": 2.5499999523,
     "close": 2.5899999142,
     "volume": 226404.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,03,00,00,00,000000",
+    "ticker": "HURA",
+    "open": 2.5899999142,
+    "high": 2.7079999447,
+    "low": 2.5399999619,
+    "close": 2.5999999046,
+    "volume": 153500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,04,00,00,00,000000",
+    "ticker": "HURA",
+    "open": 2.5999999046,
+    "high": 2.5999999046,
+    "low": 2.5199999809,
+    "close": 2.5299999714,
+    "volume": 168900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,05,00,00,00,000000",
+    "ticker": "HURA",
+    "open": 2.5399999619,
+    "high": 2.5769999027,
+    "low": 2.4300000668,
+    "close": 2.5499999523,
+    "volume": 207000.0,
     "wedge_status": "none"
   }
 ]

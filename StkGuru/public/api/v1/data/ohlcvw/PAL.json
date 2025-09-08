@@ -2848,5 +2848,35 @@
     "close": 7.7199997902,
     "volume": 122715.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,03,00,00,00,000000",
+    "ticker": "PAL",
+    "open": 7.5999999046,
+    "high": 7.6100001335,
+    "low": 7.3499999046,
+    "close": 7.4499998093,
+    "volume": 100500.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,04,00,00,00,000000",
+    "ticker": "PAL",
+    "open": 7.5,
+    "high": 7.6199998856,
+    "low": 7.3200001717,
+    "close": 7.5,
+    "volume": 135800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,05,00,00,00,000000",
+    "ticker": "PAL",
+    "open": 7.5599999428,
+    "high": 7.6999998093,
+    "low": 7.3499999046,
+    "close": 7.5,
+    "volume": 121900.0,
+    "wedge_status": "none"
   }
 ]

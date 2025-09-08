@@ -1,35 +1,5 @@
 [
   {
-    "trade_date": "2022,09,07,00,00,00,000000",
-    "ticker": "RVSB",
-    "open": 6.2136955261,
-    "high": 6.2867977547,
-    "low": 6.2136955261,
-    "close": 6.2136955261,
-    "volume": 8100.0,
-    "wedge_status": "none"
-  },
-  {
-    "trade_date": "2022,09,08,00,00,00,000000",
-    "ticker": "RVSB",
-    "open": 6.2867977595,
-    "high": 6.2867977595,
-    "low": 6.1680064201,
-    "close": 6.1680064201,
-    "volume": 3900.0,
-    "wedge_status": "none"
-  },
-  {
-    "trade_date": "2022,09,09,00,00,00,000000",
-    "ticker": "RVSB",
-    "open": 6.1588693123,
-    "high": 6.3324873481,
-    "low": 6.1497317502,
-    "close": 6.2593851089,
-    "volume": 8000.0,
-    "wedge_status": "none"
-  },
-  {
     "trade_date": "2022,09,12,00,00,00,000000",
     "ticker": "RVSB",
     "open": 6.2593845629,
@@ -7488,5 +7458,35 @@
     "close": 4.9299998283,
     "volume": 22915.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,03,00,00,00,000000",
+    "ticker": "RVSB",
+    "open": 4.9000000954,
+    "high": 4.9699997902,
+    "low": 4.7399997711,
+    "close": 4.8299999237,
+    "volume": 71000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,04,00,00,00,000000",
+    "ticker": "RVSB",
+    "open": 4.8600001335,
+    "high": 5.0,
+    "low": 4.8400001526,
+    "close": 5.0,
+    "volume": 52900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,05,00,00,00,000000",
+    "ticker": "RVSB",
+    "open": 5.0300002098,
+    "high": 5.1199998856,
+    "low": 5.0,
+    "close": 5.0399999619,
+    "volume": 44600.0,
+    "wedge_status": "pop"
   }
 ]

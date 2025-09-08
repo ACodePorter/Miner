@@ -1,35 +1,5 @@
 [
   {
-    "trade_date": "2022,09,07,00,00,00,000000",
-    "ticker": "KRMD",
-    "open": 2.3199999332,
-    "high": 2.4200000763,
-    "low": 2.3199999332,
-    "close": 2.3299999237,
-    "volume": 5200.0,
-    "wedge_status": "none"
-  },
-  {
-    "trade_date": "2022,09,08,00,00,00,000000",
-    "ticker": "KRMD",
-    "open": 2.3699998856,
-    "high": 2.5,
-    "low": 2.3299999237,
-    "close": 2.5,
-    "volume": 22300.0,
-    "wedge_status": "none"
-  },
-  {
-    "trade_date": "2022,09,09,00,00,00,000000",
-    "ticker": "KRMD",
-    "open": 2.4349999428,
-    "high": 2.5250000954,
-    "low": 2.4349999428,
-    "close": 2.5,
-    "volume": 37800.0,
-    "wedge_status": "none"
-  },
-  {
     "trade_date": "2022,09,12,00,00,00,000000",
     "ticker": "KRMD",
     "open": 2.4800000191,
@@ -7488,5 +7458,35 @@
     "close": 4.1100001335,
     "volume": 86253.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,03,00,00,00,000000",
+    "ticker": "KRMD",
+    "open": 4.1100001335,
+    "high": 4.1999998093,
+    "low": 4.0300002098,
+    "close": 4.0399999619,
+    "volume": 78400.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,04,00,00,00,000000",
+    "ticker": "KRMD",
+    "open": 4.0700001717,
+    "high": 4.1100001335,
+    "low": 4.0500001907,
+    "close": 4.0999999046,
+    "volume": 65400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,05,00,00,00,000000",
+    "ticker": "KRMD",
+    "open": 4.1199998856,
+    "high": 4.1449999809,
+    "low": 4.0100002289,
+    "close": 4.0599999428,
+    "volume": 94500.0,
+    "wedge_status": "drop"
   }
 ]

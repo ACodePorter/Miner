@@ -1,35 +1,5 @@
 [
   {
-    "trade_date": "2022,09,07,00,00,00,000000",
-    "ticker": "FFAI",
-    "open": 9417.599609375,
-    "high": 9696.0,
-    "low": 9129.599609375,
-    "close": 9600.0,
-    "volume": 2573.0,
-    "wedge_status": "none"
-  },
-  {
-    "trade_date": "2022,09,08,00,00,00,000000",
-    "ticker": "FFAI",
-    "open": 9600.0,
-    "high": 9696.0,
-    "low": 8448.0,
-    "close": 8764.7998046875,
-    "volume": 3766.0,
-    "wedge_status": "none"
-  },
-  {
-    "trade_date": "2022,09,09,00,00,00,000000",
-    "ticker": "FFAI",
-    "open": 8784.0,
-    "high": 11712.0,
-    "low": 8640.0,
-    "close": 10656.0,
-    "volume": 6047.0,
-    "wedge_status": "none"
-  },
-  {
     "trade_date": "2022,09,12,00,00,00,000000",
     "ticker": "FFAI",
     "open": 12000.0,
@@ -7487,6 +7457,36 @@
     "low": 2.0299999714,
     "close": 2.0799999237,
     "volume": 12797656.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,03,00,00,00,000000",
+    "ticker": "FFAI",
+    "open": 2.0999999046,
+    "high": 2.0999999046,
+    "low": 2.0,
+    "close": 2.0899999142,
+    "volume": 9457200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,04,00,00,00,000000",
+    "ticker": "FFAI",
+    "open": 2.0999999046,
+    "high": 2.1080000401,
+    "low": 1.8999999762,
+    "close": 1.9099999666,
+    "volume": 12675300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,05,00,00,00,000000",
+    "ticker": "FFAI",
+    "open": 1.8899999857,
+    "high": 2.0199999809,
+    "low": 1.7749999762,
+    "close": 1.8099999428,
+    "volume": 15741190.0,
     "wedge_status": "none"
   }
 ]
