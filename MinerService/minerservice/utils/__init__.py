@@ -38,7 +38,7 @@ async def send_message(websocket: WebSocket, client_id: str, type: str, message:
 
 app_password = os.environ.get('MAIL_SENDER_PWD', '')
 mail_sender = os.environ.get('MAIL_SENDER', '')
-mail_receivers = [r for r in os.environ.get('MAIL_RECEIVERS', '').split(',')]
+mail_receivers = [r.strip() for r in os.environ.get('MAIL_RECEIVERS', '').split(',')]
 
 
 def send_email(message: Dict[str, str]):
@@ -57,7 +57,7 @@ def send_email(message: Dict[str, str]):
     msg = EmailMessage()
     msg['Subject'] = f'Signal @ {datetime.now()}'
     msg['From'] = 'Miner'
-    msg['To'] = 'Miner Subscriber'
+    msg['To'] = ', '.join(mail_receivers)
     msg.set_content(json.dumps(message))
 
     msg.make_mixed()
@@ -95,9 +95,8 @@ def send_email(message: Dict[str, str]):
             # Connect to the SMTP server and send the email
             with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as server:
                 server.login(mail_sender, app_password)
-                for receiver in mail_receivers:
-                    server.sendmail(mail_sender, receiver, msg.as_string())
-                    _l.debug(f'Email sent to {receiver}')
+                server.sendmail(mail_sender, mail_receivers, msg.as_string())
+                _l.debug(f'Email sent to {mail_receivers}')
             _l.info("Email sent successfully! ✅")
         except Exception as e:
             _l.error(f"Error: {e} ❌")
