@@ -7488,5 +7488,15 @@
     "close": 63.75,
     "volume": 3072948.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,08,00,00,00,000000",
+    "ticker": "CG",
+    "open": 64.0,
+    "high": 64.2300033569,
+    "low": 63.1800003052,
+    "close": 64.1500015259,
+    "volume": 2614032.0,
+    "wedge_status": "none"
   }
 ]

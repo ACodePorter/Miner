@@ -1828,5 +1828,15 @@
     "close": 7.4699997902,
     "volume": 749500.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,08,00,00,00,000000",
+    "ticker": "KLC",
+    "open": 7.4499998093,
+    "high": 7.6799998283,
+    "low": 7.3699998856,
+    "close": 7.5,
+    "volume": 882313.0,
+    "wedge_status": "none"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 87.5,
     "volume": 232300.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,08,00,00,00,000000",
+    "ticker": "SFBS",
+    "open": 87.0400009155,
+    "high": 87.3949966431,
+    "low": 85.6100006104,
+    "close": 86.4700012207,
+    "volume": 252253.0,
+    "wedge_status": "none"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 77.6299972534,
     "volume": 1673863.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,08,00,00,00,000000",
+    "ticker": "ATI",
+    "open": 77.9300003052,
+    "high": 78.2149963379,
+    "low": 76.6800003052,
+    "close": 77.5,
+    "volume": 999906.0,
+    "wedge_status": "none"
   }
 ]

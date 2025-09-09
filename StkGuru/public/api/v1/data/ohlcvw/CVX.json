@@ -7488,5 +7488,15 @@
     "close": 153.6600036621,
     "volume": 10596934.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,08,00,00,00,000000",
+    "ticker": "CVX",
+    "open": 153.9100036621,
+    "high": 155.0299987793,
+    "low": 152.875,
+    "close": 154.0,
+    "volume": 5540192.0,
+    "wedge_status": "none"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 252.7599945068,
     "volume": 3212704.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,08,00,00,00,000000",
+    "ticker": "TMUS",
+    "open": 241.125,
+    "high": 247.25,
+    "low": 237.3999938965,
+    "close": 242.8999938965,
+    "volume": 6292312.0,
+    "wedge_status": "drop"
   }
 ]

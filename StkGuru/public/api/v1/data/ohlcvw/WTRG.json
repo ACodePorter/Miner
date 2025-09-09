@@ -7488,5 +7488,15 @@
     "close": 39.3499984741,
     "volume": 1321515.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,08,00,00,00,000000",
+    "ticker": "WTRG",
+    "open": 39.25,
+    "high": 39.3499984741,
+    "low": 38.1749992371,
+    "close": 38.3699989319,
+    "volume": 1599264.0,
+    "wedge_status": "drop"
   }
 ]

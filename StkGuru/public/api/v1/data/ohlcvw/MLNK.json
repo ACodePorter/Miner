@@ -7488,5 +7488,15 @@
     "close": 19.9400005341,
     "volume": 172600.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,08,00,00,00,000000",
+    "ticker": "MLNK",
+    "open": 19.9899997711,
+    "high": 20.0400009155,
+    "low": 19.9200000763,
+    "close": 20.0,
+    "volume": 465252.0,
+    "wedge_status": "none"
   }
 ]

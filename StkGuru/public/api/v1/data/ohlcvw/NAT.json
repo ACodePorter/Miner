@@ -7488,5 +7488,15 @@
     "close": 3.2699999809,
     "volume": 2382600.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,08,00,00,00,000000",
+    "ticker": "NAT",
+    "open": 3.2899999619,
+    "high": 3.3199999332,
+    "low": 3.2200000286,
+    "close": 3.25,
+    "volume": 2346659.0,
+    "wedge_status": "none"
   }
 ]
