@@ -14,9 +14,6 @@ jobs:
     - name: Access the environment variable
       run: |
         echo "The miner environment is set to: ${{ env.MINER_ENV }}"
-        echo $MINER_ENV
-      env:
-        MINER_ENV: ${{ env.MINER_ENV }}
 
     - name: Checkout code
       uses: actions/checkout@v4
@@ -26,10 +23,6 @@ jobs:
       
     - name: Run the script
       run: ./Deploy/deploy.sh
-      env:
-        # Add your environment variables here
-        MINER_ENV: ${{ env.MINER_ENV }}
-      
         
     - name: Cleanup workspace
       if: always()  # Run cleanup even if previous steps fail
