@@ -15,6 +15,8 @@ jobs:
       run: |
         echo "The miner environment is set to: ${{ env.MINER_ENV }}"
         echo $MINER_ENV
+      env:
+        MINER_ENV: ${{ env.MINER_ENV }}
 
     - name: Checkout code
       uses: actions/checkout@v4
