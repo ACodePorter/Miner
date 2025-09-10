@@ -16,11 +16,11 @@ jobs:
     - name: Make script executable
       run: chmod +x Deploy/deploy.sh
       
-    # - name: Run the script
-    #   run: ./Deploy/deploy.sh
-    #   env:
-    #     # Add your environment variables here
-    #     MINER_ENV: ${{ env.MINER_ENV }}
+    - name: Run the script
+      run: ./Deploy/deploy.sh
+      env:
+        # Add your environment variables here
+        MINER_ENV: ${{ env.MINER_ENV }}
         
     - name: Cleanup workspace
       if: always()  # Run cleanup even if previous steps fail
