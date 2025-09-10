@@ -28,5 +28,7 @@ jobs:
         echo "Cleaning up workspace..."
         cd ${{ github.workspace }}
         cd ..
-        rm -rf ${{ github.workspace }}
+        rm -rf ${{ github.workspace }}/*
         echo "Workspace cleanup completed"
+        pwd
+        ls -AGl
