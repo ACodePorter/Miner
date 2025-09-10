@@ -1,0 +1,23 @@
+name: Deploy Miner
+
+on:
+  workflow_dispatch:  # Allows manual triggering
+  push:
+    branches: [ main ]
+
+jobs:
+  run-script:
+    runs-on: self-hosted  # This is the key for self-hosted runner
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+#     - name: Make script executable
+#       run: chmod +x Deploy/deploy.sh
+#       
+#     - name: Run the script
+#       run: ./Deploy/deploy.sh
+#       env:
+#         # Add your environment variables here
+#         MINER_ENV: ${{ env.MINER_ENV }}
