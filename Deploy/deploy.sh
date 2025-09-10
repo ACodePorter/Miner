@@ -90,10 +90,6 @@ echo "✅ All required environment variables are set"
 
 cd $MY_DIR
 
-set -o allexport
-[ -f $MINER_ENV ] && source $MINER_ENV
-set +o allexport
-
 mkdir -p $MINER_ROOT/mongogo
 
 mkdir -p "$MY_DIR/base/bin/"
