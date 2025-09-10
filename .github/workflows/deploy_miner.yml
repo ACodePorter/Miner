@@ -8,9 +8,7 @@ on:
 jobs:
   run-script:
     runs-on: self-hosted  # This is the key for self-hosted runner
-    env:
-        # Add your environment variables here
-        MINER_ENV: ${{ env.MINER_ENV }}
+    
     
     steps:
     - name: Access the environment variable
@@ -26,6 +24,9 @@ jobs:
       
     - name: Run the script
       run: ./Deploy/deploy.sh
+      env:
+        # Add your environment variables here
+        MINER_ENV: ${{ env.MINER_ENV }}
       
         
     - name: Cleanup workspace
