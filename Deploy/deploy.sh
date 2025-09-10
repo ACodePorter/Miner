@@ -46,21 +46,14 @@ usage() {
 }
 
 # Check if MINER_ENV is set and points to a valid file
-if [ -z "$MINER_ENV" ]; then
-    echo "❌ Error: MINER_ENV environment variable is not set"
-    exit 1
+if [ ! -z "$MINER_ENV" ] && [ -f "$MINER_ENV" ]; then
+    echo "🔍 Sourcing environment file: $MINER_ENV"
+    # Source the MINER_ENV file
+    echo "📁 Sourcing environment file: $MINER_ENV"
+    set -o allexport
+    source "$MINER_ENV"
+    set +o allexport
 fi
-
-if [ ! -f "$MINER_ENV" ]; then
-    echo "❌ Error: MINER_ENV file does not exist: $MINER_ENV"
-    exit 1
-fi
-
-# Source the MINER_ENV file
-echo "📁 Sourcing environment file: $MINER_ENV"
-set -o allexport
-source "$MINER_ENV"
-set +o allexport
 
 # Validate required environment variables
 echo "🔍 Validating required environment variables..."
