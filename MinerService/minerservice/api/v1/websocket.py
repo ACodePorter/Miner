@@ -3,7 +3,7 @@
 from typing import Any, Dict, Optional
 
 from fastapi import APIRouter
-from minerservice.ws.connection_manager import get_websocket_manager
+from ...ws.connection_manager_v2 import get_websocket_manager
 
 router = APIRouter(prefix="/websocket", tags=["websocket"])
 

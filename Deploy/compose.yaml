@@ -5,7 +5,7 @@ services:
     container_name: miner-mongodb
     hostname: miner-mongodb
     volumes:
-      - "${HOME}/.miner/mongogo:/data/db"
+      - mongogo-db:/data/db
     ports:
       - "127.0.0.1:27017:27017"
 
@@ -149,7 +149,6 @@ services:
       - MAIL_RECEIVERS=${MAIL_RECEIVERS}
     privileged: true
     volumes:
-      - miner-data:/data/miner
       - miner-dev:/minerdev
 
 volumes:
@@ -159,9 +158,9 @@ volumes:
       type: none
       o: bind
       device: ${PWD}/../
-  miner-data:
+  mongogo-db:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: ${MINER_DATA}
+      device: ${MINER_ROOT}/mongogo

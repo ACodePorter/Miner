@@ -5,7 +5,7 @@ from contextlib import asynccontextmanager, suppress
 from typing import Optional
 
 # yfinance import removed - using BarsManager integration only
-from detonator import get_logger
+from detonator import get_logger, is_prod
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -33,12 +33,14 @@ async def lifespan(_: FastAPI):
     monitoring_task = asyncio.create_task(monitor_running_status())
 
     # Vegas Tunnel
-    vegas_tunnel_integration = VegasTunnelIntegration()
-    vegas_tunnel_integration.start()
+    if is_prod():
+        vegas_tunnel_integration = VegasTunnelIntegration()
+        vegas_tunnel_integration.start()
 
     yield
 
-    vegas_tunnel_integration.start()
+    if is_prod():
+        vegas_tunnel_integration.start()
 
     if monitoring_task:
         monitoring_task.cancel()

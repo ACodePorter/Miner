@@ -41,62 +41,67 @@ trap exit_callback EXIT
 echo "Let's go ..."
 
 usage() {
-    echo "Usage: $0 <github_pat_token> <runtime_env[PROD|TEST|DEV]> [miner_data_dir]"
+    echo "you must have the environment variables set to deploy"
     exit 1
 }
-if [ -n "$1" ]; then
-    export GITHUB_TOKEN=$1
-else
-    usage
+
+# Check if MINER_ENV is set and points to a valid file
+if [ -z "$MINER_ENV" ]; then
+    echo "❌ Error: MINER_ENV environment variable is not set"
     exit 1
 fi
 
-
-
-if [ -n "$2" ]; then
-    export RUNTIME_ENV=$2
-else
-    usage
+if [ ! -f "$MINER_ENV" ]; then
+    echo "❌ Error: MINER_ENV file does not exist: $MINER_ENV"
     exit 1
 fi
 
-mkdir -p $HOME/.miner/mongogo
+# Source the MINER_ENV file
+echo "📁 Sourcing environment file: $MINER_ENV"
+set -o allexport
+source "$MINER_ENV"
+set +o allexport
 
-export MINER_DATA=$HOME/.miner/data
-if [ -n "$3" ];then
-    export MINER_DATA=$2
+# Validate required environment variables
+echo "🔍 Validating required environment variables..."
+REQUIRED_VARS=(
+    "GITHUB_TOKEN"
+    "RUNTIME_ENV"
+    "MINER_ROOT"
+    "MAIL_SENDER"
+    "MAIL_SENDER_PWD"
+    "MAIL_RECEIVERS"
+    "GIT_USER_NAME"
+    "GIT_USER_EMAIL"
+)
+
+MISSING_VARS=()
+for var in "${REQUIRED_VARS[@]}"; do
+    if [ -z "${!var}" ]; then
+        MISSING_VARS+=("$var")
+    fi
+done
+
+
+if [ ${#MISSING_VARS[@]} -gt 0 ]; then
+    echo "❌ Error: Missing required environment variables:"
+    for var in "${MISSING_VARS[@]}"; do
+        echo "   - $var"
+    done
+    echo ""
+    echo "Please ensure all required variables are set in your MINER_ENV file: $MINER_ENV"
+    exit 1
 fi
 
-# Get git user name and email from host
-export GIT_USER_NAME=$(git config --get user.name)
-export GIT_USER_EMAIL=$(git config --get user.email)
+echo "✅ All required environment variables are set"
 
 cd $MY_DIR
 
 set -o allexport
-[ -f .env ] && source .env
+[ -f $MINER_ENV ] && source $MINER_ENV
 set +o allexport
 
-echo "Github Token: $GITHUB_TOKEN"
-echo "Runtime Env: $RUNTIME_ENV"
-echo "Miner Data Dir: $MINER_DATA"
-echo "Git user name: $GIT_USER_NAME"
-echo "Git user email: $GIT_USER_EMAIL"
-echo "Mail sender: $MAIL_SENDER"
-echo "Mail sender pwd: $MAIL_SENDER_PWD"
-echo "Mail receivers: $MAIL_RECEIVERS"
-
-mkdir -p $MINER_DATA
-
-export MONGO_INITDB_ROOT_USERNAME=root
-export MONGO_INITDB_ROOT_PASSWORD=12qw
-if [ -n "$3" ]; then
-    export MONGO_INITDB_ROOT_USERNAME=$3
-fi
-if [ -n "$4" ]; then
-    export MONGO_INITDB_ROOT_PASSWORD=$4
-fi
-
+mkdir -p $MINER_ROOT/mongogo
 
 mkdir -p "$MY_DIR/base/bin/"
 wget -nv -c https://repo.anaconda.com/miniconda/Miniconda3-py312_24.11.1-0-Linux-x86_64.sh -O $MY_DIR/base/bin/Miniconda3.sh

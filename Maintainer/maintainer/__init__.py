@@ -1,6 +1,6 @@
 from celery import Celery
 from celery.schedules import crontab
-from detonator import get_logger
+from detonator import get_logger, is_prod
 from minerworkers import app
 
 from ._ghpages_maintainer import GhPagesMaintainer
@@ -19,6 +19,9 @@ def setup_periodic_tasks(sender: Celery, **kwargs):
     Set up periodic tasks for Celery Beat.
     This function is connected to the `on_after_configure` signal.
     """
+    if not is_prod():
+        _logger.info('Skipping periodic tasks for non production environment')
+        return
     # Add the daily update task.
     _logger.info(
         'Setting up periodic task for maintainer ...')
