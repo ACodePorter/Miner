@@ -7498,5 +7498,15 @@
     "close": 55.9399986267,
     "volume": 275784.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,09,00,00,00,000000",
+    "ticker": "VVX",
+    "open": 55.25,
+    "high": 55.8100013733,
+    "low": 54.0499992371,
+    "close": 54.6500015259,
+    "volume": 205742.0,
+    "wedge_status": "none"
   }
 ]

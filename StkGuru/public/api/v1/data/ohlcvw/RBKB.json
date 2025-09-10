@@ -7498,5 +7498,15 @@
     "close": 13.279999733,
     "volume": 2194.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,09,00,00,00,000000",
+    "ticker": "RBKB",
+    "open": 13.1321001053,
+    "high": 13.4600000381,
+    "low": 12.507399559,
+    "close": 13.0,
+    "volume": 7429.0,
+    "wedge_status": "drop"
   }
 ]

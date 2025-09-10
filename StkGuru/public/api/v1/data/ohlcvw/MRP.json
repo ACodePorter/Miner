@@ -1038,5 +1038,15 @@
     "close": 34.2799987793,
     "volume": 1395191.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,09,00,00,00,000000",
+    "ticker": "MRP",
+    "open": 34.4300003052,
+    "high": 35.0099983215,
+    "low": 34.1899986267,
+    "close": 35.0,
+    "volume": 1037022.0,
+    "wedge_status": "none"
   }
 ]

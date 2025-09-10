@@ -7498,5 +7498,15 @@
     "close": 58.9799995422,
     "volume": 34746.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,09,00,00,00,000000",
+    "ticker": "RUSHB",
+    "open": 58.2299995422,
+    "high": 58.2299995422,
+    "low": 57.4500007629,
+    "close": 57.6500015259,
+    "volume": 31548.0,
+    "wedge_status": "drop"
   }
 ]

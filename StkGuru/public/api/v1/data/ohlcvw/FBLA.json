@@ -1738,5 +1738,15 @@
     "close": 11.9600000381,
     "volume": 34468.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,09,00,00,00,000000",
+    "ticker": "FBLA",
+    "open": 11.9949998856,
+    "high": 12.0,
+    "low": 11.9200000763,
+    "close": 11.9899997711,
+    "volume": 38974.0,
+    "wedge_status": "none"
   }
 ]

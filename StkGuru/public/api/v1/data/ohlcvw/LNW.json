@@ -7498,5 +7498,15 @@
     "close": 89.5,
     "volume": 1005440.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,09,00,00,00,000000",
+    "ticker": "LNW",
+    "open": 89.4700012207,
+    "high": 90.0800018311,
+    "low": 87.5899963379,
+    "close": 87.9800033569,
+    "volume": 826202.0,
+    "wedge_status": "none"
   }
 ]
