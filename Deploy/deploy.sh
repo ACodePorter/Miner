@@ -93,7 +93,16 @@ cd $MY_DIR
 mkdir -p $MINER_ROOT/mongogo
 
 mkdir -p "$MY_DIR/base/bin/"
-wget -nv -c https://repo.anaconda.com/miniconda/Miniconda3-py312_24.11.1-0-Linux-x86_64.sh -O $MY_DIR/base/bin/Miniconda3.sh
+
+# Detect platform and download appropriate Miniconda version
+ARCH=$(uname -m)
+if [ "$ARCH" = "arm64" ] || [ "$ARCH" = "aarch64" ]; then
+    MINICONDA_URL="https://repo.anaconda.com/miniconda/Miniconda3-py312_24.11.1-0-Linux-aarch64.sh"
+else
+    MINICONDA_URL="https://repo.anaconda.com/miniconda/Miniconda3-py312_24.11.1-0-Linux-x86_64.sh"
+fi
+
+wget -nv -c "$MINICONDA_URL" -O $MY_DIR/base/bin/Miniconda3.sh
 
 rm -rf $RELEASE_DIR
 mkdir -p $RELEASE_DIR

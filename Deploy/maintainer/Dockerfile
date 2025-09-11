@@ -1,5 +1,5 @@
 ARG BASE_IMAGE=miner-base:latest
-FROM --platform=linux/amd64 ${BASE_IMAGE} AS base
+FROM ${BASE_IMAGE} AS base
 
 USER miner
 

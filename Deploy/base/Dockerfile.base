@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 ubuntu:24.04
+FROM ubuntu:24.04
 
 ENV AM_I_IN_DOCKER_CONTAINER=Yes
 ENV DEBIAN_FRONTEND=noninteractive

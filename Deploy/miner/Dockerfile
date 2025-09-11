@@ -1,5 +1,5 @@
 ARG BASE_IMAGE=miner-base:latest
-FROM --platform=linux/amd64 ${BASE_IMAGE}
+FROM ${BASE_IMAGE}
 
 USER root
 RUN apt update && apt install -y nginx && rm -rf /var/lib/apt/lists/* && apt-get clean
