@@ -7508,5 +7508,15 @@
     "close": 99.2099990845,
     "volume": 1169481.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,10,00,00,00,000000",
+    "ticker": "AEE",
+    "open": 99.0,
+    "high": 99.5550003052,
+    "low": 98.7149963379,
+    "close": 99.25,
+    "volume": 990648.0,
+    "wedge_status": "none"
   }
 ]

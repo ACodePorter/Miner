@@ -7508,5 +7508,15 @@
     "close": 64.4000015259,
     "volume": 4085790.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,10,00,00,00,000000",
+    "ticker": "IONS",
+    "open": 64.5699996948,
+    "high": 64.7149963379,
+    "low": 62.8650016785,
+    "close": 64.0,
+    "volume": 2200678.0,
+    "wedge_status": "none"
   }
 ]

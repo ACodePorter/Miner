@@ -7508,5 +7508,15 @@
     "close": 28.8899993896,
     "volume": 21966.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,10,00,00,00,000000",
+    "ticker": "AROW",
+    "open": 28.8600006104,
+    "high": 29.3500003815,
+    "low": 28.5,
+    "close": 29.1100006104,
+    "volume": 64398.0,
+    "wedge_status": "none"
   }
 ]

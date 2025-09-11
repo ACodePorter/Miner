@@ -7508,5 +7508,15 @@
     "close": 42.7200012207,
     "volume": 3679365.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,10,00,00,00,000000",
+    "ticker": "REXR",
+    "open": 42.6800003052,
+    "high": 43.2200012207,
+    "low": 42.5,
+    "close": 42.7099990845,
+    "volume": 2732103.0,
+    "wedge_status": "none"
   }
 ]

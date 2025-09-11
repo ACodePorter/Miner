@@ -7508,5 +7508,15 @@
     "close": 138.1999969482,
     "volume": 1948753.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,10,00,00,00,000000",
+    "ticker": "WMS",
+    "open": 139.1399993896,
+    "high": 142.5,
+    "low": 137.7400054932,
+    "close": 141.0,
+    "volume": 1245921.0,
+    "wedge_status": "none"
   }
 ]

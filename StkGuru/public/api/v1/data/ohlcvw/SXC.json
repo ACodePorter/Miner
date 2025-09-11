@@ -7508,5 +7508,15 @@
     "close": 7.5500001907,
     "volume": 700695.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,10,00,00,00,000000",
+    "ticker": "SXC",
+    "open": 7.5500001907,
+    "high": 7.75,
+    "low": 7.5300002098,
+    "close": 7.75,
+    "volume": 774300.0,
+    "wedge_status": "none"
   }
 ]

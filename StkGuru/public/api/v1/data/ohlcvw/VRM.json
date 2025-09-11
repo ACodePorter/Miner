@@ -948,5 +948,15 @@
     "close": 25.25,
     "volume": 13779.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,10,00,00,00,000000",
+    "ticker": "VRM",
+    "open": 26.5200004578,
+    "high": 26.8500003815,
+    "low": 25.2800006866,
+    "close": 25.2800006866,
+    "volume": 4900.0,
+    "wedge_status": "none"
   }
 ]
