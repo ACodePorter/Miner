@@ -25,6 +25,12 @@ services:
     ports:
       - "127.0.0.1:5672:5672"
       - "127.0.0.1:15672:15672"
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
 
   browserscraper:
     build:
@@ -35,9 +41,12 @@ services:
     container_name: miner-browserscraper
     hostname: miner-browserscraper
     depends_on:
-      - redis
-      - rabbitmq
-      - mongodb
+      redis:
+        condition: service_started
+      rabbitmq:
+        condition: service_healthy
+      mongodb:
+        condition: service_started
     ports:
       - "127.0.0.1:8002:8002"
     environment:
@@ -53,13 +62,17 @@ services:
         GITHUB_TOKEN: ${GITHUB_TOKEN}
         GIT_USER_NAME: ${GIT_USER_NAME}
         GIT_USER_EMAIL: ${GIT_USER_EMAIL}
+        RUNTIME_ENV: ${RUNTIME_ENV}
     restart: unless-stopped
     container_name: miner-maintainer
     hostname: miner-maintainer
     depends_on:
-      - redis
-      - rabbitmq
-      - mongodb
+      redis:
+        condition: service_started
+      rabbitmq:
+        condition: service_healthy
+      mongodb:
+        condition: service_started
     environment:
       - RUNTIME_ENV=${RUNTIME_ENV}
     volumes:
@@ -132,11 +145,16 @@ services:
     container_name: minerservice
     hostname: miner-service
     depends_on:
-      - redis
-      - rabbitmq
-      - mongodb
-      - browserscraper
-      - maintainer
+      redis:
+        condition: service_started
+      rabbitmq:
+        condition: service_healthy
+      mongodb:
+        condition: service_started
+      browserscraper:
+        condition: service_started
+      maintainer:
+        condition: service_started
     ports:
       - "127.0.0.1:80:80"
       - "127.0.0.1:2222:2222"

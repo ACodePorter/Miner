@@ -10,6 +10,13 @@ MY_DIR=$(realpath $(dirname $0))
 # celery --broker=amqp://miner:12qw@rabbitmq:5672 --result-backend=redis://miner:12qw@redis/0 flower --port=6666 --auto_refresh=True --url_prefix=flower --broker_api=http://admin:12qw@rabbitmq:15672/api &
 
 touch ~/.miner-worker.log
+# Wait for RabbitMQ to be ready before starting worker
+echo "Waiting for RabbitMQ to be ready..."
+until nc -z rabbitmq 5672; do
+    echo "RabbitMQ not ready, waiting 5 seconds..."
+    sleep 5
+done
+echo "RabbitMQ is ready, starting worker..."
 celery --app=maintainer worker --loglevel INFO --detach --logfile ~/.miner-worker.log -Q maintainer
 touch ~/.miner-beat.log
 celery --app=maintainer beat --loglevel INFO --detach --logfile ~/.miner-beat.log

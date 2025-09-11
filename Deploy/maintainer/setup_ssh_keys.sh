@@ -7,6 +7,7 @@ set -e
 
 # Configuration
 GITHUB_TOKEN="${GITHUB_TOKEN:-}"
+RUNTIME_ENV="${RUNTIME_ENV:-}"
 SSH_KEY_NAME="miner-maintainer"
 SSH_KEY_FILE="$HOME/.ssh/id_rsa"
 GITHUB_API_URL="https://api.github.com"
@@ -35,6 +36,11 @@ check_environment() {
     if [[ -z "$GITHUB_TOKEN" ]]; then
         log_error "GITHUB_TOKEN environment variable is required"
         exit 1
+    fi
+
+    if [[ "$RUNTIME_ENV" != "PROD" ]]; then
+        log_error "RUNTIME_ENV must be set to 'PROD' to setup SSH keys, got: '$RUNTIME_ENV'"
+        exit 0
     fi
 }
 

@@ -15,6 +15,9 @@ worker_redirect_stdouts = False
 worker_log_format = '[%(asctime)s: %(levelname)s/%(processName)s] %(name)s:%(funcName)s-> %(message)s'
 
 broker_connection_retry_on_startup = True
+broker_connection_retry = True
+broker_connection_max_retries = 100
+broker_connection_retry_delay = 5.0
 
 task_queues = (
     Queue('minerservice'),

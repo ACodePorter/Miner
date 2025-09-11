@@ -1,6 +1,8 @@
 ARG BASE_IMAGE=miner-base:latest
 FROM --platform=linux/amd64 ${BASE_IMAGE} AS base
 
+USER miner
+
 COPY --chown=miner:miner release/ /miner_release/
 COPY --chown=miner:miner docker_entry.sh /miner_release/
 RUN chmod a+x /miner_release/*.sh
@@ -11,6 +13,8 @@ RUN uv pip install --system /miner_release/Detonator /miner_release/DataMiner /m
     rm -rfv /miner_release/Detonator /miner_release/DataMiner /miner_release/MinerWorkers /miner_release/Maintainer /miner_release/MarketBreadth && \
     rm -rfv $HOME/.cache/uv && rm -rfv $HOME/.cache/pip
 
+# pass runtime env to the script
+ARG RUNTIME_ENV
 # Set git config for miner user and verify
 ARG GIT_USER_NAME
 ARG GIT_USER_EMAIL

@@ -10,7 +10,14 @@ MY_DIR=$(realpath $(dirname $0))
 # celery --broker=amqp://miner:12qw@rabbitmq:5672 --result-backend=redis://miner:12qw@redis/0 flower --port=6666 --auto_refresh=True --url_prefix=flower --broker_api=http://admin:12qw@rabbitmq:15672/api &
 
 touch ~/.miner-worker.log
-celery --app=browserscraper worker --loglevel INFO --detach --logfile ~/.miner-worker.log -Q browserscraper
+# Wait for RabbitMQ to be ready before starting worker
+echo "Waiting for RabbitMQ to be ready..."
+until nc -z rabbitmq 5672; do
+    echo "RabbitMQ not ready, waiting 5 seconds..."
+    sleep 5
+done
+echo "RabbitMQ is ready, starting worker..."
+celery --app=browserscraper worker --loglevel INFO --detach --logfile ~/.miner-worker.log -Q browserscraper --hostname=celery@miner-browserscraper
 # to avoid duplicate beat task registration,
 # beat task registration is done by minerservce,
 # so we don't need to start it here

@@ -15,7 +15,14 @@ touch ~/.miner-beat.log
 celery --app=minerservice beat --loglevel INFO --detach --logfile ~/.miner-beat.log
 
 touch ~/.miner-worker.log
-celery --app=minerservice worker --loglevel INFO --detach --logfile ~/.miner-worker.log -Q minerservice
+# Wait for RabbitMQ to be ready before starting worker
+echo "Waiting for RabbitMQ to be ready..."
+until nc -z rabbitmq 5672; do
+    echo "RabbitMQ not ready, waiting 5 seconds..."
+    sleep 5
+done
+echo "RabbitMQ is ready, starting worker..."
+celery --app=minerservice worker --loglevel INFO --detach --logfile ~/.miner-worker.log -Q minerservice --hostname=celery@miner-service
 
 $MY_DIR/run_service_as_prod_uds.sh 2>&1 &
 
