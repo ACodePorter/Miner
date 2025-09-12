@@ -2708,5 +2708,15 @@
     "close": 40.5,
     "volume": 2216500.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,11,00,00,00,000000",
+    "ticker": "WAY",
+    "open": 38.9900016785,
+    "high": 39.2299995422,
+    "low": 38.1879997253,
+    "close": 38.3499984741,
+    "volume": 9673000.0,
+    "wedge_status": "none"
   }
 ]

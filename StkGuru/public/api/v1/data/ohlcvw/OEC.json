@@ -7508,5 +7508,15 @@
     "close": 10.1599998474,
     "volume": 618300.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,11,00,00,00,000000",
+    "ticker": "OEC",
+    "open": 10.0,
+    "high": 10.3999996185,
+    "low": 10.0600004196,
+    "close": 10.3400001526,
+    "volume": 435993.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 37.3600006104,
     "volume": 30439.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,11,00,00,00,000000",
+    "ticker": "FCBC",
+    "open": 37.3199996948,
+    "high": 37.8600006104,
+    "low": 37.0550003052,
+    "close": 37.75,
+    "volume": 30614.0,
+    "wedge_status": "none"
   }
 ]

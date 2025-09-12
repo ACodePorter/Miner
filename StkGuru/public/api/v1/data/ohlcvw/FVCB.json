@@ -7508,5 +7508,15 @@
     "close": 13.279999733,
     "volume": 18907.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,11,00,00,00,000000",
+    "ticker": "FVCB",
+    "open": 13.2899999619,
+    "high": 13.5,
+    "low": 13.1400003433,
+    "close": 13.4899997711,
+    "volume": 17073.0,
+    "wedge_status": "none"
   }
 ]

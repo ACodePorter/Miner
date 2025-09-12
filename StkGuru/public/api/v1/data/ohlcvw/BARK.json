@@ -7508,5 +7508,15 @@
     "close": 0.8636000156,
     "volume": 411164.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,11,00,00,00,000000",
+    "ticker": "BARK",
+    "open": 0.8600000143,
+    "high": 0.8968999982,
+    "low": 0.8600000143,
+    "close": 0.8932999969,
+    "volume": 545194.0,
+    "wedge_status": "none"
   }
 ]

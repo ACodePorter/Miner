@@ -7508,5 +7508,15 @@
     "close": 63.2000007629,
     "volume": 180102.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,11,00,00,00,000000",
+    "ticker": "CTEV",
+    "open": 63.0,
+    "high": 63.8950004578,
+    "low": 60.9399986267,
+    "close": 61.6399993896,
+    "volume": 147894.0,
+    "wedge_status": "none"
   }
 ]

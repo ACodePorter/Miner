@@ -7508,5 +7508,15 @@
     "close": 2.7000000477,
     "volume": 150000.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,11,00,00,00,000000",
+    "ticker": "RPT",
+    "open": 2.7000000477,
+    "high": 2.7599999905,
+    "low": 2.7000000477,
+    "close": 2.75,
+    "volume": 89500.0,
+    "wedge_status": "none"
   }
 ]

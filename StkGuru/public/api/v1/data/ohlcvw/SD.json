@@ -7508,5 +7508,15 @@
     "close": 11.6800003052,
     "volume": 192900.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,11,00,00,00,000000",
+    "ticker": "SD",
+    "open": 11.5,
+    "high": 11.6350002289,
+    "low": 11.470000267,
+    "close": 11.5500001907,
+    "volume": 200000.0,
+    "wedge_status": "none"
   }
 ]
