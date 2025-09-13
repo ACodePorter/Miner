@@ -7508,5 +7508,15 @@
     "close": 433.3800048828,
     "volume": 2372132.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,09,12,00,00,00,000000",
+    "ticker": "CRWD",
+    "open": 435.0,
+    "high": 443.0,
+    "low": 435.0,
+    "close": 436.1000061035,
+    "volume": 2678026.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 12.4399995804,
     "volume": 428284.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,12,00,00,00,000000",
+    "ticker": "MATV",
+    "open": 12.5,
+    "high": 12.4236001968,
+    "low": 12.2600002289,
+    "close": 12.3199996948,
+    "volume": 180748.0,
+    "wedge_status": "none"
   }
 ]

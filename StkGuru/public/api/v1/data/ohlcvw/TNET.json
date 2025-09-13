@@ -7508,5 +7508,15 @@
     "close": 71.5599975586,
     "volume": 261600.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,12,00,00,00,000000",
+    "ticker": "TNET",
+    "open": 71.5400009155,
+    "high": 71.75,
+    "low": 68.9899978638,
+    "close": 69.0100021362,
+    "volume": 244018.0,
+    "wedge_status": "drop"
   }
 ]

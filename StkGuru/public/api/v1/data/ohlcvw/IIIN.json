@@ -7508,5 +7508,15 @@
     "close": 39.5,
     "volume": 106842.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,09,12,00,00,00,000000",
+    "ticker": "IIIN",
+    "open": 39.4099998474,
+    "high": 39.0890007019,
+    "low": 38.4420013428,
+    "close": 38.5999984741,
+    "volume": 58122.0,
+    "wedge_status": "none"
   }
 ]

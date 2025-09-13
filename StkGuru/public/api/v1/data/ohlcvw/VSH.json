@@ -7508,5 +7508,15 @@
     "close": 15.5,
     "volume": 1116300.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,12,00,00,00,000000",
+    "ticker": "VSH",
+    "open": 15.3299999237,
+    "high": 15.5298995972,
+    "low": 15.1700000763,
+    "close": 15.25,
+    "volume": 953932.0,
+    "wedge_status": "none"
   }
 ]

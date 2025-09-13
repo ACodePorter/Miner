@@ -7508,5 +7508,15 @@
     "close": 70.5999984741,
     "volume": 1101398.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,12,00,00,00,000000",
+    "ticker": "PCOR",
+    "open": 70.5800018311,
+    "high": 71.0,
+    "low": 69.5500030518,
+    "close": 69.5999984741,
+    "volume": 1234675.0,
+    "wedge_status": "none"
   }
 ]
