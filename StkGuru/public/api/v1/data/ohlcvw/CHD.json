@@ -7488,5 +7488,15 @@
     "close": 92.9400024414,
     "volume": 805288.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,15,00,00,00,000000",
+    "ticker": "CHD",
+    "open": 93.0400009155,
+    "high": 93.2798995972,
+    "low": 91.0400009155,
+    "close": 91.25,
+    "volume": 1868531.0,
+    "wedge_status": "none"
   }
 ]

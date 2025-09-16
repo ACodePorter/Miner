@@ -48140,10 +48140,33 @@
   },
   {
     "date": "20250915",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 21,
+    "pop": [
+      "FTNT",
+      "GNRC"
+    ],
+    "drop": [
+      "ADI",
+      "ADM",
+      "AIZ",
+      "BBY",
+      "BLDR",
+      "BRK.B",
+      "CB",
+      "CI",
+      "CLX",
+      "COR",
+      "CPB",
+      "CPRT",
+      "CTVA",
+      "EQR",
+      "ERIE",
+      "GIS",
+      "GRMN",
+      "HIG",
+      "HPQ"
+    ],
+    "pop_pct": 0.095,
+    "drop_pct": 0.905
   }
 ]
