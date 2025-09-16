@@ -7488,5 +7488,15 @@
     "close": 28.8799991608,
     "volume": 538468.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,15,00,00,00,000000",
+    "ticker": "KAR",
+    "open": 29.0,
+    "high": 29.3850002289,
+    "low": 28.4899997711,
+    "close": 28.6000003815,
+    "volume": 705343.0,
+    "wedge_status": "drop"
   }
 ]

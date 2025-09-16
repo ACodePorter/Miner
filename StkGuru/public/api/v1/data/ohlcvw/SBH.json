@@ -7488,5 +7488,15 @@
     "close": 15.0,
     "volume": 1900541.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,15,00,00,00,000000",
+    "ticker": "SBH",
+    "open": 15.25,
+    "high": 15.9200000763,
+    "low": 15.1183996201,
+    "close": 15.7899999619,
+    "volume": 2523435.0,
+    "wedge_status": "none"
   }
 ]

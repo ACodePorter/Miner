@@ -7488,5 +7488,15 @@
     "close": 178.7599945068,
     "volume": 526223.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,15,00,00,00,000000",
+    "ticker": "PI",
+    "open": 179.0,
+    "high": 192.0,
+    "low": 178.9499969482,
+    "close": 190.8099975586,
+    "volume": 805387.0,
+    "wedge_status": "none"
   }
 ]

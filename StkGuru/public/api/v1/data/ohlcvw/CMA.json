@@ -7488,5 +7488,15 @@
     "close": 70.4599990845,
     "volume": 1390337.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,15,00,00,00,000000",
+    "ticker": "CMA",
+    "open": 69.8949966431,
+    "high": 70.0,
+    "low": 68.4499969482,
+    "close": 68.75,
+    "volume": 1259954.0,
+    "wedge_status": "drop"
   }
 ]

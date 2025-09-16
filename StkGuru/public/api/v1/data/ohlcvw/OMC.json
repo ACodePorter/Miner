@@ -7488,5 +7488,15 @@
     "close": 77.1999969482,
     "volume": 2086298.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,15,00,00,00,000000",
+    "ticker": "OMC",
+    "open": 77.5,
+    "high": 77.6600036621,
+    "low": 76.6500015259,
+    "close": 76.8499984741,
+    "volume": 1466164.0,
+    "wedge_status": "drop"
   }
 ]

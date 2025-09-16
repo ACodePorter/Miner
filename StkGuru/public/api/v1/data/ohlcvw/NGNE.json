@@ -7488,5 +7488,15 @@
     "close": 19.0,
     "volume": 121337.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,15,00,00,00,000000",
+    "ticker": "NGNE",
+    "open": 19.0499992371,
+    "high": 19.5200004578,
+    "low": 17.4300003052,
+    "close": 17.4500007629,
+    "volume": 96655.0,
+    "wedge_status": "none"
   }
 ]

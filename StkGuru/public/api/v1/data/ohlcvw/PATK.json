@@ -7488,5 +7488,15 @@
     "close": 110.3700027466,
     "volume": 128991.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,15,00,00,00,000000",
+    "ticker": "PATK",
+    "open": 110.5699996948,
+    "high": 110.5699996948,
+    "low": 108.2300033569,
+    "close": 110.0,
+    "volume": 532784.0,
+    "wedge_status": "none"
   }
 ]

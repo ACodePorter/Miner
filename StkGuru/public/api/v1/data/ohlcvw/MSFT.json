@@ -7488,5 +7488,15 @@
     "close": 509.8999938965,
     "volume": 22452283.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,15,00,00,00,000000",
+    "ticker": "MSFT",
+    "open": 508.75,
+    "high": 515.4699707031,
+    "low": 507.0,
+    "close": 515.3599853516,
+    "volume": 15230847.0,
+    "wedge_status": "none"
   }
 ]

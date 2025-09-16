@@ -7488,5 +7488,15 @@
     "close": 51.5,
     "volume": 271377.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,15,00,00,00,000000",
+    "ticker": "ASGN",
+    "open": 51.8899993896,
+    "high": 52.1500015259,
+    "low": 50.8450012207,
+    "close": 51.2400016785,
+    "volume": 482746.0,
+    "wedge_status": "none"
   }
 ]

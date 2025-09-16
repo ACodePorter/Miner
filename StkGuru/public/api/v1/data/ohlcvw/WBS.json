@@ -7488,5 +7488,15 @@
     "close": 61.5,
     "volume": 1363622.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,15,00,00,00,000000",
+    "ticker": "WBS",
+    "open": 61.6100006104,
+    "high": 62.0550003052,
+    "low": 60.4900016785,
+    "close": 60.6199989319,
+    "volume": 1640066.0,
+    "wedge_status": "drop"
   }
 ]
