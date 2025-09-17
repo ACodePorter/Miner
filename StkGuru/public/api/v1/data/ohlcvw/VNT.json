@@ -7498,5 +7498,15 @@
     "close": 42.75,
     "volume": 586826.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,16,00,00,00,000000",
+    "ticker": "VNT",
+    "open": 42.8699989319,
+    "high": 42.9900016785,
+    "low": 42.2900009155,
+    "close": 42.5900001526,
+    "volume": 689230.0,
+    "wedge_status": "none"
   }
 ]

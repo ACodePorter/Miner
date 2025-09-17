@@ -7498,5 +7498,15 @@
     "close": 3.9600000381,
     "volume": 1114720.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,16,00,00,00,000000",
+    "ticker": "LRMR",
+    "open": 3.9300000668,
+    "high": 4.0599999428,
+    "low": 3.8800001144,
+    "close": 4.0,
+    "volume": 1254709.0,
+    "wedge_status": "none"
   }
 ]

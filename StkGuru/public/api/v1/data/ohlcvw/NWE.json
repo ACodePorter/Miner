@@ -7498,5 +7498,15 @@
     "close": 56.6300010681,
     "volume": 393299.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,16,00,00,00,000000",
+    "ticker": "NWE",
+    "open": 56.6899986267,
+    "high": 56.6899986267,
+    "low": 55.5,
+    "close": 55.5400009155,
+    "volume": 272565.0,
+    "wedge_status": "none"
   }
 ]

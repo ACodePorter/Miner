@@ -7498,5 +7498,15 @@
     "close": 13.4899997711,
     "volume": 118413.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,16,00,00,00,000000",
+    "ticker": "BOC",
+    "open": 13.470000267,
+    "high": 13.5,
+    "low": 13.2049999237,
+    "close": 13.3299999237,
+    "volume": 244322.0,
+    "wedge_status": "drop"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 1.3799999952,
     "volume": 8601946.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,16,00,00,00,000000",
+    "ticker": "NFE",
+    "open": 1.7200000286,
+    "high": 2.0050001144,
+    "low": 1.4700000286,
+    "close": 2.0,
+    "volume": 63345178.0,
+    "wedge_status": "none"
   }
 ]

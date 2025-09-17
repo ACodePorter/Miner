@@ -7498,5 +7498,15 @@
     "close": 30.5,
     "volume": 135511.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,16,00,00,00,000000",
+    "ticker": "CPF",
+    "open": 30.4300003052,
+    "high": 30.5049991608,
+    "low": 29.75,
+    "close": 30.0,
+    "volume": 183210.0,
+    "wedge_status": "drop"
   }
 ]

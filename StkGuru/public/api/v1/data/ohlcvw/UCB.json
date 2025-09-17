@@ -7498,5 +7498,15 @@
     "close": 31.7000007629,
     "volume": 577216.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,16,00,00,00,000000",
+    "ticker": "UCB",
+    "open": 31.7000007629,
+    "high": 31.6800003052,
+    "low": 31.0,
+    "close": 31.25,
+    "volume": 573294.0,
+    "wedge_status": "none"
   }
 ]

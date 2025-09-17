@@ -7498,5 +7498,15 @@
     "close": 56.4300003052,
     "volume": 1250228.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,16,00,00,00,000000",
+    "ticker": "ROL",
+    "open": 56.0699996948,
+    "high": 56.2445983887,
+    "low": 55.0,
+    "close": 55.2299995422,
+    "volume": 1903316.0,
+    "wedge_status": "none"
   }
 ]
