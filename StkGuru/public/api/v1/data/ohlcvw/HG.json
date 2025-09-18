@@ -4168,5 +4168,15 @@
     "close": 23.4699993134,
     "volume": 224925.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,17,00,00,00,000000",
+    "ticker": "HG",
+    "open": 23.5,
+    "high": 23.8950004578,
+    "low": 23.5,
+    "close": 23.5599994659,
+    "volume": 341901.0,
+    "wedge_status": "none"
   }
 ]

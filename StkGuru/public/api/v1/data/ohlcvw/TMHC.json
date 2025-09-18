@@ -7508,5 +7508,15 @@
     "close": 68.25,
     "volume": 1164370.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,17,00,00,00,000000",
+    "ticker": "TMHC",
+    "open": 68.7799987793,
+    "high": 71.1399993896,
+    "low": 67.4649963379,
+    "close": 68.1900024414,
+    "volume": 1307505.0,
+    "wedge_status": "none"
   }
 ]
