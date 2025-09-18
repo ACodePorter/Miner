@@ -48441,10 +48441,36 @@
   },
   {
     "date": "20250917",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 24,
+    "pop": [
+      "NWS",
+      "PM",
+      "TRGP"
+    ],
+    "drop": [
+      "ADM",
+      "BG",
+      "CCL",
+      "CDNS",
+      "CPB",
+      "DHI",
+      "ELV",
+      "GEV",
+      "GRMN",
+      "HLT",
+      "K",
+      "KMX",
+      "MAR",
+      "MAS",
+      "MHK",
+      "NOC",
+      "PH",
+      "RL",
+      "TRMB",
+      "UBER",
+      "URI"
+    ],
+    "pop_pct": 0.125,
+    "drop_pct": 0.875
   }
 ]

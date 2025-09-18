@@ -7508,5 +7508,15 @@
     "close": 120.25,
     "volume": 3375701.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,17,00,00,00,000000",
+    "ticker": "DUK",
+    "open": 120.7399978638,
+    "high": 121.5,
+    "low": 120.2699966431,
+    "close": 121.0999984741,
+    "volume": 1922132.0,
+    "wedge_status": "none"
   }
 ]
