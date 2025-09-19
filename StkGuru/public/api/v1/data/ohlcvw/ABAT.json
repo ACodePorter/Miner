@@ -7508,5 +7508,15 @@
     "close": 2.4300000668,
     "volume": 3747473.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,18,00,00,00,000000",
+    "ticker": "ABAT",
+    "open": 2.5250000954,
+    "high": 3.0150001049,
+    "low": 2.5099999905,
+    "close": 3.0,
+    "volume": 13184719.0,
+    "wedge_status": "none"
   }
 ]

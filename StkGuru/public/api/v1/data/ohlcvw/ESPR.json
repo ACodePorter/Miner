@@ -7508,5 +7508,15 @@
     "close": 2.7200000286,
     "volume": 4864217.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,18,00,00,00,000000",
+    "ticker": "ESPR",
+    "open": 2.7599999905,
+    "high": 2.7999999523,
+    "low": 2.6900000572,
+    "close": 2.75,
+    "volume": 6246065.0,
+    "wedge_status": "none"
   }
 ]

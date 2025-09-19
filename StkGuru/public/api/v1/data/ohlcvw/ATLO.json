@@ -7508,5 +7508,15 @@
     "close": 20.4200000763,
     "volume": 30400.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,18,00,00,00,000000",
+    "ticker": "ATLO",
+    "open": 20.5,
+    "high": 20.7700004578,
+    "low": 20.4990005493,
+    "close": 20.6499996185,
+    "volume": 17846.0,
+    "wedge_status": "none"
   }
 ]

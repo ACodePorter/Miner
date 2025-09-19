@@ -7508,5 +7508,15 @@
     "close": 4.25,
     "volume": 3836223.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,18,00,00,00,000000",
+    "ticker": "BLND",
+    "open": 4.3000001907,
+    "high": 4.3899998665,
+    "low": 4.1999998093,
+    "close": 4.2100000381,
+    "volume": 3262608.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 9.25,
     "volume": 1123442.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,18,00,00,00,000000",
+    "ticker": "TRTX",
+    "open": 9.25,
+    "high": 9.3850002289,
+    "low": 9.220000267,
+    "close": 9.3400001526,
+    "volume": 551231.0,
+    "wedge_status": "none"
   }
 ]

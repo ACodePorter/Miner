@@ -7508,5 +7508,15 @@
     "close": 234.1799926758,
     "volume": 462418.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,18,00,00,00,000000",
+    "ticker": "GRMN",
+    "open": 235.7400054932,
+    "high": 238.3099975586,
+    "low": 234.0,
+    "close": 237.25,
+    "volume": 517763.0,
+    "wedge_status": "none"
   }
 ]

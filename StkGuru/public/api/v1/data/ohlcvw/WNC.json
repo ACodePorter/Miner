@@ -7508,5 +7508,15 @@
     "close": 10.9899997711,
     "volume": 298184.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,18,00,00,00,000000",
+    "ticker": "WNC",
+    "open": 11.1199998856,
+    "high": 11.5450000763,
+    "low": 11.0900001526,
+    "close": 11.5,
+    "volume": 300629.0,
+    "wedge_status": "none"
   }
 ]
