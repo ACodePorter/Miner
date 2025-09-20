@@ -7508,5 +7508,15 @@
     "close": 7.5,
     "volume": 295424.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,19,00,00,00,000000",
+    "ticker": "MBI",
+    "open": 7.5500001907,
+    "high": 8.1099996567,
+    "low": 7.4400000572,
+    "close": 7.8000001907,
+    "volume": 1081071.0,
+    "wedge_status": "none"
   }
 ]

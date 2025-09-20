@@ -7508,5 +7508,15 @@
     "close": 18.3500003815,
     "volume": 1197552.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,19,00,00,00,000000",
+    "ticker": "NTST",
+    "open": 18.3500003815,
+    "high": 18.5450000763,
+    "low": 17.9850006104,
+    "close": 18.0,
+    "volume": 3926322.0,
+    "wedge_status": "drop"
   }
 ]

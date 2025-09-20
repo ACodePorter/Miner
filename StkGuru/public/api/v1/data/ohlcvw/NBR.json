@@ -7508,5 +7508,15 @@
     "close": 39.25,
     "volume": 433932.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,19,00,00,00,000000",
+    "ticker": "NBR",
+    "open": 39.0,
+    "high": 39.5,
+    "low": 37.5800018311,
+    "close": 37.6199989319,
+    "volume": 950841.0,
+    "wedge_status": "drop"
   }
 ]

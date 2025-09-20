@@ -7508,5 +7508,15 @@
     "close": 59.2900009155,
     "volume": 297903.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,19,00,00,00,000000",
+    "ticker": "TFIN",
+    "open": 59.2299995422,
+    "high": 59.4399986267,
+    "low": 56.5,
+    "close": 56.5,
+    "volume": 487898.0,
+    "wedge_status": "drop"
   }
 ]

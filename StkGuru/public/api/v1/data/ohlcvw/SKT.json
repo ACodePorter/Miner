@@ -7508,5 +7508,15 @@
     "close": 33.8100013733,
     "volume": 886982.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,19,00,00,00,000000",
+    "ticker": "SKT",
+    "open": 33.6199989319,
+    "high": 33.8600006104,
+    "low": 33.25,
+    "close": 33.4099998474,
+    "volume": 2419804.0,
+    "wedge_status": "drop"
   }
 ]

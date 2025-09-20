@@ -7508,5 +7508,15 @@
     "close": 92.8300018311,
     "volume": 364448.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,19,00,00,00,000000",
+    "ticker": "MSM",
+    "open": 93.0,
+    "high": 93.2600021362,
+    "low": 90.7200012207,
+    "close": 90.9899978638,
+    "volume": 503475.0,
+    "wedge_status": "drop"
   }
 ]

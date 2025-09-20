@@ -7508,5 +7508,15 @@
     "close": 555.9799804688,
     "volume": 1470973.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,19,00,00,00,000000",
+    "ticker": "MSCI",
+    "open": 557.9600219727,
+    "high": 562.7899780273,
+    "low": 555.0,
+    "close": 559.75,
+    "volume": 910870.0,
+    "wedge_status": "none"
   }
 ]
