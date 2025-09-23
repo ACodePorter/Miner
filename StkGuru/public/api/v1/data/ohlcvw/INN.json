@@ -7488,5 +7488,15 @@
     "close": 5.8800001144,
     "volume": 2388067.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,22,00,00,00,000000",
+    "ticker": "INN",
+    "open": 5.8400001526,
+    "high": 5.8200001717,
+    "low": 5.7399997711,
+    "close": 5.75,
+    "volume": 792585.0,
+    "wedge_status": "none"
   }
 ]

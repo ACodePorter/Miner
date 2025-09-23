@@ -7488,5 +7488,15 @@
     "close": 9.2899999619,
     "volume": 3299583.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,22,00,00,00,000000",
+    "ticker": "MODG",
+    "open": 9.279999733,
+    "high": 9.3365001678,
+    "low": 9.1700000763,
+    "close": 9.220000267,
+    "volume": 1823926.0,
+    "wedge_status": "none"
   }
 ]

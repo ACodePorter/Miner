@@ -7488,5 +7488,15 @@
     "close": 19.9500007629,
     "volume": 1472950.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,22,00,00,00,000000",
+    "ticker": "CVBF",
+    "open": 19.8700008392,
+    "high": 19.9099006653,
+    "low": 19.5,
+    "close": 19.6700000763,
+    "volume": 556570.0,
+    "wedge_status": "drop"
   }
 ]

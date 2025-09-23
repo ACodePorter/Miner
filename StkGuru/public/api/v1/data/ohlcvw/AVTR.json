@@ -7488,5 +7488,15 @@
     "close": 12.5,
     "volume": 6232024.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,22,00,00,00,000000",
+    "ticker": "AVTR",
+    "open": 12.3699998856,
+    "high": 12.5249996185,
+    "low": 12.25,
+    "close": 12.4499998093,
+    "volume": 6638659.0,
+    "wedge_status": "none"
   }
 ]

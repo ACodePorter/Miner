@@ -7488,5 +7488,15 @@
     "close": 34.5,
     "volume": 5784170.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,22,00,00,00,000000",
+    "ticker": "RRC",
+    "open": 34.4199981689,
+    "high": 35.0950012207,
+    "low": 34.2200012207,
+    "close": 34.9300003052,
+    "volume": 2487323.0,
+    "wedge_status": "none"
   }
 ]

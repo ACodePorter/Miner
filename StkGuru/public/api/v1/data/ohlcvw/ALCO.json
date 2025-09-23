@@ -7488,5 +7488,15 @@
     "close": 33.5400009155,
     "volume": 47926.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,22,00,00,00,000000",
+    "ticker": "ALCO",
+    "open": 33.5,
+    "high": 34.2299995422,
+    "low": 33.5,
+    "close": 34.0800018311,
+    "volume": 20226.0,
+    "wedge_status": "none"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 79.0999984741,
     "volume": 332596.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,22,00,00,00,000000",
+    "ticker": "MCB",
+    "open": 78.9599990845,
+    "high": 80.1549987793,
+    "low": 77.3199996948,
+    "close": 77.5,
+    "volume": 59377.0,
+    "wedge_status": "drop"
   }
 ]

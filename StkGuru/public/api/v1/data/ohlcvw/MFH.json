@@ -7488,5 +7488,15 @@
     "close": 10.0,
     "volume": 493443.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,22,00,00,00,000000",
+    "ticker": "MFH",
+    "open": 10.0,
+    "high": 12.4161996841,
+    "low": 9.279999733,
+    "close": 11.6599998474,
+    "volume": 345436.0,
+    "wedge_status": "none"
   }
 ]
