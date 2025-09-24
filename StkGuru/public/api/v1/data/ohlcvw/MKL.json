@@ -7498,5 +7498,15 @@
     "close": 1923.0600585938,
     "volume": 59129.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,23,00,00,00,000000",
+    "ticker": "MKL",
+    "open": 1917.0,
+    "high": 1943.6099853516,
+    "low": 1917.0,
+    "close": 1938.6300048828,
+    "volume": 23728.0,
+    "wedge_status": "pop"
   }
 ]

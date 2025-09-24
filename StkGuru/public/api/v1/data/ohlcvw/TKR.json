@@ -7498,5 +7498,15 @@
     "close": 76.8399963379,
     "volume": 592526.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,23,00,00,00,000000",
+    "ticker": "TKR",
+    "open": 77.6900024414,
+    "high": 78.4899978638,
+    "low": 76.7099990845,
+    "close": 76.75,
+    "volume": 889414.0,
+    "wedge_status": "none"
   }
 ]
