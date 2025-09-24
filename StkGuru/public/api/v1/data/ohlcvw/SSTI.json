@@ -7498,5 +7498,15 @@
     "close": 12.6000003815,
     "volume": 73707.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,09,23,00,00,00,000000",
+    "ticker": "SSTI",
+    "open": 12.720000267,
+    "high": 12.75,
+    "low": 12.3400001526,
+    "close": 12.4200000763,
+    "volume": 57605.0,
+    "wedge_status": "none"
   }
 ]

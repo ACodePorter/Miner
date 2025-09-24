@@ -2748,5 +2748,15 @@
     "close": 25.6200008392,
     "volume": 285990.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,23,00,00,00,000000",
+    "ticker": "SILA",
+    "open": 25.25,
+    "high": 25.5349998474,
+    "low": 25.1350002289,
+    "close": 25.3400001526,
+    "volume": 264558.0,
+    "wedge_status": "drop"
   }
 ]

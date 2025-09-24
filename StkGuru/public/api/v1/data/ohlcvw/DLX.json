@@ -7498,5 +7498,15 @@
     "close": 19.4400005341,
     "volume": 273499.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,23,00,00,00,000000",
+    "ticker": "DLX",
+    "open": 19.5,
+    "high": 19.7700004578,
+    "low": 19.2099990845,
+    "close": 19.2800006866,
+    "volume": 239242.0,
+    "wedge_status": "drop"
   }
 ]

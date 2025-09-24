@@ -7498,5 +7498,15 @@
     "close": 7.5,
     "volume": 2086071.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,23,00,00,00,000000",
+    "ticker": "RLJ",
+    "open": 7.5399999619,
+    "high": 7.6500000954,
+    "low": 7.4200000763,
+    "close": 7.4299998283,
+    "volume": 2159644.0,
+    "wedge_status": "none"
   }
 ]
