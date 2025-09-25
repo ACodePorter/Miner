@@ -7508,5 +7508,15 @@
     "close": 37.25,
     "volume": 1953444.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,24,00,00,00,000000",
+    "ticker": "PARR",
+    "open": 37.3499984741,
+    "high": 38.3600006104,
+    "low": 37.0,
+    "close": 37.3199996948,
+    "volume": 1346300.0,
+    "wedge_status": "none"
   }
 ]

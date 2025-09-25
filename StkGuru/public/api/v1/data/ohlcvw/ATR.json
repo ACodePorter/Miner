@@ -7508,5 +7508,15 @@
     "close": 132.0200042725,
     "volume": 247403.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,24,00,00,00,000000",
+    "ticker": "ATR",
+    "open": 132.0,
+    "high": 133.3099975586,
+    "low": 131.3399963379,
+    "close": 131.5,
+    "volume": 246347.0,
+    "wedge_status": "none"
   }
 ]

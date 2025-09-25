@@ -3338,5 +3338,15 @@
     "close": 237.4499969482,
     "volume": 7981811.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,24,00,00,00,000000",
+    "ticker": "RDDT",
+    "open": 241.5099945068,
+    "high": 244.0,
+    "low": 235.0,
+    "close": 235.6900024414,
+    "volume": 4802177.0,
+    "wedge_status": "none"
   }
 ]

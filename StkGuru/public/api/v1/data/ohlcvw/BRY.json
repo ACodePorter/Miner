@@ -7508,5 +7508,15 @@
     "close": 3.9300000668,
     "volume": 2796689.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,24,00,00,00,000000",
+    "ticker": "BRY",
+    "open": 3.9600000381,
+    "high": 4.0254998207,
+    "low": 3.9400999546,
+    "close": 4.0,
+    "volume": 1796503.0,
+    "wedge_status": "none"
   }
 ]

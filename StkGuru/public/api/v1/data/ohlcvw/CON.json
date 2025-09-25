@@ -2478,5 +2478,15 @@
     "close": 20.75,
     "volume": 548688.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,24,00,00,00,000000",
+    "ticker": "CON",
+    "open": 20.7700004578,
+    "high": 21.0200004578,
+    "low": 20.6700000763,
+    "close": 20.6700000763,
+    "volume": 625997.0,
+    "wedge_status": "none"
   }
 ]

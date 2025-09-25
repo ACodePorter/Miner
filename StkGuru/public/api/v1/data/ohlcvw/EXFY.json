@@ -7508,5 +7508,15 @@
     "close": 1.9700000286,
     "volume": 485835.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,24,00,00,00,000000",
+    "ticker": "EXFY",
+    "open": 1.9800000191,
+    "high": 1.9900000095,
+    "low": 1.8799999952,
+    "close": 1.9299999475,
+    "volume": 821867.0,
+    "wedge_status": "drop"
   }
 ]

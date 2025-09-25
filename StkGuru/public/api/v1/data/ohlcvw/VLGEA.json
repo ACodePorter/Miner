@@ -7508,5 +7508,15 @@
     "close": 38.0299987793,
     "volume": 41268.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,24,00,00,00,000000",
+    "ticker": "VLGEA",
+    "open": 38.0699996948,
+    "high": 38.6599998474,
+    "low": 37.0999984741,
+    "close": 37.3100013733,
+    "volume": 47000.0,
+    "wedge_status": "drop"
   }
 ]

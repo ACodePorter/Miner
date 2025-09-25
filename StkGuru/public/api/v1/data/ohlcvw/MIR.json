@@ -7508,5 +7508,15 @@
     "close": 24.6000003815,
     "volume": 1932267.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,24,00,00,00,000000",
+    "ticker": "MIR",
+    "open": 24.7199993134,
+    "high": 25.0,
+    "low": 21.8600006104,
+    "close": 21.9699993134,
+    "volume": 7430200.0,
+    "wedge_status": "drop"
   }
 ]

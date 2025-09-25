@@ -7508,5 +7508,15 @@
     "close": 3.6300001144,
     "volume": 378932.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,24,00,00,00,000000",
+    "ticker": "CMTG",
+    "open": 3.6500000954,
+    "high": 3.7000000477,
+    "low": 3.5699999332,
+    "close": 3.7000000477,
+    "volume": 839170.0,
+    "wedge_status": "none"
   }
 ]

@@ -1998,5 +1998,15 @@
     "close": 13.5,
     "volume": 79437.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,24,00,00,00,000000",
+    "ticker": "FVR",
+    "open": 13.5900001526,
+    "high": 13.5600004196,
+    "low": 13.375,
+    "close": 13.529999733,
+    "volume": 82627.0,
+    "wedge_status": "none"
   }
 ]
