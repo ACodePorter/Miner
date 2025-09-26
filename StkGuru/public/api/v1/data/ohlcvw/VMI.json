@@ -7508,5 +7508,15 @@
     "close": 368.3200073242,
     "volume": 111123.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,25,00,00,00,000000",
+    "ticker": "VMI",
+    "open": 365.5,
+    "high": 366.7200012207,
+    "low": 361.5,
+    "close": 364.6600036621,
+    "volume": 103523.0,
+    "wedge_status": "none"
   }
 ]

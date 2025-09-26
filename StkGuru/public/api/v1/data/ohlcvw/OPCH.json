@@ -7508,5 +7508,15 @@
     "close": 27.5,
     "volume": 1784500.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,25,00,00,00,000000",
+    "ticker": "OPCH",
+    "open": 27.5699996948,
+    "high": 27.5699996948,
+    "low": 26.6849994659,
+    "close": 26.8199996948,
+    "volume": 2233930.0,
+    "wedge_status": "none"
   }
 ]

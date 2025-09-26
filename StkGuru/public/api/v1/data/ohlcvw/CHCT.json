@@ -7508,5 +7508,15 @@
     "close": 15.0100002289,
     "volume": 171433.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,25,00,00,00,000000",
+    "ticker": "CHCT",
+    "open": 15.0200004578,
+    "high": 15.1700000763,
+    "low": 14.8500003815,
+    "close": 15.0,
+    "volume": 189515.0,
+    "wedge_status": "none"
   }
 ]

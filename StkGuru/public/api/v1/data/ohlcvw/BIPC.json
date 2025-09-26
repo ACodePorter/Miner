@@ -7508,5 +7508,15 @@
     "close": 40.75,
     "volume": 474604.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,25,00,00,00,000000",
+    "ticker": "BIPC",
+    "open": 40.4300003052,
+    "high": 40.4550018311,
+    "low": 39.1699981689,
+    "close": 39.9199981689,
+    "volume": 734052.0,
+    "wedge_status": "drop"
   }
 ]

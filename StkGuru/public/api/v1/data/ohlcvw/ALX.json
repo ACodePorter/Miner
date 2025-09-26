@@ -7508,5 +7508,15 @@
     "close": 234.0899963379,
     "volume": 93723.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,25,00,00,00,000000",
+    "ticker": "ALX",
+    "open": 234.2200012207,
+    "high": 239.0,
+    "low": 232.0,
+    "close": 237.4499969482,
+    "volume": 72012.0,
+    "wedge_status": "none"
   }
 ]

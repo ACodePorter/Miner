@@ -7508,5 +7508,15 @@
     "close": 64.5,
     "volume": 5387800.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,25,00,00,00,000000",
+    "ticker": "SLNO",
+    "open": 63.8300018311,
+    "high": 65.1999969482,
+    "low": 62.3100013733,
+    "close": 62.7200012207,
+    "volume": 1679380.0,
+    "wedge_status": "none"
   }
 ]

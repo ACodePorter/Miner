@@ -7508,5 +7508,15 @@
     "close": 192.7700042725,
     "volume": 1133762.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,25,00,00,00,000000",
+    "ticker": "AVB",
+    "open": 192.5,
+    "high": 193.5500030518,
+    "low": 191.0,
+    "close": 191.4900054932,
+    "volume": 779357.0,
+    "wedge_status": "none"
   }
 ]
