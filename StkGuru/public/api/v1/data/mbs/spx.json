@@ -78588,5 +78588,150 @@
         "score": 81.25
       }
     ]
+  },
+  {
+    "index_name": "spx",
+    "trade_date": "2025,09,26,00,00,00,000000",
+    "score_sma20": 583.86,
+    "score_sma50": 622.38,
+    "score_sma200": 688.18,
+    "sector_score20": [
+      {
+        "sector_key": "basic-materials",
+        "score": 35.0
+      },
+      {
+        "sector_key": "communication-services",
+        "score": 61.54
+      },
+      {
+        "sector_key": "consumer-cyclical",
+        "score": 38.89
+      },
+      {
+        "sector_key": "consumer-defensive",
+        "score": 29.73
+      },
+      {
+        "sector_key": "energy",
+        "score": 90.91
+      },
+      {
+        "sector_key": "financial-services",
+        "score": 59.42
+      },
+      {
+        "sector_key": "healthcare",
+        "score": 33.33
+      },
+      {
+        "sector_key": "industrials",
+        "score": 50.7
+      },
+      {
+        "sector_key": "real-estate",
+        "score": 41.94
+      },
+      {
+        "sector_key": "technology",
+        "score": 58.02
+      },
+      {
+        "sector_key": "utilities",
+        "score": 84.38
+      }
+    ],
+    "sector_score50": [
+      {
+        "sector_key": "basic-materials",
+        "score": 45.0
+      },
+      {
+        "sector_key": "communication-services",
+        "score": 69.23
+      },
+      {
+        "sector_key": "consumer-cyclical",
+        "score": 50.0
+      },
+      {
+        "sector_key": "consumer-defensive",
+        "score": 24.32
+      },
+      {
+        "sector_key": "energy",
+        "score": 86.36
+      },
+      {
+        "sector_key": "financial-services",
+        "score": 66.67
+      },
+      {
+        "sector_key": "healthcare",
+        "score": 40.0
+      },
+      {
+        "sector_key": "industrials",
+        "score": 53.52
+      },
+      {
+        "sector_key": "real-estate",
+        "score": 54.84
+      },
+      {
+        "sector_key": "technology",
+        "score": 54.32
+      },
+      {
+        "sector_key": "utilities",
+        "score": 78.12
+      }
+    ],
+    "sector_score200": [
+      {
+        "sector_key": "basic-materials",
+        "score": 60.0
+      },
+      {
+        "sector_key": "communication-services",
+        "score": 80.77
+      },
+      {
+        "sector_key": "consumer-cyclical",
+        "score": 68.52
+      },
+      {
+        "sector_key": "consumer-defensive",
+        "score": 32.43
+      },
+      {
+        "sector_key": "energy",
+        "score": 72.73
+      },
+      {
+        "sector_key": "financial-services",
+        "score": 72.46
+      },
+      {
+        "sector_key": "healthcare",
+        "score": 40.0
+      },
+      {
+        "sector_key": "industrials",
+        "score": 66.2
+      },
+      {
+        "sector_key": "real-estate",
+        "score": 48.39
+      },
+      {
+        "sector_key": "technology",
+        "score": 65.43
+      },
+      {
+        "sector_key": "utilities",
+        "score": 81.25
+      }
+    ]
   }
 ]
