@@ -7508,5 +7508,15 @@
     "close": 28.75,
     "volume": 194026.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,26,00,00,00,000000",
+    "ticker": "AOSL",
+    "open": 28.7999992371,
+    "high": 28.7999992371,
+    "low": 28.0300006866,
+    "close": 28.4699993134,
+    "volume": 164628.0,
+    "wedge_status": "none"
   }
 ]

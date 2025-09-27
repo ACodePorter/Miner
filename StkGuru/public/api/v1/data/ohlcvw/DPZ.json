@@ -7508,5 +7508,15 @@
     "close": 422.75,
     "volume": 537520.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,26,00,00,00,000000",
+    "ticker": "DPZ",
+    "open": 431.0,
+    "high": 441.6350097656,
+    "low": 429.3949890137,
+    "close": 435.75,
+    "volume": 918780.0,
+    "wedge_status": "none"
   }
 ]

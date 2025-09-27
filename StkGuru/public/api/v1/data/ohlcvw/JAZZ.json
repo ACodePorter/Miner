@@ -7508,5 +7508,15 @@
     "close": 127.8000030518,
     "volume": 443840.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,26,00,00,00,000000",
+    "ticker": "JAZZ",
+    "open": 128.8399963379,
+    "high": 129.5200042725,
+    "low": 126.0899963379,
+    "close": 127.0,
+    "volume": 603102.0,
+    "wedge_status": "drop"
   }
 ]

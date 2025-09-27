@@ -7508,5 +7508,15 @@
     "close": 13.6899995804,
     "volume": 624258.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,26,00,00,00,000000",
+    "ticker": "EMBC",
+    "open": 13.8000001907,
+    "high": 14.0,
+    "low": 13.6599998474,
+    "close": 13.8999996185,
+    "volume": 356122.0,
+    "wedge_status": "none"
   }
 ]
