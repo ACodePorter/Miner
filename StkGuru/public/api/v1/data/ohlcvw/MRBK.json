@@ -7478,5 +7478,25 @@
     "close": 15.9799995422,
     "volume": 66921.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,26,00,00,00,000000",
+    "ticker": "MRBK",
+    "open": 16.0499992371,
+    "high": 16.1900005341,
+    "low": 16.0,
+    "close": 16.0599994659,
+    "volume": 66092.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,29,00,00,00,000000",
+    "ticker": "MRBK",
+    "open": 16.0400009155,
+    "high": 16.0499992371,
+    "low": 15.6599998474,
+    "close": 15.7600002289,
+    "volume": 62218.0,
+    "wedge_status": "none"
   }
 ]

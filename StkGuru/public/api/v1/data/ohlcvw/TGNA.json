@@ -7478,5 +7478,25 @@
     "close": 20.5,
     "volume": 6528820.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,26,00,00,00,000000",
+    "ticker": "TGNA",
+    "open": 20.5,
+    "high": 20.5599994659,
+    "low": 20.2399997711,
+    "close": 20.2700004578,
+    "volume": 3807684.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,29,00,00,00,000000",
+    "ticker": "TGNA",
+    "open": 20.2700004578,
+    "high": 20.3299999237,
+    "low": 20.125,
+    "close": 20.1800003052,
+    "volume": 2775105.0,
+    "wedge_status": "none"
   }
 ]

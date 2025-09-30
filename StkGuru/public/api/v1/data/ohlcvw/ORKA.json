@@ -7478,5 +7478,25 @@
     "close": 15.0500001907,
     "volume": 372920.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,26,00,00,00,000000",
+    "ticker": "ORKA",
+    "open": 15.0500001907,
+    "high": 15.6400003433,
+    "low": 15.0,
+    "close": 15.1999998093,
+    "volume": 415419.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,29,00,00,00,000000",
+    "ticker": "ORKA",
+    "open": 16.7199993134,
+    "high": 20.0,
+    "low": 15.8000001907,
+    "close": 19.2900009155,
+    "volume": 1278762.0,
+    "wedge_status": "none"
   }
 ]

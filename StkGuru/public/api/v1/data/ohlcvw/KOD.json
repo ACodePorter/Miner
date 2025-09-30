@@ -7478,5 +7478,25 @@
     "close": 15.6800003052,
     "volume": 3361876.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,26,00,00,00,000000",
+    "ticker": "KOD",
+    "open": 15.5050001144,
+    "high": 16.5,
+    "low": 15.0500001907,
+    "close": 15.8000001907,
+    "volume": 1102227.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,29,00,00,00,000000",
+    "ticker": "KOD",
+    "open": 15.9099998474,
+    "high": 16.5,
+    "low": 14.7311000824,
+    "close": 15.8100004196,
+    "volume": 991478.0,
+    "wedge_status": "none"
   }
 ]

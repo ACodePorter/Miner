@@ -7478,5 +7478,25 @@
     "close": 2.0899999142,
     "volume": 111052.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,26,00,00,00,000000",
+    "ticker": "LFT",
+    "open": 2.0999999046,
+    "high": 2.125,
+    "low": 2.0999999046,
+    "close": 2.1199998856,
+    "volume": 89030.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,29,00,00,00,000000",
+    "ticker": "LFT",
+    "open": 2.1099998951,
+    "high": 2.1099998951,
+    "low": 2.0499999523,
+    "close": 2.0599999428,
+    "volume": 151267.0,
+    "wedge_status": "none"
   }
 ]

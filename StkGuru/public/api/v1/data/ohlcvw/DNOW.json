@@ -7488,5 +7488,15 @@
     "close": 15.5,
     "volume": 1157650.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,09,29,00,00,00,000000",
+    "ticker": "DNOW",
+    "open": 15.4799995422,
+    "high": 15.4799995422,
+    "low": 15.0349998474,
+    "close": 15.2399997711,
+    "volume": 900550.0,
+    "wedge_status": "drop"
   }
 ]

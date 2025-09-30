@@ -7478,5 +7478,25 @@
     "close": 3.2000000477,
     "volume": 460755.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,26,00,00,00,000000",
+    "ticker": "HLLY",
+    "open": 3.2200000286,
+    "high": 3.2679998875,
+    "low": 3.1840000153,
+    "close": 3.25,
+    "volume": 324143.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,29,00,00,00,000000",
+    "ticker": "HLLY",
+    "open": 3.2599999905,
+    "high": 3.2699999809,
+    "low": 3.1500000954,
+    "close": 3.2300000191,
+    "volume": 364143.0,
+    "wedge_status": "none"
   }
 ]

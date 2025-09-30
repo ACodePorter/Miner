@@ -7478,5 +7478,25 @@
     "close": 5.9499998093,
     "volume": 70156.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,26,00,00,00,000000",
+    "ticker": "ONTF",
+    "open": 5.9400000572,
+    "high": 6.0399999619,
+    "low": 5.9437999725,
+    "close": 6.0399999619,
+    "volume": 72193.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,29,00,00,00,000000",
+    "ticker": "ONTF",
+    "open": 6.0500001907,
+    "high": 6.0700001717,
+    "low": 6.0,
+    "close": 6.0,
+    "volume": 101044.0,
+    "wedge_status": "none"
   }
 ]

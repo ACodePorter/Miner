@@ -7478,5 +7478,25 @@
     "close": 9.8199996948,
     "volume": 21613.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,26,00,00,00,000000",
+    "ticker": "RELL",
+    "open": 9.6441001892,
+    "high": 10.1000003815,
+    "low": 9.6441001892,
+    "close": 9.9399995804,
+    "volume": 21409.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,29,00,00,00,000000",
+    "ticker": "RELL",
+    "open": 10.0,
+    "high": 10.0,
+    "low": 9.6700000763,
+    "close": 9.6999998093,
+    "volume": 30039.0,
+    "wedge_status": "none"
   }
 ]

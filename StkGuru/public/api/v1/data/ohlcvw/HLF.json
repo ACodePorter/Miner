@@ -7478,5 +7478,25 @@
     "close": 8.75,
     "volume": 1035307.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,26,00,00,00,000000",
+    "ticker": "HLF",
+    "open": 8.75,
+    "high": 8.8800001144,
+    "low": 8.7550001144,
+    "close": 8.8699998856,
+    "volume": 675811.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,29,00,00,00,000000",
+    "ticker": "HLF",
+    "open": 8.970000267,
+    "high": 8.970000267,
+    "low": 8.5200004578,
+    "close": 8.5100002289,
+    "volume": 1215252.0,
+    "wedge_status": "none"
   }
 ]

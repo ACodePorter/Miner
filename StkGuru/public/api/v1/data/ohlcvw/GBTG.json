@@ -7348,5 +7348,25 @@
     "close": 8.0,
     "volume": 587962.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,26,00,00,00,000000",
+    "ticker": "GBTG",
+    "open": 8.029999733,
+    "high": 8.1899995804,
+    "low": 8.0450000763,
+    "close": 8.1400003433,
+    "volume": 530920.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,29,00,00,00,000000",
+    "ticker": "GBTG",
+    "open": 8.2100000381,
+    "high": 8.25,
+    "low": 8.1049995422,
+    "close": 8.1800003052,
+    "volume": 655353.0,
+    "wedge_status": "none"
   }
 ]

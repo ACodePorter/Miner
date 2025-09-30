@@ -7478,5 +7478,25 @@
     "close": 6.5,
     "volume": 4585148.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,26,00,00,00,000000",
+    "ticker": "HBI",
+    "open": 6.5,
+    "high": 6.5999999046,
+    "low": 6.4600000381,
+    "close": 6.5900001526,
+    "volume": 3269387.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,29,00,00,00,000000",
+    "ticker": "HBI",
+    "open": 6.6100001335,
+    "high": 6.6180000305,
+    "low": 6.4499998093,
+    "close": 6.5500001907,
+    "volume": 5816406.0,
+    "wedge_status": "none"
   }
 ]

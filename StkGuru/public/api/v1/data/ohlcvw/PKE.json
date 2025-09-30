@@ -7478,5 +7478,25 @@
     "close": 18.8600006104,
     "volume": 160139.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,26,00,00,00,000000",
+    "ticker": "PKE",
+    "open": 19.0,
+    "high": 19.4500007629,
+    "low": 18.9400005341,
+    "close": 19.4300003052,
+    "volume": 55914.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,29,00,00,00,000000",
+    "ticker": "PKE",
+    "open": 19.5,
+    "high": 20.5900001526,
+    "low": 19.1000003815,
+    "close": 20.2000007629,
+    "volume": 205685.0,
+    "wedge_status": "none"
   }
 ]

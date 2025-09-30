@@ -7478,5 +7478,25 @@
     "close": 6.4400000572,
     "volume": 23543.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,26,00,00,00,000000",
+    "ticker": "SNCR",
+    "open": 6.5574998856,
+    "high": 6.5574998856,
+    "low": 6.3499999046,
+    "close": 6.4000000954,
+    "volume": 24825.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,29,00,00,00,000000",
+    "ticker": "SNCR",
+    "open": 6.4200000763,
+    "high": 6.5500001907,
+    "low": 6.2100000381,
+    "close": 6.2100000381,
+    "volume": 30945.0,
+    "wedge_status": "drop"
   }
 ]

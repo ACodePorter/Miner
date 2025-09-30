@@ -7478,5 +7478,25 @@
     "close": 7.4499998093,
     "volume": 584307.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,26,00,00,00,000000",
+    "ticker": "SEMR",
+    "open": 7.4400000572,
+    "high": 7.5,
+    "low": 7.383600235,
+    "close": 7.4099998474,
+    "volume": 493270.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,29,00,00,00,000000",
+    "ticker": "SEMR",
+    "open": 7.4499998093,
+    "high": 7.4773001671,
+    "low": 7.2199997902,
+    "close": 7.2800002098,
+    "volume": 915039.0,
+    "wedge_status": "none"
   }
 ]

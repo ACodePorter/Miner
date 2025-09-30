@@ -7478,5 +7478,25 @@
     "close": 26.5300006866,
     "volume": 35673.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,26,00,00,00,000000",
+    "ticker": "RCMT",
+    "open": 26.5300006866,
+    "high": 27.5,
+    "low": 26.5300006866,
+    "close": 27.0100002289,
+    "volume": 57337.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,29,00,00,00,000000",
+    "ticker": "RCMT",
+    "open": 27.0699996948,
+    "high": 27.5,
+    "low": 26.3899993896,
+    "close": 26.4400005341,
+    "volume": 17630.0,
+    "wedge_status": "drop"
   }
 ]
