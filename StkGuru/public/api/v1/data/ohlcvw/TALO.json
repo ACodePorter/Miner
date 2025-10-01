@@ -7498,5 +7498,15 @@
     "close": 9.6999998093,
     "volume": 1166640.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,30,00,00,00,000000",
+    "ticker": "TALO",
+    "open": 9.529999733,
+    "high": 9.625,
+    "low": 9.3500003815,
+    "close": 9.5900001526,
+    "volume": 1239401.0,
+    "wedge_status": "drop"
   }
 ]

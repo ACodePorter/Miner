@@ -7498,5 +7498,15 @@
     "close": 7.3600001335,
     "volume": 366476.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,30,00,00,00,000000",
+    "ticker": "ATXS",
+    "open": 7.3200001717,
+    "high": 7.4050002098,
+    "low": 7.1950001717,
+    "close": 7.2800002098,
+    "volume": 337568.0,
+    "wedge_status": "none"
   }
 ]

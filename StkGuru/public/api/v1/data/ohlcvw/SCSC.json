@@ -7498,5 +7498,15 @@
     "close": 44.1899986267,
     "volume": 184547.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,30,00,00,00,000000",
+    "ticker": "SCSC",
+    "open": 44.2999992371,
+    "high": 44.5,
+    "low": 43.4350013733,
+    "close": 43.9900016785,
+    "volume": 120325.0,
+    "wedge_status": "drop"
   }
 ]

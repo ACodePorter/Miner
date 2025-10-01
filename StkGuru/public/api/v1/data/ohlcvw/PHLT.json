@@ -7498,5 +7498,15 @@
     "close": 7.6999998093,
     "volume": 1000824.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,30,00,00,00,000000",
+    "ticker": "PHLT",
+    "open": 7.7100000381,
+    "high": 7.7300000191,
+    "low": 7.7100000381,
+    "close": 7.7300000191,
+    "volume": 361050.0,
+    "wedge_status": "none"
   }
 ]

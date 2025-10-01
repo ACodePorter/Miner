@@ -7498,5 +7498,15 @@
     "close": 728.4699707031,
     "volume": 949696.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,09,30,00,00,00,000000",
+    "ticker": "SPOT",
+    "open": 705.2600097656,
+    "high": 711.0,
+    "low": 677.9899902344,
+    "close": 698.0,
+    "volume": 3844534.0,
+    "wedge_status": "drop"
   }
 ]

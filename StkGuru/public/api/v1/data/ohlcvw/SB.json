@@ -7498,5 +7498,15 @@
     "close": 4.5199999809,
     "volume": 418605.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,30,00,00,00,000000",
+    "ticker": "SB",
+    "open": 4.5,
+    "high": 4.5,
+    "low": 4.4200000763,
+    "close": 4.4400000572,
+    "volume": 454077.0,
+    "wedge_status": "drop"
   }
 ]

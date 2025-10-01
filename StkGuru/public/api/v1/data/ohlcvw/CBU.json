@@ -7498,5 +7498,15 @@
     "close": 59.0,
     "volume": 109680.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,30,00,00,00,000000",
+    "ticker": "CBU",
+    "open": 59.0699996948,
+    "high": 59.1100006104,
+    "low": 57.9817008972,
+    "close": 58.6399993896,
+    "volume": 154562.0,
+    "wedge_status": "none"
   }
 ]

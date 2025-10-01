@@ -7498,5 +7498,15 @@
     "close": 7.5,
     "volume": 234344.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,30,00,00,00,000000",
+    "ticker": "MEI",
+    "open": 7.4800000191,
+    "high": 7.5650000572,
+    "low": 7.4050002098,
+    "close": 7.5500001907,
+    "volume": 263537.0,
+    "wedge_status": "none"
   }
 ]

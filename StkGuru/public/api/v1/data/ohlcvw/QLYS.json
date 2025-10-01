@@ -7498,5 +7498,15 @@
     "close": 136.5,
     "volume": 241199.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,30,00,00,00,000000",
+    "ticker": "QLYS",
+    "open": 136.2799987793,
+    "high": 137.4754943848,
+    "low": 132.1900024414,
+    "close": 132.3300018311,
+    "volume": 311917.0,
+    "wedge_status": "drop"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 12.5,
     "volume": 37452.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,30,00,00,00,000000",
+    "ticker": "PVBC",
+    "open": 12.470000267,
+    "high": 12.529999733,
+    "low": 12.3850002289,
+    "close": 12.529999733,
+    "volume": 29657.0,
+    "wedge_status": "none"
   }
 ]
