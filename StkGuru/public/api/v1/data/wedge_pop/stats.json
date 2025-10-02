@@ -48768,10 +48768,32 @@
   },
   {
     "date": "20251001",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 20,
+    "pop": [
+      "AON",
+      "MKC"
+    ],
+    "drop": [
+      "ABT",
+      "AVB",
+      "BAC",
+      "BK",
+      "C",
+      "CF",
+      "CLX",
+      "CNP",
+      "DGX",
+      "EFX",
+      "EXPD",
+      "GL",
+      "GPC",
+      "IDXX",
+      "IT",
+      "JBL",
+      "KIM",
+      "MOS"
+    ],
+    "pop_pct": 0.1,
+    "drop_pct": 0.9
   }
 ]
