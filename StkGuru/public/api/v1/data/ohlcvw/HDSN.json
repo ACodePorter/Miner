@@ -7498,5 +7498,25 @@
     "close": 9.9300003052,
     "volume": 306390.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "HDSN",
+    "open": 9.8400001526,
+    "high": 9.8500003815,
+    "low": 9.6521997452,
+    "close": 9.720000267,
+    "volume": 288898.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "HDSN",
+    "open": 9.75,
+    "high": 9.75,
+    "low": 9.460100174,
+    "close": 9.5,
+    "volume": 269351.0,
+    "wedge_status": "none"
   }
 ]

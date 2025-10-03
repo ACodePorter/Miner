@@ -7498,5 +7498,25 @@
     "close": 9.0900001526,
     "volume": 31881.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "BLFY",
+    "open": 9.0100002289,
+    "high": 9.1199998856,
+    "low": 8.9300003052,
+    "close": 8.9399995804,
+    "volume": 75842.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "BLFY",
+    "open": 8.8999996185,
+    "high": 8.8999996185,
+    "low": 8.7100000381,
+    "close": 8.7100000381,
+    "volume": 33041.0,
+    "wedge_status": "none"
   }
 ]

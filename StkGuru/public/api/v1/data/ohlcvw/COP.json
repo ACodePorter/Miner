@@ -7508,5 +7508,15 @@
     "close": 95.4599990845,
     "volume": 3681479.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "COP",
+    "open": 95.0,
+    "high": 96.1364974976,
+    "low": 93.125,
+    "close": 93.3799972534,
+    "volume": 5424572.0,
+    "wedge_status": "drop"
   }
 ]

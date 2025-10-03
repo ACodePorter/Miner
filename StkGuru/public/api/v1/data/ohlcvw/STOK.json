@@ -7498,5 +7498,25 @@
     "close": 23.5,
     "volume": 1185101.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "STOK",
+    "open": 23.5,
+    "high": 24.2450008392,
+    "low": 23.2800006866,
+    "close": 23.5900001526,
+    "volume": 953087.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "STOK",
+    "open": 23.6439990997,
+    "high": 24.8299999237,
+    "low": 23.5550003052,
+    "close": 24.8199996948,
+    "volume": 702932.0,
+    "wedge_status": "none"
   }
 ]

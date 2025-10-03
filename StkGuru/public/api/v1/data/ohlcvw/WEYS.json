@@ -7498,5 +7498,25 @@
     "close": 30.0900001526,
     "volume": 13625.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "WEYS",
+    "open": 30.0100002289,
+    "high": 30.5,
+    "low": 29.8850002289,
+    "close": 30.5,
+    "volume": 9966.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "WEYS",
+    "open": 30.2600002289,
+    "high": 30.7700004578,
+    "low": 29.6100006104,
+    "close": 29.6499996185,
+    "volume": 17700.0,
+    "wedge_status": "drop"
   }
 ]

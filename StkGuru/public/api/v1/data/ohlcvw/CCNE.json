@@ -7498,5 +7498,25 @@
     "close": 24.2000007629,
     "volume": 103066.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "CCNE",
+    "open": 24.0,
+    "high": 24.5200004578,
+    "low": 23.5699996948,
+    "close": 24.0,
+    "volume": 95947.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "CCNE",
+    "open": 23.9200000763,
+    "high": 23.9699993134,
+    "low": 23.4899997711,
+    "close": 23.6200008392,
+    "volume": 104998.0,
+    "wedge_status": "none"
   }
 ]

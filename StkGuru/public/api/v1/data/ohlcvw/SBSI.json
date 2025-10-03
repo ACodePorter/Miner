@@ -7498,5 +7498,25 @@
     "close": 28.25,
     "volume": 72509.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "SBSI",
+    "open": 28.0,
+    "high": 28.0,
+    "low": 27.75,
+    "close": 27.8199996948,
+    "volume": 93380.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "SBSI",
+    "open": 27.7299995422,
+    "high": 27.9897994995,
+    "low": 27.6949996948,
+    "close": 27.8099994659,
+    "volume": 132373.0,
+    "wedge_status": "none"
   }
 ]

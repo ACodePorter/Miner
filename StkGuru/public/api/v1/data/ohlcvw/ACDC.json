@@ -7498,5 +7498,25 @@
     "close": 3.7000000477,
     "volume": 1575552.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "ACDC",
+    "open": 3.6800000668,
+    "high": 4.0170001984,
+    "low": 3.6600000858,
+    "close": 3.9600000381,
+    "volume": 1735003.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "ACDC",
+    "open": 3.9800000191,
+    "high": 4.0700001717,
+    "low": 3.9300000668,
+    "close": 4.0,
+    "volume": 1240382.0,
+    "wedge_status": "none"
   }
 ]

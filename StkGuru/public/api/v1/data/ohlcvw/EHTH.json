@@ -7498,5 +7498,25 @@
     "close": 4.3099999428,
     "volume": 643779.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "EHTH",
+    "open": 4.3099999428,
+    "high": 4.3099999428,
+    "low": 4.0300002098,
+    "close": 4.1700000763,
+    "volume": 386962.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "EHTH",
+    "open": 4.2100000381,
+    "high": 4.25,
+    "low": 4.0517001152,
+    "close": 4.25,
+    "volume": 243291.0,
+    "wedge_status": "none"
   }
 ]

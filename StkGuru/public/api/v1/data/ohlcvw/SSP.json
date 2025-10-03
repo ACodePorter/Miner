@@ -7498,5 +7498,25 @@
     "close": 2.4600000381,
     "volume": 569767.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "SSP",
+    "open": 2.4400000572,
+    "high": 2.5799999237,
+    "low": 2.4400000572,
+    "close": 2.5499999523,
+    "volume": 612972.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "SSP",
+    "open": 2.5399999619,
+    "high": 2.6099998951,
+    "low": 2.4649999142,
+    "close": 2.5,
+    "volume": 275391.0,
+    "wedge_status": "none"
   }
 ]

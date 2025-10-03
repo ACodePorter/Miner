@@ -7498,5 +7498,25 @@
     "close": 76.2699966431,
     "volume": 448440.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "WNS",
+    "open": 76.2699966431,
+    "high": 76.2799987793,
+    "low": 76.2350006104,
+    "close": 76.25,
+    "volume": 845842.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "WNS",
+    "open": 76.25,
+    "high": 76.3099975586,
+    "low": 76.2200012207,
+    "close": 76.2399978638,
+    "volume": 813212.0,
+    "wedge_status": "none"
   }
 ]

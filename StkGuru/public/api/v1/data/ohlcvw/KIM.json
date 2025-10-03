@@ -7508,5 +7508,15 @@
     "close": 21.5200004578,
     "volume": 3612092.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "KIM",
+    "open": 21.5,
+    "high": 21.5650005341,
+    "low": 21.2000007629,
+    "close": 21.3600006104,
+    "volume": 1945915.0,
+    "wedge_status": "none"
   }
 ]

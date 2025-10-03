@@ -7498,5 +7498,25 @@
     "close": 138.5200042725,
     "volume": 8623103.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "RBLX",
+    "open": 136.1349945068,
+    "high": 137.9100036621,
+    "low": 134.0549926758,
+    "close": 134.0700073242,
+    "volume": 5916271.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "RBLX",
+    "open": 135.25,
+    "high": 137.0,
+    "low": 131.8099975586,
+    "close": 133.5,
+    "volume": 6552009.0,
+    "wedge_status": "drop"
   }
 ]

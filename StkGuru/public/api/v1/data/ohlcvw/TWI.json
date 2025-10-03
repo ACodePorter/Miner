@@ -7498,5 +7498,25 @@
     "close": 7.5599999428,
     "volume": 655210.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "TWI",
+    "open": 7.5599999428,
+    "high": 7.6449999809,
+    "low": 7.4800000191,
+    "close": 7.5700001717,
+    "volume": 514505.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "TWI",
+    "open": 7.5999999046,
+    "high": 7.8000001907,
+    "low": 7.5549998283,
+    "close": 7.75,
+    "volume": 528146.0,
+    "wedge_status": "none"
   }
 ]

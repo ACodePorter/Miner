@@ -7498,5 +7498,25 @@
     "close": 4.4299998283,
     "volume": 2185611.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "BGS",
+    "open": 4.4099998474,
+    "high": 4.5599999428,
+    "low": 4.4099998474,
+    "close": 4.5,
+    "volume": 2960206.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "BGS",
+    "open": 4.5,
+    "high": 4.595099926,
+    "low": 4.4499998093,
+    "close": 4.5,
+    "volume": 2080189.0,
+    "wedge_status": "pop"
   }
 ]

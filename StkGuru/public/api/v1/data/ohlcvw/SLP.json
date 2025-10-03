@@ -7498,5 +7498,25 @@
     "close": 15.0699996948,
     "volume": 447565.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "SLP",
+    "open": 15.1000003815,
+    "high": 16.0699996948,
+    "low": 15.0,
+    "close": 15.4799995422,
+    "volume": 752783.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "SLP",
+    "open": 15.4099998474,
+    "high": 15.845000267,
+    "low": 15.25,
+    "close": 15.5500001907,
+    "volume": 430137.0,
+    "wedge_status": "none"
   }
 ]

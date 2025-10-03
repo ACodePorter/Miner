@@ -7498,5 +7498,25 @@
     "close": 7.5300002098,
     "volume": 243995.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "DSGN",
+    "open": 7.4899997711,
+    "high": 7.4899997711,
+    "low": 6.75,
+    "close": 6.7899999619,
+    "volume": 125965.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "DSGN",
+    "open": 6.7600002289,
+    "high": 6.8255000114,
+    "low": 5.9149999619,
+    "close": 6.0149998665,
+    "volume": 235767.0,
+    "wedge_status": "drop"
   }
 ]

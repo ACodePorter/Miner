@@ -7498,5 +7498,25 @@
     "close": 1.0299999714,
     "volume": 6326064.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "AGL",
+    "open": 1.0499999523,
+    "high": 1.0700000525,
+    "low": 1.0,
+    "close": 1.0,
+    "volume": 5557781.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "AGL",
+    "open": 1.0,
+    "high": 1.0900000334,
+    "low": 1.0099999905,
+    "close": 1.0800000429,
+    "volume": 5188260.0,
+    "wedge_status": "none"
   }
 ]

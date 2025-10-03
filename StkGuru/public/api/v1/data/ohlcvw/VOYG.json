@@ -328,5 +328,25 @@
     "close": 29.7800006866,
     "volume": 1072446.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "VOYG",
+    "open": 28.9799995422,
+    "high": 30.25,
+    "low": 29.0,
+    "close": 29.75,
+    "volume": 793967.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "VOYG",
+    "open": 29.9899997711,
+    "high": 32.599899292,
+    "low": 29.75,
+    "close": 32.0499992371,
+    "volume": 901587.0,
+    "wedge_status": "none"
   }
 ]

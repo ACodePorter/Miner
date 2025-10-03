@@ -7498,5 +7498,25 @@
     "close": 9.9300003052,
     "volume": 1414429.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "DVAX",
+    "open": 9.970000267,
+    "high": 10.3500003815,
+    "low": 9.9499998093,
+    "close": 10.279999733,
+    "volume": 1439857.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "DVAX",
+    "open": 10.3100004196,
+    "high": 10.3400001526,
+    "low": 10.0,
+    "close": 10.1000003815,
+    "volume": 896627.0,
+    "wedge_status": "none"
   }
 ]

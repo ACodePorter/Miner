@@ -7498,5 +7498,25 @@
     "close": 66.4300003052,
     "volume": 1433460.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "PTGX",
+    "open": 66.0,
+    "high": 66.5299987793,
+    "low": 63.8499984741,
+    "close": 64.0,
+    "volume": 1031284.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "PTGX",
+    "open": 63.7099990845,
+    "high": 65.5,
+    "low": 63.7099990845,
+    "close": 64.9800033569,
+    "volume": 564978.0,
+    "wedge_status": "none"
   }
 ]

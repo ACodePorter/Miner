@@ -7498,5 +7498,25 @@
     "close": 18.1499996185,
     "volume": 1500874.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "EBC",
+    "open": 18.0,
+    "high": 18.3150005341,
+    "low": 17.9099998474,
+    "close": 18.25,
+    "volume": 1478391.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "EBC",
+    "open": 18.25,
+    "high": 18.4799995422,
+    "low": 18.1100006104,
+    "close": 18.2600002289,
+    "volume": 1596674.0,
+    "wedge_status": "none"
   }
 ]

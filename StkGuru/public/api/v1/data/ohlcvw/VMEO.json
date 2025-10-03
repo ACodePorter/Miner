@@ -7498,5 +7498,25 @@
     "close": 7.75,
     "volume": 2387819.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "VMEO",
+    "open": 7.7399997711,
+    "high": 7.7600002289,
+    "low": 7.7399997711,
+    "close": 7.75,
+    "volume": 2259725.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "VMEO",
+    "open": 7.75,
+    "high": 7.7800002098,
+    "low": 7.75,
+    "close": 7.7800002098,
+    "volume": 1281432.0,
+    "wedge_status": "none"
   }
 ]

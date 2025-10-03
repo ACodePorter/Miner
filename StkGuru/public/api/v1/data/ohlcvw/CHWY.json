@@ -7498,5 +7498,25 @@
     "close": 40.4500007629,
     "volume": 5789207.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "CHWY",
+    "open": 40.4500007629,
+    "high": 40.5,
+    "low": 38.7812004089,
+    "close": 39.5400009155,
+    "volume": 4943284.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "CHWY",
+    "open": 39.4199981689,
+    "high": 39.5550003052,
+    "low": 38.1349983215,
+    "close": 39.25,
+    "volume": 5934378.0,
+    "wedge_status": "none"
   }
 ]

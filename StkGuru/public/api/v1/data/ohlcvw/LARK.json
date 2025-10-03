@@ -7498,5 +7498,25 @@
     "close": 26.6900005341,
     "volume": 4901.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "LARK",
+    "open": 26.7450008392,
+    "high": 26.7450008392,
+    "low": 26.7199993134,
+    "close": 26.7199993134,
+    "volume": 1653.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "LARK",
+    "open": 26.501499176,
+    "high": 26.6700000763,
+    "low": 26.5,
+    "close": 26.6700000763,
+    "volume": 8243.0,
+    "wedge_status": "none"
   }
 ]

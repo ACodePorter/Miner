@@ -7498,5 +7498,25 @@
     "close": 4.1500000954,
     "volume": 10440378.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "FUBO",
+    "open": 4.1199998856,
+    "high": 4.1199998856,
+    "low": 3.8599998951,
+    "close": 3.9000000954,
+    "volume": 14294463.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "FUBO",
+    "open": 3.9400000572,
+    "high": 4.0,
+    "low": 3.75,
+    "close": 3.9500000477,
+    "volume": 15091115.0,
+    "wedge_status": "none"
   }
 ]
