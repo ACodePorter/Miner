@@ -7498,5 +7498,15 @@
     "close": 423.4200134277,
     "volume": 492659.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "HUBB",
+    "open": 423.7200012207,
+    "high": 424.0650024414,
+    "low": 411.8200073242,
+    "close": 413.0,
+    "volume": 683597.0,
+    "wedge_status": "none"
   }
 ]

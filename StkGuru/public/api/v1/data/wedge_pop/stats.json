@@ -47964,10 +47964,46 @@
   },
   {
     "date": "20251003",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 34,
+    "pop": [
+      "AGCO",
+      "AWK",
+      "BLDR",
+      "CACC",
+      "DAR",
+      "EW",
+      "FIS",
+      "FNB",
+      "FRPT",
+      "LEA",
+      "LEN",
+      "LEN.B",
+      "LNC",
+      "NVR",
+      "TSN",
+      "WSM"
+    ],
+    "drop": [
+      "CAR",
+      "DINO",
+      "FAST",
+      "FLEX",
+      "GME",
+      "HR",
+      "LH",
+      "LVS",
+      "NTAP",
+      "PLTR",
+      "PSX",
+      "REG",
+      "SWKS",
+      "TKO",
+      "UBER",
+      "VLO",
+      "VST",
+      "WYNN"
+    ],
+    "pop_pct": 0.471,
+    "drop_pct": 0.529
   }
 ]

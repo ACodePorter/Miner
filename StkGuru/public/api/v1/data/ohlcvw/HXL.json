@@ -7498,5 +7498,15 @@
     "close": 64.0,
     "volume": 573725.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "HXL",
+    "open": 64.3000030518,
+    "high": 65.0400009155,
+    "low": 63.9700012207,
+    "close": 64.6900024414,
+    "volume": 479039.0,
+    "wedge_status": "none"
   }
 ]
