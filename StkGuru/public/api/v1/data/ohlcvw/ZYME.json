@@ -7478,5 +7478,25 @@
     "close": 16.8999996185,
     "volume": 618459.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "ZYME",
+    "open": 17.0,
+    "high": 17.2099990845,
+    "low": 16.7900009155,
+    "close": 16.9400005341,
+    "volume": 558800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "ZYME",
+    "open": 17.0400009155,
+    "high": 17.3999996185,
+    "low": 16.625,
+    "close": 16.6849994659,
+    "volume": 642041.0,
+    "wedge_status": "none"
   }
 ]

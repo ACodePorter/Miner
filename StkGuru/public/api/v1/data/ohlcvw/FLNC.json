@@ -7478,5 +7478,25 @@
     "close": 13.0500001907,
     "volume": 8878160.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "FLNC",
+    "open": 13.1499996185,
+    "high": 14.220000267,
+    "low": 13.0,
+    "close": 13.7899999619,
+    "volume": 8824200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "FLNC",
+    "open": 14.1800003052,
+    "high": 15.5,
+    "low": 13.7600002289,
+    "close": 15.2600002289,
+    "volume": 9507389.0,
+    "wedge_status": "none"
   }
 ]

@@ -7478,5 +7478,25 @@
     "close": 9.25,
     "volume": 730812.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "LAND",
+    "open": 9.25,
+    "high": 9.345000267,
+    "low": 9.1899995804,
+    "close": 9.2299995422,
+    "volume": 323700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "LAND",
+    "open": 9.2299995422,
+    "high": 9.2299995422,
+    "low": 9.1000003815,
+    "close": 9.1400003433,
+    "volume": 349038.0,
+    "wedge_status": "drop"
   }
 ]

@@ -7478,5 +7478,25 @@
     "close": 71.9899978638,
     "volume": 1345571.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "DOCS",
+    "open": 72.4400024414,
+    "high": 74.3099975586,
+    "low": 72.0,
+    "close": 73.2600021362,
+    "volume": 929479.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "DOCS",
+    "open": 73.1500015259,
+    "high": 73.5699996948,
+    "low": 72.3300018311,
+    "close": 72.75,
+    "volume": 1009527.0,
+    "wedge_status": "none"
   }
 ]

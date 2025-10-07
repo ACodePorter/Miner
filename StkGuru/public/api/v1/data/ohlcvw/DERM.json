@@ -7478,5 +7478,25 @@
     "close": 7.3000001907,
     "volume": 63111.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "DERM",
+    "open": 7.25,
+    "high": 7.4299998283,
+    "low": 7.1700000763,
+    "close": 7.3299999237,
+    "volume": 68300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "DERM",
+    "open": 7.2600002289,
+    "high": 7.4250001907,
+    "low": 7.1050000191,
+    "close": 7.2899999619,
+    "volume": 124106.0,
+    "wedge_status": "none"
   }
 ]

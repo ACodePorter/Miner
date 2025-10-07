@@ -7478,5 +7478,25 @@
     "close": 98.3499984741,
     "volume": 735690.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "AAON",
+    "open": 98.3499984741,
+    "high": 100.7300033569,
+    "low": 97.3499984741,
+    "close": 98.3199996948,
+    "volume": 823231.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "AAON",
+    "open": 99.75,
+    "high": 104.1100006104,
+    "low": 99.75,
+    "close": 103.8450012207,
+    "volume": 1442685.0,
+    "wedge_status": "none"
   }
 ]

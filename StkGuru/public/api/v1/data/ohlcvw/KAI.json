@@ -7478,5 +7478,25 @@
     "close": 298.299987793,
     "volume": 84979.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "KAI",
+    "open": 299.3200073242,
+    "high": 305.0,
+    "low": 299.3200073242,
+    "close": 303.5,
+    "volume": 122400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "KAI",
+    "open": 305.0,
+    "high": 308.4400024414,
+    "low": 299.7099914551,
+    "close": 305.2099914551,
+    "volume": 97392.0,
+    "wedge_status": "none"
   }
 ]

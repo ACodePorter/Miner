@@ -7478,5 +7478,25 @@
     "close": 6.4299998283,
     "volume": 1155438.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "HLX",
+    "open": 6.5300002098,
+    "high": 6.75,
+    "low": 6.5,
+    "close": 6.6700000763,
+    "volume": 1308500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "HLX",
+    "open": 6.7800002098,
+    "high": 6.8499999046,
+    "low": 6.6500000954,
+    "close": 6.6700000763,
+    "volume": 1261514.0,
+    "wedge_status": "none"
   }
 ]

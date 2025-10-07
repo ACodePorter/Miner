@@ -7478,5 +7478,25 @@
     "close": 94.2300033569,
     "volume": 77396.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "DCO",
+    "open": 94.8199996948,
+    "high": 95.5,
+    "low": 94.0899963379,
+    "close": 94.8000030518,
+    "volume": 55800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "DCO",
+    "open": 94.9300003052,
+    "high": 97.0,
+    "low": 95.3499984741,
+    "close": 96.8199996948,
+    "volume": 73339.0,
+    "wedge_status": "none"
   }
 ]

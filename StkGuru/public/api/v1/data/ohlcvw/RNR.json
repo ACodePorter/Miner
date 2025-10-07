@@ -7478,5 +7478,25 @@
     "close": 255.75,
     "volume": 402633.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "RNR",
+    "open": 255.0,
+    "high": 260.9899902344,
+    "low": 255.3999938965,
+    "close": 259.5100097656,
+    "volume": 377840.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "RNR",
+    "open": 262.1199951172,
+    "high": 267.1900024414,
+    "low": 263.25,
+    "close": 266.3999938965,
+    "volume": 419079.0,
+    "wedge_status": "none"
   }
 ]

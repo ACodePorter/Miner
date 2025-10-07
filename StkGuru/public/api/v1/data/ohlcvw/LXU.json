@@ -7478,5 +7478,25 @@
     "close": 8.0,
     "volume": 744333.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "LXU",
+    "open": 8.0900001526,
+    "high": 9.0,
+    "low": 7.9699997902,
+    "close": 8.9899997711,
+    "volume": 778700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "LXU",
+    "open": 8.9499998093,
+    "high": 9.19810009,
+    "low": 8.8400001526,
+    "close": 9.0600004196,
+    "volume": 558643.0,
+    "wedge_status": "none"
   }
 ]

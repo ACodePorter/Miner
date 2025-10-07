@@ -3068,5 +3068,25 @@
     "close": 6.1399998665,
     "volume": 199147.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "PAL",
+    "open": 6.0799999237,
+    "high": 6.5,
+    "low": 6.0799999237,
+    "close": 6.1100001335,
+    "volume": 246800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "PAL",
+    "open": 6.1799998283,
+    "high": 6.4114999771,
+    "low": 6.0650000572,
+    "close": 6.3200001717,
+    "volume": 150835.0,
+    "wedge_status": "none"
   }
 ]

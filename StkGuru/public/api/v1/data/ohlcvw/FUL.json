@@ -7478,5 +7478,25 @@
     "close": 59.1199989319,
     "volume": 306260.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "FUL",
+    "open": 59.0,
+    "high": 59.8699989319,
+    "low": 58.9799995422,
+    "close": 59.2799987793,
+    "volume": 341000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "FUL",
+    "open": 59.2599983215,
+    "high": 59.5750007629,
+    "low": 58.7449989319,
+    "close": 59.0,
+    "volume": 286799.0,
+    "wedge_status": "none"
   }
 ]

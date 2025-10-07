@@ -7478,5 +7478,25 @@
     "close": 9.2299995422,
     "volume": 49991.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "UBFO",
+    "open": 9.1000003815,
+    "high": 9.2399997711,
+    "low": 9.0500001907,
+    "close": 9.1700000763,
+    "volume": 34800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "UBFO",
+    "open": 9.2399997711,
+    "high": 9.3479995728,
+    "low": 9.1899995804,
+    "close": 9.2700004578,
+    "volume": 19619.0,
+    "wedge_status": "none"
   }
 ]

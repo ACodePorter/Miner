@@ -7478,5 +7478,25 @@
     "close": 22.1900005341,
     "volume": 400481.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "PLYM",
+    "open": 22.2999992371,
+    "high": 22.5979995728,
+    "low": 22.1100006104,
+    "close": 22.1299991608,
+    "volume": 575300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "PLYM",
+    "open": 22.1499996185,
+    "high": 22.154499054,
+    "low": 22.0,
+    "close": 22.0,
+    "volume": 757716.0,
+    "wedge_status": "none"
   }
 ]

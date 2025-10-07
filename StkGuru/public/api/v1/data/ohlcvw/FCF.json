@@ -7478,5 +7478,25 @@
     "close": 16.75,
     "volume": 368753.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "FCF",
+    "open": 16.7600002289,
+    "high": 17.0200004578,
+    "low": 16.7600002289,
+    "close": 16.8099994659,
+    "volume": 717900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "FCF",
+    "open": 16.9699993134,
+    "high": 17.1650009155,
+    "low": 16.8178005219,
+    "close": 17.0,
+    "volume": 665752.0,
+    "wedge_status": "none"
   }
 ]

@@ -7478,5 +7478,25 @@
     "close": 8.7299995422,
     "volume": 1042663.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "PDM",
+    "open": 8.779999733,
+    "high": 8.8800001144,
+    "low": 8.720000267,
+    "close": 8.7399997711,
+    "volume": 526800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "PDM",
+    "open": 8.720000267,
+    "high": 8.7790002823,
+    "low": 8.625,
+    "close": 8.6400003433,
+    "volume": 731762.0,
+    "wedge_status": "none"
   }
 ]

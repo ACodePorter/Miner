@@ -7478,5 +7478,25 @@
     "close": 57.2000007629,
     "volume": 103231.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "EFSC",
+    "open": 57.0299987793,
+    "high": 58.2200012207,
+    "low": 57.0,
+    "close": 57.5,
+    "volume": 99000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "EFSC",
+    "open": 57.8800010681,
+    "high": 58.8100013733,
+    "low": 57.5950012207,
+    "close": 58.0,
+    "volume": 130168.0,
+    "wedge_status": "none"
   }
 ]

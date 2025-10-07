@@ -7478,5 +7478,25 @@
     "close": 19.4799995422,
     "volume": 971707.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "CXW",
+    "open": 19.5,
+    "high": 20.0400009155,
+    "low": 19.5,
+    "close": 19.8199996948,
+    "volume": 895600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "CXW",
+    "open": 19.7399997711,
+    "high": 19.8199996948,
+    "low": 19.0300006866,
+    "close": 19.0900001526,
+    "volume": 692478.0,
+    "wedge_status": "none"
   }
 ]

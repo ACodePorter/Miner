@@ -7478,5 +7478,25 @@
     "close": 28.75,
     "volume": 1831930.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "NE",
+    "open": 29.0,
+    "high": 30.1000003815,
+    "low": 29.0,
+    "close": 29.8999996185,
+    "volume": 2408000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "NE",
+    "open": 30.1499996185,
+    "high": 30.6399993896,
+    "low": 29.7950000763,
+    "close": 30.3099994659,
+    "volume": 2146833.0,
+    "wedge_status": "none"
   }
 ]

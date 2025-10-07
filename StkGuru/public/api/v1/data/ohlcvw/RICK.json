@@ -7478,5 +7478,25 @@
     "close": 30.6499996185,
     "volume": 109217.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "RICK",
+    "open": 30.75,
+    "high": 32.0200004578,
+    "low": 30.75,
+    "close": 31.1900005341,
+    "volume": 120500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "RICK",
+    "open": 31.1700000763,
+    "high": 31.1700000763,
+    "low": 28.375,
+    "close": 29.0849990845,
+    "volume": 221105.0,
+    "wedge_status": "none"
   }
 ]

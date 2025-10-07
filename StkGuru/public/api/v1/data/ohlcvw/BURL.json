@@ -7478,5 +7478,25 @@
     "close": 255.75,
     "volume": 864605.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "BURL",
+    "open": 256.25,
+    "high": 260.6849975586,
+    "low": 254.9100036621,
+    "close": 258.7900085449,
+    "volume": 830027.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "BURL",
+    "open": 258.3500061035,
+    "high": 265.0,
+    "low": 255.8399963379,
+    "close": 262.3699951172,
+    "volume": 854413.0,
+    "wedge_status": "none"
   }
 ]

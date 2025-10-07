@@ -7478,5 +7478,25 @@
     "close": 8.1599998474,
     "volume": 112165.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "ASUR",
+    "open": 8.1599998474,
+    "high": 8.3199996948,
+    "low": 8.1000003815,
+    "close": 8.3199996948,
+    "volume": 69800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "ASUR",
+    "open": 8.3199996948,
+    "high": 8.470000267,
+    "low": 8.25,
+    "close": 8.3100004196,
+    "volume": 98989.0,
+    "wedge_status": "none"
   }
 ]

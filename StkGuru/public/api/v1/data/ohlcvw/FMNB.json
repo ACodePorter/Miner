@@ -7478,5 +7478,25 @@
     "close": 14.1700000763,
     "volume": 96722.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "FMNB",
+    "open": 14.1499996185,
+    "high": 14.4099998474,
+    "low": 14.1499996185,
+    "close": 14.2700004578,
+    "volume": 72300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "FMNB",
+    "open": 14.3500003815,
+    "high": 14.5,
+    "low": 14.1899995804,
+    "close": 14.3100004196,
+    "volume": 93953.0,
+    "wedge_status": "none"
   }
 ]

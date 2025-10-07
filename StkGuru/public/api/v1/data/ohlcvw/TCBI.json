@@ -7478,5 +7478,25 @@
     "close": 84.1999969482,
     "volume": 299706.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "TCBI",
+    "open": 84.1600036621,
+    "high": 85.3399963379,
+    "low": 84.1399993896,
+    "close": 84.7200012207,
+    "volume": 321100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "TCBI",
+    "open": 85.25,
+    "high": 86.9599990845,
+    "low": 84.5299987793,
+    "close": 86.5,
+    "volume": 345497.0,
+    "wedge_status": "pop"
   }
 ]

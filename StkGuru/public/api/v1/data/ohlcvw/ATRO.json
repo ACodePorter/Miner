@@ -7478,5 +7478,25 @@
     "close": 46.5400009155,
     "volume": 522169.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "ATRO",
+    "open": 46.7200012207,
+    "high": 47.5,
+    "low": 46.4300003052,
+    "close": 47.2299995422,
+    "volume": 593000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "ATRO",
+    "open": 47.5299987793,
+    "high": 48.3400001526,
+    "low": 46.5699996948,
+    "close": 48.25,
+    "volume": 633879.0,
+    "wedge_status": "none"
   }
 ]

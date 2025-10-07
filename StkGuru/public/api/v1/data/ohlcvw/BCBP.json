@@ -7478,5 +7478,25 @@
     "close": 8.4899997711,
     "volume": 36729.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "BCBP",
+    "open": 8.5399999619,
+    "high": 8.6700000763,
+    "low": 8.529999733,
+    "close": 8.5399999619,
+    "volume": 38600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "BCBP",
+    "open": 8.5799999237,
+    "high": 8.720000267,
+    "low": 8.4200000763,
+    "close": 8.470000267,
+    "volume": 94955.0,
+    "wedge_status": "none"
   }
 ]
