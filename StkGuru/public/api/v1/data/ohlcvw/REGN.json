@@ -7488,5 +7488,15 @@
     "close": 600.0,
     "volume": 1124418.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "REGN",
+    "open": 602.0,
+    "high": 603.0,
+    "low": 584.4063110352,
+    "close": 585.4799804688,
+    "volume": 1024236.0,
+    "wedge_status": "none"
   }
 ]

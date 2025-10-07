@@ -7488,5 +7488,15 @@
     "close": 57.4599990845,
     "volume": 565007.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "EPR",
+    "open": 57.5,
+    "high": 57.4799995422,
+    "low": 54.8800010681,
+    "close": 55.2000007629,
+    "volume": 998207.0,
+    "wedge_status": "drop"
   }
 ]
