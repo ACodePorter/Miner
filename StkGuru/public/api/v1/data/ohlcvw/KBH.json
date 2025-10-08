@@ -7498,5 +7498,15 @@
     "close": 64.4599990845,
     "volume": 880636.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,07,00,00,00,000000",
+    "ticker": "KBH",
+    "open": 63.0,
+    "high": 63.2850990295,
+    "low": 60.7799987793,
+    "close": 61.1699981689,
+    "volume": 1046892.0,
+    "wedge_status": "drop"
   }
 ]

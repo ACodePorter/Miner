@@ -1268,5 +1268,15 @@
     "close": 52.5,
     "volume": 2178323.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,07,00,00,00,000000",
+    "ticker": "MTSR",
+    "open": 52.5800018311,
+    "high": 53.0,
+    "low": 52.5299987793,
+    "close": 52.9000015259,
+    "volume": 2512427.0,
+    "wedge_status": "none"
   }
 ]

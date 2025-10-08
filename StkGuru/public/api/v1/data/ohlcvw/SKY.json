@@ -7498,5 +7498,15 @@
     "close": 69.5,
     "volume": 965624.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,07,00,00,00,000000",
+    "ticker": "SKY",
+    "open": 69.5599975586,
+    "high": 70.0406036377,
+    "low": 65.9274978638,
+    "close": 66.2900009155,
+    "volume": 1396597.0,
+    "wedge_status": "none"
   }
 ]

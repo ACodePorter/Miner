@@ -7498,5 +7498,15 @@
     "close": 44.4799995422,
     "volume": 91445.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,07,00,00,00,000000",
+    "ticker": "TCBK",
+    "open": 44.6300010681,
+    "high": 44.9700012207,
+    "low": 43.6800003052,
+    "close": 43.75,
+    "volume": 69934.0,
+    "wedge_status": "drop"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 20.2600002289,
     "volume": 1400675.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,10,07,00,00,00,000000",
+    "ticker": "VRNT",
+    "open": 20.2700004578,
+    "high": 20.2900009155,
+    "low": 20.25,
+    "close": 20.25,
+    "volume": 656246.0,
+    "wedge_status": "none"
   }
 ]

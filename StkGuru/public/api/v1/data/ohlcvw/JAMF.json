@@ -7498,5 +7498,15 @@
     "close": 10.4799995422,
     "volume": 1203126.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,07,00,00,00,000000",
+    "ticker": "JAMF",
+    "open": 10.5,
+    "high": 10.529999733,
+    "low": 10.0399999619,
+    "close": 10.220000267,
+    "volume": 1422558.0,
+    "wedge_status": "none"
   }
 ]

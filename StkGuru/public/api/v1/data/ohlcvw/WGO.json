@@ -7498,5 +7498,15 @@
     "close": 32.8699989319,
     "volume": 501733.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,07,00,00,00,000000",
+    "ticker": "WGO",
+    "open": 32.8199996948,
+    "high": 33.25,
+    "low": 31.8999996185,
+    "close": 32.1100006104,
+    "volume": 489926.0,
+    "wedge_status": "none"
   }
 ]

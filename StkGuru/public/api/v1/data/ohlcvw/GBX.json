@@ -7498,5 +7498,15 @@
     "close": 45.5,
     "volume": 284001.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,07,00,00,00,000000",
+    "ticker": "GBX",
+    "open": 45.5099983215,
+    "high": 45.8149986267,
+    "low": 44.7299995422,
+    "close": 44.8100013733,
+    "volume": 545964.0,
+    "wedge_status": "none"
   }
 ]
