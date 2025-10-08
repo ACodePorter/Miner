@@ -7498,5 +7498,15 @@
     "close": 9.970000267,
     "volume": 556596.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,07,00,00,00,000000",
+    "ticker": "AVDX",
+    "open": 9.970000267,
+    "high": 9.970000267,
+    "low": 9.9499998093,
+    "close": 9.9499998093,
+    "volume": 988641.0,
+    "wedge_status": "drop"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 87.4199981689,
     "volume": 829752.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,07,00,00,00,000000",
+    "ticker": "WAL",
+    "open": 87.5199966431,
+    "high": 88.1149978638,
+    "low": 85.8799972534,
+    "close": 86.0,
+    "volume": 617319.0,
+    "wedge_status": "drop"
   }
 ]

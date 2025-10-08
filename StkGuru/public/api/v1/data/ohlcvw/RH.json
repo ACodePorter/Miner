@@ -7498,5 +7498,15 @@
     "close": 200.0,
     "volume": 876843.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,07,00,00,00,000000",
+    "ticker": "RH",
+    "open": 201.6799926758,
+    "high": 200.75,
+    "low": 195.1790008545,
+    "close": 196.4400024414,
+    "volume": 671151.0,
+    "wedge_status": "none"
   }
 ]

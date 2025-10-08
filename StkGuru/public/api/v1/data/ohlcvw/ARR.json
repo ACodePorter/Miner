@@ -7498,5 +7498,15 @@
     "close": 15.4600000381,
     "volume": 2151203.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,07,00,00,00,000000",
+    "ticker": "ARR",
+    "open": 15.5,
+    "high": 15.7378997803,
+    "low": 15.4899997711,
+    "close": 15.5900001526,
+    "volume": 2735172.0,
+    "wedge_status": "none"
   }
 ]

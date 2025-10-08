@@ -7498,5 +7498,15 @@
     "close": 149.8699951172,
     "volume": 146770.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,07,00,00,00,000000",
+    "ticker": "ATGE",
+    "open": 150.0,
+    "high": 150.0,
+    "low": 142.0032958984,
+    "close": 144.5899963379,
+    "volume": 421988.0,
+    "wedge_status": "drop"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 2.8699998856,
     "volume": 3191903.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,07,00,00,00,000000",
+    "ticker": "BORR",
+    "open": 2.8599998951,
+    "high": 2.8689000607,
+    "low": 2.7100000381,
+    "close": 2.75,
+    "volume": 3946378.0,
+    "wedge_status": "drop"
   }
 ]

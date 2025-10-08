@@ -7498,5 +7498,15 @@
     "close": 6.0,
     "volume": 589523.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,07,00,00,00,000000",
+    "ticker": "ABL",
+    "open": 6.0,
+    "high": 6.1900000572,
+    "low": 5.8299999237,
+    "close": 5.8299999237,
+    "volume": 473665.0,
+    "wedge_status": "none"
   }
 ]

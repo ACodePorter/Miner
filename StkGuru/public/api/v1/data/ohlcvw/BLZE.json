@@ -7498,5 +7498,15 @@
     "close": 9.5399999619,
     "volume": 427170.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,07,00,00,00,000000",
+    "ticker": "BLZE",
+    "open": 9.5500001907,
+    "high": 9.5850000381,
+    "low": 9.2188997269,
+    "close": 9.3699998856,
+    "volume": 437834.0,
+    "wedge_status": "drop"
   }
 ]
