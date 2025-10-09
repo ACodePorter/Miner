@@ -47985,10 +47985,31 @@
   },
   {
     "date": "20251008",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 19,
+    "pop": [
+      "ALGN",
+      "AMZN",
+      "BLDR",
+      "CTSH",
+      "IP",
+      "MCO"
+    ],
+    "drop": [
+      "BK",
+      "BKR",
+      "CFG",
+      "COP",
+      "D",
+      "DAY",
+      "DVN",
+      "EXPD",
+      "FOX",
+      "FOXA",
+      "GIS",
+      "LH",
+      "MDLZ"
+    ],
+    "pop_pct": 0.316,
+    "drop_pct": 0.684
   }
 ]

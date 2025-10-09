@@ -7508,5 +7508,15 @@
     "close": 255.75,
     "volume": 630484.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "ITW",
+    "open": 256.2200012207,
+    "high": 256.2600097656,
+    "low": 251.8800048828,
+    "close": 252.75,
+    "volume": 1127392.0,
+    "wedge_status": "none"
   }
 ]

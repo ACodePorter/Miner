@@ -7508,5 +7508,15 @@
     "close": 24.1000003815,
     "volume": 3088061.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "IVZ",
+    "open": 24.1499996185,
+    "high": 24.2099990845,
+    "low": 23.7600002289,
+    "close": 24.0,
+    "volume": 2897541.0,
+    "wedge_status": "none"
   }
 ]
