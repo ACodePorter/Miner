@@ -7498,5 +7498,25 @@
     "close": 319.9800109863,
     "volume": 810140.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "DUOL",
+    "open": 321.549987793,
+    "high": 350.0,
+    "low": 320.6000061035,
+    "close": 347.2699890137,
+    "volume": 1588633.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "DUOL",
+    "open": 348.25,
+    "high": 353.0,
+    "low": 332.2200012207,
+    "close": 337.1900024414,
+    "volume": 1067180.0,
+    "wedge_status": "none"
   }
 ]

@@ -7498,5 +7498,25 @@
     "close": 9.8299999237,
     "volume": 3764808.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "HOUS",
+    "open": 10.0,
+    "high": 10.0341997147,
+    "low": 9.7899999619,
+    "close": 9.8599996567,
+    "volume": 2742291.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "HOUS",
+    "open": 9.8100004196,
+    "high": 9.8500003815,
+    "low": 9.6400003433,
+    "close": 9.75,
+    "volume": 3476409.0,
+    "wedge_status": "none"
   }
 ]

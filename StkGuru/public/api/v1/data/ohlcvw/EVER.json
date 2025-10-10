@@ -7498,5 +7498,25 @@
     "close": 22.2299995422,
     "volume": 279275.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "EVER",
+    "open": 22.25,
+    "high": 22.4449996948,
+    "low": 22.0650005341,
+    "close": 22.2700004578,
+    "volume": 259924.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "EVER",
+    "open": 22.2999992371,
+    "high": 22.3267002106,
+    "low": 21.8999996185,
+    "close": 22.0,
+    "volume": 321472.0,
+    "wedge_status": "none"
   }
 ]

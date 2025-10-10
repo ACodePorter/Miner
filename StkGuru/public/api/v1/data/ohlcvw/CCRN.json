@@ -7498,5 +7498,25 @@
     "close": 13.1199998856,
     "volume": 241495.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "CCRN",
+    "open": 13.220000267,
+    "high": 13.3249998093,
+    "low": 12.970000267,
+    "close": 13.0,
+    "volume": 214448.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "CCRN",
+    "open": 12.970000267,
+    "high": 13.220000267,
+    "low": 11.9350004196,
+    "close": 12.2700004578,
+    "volume": 856263.0,
+    "wedge_status": "none"
   }
 ]

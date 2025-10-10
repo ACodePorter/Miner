@@ -7178,5 +7178,25 @@
     "close": 15.0200004578,
     "volume": 2082777.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "BHVN",
+    "open": 15.1300001144,
+    "high": 15.8249998093,
+    "low": 15.0,
+    "close": 15.3400001526,
+    "volume": 2033750.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "BHVN",
+    "open": 15.5,
+    "high": 17.3500003815,
+    "low": 15.3800001144,
+    "close": 17.2299995422,
+    "volume": 2959148.0,
+    "wedge_status": "none"
   }
 ]

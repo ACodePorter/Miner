@@ -7498,5 +7498,25 @@
     "close": 422.25,
     "volume": 198927.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "DJCO",
+    "open": 425.5,
+    "high": 440.0,
+    "low": 419.0,
+    "close": 438.5199890137,
+    "volume": 91524.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "DJCO",
+    "open": 437.0,
+    "high": 443.3800048828,
+    "low": 425.9599914551,
+    "close": 440.2300109863,
+    "volume": 381106.0,
+    "wedge_status": "none"
   }
 ]

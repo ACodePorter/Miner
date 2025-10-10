@@ -7498,5 +7498,25 @@
     "close": 20.6900005341,
     "volume": 31304.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "CWBC",
+    "open": 20.6800003052,
+    "high": 20.8500003815,
+    "low": 20.5300006866,
+    "close": 20.5499992371,
+    "volume": 16695.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "CWBC",
+    "open": 20.5,
+    "high": 20.5650005341,
+    "low": 20.3999996185,
+    "close": 20.4899997711,
+    "volume": 31597.0,
+    "wedge_status": "none"
   }
 ]

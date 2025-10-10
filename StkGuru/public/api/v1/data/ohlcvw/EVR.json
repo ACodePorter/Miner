@@ -7498,5 +7498,25 @@
     "close": 324.1499938965,
     "volume": 326321.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "EVR",
+    "open": 325.450012207,
+    "high": 327.0650024414,
+    "low": 318.0,
+    "close": 318.0,
+    "volume": 313972.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "EVR",
+    "open": 320.0100097656,
+    "high": 323.1524963379,
+    "low": 312.0,
+    "close": 313.9700012207,
+    "volume": 380773.0,
+    "wedge_status": "none"
   }
 ]

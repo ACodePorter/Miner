@@ -7498,5 +7498,25 @@
     "close": 8.0900001526,
     "volume": 4085158.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "BKD",
+    "open": 8.220000267,
+    "high": 8.220000267,
+    "low": 8.0,
+    "close": 8.1199998856,
+    "volume": 2235501.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "BKD",
+    "open": 8.3299999237,
+    "high": 9.0850000381,
+    "low": 8.25,
+    "close": 8.8800001144,
+    "volume": 8208461.0,
+    "wedge_status": "none"
   }
 ]

@@ -7498,5 +7498,25 @@
     "close": 30.75,
     "volume": 1502226.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "HASI",
+    "open": 31.0599994659,
+    "high": 31.0599994659,
+    "low": 30.3199996948,
+    "close": 30.7399997711,
+    "volume": 1401678.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "HASI",
+    "open": 30.7800006866,
+    "high": 30.9650001526,
+    "low": 30.25,
+    "close": 30.6100006104,
+    "volume": 1388244.0,
+    "wedge_status": "none"
   }
 ]

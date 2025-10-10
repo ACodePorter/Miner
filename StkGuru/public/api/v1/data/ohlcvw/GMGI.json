@@ -7498,5 +7498,25 @@
     "close": 1.0199999809,
     "volume": 434779.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "GMGI",
+    "open": 1.0299999714,
+    "high": 1.0688999891,
+    "low": 1.0099999905,
+    "close": 1.0399999619,
+    "volume": 196068.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "GMGI",
+    "open": 1.0399999619,
+    "high": 1.0599000454,
+    "low": 1.0,
+    "close": 1.0,
+    "volume": 149278.0,
+    "wedge_status": "none"
   }
 ]

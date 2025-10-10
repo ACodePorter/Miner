@@ -7498,5 +7498,25 @@
     "close": 197.0099945068,
     "volume": 253999.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "HCI",
+    "open": 198.5,
+    "high": 199.0,
+    "low": 193.6900024414,
+    "close": 194.7200012207,
+    "volume": 139218.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "HCI",
+    "open": 195.0700073242,
+    "high": 195.1300048828,
+    "low": 185.75,
+    "close": 186.75,
+    "volume": 264622.0,
+    "wedge_status": "none"
   }
 ]

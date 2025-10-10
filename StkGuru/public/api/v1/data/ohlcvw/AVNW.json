@@ -7498,5 +7498,25 @@
     "close": 22.0900001526,
     "volume": 70112.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "AVNW",
+    "open": 22.2299995422,
+    "high": 22.724899292,
+    "low": 22.1299991608,
+    "close": 22.5,
+    "volume": 95426.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "AVNW",
+    "open": 22.5300006866,
+    "high": 22.6450004578,
+    "low": 22.0499992371,
+    "close": 22.3299999237,
+    "volume": 77527.0,
+    "wedge_status": "none"
   }
 ]
