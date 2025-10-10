@@ -7498,5 +7498,25 @@
     "close": 4.5599999428,
     "volume": 882762.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "JELD",
+    "open": 4.5900001526,
+    "high": 4.6900000572,
+    "low": 4.5,
+    "close": 4.6500000954,
+    "volume": 892432.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "JELD",
+    "open": 4.6900000572,
+    "high": 4.7449998856,
+    "low": 4.4850001335,
+    "close": 4.5100002289,
+    "volume": 1979744.0,
+    "wedge_status": "none"
   }
 ]

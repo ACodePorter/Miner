@@ -7498,5 +7498,25 @@
     "close": 90.3799972534,
     "volume": 88082.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "PFBC",
+    "open": 90.3899993896,
+    "high": 90.5650024414,
+    "low": 89.1800003052,
+    "close": 89.5199966431,
+    "volume": 45291.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "PFBC",
+    "open": 89.5,
+    "high": 89.5,
+    "low": 88.7050018311,
+    "close": 89.3399963379,
+    "volume": 59501.0,
+    "wedge_status": "none"
   }
 ]

@@ -7498,5 +7498,25 @@
     "close": 340.0599975586,
     "volume": 109989.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "PIPR",
+    "open": 341.8399963379,
+    "high": 349.3999938965,
+    "low": 335.6050109863,
+    "close": 339.3599853516,
+    "volume": 181944.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "PIPR",
+    "open": 340.5,
+    "high": 341.25,
+    "low": 330.25,
+    "close": 332.7699890137,
+    "volume": 238900.0,
+    "wedge_status": "none"
   }
 ]

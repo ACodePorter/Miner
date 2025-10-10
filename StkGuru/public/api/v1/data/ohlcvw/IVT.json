@@ -7498,5 +7498,25 @@
     "close": 27.4599990845,
     "volume": 976897.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "IVT",
+    "open": 27.4899997711,
+    "high": 27.6299991608,
+    "low": 27.2299995422,
+    "close": 27.5499992371,
+    "volume": 675622.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "IVT",
+    "open": 27.5,
+    "high": 27.75,
+    "low": 27.3349990845,
+    "close": 27.5300006866,
+    "volume": 472885.0,
+    "wedge_status": "none"
   }
 ]

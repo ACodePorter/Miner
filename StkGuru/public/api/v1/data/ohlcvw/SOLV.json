@@ -3378,5 +3378,25 @@
     "close": 72.1600036621,
     "volume": 1518445.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "SOLV",
+    "open": 72.0,
+    "high": 73.0,
+    "low": 71.6999969482,
+    "close": 72.4300003052,
+    "volume": 653266.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "SOLV",
+    "open": 72.2200012207,
+    "high": 72.5299987793,
+    "low": 71.2201004028,
+    "close": 71.8000030518,
+    "volume": 848970.0,
+    "wedge_status": "none"
   }
 ]

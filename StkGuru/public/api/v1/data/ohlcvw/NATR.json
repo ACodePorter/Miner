@@ -7498,5 +7498,25 @@
     "close": 15.1300001144,
     "volume": 48140.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "NATR",
+    "open": 15.2100000381,
+    "high": 15.328499794,
+    "low": 14.9399995804,
+    "close": 15.0,
+    "volume": 49363.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "NATR",
+    "open": 14.9799995422,
+    "high": 15.0150003433,
+    "low": 14.7700004578,
+    "close": 14.8400001526,
+    "volume": 48015.0,
+    "wedge_status": "none"
   }
 ]

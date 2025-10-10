@@ -7498,5 +7498,25 @@
     "close": 12.7700004578,
     "volume": 350983.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "KELYA",
+    "open": 12.8000001907,
+    "high": 13.0349998474,
+    "low": 12.8000001907,
+    "close": 13.0100002289,
+    "volume": 227505.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "KELYA",
+    "open": 13.1000003815,
+    "high": 13.1000003815,
+    "low": 12.720000267,
+    "close": 12.75,
+    "volume": 241392.0,
+    "wedge_status": "none"
   }
 ]

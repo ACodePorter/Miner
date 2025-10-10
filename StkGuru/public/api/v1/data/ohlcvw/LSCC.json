@@ -7498,5 +7498,25 @@
     "close": 71.9199981689,
     "volume": 1046495.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "LSCC",
+    "open": 72.4300003052,
+    "high": 73.9800033569,
+    "low": 72.0,
+    "close": 73.6699981689,
+    "volume": 1133758.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "LSCC",
+    "open": 73.7099990845,
+    "high": 74.6200027466,
+    "low": 72.625,
+    "close": 74.5800018311,
+    "volume": 1165909.0,
+    "wedge_status": "none"
   }
 ]

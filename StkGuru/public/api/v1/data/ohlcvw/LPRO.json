@@ -7498,5 +7498,25 @@
     "close": 2.0199999809,
     "volume": 643082.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "LPRO",
+    "open": 2.0199999809,
+    "high": 2.0950000286,
+    "low": 1.9917999506,
+    "close": 2.0399999619,
+    "volume": 287515.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "LPRO",
+    "open": 2.0399999619,
+    "high": 2.0399999619,
+    "low": 1.9750000238,
+    "close": 2.0,
+    "volume": 376456.0,
+    "wedge_status": "none"
   }
 ]

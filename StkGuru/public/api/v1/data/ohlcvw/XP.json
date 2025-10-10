@@ -7498,5 +7498,25 @@
     "close": 16.4599990845,
     "volume": 8360003.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "XP",
+    "open": 16.6664009094,
+    "high": 16.75,
+    "low": 16.0,
+    "close": 16.2099990845,
+    "volume": 13688588.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "XP",
+    "open": 16.25,
+    "high": 16.3349990845,
+    "low": 16.0049991608,
+    "close": 16.2600002289,
+    "volume": 6641239.0,
+    "wedge_status": "none"
   }
 ]

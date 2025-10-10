@@ -7498,5 +7498,25 @@
     "close": 3.6600000858,
     "volume": 5536841.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "NUVB",
+    "open": 3.6400001049,
+    "high": 3.7899999619,
+    "low": 3.621999979,
+    "close": 3.7200000286,
+    "volume": 3820867.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "NUVB",
+    "open": 3.7200000286,
+    "high": 3.8099999428,
+    "low": 3.6412000656,
+    "close": 3.75,
+    "volume": 6628390.0,
+    "wedge_status": "none"
   }
 ]

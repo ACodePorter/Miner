@@ -7498,5 +7498,25 @@
     "close": 15.0500001907,
     "volume": 10311.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "VHI",
+    "open": 15.3000001907,
+    "high": 15.5050001144,
+    "low": 15.0500001907,
+    "close": 15.3599996567,
+    "volume": 64020.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "VHI",
+    "open": 15.5,
+    "high": 15.5,
+    "low": 14.4399995804,
+    "close": 14.5100002289,
+    "volume": 25158.0,
+    "wedge_status": "none"
   }
 ]
