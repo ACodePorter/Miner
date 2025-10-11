@@ -7498,5 +7498,15 @@
     "close": 5.1900000572,
     "volume": 939872.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "AIOT",
+    "open": 5.1599998474,
+    "high": 5.1700000763,
+    "low": 4.6500000954,
+    "close": 4.6599998474,
+    "volume": 2643100.0,
+    "wedge_status": "none"
   }
 ]

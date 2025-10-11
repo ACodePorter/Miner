@@ -7498,5 +7498,15 @@
     "close": 61.75,
     "volume": 422404.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "TPC",
+    "open": 62.0099983215,
+    "high": 63.9500007629,
+    "low": 60.3100013733,
+    "close": 60.6100006104,
+    "volume": 594400.0,
+    "wedge_status": "none"
   }
 ]

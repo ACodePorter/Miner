@@ -7498,5 +7498,15 @@
     "close": 159.3000030518,
     "volume": 3700953.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "ICE",
+    "open": 159.6199951172,
+    "high": 159.75,
+    "low": 157.4299926758,
+    "close": 157.5,
+    "volume": 4172000.0,
+    "wedge_status": "none"
   }
 ]

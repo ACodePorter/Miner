@@ -7498,5 +7498,15 @@
     "close": 27.6299991608,
     "volume": 192502.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "ETD",
+    "open": 27.75,
+    "high": 27.8500003815,
+    "low": 26.8700008392,
+    "close": 26.9599990845,
+    "volume": 222600.0,
+    "wedge_status": "none"
   }
 ]

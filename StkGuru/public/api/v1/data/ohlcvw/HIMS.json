@@ -7498,5 +7498,15 @@
     "close": 58.25,
     "volume": 19483501.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "HIMS",
+    "open": 58.2900009155,
+    "high": 59.2200012207,
+    "low": 53.0200004578,
+    "close": 53.9500007629,
+    "volume": 31705600.0,
+    "wedge_status": "drop"
   }
 ]

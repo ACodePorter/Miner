@@ -7498,5 +7498,15 @@
     "close": 29.0,
     "volume": 55487.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "ZEUS",
+    "open": 29.1000003815,
+    "high": 29.2299995422,
+    "low": 27.1100006104,
+    "close": 27.2000007629,
+    "volume": 83600.0,
+    "wedge_status": "none"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 26.25,
     "volume": 18359552.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "HPE",
+    "open": 26.25,
+    "high": 26.3670005798,
+    "low": 24.3899993896,
+    "close": 24.3999996185,
+    "volume": 35807600.0,
+    "wedge_status": "drop"
   }
 ]

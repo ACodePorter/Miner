@@ -7498,5 +7498,15 @@
     "close": 39.5,
     "volume": 866973.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "VNO",
+    "open": 39.5800018311,
+    "high": 39.6199989319,
+    "low": 37.9500007629,
+    "close": 37.9700012207,
+    "volume": 1292800.0,
+    "wedge_status": "none"
   }
 ]

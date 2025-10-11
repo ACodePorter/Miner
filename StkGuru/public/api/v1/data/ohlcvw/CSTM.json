@@ -7498,5 +7498,15 @@
     "close": 15.0,
     "volume": 895224.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "CSTM",
+    "open": 14.970000267,
+    "high": 15.3699998856,
+    "low": 14.3900003433,
+    "close": 14.4099998474,
+    "volume": 990400.0,
+    "wedge_status": "none"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 52.0,
     "volume": 209474.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "DFIN",
+    "open": 52.3100013733,
+    "high": 53.1100006104,
+    "low": 51.4599990845,
+    "close": 51.5,
+    "volume": 257500.0,
+    "wedge_status": "none"
   }
 ]

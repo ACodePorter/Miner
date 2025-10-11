@@ -7498,5 +7498,15 @@
     "close": 32.5900001526,
     "volume": 1305988.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "CNX",
+    "open": 32.3800010681,
+    "high": 33.1899986267,
+    "low": 31.9099998474,
+    "close": 32.0,
+    "volume": 1746600.0,
+    "wedge_status": "drop"
   }
 ]

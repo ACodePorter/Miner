@@ -7498,5 +7498,15 @@
     "close": 8.2600002289,
     "volume": 823840.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "GDYN",
+    "open": 8.3199996948,
+    "high": 8.3199996948,
+    "low": 7.6100001335,
+    "close": 7.6199998856,
+    "volume": 967600.0,
+    "wedge_status": "drop"
   }
 ]

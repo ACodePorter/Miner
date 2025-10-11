@@ -7498,5 +7498,15 @@
     "close": 31.8400001526,
     "volume": 3416943.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "BTU",
+    "open": 32.5,
+    "high": 32.5999984741,
+    "low": 30.7700004578,
+    "close": 30.8899993896,
+    "volume": 5089000.0,
+    "wedge_status": "none"
   }
 ]

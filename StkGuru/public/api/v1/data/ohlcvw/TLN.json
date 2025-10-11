@@ -5468,5 +5468,15 @@
     "close": 444.5,
     "volume": 503073.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "TLN",
+    "open": 441.1900024414,
+    "high": 446.0,
+    "low": 410.1199951172,
+    "close": 412.8299865723,
+    "volume": 1019400.0,
+    "wedge_status": "none"
   }
 ]

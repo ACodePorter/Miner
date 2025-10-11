@@ -7498,5 +7498,15 @@
     "close": 120.3099975586,
     "volume": 1386310.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "NTAP",
+    "open": 119.0,
+    "high": 119.0,
+    "low": 112.6299972534,
+    "close": 113.9400024414,
+    "volume": 4304100.0,
+    "wedge_status": "drop"
   }
 ]

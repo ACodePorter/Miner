@@ -7498,5 +7498,15 @@
     "close": 34.0,
     "volume": 1707919.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "VVV",
+    "open": 34.1199989319,
+    "high": 34.2799987793,
+    "low": 33.2150001526,
+    "close": 33.2700004578,
+    "volume": 2100800.0,
+    "wedge_status": "none"
   }
 ]

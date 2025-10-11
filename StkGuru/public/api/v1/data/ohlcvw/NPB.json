@@ -1188,5 +1188,15 @@
     "close": 17.3999996185,
     "volume": 77812.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "NPB",
+    "open": 17.4099998474,
+    "high": 17.5,
+    "low": 16.5799999237,
+    "close": 16.6499996185,
+    "volume": 115100.0,
+    "wedge_status": "none"
   }
 ]

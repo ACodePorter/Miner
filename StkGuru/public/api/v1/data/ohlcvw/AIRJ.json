@@ -7498,5 +7498,15 @@
     "close": 5.25,
     "volume": 135949.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "AIRJ",
+    "open": 5.2699999809,
+    "high": 5.4200000763,
+    "low": 4.8600001335,
+    "close": 4.8699998856,
+    "volume": 183100.0,
+    "wedge_status": "drop"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 8.0,
     "volume": 248862.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "EHAB",
+    "open": 8.0399999619,
+    "high": 8.0799999237,
+    "low": 7.75,
+    "close": 7.75,
+    "volume": 412200.0,
+    "wedge_status": "none"
   }
 ]

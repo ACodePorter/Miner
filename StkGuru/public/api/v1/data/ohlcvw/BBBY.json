@@ -7498,5 +7498,15 @@
     "close": 10.1400003433,
     "volume": 1730929.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "BBBY",
+    "open": 10.0,
+    "high": 10.1800003052,
+    "low": 8.75,
+    "close": 8.7600002289,
+    "volume": 2919100.0,
+    "wedge_status": "none"
   }
 ]

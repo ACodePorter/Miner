@@ -7498,5 +7498,15 @@
     "close": 12.470000267,
     "volume": 659274.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "NWBI",
+    "open": 12.5900001526,
+    "high": 12.75,
+    "low": 12.0900001526,
+    "close": 12.0900001526,
+    "volume": 973400.0,
+    "wedge_status": "drop"
   }
 ]

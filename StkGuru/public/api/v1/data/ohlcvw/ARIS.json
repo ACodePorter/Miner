@@ -7498,5 +7498,15 @@
     "close": 23.8700008392,
     "volume": 1218941.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "ARIS",
+    "open": 23.7600002289,
+    "high": 23.8999996185,
+    "low": 23.25,
+    "close": 23.2600002289,
+    "volume": 1380500.0,
+    "wedge_status": "none"
   }
 ]

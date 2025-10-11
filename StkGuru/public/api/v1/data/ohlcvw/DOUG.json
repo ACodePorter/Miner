@@ -7498,5 +7498,15 @@
     "close": 2.6300001144,
     "volume": 640215.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "DOUG",
+    "open": 2.6500000954,
+    "high": 2.7049999237,
+    "low": 2.5799999237,
+    "close": 2.5999999046,
+    "volume": 402900.0,
+    "wedge_status": "none"
   }
 ]

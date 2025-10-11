@@ -7498,5 +7498,15 @@
     "close": 4.5700001717,
     "volume": 931431.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "VTEX",
+    "open": 4.5799999237,
+    "high": 4.6199998856,
+    "low": 4.1500000954,
+    "close": 4.1599998474,
+    "volume": 1263100.0,
+    "wedge_status": "drop"
   }
 ]

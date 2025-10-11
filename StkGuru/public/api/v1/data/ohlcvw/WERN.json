@@ -7498,5 +7498,15 @@
     "close": 28.25,
     "volume": 1570235.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "WERN",
+    "open": 28.0100002289,
+    "high": 28.3400001526,
+    "low": 26.4699993134,
+    "close": 26.5300006866,
+    "volume": 911400.0,
+    "wedge_status": "drop"
   }
 ]

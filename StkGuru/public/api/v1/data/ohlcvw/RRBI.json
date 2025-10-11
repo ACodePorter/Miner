@@ -7498,5 +7498,15 @@
     "close": 63.7000007629,
     "volume": 12498.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "RRBI",
+    "open": 63.5299987793,
+    "high": 63.9580001831,
+    "low": 61.75,
+    "close": 61.75,
+    "volume": 19000.0,
+    "wedge_status": "none"
   }
 ]

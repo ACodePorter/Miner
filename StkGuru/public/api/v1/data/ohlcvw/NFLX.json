@@ -7498,5 +7498,15 @@
     "close": 1231.0699462891,
     "volume": 2733832.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "NFLX",
+    "open": 1230.0,
+    "high": 1247.0,
+    "low": 1219.0999755859,
+    "close": 1220.0799560547,
+    "volume": 4125838.0,
+    "wedge_status": "none"
   }
 ]
