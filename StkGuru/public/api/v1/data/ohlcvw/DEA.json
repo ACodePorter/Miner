@@ -7488,5 +7488,15 @@
     "close": 21.3299999237,
     "volume": 498000.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "DEA",
+    "open": 21.0,
+    "high": 21.3199996948,
+    "low": 20.75,
+    "close": 21.2900009155,
+    "volume": 763635.0,
+    "wedge_status": "none"
   }
 ]

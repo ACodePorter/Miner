@@ -7488,5 +7488,15 @@
     "close": 99.1299972534,
     "volume": 2185500.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "PRU",
+    "open": 100.0,
+    "high": 101.5199966431,
+    "low": 99.8050003052,
+    "close": 101.25,
+    "volume": 922966.0,
+    "wedge_status": "none"
   }
 ]

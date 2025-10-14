@@ -7488,5 +7488,15 @@
     "close": 39.4599990845,
     "volume": 3981600.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "SRRK",
+    "open": 32.4630012512,
+    "high": 35.4199981689,
+    "low": 29.0,
+    "close": 34.2750015259,
+    "volume": 11215707.0,
+    "wedge_status": "drop"
   }
 ]

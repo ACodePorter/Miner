@@ -7488,5 +7488,15 @@
     "close": 29.9500007629,
     "volume": 374000.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "STEL",
+    "open": 30.0,
+    "high": 30.5100002289,
+    "low": 29.8250007629,
+    "close": 30.3500003815,
+    "volume": 194486.0,
+    "wedge_status": "none"
   }
 ]

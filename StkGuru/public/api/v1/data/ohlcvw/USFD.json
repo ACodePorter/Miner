@@ -7488,5 +7488,15 @@
     "close": 75.1600036621,
     "volume": 1378900.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "USFD",
+    "open": 75.0899963379,
+    "high": 75.7050018311,
+    "low": 74.8300018311,
+    "close": 75.5,
+    "volume": 1005523.0,
+    "wedge_status": "none"
   }
 ]

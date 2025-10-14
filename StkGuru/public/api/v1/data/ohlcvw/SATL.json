@@ -7488,5 +7488,15 @@
     "close": 3.3900001049,
     "volume": 4700500.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "SATL",
+    "open": 3.5,
+    "high": 3.5397999287,
+    "low": 3.3599998951,
+    "close": 3.375,
+    "volume": 3587821.0,
+    "wedge_status": "none"
   }
 ]

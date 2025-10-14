@@ -7488,5 +7488,15 @@
     "close": 34.9799995422,
     "volume": 9706800.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "TOST",
+    "open": 35.5,
+    "high": 35.9300003052,
+    "low": 35.0950012207,
+    "close": 35.8400001526,
+    "volume": 6166677.0,
+    "wedge_status": "none"
   }
 ]

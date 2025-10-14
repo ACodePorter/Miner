@@ -7488,5 +7488,15 @@
     "close": 43.5,
     "volume": 511400.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "INSW",
+    "open": 44.0,
+    "high": 44.4700012207,
+    "low": 43.5875015259,
+    "close": 43.9500007629,
+    "volume": 343345.0,
+    "wedge_status": "none"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 2.3900001049,
     "volume": 197000.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "HURA",
+    "open": 2.4400000572,
+    "high": 2.4749999046,
+    "low": 2.3699998856,
+    "close": 2.4300000668,
+    "volume": 142361.0,
+    "wedge_status": "none"
   }
 ]

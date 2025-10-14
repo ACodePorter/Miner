@@ -7488,5 +7488,15 @@
     "close": 0.8080000281,
     "volume": 479700.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "ILLR",
+    "open": 0.8500000238,
+    "high": 0.8899000287,
+    "low": 0.8059999943,
+    "close": 0.8571000099,
+    "volume": 260893.0,
+    "wedge_status": "none"
   }
 ]

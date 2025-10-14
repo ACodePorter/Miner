@@ -438,5 +438,15 @@
     "close": 24.0100002289,
     "volume": 325100.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "OMDA",
+    "open": 24.4200000763,
+    "high": 25.0,
+    "low": 24.0,
+    "close": 24.0,
+    "volume": 181842.0,
+    "wedge_status": "none"
   }
 ]

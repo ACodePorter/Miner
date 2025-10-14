@@ -7488,5 +7488,15 @@
     "close": 26.6800003052,
     "volume": 1340700.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "STAA",
+    "open": 26.8700008392,
+    "high": 27.3199996948,
+    "low": 26.6949996948,
+    "close": 27.25,
+    "volume": 863248.0,
+    "wedge_status": "none"
   }
 ]

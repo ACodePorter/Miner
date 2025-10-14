@@ -7488,5 +7488,15 @@
     "close": 8.5699996948,
     "volume": 58200.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "FENC",
+    "open": 8.6899995804,
+    "high": 8.6899995804,
+    "low": 8.357000351,
+    "close": 8.4399995804,
+    "volume": 64537.0,
+    "wedge_status": "none"
   }
 ]

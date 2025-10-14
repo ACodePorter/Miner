@@ -7488,5 +7488,15 @@
     "close": 27.25,
     "volume": 14200.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "MBCN",
+    "open": 27.7299995422,
+    "high": 28.25,
+    "low": 27.4696006775,
+    "close": 28.25,
+    "volume": 5915.0,
+    "wedge_status": "none"
   }
 ]

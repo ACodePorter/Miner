@@ -7488,5 +7488,15 @@
     "close": 10.9099998474,
     "volume": 94400.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "PCYO",
+    "open": 11.1000003815,
+    "high": 11.1000003815,
+    "low": 10.8199996948,
+    "close": 11.0,
+    "volume": 33919.0,
+    "wedge_status": "none"
   }
 ]

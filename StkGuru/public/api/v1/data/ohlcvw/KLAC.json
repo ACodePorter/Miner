@@ -7488,5 +7488,15 @@
     "close": 982.75,
     "volume": 1571793.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "KLAC",
+    "open": 1016.25,
+    "high": 1033.9000244141,
+    "low": 1014.9401245117,
+    "close": 1025.0,
+    "volume": 1156999.0,
+    "wedge_status": "none"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 11.5,
     "volume": 1152500.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "KALV",
+    "open": 11.4099998474,
+    "high": 11.6511001587,
+    "low": 11.0900001526,
+    "close": 11.3199996948,
+    "volume": 901050.0,
+    "wedge_status": "none"
   }
 ]

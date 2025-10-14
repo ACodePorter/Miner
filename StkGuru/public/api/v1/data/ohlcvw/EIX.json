@@ -7488,5 +7488,15 @@
     "close": 52.1199989319,
     "volume": 2610100.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "EIX",
+    "open": 52.1599998474,
+    "high": 53.8950004578,
+    "low": 52.0,
+    "close": 53.6500015259,
+    "volume": 2286944.0,
+    "wedge_status": "none"
   }
 ]

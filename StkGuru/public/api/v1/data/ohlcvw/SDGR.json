@@ -7488,5 +7488,15 @@
     "close": 19.0799999237,
     "volume": 1021700.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "SDGR",
+    "open": 19.25,
+    "high": 19.8799991608,
+    "low": 19.150100708,
+    "close": 19.7000007629,
+    "volume": 1009701.0,
+    "wedge_status": "none"
   }
 ]
