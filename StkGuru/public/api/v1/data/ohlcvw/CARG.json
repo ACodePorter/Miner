@@ -7488,5 +7488,15 @@
     "close": 33.5,
     "volume": 1078400.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "CARG",
+    "open": 33.9799995422,
+    "high": 34.3800010681,
+    "low": 33.75,
+    "close": 33.9900016785,
+    "volume": 859017.0,
+    "wedge_status": "none"
   }
 ]

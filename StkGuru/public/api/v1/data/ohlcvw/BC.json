@@ -7488,5 +7488,15 @@
     "close": 58.75,
     "volume": 936900.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "BC",
+    "open": 59.6500015259,
+    "high": 61.0600013733,
+    "low": 59.5,
+    "close": 60.2599983215,
+    "volume": 452025.0,
+    "wedge_status": "none"
   }
 ]

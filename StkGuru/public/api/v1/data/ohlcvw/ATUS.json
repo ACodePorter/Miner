@@ -7488,5 +7488,15 @@
     "close": 2.4300000668,
     "volume": 2802700.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "ATUS",
+    "open": 2.5199999809,
+    "high": 2.5199999809,
+    "low": 2.375,
+    "close": 2.4600000381,
+    "volume": 1937328.0,
+    "wedge_status": "none"
   }
 ]

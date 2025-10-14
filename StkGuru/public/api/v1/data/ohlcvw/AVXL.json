@@ -7488,5 +7488,15 @@
     "close": 9.2700004578,
     "volume": 3565700.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "AVXL",
+    "open": 9.2899999619,
+    "high": 9.2899999619,
+    "low": 8.345000267,
+    "close": 8.6199998856,
+    "volume": 2292875.0,
+    "wedge_status": "none"
   }
 ]

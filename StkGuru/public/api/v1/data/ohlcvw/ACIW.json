@@ -7488,5 +7488,15 @@
     "close": 51.0099983215,
     "volume": 499300.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "ACIW",
+    "open": 51.5499992371,
+    "high": 51.5499992371,
+    "low": 50.5600013733,
+    "close": 51.0,
+    "volume": 404158.0,
+    "wedge_status": "none"
   }
 ]
