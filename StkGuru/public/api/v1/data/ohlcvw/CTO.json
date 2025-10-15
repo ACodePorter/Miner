@@ -7498,5 +7498,15 @@
     "close": 15.6800003052,
     "volume": 255829.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,14,00,00,00,000000",
+    "ticker": "CTO",
+    "open": 15.5500001907,
+    "high": 15.8149995804,
+    "low": 15.5500001907,
+    "close": 15.75,
+    "volume": 298559.0,
+    "wedge_status": "none"
   }
 ]

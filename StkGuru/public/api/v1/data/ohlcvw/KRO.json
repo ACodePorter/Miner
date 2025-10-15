@@ -7498,5 +7498,15 @@
     "close": 5.25,
     "volume": 300015.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,14,00,00,00,000000",
+    "ticker": "KRO",
+    "open": 5.1300001144,
+    "high": 5.4000000954,
+    "low": 5.1399998665,
+    "close": 5.3400001526,
+    "volume": 241015.0,
+    "wedge_status": "none"
   }
 ]

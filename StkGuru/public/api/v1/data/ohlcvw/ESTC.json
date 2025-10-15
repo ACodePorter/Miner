@@ -7498,5 +7498,15 @@
     "close": 84.7200012207,
     "volume": 2062384.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,14,00,00,00,000000",
+    "ticker": "ESTC",
+    "open": 83.5,
+    "high": 84.5899963379,
+    "low": 81.7300033569,
+    "close": 81.8099975586,
+    "volume": 1965955.0,
+    "wedge_status": "drop"
   }
 ]

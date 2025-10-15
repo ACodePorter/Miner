@@ -7498,5 +7498,15 @@
     "close": 456.6400146484,
     "volume": 1197237.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,14,00,00,00,000000",
+    "ticker": "LIN",
+    "open": 453.25,
+    "high": 462.0700073242,
+    "low": 453.0675048828,
+    "close": 459.25,
+    "volume": 1385634.0,
+    "wedge_status": "none"
   }
 ]

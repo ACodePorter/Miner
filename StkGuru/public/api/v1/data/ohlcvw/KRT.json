@@ -7498,5 +7498,15 @@
     "close": 23.8899993896,
     "volume": 176372.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,14,00,00,00,000000",
+    "ticker": "KRT",
+    "open": 23.75,
+    "high": 24.3199996948,
+    "low": 23.6585006714,
+    "close": 24.1599998474,
+    "volume": 89062.0,
+    "wedge_status": "pop"
   }
 ]

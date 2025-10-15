@@ -7498,5 +7498,15 @@
     "close": 13.25,
     "volume": 67268.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,14,00,00,00,000000",
+    "ticker": "MEC",
+    "open": 13.0399999619,
+    "high": 13.5699996948,
+    "low": 13.0900001526,
+    "close": 13.3500003815,
+    "volume": 123568.0,
+    "wedge_status": "none"
   }
 ]

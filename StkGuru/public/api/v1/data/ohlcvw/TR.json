@@ -7498,5 +7498,15 @@
     "close": 41.8699989319,
     "volume": 161845.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,14,00,00,00,000000",
+    "ticker": "TR",
+    "open": 41.8499984741,
+    "high": 42.8100013733,
+    "low": 41.5499992371,
+    "close": 42.5,
+    "volume": 156431.0,
+    "wedge_status": "none"
   }
 ]

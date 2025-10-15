@@ -7498,5 +7498,15 @@
     "close": 14.3900003433,
     "volume": 39244.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,14,00,00,00,000000",
+    "ticker": "MDV",
+    "open": 14.25,
+    "high": 14.4600000381,
+    "low": 14.2025003433,
+    "close": 14.4600000381,
+    "volume": 20061.0,
+    "wedge_status": "none"
   }
 ]
