@@ -7508,5 +7508,15 @@
     "close": 42.2799987793,
     "volume": 8311698.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "OXY",
+    "open": 42.5,
+    "high": 42.5699996948,
+    "low": 41.6399993896,
+    "close": 41.8800010681,
+    "volume": 7209442.0,
+    "wedge_status": "none"
   }
 ]
