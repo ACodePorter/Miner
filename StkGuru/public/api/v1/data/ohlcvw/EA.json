@@ -7508,5 +7508,15 @@
     "close": 200.75,
     "volume": 2992650.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "EA",
+    "open": 200.75,
+    "high": 201.1499938965,
+    "low": 200.2449951172,
+    "close": 200.3500061035,
+    "volume": 2558627.0,
+    "wedge_status": "none"
   }
 ]
