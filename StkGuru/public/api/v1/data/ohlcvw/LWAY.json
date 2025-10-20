@@ -1,35 +1,5 @@
 [
   {
-    "trade_date": "2022,10,19,00,00,00,000000",
-    "ticker": "LWAY",
-    "open": 5.3800001144,
-    "high": 5.5599999428,
-    "low": 5.3299999237,
-    "close": 5.4499998093,
-    "volume": 1700.0,
-    "wedge_status": "none"
-  },
-  {
-    "trade_date": "2022,10,20,00,00,00,000000",
-    "ticker": "LWAY",
-    "open": 5.4299998283,
-    "high": 5.5,
-    "low": 5.3299999237,
-    "close": 5.5,
-    "volume": 1300.0,
-    "wedge_status": "none"
-  },
-  {
-    "trade_date": "2022,10,21,00,00,00,000000",
-    "ticker": "LWAY",
-    "open": 5.4499998093,
-    "high": 5.5599999428,
-    "low": 5.3600001335,
-    "close": 5.5,
-    "volume": 5100.0,
-    "wedge_status": "none"
-  },
-  {
     "trade_date": "2022,10,24,00,00,00,000000",
     "ticker": "LWAY",
     "open": 5.5,

@@ -1,35 +1,5 @@
 [
   {
-    "trade_date": "2022,10,19,00,00,00,000000",
-    "ticker": "JANX",
-    "open": 15.0,
-    "high": 15.5,
-    "low": 14.3059997559,
-    "close": 15.3299999237,
-    "volume": 43400.0,
-    "wedge_status": "none"
-  },
-  {
-    "trade_date": "2022,10,20,00,00,00,000000",
-    "ticker": "JANX",
-    "open": 15.4399995804,
-    "high": 16.3400001526,
-    "low": 15.3950004578,
-    "close": 15.75,
-    "volume": 22000.0,
-    "wedge_status": "none"
-  },
-  {
-    "trade_date": "2022,10,21,00,00,00,000000",
-    "ticker": "JANX",
-    "open": 15.9600000381,
-    "high": 18.1499996185,
-    "low": 15.9600000381,
-    "close": 17.5,
-    "volume": 106400.0,
-    "wedge_status": "none"
-  },
-  {
     "trade_date": "2022,10,24,00,00,00,000000",
     "ticker": "JANX",
     "open": 17.5,
