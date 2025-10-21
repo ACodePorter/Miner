@@ -7458,5 +7458,45 @@
     "close": 9.1499996185,
     "volume": 239194.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "JBIO",
+    "open": 9.1700000763,
+    "high": 10.2849998474,
+    "low": 9.1700000763,
+    "close": 9.8999996185,
+    "volume": 107093.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "JBIO",
+    "open": 9.8800001144,
+    "high": 10.3199996948,
+    "low": 9.682800293,
+    "close": 9.7849998474,
+    "volume": 156093.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "JBIO",
+    "open": 9.7299995422,
+    "high": 9.843000412,
+    "low": 8.9799995422,
+    "close": 9.3699998856,
+    "volume": 156300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "JBIO",
+    "open": 9.5600004196,
+    "high": 10.220000267,
+    "low": 9.5,
+    "close": 10.0,
+    "volume": 146293.0,
+    "wedge_status": "none"
   }
 ]

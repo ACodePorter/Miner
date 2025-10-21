@@ -7458,5 +7458,45 @@
     "close": 1.1900000572,
     "volume": 751390.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "LUCD",
+    "open": 1.2000000477,
+    "high": 1.2699999809,
+    "low": 1.1849999428,
+    "close": 1.2599999905,
+    "volume": 1274746.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "LUCD",
+    "open": 1.25,
+    "high": 1.2699999809,
+    "low": 1.1900000572,
+    "close": 1.2300000191,
+    "volume": 794154.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "LUCD",
+    "open": 1.2300000191,
+    "high": 1.2300000191,
+    "low": 1.1649999619,
+    "close": 1.1799999475,
+    "volume": 597600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "LUCD",
+    "open": 1.2100000381,
+    "high": 1.2699999809,
+    "low": 1.1900000572,
+    "close": 1.25,
+    "volume": 882052.0,
+    "wedge_status": "none"
   }
 ]

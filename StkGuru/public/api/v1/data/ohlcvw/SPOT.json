@@ -7458,5 +7458,45 @@
     "close": 683.5100097656,
     "volume": 1122801.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "SPOT",
+    "open": 689.8400268555,
+    "high": 689.8400268555,
+    "low": 670.8900146484,
+    "close": 671.299987793,
+    "volume": 957077.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "SPOT",
+    "open": 671.799987793,
+    "high": 679.0,
+    "low": 661.0,
+    "close": 664.4600219727,
+    "volume": 1193067.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "SPOT",
+    "open": 660.0,
+    "high": 675.3499755859,
+    "low": 656.25,
+    "close": 671.5200195312,
+    "volume": 1200000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "SPOT",
+    "open": 670.1300048828,
+    "high": 682.25,
+    "low": 667.5,
+    "close": 675.5300292969,
+    "volume": 1015361.0,
+    "wedge_status": "none"
   }
 ]

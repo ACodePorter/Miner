@@ -7458,5 +7458,45 @@
     "close": 7.0,
     "volume": 509447.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "ADAM",
+    "open": 7.0199999809,
+    "high": 7.0799999237,
+    "low": 6.9949998856,
+    "close": 7.0199999809,
+    "volume": 323049.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "ADAM",
+    "open": 7.0199999809,
+    "high": 7.0199999809,
+    "low": 6.7800002098,
+    "close": 6.7800002098,
+    "volume": 526360.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "ADAM",
+    "open": 6.7699999809,
+    "high": 6.8800001144,
+    "low": 6.7699999809,
+    "close": 6.8800001144,
+    "volume": 560100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "ADAM",
+    "open": 6.9099998474,
+    "high": 6.9400000572,
+    "low": 6.8099999428,
+    "close": 6.9299998283,
+    "volume": 267408.0,
+    "wedge_status": "none"
   }
 ]

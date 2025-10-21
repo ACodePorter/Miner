@@ -7458,5 +7458,45 @@
     "close": 9.1499996185,
     "volume": 54084.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "ANIK",
+    "open": 9.1899995804,
+    "high": 9.2600002289,
+    "low": 9.0600004196,
+    "close": 9.0900001526,
+    "volume": 59131.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "ANIK",
+    "open": 9.0900001526,
+    "high": 9.25,
+    "low": 9.0024995804,
+    "close": 9.0900001526,
+    "volume": 88372.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "ANIK",
+    "open": 8.9799995422,
+    "high": 9.1700000763,
+    "low": 8.6700000763,
+    "close": 9.1700000763,
+    "volume": 125600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "ANIK",
+    "open": 9.2399997711,
+    "high": 9.7049999237,
+    "low": 9.2100000381,
+    "close": 9.6499996185,
+    "volume": 186786.0,
+    "wedge_status": "none"
   }
 ]

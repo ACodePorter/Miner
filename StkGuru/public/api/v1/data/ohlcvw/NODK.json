@@ -7458,5 +7458,45 @@
     "close": 13.5,
     "volume": 18772.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "NODK",
+    "open": 13.6300001144,
+    "high": 13.6698999405,
+    "low": 13.5100002289,
+    "close": 13.5100002289,
+    "volume": 24899.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "NODK",
+    "open": 13.75,
+    "high": 13.75,
+    "low": 13.5100002289,
+    "close": 13.5500001907,
+    "volume": 11498.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "NODK",
+    "open": 13.5500001907,
+    "high": 13.7899999619,
+    "low": 13.4499998093,
+    "close": 13.5,
+    "volume": 7700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "NODK",
+    "open": 13.4949998856,
+    "high": 13.5500001907,
+    "low": 13.4499998093,
+    "close": 13.5399999619,
+    "volume": 18172.0,
+    "wedge_status": "none"
   }
 ]

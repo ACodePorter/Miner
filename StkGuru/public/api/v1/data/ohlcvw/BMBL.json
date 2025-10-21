@@ -7458,5 +7458,45 @@
     "close": 5.3400001526,
     "volume": 2123536.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "BMBL",
+    "open": 5.4899997711,
+    "high": 5.7697000504,
+    "low": 5.4099998474,
+    "close": 5.5,
+    "volume": 2420100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "BMBL",
+    "open": 5.5300002098,
+    "high": 5.5419998169,
+    "low": 5.25,
+    "close": 5.3299999237,
+    "volume": 1559793.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "BMBL",
+    "open": 5.3400001526,
+    "high": 5.3699998856,
+    "low": 5.2699999809,
+    "close": 5.2800002098,
+    "volume": 1515200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "BMBL",
+    "open": 5.25,
+    "high": 5.7249999046,
+    "low": 5.25,
+    "close": 5.6999998093,
+    "volume": 2843040.0,
+    "wedge_status": "none"
   }
 ]

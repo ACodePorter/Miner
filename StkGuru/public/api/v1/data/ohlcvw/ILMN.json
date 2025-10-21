@@ -7458,5 +7458,45 @@
     "close": 91.0,
     "volume": 2557724.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "ILMN",
+    "open": 90.6100006104,
+    "high": 95.6100006104,
+    "low": 90.0999984741,
+    "close": 93.0,
+    "volume": 2759550.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "ILMN",
+    "open": 94.0500030518,
+    "high": 98.6999969482,
+    "low": 93.5,
+    "close": 95.9100036621,
+    "volume": 2159241.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "ILMN",
+    "open": 95.1999969482,
+    "high": 96.8000030518,
+    "low": 94.8099975586,
+    "close": 95.4599990845,
+    "volume": 1165800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "ILMN",
+    "open": 95.6100006104,
+    "high": 100.9400024414,
+    "low": 95.6100006104,
+    "close": 99.5,
+    "volume": 1694588.0,
+    "wedge_status": "pop"
   }
 ]

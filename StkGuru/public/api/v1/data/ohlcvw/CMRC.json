@@ -7458,5 +7458,45 @@
     "close": 4.6700000763,
     "volume": 614911.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "CMRC",
+    "open": 4.7300000191,
+    "high": 4.75,
+    "low": 4.625,
+    "close": 4.6900000572,
+    "volume": 663167.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "CMRC",
+    "open": 4.6999998093,
+    "high": 4.7399997711,
+    "low": 4.4899997711,
+    "close": 4.5100002289,
+    "volume": 494847.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "CMRC",
+    "open": 4.4800000191,
+    "high": 4.5100002289,
+    "low": 4.4239997864,
+    "close": 4.4400000572,
+    "volume": 554400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "CMRC",
+    "open": 4.4600000381,
+    "high": 4.9000000954,
+    "low": 4.4499998093,
+    "close": 4.8499999046,
+    "volume": 1252921.0,
+    "wedge_status": "none"
   }
 ]

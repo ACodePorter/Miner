@@ -7458,5 +7458,45 @@
     "close": 4.1799998283,
     "volume": 646050.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "NCMI",
+    "open": 4.1799998283,
+    "high": 4.2800002098,
+    "low": 4.1799998283,
+    "close": 4.2100000381,
+    "volume": 315195.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "NCMI",
+    "open": 4.1999998093,
+    "high": 4.2199997902,
+    "low": 4.0300002098,
+    "close": 4.0900001526,
+    "volume": 459585.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "NCMI",
+    "open": 4.0799999237,
+    "high": 4.3800001144,
+    "low": 4.0700001717,
+    "close": 4.25,
+    "volume": 510400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "NCMI",
+    "open": 4.25,
+    "high": 4.3200001717,
+    "low": 4.2100000381,
+    "close": 4.3200001717,
+    "volume": 191185.0,
+    "wedge_status": "none"
   }
 ]

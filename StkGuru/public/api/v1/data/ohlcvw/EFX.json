@@ -7478,5 +7478,25 @@
     "close": 227.1999969482,
     "volume": 852606.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "EFX",
+    "open": 227.0,
+    "high": 228.6999969482,
+    "low": 224.7899932861,
+    "close": 226.9100036621,
+    "volume": 767800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "EFX",
+    "open": 230.0,
+    "high": 232.1999969482,
+    "low": 228.25,
+    "close": 231.1199951172,
+    "volume": 1259820.0,
+    "wedge_status": "none"
   }
 ]

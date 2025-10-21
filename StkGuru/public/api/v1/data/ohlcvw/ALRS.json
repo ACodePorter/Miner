@@ -7458,5 +7458,45 @@
     "close": 21.9599990845,
     "volume": 128200.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "ALRS",
+    "open": 22.0,
+    "high": 22.0,
+    "low": 21.4349994659,
+    "close": 21.6800003052,
+    "volume": 73867.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "ALRS",
+    "open": 21.75,
+    "high": 21.75,
+    "low": 20.6599998474,
+    "close": 20.8999996185,
+    "volume": 82241.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "ALRS",
+    "open": 20.8999996185,
+    "high": 21.1599998474,
+    "low": 20.8199996948,
+    "close": 20.9899997711,
+    "volume": 80400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "ALRS",
+    "open": 21.4950008392,
+    "high": 21.6800003052,
+    "low": 21.0699996948,
+    "close": 21.5400009155,
+    "volume": 52879.0,
+    "wedge_status": "none"
   }
 ]

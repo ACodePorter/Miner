@@ -7458,5 +7458,45 @@
     "close": 23.5,
     "volume": 28151.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "MYFW",
+    "open": 23.5400009155,
+    "high": 23.5499992371,
+    "low": 23.0849990845,
+    "close": 23.2000007629,
+    "volume": 22548.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "MYFW",
+    "open": 22.4150009155,
+    "high": 22.6499996185,
+    "low": 22.0499992371,
+    "close": 22.1499996185,
+    "volume": 16320.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "MYFW",
+    "open": 22.2800006866,
+    "high": 22.5499992371,
+    "low": 22.0799999237,
+    "close": 22.25,
+    "volume": 23900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "MYFW",
+    "open": 22.2900009155,
+    "high": 22.7800006866,
+    "low": 22.25,
+    "close": 22.7800006866,
+    "volume": 16054.0,
+    "wedge_status": "none"
   }
 ]

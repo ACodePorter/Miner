@@ -7458,5 +7458,45 @@
     "close": 14.9099998474,
     "volume": 115984.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "PSTL",
+    "open": 14.9499998093,
+    "high": 15.1599998474,
+    "low": 14.9200000763,
+    "close": 15.0,
+    "volume": 135069.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "PSTL",
+    "open": 15.029999733,
+    "high": 15.1899995804,
+    "low": 14.9201002121,
+    "close": 14.9899997711,
+    "volume": 106914.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "PSTL",
+    "open": 15.0,
+    "high": 15.1000003815,
+    "low": 14.9600000381,
+    "close": 15.0500001907,
+    "volume": 112800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "PSTL",
+    "open": 15.1199998856,
+    "high": 15.2600002289,
+    "low": 15.0200004578,
+    "close": 15.25,
+    "volume": 114746.0,
+    "wedge_status": "none"
   }
 ]

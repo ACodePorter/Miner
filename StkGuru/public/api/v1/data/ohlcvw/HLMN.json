@@ -7458,5 +7458,45 @@
     "close": 9.5699996948,
     "volume": 804594.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "HLMN",
+    "open": 9.6300001144,
+    "high": 9.75,
+    "low": 9.5500001907,
+    "close": 9.5699996948,
+    "volume": 749873.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "HLMN",
+    "open": 9.6199998856,
+    "high": 9.6700000763,
+    "low": 9.4099998474,
+    "close": 9.4300003052,
+    "volume": 771525.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "HLMN",
+    "open": 9.3400001526,
+    "high": 9.4200000763,
+    "low": 9.2749996185,
+    "close": 9.3199996948,
+    "volume": 865600.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "HLMN",
+    "open": 9.3000001907,
+    "high": 9.5,
+    "low": 9.3000001907,
+    "close": 9.4899997711,
+    "volume": 630412.0,
+    "wedge_status": "pop"
   }
 ]

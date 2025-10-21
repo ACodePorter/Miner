@@ -7458,5 +7458,45 @@
     "close": 22.75,
     "volume": 91256.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "LEGH",
+    "open": 22.75,
+    "high": 23.1499996185,
+    "low": 22.75,
+    "close": 23.0400009155,
+    "volume": 86757.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "LEGH",
+    "open": 23.1000003815,
+    "high": 23.2800006866,
+    "low": 22.8999996185,
+    "close": 23.2399997711,
+    "volume": 118466.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "LEGH",
+    "open": 23.2299995422,
+    "high": 23.5349998474,
+    "low": 23.1550006866,
+    "close": 23.3899993896,
+    "volume": 89400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "LEGH",
+    "open": 23.6200008392,
+    "high": 23.7150001526,
+    "low": 23.4699993134,
+    "close": 23.6900005341,
+    "volume": 72512.0,
+    "wedge_status": "none"
   }
 ]

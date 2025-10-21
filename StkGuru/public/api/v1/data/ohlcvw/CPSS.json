@@ -7458,5 +7458,45 @@
     "close": 7.4499998093,
     "volume": 24927.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "CPSS",
+    "open": 7.5399999619,
+    "high": 8.2899999619,
+    "low": 7.4699997902,
+    "close": 8.1099996567,
+    "volume": 85765.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "CPSS",
+    "open": 8.125,
+    "high": 8.279999733,
+    "low": 7.9499998093,
+    "close": 8.1000003815,
+    "volume": 32791.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "CPSS",
+    "open": 7.9600000381,
+    "high": 8.1999998093,
+    "low": 7.9499998093,
+    "close": 7.9699997902,
+    "volume": 18200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "CPSS",
+    "open": 7.9600000381,
+    "high": 8.0010004044,
+    "low": 7.6999998093,
+    "close": 7.8099999428,
+    "volume": 18486.0,
+    "wedge_status": "none"
   }
 ]

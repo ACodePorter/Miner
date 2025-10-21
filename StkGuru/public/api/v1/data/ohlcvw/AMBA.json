@@ -7458,5 +7458,45 @@
     "close": 81.1399993896,
     "volume": 499101.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "AMBA",
+    "open": 83.1399993896,
+    "high": 84.1750030518,
+    "low": 81.6600036621,
+    "close": 83.2699966431,
+    "volume": 363819.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "AMBA",
+    "open": 85.3199996948,
+    "high": 88.4898986816,
+    "low": 83.5,
+    "close": 84.0899963379,
+    "volume": 708636.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "AMBA",
+    "open": 83.0,
+    "high": 84.5,
+    "low": 81.6100006104,
+    "close": 82.6800003052,
+    "volume": 373500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "AMBA",
+    "open": 84.1600036621,
+    "high": 86.0,
+    "low": 83.7300033569,
+    "close": 84.4800033569,
+    "volume": 271475.0,
+    "wedge_status": "none"
   }
 ]

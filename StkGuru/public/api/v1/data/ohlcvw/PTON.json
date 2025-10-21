@@ -7458,5 +7458,45 @@
     "close": 7.7100000381,
     "volume": 10762634.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "PTON",
+    "open": 7.8099999428,
+    "high": 7.8400001526,
+    "low": 7.5199999809,
+    "close": 7.6199998856,
+    "volume": 9018428.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "PTON",
+    "open": 7.6500000954,
+    "high": 7.8000001907,
+    "low": 7.3299999237,
+    "close": 7.5199999809,
+    "volume": 9285082.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "PTON",
+    "open": 7.4499998093,
+    "high": 7.5949997902,
+    "low": 7.4200000763,
+    "close": 7.5,
+    "volume": 9466500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "PTON",
+    "open": 7.5850000381,
+    "high": 7.75,
+    "low": 7.4400000572,
+    "close": 7.4699997902,
+    "volume": 10044846.0,
+    "wedge_status": "none"
   }
 ]

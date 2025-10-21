@@ -7458,5 +7458,45 @@
     "close": 5.1500000954,
     "volume": 91749.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "LVWR",
+    "open": 5.3000001907,
+    "high": 5.3800001144,
+    "low": 4.9050002098,
+    "close": 4.9899997711,
+    "volume": 72228.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "LVWR",
+    "open": 5.0100002289,
+    "high": 4.9499998093,
+    "low": 4.6799998283,
+    "close": 4.7899999619,
+    "volume": 54912.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "LVWR",
+    "open": 4.7399997711,
+    "high": 5.2249999046,
+    "low": 4.6799998283,
+    "close": 5.1700000763,
+    "volume": 78800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "LVWR",
+    "open": 5.25,
+    "high": 5.8200001717,
+    "low": 5.2790999413,
+    "close": 5.7899999619,
+    "volume": 109097.0,
+    "wedge_status": "none"
   }
 ]

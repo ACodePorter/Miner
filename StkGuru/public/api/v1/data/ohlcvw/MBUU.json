@@ -7458,5 +7458,45 @@
     "close": 30.5300006866,
     "volume": 152508.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "MBUU",
+    "open": 30.8400001526,
+    "high": 31.0550003052,
+    "low": 30.0,
+    "close": 30.4500007629,
+    "volume": 128049.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "MBUU",
+    "open": 30.5,
+    "high": 30.6650009155,
+    "low": 30.0450000763,
+    "close": 30.2900009155,
+    "volume": 109134.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "MBUU",
+    "open": 30.2800006866,
+    "high": 30.6299991608,
+    "low": 30.0629997253,
+    "close": 30.25,
+    "volume": 127300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "MBUU",
+    "open": 30.5599994659,
+    "high": 31.1650009155,
+    "low": 30.5149993896,
+    "close": 30.8500003815,
+    "volume": 99961.0,
+    "wedge_status": "none"
   }
 ]

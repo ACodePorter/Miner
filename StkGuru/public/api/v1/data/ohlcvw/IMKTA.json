@@ -7458,5 +7458,45 @@
     "close": 74.1900024414,
     "volume": 94058.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "IMKTA",
+    "open": 74.5299987793,
+    "high": 75.2200012207,
+    "low": 73.4899978638,
+    "close": 74.8099975586,
+    "volume": 86465.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "IMKTA",
+    "open": 75.0,
+    "high": 75.1999969482,
+    "low": 73.2699966431,
+    "close": 73.4800033569,
+    "volume": 74667.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "IMKTA",
+    "open": 73.5199966431,
+    "high": 74.2600021362,
+    "low": 72.9899978638,
+    "close": 73.5,
+    "volume": 59700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "IMKTA",
+    "open": 73.9499969482,
+    "high": 73.9499969482,
+    "low": 72.6449966431,
+    "close": 73.8799972534,
+    "volume": 65557.0,
+    "wedge_status": "none"
   }
 ]

@@ -7458,5 +7458,45 @@
     "close": 15.0600004196,
     "volume": 25463.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "BNTC",
+    "open": 14.5909996033,
+    "high": 16.2199993134,
+    "low": 14.5909996033,
+    "close": 15.8999996185,
+    "volume": 76128.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "BNTC",
+    "open": 16.0,
+    "high": 16.2800006866,
+    "low": 15.6599998474,
+    "close": 15.6999998093,
+    "volume": 39766.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "BNTC",
+    "open": 15.6999998093,
+    "high": 15.9619998932,
+    "low": 15.2100000381,
+    "close": 15.6499996185,
+    "volume": 33500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "BNTC",
+    "open": 15.75,
+    "high": 16.25,
+    "low": 15.7379999161,
+    "close": 16.2299995422,
+    "volume": 32737.0,
+    "wedge_status": "none"
   }
 ]

@@ -7458,5 +7458,45 @@
     "close": 92.5,
     "volume": 2413750.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "PSTG",
+    "open": 94.0,
+    "high": 94.93800354,
+    "low": 92.112197876,
+    "close": 92.5800018311,
+    "volume": 3089684.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "PSTG",
+    "open": 94.3600006104,
+    "high": 95.1399993896,
+    "low": 91.4700012207,
+    "close": 91.9199981689,
+    "volume": 2022130.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "PSTG",
+    "open": 91.8700027466,
+    "high": 92.75,
+    "low": 90.2900009155,
+    "close": 91.8499984741,
+    "volume": 2032400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "PSTG",
+    "open": 93.0,
+    "high": 94.3000030518,
+    "low": 90.9000015259,
+    "close": 90.9899978638,
+    "volume": 1856157.0,
+    "wedge_status": "none"
   }
 ]

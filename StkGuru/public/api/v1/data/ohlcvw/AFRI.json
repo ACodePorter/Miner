@@ -7458,5 +7458,45 @@
     "close": 8.6300001144,
     "volume": 5538.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "AFRI",
+    "open": 8.6649999619,
+    "high": 8.7182998657,
+    "low": 8.5799999237,
+    "close": 8.6899995804,
+    "volume": 4960.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "AFRI",
+    "open": 8.6300001144,
+    "high": 8.7299995422,
+    "low": 8.6199998856,
+    "close": 8.6300001144,
+    "volume": 10962.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "AFRI",
+    "open": 8.5399999619,
+    "high": 8.6899995804,
+    "low": 8.5399999619,
+    "close": 8.6000003815,
+    "volume": 4000.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "AFRI",
+    "open": 8.75,
+    "high": 9.029999733,
+    "low": 8.6192998886,
+    "close": 8.8100004196,
+    "volume": 11954.0,
+    "wedge_status": "none"
   }
 ]

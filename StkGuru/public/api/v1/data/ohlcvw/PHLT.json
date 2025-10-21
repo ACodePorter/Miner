@@ -7458,5 +7458,45 @@
     "close": 7.7199997902,
     "volume": 1051138.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "PHLT",
+    "open": 7.7399997711,
+    "high": 7.7399997711,
+    "low": 7.7300000191,
+    "close": 7.7300000191,
+    "volume": 687872.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "PHLT",
+    "open": 7.7399997711,
+    "high": 7.7399997711,
+    "low": 7.7300000191,
+    "close": 7.7300000191,
+    "volume": 356752.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "PHLT",
+    "open": 7.7399997711,
+    "high": 7.7399997711,
+    "low": 7.7199997902,
+    "close": 7.7300000191,
+    "volume": 1427500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "PHLT",
+    "open": 7.75,
+    "high": 7.751999855,
+    "low": 7.7399997711,
+    "close": 7.75,
+    "volume": 2340023.0,
+    "wedge_status": "none"
   }
 ]

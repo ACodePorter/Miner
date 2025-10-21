@@ -7458,5 +7458,45 @@
     "close": 14.9300003052,
     "volume": 11876.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "LCNB",
+    "open": 15.0,
+    "high": 15.0,
+    "low": 14.845000267,
+    "close": 14.875,
+    "volume": 14112.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "LCNB",
+    "open": 14.7600002289,
+    "high": 14.7600002289,
+    "low": 14.4200000763,
+    "close": 14.529999733,
+    "volume": 28985.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "LCNB",
+    "open": 14.5699996948,
+    "high": 14.9899997711,
+    "low": 14.5699996948,
+    "close": 14.6099996567,
+    "volume": 30400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "LCNB",
+    "open": 14.6499996185,
+    "high": 14.9652996063,
+    "low": 14.6499996185,
+    "close": 14.8100004196,
+    "volume": 16800.0,
+    "wedge_status": "none"
   }
 ]

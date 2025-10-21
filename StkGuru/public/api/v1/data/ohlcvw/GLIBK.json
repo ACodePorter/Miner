@@ -228,5 +228,45 @@
     "close": 36.4500007629,
     "volume": 207937.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "GLIBK",
+    "open": 36.5999984741,
+    "high": 37.75,
+    "low": 36.3800010681,
+    "close": 37.5699996948,
+    "volume": 215968.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "GLIBK",
+    "open": 37.5,
+    "high": 37.7249984741,
+    "low": 35.9900016785,
+    "close": 36.1100006104,
+    "volume": 189828.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "GLIBK",
+    "open": 35.9599990845,
+    "high": 36.7999992371,
+    "low": 35.5,
+    "close": 36.5099983215,
+    "volume": 229100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "GLIBK",
+    "open": 36.7900009155,
+    "high": 37.4500007629,
+    "low": 35.7999992371,
+    "close": 36.3499984741,
+    "volume": 140926.0,
+    "wedge_status": "none"
   }
 ]

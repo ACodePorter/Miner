@@ -7458,5 +7458,45 @@
     "close": 175.1499938965,
     "volume": 7399566.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "VRT",
+    "open": 180.0,
+    "high": 182.9900054932,
+    "low": 175.6000061035,
+    "close": 180.5099945068,
+    "volume": 5603712.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "VRT",
+    "open": 182.5099945068,
+    "high": 183.0,
+    "low": 175.25,
+    "close": 177.8200073242,
+    "volume": 4473320.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "VRT",
+    "open": 175.0,
+    "high": 178.0,
+    "low": 170.3000030518,
+    "close": 174.0,
+    "volume": 5873800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "VRT",
+    "open": 178.0,
+    "high": 179.7698974609,
+    "low": 173.9949951172,
+    "close": 175.7299957275,
+    "volume": 6628542.0,
+    "wedge_status": "none"
   }
 ]

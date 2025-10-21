@@ -7458,5 +7458,45 @@
     "close": 1.0,
     "volume": 120431.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "GMGI",
+    "open": 1.0199999809,
+    "high": 1.0199999809,
+    "low": 0.9624000192,
+    "close": 1.0099999905,
+    "volume": 197827.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "GMGI",
+    "open": 1.0099999905,
+    "high": 1.0099999905,
+    "low": 0.9499999881,
+    "close": 0.9653000236,
+    "volume": 122951.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "GMGI",
+    "open": 0.9800000191,
+    "high": 1.0,
+    "low": 0.9309999943,
+    "close": 0.9570000172,
+    "volume": 195700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "GMGI",
+    "open": 0.9599999785,
+    "high": 0.9911999702,
+    "low": 0.9386000037,
+    "close": 0.9700000286,
+    "volume": 73484.0,
+    "wedge_status": "none"
   }
 ]

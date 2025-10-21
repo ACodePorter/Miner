@@ -7458,5 +7458,45 @@
     "close": 7.9099998474,
     "volume": 63935.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "AOUT",
+    "open": 7.9699997902,
+    "high": 8.0,
+    "low": 7.5599999428,
+    "close": 7.7199997902,
+    "volume": 130974.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "AOUT",
+    "open": 7.6550002098,
+    "high": 7.7950000763,
+    "low": 7.5300002098,
+    "close": 7.5300002098,
+    "volume": 90412.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "AOUT",
+    "open": 7.5300002098,
+    "high": 7.8390002251,
+    "low": 7.4200000763,
+    "close": 7.4299998283,
+    "volume": 75800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "AOUT",
+    "open": 7.5300002098,
+    "high": 7.5599999428,
+    "low": 7.3350000381,
+    "close": 7.4250001907,
+    "volume": 60399.0,
+    "wedge_status": "none"
   }
 ]

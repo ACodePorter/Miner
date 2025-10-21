@@ -7458,5 +7458,45 @@
     "close": 7.6100001335,
     "volume": 203403.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "ASLE",
+    "open": 7.6700000763,
+    "high": 7.7699999809,
+    "low": 7.4749999046,
+    "close": 7.5500001907,
+    "volume": 342600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "ASLE",
+    "open": 7.5700001717,
+    "high": 7.5999999046,
+    "low": 7.2699999809,
+    "close": 7.3299999237,
+    "volume": 317400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "ASLE",
+    "open": 7.2800002098,
+    "high": 7.5300002098,
+    "low": 7.2049999237,
+    "close": 7.2399997711,
+    "volume": 291800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "ASLE",
+    "open": 7.2600002289,
+    "high": 7.5500001907,
+    "low": 7.25,
+    "close": 7.5,
+    "volume": 306379.0,
+    "wedge_status": "none"
   }
 ]

@@ -7458,5 +7458,45 @@
     "close": 1.0399999619,
     "volume": 208235.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "COOK",
+    "open": 1.0700000525,
+    "high": 1.1499999762,
+    "low": 1.0700000525,
+    "close": 1.1000000238,
+    "volume": 430079.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "COOK",
+    "open": 1.1200000048,
+    "high": 1.1453000307,
+    "low": 1.0599999428,
+    "close": 1.0599999428,
+    "volume": 147991.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "COOK",
+    "open": 1.0599999428,
+    "high": 1.0800000429,
+    "low": 1.0,
+    "close": 1.0099999905,
+    "volume": 143600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "COOK",
+    "open": 1.0199999809,
+    "high": 1.0398000479,
+    "low": 1.0,
+    "close": 1.0099999905,
+    "volume": 141228.0,
+    "wedge_status": "none"
   }
 ]

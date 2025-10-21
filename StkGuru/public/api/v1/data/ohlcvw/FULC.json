@@ -7458,5 +7458,45 @@
     "close": 8.6899995804,
     "volume": 506726.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "FULC",
+    "open": 8.75,
+    "high": 9.8900003433,
+    "low": 8.7161998749,
+    "close": 9.6400003433,
+    "volume": 538529.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "FULC",
+    "open": 9.7600002289,
+    "high": 9.7718000412,
+    "low": 9.2100000381,
+    "close": 9.2899999619,
+    "volume": 310006.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "FULC",
+    "open": 9.1499996185,
+    "high": 9.3350000381,
+    "low": 8.8199996948,
+    "close": 8.9899997711,
+    "volume": 379300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "FULC",
+    "open": 8.8199996948,
+    "high": 9.4799995422,
+    "low": 8.8199996948,
+    "close": 9.220000267,
+    "volume": 442317.0,
+    "wedge_status": "none"
   }
 ]

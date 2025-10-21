@@ -7458,5 +7458,45 @@
     "close": 46.2599983215,
     "volume": 66676.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "MBWM",
+    "open": 46.4900016785,
+    "high": 46.4900016785,
+    "low": 45.2999992371,
+    "close": 45.4799995422,
+    "volume": 48809.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "MBWM",
+    "open": 45.25,
+    "high": 46.0634994507,
+    "low": 42.75,
+    "close": 43.1399993896,
+    "volume": 89614.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "MBWM",
+    "open": 43.5400009155,
+    "high": 44.0,
+    "low": 43.1500015259,
+    "close": 43.5999984741,
+    "volume": 84000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "MBWM",
+    "open": 44.2999992371,
+    "high": 45.1500015259,
+    "low": 43.5099983215,
+    "close": 44.6300010681,
+    "volume": 62189.0,
+    "wedge_status": "none"
   }
 ]

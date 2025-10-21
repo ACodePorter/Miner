@@ -7458,5 +7458,45 @@
     "close": 4.8200001717,
     "volume": 4032237.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "NPWR",
+    "open": 5.0,
+    "high": 5.1999998093,
+    "low": 4.6599998474,
+    "close": 4.8499999046,
+    "volume": 3953097.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "NPWR",
+    "open": 4.8499999046,
+    "high": 4.8775000572,
+    "low": 4.0300002098,
+    "close": 4.0700001717,
+    "volume": 2357306.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "NPWR",
+    "open": 4.0,
+    "high": 4.0300002098,
+    "low": 3.5399999619,
+    "close": 3.5799999237,
+    "volume": 2420000.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "NPWR",
+    "open": 3.7100000381,
+    "high": 3.8499999046,
+    "low": 3.5099999905,
+    "close": 3.5199999809,
+    "volume": 2048096.0,
+    "wedge_status": "none"
   }
 ]

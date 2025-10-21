@@ -7458,5 +7458,45 @@
     "close": 7.4699997902,
     "volume": 852354.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "NAGE",
+    "open": 7.5100002289,
+    "high": 7.8200001717,
+    "low": 7.4600000381,
+    "close": 7.5,
+    "volume": 1191899.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "NAGE",
+    "open": 7.5,
+    "high": 7.6500000954,
+    "low": 7.358399868,
+    "close": 7.4200000763,
+    "volume": 1028097.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "NAGE",
+    "open": 7.3499999046,
+    "high": 7.4600000381,
+    "low": 7.2399997711,
+    "close": 7.3299999237,
+    "volume": 882600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "NAGE",
+    "open": 7.4000000954,
+    "high": 7.5859999657,
+    "low": 7.1999998093,
+    "close": 7.2100000381,
+    "volume": 915773.0,
+    "wedge_status": "none"
   }
 ]

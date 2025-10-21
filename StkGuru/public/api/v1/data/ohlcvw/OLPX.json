@@ -7458,5 +7458,45 @@
     "close": 1.25,
     "volume": 524369.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "OLPX",
+    "open": 1.2699999809,
+    "high": 1.2899999619,
+    "low": 1.2100000381,
+    "close": 1.2300000191,
+    "volume": 1039556.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "OLPX",
+    "open": 1.2200000286,
+    "high": 1.25,
+    "low": 1.1900000572,
+    "close": 1.1900000572,
+    "volume": 795472.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "OLPX",
+    "open": 1.1799999475,
+    "high": 1.25,
+    "low": 1.1799999475,
+    "close": 1.2300000191,
+    "volume": 991800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "OLPX",
+    "open": 1.2400000095,
+    "high": 1.2599999905,
+    "low": 1.2200000286,
+    "close": 1.2200000286,
+    "volume": 407439.0,
+    "wedge_status": "none"
   }
 ]

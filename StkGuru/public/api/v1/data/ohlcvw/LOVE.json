@@ -7458,5 +7458,45 @@
     "close": 14.7100000381,
     "volume": 607701.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "LOVE",
+    "open": 15.029999733,
+    "high": 15.529999733,
+    "low": 14.8800001144,
+    "close": 15.0,
+    "volume": 377193.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "LOVE",
+    "open": 15.0500001907,
+    "high": 15.2550001144,
+    "low": 14.6899995804,
+    "close": 14.8800001144,
+    "volume": 450001.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "LOVE",
+    "open": 14.779999733,
+    "high": 15.1000003815,
+    "low": 14.3500003815,
+    "close": 14.3599996567,
+    "volume": 623300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "LOVE",
+    "open": 14.5,
+    "high": 14.8599996567,
+    "low": 14.5,
+    "close": 14.8100004196,
+    "volume": 464790.0,
+    "wedge_status": "none"
   }
 ]

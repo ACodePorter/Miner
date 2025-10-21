@@ -7458,5 +7458,45 @@
     "close": 25.1599998474,
     "volume": 24015.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "FNLC",
+    "open": 25.3400001526,
+    "high": 25.4400005341,
+    "low": 24.7999992371,
+    "close": 25.2000007629,
+    "volume": 27942.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "FNLC",
+    "open": 25.1100006104,
+    "high": 25.2800006866,
+    "low": 24.2999992371,
+    "close": 24.3999996185,
+    "volume": 52270.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "FNLC",
+    "open": 24.5,
+    "high": 25.0,
+    "low": 24.5,
+    "close": 24.6399993896,
+    "volume": 24400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "FNLC",
+    "open": 24.8999996185,
+    "high": 25.2000007629,
+    "low": 24.7917995453,
+    "close": 25.2000007629,
+    "volume": 11927.0,
+    "wedge_status": "none"
   }
 ]

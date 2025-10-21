@@ -7478,5 +7478,25 @@
     "close": 70.25,
     "volume": 4805273.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "SYF",
+    "open": 70.6100006104,
+    "high": 72.8799972534,
+    "low": 70.4599990845,
+    "close": 71.5100021362,
+    "volume": 4670300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "SYF",
+    "open": 72.0,
+    "high": 72.5,
+    "low": 71.4599990845,
+    "close": 72.2600021362,
+    "volume": 2657293.0,
+    "wedge_status": "pop"
   }
 ]

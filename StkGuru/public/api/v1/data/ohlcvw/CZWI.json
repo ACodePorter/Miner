@@ -7458,5 +7458,45 @@
     "close": 16.0599994659,
     "volume": 9025.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "CZWI",
+    "open": 16.0,
+    "high": 16.1100006104,
+    "low": 15.9099998474,
+    "close": 15.970000267,
+    "volume": 9726.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "CZWI",
+    "open": 16.0,
+    "high": 15.9177999496,
+    "low": 15.0900001526,
+    "close": 15.1099996567,
+    "volume": 12923.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "CZWI",
+    "open": 15.1099996567,
+    "high": 15.3299999237,
+    "low": 14.6099996567,
+    "close": 15.1199998856,
+    "volume": 10900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "CZWI",
+    "open": 15.6302995682,
+    "high": 15.6302995682,
+    "low": 15.3000001907,
+    "close": 15.529999733,
+    "volume": 10356.0,
+    "wedge_status": "none"
   }
 ]

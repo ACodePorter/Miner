@@ -7458,5 +7458,45 @@
     "close": 35.5449981689,
     "volume": 561203.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "DNTH",
+    "open": 35.3400001526,
+    "high": 36.7849998474,
+    "low": 34.5999984741,
+    "close": 36.2000007629,
+    "volume": 520909.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "DNTH",
+    "open": 36.7299995422,
+    "high": 38.6599998474,
+    "low": 35.6650009155,
+    "close": 36.0,
+    "volume": 465640.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "DNTH",
+    "open": 35.7000007629,
+    "high": 36.3300018311,
+    "low": 34.6300010681,
+    "close": 35.6500015259,
+    "volume": 657900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "DNTH",
+    "open": 36.1899986267,
+    "high": 37.5,
+    "low": 35.2999992371,
+    "close": 36.0,
+    "volume": 447641.0,
+    "wedge_status": "none"
   }
 ]

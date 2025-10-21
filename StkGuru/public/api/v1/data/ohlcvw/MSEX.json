@@ -7458,5 +7458,45 @@
     "close": 56.4399986267,
     "volume": 90469.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "MSEX",
+    "open": 56.5,
+    "high": 58.5699996948,
+    "low": 56.5,
+    "close": 58.4500007629,
+    "volume": 100939.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "MSEX",
+    "open": 58.3499984741,
+    "high": 59.3400001526,
+    "low": 58.0379981995,
+    "close": 58.4799995422,
+    "volume": 146936.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "MSEX",
+    "open": 58.4799995422,
+    "high": 59.0,
+    "low": 56.3899993896,
+    "close": 58.2900009155,
+    "volume": 151100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "MSEX",
+    "open": 58.0699996948,
+    "high": 60.1500015259,
+    "low": 58.0400009155,
+    "close": 60.0250015259,
+    "volume": 137213.0,
+    "wedge_status": "none"
   }
 ]

@@ -7458,5 +7458,45 @@
     "close": 38.4799995422,
     "volume": 223958.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "APOG",
+    "open": 38.7550010681,
+    "high": 38.9900016785,
+    "low": 38.0499992371,
+    "close": 38.25,
+    "volume": 221083.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "APOG",
+    "open": 38.0400009155,
+    "high": 38.9000015259,
+    "low": 37.5099983215,
+    "close": 37.9099998474,
+    "volume": 320674.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "APOG",
+    "open": 37.9000015259,
+    "high": 38.5099983215,
+    "low": 37.25,
+    "close": 38.0,
+    "volume": 211400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "APOG",
+    "open": 38.3899993896,
+    "high": 38.3899993896,
+    "low": 37.625,
+    "close": 38.1599998474,
+    "volume": 147726.0,
+    "wedge_status": "none"
   }
 ]

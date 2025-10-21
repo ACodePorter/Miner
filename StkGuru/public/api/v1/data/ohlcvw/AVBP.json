@@ -3868,5 +3868,45 @@
     "close": 20.0,
     "volume": 401793.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "AVBP",
+    "open": 20.0300006866,
+    "high": 20.7250003815,
+    "low": 19.8999996185,
+    "close": 20.5799999237,
+    "volume": 386556.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "AVBP",
+    "open": 20.8199996948,
+    "high": 20.9500007629,
+    "low": 19.3299999237,
+    "close": 19.625,
+    "volume": 172017.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "AVBP",
+    "open": 19.4099998474,
+    "high": 19.8600006104,
+    "low": 19.0,
+    "close": 19.5100002289,
+    "volume": 168900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "AVBP",
+    "open": 19.7199993134,
+    "high": 20.25,
+    "low": 19.5,
+    "close": 19.9899997711,
+    "volume": 240603.0,
+    "wedge_status": "none"
   }
 ]

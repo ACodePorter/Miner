@@ -7458,5 +7458,45 @@
     "close": 0.8343999982,
     "volume": 201461.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "ILLR",
+    "open": 0.8149999976,
+    "high": 0.8399999738,
+    "low": 0.7071999907,
+    "close": 0.7674000263,
+    "volume": 611708.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "ILLR",
+    "open": 0.75,
+    "high": 0.7649999857,
+    "low": 0.7001000047,
+    "close": 0.7052000165,
+    "volume": 230966.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "ILLR",
+    "open": 0.6909999847,
+    "high": 0.7279999852,
+    "low": 0.6430000067,
+    "close": 0.648999989,
+    "volume": 267200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "ILLR",
+    "open": 0.6399999857,
+    "high": 0.6779999733,
+    "low": 0.6116999984,
+    "close": 0.6732000113,
+    "volume": 427249.0,
+    "wedge_status": "none"
   }
 ]

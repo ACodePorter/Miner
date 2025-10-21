@@ -7458,5 +7458,45 @@
     "close": 2.4100000858,
     "volume": 1455319.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "CNDT",
+    "open": 2.4400000572,
+    "high": 2.5,
+    "low": 2.4300000668,
+    "close": 2.5,
+    "volume": 1164007.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "CNDT",
+    "open": 2.5,
+    "high": 2.5499999523,
+    "low": 2.4300000668,
+    "close": 2.4600000381,
+    "volume": 1321472.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "CNDT",
+    "open": 2.4400000572,
+    "high": 2.5,
+    "low": 2.3800001144,
+    "close": 2.4300000668,
+    "volume": 849200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "CNDT",
+    "open": 2.4700000286,
+    "high": 2.5099999905,
+    "low": 2.4600000381,
+    "close": 2.4900000095,
+    "volume": 907116.0,
+    "wedge_status": "none"
   }
 ]

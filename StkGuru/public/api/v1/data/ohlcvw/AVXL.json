@@ -7458,5 +7458,45 @@
     "close": 8.7950000763,
     "volume": 1110583.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "AVXL",
+    "open": 8.8000001907,
+    "high": 9.0799999237,
+    "low": 8.6649999619,
+    "close": 9.029999733,
+    "volume": 1055001.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "AVXL",
+    "open": 9.0,
+    "high": 9.279999733,
+    "low": 8.8899002075,
+    "close": 9.0100002289,
+    "volume": 987068.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "AVXL",
+    "open": 8.8999996185,
+    "high": 9.248000145,
+    "low": 8.8950004578,
+    "close": 8.9799995422,
+    "volume": 749300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "AVXL",
+    "open": 9.1400003433,
+    "high": 9.5,
+    "low": 9.0749998093,
+    "close": 9.3599996567,
+    "volume": 1043620.0,
+    "wedge_status": "pop"
   }
 ]

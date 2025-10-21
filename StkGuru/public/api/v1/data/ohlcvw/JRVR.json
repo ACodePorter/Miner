@@ -7458,5 +7458,45 @@
     "close": 5.4800000191,
     "volume": 193261.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "JRVR",
+    "open": 5.4899997711,
+    "high": 5.4949998856,
+    "low": 5.2899999619,
+    "close": 5.3699998856,
+    "volume": 102612.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "JRVR",
+    "open": 5.3699998856,
+    "high": 5.3850002289,
+    "low": 5.1500000954,
+    "close": 5.1700000763,
+    "volume": 158263.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "JRVR",
+    "open": 5.1599998474,
+    "high": 5.2300000191,
+    "low": 5.125,
+    "close": 5.2300000191,
+    "volume": 208800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "JRVR",
+    "open": 5.25,
+    "high": 5.3600001335,
+    "low": 5.1900000572,
+    "close": 5.3499999046,
+    "volume": 159690.0,
+    "wedge_status": "none"
   }
 ]

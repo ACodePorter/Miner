@@ -7458,5 +7458,45 @@
     "close": 125.375,
     "volume": 114088.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "BANF",
+    "open": 126.0199966431,
+    "high": 126.1350021362,
+    "low": 122.1050033569,
+    "close": 122.6900024414,
+    "volume": 81373.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "BANF",
+    "open": 123.0,
+    "high": 123.0,
+    "low": 113.8099975586,
+    "close": 114.6800003052,
+    "volume": 189659.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "BANF",
+    "open": 115.1800003052,
+    "high": 119.0,
+    "low": 112.5400009155,
+    "close": 112.9300003052,
+    "volume": 170700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "BANF",
+    "open": 113.0999984741,
+    "high": 115.0,
+    "low": 112.5599975586,
+    "close": 114.8300018311,
+    "volume": 106285.0,
+    "wedge_status": "none"
   }
 ]

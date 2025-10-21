@@ -7458,5 +7458,45 @@
     "close": 4.0,
     "volume": 319675.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "ORGO",
+    "open": 4.0300002098,
+    "high": 4.1149997711,
+    "low": 4.0199999809,
+    "close": 4.0700001717,
+    "volume": 428288.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "ORGO",
+    "open": 4.0700001717,
+    "high": 4.2049999237,
+    "low": 4.0500001907,
+    "close": 4.0599999428,
+    "volume": 707672.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "ORGO",
+    "open": 4.0399999619,
+    "high": 4.1100001335,
+    "low": 3.9700000286,
+    "close": 4.0399999619,
+    "volume": 288400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "ORGO",
+    "open": 4.0999999046,
+    "high": 4.1350002289,
+    "low": 4.0199999809,
+    "close": 4.0799999237,
+    "volume": 376827.0,
+    "wedge_status": "none"
   }
 ]

@@ -7458,5 +7458,45 @@
     "close": 37.2099990845,
     "volume": 45222.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "FMBH",
+    "open": 37.4099998474,
+    "high": 37.4150009155,
+    "low": 36.2799987793,
+    "close": 36.4599990845,
+    "volume": 61882.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "FMBH",
+    "open": 37.5950012207,
+    "high": 37.5950012207,
+    "low": 34.75,
+    "close": 34.9799995422,
+    "volume": 64563.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "FMBH",
+    "open": 35.2400016785,
+    "high": 35.7400016785,
+    "low": 35.0600013733,
+    "close": 35.5600013733,
+    "volume": 63100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "FMBH",
+    "open": 35.7000007629,
+    "high": 36.5,
+    "low": 35.5,
+    "close": 36.4199981689,
+    "volume": 47507.0,
+    "wedge_status": "none"
   }
 ]

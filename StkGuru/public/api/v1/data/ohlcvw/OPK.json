@@ -7458,5 +7458,45 @@
     "close": 1.5199999809,
     "volume": 1229014.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "OPK",
+    "open": 1.5199999809,
+    "high": 1.5299999714,
+    "low": 1.5,
+    "close": 1.5199999809,
+    "volume": 1476864.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "OPK",
+    "open": 1.5299999714,
+    "high": 1.5599999428,
+    "low": 1.5,
+    "close": 1.5,
+    "volume": 1303147.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "OPK",
+    "open": 1.5,
+    "high": 1.5299999714,
+    "low": 1.4900000095,
+    "close": 1.5199999809,
+    "volume": 1572900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "OPK",
+    "open": 1.5399999619,
+    "high": 1.5499999523,
+    "low": 1.5199999809,
+    "close": 1.5299999714,
+    "volume": 1799638.0,
+    "wedge_status": "none"
   }
 ]

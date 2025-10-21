@@ -7458,5 +7458,45 @@
     "close": 1.8700000048,
     "volume": 251163.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "INMB",
+    "open": 1.8500000238,
+    "high": 1.9793000221,
+    "low": 1.8500000238,
+    "close": 1.9299999475,
+    "volume": 333908.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "INMB",
+    "open": 1.9199999571,
+    "high": 2.0,
+    "low": 1.8500000238,
+    "close": 1.8500000238,
+    "volume": 392255.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "INMB",
+    "open": 1.8700000048,
+    "high": 1.8799999952,
+    "low": 1.8400000334,
+    "close": 1.8500000238,
+    "volume": 207100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "INMB",
+    "open": 1.8600000143,
+    "high": 1.9500000477,
+    "low": 1.8600000143,
+    "close": 1.9199999571,
+    "volume": 316075.0,
+    "wedge_status": "none"
   }
 ]

@@ -7478,5 +7478,25 @@
     "close": 38.4500007629,
     "volume": 5957985.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "ALLY",
+    "open": 40.0,
+    "high": 41.2599983215,
+    "low": 38.7000007629,
+    "close": 39.8199996948,
+    "volume": 8977600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "ALLY",
+    "open": 40.8199996948,
+    "high": 40.9099998474,
+    "low": 39.7900009155,
+    "close": 40.5,
+    "volume": 3477907.0,
+    "wedge_status": "none"
   }
 ]
