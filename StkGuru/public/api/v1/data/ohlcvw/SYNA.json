@@ -7458,5 +7458,45 @@
     "close": 66.7399978638,
     "volume": 309145.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "SYNA",
+    "open": 67.7399978638,
+    "high": 69.6600036621,
+    "low": 67.2399978638,
+    "close": 69.6399993896,
+    "volume": 399768.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "SYNA",
+    "open": 70.0,
+    "high": 70.7099990845,
+    "low": 68.8000030518,
+    "close": 69.9000015259,
+    "volume": 497826.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "SYNA",
+    "open": 69.0699996948,
+    "high": 70.6999969482,
+    "low": 68.6699981689,
+    "close": 69.4499969482,
+    "volume": 406400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "SYNA",
+    "open": 70.25,
+    "high": 72.8499984741,
+    "low": 70.0,
+    "close": 72.5800018311,
+    "volume": 302372.0,
+    "wedge_status": "none"
   }
 ]

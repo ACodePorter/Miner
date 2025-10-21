@@ -7078,5 +7078,45 @@
     "close": 29.2900009155,
     "volume": 716179.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "SDRL",
+    "open": 29.6299991608,
+    "high": 30.5499992371,
+    "low": 29.345500946,
+    "close": 30.5,
+    "volume": 795245.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "SDRL",
+    "open": 30.6399993896,
+    "high": 30.8999996185,
+    "low": 29.1100006104,
+    "close": 29.3899993896,
+    "volume": 589870.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "SDRL",
+    "open": 29.0,
+    "high": 29.7199993134,
+    "low": 28.7280006409,
+    "close": 29.5499992371,
+    "volume": 417500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "SDRL",
+    "open": 29.5,
+    "high": 30.5599994659,
+    "low": 29.3801002502,
+    "close": 30.3099994659,
+    "volume": 430474.0,
+    "wedge_status": "none"
   }
 ]

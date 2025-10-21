@@ -7458,5 +7458,45 @@
     "close": 8.8299999237,
     "volume": 21998.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "UBFO",
+    "open": 8.9499998093,
+    "high": 9.029999733,
+    "low": 8.7100000381,
+    "close": 8.8299999237,
+    "volume": 13585.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "UBFO",
+    "open": 8.779999733,
+    "high": 8.8100004196,
+    "low": 8.4799995422,
+    "close": 8.5399999619,
+    "volume": 30014.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "UBFO",
+    "open": 8.6000003815,
+    "high": 9.1700000763,
+    "low": 8.6000003815,
+    "close": 9.0,
+    "volume": 36300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "UBFO",
+    "open": 9.0799999237,
+    "high": 9.0799999237,
+    "low": 8.5500001907,
+    "close": 8.8999996185,
+    "volume": 135587.0,
+    "wedge_status": "none"
   }
 ]

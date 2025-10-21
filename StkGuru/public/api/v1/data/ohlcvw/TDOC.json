@@ -7458,5 +7458,45 @@
     "close": 8.9300003052,
     "volume": 7429794.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "TDOC",
+    "open": 8.9499998093,
+    "high": 9.1000003815,
+    "low": 8.6999998093,
+    "close": 8.9399995804,
+    "volume": 7890931.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "TDOC",
+    "open": 8.9799995422,
+    "high": 9.5499000549,
+    "low": 8.8999996185,
+    "close": 9.0200004578,
+    "volume": 10652231.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "TDOC",
+    "open": 8.75,
+    "high": 8.9300003052,
+    "low": 8.4300003052,
+    "close": 8.529999733,
+    "volume": 6440600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "TDOC",
+    "open": 8.75,
+    "high": 8.9899997711,
+    "low": 8.6599998474,
+    "close": 8.9799995422,
+    "volume": 7323325.0,
+    "wedge_status": "none"
   }
 ]

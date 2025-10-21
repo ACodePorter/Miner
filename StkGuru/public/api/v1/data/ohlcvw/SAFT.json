@@ -7458,5 +7458,45 @@
     "close": 70.1200027466,
     "volume": 54448.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "SAFT",
+    "open": 70.0800018311,
+    "high": 70.1200027466,
+    "low": 68.6600036621,
+    "close": 70.0,
+    "volume": 65558.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "SAFT",
+    "open": 69.5,
+    "high": 69.9800033569,
+    "low": 68.0999984741,
+    "close": 68.25,
+    "volume": 79520.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "SAFT",
+    "open": 68.4599990845,
+    "high": 69.5599975586,
+    "low": 68.2300033569,
+    "close": 69.5,
+    "volume": 84400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "SAFT",
+    "open": 69.4499969482,
+    "high": 69.9400024414,
+    "low": 68.5898971558,
+    "close": 69.7300033569,
+    "volume": 55689.0,
+    "wedge_status": "none"
   }
 ]

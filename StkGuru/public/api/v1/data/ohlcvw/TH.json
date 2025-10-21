@@ -7458,5 +7458,45 @@
     "close": 7.4299998283,
     "volume": 376335.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "TH",
+    "open": 7.5,
+    "high": 7.5,
+    "low": 7.1849999428,
+    "close": 7.2600002289,
+    "volume": 257604.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "TH",
+    "open": 7.2699999809,
+    "high": 7.3600001335,
+    "low": 7.0,
+    "close": 7.0199999809,
+    "volume": 311750.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "TH",
+    "open": 7.0199999809,
+    "high": 7.0900001526,
+    "low": 6.9450001717,
+    "close": 7.0,
+    "volume": 335800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "TH",
+    "open": 7.0100002289,
+    "high": 7.1799998283,
+    "low": 7.0,
+    "close": 7.1599998474,
+    "volume": 321425.0,
+    "wedge_status": "none"
   }
 ]

@@ -7458,5 +7458,45 @@
     "close": 1.9099999666,
     "volume": 38907.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "WALD",
+    "open": 1.9400000572,
+    "high": 2.0699999332,
+    "low": 1.8700000048,
+    "close": 2.0399999619,
+    "volume": 72767.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "WALD",
+    "open": 2.0099999905,
+    "high": 2.070100069,
+    "low": 1.9500000477,
+    "close": 1.9600000381,
+    "volume": 53562.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "WALD",
+    "open": 1.9500000477,
+    "high": 2.0,
+    "low": 1.8899999857,
+    "close": 1.8899999857,
+    "volume": 45100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "WALD",
+    "open": 1.8999999762,
+    "high": 1.9400000572,
+    "low": 1.8700000048,
+    "close": 1.8999999762,
+    "volume": 28912.0,
+    "wedge_status": "none"
   }
 ]

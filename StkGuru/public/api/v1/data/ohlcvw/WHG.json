@@ -7458,5 +7458,45 @@
     "close": 16.5,
     "volume": 5700.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "WHG",
+    "open": 16.5,
+    "high": 16.5,
+    "low": 16.2416992188,
+    "close": 16.5,
+    "volume": 5031.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "WHG",
+    "open": 16.5,
+    "high": 16.3850002289,
+    "low": 16.1499996185,
+    "close": 16.3099994659,
+    "volume": 4602.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "WHG",
+    "open": 16.2299995422,
+    "high": 16.4400005341,
+    "low": 16.2299995422,
+    "close": 16.4400005341,
+    "volume": 5200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "WHG",
+    "open": 16.5,
+    "high": 16.4799995422,
+    "low": 16.2150993347,
+    "close": 16.4799995422,
+    "volume": 4824.0,
+    "wedge_status": "none"
   }
 ]

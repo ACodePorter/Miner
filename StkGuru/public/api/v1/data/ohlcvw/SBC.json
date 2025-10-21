@@ -7218,5 +7218,45 @@
     "close": 4.1599998474,
     "volume": 47403.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "SBC",
+    "open": 4.1599998474,
+    "high": 4.2899999619,
+    "low": 4.1501998901,
+    "close": 4.2300000191,
+    "volume": 34465.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "SBC",
+    "open": 4.25,
+    "high": 4.25,
+    "low": 4.1500000954,
+    "close": 4.1700000763,
+    "volume": 42200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "SBC",
+    "open": 4.1500000954,
+    "high": 4.2049999237,
+    "low": 4.1500000954,
+    "close": 4.1950001717,
+    "volume": 47600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "SBC",
+    "open": 4.1999998093,
+    "high": 4.2600002289,
+    "low": 4.0999999046,
+    "close": 4.1500000954,
+    "volume": 38846.0,
+    "wedge_status": "none"
   }
 ]

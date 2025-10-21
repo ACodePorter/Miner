@@ -7458,5 +7458,45 @@
     "close": 2.4500000477,
     "volume": 94879.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "RPT",
+    "open": 2.4800000191,
+    "high": 2.4944999218,
+    "low": 2.4200000763,
+    "close": 2.4300000668,
+    "volume": 104640.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "RPT",
+    "open": 2.4100000858,
+    "high": 2.4300000668,
+    "low": 2.3800001144,
+    "close": 2.4000000954,
+    "volume": 209883.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "RPT",
+    "open": 2.4000000954,
+    "high": 2.4500000477,
+    "low": 2.3800001144,
+    "close": 2.4300000668,
+    "volume": 111600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "RPT",
+    "open": 2.4900000095,
+    "high": 2.5,
+    "low": 2.4349999428,
+    "close": 2.5,
+    "volume": 147299.0,
+    "wedge_status": "none"
   }
 ]

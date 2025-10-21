@@ -7458,5 +7458,45 @@
     "close": 37.0099983215,
     "volume": 31320.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "XOMA",
+    "open": 37.4875984192,
+    "high": 37.5600013733,
+    "low": 36.875,
+    "close": 37.3899993896,
+    "volume": 21976.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "XOMA",
+    "open": 37.25,
+    "high": 39.0,
+    "low": 35.7849998474,
+    "close": 36.4900016785,
+    "volume": 52445.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "XOMA",
+    "open": 36.1300010681,
+    "high": 36.6199989319,
+    "low": 34.25,
+    "close": 34.6899986267,
+    "volume": 51800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "XOMA",
+    "open": 34.9300003052,
+    "high": 35.4850006104,
+    "low": 34.7000007629,
+    "close": 34.9900016785,
+    "volume": 41082.0,
+    "wedge_status": "none"
   }
 ]

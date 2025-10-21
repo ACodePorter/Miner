@@ -7458,5 +7458,45 @@
     "close": 36.7799987793,
     "volume": 57089.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "TRST",
+    "open": 37.1899986267,
+    "high": 37.25,
+    "low": 36.1850013733,
+    "close": 36.3199996948,
+    "volume": 90152.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "TRST",
+    "open": 36.1399993896,
+    "high": 36.1399993896,
+    "low": 34.3100013733,
+    "close": 34.6500015259,
+    "volume": 114684.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "TRST",
+    "open": 34.9799995422,
+    "high": 35.25,
+    "low": 34.5,
+    "close": 35.1100006104,
+    "volume": 78000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "TRST",
+    "open": 35.3250007629,
+    "high": 36.3100013733,
+    "low": 35.3250007629,
+    "close": 36.2900009155,
+    "volume": 62308.0,
+    "wedge_status": "none"
   }
 ]

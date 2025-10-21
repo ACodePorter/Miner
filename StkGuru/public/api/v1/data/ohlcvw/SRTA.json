@@ -7458,5 +7458,45 @@
     "close": 5.5700001717,
     "volume": 1765977.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "SRTA",
+    "open": 5.6950001717,
+    "high": 5.9600000381,
+    "low": 5.1700000763,
+    "close": 5.2399997711,
+    "volume": 1160123.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "SRTA",
+    "open": 5.25,
+    "high": 5.3800001144,
+    "low": 5.0599999428,
+    "close": 5.0799999237,
+    "volume": 723344.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "SRTA",
+    "open": 5.0,
+    "high": 5.1300001144,
+    "low": 4.8800001144,
+    "close": 4.9899997711,
+    "volume": 623700.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "SRTA",
+    "open": 5.1100001335,
+    "high": 5.2150001526,
+    "low": 5.0199999809,
+    "close": 5.2100000381,
+    "volume": 467317.0,
+    "wedge_status": "none"
   }
 ]

@@ -7458,5 +7458,45 @@
     "close": 10.3699998856,
     "volume": 106969.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "TZOO",
+    "open": 10.4300003052,
+    "high": 10.6700000763,
+    "low": 10.2950000763,
+    "close": 10.3999996185,
+    "volume": 113439.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "TZOO",
+    "open": 10.345000267,
+    "high": 10.5200004578,
+    "low": 10.0200004578,
+    "close": 10.0200004578,
+    "volume": 87943.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "TZOO",
+    "open": 10.0200004578,
+    "high": 10.2700004578,
+    "low": 9.8900003433,
+    "close": 9.9200000763,
+    "volume": 143200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "TZOO",
+    "open": 10.0,
+    "high": 10.25,
+    "low": 10.0,
+    "close": 10.0500001907,
+    "volume": 99060.0,
+    "wedge_status": "none"
   }
 ]

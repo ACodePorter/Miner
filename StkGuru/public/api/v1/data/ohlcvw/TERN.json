@@ -7458,5 +7458,45 @@
     "close": 8.0799999237,
     "volume": 754132.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "TERN",
+    "open": 8.2399997711,
+    "high": 8.6199998856,
+    "low": 8.1350002289,
+    "close": 8.5,
+    "volume": 828118.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "TERN",
+    "open": 8.6099996567,
+    "high": 9.0315999985,
+    "low": 8.5500001907,
+    "close": 8.6099996567,
+    "volume": 827310.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "TERN",
+    "open": 8.4399995804,
+    "high": 8.7399997711,
+    "low": 8.220000267,
+    "close": 8.4099998474,
+    "volume": 787000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "TERN",
+    "open": 8.529999733,
+    "high": 8.7399997711,
+    "low": 8.4399995804,
+    "close": 8.6199998856,
+    "volume": 662966.0,
+    "wedge_status": "none"
   }
 ]

@@ -7458,5 +7458,45 @@
     "close": 230.0,
     "volume": 154131.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "SXI",
+    "open": 233.7100067139,
+    "high": 235.9400024414,
+    "low": 230.2200012207,
+    "close": 233.8999938965,
+    "volume": 197576.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "SXI",
+    "open": 235.8000030518,
+    "high": 235.8500061035,
+    "low": 232.0899963379,
+    "close": 235.3500061035,
+    "volume": 125221.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "SXI",
+    "open": 234.0,
+    "high": 235.5,
+    "low": 230.1999969482,
+    "close": 233.3899993896,
+    "volume": 125400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "SXI",
+    "open": 235.0,
+    "high": 241.0,
+    "low": 234.0,
+    "close": 241.0,
+    "volume": 71738.0,
+    "wedge_status": "none"
   }
 ]

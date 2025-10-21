@@ -7458,5 +7458,45 @@
     "close": 14.75,
     "volume": 16291.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "VHI",
+    "open": 14.8400001526,
+    "high": 15.1902999878,
+    "low": 14.5150003433,
+    "close": 14.7700004578,
+    "volume": 6642.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "VHI",
+    "open": 14.7299995422,
+    "high": 14.9200000763,
+    "low": 14.6700000763,
+    "close": 14.6700000763,
+    "volume": 8117.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "VHI",
+    "open": 14.5,
+    "high": 14.75,
+    "low": 14.1599998474,
+    "close": 14.3299999237,
+    "volume": 8300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "VHI",
+    "open": 14.5,
+    "high": 14.9160003662,
+    "low": 14.6999998093,
+    "close": 14.8599996567,
+    "volume": 5840.0,
+    "wedge_status": "none"
   }
 ]

@@ -7458,5 +7458,45 @@
     "close": 8.4200000763,
     "volume": 1196078.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "RZLT",
+    "open": 8.5,
+    "high": 9.0399999619,
+    "low": 8.4670000076,
+    "close": 9.0,
+    "volume": 1346037.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "RZLT",
+    "open": 9.0900001526,
+    "high": 9.220000267,
+    "low": 8.7600002289,
+    "close": 8.8699998856,
+    "volume": 1514153.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "RZLT",
+    "open": 8.779999733,
+    "high": 8.9670000076,
+    "low": 8.5349998474,
+    "close": 8.6899995804,
+    "volume": 728000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "RZLT",
+    "open": 8.8199996948,
+    "high": 9.0249996185,
+    "low": 8.5100002289,
+    "close": 9.0100002289,
+    "volume": 1467788.0,
+    "wedge_status": "pop"
   }
 ]

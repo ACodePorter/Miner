@@ -7458,5 +7458,45 @@
     "close": 18.3500003815,
     "volume": 1894501.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "TSSI",
+    "open": 19.0,
+    "high": 19.5499992371,
+    "low": 18.0,
+    "close": 18.0599994659,
+    "volume": 2228665.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "TSSI",
+    "open": 18.3500003815,
+    "high": 19.2000007629,
+    "low": 17.0,
+    "close": 17.1399993896,
+    "volume": 2143843.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "TSSI",
+    "open": 17.0,
+    "high": 17.0799999237,
+    "low": 15.9300003052,
+    "close": 16.2000007629,
+    "volume": 1722300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "TSSI",
+    "open": 16.6200008392,
+    "high": 16.9599990845,
+    "low": 16.2301006317,
+    "close": 16.8899993896,
+    "volume": 1610496.0,
+    "wedge_status": "none"
   }
 ]
