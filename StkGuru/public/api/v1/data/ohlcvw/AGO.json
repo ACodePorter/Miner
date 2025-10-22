@@ -7498,5 +7498,15 @@
     "close": 81.0,
     "volume": 131244.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "AGO",
+    "open": 81.1200027466,
+    "high": 82.9499969482,
+    "low": 80.4101028442,
+    "close": 82.5100021362,
+    "volume": 180682.0,
+    "wedge_status": "none"
   }
 ]
