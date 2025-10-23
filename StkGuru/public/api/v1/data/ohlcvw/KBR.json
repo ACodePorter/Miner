@@ -7508,5 +7508,15 @@
     "close": 44.5,
     "volume": 1186287.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "KBR",
+    "open": 44.5600013733,
+    "high": 44.9000015259,
+    "low": 43.2799987793,
+    "close": 43.3699989319,
+    "volume": 896881.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 56.5,
     "volume": 435840.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "FNF",
+    "open": 56.6800003052,
+    "high": 56.8600006104,
+    "low": 56.25,
+    "close": 56.4399986267,
+    "volume": 565758.0,
+    "wedge_status": "none"
   }
 ]

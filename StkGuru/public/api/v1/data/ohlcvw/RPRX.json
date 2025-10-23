@@ -7498,5 +7498,25 @@
     "close": 36.6300010681,
     "volume": 2029666.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "RPRX",
+    "open": 36.5,
+    "high": 37.5200004578,
+    "low": 36.5,
+    "close": 37.4799995422,
+    "volume": 2326884.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "RPRX",
+    "open": 37.5600013733,
+    "high": 37.6899986267,
+    "low": 36.8100013733,
+    "close": 36.8400001526,
+    "volume": 1859555.0,
+    "wedge_status": "none"
   }
 ]

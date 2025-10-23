@@ -7498,5 +7498,25 @@
     "close": 9.2399997711,
     "volume": 2180116.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "OGN",
+    "open": 9.220000267,
+    "high": 9.2950000763,
+    "low": 8.9899997711,
+    "close": 9.0200004578,
+    "volume": 3383805.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "OGN",
+    "open": 9.0,
+    "high": 9.1599998474,
+    "low": 8.8850002289,
+    "close": 8.9399995804,
+    "volume": 4228040.0,
+    "wedge_status": "none"
   }
 ]

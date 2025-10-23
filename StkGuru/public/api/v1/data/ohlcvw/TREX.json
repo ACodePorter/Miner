@@ -7498,5 +7498,25 @@
     "close": 50.25,
     "volume": 1228788.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "TREX",
+    "open": 49.9900016785,
+    "high": 51.6949996948,
+    "low": 49.5200004578,
+    "close": 51.3199996948,
+    "volume": 1952393.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "TREX",
+    "open": 50.9300003052,
+    "high": 51.75,
+    "low": 50.3499984741,
+    "close": 50.5099983215,
+    "volume": 1273323.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 205.2400054932,
     "volume": 1399195.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "BWXT",
+    "open": 205.0,
+    "high": 206.4250030518,
+    "low": 190.5,
+    "close": 191.1699981689,
+    "volume": 1763280.0,
+    "wedge_status": "drop"
   }
 ]
