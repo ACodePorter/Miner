@@ -7508,5 +7508,15 @@
     "close": 26.8500003815,
     "volume": 6970951.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "MRNA",
+    "open": 25.8199996948,
+    "high": 26.6700000763,
+    "low": 25.5699996948,
+    "close": 26.25,
+    "volume": 8691885.0,
+    "wedge_status": "none"
   }
 ]

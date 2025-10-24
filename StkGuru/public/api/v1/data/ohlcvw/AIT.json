@@ -7508,5 +7508,15 @@
     "close": 253.5,
     "volume": 160772.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "AIT",
+    "open": 256.5199890137,
+    "high": 261.1900024414,
+    "low": 254.8200073242,
+    "close": 260.0,
+    "volume": 371052.0,
+    "wedge_status": "pop"
   }
 ]

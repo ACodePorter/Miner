@@ -7508,5 +7508,15 @@
     "close": 215.0500030518,
     "volume": 2675032.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "STX",
+    "open": 218.25,
+    "high": 226.9100036621,
+    "low": 218.25,
+    "close": 226.4100036621,
+    "volume": 2501316.0,
+    "wedge_status": "pop"
   }
 ]

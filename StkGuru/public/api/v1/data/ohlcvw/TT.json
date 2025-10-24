@@ -7508,5 +7508,15 @@
     "close": 408.5,
     "volume": 1973268.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "TT",
+    "open": 410.5,
+    "high": 417.549987793,
+    "low": 408.950012207,
+    "close": 415.8500061035,
+    "volume": 723372.0,
+    "wedge_status": "none"
   }
 ]
