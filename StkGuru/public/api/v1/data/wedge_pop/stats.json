@@ -47681,10 +47681,38 @@
   },
   {
     "date": "20251024",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 26,
+    "pop": [
+      "ADSK",
+      "AKAM",
+      "AVGO",
+      "BK",
+      "C",
+      "CFG",
+      "CMI",
+      "ETN",
+      "FICO",
+      "FOXA",
+      "NVDA"
+    ],
+    "drop": [
+      "ABBV",
+      "ADI",
+      "AWK",
+      "COST",
+      "DECK",
+      "EG",
+      "ELV",
+      "EXE",
+      "L",
+      "LH",
+      "MHK",
+      "MKC",
+      "NEM",
+      "ON",
+      "PODD"
+    ],
+    "pop_pct": 0.423,
+    "drop_pct": 0.577
   }
 ]

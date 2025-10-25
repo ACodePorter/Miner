@@ -7508,5 +7508,15 @@
     "close": 82.7300033569,
     "volume": 1369293.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "PEG",
+    "open": 83.5,
+    "high": 83.5,
+    "low": 82.6699981689,
+    "close": 83.1100006104,
+    "volume": 2672614.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 171.6000061035,
     "volume": 4036624.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "MMM",
+    "open": 172.0,
+    "high": 172.8500061035,
+    "low": 167.75,
+    "close": 168.5,
+    "volume": 3028191.0,
+    "wedge_status": "none"
   }
 ]
