@@ -7478,5 +7478,25 @@
     "close": 1742.4899902344,
     "volume": 184810.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "FCNCA",
+    "open": 1748.9100341797,
+    "high": 1780.0,
+    "low": 1727.0999755859,
+    "close": 1751.5200195312,
+    "volume": 144278.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "FCNCA",
+    "open": 1750.0,
+    "high": 1785.2399902344,
+    "low": 1750.0,
+    "close": 1775.2099609375,
+    "volume": 131537.0,
+    "wedge_status": "none"
   }
 ]

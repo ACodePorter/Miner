@@ -47262,7 +47262,7 @@
   },
   {
     "date": "20251023",
-    "total": 38,
+    "total": 54,
     "pop": [
       "AGO",
       "AIT",
@@ -47271,10 +47271,22 @@
       "AR",
       "AXON",
       "BA",
+      "CAR",
+      "CNH",
+      "CNXC",
       "CTRA",
       "DECK",
+      "DXC",
+      "ESI",
+      "FBIN",
+      "FIVE",
+      "FLS",
       "GPN",
+      "HHH",
       "HII",
+      "HLI",
+      "ITT",
+      "LEA",
       "MAS",
       "NKE",
       "PNR",
@@ -47291,7 +47303,11 @@
       "D",
       "DAL",
       "DG",
+      "EEFT",
+      "ELS",
+      "INFA",
       "KMI",
+      "KNX",
       "L",
       "LUV",
       "MDLZ",
@@ -47305,12 +47321,12 @@
       "TJX",
       "URI"
     ],
-    "pop_pct": 0.421,
-    "drop_pct": 0.579
+    "pop_pct": 0.519,
+    "drop_pct": 0.481
   },
   {
     "date": "20251024",
-    "total": 26,
+    "total": 40,
     "pop": [
       "ADSK",
       "AKAM",
@@ -47319,15 +47335,26 @@
       "C",
       "CFG",
       "CMI",
+      "DXC",
       "ETN",
+      "EVR",
+      "EWBC",
       "FICO",
       "FOXA",
-      "NVDA"
+      "INFA",
+      "JEF",
+      "NVDA",
+      "TFC",
+      "TT",
+      "VST"
     ],
     "drop": [
       "ABBV",
       "ADI",
       "AWK",
+      "BF.A",
+      "BJ",
+      "BYD",
       "COST",
       "DECK",
       "EG",
@@ -47339,9 +47366,12 @@
       "MKC",
       "NEM",
       "ON",
-      "PODD"
+      "PODD",
+      "SOLV",
+      "TJX",
+      "YUM"
     ],
-    "pop_pct": 0.423,
-    "drop_pct": 0.577
+    "pop_pct": 0.475,
+    "drop_pct": 0.525
   }
 ]
