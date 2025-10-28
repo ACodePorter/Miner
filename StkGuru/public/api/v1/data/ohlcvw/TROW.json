@@ -7488,5 +7488,15 @@
     "close": 103.5500030518,
     "volume": 1032048.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "TROW",
+    "open": 105.0299987793,
+    "high": 106.0,
+    "low": 104.5,
+    "close": 104.9100036621,
+    "volume": 1238437.0,
+    "wedge_status": "pop"
   }
 ]
