@@ -7448,5 +7448,75 @@
     "close": 8.6599998474,
     "volume": 70826.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "FENC",
+    "open": 8.671500206,
+    "high": 8.8400001526,
+    "low": 8.3900003433,
+    "close": 8.720000267,
+    "volume": 77671.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "FENC",
+    "open": 8.5699996948,
+    "high": 8.7299995422,
+    "low": 8.3100004196,
+    "close": 8.720000267,
+    "volume": 60338.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "FENC",
+    "open": 8.8698997498,
+    "high": 9.0,
+    "low": 8.720000267,
+    "close": 8.9600000381,
+    "volume": 67342.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "FENC",
+    "open": 9.0100002289,
+    "high": 9.029999733,
+    "low": 8.845000267,
+    "close": 8.9899997711,
+    "volume": 30785.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "FENC",
+    "open": 8.9899997711,
+    "high": 9.1000003815,
+    "low": 8.8000001907,
+    "close": 8.8199996948,
+    "volume": 104982.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "FENC",
+    "open": 8.779999733,
+    "high": 9.1599998474,
+    "low": 8.6000003815,
+    "close": 8.7600002289,
+    "volume": 96700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "FENC",
+    "open": 8.6999998093,
+    "high": 8.9200000763,
+    "low": 8.2049999237,
+    "close": 8.470000267,
+    "volume": 92826.0,
+    "wedge_status": "none"
   }
 ]

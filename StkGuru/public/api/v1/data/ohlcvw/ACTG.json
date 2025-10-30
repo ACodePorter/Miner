@@ -7448,5 +7448,75 @@
     "close": 3.5499999523,
     "volume": 217722.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "ACTG",
+    "open": 3.5599999428,
+    "high": 3.6150000095,
+    "low": 3.553800106,
+    "close": 3.5599999428,
+    "volume": 116621.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "ACTG",
+    "open": 3.5499999523,
+    "high": 3.5913000107,
+    "low": 3.4400000572,
+    "close": 3.5,
+    "volume": 124072.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "ACTG",
+    "open": 3.5199999809,
+    "high": 3.5899999142,
+    "low": 3.5,
+    "close": 3.5699999332,
+    "volume": 76910.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "ACTG",
+    "open": 3.6099998951,
+    "high": 3.6099998951,
+    "low": 3.5016000271,
+    "close": 3.5499999523,
+    "volume": 126567.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "ACTG",
+    "open": 3.5299999714,
+    "high": 3.5525999069,
+    "low": 3.4200000763,
+    "close": 3.4400000572,
+    "volume": 133887.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "ACTG",
+    "open": 3.4400000572,
+    "high": 3.4900000095,
+    "low": 3.3800001144,
+    "close": 3.4200000763,
+    "volume": 136500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "ACTG",
+    "open": 3.4200000763,
+    "high": 3.5,
+    "low": 3.2999999523,
+    "close": 3.3199999332,
+    "volume": 134331.0,
+    "wedge_status": "none"
   }
 ]

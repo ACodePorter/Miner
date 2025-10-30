@@ -7468,5 +7468,55 @@
     "close": 4.8600001335,
     "volume": 4638206.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "NWL",
+    "open": 4.8499999046,
+    "high": 5.0,
+    "low": 4.8499999046,
+    "close": 4.9800000191,
+    "volume": 4601054.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "NWL",
+    "open": 5.0300002098,
+    "high": 5.0399999619,
+    "low": 4.9699997902,
+    "close": 4.9800000191,
+    "volume": 4693903.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "NWL",
+    "open": 5.0,
+    "high": 5.1399002075,
+    "low": 5.0,
+    "close": 5.0900001526,
+    "volume": 6276928.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "NWL",
+    "open": 5.0599999428,
+    "high": 5.0700001717,
+    "low": 4.9200000763,
+    "close": 5.0,
+    "volume": 5890900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "NWL",
+    "open": 4.9600000381,
+    "high": 5.0199999809,
+    "low": 4.8800001144,
+    "close": 4.9299998283,
+    "volume": 6460406.0,
+    "wedge_status": "none"
   }
 ]

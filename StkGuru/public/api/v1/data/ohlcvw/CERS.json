@@ -7448,5 +7448,75 @@
     "close": 1.6299999952,
     "volume": 1247550.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "CERS",
+    "open": 1.6200000048,
+    "high": 1.6599999666,
+    "low": 1.5900000334,
+    "close": 1.6399999857,
+    "volume": 798403.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "CERS",
+    "open": 1.6299999952,
+    "high": 1.6349999905,
+    "low": 1.4800000191,
+    "close": 1.5,
+    "volume": 2115981.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "CERS",
+    "open": 1.5,
+    "high": 1.5298999548,
+    "low": 1.4850000143,
+    "close": 1.5099999905,
+    "volume": 647534.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "CERS",
+    "open": 1.5499999523,
+    "high": 1.5499999523,
+    "low": 1.5,
+    "close": 1.5299999714,
+    "volume": 678176.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "CERS",
+    "open": 1.5299999714,
+    "high": 1.5449999571,
+    "low": 1.4900000095,
+    "close": 1.5399999619,
+    "volume": 811353.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "CERS",
+    "open": 1.5299999714,
+    "high": 1.5299999714,
+    "low": 1.4900000095,
+    "close": 1.5,
+    "volume": 666500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "CERS",
+    "open": 1.4900000095,
+    "high": 1.5149999857,
+    "low": 1.4149999619,
+    "close": 1.4500000477,
+    "volume": 1404557.0,
+    "wedge_status": "none"
   }
 ]

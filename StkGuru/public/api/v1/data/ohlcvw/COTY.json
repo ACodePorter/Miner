@@ -7498,5 +7498,25 @@
     "close": 4.0999999046,
     "volume": 3828482.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "COTY",
+    "open": 4.0900001526,
+    "high": 4.0900001526,
+    "low": 4.0,
+    "close": 4.0199999809,
+    "volume": 3263144.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "COTY",
+    "open": 4.0,
+    "high": 4.0549998283,
+    "low": 3.9300000668,
+    "close": 3.9500000477,
+    "volume": 4632164.0,
+    "wedge_status": "none"
   }
 ]

@@ -7448,5 +7448,75 @@
     "close": 9.720000267,
     "volume": 1614565.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "ARVN",
+    "open": 9.6700000763,
+    "high": 9.970000267,
+    "low": 9.6099996567,
+    "close": 9.6599998474,
+    "volume": 1521198.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "ARVN",
+    "open": 9.6499996185,
+    "high": 9.8499002457,
+    "low": 9.1949996948,
+    "close": 9.3100004196,
+    "volume": 2112740.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "ARVN",
+    "open": 9.3199996948,
+    "high": 9.375,
+    "low": 9.0100002289,
+    "close": 9.1599998474,
+    "volume": 3633580.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "ARVN",
+    "open": 9.25,
+    "high": 9.5500001907,
+    "low": 9.0900001526,
+    "close": 9.2100000381,
+    "volume": 3416397.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "ARVN",
+    "open": 9.3000001907,
+    "high": 9.6800003052,
+    "low": 9.25,
+    "close": 9.6499996185,
+    "volume": 1718579.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "ARVN",
+    "open": 9.5699996948,
+    "high": 9.6199998856,
+    "low": 9.3900003433,
+    "close": 9.5,
+    "volume": 2240800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "ARVN",
+    "open": 9.4099998474,
+    "high": 9.6350002289,
+    "low": 9.3999996185,
+    "close": 9.5900001526,
+    "volume": 2697624.0,
+    "wedge_status": "none"
   }
 ]

@@ -7448,5 +7448,75 @@
     "close": 5.5500001907,
     "volume": 259270.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "AIRJ",
+    "open": 5.4800000191,
+    "high": 5.5050001144,
+    "low": 5.0599999428,
+    "close": 5.0900001526,
+    "volume": 301331.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "AIRJ",
+    "open": 5.0700001717,
+    "high": 5.1900000572,
+    "low": 4.8800001144,
+    "close": 5.1900000572,
+    "volume": 231495.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "AIRJ",
+    "open": 5.1900000572,
+    "high": 5.4400000572,
+    "low": 5.1900000572,
+    "close": 5.2800002098,
+    "volume": 90731.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "AIRJ",
+    "open": 5.3200001717,
+    "high": 5.4099998474,
+    "low": 5.2491002083,
+    "close": 5.3499999046,
+    "volume": 132045.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "AIRJ",
+    "open": 5.3699998856,
+    "high": 5.4149999619,
+    "low": 5.1599998474,
+    "close": 5.25,
+    "volume": 90402.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "AIRJ",
+    "open": 5.25,
+    "high": 5.3499999046,
+    "low": 5.1799998283,
+    "close": 5.3200001717,
+    "volume": 91200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "AIRJ",
+    "open": 5.3200001717,
+    "high": 5.4099998474,
+    "low": 5.1209998131,
+    "close": 5.1599998474,
+    "volume": 130372.0,
+    "wedge_status": "drop"
   }
 ]

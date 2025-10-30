@@ -7498,5 +7498,25 @@
     "close": 81.1200027466,
     "volume": 1023279.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "TRMB",
+    "open": 81.1243972778,
+    "high": 81.6200027466,
+    "low": 80.3450012207,
+    "close": 80.5,
+    "volume": 1460580.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "TRMB",
+    "open": 80.25,
+    "high": 80.9250030518,
+    "low": 78.8199996948,
+    "close": 79.3899993896,
+    "volume": 1402006.0,
+    "wedge_status": "drop"
   }
 ]

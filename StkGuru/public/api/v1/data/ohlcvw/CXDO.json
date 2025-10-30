@@ -7448,5 +7448,75 @@
     "close": 6.1300001144,
     "volume": 51923.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "CXDO",
+    "open": 6.1300001144,
+    "high": 6.289899826,
+    "low": 6.0399999619,
+    "close": 6.1999998093,
+    "volume": 39555.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "CXDO",
+    "open": 6.1999998093,
+    "high": 6.2600002289,
+    "low": 6.0,
+    "close": 6.2600002289,
+    "volume": 107189.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "CXDO",
+    "open": 6.2000999451,
+    "high": 6.3550000191,
+    "low": 6.2000999451,
+    "close": 6.3499999046,
+    "volume": 46314.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "CXDO",
+    "open": 6.4000000954,
+    "high": 6.4949998856,
+    "low": 6.3800001144,
+    "close": 6.4000000954,
+    "volume": 49519.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "CXDO",
+    "open": 6.4699997902,
+    "high": 6.4949998856,
+    "low": 6.293200016,
+    "close": 6.3400001526,
+    "volume": 51167.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "CXDO",
+    "open": 6.3299999237,
+    "high": 6.4899997711,
+    "low": 6.2600002289,
+    "close": 6.4099998474,
+    "volume": 56800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "CXDO",
+    "open": 6.3800001144,
+    "high": 6.5199999809,
+    "low": 6.1799998283,
+    "close": 6.25,
+    "volume": 88092.0,
+    "wedge_status": "none"
   }
 ]

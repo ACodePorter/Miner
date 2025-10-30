@@ -7448,5 +7448,75 @@
     "close": 41.1599998474,
     "volume": 5156.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "FCAP",
+    "open": 42.1646995544,
+    "high": 42.1646995544,
+    "low": 40.75,
+    "close": 40.75,
+    "volume": 5328.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "FCAP",
+    "open": 41.2150001526,
+    "high": 42.1300010681,
+    "low": 41.2150001526,
+    "close": 42.1300010681,
+    "volume": 2861.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "FCAP",
+    "open": 43.7426986694,
+    "high": 43.7426986694,
+    "low": 42.7599983215,
+    "close": 42.7599983215,
+    "volume": 2811.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "FCAP",
+    "open": 43.0900001526,
+    "high": 43.0900001526,
+    "low": 42.0,
+    "close": 42.9199981689,
+    "volume": 6341.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "FCAP",
+    "open": 42.0600013733,
+    "high": 42.0600013733,
+    "low": 42.0499992371,
+    "close": 42.0499992371,
+    "volume": 1713.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "FCAP",
+    "open": 42.0,
+    "high": 42.5,
+    "low": 41.6300010681,
+    "close": 42.5,
+    "volume": 4500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "FCAP",
+    "open": 42.2599983215,
+    "high": 42.4975013733,
+    "low": 42.0993003845,
+    "close": 42.25,
+    "volume": 4635.0,
+    "wedge_status": "none"
   }
 ]

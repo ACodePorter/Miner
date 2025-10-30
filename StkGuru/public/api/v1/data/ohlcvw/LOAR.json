@@ -3328,5 +3328,35 @@
     "close": 81.6900024414,
     "volume": 324582.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "LOAR",
+    "open": 82.4199981689,
+    "high": 82.4700012207,
+    "low": 80.0,
+    "close": 80.5,
+    "volume": 526625.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "LOAR",
+    "open": 81.0999984741,
+    "high": 81.1699981689,
+    "low": 79.5899963379,
+    "close": 80.0,
+    "volume": 308500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "LOAR",
+    "open": 80.0199966431,
+    "high": 80.5299987793,
+    "low": 78.8199996948,
+    "close": 79.9199981689,
+    "volume": 255221.0,
+    "wedge_status": "none"
   }
 ]

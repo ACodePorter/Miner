@@ -7488,5 +7488,35 @@
     "close": 156.2899932861,
     "volume": 816510.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "FIVE",
+    "open": 163.5,
+    "high": 168.8500061035,
+    "low": 159.3999938965,
+    "close": 160.25,
+    "volume": 1016705.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "FIVE",
+    "open": 160.0500030518,
+    "high": 164.9799957275,
+    "low": 156.5,
+    "close": 160.6699981689,
+    "volume": 1085716.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "FIVE",
+    "open": 160.0,
+    "high": 162.6300048828,
+    "low": 159.4745025635,
+    "close": 161.5700073242,
+    "volume": 1006642.0,
+    "wedge_status": "none"
   }
 ]

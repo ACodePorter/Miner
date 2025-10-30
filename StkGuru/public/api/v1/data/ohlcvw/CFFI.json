@@ -7448,5 +7448,75 @@
     "close": 69.3899993896,
     "volume": 2450.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "CFFI",
+    "open": 69.3199996948,
+    "high": 69.4000015259,
+    "low": 68.7099990845,
+    "close": 69.3499984741,
+    "volume": 2286.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "CFFI",
+    "open": 69.0,
+    "high": 70.0,
+    "low": 68.9700012207,
+    "close": 69.5,
+    "volume": 5716.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "CFFI",
+    "open": 67.9899978638,
+    "high": 68.3700027466,
+    "low": 67.0899963379,
+    "close": 67.1999969482,
+    "volume": 6475.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "CFFI",
+    "open": 68.5,
+    "high": 68.9199981689,
+    "low": 68.5,
+    "close": 68.9199981689,
+    "volume": 2889.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "CFFI",
+    "open": 68.5899963379,
+    "high": 68.5899963379,
+    "low": 68.5,
+    "close": 68.5,
+    "volume": 3276.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "CFFI",
+    "open": 68.5199966431,
+    "high": 68.9300003052,
+    "low": 68.5199966431,
+    "close": 68.9300003052,
+    "volume": 3400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "CFFI",
+    "open": 69.0999984741,
+    "high": 70.0,
+    "low": 69.0999984741,
+    "close": 69.3600006104,
+    "volume": 4807.0,
+    "wedge_status": "none"
   }
 ]

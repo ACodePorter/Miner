@@ -7498,5 +7498,25 @@
     "close": 125.0100021362,
     "volume": 2613776.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "PAYX",
+    "open": 124.5,
+    "high": 124.7249984741,
+    "low": 123.0199966431,
+    "close": 124.0500030518,
+    "volume": 2763431.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "PAYX",
+    "open": 122.3499984741,
+    "high": 122.5,
+    "low": 117.0,
+    "close": 117.4000015259,
+    "volume": 4732494.0,
+    "wedge_status": "none"
   }
 ]

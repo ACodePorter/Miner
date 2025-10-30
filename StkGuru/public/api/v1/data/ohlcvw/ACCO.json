@@ -7448,5 +7448,75 @@
     "close": 3.9200000763,
     "volume": 445912.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "ACCO",
+    "open": 3.9300000668,
+    "high": 4.0,
+    "low": 3.9100000858,
+    "close": 3.9900000095,
+    "volume": 458986.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "ACCO",
+    "open": 3.9800000191,
+    "high": 4.0355000496,
+    "low": 3.9700000286,
+    "close": 4.0199999809,
+    "volume": 388365.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "ACCO",
+    "open": 4.0399999619,
+    "high": 4.1300001144,
+    "low": 4.0300002098,
+    "close": 4.0799999237,
+    "volume": 450533.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "ACCO",
+    "open": 4.1399998665,
+    "high": 4.1750001907,
+    "low": 4.11439991,
+    "close": 4.1399998665,
+    "volume": 338104.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "ACCO",
+    "open": 4.1799998283,
+    "high": 4.1799998283,
+    "low": 4.0500001907,
+    "close": 4.0700001717,
+    "volume": 418900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "ACCO",
+    "open": 4.0199999809,
+    "high": 4.0900001526,
+    "low": 4.0,
+    "close": 4.0700001717,
+    "volume": 427300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "ACCO",
+    "open": 4.0399999619,
+    "high": 4.0682001114,
+    "low": 3.875,
+    "close": 3.9100000858,
+    "volume": 597085.0,
+    "wedge_status": "none"
   }
 ]
