@@ -428,4 +428,7 @@ Miniconda3.sh
 *.csv
 nohup.out
 
-*.png
+*.pn
+
+.cursor
+.specify

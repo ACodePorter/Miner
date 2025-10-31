@@ -126,8 +126,12 @@ class MarketDataShvelTestCase(unittest.TestCase):
 
     def test_fetch_intraday_bars(self):
         md: MarketDataShovel = MarketDataShovel.get_instance()
-        df = md.fetch_intraday_bars(
-            ['AAPL', 'GOOGL', 'MSFT'], period='1d', interval='5m')
+        df = md.fetch_bars(
+            ['AAPL', 'GOOGL', 'MSFT'], period='1d', interval='30m')
+        print(df)
+        df = md.fetch_bars(
+            ['AAPL', 'GOOGL', 'MSFT'], period='2d', interval='1d')
+        print(df)
         self.assertTrue(len(df) == 234)
 
     def test_update_intraday_bars(self):

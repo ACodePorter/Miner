@@ -55,6 +55,15 @@ if [ ! -z "$MINER_ENV" ] && [ -f "$MINER_ENV" ]; then
     set +o allexport
 fi
 
+echo "Github Token: $GITHUB_TOKEN"
+echo "Runtime Env: $RUNTIME_ENV"
+echo "Git user name: $GIT_USER_NAME"
+echo "Git user email: $GIT_USER_EMAIL"
+echo "Mail sender: $MAIL_SENDER"
+echo "Mail sender pwd: $MAIL_SENDER_PWD"
+echo "Mail receivers: $MAIL_RECEIVERS"
+echo "Miner root: $MINER_ROOT"
+echo ""
 # Validate required environment variables
 echo "🔍 Validating required environment variables..."
 REQUIRED_VARS=(
@@ -101,6 +110,9 @@ if [ "$ARCH" = "arm64" ] || [ "$ARCH" = "aarch64" ]; then
 else
     MINICONDA_URL="https://repo.anaconda.com/miniconda/Miniconda3-py312_24.11.1-0-Linux-x86_64.sh"
 fi
+
+# For use x86_86 
+MINICONDA_URL="https://repo.anaconda.com/miniconda/Miniconda3-py312_24.11.1-0-Linux-x86_64.sh"
 
 wget -nv -c "$MINICONDA_URL" -O $MY_DIR/base/bin/Miniconda3.sh
 

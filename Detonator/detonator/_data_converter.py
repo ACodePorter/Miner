@@ -53,6 +53,8 @@ def mongo_2_df(querySet: QuerySet) -> DataFrame:
     return DataFrame(list(querySet.as_pymongo()))
 
 
+# TODO: refactory the resamping functions as one
+
 def _resample_ohlcv_session(bars: DataFrame, rule: Any) -> DataFrame:
     '''
     resample ohlcv, the column must include open/high/low/close/volume/timestamp
@@ -109,3 +111,66 @@ def resample_ohlcv(bars: DataFrame, rule) -> DataFrame:
         .dropna(how="all")
     )
     return bars
+
+
+def resample_ohlcv_calendar(bars: DataFrame, freq: str) -> DataFrame:
+    """
+    Resample daily OHLCV bars to calendar-based periods like weekly ('W') or monthly ('M').
+
+    Requirements:
+    - Columns must include: 'open', 'high', 'low', 'close', 'volume'.
+    - If index is not a Datetime-like index, a 'timestamp' column must exist.
+
+    Aggregation:
+    - open: first
+    - high: max
+    - low: min
+    - close: last
+    - volume: sum
+
+    Examples:
+    - freq='W' for weekly (period ends on Sunday by pandas default; for markets, 'W-FRI' or 'W-MON' might be preferred)
+    - freq='M' for month-end; 'MS' for month-start
+    - freq='Q' for quarter-end
+    - freq='Y' or 'A' for year-end
+    """
+    if bars is None or bars.empty:
+        _logger.warning('Empty DataFrame not saved!')
+        return DataFrame()
+
+    required_columns = ['open', 'high', 'low', 'close', 'volume']
+
+    # Ensure datetime index
+    if type(bars.index) not in [DatetimeIndex, PeriodIndex, TimedeltaIndex]:
+        if 'timestamp' not in bars.columns:
+            _logger.warning('timestamp and columns %s not exist in DataFrame!', required_columns)
+            return DataFrame()
+        bars = bars.set_index('timestamp', drop=False)
+
+    # Validate required columns
+    if not all(col in bars.columns for col in required_columns):
+        _logger.warning('Columns %s not exist in DataFrame!', required_columns)
+        return DataFrame()
+
+    agg = {
+        'open': 'first',
+        'high': 'max',
+        'low': 'min',
+        'close': 'last',
+        'volume': 'sum',
+    }
+    if 'ticker' in bars.columns:
+        agg['ticker'] = 'first'
+
+    try:
+        out = (
+            bars
+            .sort_index()
+            .resample(freq, label='left', closed='left')
+            .agg(agg)
+            .dropna(how='all')
+        )
+        return out
+    except Exception as exc:  # pragma: no cover
+        _logger.exception('Failed to resample OHLCV to %s: %s', freq, exc)
+        return DataFrame()

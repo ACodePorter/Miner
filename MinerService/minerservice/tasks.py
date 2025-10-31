@@ -176,7 +176,13 @@ def update_indicators_for_tickers_task(tickers: List[str]) -> bool:
     return indicators.update_indicators_for_tickers(tickers)
 
 
-@app.task
+@app.task(
+    autoretry_for=(Exception,),
+    retry_kwargs={'max_retries': 3, 'countdown': 3},
+    retry_backoff=True,
+    retry_backoff_max=600,
+    retry_jitter=True,
+)
 def update_wedge_pop_for_index_task() -> bool:
     _logger.debug('update_wedge_pop_for_index_task')
     wedge_pop: WedgePop = WedgePop.get_instance()

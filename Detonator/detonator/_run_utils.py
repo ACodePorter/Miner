@@ -26,7 +26,7 @@ def sleep(mi: float = 1, ma: float = 6):
         time.sleep(mi + (ma - mi) * r)
 
 
-def run_parallel(func: Callable[[Any], Any], args: List[Any], num_workers: int = os.cpu_count() or 4) -> List[Any]:
+def run_parallel(func: Callable[[Any], Any], args: List[Any], num_workers: int = os.cpu_count() + 1 or 4) -> List[Any]:
     if is_in_daemon():
         with ThreadPoolExecutor(max_workers=num_workers) as executor:
             result: List[Any] = list(executor.map(func, args))

@@ -2,9 +2,12 @@ ARG BASE_IMAGE=miner-base:latest
 FROM ${BASE_IMAGE}
 
 USER root
-# Install Chromium instead of Google Chrome for ARM64 compatibility
+
+RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /usr/share/keyrings/google-chrome.gpg && \
+    echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
+
 RUN apt-get update && \
-    apt-get install -y chromium-browser --no-install-recommends \
+    apt-get install -y google-chrome-stable --no-install-recommends \
     libx11-6 libx11-xcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 \
     libxfixes3 libxi6 libxrandr2 libxrender1 libxtst6 libglib2.0-0 libnss3 \
     libasound2t64 x11-apps xvfb && \

@@ -139,6 +139,7 @@ Dependencies are installed automatically during deployment using `uv` for speed.
 ## TODO
 
 - [ ] **Unify date time handling: format/storage**
+- [ ] improve performance of ticker daily info update by tickers grouped by `trade_date` and `yf.Tickers`
 - [X] Remove Tushare related docs/codes/comments (no longer used)
 - [ ] Add MCP server for stock market data
 - [ ] Add SEC EDGAR data

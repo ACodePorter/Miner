@@ -3,6 +3,7 @@ from typing import Dict, List, Literal, Optional
 
 import numpy as np
 from detonator import SingletonParent, get_logger
+from detonator.types import IntradayInterval
 from pandas import DataFrame
 
 from ._market_data_shovel import MarketDataShovel
@@ -16,7 +17,7 @@ class VegasTunnel(SingletonParent):
         self.logger = get_logger('VegasTunnel', logging.DEBUG)
 
     def _prepare_data(self, tickers: str | List[str],
-                      intervals: Literal['5m', '10m', '15m', '30m', '65m'] | List[str] = '65m') -> Dict[
+                      intervals: IntradayInterval = '65m') -> Dict[
             str, Dict[str, DataFrame]]:
         if isinstance(tickers, str):
             tickers = [tickers]
