@@ -7438,5 +7438,85 @@
     "close": 8.2299995422,
     "volume": 42468.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "SNFCA",
+    "open": 7.9600000381,
+    "high": 8.25,
+    "low": 7.9099998474,
+    "close": 8.1800003052,
+    "volume": 12629.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "SNFCA",
+    "open": 8.1499996185,
+    "high": 8.3400001526,
+    "low": 8.0157003403,
+    "close": 8.3299999237,
+    "volume": 31361.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "SNFCA",
+    "open": 8.4200000763,
+    "high": 8.4200000763,
+    "low": 8.25,
+    "close": 8.3000001907,
+    "volume": 9152.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "SNFCA",
+    "open": 8.3000001907,
+    "high": 8.4300003052,
+    "low": 8.1499996185,
+    "close": 8.3199996948,
+    "volume": 21500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "SNFCA",
+    "open": 8.3599996567,
+    "high": 8.529999733,
+    "low": 8.2600002289,
+    "close": 8.279999733,
+    "volume": 14038.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "SNFCA",
+    "open": 8.2399997711,
+    "high": 8.3800001144,
+    "low": 8.2299995422,
+    "close": 8.2600002289,
+    "volume": 24600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "SNFCA",
+    "open": 8.279999733,
+    "high": 8.3199996948,
+    "low": 7.9699997902,
+    "close": 8.029999733,
+    "volume": 21835.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "SNFCA",
+    "open": 8.0399999619,
+    "high": 8.1400003433,
+    "low": 8.0200004578,
+    "close": 8.0200004578,
+    "volume": 10587.0,
+    "wedge_status": "none"
   }
 ]

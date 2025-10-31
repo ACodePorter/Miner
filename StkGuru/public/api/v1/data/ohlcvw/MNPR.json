@@ -7438,5 +7438,85 @@
     "close": 77.1500015259,
     "volume": 37284.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "MNPR",
+    "open": 76.9000015259,
+    "high": 78.5899963379,
+    "low": 76.6299972534,
+    "close": 77.6500015259,
+    "volume": 43046.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "MNPR",
+    "open": 75.0699996948,
+    "high": 81.2099990845,
+    "low": 72.0,
+    "close": 79.2900009155,
+    "volume": 89123.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "MNPR",
+    "open": 75.0,
+    "high": 82.2677993774,
+    "low": 75.0,
+    "close": 81.2900009155,
+    "volume": 63436.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "MNPR",
+    "open": 81.3499984741,
+    "high": 84.25,
+    "low": 79.1299972534,
+    "close": 81.5699996948,
+    "volume": 51800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "MNPR",
+    "open": 82.0,
+    "high": 87.0,
+    "low": 79.7276992798,
+    "close": 81.2399978638,
+    "volume": 151254.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "MNPR",
+    "open": 79.2300033569,
+    "high": 82.7350006104,
+    "low": 77.0,
+    "close": 79.9199981689,
+    "volume": 183600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "MNPR",
+    "open": 79.4000015259,
+    "high": 85.9400024414,
+    "low": 77.0100021362,
+    "close": 84.1549987793,
+    "volume": 127719.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "MNPR",
+    "open": 83.8300018311,
+    "high": 89.3199996948,
+    "low": 83.8300018311,
+    "close": 85.6699981689,
+    "volume": 118757.0,
+    "wedge_status": "none"
   }
 ]

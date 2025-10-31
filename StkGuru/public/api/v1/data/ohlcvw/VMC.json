@@ -7508,5 +7508,15 @@
     "close": 294.9700012207,
     "volume": 1078985.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "VMC",
+    "open": 285.5,
+    "high": 290.4450073242,
+    "low": 279.075012207,
+    "close": 290.0,
+    "volume": 2326951.0,
+    "wedge_status": "drop"
   }
 ]

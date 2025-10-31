@@ -7438,5 +7438,85 @@
     "close": 2.0,
     "volume": 881294.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "NXDR",
+    "open": 2.0,
+    "high": 2.0199999809,
+    "low": 1.9800000191,
+    "close": 2.0099999905,
+    "volume": 710153.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "NXDR",
+    "open": 1.9900000095,
+    "high": 2.0,
+    "low": 1.9199999571,
+    "close": 1.9700000286,
+    "volume": 1159264.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "NXDR",
+    "open": 1.9700000286,
+    "high": 2.0,
+    "low": 1.9500000477,
+    "close": 1.9600000381,
+    "volume": 648407.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "NXDR",
+    "open": 1.9900000095,
+    "high": 2.0299999714,
+    "low": 1.9880000353,
+    "close": 2.0099999905,
+    "volume": 983300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "NXDR",
+    "open": 2.0299999714,
+    "high": 2.0399999619,
+    "low": 1.9800000191,
+    "close": 1.9900000095,
+    "volume": 679821.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "NXDR",
+    "open": 1.9900000095,
+    "high": 2.0,
+    "low": 1.9600000381,
+    "close": 1.9700000286,
+    "volume": 726100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "NXDR",
+    "open": 1.9700000286,
+    "high": 2.0,
+    "low": 1.9199999571,
+    "close": 1.9400000572,
+    "volume": 1045654.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "NXDR",
+    "open": 1.9199999571,
+    "high": 1.9257999659,
+    "low": 1.8700000048,
+    "close": 1.9099999666,
+    "volume": 1179633.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 11.7299995422,
     "volume": 1159764.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "EYPT",
+    "open": 11.5500001907,
+    "high": 12.25,
+    "low": 11.5500001907,
+    "close": 12.2100000381,
+    "volume": 1531846.0,
+    "wedge_status": "none"
   }
 ]

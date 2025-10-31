@@ -7438,5 +7438,85 @@
     "close": 4.6599998474,
     "volume": 798165.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "SGHT",
+    "open": 4.6500000954,
+    "high": 5.1898999214,
+    "low": 4.5,
+    "close": 5.1599998474,
+    "volume": 261288.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "SGHT",
+    "open": 5.1599998474,
+    "high": 5.3192000389,
+    "low": 4.8800001144,
+    "close": 5.1300001144,
+    "volume": 236569.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "SGHT",
+    "open": 5.1399998665,
+    "high": 5.25,
+    "low": 5.1005997658,
+    "close": 5.2100000381,
+    "volume": 88866.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "SGHT",
+    "open": 5.2399997711,
+    "high": 5.3099999428,
+    "low": 5.0999999046,
+    "close": 5.2800002098,
+    "volume": 73600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "SGHT",
+    "open": 5.2800002098,
+    "high": 5.2800002098,
+    "low": 5.0700001717,
+    "close": 5.1700000763,
+    "volume": 118129.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "SGHT",
+    "open": 5.1399998665,
+    "high": 5.1999998093,
+    "low": 4.8699998856,
+    "close": 5.1700000763,
+    "volume": 103200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "SGHT",
+    "open": 5.1399998665,
+    "high": 5.25,
+    "low": 4.9499998093,
+    "close": 5.0399999619,
+    "volume": 67258.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "SGHT",
+    "open": 4.9299998283,
+    "high": 5.1199998856,
+    "low": 4.9149999619,
+    "close": 5.0799999237,
+    "volume": 48123.0,
+    "wedge_status": "none"
   }
 ]

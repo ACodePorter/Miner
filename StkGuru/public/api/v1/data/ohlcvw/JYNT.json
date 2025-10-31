@@ -7438,5 +7438,85 @@
     "close": 8.529999733,
     "volume": 110567.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "JYNT",
+    "open": 8.3199996948,
+    "high": 8.7550001144,
+    "low": 8.3199996948,
+    "close": 8.7100000381,
+    "volume": 67327.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "JYNT",
+    "open": 8.6400003433,
+    "high": 8.6949996948,
+    "low": 8.4499998093,
+    "close": 8.5,
+    "volume": 85263.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "JYNT",
+    "open": 8.5,
+    "high": 8.5,
+    "low": 8.1999998093,
+    "close": 8.2299995422,
+    "volume": 63637.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "JYNT",
+    "open": 8.2899999619,
+    "high": 8.4149999619,
+    "low": 8.2498998642,
+    "close": 8.3999996185,
+    "volume": 59746.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "JYNT",
+    "open": 8.4099998474,
+    "high": 8.4099998474,
+    "low": 8.2700004578,
+    "close": 8.3699998856,
+    "volume": 62500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "JYNT",
+    "open": 8.3400001526,
+    "high": 8.3400001526,
+    "low": 8.1199998856,
+    "close": 8.3000001907,
+    "volume": 62300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "JYNT",
+    "open": 8.3000001907,
+    "high": 8.3000001907,
+    "low": 8.0150003433,
+    "close": 8.1400003433,
+    "volume": 50556.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "JYNT",
+    "open": 8.0799999237,
+    "high": 8.1099996567,
+    "low": 7.7800002098,
+    "close": 7.8899998665,
+    "volume": 65401.0,
+    "wedge_status": "none"
   }
 ]

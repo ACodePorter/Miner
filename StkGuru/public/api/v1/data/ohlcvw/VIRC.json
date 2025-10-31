@@ -7438,5 +7438,85 @@
     "close": 7.4000000954,
     "volume": 83083.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "VIRC",
+    "open": 7.4000000954,
+    "high": 7.5907001495,
+    "low": 7.3800001144,
+    "close": 7.4000000954,
+    "volume": 65841.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "VIRC",
+    "open": 7.4000000954,
+    "high": 7.5,
+    "low": 7.3099999428,
+    "close": 7.3899998665,
+    "volume": 54440.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "VIRC",
+    "open": 7.3800001144,
+    "high": 7.4699997902,
+    "low": 7.3600001335,
+    "close": 7.4499998093,
+    "volume": 34575.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "VIRC",
+    "open": 7.5399999619,
+    "high": 7.6100001335,
+    "low": 7.3699998856,
+    "close": 7.4699997902,
+    "volume": 35300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "VIRC",
+    "open": 7.5399999619,
+    "high": 7.5500001907,
+    "low": 7.4000000954,
+    "close": 7.4000000954,
+    "volume": 47300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "VIRC",
+    "open": 7.4000000954,
+    "high": 7.5,
+    "low": 7.3600001335,
+    "close": 7.4000000954,
+    "volume": 40400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "VIRC",
+    "open": 7.4000000954,
+    "high": 7.4000000954,
+    "low": 7.1399998665,
+    "close": 7.2300000191,
+    "volume": 83661.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "VIRC",
+    "open": 7.2300000191,
+    "high": 7.4000000954,
+    "low": 7.0799999237,
+    "close": 7.2600002289,
+    "volume": 70169.0,
+    "wedge_status": "none"
   }
 ]

@@ -7438,5 +7438,85 @@
     "close": 61.1800003052,
     "volume": 37736.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "JBSS",
+    "open": 61.1500015259,
+    "high": 61.3925018311,
+    "low": 60.5999984741,
+    "close": 60.5999984741,
+    "volume": 40310.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "JBSS",
+    "open": 61.0,
+    "high": 62.2050018311,
+    "low": 60.3499984741,
+    "close": 61.8899993896,
+    "volume": 59612.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "JBSS",
+    "open": 61.4199981689,
+    "high": 61.599899292,
+    "low": 60.9700012207,
+    "close": 61.3100013733,
+    "volume": 57920.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "JBSS",
+    "open": 62.4399986267,
+    "high": 62.4399986267,
+    "low": 60.5299987793,
+    "close": 60.6899986267,
+    "volume": 71235.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "JBSS",
+    "open": 61.0,
+    "high": 61.0,
+    "low": 60.0,
+    "close": 60.7400016785,
+    "volume": 71105.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "JBSS",
+    "open": 60.5800018311,
+    "high": 61.3699989319,
+    "low": 60.1300010681,
+    "close": 60.1899986267,
+    "volume": 86100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "JBSS",
+    "open": 60.2299995422,
+    "high": 61.4887008667,
+    "low": 59.0699996948,
+    "close": 59.5,
+    "volume": 119302.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "JBSS",
+    "open": 65.7300033569,
+    "high": 69.9700012207,
+    "low": 65.0,
+    "close": 68.5800018311,
+    "volume": 297216.0,
+    "wedge_status": "none"
   }
 ]

@@ -7438,5 +7438,85 @@
     "close": 8.7899999619,
     "volume": 5906891.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "NVAX",
+    "open": 8.7100000381,
+    "high": 8.7749996185,
+    "low": 8.5600004196,
+    "close": 8.5900001526,
+    "volume": 3011000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "NVAX",
+    "open": 8.4079999924,
+    "high": 8.5500001907,
+    "low": 8.1899995804,
+    "close": 8.4600000381,
+    "volume": 3897360.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "NVAX",
+    "open": 8.5200004578,
+    "high": 8.5200004578,
+    "low": 8.2399997711,
+    "close": 8.3599996567,
+    "volume": 2932789.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "NVAX",
+    "open": 8.5900001526,
+    "high": 8.6499996185,
+    "low": 8.4300003052,
+    "close": 8.5200004578,
+    "volume": 2754600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "NVAX",
+    "open": 8.6000003815,
+    "high": 8.7534999847,
+    "low": 8.5200004578,
+    "close": 8.6999998093,
+    "volume": 2661827.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "NVAX",
+    "open": 8.75,
+    "high": 8.75,
+    "low": 8.3999996185,
+    "close": 8.5200004578,
+    "volume": 2094200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "NVAX",
+    "open": 8.5,
+    "high": 8.5799999237,
+    "low": 8.279999733,
+    "close": 8.3800001144,
+    "volume": 2638192.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "NVAX",
+    "open": 8.3000001907,
+    "high": 8.6599998474,
+    "low": 8.25,
+    "close": 8.4300003052,
+    "volume": 2972699.0,
+    "wedge_status": "none"
   }
 ]

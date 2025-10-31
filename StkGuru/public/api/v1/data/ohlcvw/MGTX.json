@@ -7438,5 +7438,85 @@
     "close": 8.2399997711,
     "volume": 346589.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "MGTX",
+    "open": 8.6499996185,
+    "high": 9.4056997299,
+    "low": 8.6483001709,
+    "close": 9.2600002289,
+    "volume": 1081641.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "MGTX",
+    "open": 9.2600002289,
+    "high": 9.4377002716,
+    "low": 8.4300003052,
+    "close": 8.7399997711,
+    "volume": 506519.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "MGTX",
+    "open": 8.7899999619,
+    "high": 8.9200000763,
+    "low": 8.4205999374,
+    "close": 8.75,
+    "volume": 370355.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "MGTX",
+    "open": 8.8900003433,
+    "high": 9.1700000763,
+    "low": 8.6000003815,
+    "close": 8.720000267,
+    "volume": 407500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "MGTX",
+    "open": 8.75,
+    "high": 8.9799995422,
+    "low": 8.6099996567,
+    "close": 8.8699998856,
+    "volume": 236025.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "MGTX",
+    "open": 8.8800001144,
+    "high": 9.4969997406,
+    "low": 8.75,
+    "close": 9.2600002289,
+    "volume": 503700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "MGTX",
+    "open": 9.2700004578,
+    "high": 9.3800001144,
+    "low": 8.8100004196,
+    "close": 8.9300003052,
+    "volume": 269092.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "MGTX",
+    "open": 8.9200000763,
+    "high": 9.2399997711,
+    "low": 8.7100000381,
+    "close": 8.7299995422,
+    "volume": 216921.0,
+    "wedge_status": "none"
   }
 ]

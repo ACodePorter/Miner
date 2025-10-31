@@ -7438,5 +7438,85 @@
     "close": 1.5399999619,
     "volume": 938183.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "IRWD",
+    "open": 1.5299999714,
+    "high": 1.5800000429,
+    "low": 1.5,
+    "close": 1.5599999428,
+    "volume": 599501.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "IRWD",
+    "open": 1.5599999428,
+    "high": 1.5900000334,
+    "low": 1.5,
+    "close": 1.5700000525,
+    "volume": 870919.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "IRWD",
+    "open": 1.5499999523,
+    "high": 1.6499999762,
+    "low": 1.5199999809,
+    "close": 1.6299999952,
+    "volume": 631153.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "IRWD",
+    "open": 1.6499999762,
+    "high": 1.6699999571,
+    "low": 1.6000000238,
+    "close": 1.6599999666,
+    "volume": 522693.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "IRWD",
+    "open": 1.6799999475,
+    "high": 1.7699999809,
+    "low": 1.6299999952,
+    "close": 1.6299999952,
+    "volume": 881645.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "IRWD",
+    "open": 1.6200000048,
+    "high": 1.6399999857,
+    "low": 1.5199999809,
+    "close": 1.5399999619,
+    "volume": 1083800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "IRWD",
+    "open": 1.5199999809,
+    "high": 1.6499999762,
+    "low": 1.5001000166,
+    "close": 1.5099999905,
+    "volume": 931865.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "IRWD",
+    "open": 1.5,
+    "high": 1.5800000429,
+    "low": 1.4704999924,
+    "close": 1.5,
+    "volume": 1099126.0,
+    "wedge_status": "none"
   }
 ]

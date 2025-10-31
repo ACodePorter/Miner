@@ -5968,5 +5968,85 @@
     "close": 8.0200004578,
     "volume": 152721.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "HSHP",
+    "open": 8.0,
+    "high": 8.0500001907,
+    "low": 7.881000042,
+    "close": 7.9099998474,
+    "volume": 91241.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "HSHP",
+    "open": 7.9000000954,
+    "high": 8.0100002289,
+    "low": 7.8186998367,
+    "close": 8.0100002289,
+    "volume": 68967.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "HSHP",
+    "open": 8.0500001907,
+    "high": 8.1000003815,
+    "low": 8.0100002289,
+    "close": 8.0600004196,
+    "volume": 55869.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "HSHP",
+    "open": 8.0500001907,
+    "high": 8.1000003815,
+    "low": 7.9000000954,
+    "close": 7.9699997902,
+    "volume": 74399.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "HSHP",
+    "open": 8.0,
+    "high": 8.0399999619,
+    "low": 7.8800001144,
+    "close": 7.9000000954,
+    "volume": 124395.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "HSHP",
+    "open": 7.9499998093,
+    "high": 8.1099996567,
+    "low": 7.9499998093,
+    "close": 8.0900001526,
+    "volume": 57200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "HSHP",
+    "open": 7.8899998665,
+    "high": 7.9370999336,
+    "low": 7.6950001717,
+    "close": 7.7199997902,
+    "volume": 282199.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "HSHP",
+    "open": 7.75,
+    "high": 7.7699999809,
+    "low": 7.6700000763,
+    "close": 7.6999998093,
+    "volume": 59546.0,
+    "wedge_status": "none"
   }
 ]

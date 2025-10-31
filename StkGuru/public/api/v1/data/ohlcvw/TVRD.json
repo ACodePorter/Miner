@@ -7438,5 +7438,85 @@
     "close": 6.1700000763,
     "volume": 437690.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "TVRD",
+    "open": 6.0900001526,
+    "high": 6.1300001144,
+    "low": 5.5700001717,
+    "close": 5.7100000381,
+    "volume": 488456.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "TVRD",
+    "open": 5.75,
+    "high": 5.9000000954,
+    "low": 5.1201000214,
+    "close": 5.2300000191,
+    "volume": 493240.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "TVRD",
+    "open": 5.25,
+    "high": 5.3499999046,
+    "low": 4.9099998474,
+    "close": 5.1599998474,
+    "volume": 487461.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "TVRD",
+    "open": 5.1599998474,
+    "high": 5.1599998474,
+    "low": 4.9000000954,
+    "close": 4.9699997902,
+    "volume": 259700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "TVRD",
+    "open": 4.9600000381,
+    "high": 4.9994997978,
+    "low": 4.4800000191,
+    "close": 4.8699998856,
+    "volume": 488801.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "TVRD",
+    "open": 4.8200001717,
+    "high": 4.9479999542,
+    "low": 4.6599998474,
+    "close": 4.7199997902,
+    "volume": 319700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "TVRD",
+    "open": 4.7899999619,
+    "high": 4.9050002098,
+    "low": 4.6300001144,
+    "close": 4.7800002098,
+    "volume": 220943.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "TVRD",
+    "open": 4.75,
+    "high": 5.0,
+    "low": 4.6300997734,
+    "close": 4.6599998474,
+    "volume": 208391.0,
+    "wedge_status": "none"
   }
 ]

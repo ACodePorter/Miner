@@ -7438,5 +7438,85 @@
     "close": 7.9499998093,
     "volume": 70275.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "INSE",
+    "open": 7.8899998665,
+    "high": 8.0799999237,
+    "low": 7.8442001343,
+    "close": 7.9000000954,
+    "volume": 61747.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "INSE",
+    "open": 7.9000000954,
+    "high": 8.1099996567,
+    "low": 7.8150000572,
+    "close": 7.9899997711,
+    "volume": 92881.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "INSE",
+    "open": 8.029999733,
+    "high": 8.0600004196,
+    "low": 7.8800001144,
+    "close": 7.9800000191,
+    "volume": 85279.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "INSE",
+    "open": 8.8800001144,
+    "high": 8.8800001144,
+    "low": 7.9450001717,
+    "close": 8.0399999619,
+    "volume": 78830.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "INSE",
+    "open": 8.0399999619,
+    "high": 8.1800003052,
+    "low": 7.8899998665,
+    "close": 8.0,
+    "volume": 80833.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "INSE",
+    "open": 8.0,
+    "high": 8.0699996948,
+    "low": 7.8099999428,
+    "close": 7.8600001335,
+    "volume": 61000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "INSE",
+    "open": 7.8499999046,
+    "high": 7.9899997711,
+    "low": 7.6399998665,
+    "close": 7.6799998283,
+    "volume": 127374.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "INSE",
+    "open": 7.6199998856,
+    "high": 7.9243998528,
+    "low": 7.3499999046,
+    "close": 7.3899998665,
+    "volume": 60270.0,
+    "wedge_status": "none"
   }
 ]

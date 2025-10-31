@@ -7438,5 +7438,85 @@
     "close": 8.5799999237,
     "volume": 84208.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "INGN",
+    "open": 8.5399999619,
+    "high": 8.5699996948,
+    "low": 8.4350004196,
+    "close": 8.4899997711,
+    "volume": 155804.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "INGN",
+    "open": 8.5,
+    "high": 9.1300001144,
+    "low": 8.5,
+    "close": 8.8500003815,
+    "volume": 307048.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "INGN",
+    "open": 8.8599996567,
+    "high": 9.1000003815,
+    "low": 8.779999733,
+    "close": 8.9499998093,
+    "volume": 174455.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "INGN",
+    "open": 9.029999733,
+    "high": 9.029999733,
+    "low": 8.720000267,
+    "close": 8.7700004578,
+    "volume": 115660.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "INGN",
+    "open": 8.875,
+    "high": 8.9383001328,
+    "low": 8.595000267,
+    "close": 8.6599998474,
+    "volume": 118038.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "INGN",
+    "open": 8.6199998856,
+    "high": 8.654999733,
+    "low": 8.4300003052,
+    "close": 8.529999733,
+    "volume": 134300.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "INGN",
+    "open": 8.529999733,
+    "high": 8.6899995804,
+    "low": 8.3400001526,
+    "close": 8.4099998474,
+    "volume": 159104.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "INGN",
+    "open": 8.3400001526,
+    "high": 8.5500001907,
+    "low": 8.0699996948,
+    "close": 8.1700000763,
+    "volume": 123394.0,
+    "wedge_status": "none"
   }
 ]

@@ -7438,5 +7438,85 @@
     "close": 9.8699998856,
     "volume": 540397.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "GLUE",
+    "open": 9.8500003815,
+    "high": 9.904999733,
+    "low": 9.5,
+    "close": 9.5900001526,
+    "volume": 449582.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "GLUE",
+    "open": 9.6199998856,
+    "high": 9.6750001907,
+    "low": 8.9430999756,
+    "close": 9.3500003815,
+    "volume": 858952.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "GLUE",
+    "open": 9.5,
+    "high": 10.6499996185,
+    "low": 9.5,
+    "close": 10.3800001144,
+    "volume": 1233169.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "GLUE",
+    "open": 10.3999996185,
+    "high": 11.25,
+    "low": 10.2100000381,
+    "close": 11.1400003433,
+    "volume": 1042904.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "GLUE",
+    "open": 11.3000001907,
+    "high": 12.4300003052,
+    "low": 11.2600002289,
+    "close": 12.3199996948,
+    "volume": 2072025.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "GLUE",
+    "open": 12.25,
+    "high": 12.6899995804,
+    "low": 11.9799995422,
+    "close": 12.4300003052,
+    "volume": 1295000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "GLUE",
+    "open": 12.3861999512,
+    "high": 12.970000267,
+    "low": 12.0699996948,
+    "close": 12.5,
+    "volume": 1288622.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "GLUE",
+    "open": 12.5,
+    "high": 13.0972003937,
+    "low": 12.1999998093,
+    "close": 13.0100002289,
+    "volume": 949612.0,
+    "wedge_status": "none"
   }
 ]

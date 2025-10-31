@@ -7508,5 +7508,15 @@
     "close": 40.9300003052,
     "volume": 15299.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "BSVN",
+    "open": 40.9700012207,
+    "high": 41.875,
+    "low": 40.9700012207,
+    "close": 41.6399993896,
+    "volume": 21549.0,
+    "wedge_status": "none"
   }
 ]

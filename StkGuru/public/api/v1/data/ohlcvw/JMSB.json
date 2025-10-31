@@ -7438,5 +7438,85 @@
     "close": 19.0,
     "volume": 11946.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "JMSB",
+    "open": 19.0,
+    "high": 19.1040000916,
+    "low": 18.8999996185,
+    "close": 19.0,
+    "volume": 5056.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "JMSB",
+    "open": 19.2600002289,
+    "high": 20.0200004578,
+    "low": 19.2600002289,
+    "close": 20.0200004578,
+    "volume": 12159.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "JMSB",
+    "open": 20.0,
+    "high": 20.0,
+    "low": 18.8999996185,
+    "close": 19.0799999237,
+    "volume": 11224.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "JMSB",
+    "open": 19.0599994659,
+    "high": 19.2999992371,
+    "low": 19.0599994659,
+    "close": 19.2999992371,
+    "volume": 4803.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "JMSB",
+    "open": 19.3099994659,
+    "high": 19.5750999451,
+    "low": 19.0636997223,
+    "close": 19.5699996948,
+    "volume": 21332.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "JMSB",
+    "open": 19.5,
+    "high": 19.5,
+    "low": 19.1700000763,
+    "close": 19.1700000763,
+    "volume": 22900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "JMSB",
+    "open": 19.1000003815,
+    "high": 19.4249992371,
+    "low": 18.5,
+    "close": 18.6299991608,
+    "volume": 21360.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "JMSB",
+    "open": 18.9799995422,
+    "high": 19.0,
+    "low": 18.5601005554,
+    "close": 18.5699996948,
+    "volume": 9801.0,
+    "wedge_status": "none"
   }
 ]

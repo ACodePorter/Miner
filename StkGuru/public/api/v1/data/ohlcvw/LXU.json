@@ -7438,5 +7438,85 @@
     "close": 8.529999733,
     "volume": 266793.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "LXU",
+    "open": 8.4600000381,
+    "high": 8.6350002289,
+    "low": 8.3800001144,
+    "close": 8.4499998093,
+    "volume": 301521.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "LXU",
+    "open": 8.470000267,
+    "high": 8.75,
+    "low": 8.4519996643,
+    "close": 8.75,
+    "volume": 342799.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "LXU",
+    "open": 8.9200000763,
+    "high": 9.5,
+    "low": 8.845000267,
+    "close": 9.3599996567,
+    "volume": 510441.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "LXU",
+    "open": 9.5,
+    "high": 9.6499996185,
+    "low": 9.3900003433,
+    "close": 9.5399999619,
+    "volume": 376300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "LXU",
+    "open": 9.5500001907,
+    "high": 9.5699996948,
+    "low": 9.1499996185,
+    "close": 9.3400001526,
+    "volume": 521417.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "LXU",
+    "open": 9.25,
+    "high": 9.3000001907,
+    "low": 9.0500001907,
+    "close": 9.1999998093,
+    "volume": 332300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "LXU",
+    "open": 9.1000003815,
+    "high": 9.2600002289,
+    "low": 8.9200000763,
+    "close": 9.1899995804,
+    "volume": 643729.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "LXU",
+    "open": 9.75,
+    "high": 9.8400001526,
+    "low": 8.2100000381,
+    "close": 8.279999733,
+    "volume": 664046.0,
+    "wedge_status": "drop"
   }
 ]

@@ -7438,5 +7438,85 @@
     "close": 3.8800001144,
     "volume": 23140.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "SLSN",
+    "open": 3.8800001144,
+    "high": 3.8800001144,
+    "low": 3.61439991,
+    "close": 3.7400000095,
+    "volume": 13004.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "SLSN",
+    "open": 3.6879999638,
+    "high": 3.75,
+    "low": 3.6500000954,
+    "close": 3.75,
+    "volume": 24938.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "SLSN",
+    "open": 3.6103000641,
+    "high": 3.7999999523,
+    "low": 3.6103000641,
+    "close": 3.7000000477,
+    "volume": 6344.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "SLSN",
+    "open": 3.6900000572,
+    "high": 3.7100000381,
+    "low": 3.6099998951,
+    "close": 3.7000000477,
+    "volume": 7500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "SLSN",
+    "open": 3.7000000477,
+    "high": 3.7999999523,
+    "low": 3.5701999664,
+    "close": 3.5799999237,
+    "volume": 13234.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "SLSN",
+    "open": 3.5799999237,
+    "high": 3.6900000572,
+    "low": 3.5099999905,
+    "close": 3.6900000572,
+    "volume": 12400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "SLSN",
+    "open": 3.6500000954,
+    "high": 3.7799999714,
+    "low": 3.5,
+    "close": 3.5099999905,
+    "volume": 12157.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "SLSN",
+    "open": 3.5,
+    "high": 3.5799999237,
+    "low": 3.2799999714,
+    "close": 3.2799999714,
+    "volume": 28999.0,
+    "wedge_status": "none"
   }
 ]

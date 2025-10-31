@@ -708,5 +708,85 @@
     "close": 11.0500001907,
     "volume": 48863.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "STRZ",
+    "open": 11.0,
+    "high": 11.25,
+    "low": 10.8600997925,
+    "close": 11.0799999237,
+    "volume": 70935.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "STRZ",
+    "open": 11.0,
+    "high": 11.1101999283,
+    "low": 10.7465000153,
+    "close": 11.0500001907,
+    "volume": 77031.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "STRZ",
+    "open": 11.1000003815,
+    "high": 11.6850004196,
+    "low": 10.9499998093,
+    "close": 11.6700000763,
+    "volume": 72254.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "STRZ",
+    "open": 11.7899999619,
+    "high": 11.8000001907,
+    "low": 11.4449996948,
+    "close": 11.6400003433,
+    "volume": 74300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "STRZ",
+    "open": 11.6400003433,
+    "high": 11.9200000763,
+    "low": 11.0600004196,
+    "close": 11.3299999237,
+    "volume": 70235.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "STRZ",
+    "open": 11.2399997711,
+    "high": 11.3350000381,
+    "low": 11.0,
+    "close": 11.0699996948,
+    "volume": 47800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "STRZ",
+    "open": 11.1099996567,
+    "high": 11.1099996567,
+    "low": 10.4300003052,
+    "close": 10.5,
+    "volume": 77246.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "STRZ",
+    "open": 10.529999733,
+    "high": 10.625,
+    "low": 10.1999998093,
+    "close": 10.6099996567,
+    "volume": 69396.0,
+    "wedge_status": "none"
   }
 ]

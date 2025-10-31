@@ -7438,5 +7438,85 @@
     "close": 7.0,
     "volume": 220700.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "IMMR",
+    "open": 7.0,
+    "high": 7.1300001144,
+    "low": 6.9499998093,
+    "close": 7.0799999237,
+    "volume": 239081.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "IMMR",
+    "open": 7.0599999428,
+    "high": 7.0900001526,
+    "low": 6.7950000763,
+    "close": 6.8200001717,
+    "volume": 333690.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "IMMR",
+    "open": 6.8299999237,
+    "high": 6.9549999237,
+    "low": 6.8074998856,
+    "close": 6.9299998283,
+    "volume": 260142.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "IMMR",
+    "open": 6.9699997902,
+    "high": 7.0250000954,
+    "low": 6.9400000572,
+    "close": 6.9499998093,
+    "volume": 155607.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "IMMR",
+    "open": 7.0100002289,
+    "high": 7.0100002289,
+    "low": 6.8000001907,
+    "close": 6.8299999237,
+    "volume": 318304.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "IMMR",
+    "open": 6.8499999046,
+    "high": 6.8699998856,
+    "low": 6.7300000191,
+    "close": 6.75,
+    "volume": 530000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "IMMR",
+    "open": 6.75,
+    "high": 6.7899999619,
+    "low": 6.5999999046,
+    "close": 6.6700000763,
+    "volume": 537479.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "IMMR",
+    "open": 6.6199998856,
+    "high": 6.6900000572,
+    "low": 6.5650000572,
+    "close": 6.6199998856,
+    "volume": 376219.0,
+    "wedge_status": "none"
   }
 ]

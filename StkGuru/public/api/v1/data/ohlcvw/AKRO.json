@@ -7508,5 +7508,15 @@
     "close": 54.0,
     "volume": 1612149.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "AKRO",
+    "open": 54.0499992371,
+    "high": 54.3100013733,
+    "low": 53.9350013733,
+    "close": 54.2599983215,
+    "volume": 1167330.0,
+    "wedge_status": "none"
   }
 ]

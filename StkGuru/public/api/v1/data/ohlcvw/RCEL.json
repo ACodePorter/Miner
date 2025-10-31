@@ -7438,5 +7438,85 @@
     "close": 4.0100002289,
     "volume": 385589.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "RCEL",
+    "open": 4.1100001335,
+    "high": 4.25,
+    "low": 4.0199999809,
+    "close": 4.1199998856,
+    "volume": 266324.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "RCEL",
+    "open": 4.0599999428,
+    "high": 4.1950001717,
+    "low": 3.8800001144,
+    "close": 3.9600000381,
+    "volume": 214720.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "RCEL",
+    "open": 4.0,
+    "high": 4.1387000084,
+    "low": 4.0,
+    "close": 4.0199999809,
+    "volume": 115101.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "RCEL",
+    "open": 4.0900001526,
+    "high": 4.1500000954,
+    "low": 3.9100000858,
+    "close": 3.9700000286,
+    "volume": 161000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "RCEL",
+    "open": 3.9500000477,
+    "high": 3.9500000477,
+    "low": 3.7706999779,
+    "close": 3.7899999619,
+    "volume": 316555.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "RCEL",
+    "open": 3.7799999714,
+    "high": 3.8499999046,
+    "low": 3.6500000954,
+    "close": 3.6600000858,
+    "volume": 147600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "RCEL",
+    "open": 3.6800000668,
+    "high": 3.8399999142,
+    "low": 3.6400001049,
+    "close": 3.6900000572,
+    "volume": 171984.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "RCEL",
+    "open": 3.7400000095,
+    "high": 3.7799999714,
+    "low": 3.6400001049,
+    "close": 3.6700000763,
+    "volume": 104704.0,
+    "wedge_status": "none"
   }
 ]

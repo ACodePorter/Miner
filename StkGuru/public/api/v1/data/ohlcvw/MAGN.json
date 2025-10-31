@@ -7438,5 +7438,85 @@
     "close": 9.6499996185,
     "volume": 669846.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "MAGN",
+    "open": 9.6400003433,
+    "high": 9.970000267,
+    "low": 9.6300001144,
+    "close": 9.9099998474,
+    "volume": 504976.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "MAGN",
+    "open": 9.75,
+    "high": 10.0,
+    "low": 9.4399995804,
+    "close": 9.4399995804,
+    "volume": 607615.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "MAGN",
+    "open": 9.4899997711,
+    "high": 9.6400003433,
+    "low": 9.2250003815,
+    "close": 9.3699998856,
+    "volume": 497807.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "MAGN",
+    "open": 9.470000267,
+    "high": 9.6000003815,
+    "low": 9.3699998856,
+    "close": 9.529999733,
+    "volume": 394500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "MAGN",
+    "open": 9.5,
+    "high": 9.5450000763,
+    "low": 9.0850000381,
+    "close": 9.2299995422,
+    "volume": 442085.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "MAGN",
+    "open": 9.1099996567,
+    "high": 9.25,
+    "low": 9.0500001907,
+    "close": 9.1199998856,
+    "volume": 502800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "MAGN",
+    "open": 9.0500001907,
+    "high": 9.1300001144,
+    "low": 8.5200004578,
+    "close": 8.6000003815,
+    "volume": 510103.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "MAGN",
+    "open": 8.5200004578,
+    "high": 8.6999998093,
+    "low": 8.4300003052,
+    "close": 8.5600004196,
+    "volume": 437063.0,
+    "wedge_status": "none"
   }
 ]

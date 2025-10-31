@@ -7438,5 +7438,85 @@
     "close": 36.3400001526,
     "volume": 2653.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "OVBC",
+    "open": 36.25,
+    "high": 36.25,
+    "low": 35.8019981384,
+    "close": 35.9000015259,
+    "volume": 4884.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "OVBC",
+    "open": 35.9000015259,
+    "high": 36.5149993896,
+    "low": 35.9000015259,
+    "close": 36.4500007629,
+    "volume": 7333.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "OVBC",
+    "open": 36.25,
+    "high": 36.5149993896,
+    "low": 35.9799995422,
+    "close": 35.9799995422,
+    "volume": 3662.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "OVBC",
+    "open": 35.9500007629,
+    "high": 35.9500007629,
+    "low": 35.75,
+    "close": 35.9300003052,
+    "volume": 6600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "OVBC",
+    "open": 35.9500007629,
+    "high": 36.0,
+    "low": 34.6300010681,
+    "close": 34.6599998474,
+    "volume": 7982.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "OVBC",
+    "open": 35.6899986267,
+    "high": 35.7000007629,
+    "low": 35.0099983215,
+    "close": 35.5,
+    "volume": 12900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "OVBC",
+    "open": 35.0000991821,
+    "high": 35.9399986267,
+    "low": 34.400100708,
+    "close": 34.6699981689,
+    "volume": 22759.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "OVBC",
+    "open": 34.6100006104,
+    "high": 35.7999992371,
+    "low": 34.1800003052,
+    "close": 35.5800018311,
+    "volume": 19236.0,
+    "wedge_status": "none"
   }
 ]

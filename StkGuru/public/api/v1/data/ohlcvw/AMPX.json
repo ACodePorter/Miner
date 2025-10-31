@@ -7398,5 +7398,15 @@
     "close": 12.5,
     "volume": 6277516.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "AMPX",
+    "open": 12.2700004578,
+    "high": 12.529999733,
+    "low": 11.930100441,
+    "close": 12.2899999619,
+    "volume": 3382845.0,
+    "wedge_status": "none"
   }
 ]
