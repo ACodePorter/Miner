@@ -5128,5 +5128,15 @@
     "close": 57.5,
     "volume": 98395.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,31,00,00,00,000000",
+    "ticker": "DBD",
+    "open": 57.7599983215,
+    "high": 59.2000007629,
+    "low": 57.6699981689,
+    "close": 59.1500015259,
+    "volume": 253000.0,
+    "wedge_status": "none"
   }
 ]

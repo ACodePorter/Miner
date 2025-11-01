@@ -7498,5 +7498,15 @@
     "close": 42.8400001526,
     "volume": 324323.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,31,00,00,00,000000",
+    "ticker": "ABM",
+    "open": 42.6500015259,
+    "high": 43.0499992371,
+    "low": 42.0999984741,
+    "close": 43.0,
+    "volume": 519700.0,
+    "wedge_status": "none"
   }
 ]

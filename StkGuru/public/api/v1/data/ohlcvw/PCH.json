@@ -7498,5 +7498,15 @@
     "close": 40.5099983215,
     "volume": 433140.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,31,00,00,00,000000",
+    "ticker": "PCH",
+    "open": 40.1399993896,
+    "high": 40.1699981689,
+    "low": 39.5,
+    "close": 40.0,
+    "volume": 692300.0,
+    "wedge_status": "none"
   }
 ]

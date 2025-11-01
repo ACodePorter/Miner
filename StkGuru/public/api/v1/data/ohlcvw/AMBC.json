@@ -7498,5 +7498,15 @@
     "close": 8.4899997711,
     "volume": 461682.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,31,00,00,00,000000",
+    "ticker": "AMBC",
+    "open": 8.4399995804,
+    "high": 8.4399995804,
+    "low": 8.0200004578,
+    "close": 8.2100000381,
+    "volume": 740100.0,
+    "wedge_status": "drop"
   }
 ]

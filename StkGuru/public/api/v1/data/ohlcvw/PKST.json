@@ -5958,5 +5958,15 @@
     "close": 13.6700000763,
     "volume": 132610.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,31,00,00,00,000000",
+    "ticker": "PKST",
+    "open": 13.6800003052,
+    "high": 13.875,
+    "low": 13.3800001144,
+    "close": 13.5100002289,
+    "volume": 204700.0,
+    "wedge_status": "none"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 31.0,
     "volume": 123181.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,31,00,00,00,000000",
+    "ticker": "GMRE",
+    "open": 30.9599990845,
+    "high": 31.0,
+    "low": 30.4699993134,
+    "close": 30.7000007629,
+    "volume": 134400.0,
+    "wedge_status": "none"
   }
 ]

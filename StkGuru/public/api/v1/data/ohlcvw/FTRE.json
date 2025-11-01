@@ -5508,5 +5508,15 @@
     "close": 10.029999733,
     "volume": 1278636.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,31,00,00,00,000000",
+    "ticker": "FTRE",
+    "open": 10.0,
+    "high": 10.470000267,
+    "low": 9.720000267,
+    "close": 10.4600000381,
+    "volume": 1125200.0,
+    "wedge_status": "none"
   }
 ]

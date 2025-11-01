@@ -7498,5 +7498,15 @@
     "close": 76.0999984741,
     "volume": 707407.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,31,00,00,00,000000",
+    "ticker": "RDNT",
+    "open": 75.9300003052,
+    "high": 77.25,
+    "low": 75.4649963379,
+    "close": 75.9899978638,
+    "volume": 639400.0,
+    "wedge_status": "none"
   }
 ]

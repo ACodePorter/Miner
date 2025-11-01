@@ -7498,5 +7498,15 @@
     "close": 14.75,
     "volume": 7420.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,31,00,00,00,000000",
+    "ticker": "MLP",
+    "open": 14.75,
+    "high": 16.2000007629,
+    "low": 14.7100000381,
+    "close": 16.0,
+    "volume": 47400.0,
+    "wedge_status": "none"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 111.6900024414,
     "volume": 3309245.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,31,00,00,00,000000",
+    "ticker": "BLDR",
+    "open": 112.5,
+    "high": 116.7799987793,
+    "low": 111.25,
+    "close": 116.1699981689,
+    "volume": 2444400.0,
+    "wedge_status": "none"
   }
 ]

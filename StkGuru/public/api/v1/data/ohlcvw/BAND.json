@@ -7498,5 +7498,15 @@
     "close": 16.1100006104,
     "volume": 536685.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,31,00,00,00,000000",
+    "ticker": "BAND",
+    "open": 16.25,
+    "high": 16.2700004578,
+    "low": 15.7550001144,
+    "close": 16.1499996185,
+    "volume": 509500.0,
+    "wedge_status": "none"
   }
 ]

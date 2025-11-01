@@ -7498,5 +7498,15 @@
     "close": 12.0399999619,
     "volume": 1289264.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,31,00,00,00,000000",
+    "ticker": "PMT",
+    "open": 12.0,
+    "high": 12.1000003815,
+    "low": 11.8599996567,
+    "close": 12.0399999619,
+    "volume": 794200.0,
+    "wedge_status": "none"
   }
 ]

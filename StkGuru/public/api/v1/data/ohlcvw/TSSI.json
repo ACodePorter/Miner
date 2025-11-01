@@ -7498,5 +7498,15 @@
     "close": 18.0,
     "volume": 1550992.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,10,31,00,00,00,000000",
+    "ticker": "TSSI",
+    "open": 18.1700000763,
+    "high": 20.3500003815,
+    "low": 18.1700000763,
+    "close": 20.2600002289,
+    "volume": 2837900.0,
+    "wedge_status": "none"
   }
 ]

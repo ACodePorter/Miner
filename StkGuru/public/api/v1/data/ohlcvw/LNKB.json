@@ -7418,5 +7418,15 @@
     "close": 6.9699997902,
     "volume": 66545.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,31,00,00,00,000000",
+    "ticker": "LNKB",
+    "open": 6.9099998474,
+    "high": 7.0500001907,
+    "low": 6.9099998474,
+    "close": 7.0300002098,
+    "volume": 25000.0,
+    "wedge_status": "pop"
   }
 ]

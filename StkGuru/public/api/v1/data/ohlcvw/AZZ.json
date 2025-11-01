@@ -7498,5 +7498,15 @@
     "close": 99.2399978638,
     "volume": 166504.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,31,00,00,00,000000",
+    "ticker": "AZZ",
+    "open": 99.5,
+    "high": 100.1900024414,
+    "low": 98.1800003052,
+    "close": 99.8499984741,
+    "volume": 225000.0,
+    "wedge_status": "none"
   }
 ]
