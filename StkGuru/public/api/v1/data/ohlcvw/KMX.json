@@ -7488,5 +7488,15 @@
     "close": 41.9099998474,
     "volume": 7500900.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,03,00,00,00,000000",
+    "ticker": "KMX",
+    "open": 41.5,
+    "high": 41.625,
+    "low": 40.3400001526,
+    "close": 41.3400001526,
+    "volume": 3845475.0,
+    "wedge_status": "none"
   }
 ]

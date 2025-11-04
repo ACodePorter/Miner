@@ -7488,5 +7488,15 @@
     "close": 3.0199999809,
     "volume": 4506900.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,03,00,00,00,000000",
+    "ticker": "LDI",
+    "open": 3.0,
+    "high": 3.0195000172,
+    "low": 2.9000000954,
+    "close": 2.9500000477,
+    "volume": 3823775.0,
+    "wedge_status": "none"
   }
 ]

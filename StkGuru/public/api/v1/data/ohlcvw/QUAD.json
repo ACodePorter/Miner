@@ -7488,5 +7488,15 @@
     "close": 5.5100002289,
     "volume": 210800.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,03,00,00,00,000000",
+    "ticker": "QUAD",
+    "open": 5.5,
+    "high": 5.5,
+    "low": 5.3800001144,
+    "close": 5.4200000763,
+    "volume": 173383.0,
+    "wedge_status": "none"
   }
 ]

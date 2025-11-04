@@ -7488,5 +7488,15 @@
     "close": 43.0099983215,
     "volume": 5839676.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,03,00,00,00,000000",
+    "ticker": "CPRT",
+    "open": 42.7900009155,
+    "high": 43.0299987793,
+    "low": 42.3199996948,
+    "close": 43.0,
+    "volume": 6212880.0,
+    "wedge_status": "none"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 30.75,
     "volume": 132800.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,03,00,00,00,000000",
+    "ticker": "IIIV",
+    "open": 31.3250007629,
+    "high": 31.3250007629,
+    "low": 29.8999996185,
+    "close": 30.6800003052,
+    "volume": 224725.0,
+    "wedge_status": "none"
   }
 ]

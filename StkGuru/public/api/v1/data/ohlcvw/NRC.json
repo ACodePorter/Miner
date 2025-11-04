@@ -7488,5 +7488,15 @@
     "close": 13.3599996567,
     "volume": 107600.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,03,00,00,00,000000",
+    "ticker": "NRC",
+    "open": 13.3800001144,
+    "high": 13.470000267,
+    "low": 13.1599998474,
+    "close": 13.25,
+    "volume": 49252.0,
+    "wedge_status": "none"
   }
 ]

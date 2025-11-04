@@ -6038,5 +6038,15 @@
     "close": 1.8700000048,
     "volume": 50100.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,03,00,00,00,000000",
+    "ticker": "ISPR",
+    "open": 1.8799999952,
+    "high": 2.0,
+    "low": 1.7050000429,
+    "close": 1.7100000381,
+    "volume": 62649.0,
+    "wedge_status": "none"
   }
 ]

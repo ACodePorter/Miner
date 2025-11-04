@@ -7488,5 +7488,15 @@
     "close": 71.3099975586,
     "volume": 512700.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,03,00,00,00,000000",
+    "ticker": "AWR",
+    "open": 71.0,
+    "high": 71.8099975586,
+    "low": 69.5599975586,
+    "close": 71.6999969482,
+    "volume": 251910.0,
+    "wedge_status": "none"
   }
 ]

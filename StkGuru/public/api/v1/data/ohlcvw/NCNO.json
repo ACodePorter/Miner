@@ -7488,5 +7488,15 @@
     "close": 26.6800003052,
     "volume": 2029200.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,03,00,00,00,000000",
+    "ticker": "NCNO",
+    "open": 26.4249992371,
+    "high": 26.9249992371,
+    "low": 25.9850006104,
+    "close": 26.75,
+    "volume": 1740675.0,
+    "wedge_status": "none"
   }
 ]

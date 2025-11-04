@@ -7488,5 +7488,15 @@
     "close": 59.0,
     "volume": 454900.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,03,00,00,00,000000",
+    "ticker": "CHEF",
+    "open": 58.7599983215,
+    "high": 60.8650016785,
+    "low": 58.1599998474,
+    "close": 60.7200012207,
+    "volume": 390513.0,
+    "wedge_status": "pop"
   }
 ]
