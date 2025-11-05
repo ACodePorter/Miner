@@ -7498,5 +7498,15 @@
     "close": 31.7199993134,
     "volume": 2374564.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,04,00,00,00,000000",
+    "ticker": "OUST",
+    "open": 30.0,
+    "high": 30.7089004517,
+    "low": 27.4500007629,
+    "close": 27.6800003052,
+    "volume": 4168697.0,
+    "wedge_status": "none"
   }
 ]

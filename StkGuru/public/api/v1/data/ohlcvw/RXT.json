@@ -7498,5 +7498,15 @@
     "close": 1.5700000525,
     "volume": 847829.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,04,00,00,00,000000",
+    "ticker": "RXT",
+    "open": 1.5399999619,
+    "high": 1.5900000334,
+    "low": 1.4900000095,
+    "close": 1.5,
+    "volume": 951881.0,
+    "wedge_status": "drop"
   }
 ]

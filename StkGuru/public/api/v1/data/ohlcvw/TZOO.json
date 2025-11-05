@@ -7488,5 +7488,25 @@
     "close": 8.4200000763,
     "volume": 180300.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,03,00,00,00,000000",
+    "ticker": "TZOO",
+    "open": 8.4499998093,
+    "high": 8.5,
+    "low": 7.9800000191,
+    "close": 8.0399999619,
+    "volume": 192828.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,04,00,00,00,000000",
+    "ticker": "TZOO",
+    "open": 7.8499999046,
+    "high": 7.8501000404,
+    "low": 7.4149999619,
+    "close": 7.4299998283,
+    "volume": 189566.0,
+    "wedge_status": "none"
   }
 ]

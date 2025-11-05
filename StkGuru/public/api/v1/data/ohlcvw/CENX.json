@@ -7498,5 +7498,15 @@
     "close": 30.7299995422,
     "volume": 1913762.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,04,00,00,00,000000",
+    "ticker": "CENX",
+    "open": 29.3299999237,
+    "high": 29.7700004578,
+    "low": 28.2800006866,
+    "close": 28.5,
+    "volume": 1613278.0,
+    "wedge_status": "drop"
   }
 ]

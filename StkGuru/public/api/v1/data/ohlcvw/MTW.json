@@ -7498,5 +7498,15 @@
     "close": 10.2100000381,
     "volume": 321658.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,04,00,00,00,000000",
+    "ticker": "MTW",
+    "open": 10.0,
+    "high": 10.1899995804,
+    "low": 9.9630002975,
+    "close": 10.0200004578,
+    "volume": 231407.0,
+    "wedge_status": "none"
   }
 ]

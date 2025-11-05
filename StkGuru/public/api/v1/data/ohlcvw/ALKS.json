@@ -7498,5 +7498,15 @@
     "close": 30.1700000763,
     "volume": 2397768.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,04,00,00,00,000000",
+    "ticker": "ALKS",
+    "open": 30.0,
+    "high": 30.6299991608,
+    "low": 29.7700004578,
+    "close": 30.3899993896,
+    "volume": 2265467.0,
+    "wedge_status": "none"
   }
 ]

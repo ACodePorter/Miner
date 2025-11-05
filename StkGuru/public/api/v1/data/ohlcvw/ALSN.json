@@ -7498,5 +7498,15 @@
     "close": 81.3499984741,
     "volume": 1342956.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,04,00,00,00,000000",
+    "ticker": "ALSN",
+    "open": 80.5199966431,
+    "high": 80.4850006104,
+    "low": 79.0,
+    "close": 79.4000015259,
+    "volume": 924911.0,
+    "wedge_status": "none"
   }
 ]

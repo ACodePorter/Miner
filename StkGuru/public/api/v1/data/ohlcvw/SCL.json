@@ -7498,5 +7498,15 @@
     "close": 42.5299987793,
     "volume": 295117.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,04,00,00,00,000000",
+    "ticker": "SCL",
+    "open": 42.25,
+    "high": 42.7299995422,
+    "low": 41.8199996948,
+    "close": 42.3100013733,
+    "volume": 166088.0,
+    "wedge_status": "none"
   }
 ]

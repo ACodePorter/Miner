@@ -7488,5 +7488,25 @@
     "close": 3.5,
     "volume": 2629900.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,03,00,00,00,000000",
+    "ticker": "TROX",
+    "open": 3.4800000191,
+    "high": 3.5450000763,
+    "low": 3.2899999619,
+    "close": 3.3099999428,
+    "volume": 2212887.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,04,00,00,00,000000",
+    "ticker": "TROX",
+    "open": 3.2100000381,
+    "high": 3.2899999619,
+    "low": 3.1549999714,
+    "close": 3.1900000572,
+    "volume": 2361438.0,
+    "wedge_status": "none"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 68.3899993896,
     "volume": 1543.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,04,00,00,00,000000",
+    "ticker": "CFFI",
+    "open": 68.0000991821,
+    "high": 68.75,
+    "low": 68.0000991821,
+    "close": 68.3000030518,
+    "volume": 4208.0,
+    "wedge_status": "drop"
   }
 ]

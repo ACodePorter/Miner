@@ -7488,5 +7488,25 @@
     "close": 6.2600002289,
     "volume": 69800.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,03,00,00,00,000000",
+    "ticker": "TTSH",
+    "open": 6.25,
+    "high": 6.2550001144,
+    "low": 6.2199997902,
+    "close": 6.2399997711,
+    "volume": 60019.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,04,00,00,00,000000",
+    "ticker": "TTSH",
+    "open": 6.2600002289,
+    "high": 6.4200000763,
+    "low": 6.25,
+    "close": 6.3000001907,
+    "volume": 301196.0,
+    "wedge_status": "none"
   }
 ]
