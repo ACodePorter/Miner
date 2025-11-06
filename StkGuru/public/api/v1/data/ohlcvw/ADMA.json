@@ -7508,5 +7508,15 @@
     "close": 14.6300001144,
     "volume": 3672496.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,05,00,00,00,000000",
+    "ticker": "ADMA",
+    "open": 14.5,
+    "high": 15.6499996185,
+    "low": 14.4205999374,
+    "close": 15.3699998856,
+    "volume": 6239683.0,
+    "wedge_status": "none"
   }
 ]

@@ -2298,5 +2298,15 @@
     "close": 27.5,
     "volume": 2746160.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,05,00,00,00,000000",
+    "ticker": "SARO",
+    "open": 27.0699996948,
+    "high": 27.5,
+    "low": 26.8700008392,
+    "close": 27.2900009155,
+    "volume": 1453336.0,
+    "wedge_status": "none"
   }
 ]

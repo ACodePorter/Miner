@@ -7508,5 +7508,15 @@
     "close": 40.0,
     "volume": 1525646.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,05,00,00,00,000000",
+    "ticker": "CGNX",
+    "open": 40.1100006104,
+    "high": 40.7099990845,
+    "low": 39.6150016785,
+    "close": 40.5,
+    "volume": 1952019.0,
+    "wedge_status": "none"
   }
 ]

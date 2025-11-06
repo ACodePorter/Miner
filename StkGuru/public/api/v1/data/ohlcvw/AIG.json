@@ -7508,5 +7508,15 @@
     "close": 80.75,
     "volume": 4179046.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,05,00,00,00,000000",
+    "ticker": "AIG",
+    "open": 82.0,
+    "high": 82.1299972534,
+    "low": 76.2799987793,
+    "close": 76.3300018311,
+    "volume": 6611082.0,
+    "wedge_status": "drop"
   }
 ]

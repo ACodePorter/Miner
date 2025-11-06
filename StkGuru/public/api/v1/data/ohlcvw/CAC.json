@@ -7508,5 +7508,15 @@
     "close": 38.25,
     "volume": 63711.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,05,00,00,00,000000",
+    "ticker": "CAC",
+    "open": 38.7099990845,
+    "high": 39.3499984741,
+    "low": 38.7099990845,
+    "close": 39.2000007629,
+    "volume": 50435.0,
+    "wedge_status": "none"
   }
 ]

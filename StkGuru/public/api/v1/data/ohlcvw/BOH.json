@@ -7508,5 +7508,15 @@
     "close": 64.5,
     "volume": 281021.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,05,00,00,00,000000",
+    "ticker": "BOH",
+    "open": 64.5400009155,
+    "high": 65.8799972534,
+    "low": 64.1299972534,
+    "close": 65.5599975586,
+    "volume": 238657.0,
+    "wedge_status": "none"
   }
 ]

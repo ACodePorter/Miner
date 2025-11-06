@@ -7508,5 +7508,15 @@
     "close": 11.3000001907,
     "volume": 439669.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,05,00,00,00,000000",
+    "ticker": "AVNS",
+    "open": 12.375,
+    "high": 12.6499996185,
+    "low": 10.6400003433,
+    "close": 10.6599998474,
+    "volume": 1119600.0,
+    "wedge_status": "none"
   }
 ]
