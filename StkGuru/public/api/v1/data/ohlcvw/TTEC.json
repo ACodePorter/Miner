@@ -7498,5 +7498,15 @@
     "close": 3.1500000954,
     "volume": 209677.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,05,00,00,00,000000",
+    "ticker": "TTEC",
+    "open": 3.1700000763,
+    "high": 3.2955000401,
+    "low": 3.1700000763,
+    "close": 3.2699999809,
+    "volume": 105179.0,
+    "wedge_status": "none"
   }
 ]

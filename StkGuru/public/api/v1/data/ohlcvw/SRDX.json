@@ -7498,5 +7498,15 @@
     "close": 27.5,
     "volume": 103415.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,05,00,00,00,000000",
+    "ticker": "SRDX",
+    "open": 27.7649993896,
+    "high": 27.7649993896,
+    "low": 25.8700008392,
+    "close": 27.5450000763,
+    "volume": 113569.0,
+    "wedge_status": "none"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 71.5,
     "volume": 824592.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,05,00,00,00,000000",
+    "ticker": "TARS",
+    "open": 68.5,
+    "high": 71.9498977661,
+    "low": 67.5,
+    "close": 68.1999969482,
+    "volume": 948709.0,
+    "wedge_status": "drop"
   }
 ]

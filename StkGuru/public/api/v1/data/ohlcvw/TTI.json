@@ -7498,5 +7498,15 @@
     "close": 7.0,
     "volume": 1729745.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,05,00,00,00,000000",
+    "ticker": "TTI",
+    "open": 7.0500001907,
+    "high": 7.2449998856,
+    "low": 6.9226999283,
+    "close": 7.2100000381,
+    "volume": 1768662.0,
+    "wedge_status": "none"
   }
 ]

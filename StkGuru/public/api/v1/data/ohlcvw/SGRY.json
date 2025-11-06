@@ -7498,5 +7498,15 @@
     "close": 22.0,
     "volume": 1048955.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,05,00,00,00,000000",
+    "ticker": "SGRY",
+    "open": 22.0200004578,
+    "high": 22.2399997711,
+    "low": 21.4599990845,
+    "close": 21.9599990845,
+    "volume": 838965.0,
+    "wedge_status": "none"
   }
 ]

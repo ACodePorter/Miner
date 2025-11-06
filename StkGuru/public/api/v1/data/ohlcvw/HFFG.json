@@ -7498,5 +7498,15 @@
     "close": 2.25,
     "volume": 133999.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,05,00,00,00,000000",
+    "ticker": "HFFG",
+    "open": 2.25,
+    "high": 2.4100000858,
+    "low": 2.1800000668,
+    "close": 2.3900001049,
+    "volume": 95603.0,
+    "wedge_status": "none"
   }
 ]

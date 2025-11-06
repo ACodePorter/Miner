@@ -7498,5 +7498,15 @@
     "close": 14.25,
     "volume": 25648.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,05,00,00,00,000000",
+    "ticker": "HBB",
+    "open": 14.3236999512,
+    "high": 14.6099996567,
+    "low": 14.1099996567,
+    "close": 14.6099996567,
+    "volume": 21468.0,
+    "wedge_status": "none"
   }
 ]
