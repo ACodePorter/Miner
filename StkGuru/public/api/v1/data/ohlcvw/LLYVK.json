@@ -5208,5 +5208,15 @@
     "close": 82.5500030518,
     "volume": 416185.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,06,00,00,00,000000",
+    "ticker": "LLYVK",
+    "open": 82.5500030518,
+    "high": 85.0,
+    "low": 82.1500015259,
+    "close": 84.3000030518,
+    "volume": 534861.0,
+    "wedge_status": "none"
   }
 ]

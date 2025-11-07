@@ -7508,5 +7508,15 @@
     "close": 42.3400001526,
     "volume": 2826734.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,06,00,00,00,000000",
+    "ticker": "FTI",
+    "open": 42.5,
+    "high": 43.0676002502,
+    "low": 41.8800010681,
+    "close": 42.3800010681,
+    "volume": 1930037.0,
+    "wedge_status": "none"
   }
 ]

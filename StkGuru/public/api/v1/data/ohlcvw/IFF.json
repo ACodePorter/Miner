@@ -7508,5 +7508,15 @@
     "close": 64.0,
     "volume": 3072745.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,06,00,00,00,000000",
+    "ticker": "IFF",
+    "open": 62.7200012207,
+    "high": 64.5899963379,
+    "low": 62.6899986267,
+    "close": 62.8499984741,
+    "volume": 1690680.0,
+    "wedge_status": "none"
   }
 ]
