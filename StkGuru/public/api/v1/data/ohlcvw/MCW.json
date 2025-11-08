@@ -7508,5 +7508,15 @@
     "close": 5.1799998283,
     "volume": 1327689.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,07,00,00,00,000000",
+    "ticker": "MCW",
+    "open": 5.1799998283,
+    "high": 5.25,
+    "low": 5.1199998856,
+    "close": 5.1300001144,
+    "volume": 1084160.0,
+    "wedge_status": "none"
   }
 ]

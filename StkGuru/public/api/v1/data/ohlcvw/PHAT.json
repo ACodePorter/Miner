@@ -7508,5 +7508,15 @@
     "close": 13.0399999619,
     "volume": 712432.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,07,00,00,00,000000",
+    "ticker": "PHAT",
+    "open": 12.9200000763,
+    "high": 13.3199996948,
+    "low": 12.3100004196,
+    "close": 13.25,
+    "volume": 980057.0,
+    "wedge_status": "none"
   }
 ]
