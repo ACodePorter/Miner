@@ -7488,5 +7488,15 @@
     "close": 6.8600001335,
     "volume": 477325.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,11,10,00,00,00,000000",
+    "ticker": "IMMR",
+    "open": 6.8899998665,
+    "high": 7.0,
+    "low": 6.7699999809,
+    "close": 6.8899998665,
+    "volume": 419563.0,
+    "wedge_status": "pop"
   }
 ]

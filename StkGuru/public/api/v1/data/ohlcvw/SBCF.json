@@ -7488,5 +7488,15 @@
     "close": 30.9099998474,
     "volume": 728757.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,11,10,00,00,00,000000",
+    "ticker": "SBCF",
+    "open": 31.0,
+    "high": 31.1849994659,
+    "low": 30.7099990845,
+    "close": 30.9400005341,
+    "volume": 453694.0,
+    "wedge_status": "none"
   }
 ]

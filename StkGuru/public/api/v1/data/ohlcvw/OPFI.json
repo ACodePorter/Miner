@@ -7488,5 +7488,15 @@
     "close": 9.9399995804,
     "volume": 577239.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,10,00,00,00,000000",
+    "ticker": "OPFI",
+    "open": 10.0500001907,
+    "high": 10.25,
+    "low": 9.8495998383,
+    "close": 10.0600004196,
+    "volume": 569893.0,
+    "wedge_status": "pop"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 28.3199996948,
     "volume": 8390.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,10,00,00,00,000000",
+    "ticker": "OVLY",
+    "open": 28.5,
+    "high": 28.5,
+    "low": 28.3999996185,
+    "close": 28.5,
+    "volume": 9208.0,
+    "wedge_status": "none"
   }
 ]

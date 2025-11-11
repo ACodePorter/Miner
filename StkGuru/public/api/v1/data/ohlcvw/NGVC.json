@@ -7488,5 +7488,15 @@
     "close": 31.5200004578,
     "volume": 207551.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,10,00,00,00,000000",
+    "ticker": "NGVC",
+    "open": 31.5100002289,
+    "high": 31.8799991608,
+    "low": 31.1599998474,
+    "close": 31.75,
+    "volume": 175995.0,
+    "wedge_status": "none"
   }
 ]

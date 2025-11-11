@@ -7488,5 +7488,15 @@
     "close": 18.3999996185,
     "volume": 749672.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,10,00,00,00,000000",
+    "ticker": "BXMT",
+    "open": 18.4099998474,
+    "high": 18.4263000488,
+    "low": 18.0,
+    "close": 18.1100006104,
+    "volume": 970154.0,
+    "wedge_status": "drop"
   }
 ]

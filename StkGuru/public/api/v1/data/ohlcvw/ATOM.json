@@ -7488,5 +7488,15 @@
     "close": 2.7000000477,
     "volume": 359214.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,10,00,00,00,000000",
+    "ticker": "ATOM",
+    "open": 2.7599999905,
+    "high": 2.8389999866,
+    "low": 2.5099999905,
+    "close": 2.5099999905,
+    "volume": 476821.0,
+    "wedge_status": "none"
   }
 ]

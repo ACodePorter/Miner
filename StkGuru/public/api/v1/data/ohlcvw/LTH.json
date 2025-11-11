@@ -7488,5 +7488,15 @@
     "close": 25.5200004578,
     "volume": 1625269.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,10,00,00,00,000000",
+    "ticker": "LTH",
+    "open": 25.5599994659,
+    "high": 25.686000824,
+    "low": 24.8899993896,
+    "close": 25.0,
+    "volume": 1445676.0,
+    "wedge_status": "none"
   }
 ]

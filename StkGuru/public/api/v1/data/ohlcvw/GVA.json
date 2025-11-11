@@ -7488,5 +7488,15 @@
     "close": 98.5,
     "volume": 631094.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,10,00,00,00,000000",
+    "ticker": "GVA",
+    "open": 99.9899978638,
+    "high": 101.3199996948,
+    "low": 98.3899993896,
+    "close": 100.1600036621,
+    "volume": 408414.0,
+    "wedge_status": "none"
   }
 ]

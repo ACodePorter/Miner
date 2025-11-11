@@ -7488,5 +7488,15 @@
     "close": 13.0200004578,
     "volume": 248535.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,10,00,00,00,000000",
+    "ticker": "KFS",
+    "open": 13.25,
+    "high": 13.7299995422,
+    "low": 13.1400003433,
+    "close": 13.4600000381,
+    "volume": 147863.0,
+    "wedge_status": "none"
   }
 ]

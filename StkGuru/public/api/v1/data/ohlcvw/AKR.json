@@ -7488,5 +7488,15 @@
     "close": 20.25,
     "volume": 857395.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,10,00,00,00,000000",
+    "ticker": "AKR",
+    "open": 20.1900005341,
+    "high": 20.3500003815,
+    "low": 19.8099994659,
+    "close": 19.8099994659,
+    "volume": 878943.0,
+    "wedge_status": "none"
   }
 ]

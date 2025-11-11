@@ -7488,5 +7488,15 @@
     "close": 3.6700000763,
     "volume": 1136989.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,10,00,00,00,000000",
+    "ticker": "REAX",
+    "open": 3.6900000572,
+    "high": 3.7899000645,
+    "low": 3.6400001049,
+    "close": 3.75,
+    "volume": 1501971.0,
+    "wedge_status": "none"
   }
 ]

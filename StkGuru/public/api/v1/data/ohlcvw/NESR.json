@@ -2928,5 +2928,15 @@
     "close": 12.3800001144,
     "volume": 1120649.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,10,00,00,00,000000",
+    "ticker": "NESR",
+    "open": 12.3800001144,
+    "high": 13.25,
+    "low": 12.2100000381,
+    "close": 13.1649999619,
+    "volume": 1319904.0,
+    "wedge_status": "none"
   }
 ]
