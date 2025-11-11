@@ -7488,5 +7488,15 @@
     "close": 22.5200004578,
     "volume": 553841.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,10,00,00,00,000000",
+    "ticker": "SYRE",
+    "open": 22.9300003052,
+    "high": 23.0,
+    "low": 21.9599990845,
+    "close": 22.1800003052,
+    "volume": 401557.0,
+    "wedge_status": "drop"
   }
 ]

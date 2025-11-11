@@ -7488,5 +7488,15 @@
     "close": 2.1900000572,
     "volume": 422772.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,10,00,00,00,000000",
+    "ticker": "TRUE",
+    "open": 2.2200000286,
+    "high": 2.2200000286,
+    "low": 2.1549999714,
+    "close": 2.1600000858,
+    "volume": 421908.0,
+    "wedge_status": "drop"
   }
 ]
