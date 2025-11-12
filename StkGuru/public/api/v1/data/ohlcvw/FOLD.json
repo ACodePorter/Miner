@@ -7498,5 +7498,15 @@
     "close": 9.0,
     "volume": 3380205.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,11,00,00,00,000000",
+    "ticker": "FOLD",
+    "open": 9.0,
+    "high": 9.3886995316,
+    "low": 8.9200000763,
+    "close": 9.3199996948,
+    "volume": 3861458.0,
+    "wedge_status": "none"
   }
 ]

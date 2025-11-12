@@ -7498,5 +7498,15 @@
     "close": 15.0,
     "volume": 31307.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,11,00,00,00,000000",
+    "ticker": "TRAK",
+    "open": 15.0699996948,
+    "high": 15.0900001526,
+    "low": 14.970000267,
+    "close": 15.0100002289,
+    "volume": 30978.0,
+    "wedge_status": "none"
   }
 ]

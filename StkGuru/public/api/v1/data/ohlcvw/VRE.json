@@ -7498,5 +7498,15 @@
     "close": 15.0,
     "volume": 313543.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,11,00,00,00,000000",
+    "ticker": "VRE",
+    "open": 15.0799999237,
+    "high": 15.3400001526,
+    "low": 15.0500001907,
+    "close": 15.3400001526,
+    "volume": 259006.0,
+    "wedge_status": "none"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 45.5,
     "volume": 489807.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,11,00,00,00,000000",
+    "ticker": "SNV",
+    "open": 45.7999992371,
+    "high": 46.349899292,
+    "low": 45.2099990845,
+    "close": 45.8899993896,
+    "volume": 718544.0,
+    "wedge_status": "pop"
   }
 ]

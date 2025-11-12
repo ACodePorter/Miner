@@ -7498,5 +7498,15 @@
     "close": 10.4899997711,
     "volume": 22399294.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,11,00,00,00,000000",
+    "ticker": "LUMN",
+    "open": 10.3800001144,
+    "high": 10.5,
+    "low": 9.220000267,
+    "close": 9.25,
+    "volume": 18598320.0,
+    "wedge_status": "drop"
   }
 ]

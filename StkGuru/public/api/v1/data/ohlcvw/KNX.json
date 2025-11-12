@@ -7498,5 +7498,15 @@
     "close": 45.8100013733,
     "volume": 2250173.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,11,00,00,00,000000",
+    "ticker": "KNX",
+    "open": 45.0,
+    "high": 45.4500007629,
+    "low": 43.7799987793,
+    "close": 44.3400001526,
+    "volume": 3679882.0,
+    "wedge_status": "drop"
   }
 ]

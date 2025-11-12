@@ -7498,5 +7498,15 @@
     "close": 12.75,
     "volume": 3158431.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,11,00,00,00,000000",
+    "ticker": "CC",
+    "open": 12.75,
+    "high": 12.8699998856,
+    "low": 12.3800001144,
+    "close": 12.6499996185,
+    "volume": 1866753.0,
+    "wedge_status": "none"
   }
 ]

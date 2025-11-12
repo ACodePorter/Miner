@@ -5508,5 +5508,15 @@
     "close": 19.0,
     "volume": 286004.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,11,00,00,00,000000",
+    "ticker": "FIHL",
+    "open": 19.0,
+    "high": 19.1299991608,
+    "low": 18.8999996185,
+    "close": 19.0300006866,
+    "volume": 397764.0,
+    "wedge_status": "none"
   }
 ]

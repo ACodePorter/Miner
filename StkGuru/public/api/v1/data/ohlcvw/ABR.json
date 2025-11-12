@@ -7498,5 +7498,15 @@
     "close": 9.25,
     "volume": 5120216.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,11,00,00,00,000000",
+    "ticker": "ABR",
+    "open": 9.3100004196,
+    "high": 9.3400001526,
+    "low": 9.1649999619,
+    "close": 9.2600002289,
+    "volume": 2365724.0,
+    "wedge_status": "none"
   }
 ]

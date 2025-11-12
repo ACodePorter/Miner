@@ -7498,5 +7498,15 @@
     "close": 31.75,
     "volume": 118853.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,11,11,00,00,00,000000",
+    "ticker": "MBIN",
+    "open": 31.8299999237,
+    "high": 32.1152992249,
+    "low": 31.6049995422,
+    "close": 31.9300003052,
+    "volume": 82559.0,
+    "wedge_status": "pop"
   }
 ]

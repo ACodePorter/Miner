@@ -7498,5 +7498,15 @@
     "close": 42.3499984741,
     "volume": 746188.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,11,00,00,00,000000",
+    "ticker": "VCYT",
+    "open": 42.0,
+    "high": 43.4000015259,
+    "low": 42.0,
+    "close": 42.6599998474,
+    "volume": 500052.0,
+    "wedge_status": "none"
   }
 ]
