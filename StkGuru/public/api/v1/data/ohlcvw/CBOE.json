@@ -7508,5 +7508,15 @@
     "close": 259.25,
     "volume": 816642.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,12,00,00,00,000000",
+    "ticker": "CBOE",
+    "open": 260.7300109863,
+    "high": 262.979888916,
+    "low": 259.4801025391,
+    "close": 260.8800048828,
+    "volume": 627315.0,
+    "wedge_status": "none"
   }
 ]

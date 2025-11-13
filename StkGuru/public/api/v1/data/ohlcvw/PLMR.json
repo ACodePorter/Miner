@@ -7508,5 +7508,15 @@
     "close": 132.0800018311,
     "volume": 215680.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,12,00,00,00,000000",
+    "ticker": "PLMR",
+    "open": 132.0399932861,
+    "high": 134.5,
+    "low": 131.5249938965,
+    "close": 132.4499969482,
+    "volume": 310965.0,
+    "wedge_status": "none"
   }
 ]

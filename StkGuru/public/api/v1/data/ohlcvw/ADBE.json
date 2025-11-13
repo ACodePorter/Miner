@@ -7508,5 +7508,15 @@
     "close": 333.2200012207,
     "volume": 2296045.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,12,00,00,00,000000",
+    "ticker": "ADBE",
+    "open": 334.0,
+    "high": 338.3999938965,
+    "low": 333.175201416,
+    "close": 337.049987793,
+    "volume": 2835961.0,
+    "wedge_status": "none"
   }
 ]

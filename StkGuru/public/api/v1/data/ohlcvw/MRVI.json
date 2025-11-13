@@ -7508,5 +7508,15 @@
     "close": 3.25,
     "volume": 1477324.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,12,00,00,00,000000",
+    "ticker": "MRVI",
+    "open": 3.2100000381,
+    "high": 3.3299999237,
+    "low": 3.1749999523,
+    "close": 3.25,
+    "volume": 1044461.0,
+    "wedge_status": "none"
   }
 ]

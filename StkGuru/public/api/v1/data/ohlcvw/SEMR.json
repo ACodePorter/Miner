@@ -7508,5 +7508,15 @@
     "close": 7.4499998093,
     "volume": 1879542.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,11,12,00,00,00,000000",
+    "ticker": "SEMR",
+    "open": 7.5,
+    "high": 7.5599999428,
+    "low": 7.3449997902,
+    "close": 7.5500001907,
+    "volume": 1028441.0,
+    "wedge_status": "none"
   }
 ]
