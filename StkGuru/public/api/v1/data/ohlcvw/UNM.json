@@ -7508,5 +7508,15 @@
     "close": 77.3399963379,
     "volume": 677979.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,11,13,00,00,00,000000",
+    "ticker": "UNM",
+    "open": 77.1999969482,
+    "high": 78.0,
+    "low": 76.7099990845,
+    "close": 77.0,
+    "volume": 967789.0,
+    "wedge_status": "none"
   }
 ]
