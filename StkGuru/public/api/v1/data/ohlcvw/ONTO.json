@@ -7508,5 +7508,15 @@
     "close": 135.5200042725,
     "volume": 621202.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,13,00,00,00,000000",
+    "ticker": "ONTO",
+    "open": 133.7200012207,
+    "high": 135.0,
+    "low": 127.4700012207,
+    "close": 129.7299957275,
+    "volume": 687443.0,
+    "wedge_status": "drop"
   }
 ]

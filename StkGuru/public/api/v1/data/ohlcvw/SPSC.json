@@ -7508,5 +7508,15 @@
     "close": 82.0199966431,
     "volume": 589760.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,13,00,00,00,000000",
+    "ticker": "SPSC",
+    "open": 81.25,
+    "high": 83.1408996582,
+    "low": 81.25,
+    "close": 82.25,
+    "volume": 381069.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 42.25,
     "volume": 739574.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,13,00,00,00,000000",
+    "ticker": "KRC",
+    "open": 42.0699996948,
+    "high": 42.5800018311,
+    "low": 41.5299987793,
+    "close": 41.6500015259,
+    "volume": 1149101.0,
+    "wedge_status": "drop"
   }
 ]

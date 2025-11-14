@@ -7508,5 +7508,15 @@
     "close": 7.8099999428,
     "volume": 501915.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,13,00,00,00,000000",
+    "ticker": "TWI",
+    "open": 7.75,
+    "high": 7.8550000191,
+    "low": 7.5900001526,
+    "close": 7.7699999809,
+    "volume": 497150.0,
+    "wedge_status": "drop"
   }
 ]

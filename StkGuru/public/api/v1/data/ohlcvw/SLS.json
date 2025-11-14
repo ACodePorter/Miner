@@ -7508,5 +7508,15 @@
     "close": 1.4900000095,
     "volume": 3663760.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,13,00,00,00,000000",
+    "ticker": "SLS",
+    "open": 1.5,
+    "high": 1.5551999807,
+    "low": 1.4299999475,
+    "close": 1.4600000381,
+    "volume": 3245853.0,
+    "wedge_status": "none"
   }
 ]

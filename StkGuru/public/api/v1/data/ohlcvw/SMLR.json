@@ -7508,5 +7508,15 @@
     "close": 25.7299995422,
     "volume": 927333.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,13,00,00,00,000000",
+    "ticker": "SMLR",
+    "open": 25.0200004578,
+    "high": 25.2999992371,
+    "low": 22.7000007629,
+    "close": 23.0,
+    "volume": 758759.0,
+    "wedge_status": "none"
   }
 ]
