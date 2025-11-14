@@ -7508,5 +7508,15 @@
     "close": 85.4199981689,
     "volume": 495516.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,13,00,00,00,000000",
+    "ticker": "ACLS",
+    "open": 84.1200027466,
+    "high": 85.5650024414,
+    "low": 81.0,
+    "close": 82.6200027466,
+    "volume": 707248.0,
+    "wedge_status": "drop"
   }
 ]

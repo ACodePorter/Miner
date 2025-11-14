@@ -7508,5 +7508,15 @@
     "close": 349.450012207,
     "volume": 705599.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,13,00,00,00,000000",
+    "ticker": "GD",
+    "open": 349.5799865723,
+    "high": 350.0,
+    "low": 342.75,
+    "close": 344.0599975586,
+    "volume": 783796.0,
+    "wedge_status": "drop"
   }
 ]
