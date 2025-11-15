@@ -1,15 +1,5 @@
 [
   {
-    "trade_date": "2022,11,16,00,00,00,000000",
-    "ticker": "OVBC",
-    "open": 25.9938844812,
-    "high": 26.5763816833,
-    "low": 25.9938844812,
-    "close": 26.5763816833,
-    "volume": 700.0,
-    "wedge_status": "none"
-  },
-  {
     "trade_date": "2022,11,17,00,00,00,000000",
     "ticker": "OVBC",
     "open": 26.2942339735,
@@ -7508,5 +7498,15 @@
     "close": 35.75,
     "volume": 7599.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,11,14,00,00,00,000000",
+    "ticker": "OVBC",
+    "open": 35.25,
+    "high": 35.75,
+    "low": 35.25,
+    "close": 35.5400009155,
+    "volume": 4600.0,
+    "wedge_status": "none"
   }
 ]

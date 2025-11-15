@@ -1128,5 +1128,15 @@
     "close": 32.6800003052,
     "volume": 538037.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,14,00,00,00,000000",
+    "ticker": "SMA",
+    "open": 32.1199989319,
+    "high": 32.9900016785,
+    "low": 31.5,
+    "close": 32.7099990845,
+    "volume": 573100.0,
+    "wedge_status": "none"
   }
 ]

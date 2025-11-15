@@ -1,15 +1,5 @@
 [
   {
-    "trade_date": "2022,11,16,00,00,00,000000",
-    "ticker": "PVBC",
-    "open": 9.25,
-    "high": 9.25,
-    "low": 7.8899998665,
-    "close": 7.9000000954,
-    "volume": 528500.0,
-    "wedge_status": "none"
-  },
-  {
     "trade_date": "2022,11,17,00,00,00,000000",
     "ticker": "PVBC",
     "open": 7.9000000954,
@@ -7507,6 +7497,16 @@
     "low": 12.970000267,
     "close": 13.1000003815,
     "volume": 96348.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,14,00,00,00,000000",
+    "ticker": "PVBC",
+    "open": 13.1499996185,
+    "high": 13.75,
+    "low": 13.0500001907,
+    "close": 13.5,
+    "volume": 395500.0,
     "wedge_status": "none"
   }
 ]

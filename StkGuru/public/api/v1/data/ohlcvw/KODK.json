@@ -1,15 +1,5 @@
 [
   {
-    "trade_date": "2022,11,16,00,00,00,000000",
-    "ticker": "KODK",
-    "open": 4.75,
-    "high": 4.75,
-    "low": 4.5,
-    "close": 4.5500001907,
-    "volume": 504500.0,
-    "wedge_status": "none"
-  },
-  {
     "trade_date": "2022,11,17,00,00,00,000000",
     "ticker": "KODK",
     "open": 4.4699997902,
@@ -7507,6 +7497,16 @@
     "low": 7.75,
     "close": 7.9800000191,
     "volume": 1451682.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,14,00,00,00,000000",
+    "ticker": "KODK",
+    "open": 7.6900000572,
+    "high": 7.7899999619,
+    "low": 7.3099999428,
+    "close": 7.3899998665,
+    "volume": 1744900.0,
     "wedge_status": "none"
   }
 ]

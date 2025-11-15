@@ -1,15 +1,5 @@
 [
   {
-    "trade_date": "2022,11,16,00,00,00,000000",
-    "ticker": "RIGL",
-    "open": 7.5,
-    "high": 8.0,
-    "low": 7.4000000954,
-    "close": 7.5,
-    "volume": 167750.0,
-    "wedge_status": "none"
-  },
-  {
     "trade_date": "2022,11,17,00,00,00,000000",
     "ticker": "RIGL",
     "open": 7.5,
@@ -7507,6 +7497,16 @@
     "low": 38.5800018311,
     "close": 39.8800010681,
     "volume": 456719.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,14,00,00,00,000000",
+    "ticker": "RIGL",
+    "open": 39.5299987793,
+    "high": 42.4700012207,
+    "low": 39.3699989319,
+    "close": 41.9399986267,
+    "volume": 714000.0,
     "wedge_status": "none"
   }
 ]
