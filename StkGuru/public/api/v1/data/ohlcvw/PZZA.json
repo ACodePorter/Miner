@@ -7488,5 +7488,15 @@
     "close": 41.0999984741,
     "volume": 1924900.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "PZZA",
+    "open": 40.5800018311,
+    "high": 40.8499984741,
+    "low": 39.25,
+    "close": 40.2200012207,
+    "volume": 952000.0,
+    "wedge_status": "none"
   }
 ]

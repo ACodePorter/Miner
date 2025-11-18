@@ -1508,5 +1508,15 @@
     "close": 37.0,
     "volume": 117100.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "SION",
+    "open": 37.7000007629,
+    "high": 42.6150016785,
+    "low": 37.7000007629,
+    "close": 39.9300003052,
+    "volume": 449700.0,
+    "wedge_status": "none"
   }
 ]
