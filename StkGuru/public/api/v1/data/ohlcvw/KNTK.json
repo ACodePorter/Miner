@@ -7488,5 +7488,15 @@
     "close": 34.5,
     "volume": 1024400.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "KNTK",
+    "open": 34.0600013733,
+    "high": 34.125,
+    "low": 32.5,
+    "close": 32.8300018311,
+    "volume": 1269822.0,
+    "wedge_status": "none"
   }
 ]

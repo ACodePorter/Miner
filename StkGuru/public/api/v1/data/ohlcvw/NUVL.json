@@ -7488,5 +7488,15 @@
     "close": 96.5,
     "volume": 332400.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "NUVL",
+    "open": 93.7249984741,
+    "high": 112.5299987793,
+    "low": 93.3000030518,
+    "close": 108.0,
+    "volume": 2282029.0,
+    "wedge_status": "none"
   }
 ]

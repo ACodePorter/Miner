@@ -7488,5 +7488,15 @@
     "close": 234.0,
     "volume": 836740.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "FFIV",
+    "open": 232.2299957275,
+    "high": 234.2400054932,
+    "low": 227.8800048828,
+    "close": 228.6399993896,
+    "volume": 777788.0,
+    "wedge_status": "none"
   }
 ]

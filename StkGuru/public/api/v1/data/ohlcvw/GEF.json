@@ -7488,5 +7488,15 @@
     "close": 61.0600013733,
     "volume": 255400.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "GEF",
+    "open": 61.0600013733,
+    "high": 62.0,
+    "low": 60.2200012207,
+    "close": 60.2400016785,
+    "volume": 217468.0,
+    "wedge_status": "none"
   }
 ]

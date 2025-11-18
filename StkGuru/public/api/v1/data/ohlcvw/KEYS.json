@@ -7488,5 +7488,15 @@
     "close": 179.0599975586,
     "volume": 980617.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "KEYS",
+    "open": 178.0,
+    "high": 178.3600006104,
+    "low": 173.387802124,
+    "close": 175.5099945068,
+    "volume": 773014.0,
+    "wedge_status": "drop"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 28.5,
     "volume": 84800.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "HY",
+    "open": 28.6499996185,
+    "high": 28.8700008392,
+    "low": 27.6000003815,
+    "close": 27.6599998474,
+    "volume": 126700.0,
+    "wedge_status": "none"
   }
 ]

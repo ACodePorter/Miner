@@ -7488,5 +7488,15 @@
     "close": 7.5599999428,
     "volume": 5310600.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "GT",
+    "open": 7.5,
+    "high": 7.6350002289,
+    "low": 7.3899998665,
+    "close": 7.4299998283,
+    "volume": 6697009.0,
+    "wedge_status": "drop"
   }
 ]

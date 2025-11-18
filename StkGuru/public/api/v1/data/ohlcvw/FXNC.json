@@ -7488,5 +7488,15 @@
     "close": 24.1499996185,
     "volume": 25800.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "FXNC",
+    "open": 24.0300006866,
+    "high": 24.2703990936,
+    "low": 23.5,
+    "close": 23.5,
+    "volume": 15059.0,
+    "wedge_status": "none"
   }
 ]

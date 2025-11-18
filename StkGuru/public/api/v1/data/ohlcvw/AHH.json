@@ -7488,5 +7488,15 @@
     "close": 6.25,
     "volume": 883600.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "AHH",
+    "open": 6.25,
+    "high": 6.2399997711,
+    "low": 6.1149997711,
+    "close": 6.1399998665,
+    "volume": 777957.0,
+    "wedge_status": "none"
   }
 ]

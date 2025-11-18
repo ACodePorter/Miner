@@ -7488,5 +7488,15 @@
     "close": 28.0,
     "volume": 419300.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "GTY",
+    "open": 28.1900005341,
+    "high": 28.5550003052,
+    "low": 27.9150009155,
+    "close": 28.2900009155,
+    "volume": 377163.0,
+    "wedge_status": "none"
   }
 ]

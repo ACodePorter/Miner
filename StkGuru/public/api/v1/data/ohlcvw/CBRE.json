@@ -7488,5 +7488,15 @@
     "close": 153.6600036621,
     "volume": 778481.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "CBRE",
+    "open": 153.3699951172,
+    "high": 154.0,
+    "low": 149.2100067139,
+    "close": 149.4100036621,
+    "volume": 804114.0,
+    "wedge_status": "drop"
   }
 ]

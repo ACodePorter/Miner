@@ -7488,5 +7488,15 @@
     "close": 22.5100002289,
     "volume": 1310800.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "KRG",
+    "open": 22.6200008392,
+    "high": 22.6200008392,
+    "low": 21.9950008392,
+    "close": 22.0,
+    "volume": 1611530.0,
+    "wedge_status": "none"
   }
 ]
