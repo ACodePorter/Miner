@@ -7488,5 +7488,15 @@
     "close": 128.3000030518,
     "volume": 324777.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "WTFC",
+    "open": 128.0500030518,
+    "high": 128.1499938965,
+    "low": 123.0,
+    "close": 123.4499969482,
+    "volume": 321226.0,
+    "wedge_status": "none"
   }
 ]

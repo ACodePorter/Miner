@@ -7488,5 +7488,15 @@
     "close": 63.0400009155,
     "volume": 544380.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "TNL",
+    "open": 63.1699981689,
+    "high": 63.4000015259,
+    "low": 60.8800010681,
+    "close": 61.25,
+    "volume": 572822.0,
+    "wedge_status": "none"
   }
 ]

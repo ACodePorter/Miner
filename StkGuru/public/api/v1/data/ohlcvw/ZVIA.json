@@ -7488,5 +7488,15 @@
     "close": 2.5,
     "volume": 347700.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "ZVIA",
+    "open": 2.5,
+    "high": 2.5499999523,
+    "low": 2.4630000591,
+    "close": 2.5,
+    "volume": 394300.0,
+    "wedge_status": "none"
   }
 ]

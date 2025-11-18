@@ -7488,5 +7488,15 @@
     "close": 48.0,
     "volume": 216300.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "UTL",
+    "open": 48.2400016785,
+    "high": 48.4799995422,
+    "low": 47.7400016785,
+    "close": 48.0,
+    "volume": 74600.0,
+    "wedge_status": "none"
   }
 ]

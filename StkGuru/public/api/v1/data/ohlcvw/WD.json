@@ -7488,5 +7488,15 @@
     "close": 65.3399963379,
     "volume": 168900.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "WD",
+    "open": 65.25,
+    "high": 65.25,
+    "low": 62.1199989319,
+    "close": 62.2000007629,
+    "volume": 196000.0,
+    "wedge_status": "none"
   }
 ]

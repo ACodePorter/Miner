@@ -7488,5 +7488,15 @@
     "close": 45.75,
     "volume": 1368700.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "TEX",
+    "open": 45.4199981689,
+    "high": 46.1100006104,
+    "low": 43.6399993896,
+    "close": 44.0099983215,
+    "volume": 890700.0,
+    "wedge_status": "none"
   }
 ]

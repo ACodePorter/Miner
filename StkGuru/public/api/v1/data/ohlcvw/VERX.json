@@ -7488,5 +7488,15 @@
     "close": 20.1700000763,
     "volume": 1189700.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "VERX",
+    "open": 20.1200008392,
+    "high": 20.375,
+    "low": 19.7000007629,
+    "close": 19.9500007629,
+    "volume": 1374700.0,
+    "wedge_status": "none"
   }
 ]

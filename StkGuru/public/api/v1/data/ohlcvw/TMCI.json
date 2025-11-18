@@ -7488,5 +7488,15 @@
     "close": 3.0299999714,
     "volume": 1379500.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "TMCI",
+    "open": 3.1400001049,
+    "high": 3.1400001049,
+    "low": 2.8900001049,
+    "close": 2.8900001049,
+    "volume": 884800.0,
+    "wedge_status": "none"
   }
 ]

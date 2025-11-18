@@ -7488,5 +7488,15 @@
     "close": 81.3000030518,
     "volume": 395400.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "SWX",
+    "open": 81.0,
+    "high": 81.1999969482,
+    "low": 79.4599990845,
+    "close": 79.6299972534,
+    "volume": 350600.0,
+    "wedge_status": "drop"
   }
 ]
