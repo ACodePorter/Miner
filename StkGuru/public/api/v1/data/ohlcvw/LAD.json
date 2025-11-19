@@ -7498,5 +7498,15 @@
     "close": 285.25,
     "volume": 415601.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,18,00,00,00,000000",
+    "ticker": "LAD",
+    "open": 283.9700012207,
+    "high": 294.5,
+    "low": 283.9700012207,
+    "close": 294.0,
+    "volume": 264676.0,
+    "wedge_status": "none"
   }
 ]

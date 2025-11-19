@@ -7498,5 +7498,15 @@
     "close": 257.0100097656,
     "volume": 364201.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,18,00,00,00,000000",
+    "ticker": "STE",
+    "open": 257.5,
+    "high": 258.5849914551,
+    "low": 255.8601074219,
+    "close": 257.0,
+    "volume": 414931.0,
+    "wedge_status": "none"
   }
 ]

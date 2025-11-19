@@ -7498,5 +7498,15 @@
     "close": 1.0199999809,
     "volume": 1117108.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,18,00,00,00,000000",
+    "ticker": "OLPX",
+    "open": 1.0199999809,
+    "high": 1.0299999714,
+    "low": 1.0,
+    "close": 1.0099999905,
+    "volume": 616317.0,
+    "wedge_status": "none"
   }
 ]

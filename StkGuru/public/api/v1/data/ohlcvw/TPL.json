@@ -7498,5 +7498,15 @@
     "close": 957.4699707031,
     "volume": 138281.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,18,00,00,00,000000",
+    "ticker": "TPL",
+    "open": 936.049987793,
+    "high": 946.0,
+    "low": 892.0,
+    "close": 920.1199951172,
+    "volume": 135833.0,
+    "wedge_status": "none"
   }
 ]

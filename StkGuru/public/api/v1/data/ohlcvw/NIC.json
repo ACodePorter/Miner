@@ -7498,5 +7498,15 @@
     "close": 119.7699966431,
     "volume": 136703.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,18,00,00,00,000000",
+    "ticker": "NIC",
+    "open": 119.75,
+    "high": 121.0400009155,
+    "low": 119.6849975586,
+    "close": 120.75,
+    "volume": 81579.0,
+    "wedge_status": "none"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 181.0599975586,
     "volume": 662957.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,18,00,00,00,000000",
+    "ticker": "MTB",
+    "open": 180.0,
+    "high": 183.2400054932,
+    "low": 179.75,
+    "close": 182.1000061035,
+    "volume": 642474.0,
+    "wedge_status": "none"
   }
 ]

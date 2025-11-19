@@ -7498,5 +7498,15 @@
     "close": 23.6399993896,
     "volume": 13836.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,18,00,00,00,000000",
+    "ticker": "FMAO",
+    "open": 23.7003993988,
+    "high": 23.9699993134,
+    "low": 23.5,
+    "close": 23.5100002289,
+    "volume": 11479.0,
+    "wedge_status": "none"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 86.0,
     "volume": 1243542.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,18,00,00,00,000000",
+    "ticker": "SGI",
+    "open": 86.1200027466,
+    "high": 86.0100021362,
+    "low": 83.6200027466,
+    "close": 83.8799972534,
+    "volume": 1806355.0,
+    "wedge_status": "none"
   }
 ]

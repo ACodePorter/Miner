@@ -7498,5 +7498,15 @@
     "close": 81.0100021362,
     "volume": 1378232.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,18,00,00,00,000000",
+    "ticker": "PFG",
+    "open": 80.4100036621,
+    "high": 82.8300018311,
+    "low": 80.0,
+    "close": 82.1900024414,
+    "volume": 1008895.0,
+    "wedge_status": "none"
   }
 ]

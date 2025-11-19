@@ -7498,5 +7498,15 @@
     "close": 84.8700027466,
     "volume": 393023.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,18,00,00,00,000000",
+    "ticker": "DCI",
+    "open": 84.5,
+    "high": 85.2799987793,
+    "low": 84.0599975586,
+    "close": 85.1399993896,
+    "volume": 291445.0,
+    "wedge_status": "none"
   }
 ]

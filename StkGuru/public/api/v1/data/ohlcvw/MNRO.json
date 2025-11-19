@@ -7498,5 +7498,15 @@
     "close": 16.6499996185,
     "volume": 601313.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,18,00,00,00,000000",
+    "ticker": "MNRO",
+    "open": 16.5,
+    "high": 17.1049995422,
+    "low": 16.3400001526,
+    "close": 17.0300006866,
+    "volume": 677623.0,
+    "wedge_status": "none"
   }
 ]

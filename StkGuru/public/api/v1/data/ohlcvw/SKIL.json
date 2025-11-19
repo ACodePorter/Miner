@@ -7498,5 +7498,15 @@
     "close": 10.0600004196,
     "volume": 77900.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,18,00,00,00,000000",
+    "ticker": "SKIL",
+    "open": 10.0100002289,
+    "high": 10.7999000549,
+    "low": 9.9799995422,
+    "close": 10.5,
+    "volume": 55919.0,
+    "wedge_status": "none"
   }
 ]

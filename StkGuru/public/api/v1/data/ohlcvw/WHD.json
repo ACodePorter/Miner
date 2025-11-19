@@ -7498,5 +7498,15 @@
     "close": 40.0,
     "volume": 577500.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,18,00,00,00,000000",
+    "ticker": "WHD",
+    "open": 39.7599983215,
+    "high": 40.7050018311,
+    "low": 39.2000007629,
+    "close": 40.5800018311,
+    "volume": 569565.0,
+    "wedge_status": "none"
   }
 ]
