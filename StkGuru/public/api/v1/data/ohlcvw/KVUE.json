@@ -5948,5 +5948,15 @@
     "close": 16.2299995422,
     "volume": 35662078.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,19,00,00,00,000000",
+    "ticker": "KVUE",
+    "open": 16.2399997711,
+    "high": 16.2800006866,
+    "low": 16.0,
+    "close": 16.0599994659,
+    "volume": 26026662.0,
+    "wedge_status": "drop"
   }
 ]

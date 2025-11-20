@@ -7508,5 +7508,15 @@
     "close": 113.5999984741,
     "volume": 819154.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,19,00,00,00,000000",
+    "ticker": "DTM",
+    "open": 113.75,
+    "high": 115.5,
+    "low": 112.5550003052,
+    "close": 115.1800003052,
+    "volume": 622104.0,
+    "wedge_status": "none"
   }
 ]

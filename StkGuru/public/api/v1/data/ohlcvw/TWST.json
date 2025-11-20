@@ -7508,5 +7508,15 @@
     "close": 26.0,
     "volume": 2695131.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,19,00,00,00,000000",
+    "ticker": "TWST",
+    "open": 26.0300006866,
+    "high": 26.1800003052,
+    "low": 25.2250003815,
+    "close": 25.4500007629,
+    "volume": 1491923.0,
+    "wedge_status": "none"
   }
 ]

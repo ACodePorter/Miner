@@ -7508,5 +7508,15 @@
     "close": 60.25,
     "volume": 344588.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,19,00,00,00,000000",
+    "ticker": "CBT",
+    "open": 60.4099998474,
+    "high": 60.4449996948,
+    "low": 59.1150016785,
+    "close": 59.7599983215,
+    "volume": 386003.0,
+    "wedge_status": "none"
   }
 ]

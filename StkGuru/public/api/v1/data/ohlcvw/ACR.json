@@ -7508,5 +7508,15 @@
     "close": 21.3400001526,
     "volume": 19819.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,19,00,00,00,000000",
+    "ticker": "ACR",
+    "open": 21.0699996948,
+    "high": 21.1000003815,
+    "low": 20.7303009033,
+    "close": 20.75,
+    "volume": 15704.0,
+    "wedge_status": "drop"
   }
 ]

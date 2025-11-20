@@ -7508,5 +7508,15 @@
     "close": 12.3400001526,
     "volume": 64051333.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,19,00,00,00,000000",
+    "ticker": "QUBT",
+    "open": 12.5,
+    "high": 12.6800003052,
+    "low": 11.3500003815,
+    "close": 11.5600004196,
+    "volume": 31554265.0,
+    "wedge_status": "none"
   }
 ]

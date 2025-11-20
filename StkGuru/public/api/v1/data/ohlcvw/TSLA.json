@@ -7508,5 +7508,15 @@
     "close": 401.25,
     "volume": 79086883.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,19,00,00,00,000000",
+    "ticker": "TSLA",
+    "open": 406.2099914551,
+    "high": 411.7799987793,
+    "low": 398.5,
+    "close": 403.9899902344,
+    "volume": 68603310.0,
+    "wedge_status": "none"
   }
 ]
