@@ -7508,5 +7508,15 @@
     "close": 17.2299995422,
     "volume": 678763.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,20,00,00,00,000000",
+    "ticker": "RSI",
+    "open": 17.4950008392,
+    "high": 18.0,
+    "low": 17.0,
+    "close": 17.0900001526,
+    "volume": 794216.0,
+    "wedge_status": "none"
   }
 ]

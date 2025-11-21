@@ -7508,5 +7508,15 @@
     "close": 103.5899963379,
     "volume": 148314.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,20,00,00,00,000000",
+    "ticker": "MATX",
+    "open": 104.7399978638,
+    "high": 106.2850036621,
+    "low": 102.0,
+    "close": 102.0500030518,
+    "volume": 344145.0,
+    "wedge_status": "drop"
   }
 ]

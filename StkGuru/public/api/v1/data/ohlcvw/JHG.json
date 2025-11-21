@@ -7508,5 +7508,15 @@
     "close": 42.5999984741,
     "volume": 439932.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,20,00,00,00,000000",
+    "ticker": "JHG",
+    "open": 43.25,
+    "high": 43.5600013733,
+    "low": 42.1199989319,
+    "close": 42.1399993896,
+    "volume": 551659.0,
+    "wedge_status": "none"
   }
 ]
