@@ -7508,5 +7508,15 @@
     "close": 99.5899963379,
     "volume": 563139.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,20,00,00,00,000000",
+    "ticker": "BFAM",
+    "open": 99.3700027466,
+    "high": 101.0,
+    "low": 97.5299987793,
+    "close": 97.5899963379,
+    "volume": 780815.0,
+    "wedge_status": "drop"
   }
 ]

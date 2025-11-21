@@ -7508,5 +7508,15 @@
     "close": 73.25,
     "volume": 503784.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,20,00,00,00,000000",
+    "ticker": "ADC",
+    "open": 73.3700027466,
+    "high": 73.7200012207,
+    "low": 72.9899978638,
+    "close": 73.6900024414,
+    "volume": 1017194.0,
+    "wedge_status": "none"
   }
 ]

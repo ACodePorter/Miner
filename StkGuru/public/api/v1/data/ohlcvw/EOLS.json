@@ -7508,5 +7508,15 @@
     "close": 6.7800002098,
     "volume": 1575403.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,20,00,00,00,000000",
+    "ticker": "EOLS",
+    "open": 6.8200001717,
+    "high": 7.0,
+    "low": 6.5300002098,
+    "close": 6.6199998856,
+    "volume": 1273082.0,
+    "wedge_status": "none"
   }
 ]
