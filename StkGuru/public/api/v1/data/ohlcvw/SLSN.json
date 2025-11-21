@@ -1,15 +1,5 @@
 [
   {
-    "trade_date": "2022,11,22,00,00,00,000000",
-    "ticker": "SLSN",
-    "open": 1.3099999428,
-    "high": 1.3999999762,
-    "low": 1.2699999809,
-    "close": 1.3700000048,
-    "volume": 13000.0,
-    "wedge_status": "none"
-  },
-  {
     "trade_date": "2022,11,23,00,00,00,000000",
     "ticker": "SLSN",
     "open": 1.3099999428,
@@ -7507,6 +7497,16 @@
     "low": 1.8400000334,
     "close": 1.9600000381,
     "volume": 42692.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,20,00,00,00,000000",
+    "ticker": "SLSN",
+    "open": 2.0,
+    "high": 2.25,
+    "low": 2.0,
+    "close": 2.0599999428,
+    "volume": 44636.0,
     "wedge_status": "none"
   }
 ]
