@@ -48721,10 +48721,46 @@
   },
   {
     "date": "20251121",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 34,
+    "pop": [
+      "ALKT",
+      "ALTI",
+      "BATRA",
+      "CBNA",
+      "CHE",
+      "CLDX",
+      "CROX",
+      "CSV",
+      "DRUG",
+      "EBF",
+      "ECL",
+      "EPR",
+      "EVTC",
+      "FDS",
+      "LNT",
+      "OLLI",
+      "PGRE",
+      "PSKY",
+      "RPT",
+      "SBH",
+      "SXT",
+      "UVV",
+      "VRSK"
+    ],
+    "drop": [
+      "AL",
+      "AON",
+      "CME",
+      "ED",
+      "NEE",
+      "POST",
+      "RNR",
+      "SPNS",
+      "TPB",
+      "TR",
+      "TTEK"
+    ],
+    "pop_pct": 0.676,
+    "drop_pct": 0.324
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 40.0,
     "volume": 82292.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,21,00,00,00,000000",
+    "ticker": "CCBG",
+    "open": 39.9300003052,
+    "high": 41.6450004578,
+    "low": 39.9300003052,
+    "close": 41.3899993896,
+    "volume": 75934.0,
+    "wedge_status": "none"
   }
 ]

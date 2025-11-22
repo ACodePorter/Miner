@@ -7508,5 +7508,15 @@
     "close": 82.0,
     "volume": 9588586.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,21,00,00,00,000000",
+    "ticker": "NEM",
+    "open": 82.0100021362,
+    "high": 83.8899993896,
+    "low": 81.3416976929,
+    "close": 83.4899978638,
+    "volume": 7505024.0,
+    "wedge_status": "none"
   }
 ]

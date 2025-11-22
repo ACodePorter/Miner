@@ -7508,5 +7508,15 @@
     "close": 32.0,
     "volume": 2123718.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,21,00,00,00,000000",
+    "ticker": "AMH",
+    "open": 32.1399993896,
+    "high": 32.625,
+    "low": 32.0050010681,
+    "close": 32.4000015259,
+    "volume": 1927690.0,
+    "wedge_status": "none"
   }
 ]
