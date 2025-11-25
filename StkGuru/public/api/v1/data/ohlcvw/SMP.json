@@ -7498,5 +7498,15 @@
     "close": 37.75,
     "volume": 106791.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,24,00,00,00,000000",
+    "ticker": "SMP",
+    "open": 37.4900016785,
+    "high": 38.0950012207,
+    "low": 36.8849983215,
+    "close": 37.4599990845,
+    "volume": 87260.0,
+    "wedge_status": "none"
   }
 ]

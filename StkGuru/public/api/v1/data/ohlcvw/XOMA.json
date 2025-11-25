@@ -7498,5 +7498,15 @@
     "close": 31.75,
     "volume": 44678.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,24,00,00,00,000000",
+    "ticker": "XOMA",
+    "open": 31.5699996948,
+    "high": 32.2299995422,
+    "low": 31.5100002289,
+    "close": 31.7999992371,
+    "volume": 78445.0,
+    "wedge_status": "none"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 2.2200000286,
     "volume": 21168888.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,24,00,00,00,000000",
+    "ticker": "PACB",
+    "open": 2.1930000782,
+    "high": 2.5250000954,
+    "low": 2.1800000668,
+    "close": 2.5,
+    "volume": 18796588.0,
+    "wedge_status": "none"
   }
 ]

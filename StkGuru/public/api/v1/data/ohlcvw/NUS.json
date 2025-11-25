@@ -7498,5 +7498,15 @@
     "close": 10.0200004578,
     "volume": 427955.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,24,00,00,00,000000",
+    "ticker": "NUS",
+    "open": 9.9200000763,
+    "high": 10.1000003815,
+    "low": 9.7600002289,
+    "close": 10.0,
+    "volume": 312720.0,
+    "wedge_status": "none"
   }
 ]

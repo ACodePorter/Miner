@@ -7498,5 +7498,15 @@
     "close": 70.3300018311,
     "volume": 10820818.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,24,00,00,00,000000",
+    "ticker": "GM",
+    "open": 70.4800033569,
+    "high": 71.2201004028,
+    "low": 70.25,
+    "close": 71.0,
+    "volume": 6047638.0,
+    "wedge_status": "none"
   }
 ]

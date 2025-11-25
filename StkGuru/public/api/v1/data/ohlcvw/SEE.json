@@ -7498,5 +7498,15 @@
     "close": 42.7299995422,
     "volume": 2514616.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,24,00,00,00,000000",
+    "ticker": "SEE",
+    "open": 42.6300010681,
+    "high": 43.5,
+    "low": 42.6300010681,
+    "close": 43.4000015259,
+    "volume": 1340194.0,
+    "wedge_status": "none"
   }
 ]

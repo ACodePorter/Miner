@@ -7498,5 +7498,15 @@
     "close": 97.2699966431,
     "volume": 1293701.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,24,00,00,00,000000",
+    "ticker": "CCK",
+    "open": 96.5,
+    "high": 97.25,
+    "low": 94.4225006104,
+    "close": 95.2399978638,
+    "volume": 2296574.0,
+    "wedge_status": "drop"
   }
 ]

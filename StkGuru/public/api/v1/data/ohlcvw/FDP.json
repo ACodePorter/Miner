@@ -7498,5 +7498,15 @@
     "close": 35.0299987793,
     "volume": 231600.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,24,00,00,00,000000",
+    "ticker": "FDP",
+    "open": 34.8499984741,
+    "high": 35.1800003052,
+    "low": 34.6100006104,
+    "close": 34.75,
+    "volume": 154051.0,
+    "wedge_status": "none"
   }
 ]

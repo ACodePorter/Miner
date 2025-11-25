@@ -7498,5 +7498,15 @@
     "close": 33.5,
     "volume": 1356440.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,24,00,00,00,000000",
+    "ticker": "PAR",
+    "open": 33.1300010681,
+    "high": 33.8298988342,
+    "low": 32.5,
+    "close": 33.0200004578,
+    "volume": 505343.0,
+    "wedge_status": "none"
   }
 ]
