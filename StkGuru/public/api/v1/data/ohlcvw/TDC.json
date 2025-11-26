@@ -7508,5 +7508,15 @@
     "close": 27.6700000763,
     "volume": 869962.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,25,00,00,00,000000",
+    "ticker": "TDC",
+    "open": 27.7999992371,
+    "high": 28.7250003815,
+    "low": 27.8400001526,
+    "close": 28.5,
+    "volume": 1208192.0,
+    "wedge_status": "none"
   }
 ]

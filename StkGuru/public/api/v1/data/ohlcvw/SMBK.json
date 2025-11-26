@@ -7508,5 +7508,15 @@
     "close": 35.5,
     "volume": 36665.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,25,00,00,00,000000",
+    "ticker": "SMBK",
+    "open": 35.8699989319,
+    "high": 36.7400016785,
+    "low": 35.6800003052,
+    "close": 36.5,
+    "volume": 79750.0,
+    "wedge_status": "none"
   }
 ]

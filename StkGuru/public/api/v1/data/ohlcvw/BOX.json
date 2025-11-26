@@ -7508,5 +7508,15 @@
     "close": 30.0499992371,
     "volume": 1473528.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,25,00,00,00,000000",
+    "ticker": "BOX",
+    "open": 30.0900001526,
+    "high": 30.4500007629,
+    "low": 29.8799991608,
+    "close": 30.0,
+    "volume": 1327213.0,
+    "wedge_status": "none"
   }
 ]

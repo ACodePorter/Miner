@@ -7508,5 +7508,15 @@
     "close": 11.5,
     "volume": 173139.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,25,00,00,00,000000",
+    "ticker": "MG",
+    "open": 11.6499996185,
+    "high": 11.8800001144,
+    "low": 11.3999996185,
+    "close": 11.8599996567,
+    "volume": 96165.0,
+    "wedge_status": "none"
   }
 ]

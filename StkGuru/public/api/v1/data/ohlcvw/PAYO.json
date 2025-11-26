@@ -7508,5 +7508,15 @@
     "close": 5.5100002289,
     "volume": 2567046.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,25,00,00,00,000000",
+    "ticker": "PAYO",
+    "open": 5.5199999809,
+    "high": 5.7300000191,
+    "low": 5.5,
+    "close": 5.6999998093,
+    "volume": 2906538.0,
+    "wedge_status": "pop"
   }
 ]

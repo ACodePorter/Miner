@@ -7508,5 +7508,15 @@
     "close": 5.5,
     "volume": 225062.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,25,00,00,00,000000",
+    "ticker": "AURA",
+    "open": 5.5300002098,
+    "high": 6.1999998093,
+    "low": 5.5300002098,
+    "close": 6.1100001335,
+    "volume": 427503.0,
+    "wedge_status": "none"
   }
 ]

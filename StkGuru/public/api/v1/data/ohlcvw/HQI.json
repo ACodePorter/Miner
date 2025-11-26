@@ -7508,5 +7508,15 @@
     "close": 8.9600000381,
     "volume": 11678.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,25,00,00,00,000000",
+    "ticker": "HQI",
+    "open": 8.7849998474,
+    "high": 8.7849998474,
+    "low": 8.6149997711,
+    "close": 8.6199998856,
+    "volume": 4996.0,
+    "wedge_status": "none"
   }
 ]

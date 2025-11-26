@@ -7508,5 +7508,15 @@
     "close": 99.0,
     "volume": 5393055.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,25,00,00,00,000000",
+    "ticker": "ORLY",
+    "open": 99.6650009155,
+    "high": 101.5800018311,
+    "low": 99.3300018311,
+    "close": 101.3799972534,
+    "volume": 4183075.0,
+    "wedge_status": "none"
   }
 ]
