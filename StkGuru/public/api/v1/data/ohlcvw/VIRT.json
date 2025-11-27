@@ -7518,5 +7518,15 @@
     "close": 34.7000007629,
     "volume": 976540.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,11,26,00,00,00,000000",
+    "ticker": "VIRT",
+    "open": 34.75,
+    "high": 35.8499984741,
+    "low": 34.9599990845,
+    "close": 35.3400001526,
+    "volume": 646558.0,
+    "wedge_status": "none"
   }
 ]
