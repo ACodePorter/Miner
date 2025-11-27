@@ -7518,5 +7518,15 @@
     "close": 84.2099990845,
     "volume": 802198.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,11,26,00,00,00,000000",
+    "ticker": "PSN",
+    "open": 84.0899963379,
+    "high": 85.0,
+    "low": 83.8150024414,
+    "close": 84.1299972534,
+    "volume": 454019.0,
+    "wedge_status": "none"
   }
 ]

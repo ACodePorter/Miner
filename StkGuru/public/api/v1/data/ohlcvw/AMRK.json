@@ -7518,5 +7518,15 @@
     "close": 26.5699996948,
     "volume": 168450.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,11,26,00,00,00,000000",
+    "ticker": "AMRK",
+    "open": 26.5699996948,
+    "high": 27.3700008392,
+    "low": 26.5,
+    "close": 27.2700004578,
+    "volume": 190572.0,
+    "wedge_status": "none"
   }
 ]

@@ -4868,5 +4868,15 @@
     "close": 36.8899993896,
     "volume": 532664.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,11,26,00,00,00,000000",
+    "ticker": "NATL",
+    "open": 36.7700004578,
+    "high": 37.5,
+    "low": 36.7900009155,
+    "close": 36.9199981689,
+    "volume": 328426.0,
+    "wedge_status": "none"
   }
 ]

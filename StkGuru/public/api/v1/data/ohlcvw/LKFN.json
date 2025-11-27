@@ -7518,5 +7518,15 @@
     "close": 59.25,
     "volume": 202606.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,11,26,00,00,00,000000",
+    "ticker": "LKFN",
+    "open": 59.0,
+    "high": 60.0,
+    "low": 58.6199989319,
+    "close": 58.7299995422,
+    "volume": 207975.0,
+    "wedge_status": "none"
   }
 ]

@@ -7518,5 +7518,15 @@
     "close": 12.0,
     "volume": 2929001.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,26,00,00,00,000000",
+    "ticker": "APLE",
+    "open": 12.029999733,
+    "high": 12.1450004578,
+    "low": 11.9799995422,
+    "close": 11.9799995422,
+    "volume": 3899542.0,
+    "wedge_status": "none"
   }
 ]

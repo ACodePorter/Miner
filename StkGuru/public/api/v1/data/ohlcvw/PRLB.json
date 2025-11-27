@@ -7518,5 +7518,15 @@
     "close": 50.7799987793,
     "volume": 122516.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,11,26,00,00,00,000000",
+    "ticker": "PRLB",
+    "open": 50.25,
+    "high": 51.938999176,
+    "low": 50.6949996948,
+    "close": 50.8600006104,
+    "volume": 138349.0,
+    "wedge_status": "none"
   }
 ]

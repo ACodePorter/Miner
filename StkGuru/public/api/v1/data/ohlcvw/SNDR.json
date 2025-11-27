@@ -7518,5 +7518,15 @@
     "close": 22.4400005341,
     "volume": 763269.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,11,26,00,00,00,000000",
+    "ticker": "SNDR",
+    "open": 22.3500003815,
+    "high": 22.8299999237,
+    "low": 22.375,
+    "close": 22.5300006866,
+    "volume": 690674.0,
+    "wedge_status": "none"
   }
 ]
