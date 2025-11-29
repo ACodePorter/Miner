@@ -7508,5 +7508,15 @@
     "close": 121.1200027466,
     "volume": 75126.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,28,00,00,00,000000",
+    "ticker": "USLM",
+    "open": 121.0,
+    "high": 121.5699996948,
+    "low": 119.9649963379,
+    "close": 121.5699996948,
+    "volume": 24201.0,
+    "wedge_status": "none"
   }
 ]

@@ -2388,5 +2388,15 @@
     "close": 28.0,
     "volume": 503775.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,28,00,00,00,000000",
+    "ticker": "UPB",
+    "open": 28.1299991608,
+    "high": 28.8899993896,
+    "low": 28.0599994659,
+    "close": 28.6000003815,
+    "volume": 145017.0,
+    "wedge_status": "none"
   }
 ]

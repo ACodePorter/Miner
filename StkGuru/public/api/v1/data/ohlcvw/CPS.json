@@ -7508,5 +7508,15 @@
     "close": 30.9200000763,
     "volume": 101146.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,28,00,00,00,000000",
+    "ticker": "CPS",
+    "open": 30.7999992371,
+    "high": 31.4799995422,
+    "low": 30.7399997711,
+    "close": 31.25,
+    "volume": 63775.0,
+    "wedge_status": "pop"
   }
 ]

@@ -2498,5 +2498,15 @@
     "close": 23.9200000763,
     "volume": 375610.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,28,00,00,00,000000",
+    "ticker": "CURB",
+    "open": 24.0,
+    "high": 24.1350002289,
+    "low": 23.5699996948,
+    "close": 23.9400005341,
+    "volume": 235235.0,
+    "wedge_status": "none"
   }
 ]

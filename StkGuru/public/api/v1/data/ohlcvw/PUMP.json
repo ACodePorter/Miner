@@ -7508,5 +7508,15 @@
     "close": 9.4200000763,
     "volume": 1337121.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,28,00,00,00,000000",
+    "ticker": "PUMP",
+    "open": 9.5,
+    "high": 9.6786003113,
+    "low": 9.3800001144,
+    "close": 9.5699996948,
+    "volume": 780763.0,
+    "wedge_status": "none"
   }
 ]

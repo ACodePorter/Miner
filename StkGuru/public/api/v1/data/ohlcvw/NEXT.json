@@ -7508,5 +7508,15 @@
     "close": 6.0,
     "volume": 2386314.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,28,00,00,00,000000",
+    "ticker": "NEXT",
+    "open": 6.0300002098,
+    "high": 6.2150001526,
+    "low": 5.9299998283,
+    "close": 6.1100001335,
+    "volume": 2085096.0,
+    "wedge_status": "none"
   }
 ]

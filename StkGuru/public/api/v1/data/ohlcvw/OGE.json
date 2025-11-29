@@ -7508,5 +7508,15 @@
     "close": 45.5,
     "volume": 1123638.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,28,00,00,00,000000",
+    "ticker": "OGE",
+    "open": 45.7599983215,
+    "high": 45.7999992371,
+    "low": 45.5,
+    "close": 45.7799987793,
+    "volume": 636616.0,
+    "wedge_status": "none"
   }
 ]
