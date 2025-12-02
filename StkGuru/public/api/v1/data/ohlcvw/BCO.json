@@ -7488,5 +7488,15 @@
     "close": 112.3300018311,
     "volume": 117105.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,01,00,00,00,000000",
+    "ticker": "BCO",
+    "open": 111.5,
+    "high": 113.4700012207,
+    "low": 111.5,
+    "close": 112.7600021362,
+    "volume": 198918.0,
+    "wedge_status": "none"
   }
 ]

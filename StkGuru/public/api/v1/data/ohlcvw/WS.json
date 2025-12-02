@@ -4548,5 +4548,15 @@
     "close": 33.75,
     "volume": 83390.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,01,00,00,00,000000",
+    "ticker": "WS",
+    "open": 33.5,
+    "high": 34.4500007629,
+    "low": 33.3950004578,
+    "close": 34.1899986267,
+    "volume": 76397.0,
+    "wedge_status": "none"
   }
 ]

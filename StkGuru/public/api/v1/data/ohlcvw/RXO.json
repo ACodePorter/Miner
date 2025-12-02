@@ -7308,5 +7308,15 @@
     "close": 13.220000267,
     "volume": 606221.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,12,01,00,00,00,000000",
+    "ticker": "RXO",
+    "open": 12.970000267,
+    "high": 13.7150001526,
+    "low": 12.8255996704,
+    "close": 13.25,
+    "volume": 1106920.0,
+    "wedge_status": "none"
   }
 ]

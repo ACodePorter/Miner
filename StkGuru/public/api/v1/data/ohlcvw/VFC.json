@@ -7488,5 +7488,15 @@
     "close": 17.5,
     "volume": 2124190.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,01,00,00,00,000000",
+    "ticker": "VFC",
+    "open": 17.2700004578,
+    "high": 18.239900589,
+    "low": 16.9843997955,
+    "close": 18.1399993896,
+    "volume": 4629728.0,
+    "wedge_status": "none"
   }
 ]

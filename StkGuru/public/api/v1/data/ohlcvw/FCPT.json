@@ -7488,5 +7488,15 @@
     "close": 24.0400009155,
     "volume": 394557.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,12,01,00,00,00,000000",
+    "ticker": "FCPT",
+    "open": 23.8400001526,
+    "high": 23.9950008392,
+    "low": 23.75,
+    "close": 23.7600002289,
+    "volume": 352627.0,
+    "wedge_status": "drop"
   }
 ]

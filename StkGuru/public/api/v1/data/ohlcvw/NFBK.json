@@ -7488,5 +7488,15 @@
     "close": 10.75,
     "volume": 65823.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,01,00,00,00,000000",
+    "ticker": "NFBK",
+    "open": 10.7150001526,
+    "high": 11.029999733,
+    "low": 10.6999998093,
+    "close": 10.9799995422,
+    "volume": 157283.0,
+    "wedge_status": "none"
   }
 ]

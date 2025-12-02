@@ -7488,5 +7488,15 @@
     "close": 452.5,
     "volume": 97383.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,01,00,00,00,000000",
+    "ticker": "BLD",
+    "open": 445.5,
+    "high": 454.1575012207,
+    "low": 441.700012207,
+    "close": 445.8200073242,
+    "volume": 163344.0,
+    "wedge_status": "none"
   }
 ]

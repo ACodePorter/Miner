@@ -7488,5 +7488,15 @@
     "close": 37.3100013733,
     "volume": 506258.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,01,00,00,00,000000",
+    "ticker": "UNFI",
+    "open": 37.0999984741,
+    "high": 37.2799987793,
+    "low": 34.25,
+    "close": 34.3600006104,
+    "volume": 2042086.0,
+    "wedge_status": "drop"
   }
 ]

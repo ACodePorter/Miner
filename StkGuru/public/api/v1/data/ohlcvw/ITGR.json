@@ -7488,5 +7488,15 @@
     "close": 72.1800003052,
     "volume": 170616.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,12,01,00,00,00,000000",
+    "ticker": "ITGR",
+    "open": 71.5500030518,
+    "high": 73.1849975586,
+    "low": 71.6800003052,
+    "close": 71.75,
+    "volume": 365543.0,
+    "wedge_status": "none"
   }
 ]

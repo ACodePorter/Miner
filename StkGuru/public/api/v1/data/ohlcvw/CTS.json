@@ -7488,5 +7488,15 @@
     "close": 42.3300018311,
     "volume": 86258.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,01,00,00,00,000000",
+    "ticker": "CTS",
+    "open": 42.0099983215,
+    "high": 42.5299987793,
+    "low": 41.6500015259,
+    "close": 42.5,
+    "volume": 142156.0,
+    "wedge_status": "none"
   }
 ]

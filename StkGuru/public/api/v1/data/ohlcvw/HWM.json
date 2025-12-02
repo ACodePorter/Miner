@@ -7488,5 +7488,15 @@
     "close": 204.5899963379,
     "volume": 688560.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,01,00,00,00,000000",
+    "ticker": "HWM",
+    "open": 203.0,
+    "high": 203.5700073242,
+    "low": 198.5,
+    "close": 198.7400054932,
+    "volume": 1258875.0,
+    "wedge_status": "drop"
   }
 ]
