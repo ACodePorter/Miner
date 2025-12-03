@@ -7498,5 +7498,15 @@
     "close": 5.3800001144,
     "volume": 47610.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,02,00,00,00,000000",
+    "ticker": "CIA",
+    "open": 5.3600001335,
+    "high": 5.3800001144,
+    "low": 5.2249999046,
+    "close": 5.3200001717,
+    "volume": 37394.0,
+    "wedge_status": "none"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 310.8299865723,
     "volume": 863968.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,02,00,00,00,000000",
+    "ticker": "PODD",
+    "open": 312.9100036621,
+    "high": 314.0,
+    "low": 306.6900024414,
+    "close": 309.0,
+    "volume": 720705.0,
+    "wedge_status": "none"
   }
 ]

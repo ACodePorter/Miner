@@ -7498,5 +7498,15 @@
     "close": 612.25,
     "volume": 165311.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,02,00,00,00,000000",
+    "ticker": "CACI",
+    "open": 615.25,
+    "high": 625.6298828125,
+    "low": 606.1099853516,
+    "close": 606.3599853516,
+    "volume": 289313.0,
+    "wedge_status": "none"
   }
 ]

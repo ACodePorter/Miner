@@ -7498,5 +7498,15 @@
     "close": 5.2399997711,
     "volume": 844213.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,02,00,00,00,000000",
+    "ticker": "ALDX",
+    "open": 5.2199997902,
+    "high": 5.25,
+    "low": 4.8400001526,
+    "close": 4.8699998856,
+    "volume": 1654711.0,
+    "wedge_status": "drop"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 20.8099994659,
     "volume": 98122.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,02,00,00,00,000000",
+    "ticker": "OLP",
+    "open": 20.7700004578,
+    "high": 20.75,
+    "low": 20.4249992371,
+    "close": 20.4500007629,
+    "volume": 53635.0,
+    "wedge_status": "drop"
   }
 ]

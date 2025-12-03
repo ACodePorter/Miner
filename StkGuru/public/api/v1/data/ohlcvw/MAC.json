@@ -7498,5 +7498,15 @@
     "close": 17.3600006104,
     "volume": 846801.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,02,00,00,00,000000",
+    "ticker": "MAC",
+    "open": 17.4099998474,
+    "high": 17.5,
+    "low": 17.1000003815,
+    "close": 17.1000003815,
+    "volume": 744139.0,
+    "wedge_status": "none"
   }
 ]

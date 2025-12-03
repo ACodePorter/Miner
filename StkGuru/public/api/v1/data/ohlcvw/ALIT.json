@@ -7498,5 +7498,15 @@
     "close": 2.3599998951,
     "volume": 19393767.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,12,02,00,00,00,000000",
+    "ticker": "ALIT",
+    "open": 2.3699998856,
+    "high": 2.375,
+    "low": 2.2200000286,
+    "close": 2.2300000191,
+    "volume": 11517156.0,
+    "wedge_status": "none"
   }
 ]

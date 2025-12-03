@@ -7498,5 +7498,15 @@
     "close": 106.8000030518,
     "volume": 592805.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,02,00,00,00,000000",
+    "ticker": "AGCO",
+    "open": 106.9300003052,
+    "high": 107.5,
+    "low": 103.0,
+    "close": 104.2600021362,
+    "volume": 1270447.0,
+    "wedge_status": "drop"
   }
 ]

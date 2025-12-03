@@ -7498,5 +7498,15 @@
     "close": 47.25,
     "volume": 345031.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,02,00,00,00,000000",
+    "ticker": "NJR",
+    "open": 47.4500007629,
+    "high": 47.6199989319,
+    "low": 46.3499984741,
+    "close": 46.3600006104,
+    "volume": 319390.0,
+    "wedge_status": "drop"
   }
 ]

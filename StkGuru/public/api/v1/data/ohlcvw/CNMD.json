@@ -7498,5 +7498,15 @@
     "close": 44.5,
     "volume": 495088.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,02,00,00,00,000000",
+    "ticker": "CNMD",
+    "open": 44.5400009155,
+    "high": 44.7299995422,
+    "low": 43.3800010681,
+    "close": 44.0299987793,
+    "volume": 401685.0,
+    "wedge_status": "none"
   }
 ]
