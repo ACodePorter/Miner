@@ -7508,5 +7508,15 @@
     "close": 43.75,
     "volume": 14085.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,03,00,00,00,000000",
+    "ticker": "NC",
+    "open": 44.3300018311,
+    "high": 46.7616996765,
+    "low": 44.3800010681,
+    "close": 46.7000007629,
+    "volume": 8781.0,
+    "wedge_status": "none"
   }
 ]

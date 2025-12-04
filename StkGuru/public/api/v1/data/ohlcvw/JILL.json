@@ -7508,5 +7508,15 @@
     "close": 15.75,
     "volume": 103570.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,03,00,00,00,000000",
+    "ticker": "JILL",
+    "open": 15.8500003815,
+    "high": 17.0499992371,
+    "low": 15.8350000381,
+    "close": 16.75,
+    "volume": 56527.0,
+    "wedge_status": "none"
   }
 ]

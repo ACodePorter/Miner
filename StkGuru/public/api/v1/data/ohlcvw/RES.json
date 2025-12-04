@@ -7508,5 +7508,15 @@
     "close": 5.4000000954,
     "volume": 962295.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,03,00,00,00,000000",
+    "ticker": "RES",
+    "open": 5.4600000381,
+    "high": 5.75,
+    "low": 5.4400000572,
+    "close": 5.75,
+    "volume": 1108156.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 38.5,
     "volume": 5692.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,03,00,00,00,000000",
+    "ticker": "OVBC",
+    "open": 38.4261016846,
+    "high": 39.4076004028,
+    "low": 38.2999992371,
+    "close": 39.2799987793,
+    "volume": 35554.0,
+    "wedge_status": "none"
   }
 ]

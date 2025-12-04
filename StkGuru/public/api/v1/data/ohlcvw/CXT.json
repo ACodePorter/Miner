@@ -7508,5 +7508,15 @@
     "close": 56.0,
     "volume": 256120.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,03,00,00,00,000000",
+    "ticker": "CXT",
+    "open": 56.5099983215,
+    "high": 57.2949981689,
+    "low": 55.7585983276,
+    "close": 57.3100013733,
+    "volume": 211473.0,
+    "wedge_status": "none"
   }
 ]

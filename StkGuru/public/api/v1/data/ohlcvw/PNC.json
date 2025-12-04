@@ -7508,5 +7508,15 @@
     "close": 192.0500030518,
     "volume": 874007.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,03,00,00,00,000000",
+    "ticker": "PNC",
+    "open": 192.6199951172,
+    "high": 198.1199951172,
+    "low": 192.0,
+    "close": 198.0,
+    "volume": 1363520.0,
+    "wedge_status": "none"
   }
 ]

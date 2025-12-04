@@ -7508,5 +7508,15 @@
     "close": 212.6699981689,
     "volume": 856389.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,03,00,00,00,000000",
+    "ticker": "RSG",
+    "open": 213.0,
+    "high": 215.3650054932,
+    "low": 212.0,
+    "close": 215.3699951172,
+    "volume": 958883.0,
+    "wedge_status": "none"
   }
 ]

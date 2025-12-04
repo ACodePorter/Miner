@@ -7508,5 +7508,15 @@
     "close": 169.9199981689,
     "volume": 735198.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,03,00,00,00,000000",
+    "ticker": "TXRH",
+    "open": 169.4199981689,
+    "high": 170.5749969482,
+    "low": 168.0,
+    "close": 169.0,
+    "volume": 766585.0,
+    "wedge_status": "none"
   }
 ]

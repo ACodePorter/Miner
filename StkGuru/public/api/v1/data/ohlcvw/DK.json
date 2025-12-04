@@ -7508,5 +7508,15 @@
     "close": 38.75,
     "volume": 1000627.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,03,00,00,00,000000",
+    "ticker": "DK",
+    "open": 39.0,
+    "high": 39.25,
+    "low": 37.2700004578,
+    "close": 38.1300010681,
+    "volume": 662001.0,
+    "wedge_status": "none"
   }
 ]

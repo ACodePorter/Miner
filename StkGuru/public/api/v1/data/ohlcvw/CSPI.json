@@ -7508,5 +7508,15 @@
     "close": 11.1300001144,
     "volume": 3915.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,03,00,00,00,000000",
+    "ticker": "CSPI",
+    "open": 11.1000003815,
+    "high": 11.4799995422,
+    "low": 11.1000003815,
+    "close": 11.4499998093,
+    "volume": 6338.0,
+    "wedge_status": "none"
   }
 ]
