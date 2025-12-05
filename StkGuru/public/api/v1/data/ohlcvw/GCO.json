@@ -7508,5 +7508,15 @@
     "close": 35.25,
     "volume": 255242.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,04,00,00,00,000000",
+    "ticker": "GCO",
+    "open": 24.5499992371,
+    "high": 26.5,
+    "low": 22.0501003265,
+    "close": 24.3799991608,
+    "volume": 749804.0,
+    "wedge_status": "drop"
   }
 ]

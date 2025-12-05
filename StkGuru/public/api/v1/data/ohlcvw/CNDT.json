@@ -7508,5 +7508,15 @@
     "close": 2.0,
     "volume": 1382153.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,04,00,00,00,000000",
+    "ticker": "CNDT",
+    "open": 1.9800000191,
+    "high": 2.0699999332,
+    "low": 1.9800000191,
+    "close": 1.9800000191,
+    "volume": 1121806.0,
+    "wedge_status": "none"
   }
 ]

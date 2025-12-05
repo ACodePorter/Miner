@@ -7508,5 +7508,15 @@
     "close": 265.0,
     "volume": 8713894.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,04,00,00,00,000000",
+    "ticker": "SNOW",
+    "open": 244.0,
+    "high": 244.1398925781,
+    "low": 234.0301055908,
+    "close": 234.7700042725,
+    "volume": 25564649.0,
+    "wedge_status": "drop"
   }
 ]

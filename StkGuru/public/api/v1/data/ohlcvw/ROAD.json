@@ -7508,5 +7508,15 @@
     "close": 105.0,
     "volume": 305823.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,04,00,00,00,000000",
+    "ticker": "ROAD",
+    "open": 104.5,
+    "high": 105.6425018311,
+    "low": 103.5699996948,
+    "close": 105.3799972534,
+    "volume": 262167.0,
+    "wedge_status": "none"
   }
 ]

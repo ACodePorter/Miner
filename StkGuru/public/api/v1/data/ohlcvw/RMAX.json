@@ -7508,5 +7508,15 @@
     "close": 8.25,
     "volume": 87240.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,04,00,00,00,000000",
+    "ticker": "RMAX",
+    "open": 8.220000267,
+    "high": 8.1700000763,
+    "low": 8.0699996948,
+    "close": 8.0900001526,
+    "volume": 75743.0,
+    "wedge_status": "none"
   }
 ]

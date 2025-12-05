@@ -7508,5 +7508,15 @@
     "close": 251.4400024414,
     "volume": 411184.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,04,00,00,00,000000",
+    "ticker": "RMD",
+    "open": 251.25,
+    "high": 252.75,
+    "low": 250.3399963379,
+    "close": 251.5099945068,
+    "volume": 361771.0,
+    "wedge_status": "none"
   }
 ]
