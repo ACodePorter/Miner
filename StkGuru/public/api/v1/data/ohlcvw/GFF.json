@@ -7508,5 +7508,15 @@
     "close": 73.25,
     "volume": 167860.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,05,00,00,00,000000",
+    "ticker": "GFF",
+    "open": 73.7300033569,
+    "high": 73.9599990845,
+    "low": 72.7649993896,
+    "close": 73.9000015259,
+    "volume": 206393.0,
+    "wedge_status": "none"
   }
 ]

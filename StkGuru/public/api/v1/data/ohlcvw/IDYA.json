@@ -7508,5 +7508,15 @@
     "close": 36.0099983215,
     "volume": 1456789.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,05,00,00,00,000000",
+    "ticker": "IDYA",
+    "open": 36.0,
+    "high": 36.4399986267,
+    "low": 35.3899993896,
+    "close": 35.8699989319,
+    "volume": 691442.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 46.0099983215,
     "volume": 56280.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,05,00,00,00,000000",
+    "ticker": "GRC",
+    "open": 46.1800003052,
+    "high": 46.4799995422,
+    "low": 45.8300018311,
+    "close": 46.25,
+    "volume": 35236.0,
+    "wedge_status": "none"
   }
 ]

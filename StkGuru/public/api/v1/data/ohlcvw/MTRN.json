@@ -7508,5 +7508,15 @@
     "close": 123.4000015259,
     "volume": 78947.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,05,00,00,00,000000",
+    "ticker": "MTRN",
+    "open": 124.3300018311,
+    "high": 127.2300033569,
+    "low": 121.3136978149,
+    "close": 125.25,
+    "volume": 224509.0,
+    "wedge_status": "none"
   }
 ]

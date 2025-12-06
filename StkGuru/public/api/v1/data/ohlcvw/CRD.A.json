@@ -7508,5 +7508,15 @@
     "close": 11.0399999619,
     "volume": 27138.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,05,00,00,00,000000",
+    "ticker": "CRD.A",
+    "open": 10.9899997711,
+    "high": 11.1499996185,
+    "low": 10.9600000381,
+    "close": 11.0,
+    "volume": 26124.0,
+    "wedge_status": "none"
   }
 ]

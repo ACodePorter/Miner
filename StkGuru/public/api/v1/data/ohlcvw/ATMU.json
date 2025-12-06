@@ -5898,5 +5898,15 @@
     "close": 52.8899993896,
     "volume": 483930.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,05,00,00,00,000000",
+    "ticker": "ATMU",
+    "open": 52.8400001526,
+    "high": 52.9225006104,
+    "low": 51.9000015259,
+    "close": 52.25,
+    "volume": 413326.0,
+    "wedge_status": "none"
   }
 ]

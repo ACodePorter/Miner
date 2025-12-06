@@ -3648,5 +3648,15 @@
     "close": 25.25,
     "volume": 1695548.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,05,00,00,00,000000",
+    "ticker": "CTRI",
+    "open": 25.2299995422,
+    "high": 25.7099990845,
+    "low": 24.9549999237,
+    "close": 25.5799999237,
+    "volume": 1641331.0,
+    "wedge_status": "none"
   }
 ]

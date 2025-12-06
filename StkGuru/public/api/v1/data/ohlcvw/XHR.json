@@ -7508,5 +7508,15 @@
     "close": 13.4600000381,
     "volume": 520044.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,05,00,00,00,000000",
+    "ticker": "XHR",
+    "open": 13.4499998093,
+    "high": 13.5900001526,
+    "low": 13.4200000763,
+    "close": 13.5,
+    "volume": 425055.0,
+    "wedge_status": "none"
   }
 ]

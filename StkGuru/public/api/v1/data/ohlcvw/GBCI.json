@@ -7508,5 +7508,15 @@
     "close": 42.7900009155,
     "volume": 483379.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,05,00,00,00,000000",
+    "ticker": "GBCI",
+    "open": 42.75,
+    "high": 42.8300018311,
+    "low": 42.2700004578,
+    "close": 42.2900009155,
+    "volume": 659024.0,
+    "wedge_status": "none"
   }
 ]
