@@ -7488,5 +7488,15 @@
     "close": 43.2700004578,
     "volume": 6380.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,08,00,00,00,000000",
+    "ticker": "FDBC",
+    "open": 43.5556983948,
+    "high": 43.5654983521,
+    "low": 42.8400001526,
+    "close": 43.5,
+    "volume": 6522.0,
+    "wedge_status": "none"
   }
 ]

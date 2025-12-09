@@ -7488,5 +7488,15 @@
     "close": 7.5,
     "volume": 673947.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,12,08,00,00,00,000000",
+    "ticker": "NABL",
+    "open": 7.5500001907,
+    "high": 7.7199997902,
+    "low": 7.5164999962,
+    "close": 7.5599999428,
+    "volume": 561072.0,
+    "wedge_status": "none"
   }
 ]

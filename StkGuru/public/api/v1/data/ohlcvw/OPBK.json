@@ -7488,5 +7488,15 @@
     "close": 13.7700004578,
     "volume": 33514.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,08,00,00,00,000000",
+    "ticker": "OPBK",
+    "open": 13.8699998856,
+    "high": 13.9600000381,
+    "low": 13.75,
+    "close": 13.75,
+    "volume": 23368.0,
+    "wedge_status": "none"
   }
 ]

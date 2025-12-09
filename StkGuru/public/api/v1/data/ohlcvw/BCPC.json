@@ -7488,5 +7488,15 @@
     "close": 150.5,
     "volume": 177937.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,08,00,00,00,000000",
+    "ticker": "BCPC",
+    "open": 150.3999938965,
+    "high": 152.8399963379,
+    "low": 147.1900024414,
+    "close": 147.3600006104,
+    "volume": 190730.0,
+    "wedge_status": "none"
   }
 ]

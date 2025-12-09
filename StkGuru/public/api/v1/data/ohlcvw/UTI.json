@@ -7488,5 +7488,15 @@
     "close": 25.5,
     "volume": 1504444.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,08,00,00,00,000000",
+    "ticker": "UTI",
+    "open": 25.5,
+    "high": 25.5,
+    "low": 24.4050006866,
+    "close": 24.5499992371,
+    "volume": 849382.0,
+    "wedge_status": "none"
   }
 ]

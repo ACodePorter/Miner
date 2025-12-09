@@ -5028,5 +5028,15 @@
     "close": 7.0,
     "volume": 3186404.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,08,00,00,00,000000",
+    "ticker": "VSTS",
+    "open": 7.4600000381,
+    "high": 7.6950001717,
+    "low": 7.2699999809,
+    "close": 7.4000000954,
+    "volume": 3626193.0,
+    "wedge_status": "none"
   }
 ]

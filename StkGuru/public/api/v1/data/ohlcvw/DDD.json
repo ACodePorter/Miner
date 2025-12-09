@@ -7488,5 +7488,15 @@
     "close": 2.1600000858,
     "volume": 1171683.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,08,00,00,00,000000",
+    "ticker": "DDD",
+    "open": 2.1900000572,
+    "high": 2.2249999046,
+    "low": 2.125,
+    "close": 2.1300001144,
+    "volume": 866974.0,
+    "wedge_status": "none"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 2.3299999237,
     "volume": 103221.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,08,00,00,00,000000",
+    "ticker": "WALD",
+    "open": 2.3499999046,
+    "high": 2.3499999046,
+    "low": 2.160200119,
+    "close": 2.1900000572,
+    "volume": 144336.0,
+    "wedge_status": "drop"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 6.9899997711,
     "volume": 45502.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,08,00,00,00,000000",
+    "ticker": "SMHI",
+    "open": 7.0199999809,
+    "high": 7.2150001526,
+    "low": 6.9109997749,
+    "close": 7.0799999237,
+    "volume": 38992.0,
+    "wedge_status": "none"
   }
 ]

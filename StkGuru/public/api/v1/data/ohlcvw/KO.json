@@ -7488,5 +7488,15 @@
     "close": 70.0,
     "volume": 13870404.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,08,00,00,00,000000",
+    "ticker": "KO",
+    "open": 69.8399963379,
+    "high": 70.3799972534,
+    "low": 69.5049972534,
+    "close": 70.25,
+    "volume": 11892100.0,
+    "wedge_status": "none"
   }
 ]

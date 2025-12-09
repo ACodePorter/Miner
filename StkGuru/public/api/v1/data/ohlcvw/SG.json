@@ -7488,5 +7488,15 @@
     "close": 6.6900000572,
     "volume": 2189614.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,08,00,00,00,000000",
+    "ticker": "SG",
+    "open": 6.7300000191,
+    "high": 6.75,
+    "low": 6.3800001144,
+    "close": 6.5100002289,
+    "volume": 3049806.0,
+    "wedge_status": "drop"
   }
 ]
