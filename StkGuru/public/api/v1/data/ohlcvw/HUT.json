@@ -7498,5 +7498,15 @@
     "close": 42.9300003052,
     "volume": 2729365.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,09,00,00,00,000000",
+    "ticker": "HUT",
+    "open": 42.1199989319,
+    "high": 46.0,
+    "low": 41.9300003052,
+    "close": 44.9099998474,
+    "volume": 3999195.0,
+    "wedge_status": "none"
   }
 ]

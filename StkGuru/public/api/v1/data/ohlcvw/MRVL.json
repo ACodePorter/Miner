@@ -7498,5 +7498,15 @@
     "close": 92.0,
     "volume": 39702755.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,09,00,00,00,000000",
+    "ticker": "MRVL",
+    "open": 91.6800003052,
+    "high": 91.6900024414,
+    "low": 88.0400009155,
+    "close": 88.9000015259,
+    "volume": 22295742.0,
+    "wedge_status": "drop"
   }
 ]

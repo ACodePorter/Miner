@@ -7498,5 +7498,15 @@
     "close": 70.6399993896,
     "volume": 466772.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,09,00,00,00,000000",
+    "ticker": "MTH",
+    "open": 69.1299972534,
+    "high": 70.7699966431,
+    "low": 69.4000015259,
+    "close": 69.75,
+    "volume": 345796.0,
+    "wedge_status": "none"
   }
 ]

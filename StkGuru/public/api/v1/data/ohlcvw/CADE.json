@@ -7498,5 +7498,15 @@
     "close": 41.5,
     "volume": 1239379.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,09,00,00,00,000000",
+    "ticker": "CADE",
+    "open": 41.3199996948,
+    "high": 42.2350006104,
+    "low": 41.5750007629,
+    "close": 41.6399993896,
+    "volume": 2010588.0,
+    "wedge_status": "none"
   }
 ]

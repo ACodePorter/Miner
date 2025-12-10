@@ -7498,5 +7498,15 @@
     "close": 37.25,
     "volume": 250575.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,09,00,00,00,000000",
+    "ticker": "EPAC",
+    "open": 36.9500007629,
+    "high": 37.7249984741,
+    "low": 36.9000015259,
+    "close": 37.5999984741,
+    "volume": 267912.0,
+    "wedge_status": "none"
   }
 ]

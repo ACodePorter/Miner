@@ -7498,5 +7498,15 @@
     "close": 29.9799995422,
     "volume": 1137148.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,09,00,00,00,000000",
+    "ticker": "LAUR",
+    "open": 30.0,
+    "high": 30.3600006104,
+    "low": 29.8400001526,
+    "close": 30.2999992371,
+    "volume": 959166.0,
+    "wedge_status": "none"
   }
 ]

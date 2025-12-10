@@ -7498,5 +7498,15 @@
     "close": 10.0,
     "volume": 505283.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,09,00,00,00,000000",
+    "ticker": "FPI",
+    "open": 10.0500001907,
+    "high": 10.125,
+    "low": 9.9899997711,
+    "close": 10.0,
+    "volume": 514053.0,
+    "wedge_status": "none"
   }
 ]
