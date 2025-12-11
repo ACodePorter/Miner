@@ -7508,5 +7508,15 @@
     "close": 65.0400009155,
     "volume": 973283.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,10,00,00,00,000000",
+    "ticker": "WPC",
+    "open": 65.3000030518,
+    "high": 66.2399978638,
+    "low": 65.2200012207,
+    "close": 66.0,
+    "volume": 1428211.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 17.8099994659,
     "volume": 293166.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,10,00,00,00,000000",
+    "ticker": "TBPH",
+    "open": 17.8500003815,
+    "high": 17.8799991608,
+    "low": 17.25,
+    "close": 17.6100006104,
+    "volume": 506289.0,
+    "wedge_status": "none"
   }
 ]

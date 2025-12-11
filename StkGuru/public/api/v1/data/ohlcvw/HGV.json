@@ -7508,5 +7508,15 @@
     "close": 41.8199996948,
     "volume": 375693.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,10,00,00,00,000000",
+    "ticker": "HGV",
+    "open": 41.8400001526,
+    "high": 43.1599998474,
+    "low": 41.5924987793,
+    "close": 43.0,
+    "volume": 668423.0,
+    "wedge_status": "none"
   }
 ]

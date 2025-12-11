@@ -7508,5 +7508,15 @@
     "close": 8.25,
     "volume": 2469748.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,10,00,00,00,000000",
+    "ticker": "DAWN",
+    "open": 8.2700004578,
+    "high": 8.670999527,
+    "low": 8.25,
+    "close": 8.5100002289,
+    "volume": 1973846.0,
+    "wedge_status": "none"
   }
 ]

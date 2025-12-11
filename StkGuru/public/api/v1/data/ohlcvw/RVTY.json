@@ -7508,5 +7508,15 @@
     "close": 98.7799987793,
     "volume": 577958.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,10,00,00,00,000000",
+    "ticker": "RVTY",
+    "open": 99.1999969482,
+    "high": 103.5,
+    "low": 99.2249984741,
+    "close": 103.5100021362,
+    "volume": 831610.0,
+    "wedge_status": "none"
   }
 ]

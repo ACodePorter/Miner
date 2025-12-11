@@ -7508,5 +7508,15 @@
     "close": 3.3800001144,
     "volume": 1561838.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,12,10,00,00,00,000000",
+    "ticker": "TOI",
+    "open": 3.4100000858,
+    "high": 3.5299999714,
+    "low": 3.2839999199,
+    "close": 3.5,
+    "volume": 2168755.0,
+    "wedge_status": "none"
   }
 ]

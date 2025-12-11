@@ -7508,5 +7508,15 @@
     "close": 34.6300010681,
     "volume": 117240.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,10,00,00,00,000000",
+    "ticker": "BBSI",
+    "open": 34.5,
+    "high": 35.3800010681,
+    "low": 33.7750015259,
+    "close": 35.1500015259,
+    "volume": 209435.0,
+    "wedge_status": "none"
   }
 ]

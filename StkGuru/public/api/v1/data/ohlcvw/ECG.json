@@ -2358,5 +2358,15 @@
     "close": 91.4599990845,
     "volume": 406050.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,10,00,00,00,000000",
+    "ticker": "ECG",
+    "open": 91.5800018311,
+    "high": 96.7699966431,
+    "low": 91.1299972534,
+    "close": 96.25,
+    "volume": 254447.0,
+    "wedge_status": "none"
   }
 ]

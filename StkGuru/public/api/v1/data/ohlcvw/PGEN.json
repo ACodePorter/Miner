@@ -7508,5 +7508,15 @@
     "close": 3.5099999905,
     "volume": 2329622.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,10,00,00,00,000000",
+    "ticker": "PGEN",
+    "open": 3.5,
+    "high": 3.7000000477,
+    "low": 3.4200000763,
+    "close": 3.5099999905,
+    "volume": 3820095.0,
+    "wedge_status": "none"
   }
 ]

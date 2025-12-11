@@ -7508,5 +7508,15 @@
     "close": 12.5,
     "volume": 1418665.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,10,00,00,00,000000",
+    "ticker": "MNMD",
+    "open": 12.5,
+    "high": 12.6493997574,
+    "low": 12.1899995804,
+    "close": 12.3800001144,
+    "volume": 1787620.0,
+    "wedge_status": "none"
   }
 ]

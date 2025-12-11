@@ -7508,5 +7508,15 @@
     "close": 1318.0200195312,
     "volume": 152035.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,10,00,00,00,000000",
+    "ticker": "TDG",
+    "open": 1320.0,
+    "high": 1322.5,
+    "low": 1276.9899902344,
+    "close": 1302.9000244141,
+    "volume": 369455.0,
+    "wedge_status": "none"
   }
 ]

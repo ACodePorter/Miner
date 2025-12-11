@@ -7508,5 +7508,15 @@
     "close": 9.5,
     "volume": 659669.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,10,00,00,00,000000",
+    "ticker": "MFA",
+    "open": 9.5200004578,
+    "high": 9.6750001907,
+    "low": 9.5200004578,
+    "close": 9.6300001144,
+    "volume": 1305276.0,
+    "wedge_status": "none"
   }
 ]

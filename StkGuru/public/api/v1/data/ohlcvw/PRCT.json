@@ -7508,5 +7508,15 @@
     "close": 35.0,
     "volume": 1897699.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,10,00,00,00,000000",
+    "ticker": "PRCT",
+    "open": 34.8100013733,
+    "high": 35.8499984741,
+    "low": 34.7999992371,
+    "close": 35.7099990845,
+    "volume": 1256604.0,
+    "wedge_status": "none"
   }
 ]

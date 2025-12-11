@@ -7508,5 +7508,15 @@
     "close": 115.4800033569,
     "volume": 126473.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,10,00,00,00,000000",
+    "ticker": "LCII",
+    "open": 115.7600021362,
+    "high": 121.5049972534,
+    "low": 116.1149978638,
+    "close": 121.0,
+    "volume": 236525.0,
+    "wedge_status": "none"
   }
 ]
