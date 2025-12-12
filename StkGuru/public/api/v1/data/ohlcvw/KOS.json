@@ -7498,5 +7498,15 @@
     "close": 1.0299999714,
     "volume": 16837264.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,11,00,00,00,000000",
+    "ticker": "KOS",
+    "open": 1.0099999905,
+    "high": 1.0199999809,
+    "low": 0.9700000286,
+    "close": 1.0,
+    "volume": 16961400.0,
+    "wedge_status": "none"
   }
 ]

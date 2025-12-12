@@ -7498,5 +7498,15 @@
     "close": 36.8100013733,
     "volume": 2476954.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,11,00,00,00,000000",
+    "ticker": "CTRE",
+    "open": 37.0,
+    "high": 37.1899986267,
+    "low": 35.8300018311,
+    "close": 35.9300003052,
+    "volume": 2273200.0,
+    "wedge_status": "none"
   }
 ]

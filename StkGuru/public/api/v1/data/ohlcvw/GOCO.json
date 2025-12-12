@@ -7498,5 +7498,15 @@
     "close": 3.1800000668,
     "volume": 66799.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,11,00,00,00,000000",
+    "ticker": "GOCO",
+    "open": 3.1300001144,
+    "high": 3.4100000858,
+    "low": 3.1050000191,
+    "close": 3.2300000191,
+    "volume": 31900.0,
+    "wedge_status": "none"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 0.6570000052,
     "volume": 1040003.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,11,00,00,00,000000",
+    "ticker": "TSE",
+    "open": 0.6669999957,
+    "high": 0.6690000296,
+    "low": 0.601000011,
+    "close": 0.625,
+    "volume": 829000.0,
+    "wedge_status": "none"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 130.5,
     "volume": 1290345.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,11,00,00,00,000000",
+    "ticker": "TFX",
+    "open": 131.2100067139,
+    "high": 131.5,
+    "low": 125.1500015259,
+    "close": 127.25,
+    "volume": 886147.0,
+    "wedge_status": "none"
   }
 ]

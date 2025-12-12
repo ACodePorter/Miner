@@ -7498,5 +7498,15 @@
     "close": 60.5,
     "volume": 5408239.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,11,00,00,00,000000",
+    "ticker": "WMB",
+    "open": 60.75,
+    "high": 61.1699981689,
+    "low": 60.2252006531,
+    "close": 60.9199981689,
+    "volume": 4100456.0,
+    "wedge_status": "none"
   }
 ]

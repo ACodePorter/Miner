@@ -7498,5 +7498,15 @@
     "close": 6.25,
     "volume": 568321.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,11,00,00,00,000000",
+    "ticker": "SIGA",
+    "open": 6.3000001907,
+    "high": 6.5500001907,
+    "low": 6.25,
+    "close": 6.5199999809,
+    "volume": 462000.0,
+    "wedge_status": "none"
   }
 ]

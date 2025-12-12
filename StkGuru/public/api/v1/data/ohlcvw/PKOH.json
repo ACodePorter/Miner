@@ -7498,5 +7498,15 @@
     "close": 23.0,
     "volume": 59678.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,11,00,00,00,000000",
+    "ticker": "PKOH",
+    "open": 23.1000003815,
+    "high": 23.6200008392,
+    "low": 22.6100006104,
+    "close": 23.4099998474,
+    "volume": 54200.0,
+    "wedge_status": "none"
   }
 ]

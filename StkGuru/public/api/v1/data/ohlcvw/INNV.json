@@ -7498,5 +7498,15 @@
     "close": 5.1500000954,
     "volume": 238211.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,11,00,00,00,000000",
+    "ticker": "INNV",
+    "open": 5.1300001144,
+    "high": 5.4499998093,
+    "low": 5.1300001144,
+    "close": 5.3600001335,
+    "volume": 184200.0,
+    "wedge_status": "none"
   }
 ]

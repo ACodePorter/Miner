@@ -7498,5 +7498,15 @@
     "close": 245.25,
     "volume": 4511242.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,11,00,00,00,000000",
+    "ticker": "AVAV",
+    "open": 243.4199981689,
+    "high": 252.7799987793,
+    "low": 239.5,
+    "close": 249.75,
+    "volume": 1310800.0,
+    "wedge_status": "none"
   }
 ]
