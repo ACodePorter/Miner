@@ -7508,5 +7508,15 @@
     "close": 22.1100006104,
     "volume": 803500.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,12,00,00,00,000000",
+    "ticker": "MD",
+    "open": 22.1299991608,
+    "high": 22.5049991608,
+    "low": 21.781999588,
+    "close": 22.5,
+    "volume": 924243.0,
+    "wedge_status": "none"
   }
 ]

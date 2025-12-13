@@ -3618,5 +3618,15 @@
     "close": 70.0800018311,
     "volume": 2346170.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,12,00,00,00,000000",
+    "ticker": "VIK",
+    "open": 71.0,
+    "high": 70.8700027466,
+    "low": 68.3099975586,
+    "close": 68.75,
+    "volume": 2373958.0,
+    "wedge_status": "none"
   }
 ]

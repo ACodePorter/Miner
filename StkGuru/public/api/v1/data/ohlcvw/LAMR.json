@@ -7508,5 +7508,15 @@
     "close": 129.2200012207,
     "volume": 481154.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,12,00,00,00,000000",
+    "ticker": "LAMR",
+    "open": 130.1999969482,
+    "high": 130.1999969482,
+    "low": 127.8300018311,
+    "close": 128.0,
+    "volume": 524728.0,
+    "wedge_status": "none"
   }
 ]

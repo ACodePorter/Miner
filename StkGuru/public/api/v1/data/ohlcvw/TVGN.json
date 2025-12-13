@@ -7508,5 +7508,15 @@
     "close": 0.4300000072,
     "volume": 777300.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,12,00,00,00,000000",
+    "ticker": "TVGN",
+    "open": 0.4185000062,
+    "high": 0.4277000129,
+    "low": 0.3853999972,
+    "close": 0.4034999907,
+    "volume": 785814.0,
+    "wedge_status": "none"
   }
 ]

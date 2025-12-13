@@ -7508,5 +7508,15 @@
     "close": 21.9599990845,
     "volume": 838300.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,12,00,00,00,000000",
+    "ticker": "HELE",
+    "open": 21.9099998474,
+    "high": 21.9587001801,
+    "low": 20.9500007629,
+    "close": 21.0,
+    "volume": 576838.0,
+    "wedge_status": "none"
   }
 ]

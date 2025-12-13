@@ -7508,5 +7508,15 @@
     "close": 234.25,
     "volume": 737706.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,12,00,00,00,000000",
+    "ticker": "JBL",
+    "open": 232.7100067139,
+    "high": 233.5,
+    "low": 219.1300048828,
+    "close": 222.3699951172,
+    "volume": 1496091.0,
+    "wedge_status": "none"
   }
 ]
