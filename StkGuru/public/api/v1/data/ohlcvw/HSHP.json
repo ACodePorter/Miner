@@ -6348,5 +6348,15 @@
     "close": 9.0600004196,
     "volume": 173212.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,15,00,00,00,000000",
+    "ticker": "HSHP",
+    "open": 8.9499998093,
+    "high": 9.0,
+    "low": 8.7901000977,
+    "close": 8.9499998093,
+    "volume": 209928.0,
+    "wedge_status": "drop"
   }
 ]

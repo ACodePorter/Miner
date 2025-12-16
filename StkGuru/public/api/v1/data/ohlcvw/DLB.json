@@ -7488,5 +7488,15 @@
     "close": 67.5400009155,
     "volume": 295178.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,15,00,00,00,000000",
+    "ticker": "DLB",
+    "open": 67.9599990845,
+    "high": 68.0,
+    "low": 66.4800033569,
+    "close": 66.6200027466,
+    "volume": 428019.0,
+    "wedge_status": "drop"
   }
 ]

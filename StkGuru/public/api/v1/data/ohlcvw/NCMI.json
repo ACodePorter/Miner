@@ -7488,5 +7488,15 @@
     "close": 4.0900001526,
     "volume": 404527.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,15,00,00,00,000000",
+    "ticker": "NCMI",
+    "open": 4.1100001335,
+    "high": 4.1900000572,
+    "low": 3.9800000191,
+    "close": 4.0,
+    "volume": 480932.0,
+    "wedge_status": "none"
   }
 ]

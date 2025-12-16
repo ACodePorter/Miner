@@ -7488,5 +7488,15 @@
     "close": 67.25,
     "volume": 3722170.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,15,00,00,00,000000",
+    "ticker": "AFRM",
+    "open": 67.7600021362,
+    "high": 68.2600021362,
+    "low": 65.3059997559,
+    "close": 65.6600036621,
+    "volume": 4748503.0,
+    "wedge_status": "none"
   }
 ]

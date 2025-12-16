@@ -7488,5 +7488,15 @@
     "close": 3.6800000668,
     "volume": 26712.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,15,00,00,00,000000",
+    "ticker": "EEX",
+    "open": 3.6700000763,
+    "high": 3.7200000286,
+    "low": 3.5099999905,
+    "close": 3.5399999619,
+    "volume": 93621.0,
+    "wedge_status": "none"
   }
 ]
