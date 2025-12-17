@@ -3778,5 +3778,15 @@
     "close": 34.75,
     "volume": 889353.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,16,00,00,00,000000",
+    "ticker": "PACS",
+    "open": 34.6100006104,
+    "high": 34.9000015259,
+    "low": 33.7900009155,
+    "close": 34.2000007629,
+    "volume": 1006900.0,
+    "wedge_status": "none"
   }
 ]

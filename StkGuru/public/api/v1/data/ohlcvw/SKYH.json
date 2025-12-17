@@ -7498,5 +7498,15 @@
     "close": 9.3699998856,
     "volume": 94221.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,16,00,00,00,000000",
+    "ticker": "SKYH",
+    "open": 9.25,
+    "high": 9.3599996567,
+    "low": 8.9899997711,
+    "close": 8.9899997711,
+    "volume": 151000.0,
+    "wedge_status": "none"
   }
 ]

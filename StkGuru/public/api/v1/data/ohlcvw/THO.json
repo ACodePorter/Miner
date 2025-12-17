@@ -7498,5 +7498,15 @@
     "close": 101.4700012207,
     "volume": 561094.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,16,00,00,00,000000",
+    "ticker": "THO",
+    "open": 102.2200012207,
+    "high": 102.6999969482,
+    "low": 101.0,
+    "close": 102.5,
+    "volume": 604500.0,
+    "wedge_status": "none"
   }
 ]

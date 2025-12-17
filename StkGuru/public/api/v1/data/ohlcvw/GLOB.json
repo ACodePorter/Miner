@@ -7498,5 +7498,15 @@
     "close": 67.4100036621,
     "volume": 1303037.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,16,00,00,00,000000",
+    "ticker": "GLOB",
+    "open": 66.6999969482,
+    "high": 68.3499984741,
+    "low": 65.7099990845,
+    "close": 66.0,
+    "volume": 890700.0,
+    "wedge_status": "drop"
   }
 ]

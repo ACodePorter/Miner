@@ -7498,5 +7498,15 @@
     "close": 123.5800018311,
     "volume": 1922799.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,16,00,00,00,000000",
+    "ticker": "TPR",
+    "open": 124.0,
+    "high": 124.5,
+    "low": 121.9499969482,
+    "close": 123.0899963379,
+    "volume": 2353500.0,
+    "wedge_status": "none"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 9.1199998856,
     "volume": 3144051.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,16,00,00,00,000000",
+    "ticker": "TNGX",
+    "open": 9.0,
+    "high": 9.4300003052,
+    "low": 8.8199996948,
+    "close": 8.9600000381,
+    "volume": 2267000.0,
+    "wedge_status": "none"
   }
 ]

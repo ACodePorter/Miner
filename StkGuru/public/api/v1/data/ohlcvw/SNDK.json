@@ -1668,5 +1668,15 @@
     "close": 201.8699951172,
     "volume": 6169403.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,16,00,00,00,000000",
+    "ticker": "SNDK",
+    "open": 201.1300048828,
+    "high": 210.5,
+    "low": 199.5,
+    "close": 209.3099975586,
+    "volume": 6594800.0,
+    "wedge_status": "none"
   }
 ]

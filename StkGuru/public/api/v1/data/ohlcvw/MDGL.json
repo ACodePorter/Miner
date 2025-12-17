@@ -7498,5 +7498,15 @@
     "close": 560.549987793,
     "volume": 244759.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,16,00,00,00,000000",
+    "ticker": "MDGL",
+    "open": 554.7800292969,
+    "high": 560.0,
+    "low": 544.2399902344,
+    "close": 554.5700073242,
+    "volume": 270700.0,
+    "wedge_status": "drop"
   }
 ]
