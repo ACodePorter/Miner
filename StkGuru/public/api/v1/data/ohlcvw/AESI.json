@@ -6518,5 +6518,15 @@
     "close": 10.0399999619,
     "volume": 1258761.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,16,00,00,00,000000",
+    "ticker": "AESI",
+    "open": 9.7600002289,
+    "high": 9.9899997711,
+    "low": 9.5100002289,
+    "close": 9.75,
+    "volume": 2855100.0,
+    "wedge_status": "none"
   }
 ]

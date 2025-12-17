@@ -7498,5 +7498,15 @@
     "close": 63.75,
     "volume": 8093914.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,16,00,00,00,000000",
+    "ticker": "CSGP",
+    "open": 63.7799987793,
+    "high": 64.8700027466,
+    "low": 63.3600006104,
+    "close": 63.6199989319,
+    "volume": 4729162.0,
+    "wedge_status": "none"
   }
 ]

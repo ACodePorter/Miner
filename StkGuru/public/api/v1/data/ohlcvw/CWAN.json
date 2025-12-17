@@ -7498,5 +7498,15 @@
     "close": 21.2900009155,
     "volume": 4166842.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,16,00,00,00,000000",
+    "ticker": "CWAN",
+    "open": 21.25,
+    "high": 21.7700004578,
+    "low": 21.25,
+    "close": 21.5,
+    "volume": 5978900.0,
+    "wedge_status": "none"
   }
 ]
