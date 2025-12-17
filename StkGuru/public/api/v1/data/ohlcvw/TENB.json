@@ -7488,5 +7488,15 @@
     "close": 26.2800006866,
     "volume": 1130728.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,15,00,00,00,000000",
+    "ticker": "TENB",
+    "open": 25.9899997711,
+    "high": 26.2000007629,
+    "low": 24.6399993896,
+    "close": 24.75,
+    "volume": 2328969.0,
+    "wedge_status": "none"
   }
 ]
