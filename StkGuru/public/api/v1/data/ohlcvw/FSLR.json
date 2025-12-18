@@ -7508,5 +7508,15 @@
     "close": 258.5100097656,
     "volume": 1489000.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,17,00,00,00,000000",
+    "ticker": "FSLR",
+    "open": 260.0,
+    "high": 264.0,
+    "low": 251.6999969482,
+    "close": 254.0299987793,
+    "volume": 1689028.0,
+    "wedge_status": "drop"
   }
 ]

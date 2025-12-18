@@ -7508,5 +7508,15 @@
     "close": 32.8300018311,
     "volume": 148500.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,17,00,00,00,000000",
+    "ticker": "FET",
+    "open": 33.2400016785,
+    "high": 36.3899993896,
+    "low": 33.5,
+    "close": 36.0800018311,
+    "volume": 134574.0,
+    "wedge_status": "none"
   }
 ]

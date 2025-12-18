@@ -7508,5 +7508,15 @@
     "close": 1.5,
     "volume": 125700.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,17,00,00,00,000000",
+    "ticker": "LFT",
+    "open": 1.5,
+    "high": 1.5349999666,
+    "low": 1.4299999475,
+    "close": 1.4299999475,
+    "volume": 179717.0,
+    "wedge_status": "none"
   }
 ]

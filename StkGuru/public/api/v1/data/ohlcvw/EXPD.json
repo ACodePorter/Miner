@@ -7508,5 +7508,15 @@
     "close": 149.9799957275,
     "volume": 1041800.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,17,00,00,00,000000",
+    "ticker": "EXPD",
+    "open": 149.4600067139,
+    "high": 150.7299957275,
+    "low": 149.0,
+    "close": 149.75,
+    "volume": 689116.0,
+    "wedge_status": "none"
   }
 ]

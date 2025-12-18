@@ -7508,5 +7508,15 @@
     "close": 447.3500061035,
     "volume": 166600.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,17,00,00,00,000000",
+    "ticker": "IESC",
+    "open": 446.2399902344,
+    "high": 447.0,
+    "low": 394.0,
+    "close": 398.299987793,
+    "volume": 186934.0,
+    "wedge_status": "drop"
   }
 ]

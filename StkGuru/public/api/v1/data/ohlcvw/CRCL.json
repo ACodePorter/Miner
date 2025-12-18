@@ -908,5 +908,15 @@
     "close": 83.0,
     "volume": 14970500.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,17,00,00,00,000000",
+    "ticker": "CRCL",
+    "open": 82.8799972534,
+    "high": 85.7399978638,
+    "low": 79.0800018311,
+    "close": 79.1999969482,
+    "volume": 9850183.0,
+    "wedge_status": "none"
   }
 ]

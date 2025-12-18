@@ -7508,5 +7508,15 @@
     "close": 87.5,
     "volume": 1374600.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,17,00,00,00,000000",
+    "ticker": "SPHR",
+    "open": 87.1100006104,
+    "high": 88.5849990845,
+    "low": 85.2699966431,
+    "close": 86.2699966431,
+    "volume": 590253.0,
+    "wedge_status": "none"
   }
 ]

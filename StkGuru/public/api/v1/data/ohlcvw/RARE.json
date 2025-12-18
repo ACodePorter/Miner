@@ -7508,5 +7508,15 @@
     "close": 34.3400001526,
     "volume": 1487600.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,17,00,00,00,000000",
+    "ticker": "RARE",
+    "open": 34.5,
+    "high": 34.6399993896,
+    "low": 32.8450012207,
+    "close": 33.2099990845,
+    "volume": 1785065.0,
+    "wedge_status": "none"
   }
 ]

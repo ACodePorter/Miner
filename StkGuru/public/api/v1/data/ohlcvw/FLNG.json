@@ -7508,5 +7508,15 @@
     "close": 25.25,
     "volume": 329100.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,17,00,00,00,000000",
+    "ticker": "FLNG",
+    "open": 25.3999996185,
+    "high": 25.5321006775,
+    "low": 25.2099990845,
+    "close": 25.4599990845,
+    "volume": 225967.0,
+    "wedge_status": "none"
   }
 ]

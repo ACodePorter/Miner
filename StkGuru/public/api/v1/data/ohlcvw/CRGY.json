@@ -7508,5 +7508,15 @@
     "close": 8.2600002289,
     "volume": 10814800.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,17,00,00,00,000000",
+    "ticker": "CRGY",
+    "open": 8.5,
+    "high": 8.6177997589,
+    "low": 8.1999998093,
+    "close": 8.5,
+    "volume": 7482625.0,
+    "wedge_status": "none"
   }
 ]
