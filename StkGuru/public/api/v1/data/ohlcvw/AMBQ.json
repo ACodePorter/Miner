@@ -548,5 +548,15 @@
     "close": 27.2099990845,
     "volume": 118146.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,18,00,00,00,000000",
+    "ticker": "AMBQ",
+    "open": 27.6000003815,
+    "high": 29.5,
+    "low": 27.2217006683,
+    "close": 28.8500003815,
+    "volume": 112731.0,
+    "wedge_status": "none"
   }
 ]

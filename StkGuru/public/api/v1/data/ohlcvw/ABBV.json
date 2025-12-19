@@ -7498,5 +7498,15 @@
     "close": 224.3300018311,
     "volume": 3300654.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,18,00,00,00,000000",
+    "ticker": "ABBV",
+    "open": 224.0,
+    "high": 226.2597961426,
+    "low": 222.8049926758,
+    "close": 222.875,
+    "volume": 3459960.0,
+    "wedge_status": "none"
   }
 ]

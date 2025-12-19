@@ -7498,5 +7498,15 @@
     "close": 6.0,
     "volume": 573584.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,18,00,00,00,000000",
+    "ticker": "CTOS",
+    "open": 6.0500001907,
+    "high": 6.1649999619,
+    "low": 5.9549999237,
+    "close": 5.9800000191,
+    "volume": 1056916.0,
+    "wedge_status": "none"
   }
 ]

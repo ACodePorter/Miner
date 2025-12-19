@@ -6718,5 +6718,15 @@
     "close": 37.0200004578,
     "volume": 1750697.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,18,00,00,00,000000",
+    "ticker": "MLYS",
+    "open": 37.2400016785,
+    "high": 37.8300018311,
+    "low": 36.0050010681,
+    "close": 37.0,
+    "volume": 1178500.0,
+    "wedge_status": "none"
   }
 ]
