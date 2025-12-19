@@ -3048,5 +3048,15 @@
     "close": 20.0499992371,
     "volume": 77447.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,18,00,00,00,000000",
+    "ticker": "SEG",
+    "open": 20.25,
+    "high": 20.5,
+    "low": 20.0200004578,
+    "close": 20.2399997711,
+    "volume": 47300.0,
+    "wedge_status": "none"
   }
 ]

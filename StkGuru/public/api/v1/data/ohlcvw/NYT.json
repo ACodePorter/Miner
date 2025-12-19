@@ -7498,5 +7498,15 @@
     "close": 69.5,
     "volume": 2022031.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,18,00,00,00,000000",
+    "ticker": "NYT",
+    "open": 69.4100036621,
+    "high": 70.8499984741,
+    "low": 69.0100021362,
+    "close": 70.6299972534,
+    "volume": 2329447.0,
+    "wedge_status": "none"
   }
 ]

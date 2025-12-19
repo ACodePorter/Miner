@@ -1578,5 +1578,15 @@
     "close": 32.1100006104,
     "volume": 40684.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,12,18,00,00,00,000000",
+    "ticker": "SNWV",
+    "open": 32.5099983215,
+    "high": 33.5,
+    "low": 32.1599998474,
+    "close": 32.8300018311,
+    "volume": 54600.0,
+    "wedge_status": "none"
   }
 ]
