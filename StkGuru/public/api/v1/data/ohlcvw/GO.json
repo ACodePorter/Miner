@@ -7508,5 +7508,15 @@
     "close": 9.8800001144,
     "volume": 3854700.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,19,00,00,00,000000",
+    "ticker": "GO",
+    "open": 9.8199996948,
+    "high": 10.0600004196,
+    "low": 9.7400999069,
+    "close": 10.0,
+    "volume": 5402627.0,
+    "wedge_status": "none"
   }
 ]

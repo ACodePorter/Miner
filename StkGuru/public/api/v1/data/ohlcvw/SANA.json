@@ -7508,5 +7508,15 @@
     "close": 4.5,
     "volume": 4450200.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,19,00,00,00,000000",
+    "ticker": "SANA",
+    "open": 4.5399999619,
+    "high": 4.6700000763,
+    "low": 4.3600001335,
+    "close": 4.3600001335,
+    "volume": 10743015.0,
+    "wedge_status": "none"
   }
 ]

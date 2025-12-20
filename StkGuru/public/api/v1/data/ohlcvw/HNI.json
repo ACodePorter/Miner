@@ -7508,5 +7508,15 @@
     "close": 43.0,
     "volume": 1636800.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,19,00,00,00,000000",
+    "ticker": "HNI",
+    "open": 42.7799987793,
+    "high": 43.2099990845,
+    "low": 41.7200012207,
+    "close": 42.0999984741,
+    "volume": 2268101.0,
+    "wedge_status": "none"
   }
 ]

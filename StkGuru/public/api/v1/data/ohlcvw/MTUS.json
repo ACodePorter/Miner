@@ -7508,5 +7508,15 @@
     "close": 18.7199993134,
     "volume": 297500.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,19,00,00,00,000000",
+    "ticker": "MTUS",
+    "open": 18.5,
+    "high": 18.6700000763,
+    "low": 17.1399993896,
+    "close": 17.4599990845,
+    "volume": 500486.0,
+    "wedge_status": "drop"
   }
 ]

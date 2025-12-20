@@ -7508,5 +7508,15 @@
     "close": 51.75,
     "volume": 233100.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,19,00,00,00,000000",
+    "ticker": "TGLS",
+    "open": 51.3100013733,
+    "high": 51.8050003052,
+    "low": 50.1100006104,
+    "close": 50.5099983215,
+    "volume": 267294.0,
+    "wedge_status": "none"
   }
 ]

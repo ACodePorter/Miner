@@ -7508,5 +7508,15 @@
     "close": 34.5,
     "volume": 401895.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,19,00,00,00,000000",
+    "ticker": "DIN",
+    "open": 34.5800018311,
+    "high": 34.6699981689,
+    "low": 33.8800010681,
+    "close": 34.3499984741,
+    "volume": 300774.0,
+    "wedge_status": "none"
   }
 ]

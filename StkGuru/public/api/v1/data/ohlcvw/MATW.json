@@ -7508,5 +7508,15 @@
     "close": 27.3999996185,
     "volume": 395500.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,19,00,00,00,000000",
+    "ticker": "MATW",
+    "open": 27.2600002289,
+    "high": 27.4400005341,
+    "low": 25.6299991608,
+    "close": 26.0,
+    "volume": 730260.0,
+    "wedge_status": "none"
   }
 ]

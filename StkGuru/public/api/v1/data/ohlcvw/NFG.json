@@ -7508,5 +7508,15 @@
     "close": 82.1600036621,
     "volume": 394894.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,19,00,00,00,000000",
+    "ticker": "NFG",
+    "open": 81.9100036621,
+    "high": 82.25,
+    "low": 81.0299987793,
+    "close": 81.0400009155,
+    "volume": 550280.0,
+    "wedge_status": "drop"
   }
 ]
