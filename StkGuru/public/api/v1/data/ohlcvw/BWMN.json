@@ -7488,5 +7488,15 @@
     "close": 33.5099983215,
     "volume": 283962.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,22,00,00,00,000000",
+    "ticker": "BWMN",
+    "open": 33.8100013733,
+    "high": 35.0,
+    "low": 33.6599998474,
+    "close": 33.8800010681,
+    "volume": 126207.0,
+    "wedge_status": "none"
   }
 ]

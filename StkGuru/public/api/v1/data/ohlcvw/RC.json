@@ -7488,5 +7488,15 @@
     "close": 2.2300000191,
     "volume": 7185670.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,22,00,00,00,000000",
+    "ticker": "RC",
+    "open": 2.2200000286,
+    "high": 2.2899999619,
+    "low": 2.2100000381,
+    "close": 2.25,
+    "volume": 4334350.0,
+    "wedge_status": "none"
   }
 ]

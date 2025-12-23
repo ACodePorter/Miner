@@ -7488,5 +7488,15 @@
     "close": 52.0,
     "volume": 1960198.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,22,00,00,00,000000",
+    "ticker": "ALK",
+    "open": 52.1100006104,
+    "high": 53.7186012268,
+    "low": 52.0,
+    "close": 53.4799995422,
+    "volume": 2146820.0,
+    "wedge_status": "none"
   }
 ]

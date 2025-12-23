@@ -7488,5 +7488,15 @@
     "close": 10.0,
     "volume": 3800277.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,22,00,00,00,000000",
+    "ticker": "CWH",
+    "open": 10.0399999619,
+    "high": 10.25,
+    "low": 9.8596000671,
+    "close": 9.9399995804,
+    "volume": 1563526.0,
+    "wedge_status": "none"
   }
 ]

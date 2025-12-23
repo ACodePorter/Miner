@@ -1,0 +1,5112 @@
+[
+  {
+    "trade_date": "2023,12,08,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.2166671753,
+    "high": 10.2916669846,
+    "low": 9.516667366,
+    "close": 9.516667366,
+    "volume": 10080.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,11,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.0583333969,
+    "high": 10.1666669846,
+    "low": 9.6999998093,
+    "close": 10.0833330154,
+    "volume": 15000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,12,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.5249996185,
+    "high": 10.1750001907,
+    "low": 9.5249996185,
+    "close": 10.0916671753,
+    "volume": 15960.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,13,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.9083328247,
+    "high": 10.125,
+    "low": 9.7916669846,
+    "close": 10.125,
+    "volume": 22920.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,14,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.7583332062,
+    "high": 10.125,
+    "low": 9.7583332062,
+    "close": 9.8416671753,
+    "volume": 18360.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,15,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.8249998093,
+    "high": 10.3083333969,
+    "low": 9.7583332062,
+    "close": 10.3000001907,
+    "volume": 315960.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,12,18,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.75,
+    "high": 10.3416671753,
+    "low": 9.6499996185,
+    "close": 9.9916667938,
+    "volume": 33840.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,19,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.1283330917,
+    "high": 10.3083333969,
+    "low": 9.875,
+    "close": 10.0916671753,
+    "volume": 13800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,20,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.3249998093,
+    "high": 10.6666669846,
+    "low": 10.0666666031,
+    "close": 10.3333330154,
+    "volume": 42600.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,12,21,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.3083333969,
+    "high": 10.3166666031,
+    "low": 10.1583328247,
+    "close": 10.1999998093,
+    "volume": 5280.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,22,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.2166671753,
+    "high": 10.7749996185,
+    "low": 10.0024995804,
+    "close": 10.3416671753,
+    "volume": 26760.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,12,26,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.7416667938,
+    "high": 10.7416667938,
+    "low": 9.8416671753,
+    "close": 9.983332634,
+    "volume": 68280.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,27,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.9666671753,
+    "high": 10.6666669846,
+    "low": 9.8416671753,
+    "close": 10.6666669846,
+    "volume": 28560.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,28,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.3500003815,
+    "high": 10.3500003815,
+    "low": 10.3166666031,
+    "close": 10.3249998093,
+    "volume": 2640.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,29,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.5,
+    "high": 10.5,
+    "low": 10.0,
+    "close": 10.25,
+    "volume": 16560.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,02,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.0833330154,
+    "high": 10.2416667938,
+    "low": 10.0,
+    "close": 10.141667366,
+    "volume": 4560.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,01,03,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.4166669846,
+    "high": 10.4166669846,
+    "low": 10.125,
+    "close": 10.2250003815,
+    "volume": 9240.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,04,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.3666667938,
+    "high": 10.3666667938,
+    "low": 9.8958330154,
+    "close": 10.0416669846,
+    "volume": 10680.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,01,05,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.0,
+    "high": 10.1841669083,
+    "low": 9.875,
+    "close": 10.0,
+    "volume": 9120.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,08,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.0249996185,
+    "high": 10.0583333969,
+    "low": 9.9416666031,
+    "close": 10.0500001907,
+    "volume": 10200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,09,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.0833330154,
+    "high": 10.0833330154,
+    "low": 9.9166669846,
+    "close": 10.0833330154,
+    "volume": 12240.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,10,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.0833330154,
+    "high": 10.2083330154,
+    "low": 9.9916667938,
+    "close": 10.0708332062,
+    "volume": 18720.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,11,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.608332634,
+    "high": 10.608332634,
+    "low": 9.9750003815,
+    "close": 10.0333328247,
+    "volume": 12600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,12,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.0,
+    "high": 10.25,
+    "low": 10.0,
+    "close": 10.1833333969,
+    "volume": 3480.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,16,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.3333330154,
+    "high": 10.3333330154,
+    "low": 9.8000001907,
+    "close": 9.8083333969,
+    "volume": 8880.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,01,17,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.4083328247,
+    "high": 10.4083328247,
+    "low": 9.983332634,
+    "close": 9.983332634,
+    "volume": 3360.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,18,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.2833328247,
+    "high": 10.3416671753,
+    "low": 10.0833330154,
+    "close": 10.0833330154,
+    "volume": 3840.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,19,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.4583330154,
+    "high": 10.4583330154,
+    "low": 10.1583328247,
+    "close": 10.1750001907,
+    "volume": 3360.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,01,22,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.3333330154,
+    "high": 10.3333330154,
+    "low": 10.1666669846,
+    "close": 10.266667366,
+    "volume": 9960.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,23,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.1666669846,
+    "high": 10.4166669846,
+    "low": 10.1666669846,
+    "close": 10.3000001907,
+    "volume": 7560.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,24,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.1000003815,
+    "high": 10.2083330154,
+    "low": 10.0416669846,
+    "close": 10.0416669846,
+    "volume": 4440.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,25,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.1583328247,
+    "high": 10.1666669846,
+    "low": 10.0,
+    "close": 10.1666669846,
+    "volume": 9000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,26,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.0583333969,
+    "high": 10.1333332062,
+    "low": 9.7583332062,
+    "close": 10.0,
+    "volume": 10080.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,29,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.1458330154,
+    "high": 10.2916669846,
+    "low": 9.9583330154,
+    "close": 10.125,
+    "volume": 12960.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,30,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.2166671753,
+    "high": 10.25,
+    "low": 9.9666671753,
+    "close": 9.9666671753,
+    "volume": 7560.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,31,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.2083330154,
+    "high": 10.2083330154,
+    "low": 10.016667366,
+    "close": 10.0333328247,
+    "volume": 4440.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,01,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.016667366,
+    "high": 10.0333328247,
+    "low": 10.016667366,
+    "close": 10.0333328247,
+    "volume": 1440.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,02,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.0749998093,
+    "high": 10.2083330154,
+    "low": 10.0749998093,
+    "close": 10.2083330154,
+    "volume": 960.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,05,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.2083330154,
+    "high": 10.2083330154,
+    "low": 9.9666671753,
+    "close": 10.1999998093,
+    "volume": 1440.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,06,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.0183334351,
+    "high": 10.1583328247,
+    "low": 9.9666671753,
+    "close": 9.9666671753,
+    "volume": 3840.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,07,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.0833330154,
+    "high": 10.095000267,
+    "low": 9.9666671753,
+    "close": 10.0,
+    "volume": 5760.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,08,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.2916669846,
+    "high": 10.2916669846,
+    "low": 10.0,
+    "close": 10.1499996185,
+    "volume": 12000.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,02,09,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.2833328247,
+    "high": 10.2833328247,
+    "low": 10.078332901,
+    "close": 10.2083330154,
+    "volume": 6120.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,12,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.9583330154,
+    "high": 9.9666671753,
+    "low": 9.9583330154,
+    "close": 9.9666671753,
+    "volume": 3840.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,13,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.9666671753,
+    "high": 9.9916667938,
+    "low": 9.9583330154,
+    "close": 9.9583330154,
+    "volume": 1680.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,14,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.9583330154,
+    "high": 10.0358333588,
+    "low": 9.9583330154,
+    "close": 10.0349998474,
+    "volume": 4200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,15,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.9666671753,
+    "high": 10.0416669846,
+    "low": 9.5833330154,
+    "close": 9.5833330154,
+    "volume": 6000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,16,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.5833330154,
+    "high": 9.829167366,
+    "low": 9.5833330154,
+    "close": 9.5833330154,
+    "volume": 3000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,20,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.5833330154,
+    "high": 9.6300001144,
+    "low": 9.171667099,
+    "close": 9.1833333969,
+    "volume": 11640.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,21,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.2833328247,
+    "high": 9.2833328247,
+    "low": 8.7583332062,
+    "close": 8.7583332062,
+    "volume": 6000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,22,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.766667366,
+    "high": 9.0833330154,
+    "low": 8.7583332062,
+    "close": 8.7583332062,
+    "volume": 5880.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,23,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.0666666031,
+    "high": 9.140832901,
+    "low": 8.7583332062,
+    "close": 8.970000267,
+    "volume": 14520.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,26,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.7749996185,
+    "high": 9.1066665649,
+    "low": 8.766667366,
+    "close": 8.8833332062,
+    "volume": 4920.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,27,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.8166666031,
+    "high": 9.0416669846,
+    "low": 8.7583332062,
+    "close": 8.8333330154,
+    "volume": 6840.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,28,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.7583332062,
+    "high": 9.204167366,
+    "low": 8.7583332062,
+    "close": 8.9666671753,
+    "volume": 6960.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,29,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.8249998093,
+    "high": 9.0083332062,
+    "low": 8.7583332062,
+    "close": 9.0083332062,
+    "volume": 6480.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,01,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.9666671753,
+    "high": 9.0083332062,
+    "low": 8.7749996185,
+    "close": 9.0083332062,
+    "volume": 3000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,04,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.0083332062,
+    "high": 9.170832634,
+    "low": 8.7583332062,
+    "close": 8.8741674423,
+    "volume": 13560.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,05,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.9583330154,
+    "high": 9.1499996185,
+    "low": 8.7583332062,
+    "close": 8.7583332062,
+    "volume": 6240.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,06,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.891667366,
+    "high": 8.891667366,
+    "low": 8.891667366,
+    "close": 8.891667366,
+    "volume": 1320.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,07,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.4250001907,
+    "high": 8.795832634,
+    "low": 8.4250001907,
+    "close": 8.795832634,
+    "volume": 3480.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,08,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.4250001907,
+    "high": 8.6499996185,
+    "low": 7.875,
+    "close": 7.9166669846,
+    "volume": 24960.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,11,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.016667366,
+    "high": 8.016667366,
+    "low": 6.875,
+    "close": 6.9616670609,
+    "volume": 18960.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,12,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.5,
+    "high": 7.5,
+    "low": 6.875,
+    "close": 6.9866671562,
+    "volume": 3840.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,13,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.6833329201,
+    "high": 7.3166670799,
+    "low": 6.6833329201,
+    "close": 7.0833330154,
+    "volume": 6960.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,14,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.3249998093,
+    "high": 7.3249998093,
+    "low": 5.8499999046,
+    "close": 6.3666667938,
+    "volume": 13440.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,15,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.25,
+    "high": 6.6833329201,
+    "low": 6.0416669846,
+    "close": 6.0416669846,
+    "volume": 10800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,18,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.4749999046,
+    "high": 6.6583328247,
+    "low": 6.2416667938,
+    "close": 6.25,
+    "volume": 15600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,19,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.6583328247,
+    "high": 7.3333330154,
+    "low": 6.6583328247,
+    "close": 7.1916670799,
+    "volume": 6720.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,20,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.2833328247,
+    "high": 7.9283328056,
+    "low": 7.0191669464,
+    "close": 7.9283328056,
+    "volume": 12480.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,21,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.7916669846,
+    "high": 8.2133331299,
+    "low": 7.7916669846,
+    "close": 7.8000001907,
+    "volume": 5160.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,22,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.6083331108,
+    "high": 7.625,
+    "low": 7.0416669846,
+    "close": 7.2583332062,
+    "volume": 15240.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,25,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.25,
+    "high": 7.3791670799,
+    "low": 7.0250000954,
+    "close": 7.3499999046,
+    "volume": 5760.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,26,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.8666667938,
+    "high": 7.8666667938,
+    "low": 7.8666667938,
+    "close": 7.8666667938,
+    "volume": 360.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,03,27,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.3583331108,
+    "high": 8.1833333969,
+    "low": 7.3583331108,
+    "close": 8.1833333969,
+    "volume": 1080.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,28,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.75,
+    "high": 8.9416666031,
+    "low": 8.1258325577,
+    "close": 8.5416669846,
+    "volume": 4200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,01,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.5333328247,
+    "high": 8.9666671753,
+    "low": 8.5333328247,
+    "close": 8.5749998093,
+    "volume": 5160.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,02,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.766667366,
+    "high": 8.9250001907,
+    "low": 8.5916671753,
+    "close": 8.8125,
+    "volume": 4920.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,03,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.9583330154,
+    "high": 9.6208333969,
+    "low": 8.8599996567,
+    "close": 9.1458330154,
+    "volume": 8520.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,04,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.2458333969,
+    "high": 9.2458333969,
+    "low": 8.75,
+    "close": 9.0883331299,
+    "volume": 1920.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,05,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.0883331299,
+    "high": 9.0883331299,
+    "low": 9.0883331299,
+    "close": 9.0883331299,
+    "volume": 480.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,08,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.8066673279,
+    "high": 8.9166669846,
+    "low": 8.5,
+    "close": 8.5,
+    "volume": 5040.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,09,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.6333332062,
+    "high": 8.6333332062,
+    "low": 7.8166670799,
+    "close": 7.9166669846,
+    "volume": 960.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,04,10,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.7666668892,
+    "high": 8.3333330154,
+    "low": 7.7666668892,
+    "close": 8.3000001907,
+    "volume": 960.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,11,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.2083330154,
+    "high": 8.9166669846,
+    "low": 8.2083330154,
+    "close": 8.9166669846,
+    "volume": 960.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,12,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.9416670799,
+    "high": 8.4416666031,
+    "low": 7.5999999046,
+    "close": 8.4416666031,
+    "volume": 3240.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,15,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.8000001907,
+    "high": 7.8000001907,
+    "low": 7.8000001907,
+    "close": 7.8000001907,
+    "volume": 480.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,04,16,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.5666666031,
+    "high": 8.5666666031,
+    "low": 8.5666666031,
+    "close": 8.5666666031,
+    "volume": 600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,17,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.0083332062,
+    "high": 8.0666666031,
+    "low": 8.0083332062,
+    "close": 8.0666666031,
+    "volume": 1080.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,04,18,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.4916667938,
+    "high": 7.7874999046,
+    "low": 7.4916667938,
+    "close": 7.7874999046,
+    "volume": 720.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,19,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.5374999046,
+    "high": 7.5374999046,
+    "low": 7.5333328247,
+    "close": 7.5333328247,
+    "volume": 840.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,22,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.0833330154,
+    "high": 7.7666668892,
+    "low": 6.8874998093,
+    "close": 6.9666671753,
+    "volume": 12840.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,23,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.9666671753,
+    "high": 7.3416671753,
+    "low": 6.9166669846,
+    "close": 7.25,
+    "volume": 5400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,24,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.1666669846,
+    "high": 7.1666669846,
+    "low": 7.1666669846,
+    "close": 7.1666669846,
+    "volume": 600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,25,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.6750001907,
+    "high": 7.2916669846,
+    "low": 6.6750001907,
+    "close": 7.2916669846,
+    "volume": 600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,26,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.8166670799,
+    "high": 7.8166670799,
+    "low": 7.8166670799,
+    "close": 7.8166670799,
+    "volume": 480.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,29,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.1999998093,
+    "high": 7.8158330917,
+    "low": 7.1516671181,
+    "close": 7.8158330917,
+    "volume": 6000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,30,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.0,
+    "high": 8.0,
+    "low": 8.0,
+    "close": 8.0,
+    "volume": 240.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,05,01,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.6416668892,
+    "high": 7.9166669846,
+    "low": 7.6416668892,
+    "close": 7.7833328247,
+    "volume": 1200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,02,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.9499998093,
+    "high": 7.9499998093,
+    "low": 7.6700000763,
+    "close": 7.8916668892,
+    "volume": 2040.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,05,03,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.8666667938,
+    "high": 8.2416667938,
+    "low": 7.7583332062,
+    "close": 8.2416667938,
+    "volume": 6120.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,06,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.2166671753,
+    "high": 8.2166671753,
+    "low": 7.5749998093,
+    "close": 7.5749998093,
+    "volume": 5160.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,07,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.6666669846,
+    "high": 7.6666669846,
+    "low": 7.6666669846,
+    "close": 7.6666669846,
+    "volume": 2760.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,08,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.5833330154,
+    "high": 7.625,
+    "low": 7.1666669846,
+    "close": 7.1666669846,
+    "volume": 6480.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,09,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.3833332062,
+    "high": 8.125,
+    "low": 7.3166670799,
+    "close": 8.108332634,
+    "volume": 2040.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,10,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.108332634,
+    "high": 8.108332634,
+    "low": 8.108332634,
+    "close": 8.108332634,
+    "volume": 600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,13,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.1216669083,
+    "high": 8.1366672516,
+    "low": 7.6999998093,
+    "close": 8.1333332062,
+    "volume": 2040.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,14,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.0416669846,
+    "high": 8.1141672134,
+    "low": 8.0416669846,
+    "close": 8.1141672134,
+    "volume": 1440.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,15,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.546667099,
+    "high": 8.5416669846,
+    "low": 7.546667099,
+    "close": 8.5416669846,
+    "volume": 2520.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,16,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.8666667938,
+    "high": 8.5416669846,
+    "low": 7.5083332062,
+    "close": 8.5416669846,
+    "volume": 7680.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,17,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.5333328247,
+    "high": 8.5666666031,
+    "low": 8.25,
+    "close": 8.25,
+    "volume": 3720.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,20,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.1166667938,
+    "high": 9.1166667938,
+    "low": 8.3333330154,
+    "close": 8.3333330154,
+    "volume": 480.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,21,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.4750003815,
+    "high": 9.016667366,
+    "low": 8.3374996185,
+    "close": 9.016667366,
+    "volume": 1560.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,22,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.016667366,
+    "high": 9.016667366,
+    "low": 9.016667366,
+    "close": 9.016667366,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,23,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.2516670227,
+    "high": 8.5416669846,
+    "low": 8.2516670227,
+    "close": 8.5416669846,
+    "volume": 1080.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,24,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.9583330154,
+    "high": 8.9583330154,
+    "low": 8.5416669846,
+    "close": 8.8766670227,
+    "volume": 720.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,28,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.2583332062,
+    "high": 8.875,
+    "low": 8.2583332062,
+    "close": 8.875,
+    "volume": 2040.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,29,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.875,
+    "high": 8.875,
+    "low": 8.875,
+    "close": 8.875,
+    "volume": 120.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,30,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.5916671753,
+    "high": 8.5916671753,
+    "low": 8.2749996185,
+    "close": 8.2749996185,
+    "volume": 840.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,05,31,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.1666669846,
+    "high": 8.3416671753,
+    "low": 8.1666669846,
+    "close": 8.3333330154,
+    "volume": 2760.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,03,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.1666669846,
+    "high": 8.3333330154,
+    "low": 8.1666669846,
+    "close": 8.3333330154,
+    "volume": 1920.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,04,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.9333329201,
+    "high": 8.3249998093,
+    "low": 7.9333329201,
+    "close": 8.3249998093,
+    "volume": 1200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,05,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.1166667938,
+    "high": 8.3249998093,
+    "low": 8.1166667938,
+    "close": 8.3249998093,
+    "volume": 720.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,06,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3249998093,
+    "high": 8.3249998093,
+    "low": 8.3249998093,
+    "close": 8.3249998093,
+    "volume": 0.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,07,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.0083332062,
+    "high": 8.0500001907,
+    "low": 7.6291670799,
+    "close": 8.0083332062,
+    "volume": 2400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,10,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.6666669846,
+    "high": 8.3333330154,
+    "low": 7.6666669846,
+    "close": 8.0083332062,
+    "volume": 9240.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,11,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.6416668892,
+    "high": 8.3333330154,
+    "low": 7.3583331108,
+    "close": 8.0333328247,
+    "volume": 12600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,12,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.890832901,
+    "high": 9.1666669846,
+    "low": 7.890832901,
+    "close": 8.4583330154,
+    "volume": 16200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,13,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.125,
+    "high": 9.8999996185,
+    "low": 8.0083332062,
+    "close": 9.375,
+    "volume": 18840.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,14,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.1750001907,
+    "high": 9.7916669846,
+    "low": 9.0833330154,
+    "close": 9.75,
+    "volume": 9600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,17,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.6499996185,
+    "high": 9.8999996185,
+    "low": 8.6499996185,
+    "close": 9.7916669846,
+    "volume": 19560.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,18,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.891667366,
+    "high": 10.0,
+    "low": 9.5833330154,
+    "close": 9.7166671753,
+    "volume": 9840.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,20,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.3833332062,
+    "high": 10.0249996185,
+    "low": 9.1750001907,
+    "close": 10.0249996185,
+    "volume": 17280.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,21,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.6000003815,
+    "high": 10.0,
+    "low": 8.75,
+    "close": 8.75,
+    "volume": 44760.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,06,24,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.125,
+    "high": 9.6666669846,
+    "low": 8.9583330154,
+    "close": 9.3333330154,
+    "volume": 6960.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,25,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.125,
+    "high": 9.5500001907,
+    "low": 8.608332634,
+    "close": 9.1666669846,
+    "volume": 8400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,26,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.8333330154,
+    "high": 9.1666669846,
+    "low": 8.4591665268,
+    "close": 9.141667366,
+    "volume": 4320.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,27,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.5333328247,
+    "high": 9.0666666031,
+    "low": 8.5333328247,
+    "close": 8.7833328247,
+    "volume": 2280.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,06,28,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.0,
+    "high": 9.233332634,
+    "low": 8.5416669846,
+    "close": 8.7166671753,
+    "volume": 6840.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,01,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.5,
+    "high": 9.1666669846,
+    "low": 8.3666667938,
+    "close": 8.9416666031,
+    "volume": 36360.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,02,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.5666666031,
+    "high": 8.5833330154,
+    "low": 7.4916667938,
+    "close": 7.9166669846,
+    "volume": 27360.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,07,03,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.7333331108,
+    "high": 8.2650003433,
+    "low": 7.6416668892,
+    "close": 7.75,
+    "volume": 3480.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,05,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.5833330154,
+    "high": 8.0,
+    "low": 7.5666670799,
+    "close": 7.875,
+    "volume": 3840.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,08,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.7083330154,
+    "high": 8.3333330154,
+    "low": 7.5333328247,
+    "close": 8.3333330154,
+    "volume": 6360.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,09,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.7833328247,
+    "high": 8.7833328247,
+    "low": 8.0,
+    "close": 8.5833330154,
+    "volume": 10800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,10,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.1750001907,
+    "high": 8.8333330154,
+    "low": 8.1750001907,
+    "close": 8.8333330154,
+    "volume": 9000.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,07,11,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.0749998093,
+    "high": 9.1666669846,
+    "low": 8.8083333969,
+    "close": 9.1666669846,
+    "volume": 4320.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,12,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.9750003815,
+    "high": 9.3666667938,
+    "low": 8.8833332062,
+    "close": 9.3333330154,
+    "volume": 3120.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,15,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.1666669846,
+    "high": 9.375,
+    "low": 9.1666669846,
+    "close": 9.358332634,
+    "volume": 2400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,16,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.1916666031,
+    "high": 9.358332634,
+    "low": 8.9724998474,
+    "close": 9.3333330154,
+    "volume": 2400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,17,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.0500001907,
+    "high": 9.3333330154,
+    "low": 8.9166669846,
+    "close": 9.3333330154,
+    "volume": 1320.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,18,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.9750003815,
+    "high": 9.3333330154,
+    "low": 8.9750003815,
+    "close": 9.3333330154,
+    "volume": 2520.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,19,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.3166666031,
+    "high": 9.5500001907,
+    "low": 9.2166671753,
+    "close": 9.2166671753,
+    "volume": 6600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,22,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.1333332062,
+    "high": 9.5,
+    "low": 8.8249998093,
+    "close": 9.5,
+    "volume": 15600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,23,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.1875,
+    "high": 9.3333330154,
+    "low": 9.1783332825,
+    "close": 9.3333330154,
+    "volume": 960.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,24,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.7916669846,
+    "high": 9.25,
+    "low": 8.6666669846,
+    "close": 9.2416667938,
+    "volume": 2280.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,25,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.9958333969,
+    "high": 9.1666669846,
+    "low": 8.9958333969,
+    "close": 9.1666669846,
+    "volume": 1680.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,26,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.1666669846,
+    "high": 9.1666669846,
+    "low": 8.733332634,
+    "close": 9.0,
+    "volume": 14400.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,07,29,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.9583330154,
+    "high": 9.1666669846,
+    "low": 8.6666669846,
+    "close": 9.1033334732,
+    "volume": 22440.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,30,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.1666669846,
+    "high": 9.1666669846,
+    "low": 8.6666669846,
+    "close": 8.6666669846,
+    "volume": 12000.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,07,31,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.1583328247,
+    "high": 9.1583328247,
+    "low": 8.7416667938,
+    "close": 9.0833330154,
+    "volume": 1080.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,01,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.733332634,
+    "high": 9.1583328247,
+    "low": 8.4724998474,
+    "close": 8.5416669846,
+    "volume": 5400.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,08,02,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.5916671753,
+    "high": 8.8416671753,
+    "low": 8.3333330154,
+    "close": 8.8416671753,
+    "volume": 3120.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,05,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3249998093,
+    "high": 9.125,
+    "low": 8.2541666031,
+    "close": 8.5833330154,
+    "volume": 5040.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,06,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.733332634,
+    "high": 8.733332634,
+    "low": 8.7083330154,
+    "close": 8.7083330154,
+    "volume": 720.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,07,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.4666671753,
+    "high": 8.7083330154,
+    "low": 8.3333330154,
+    "close": 8.7083330154,
+    "volume": 8880.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,08,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3500003815,
+    "high": 8.7083330154,
+    "low": 8.3333330154,
+    "close": 8.7083330154,
+    "volume": 11160.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,09,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.358332634,
+    "high": 8.6833333969,
+    "low": 8.3500003815,
+    "close": 8.6833333969,
+    "volume": 7800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,12,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3500003815,
+    "high": 8.6666669846,
+    "low": 8.3500003815,
+    "close": 8.6666669846,
+    "volume": 5160.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,13,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3666667938,
+    "high": 8.6475000381,
+    "low": 8.3666667938,
+    "close": 8.6475000381,
+    "volume": 1680.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,14,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.5833330154,
+    "high": 8.9583330154,
+    "low": 8.5283327103,
+    "close": 8.9499998093,
+    "volume": 3840.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,08,15,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.625,
+    "high": 9.0,
+    "low": 8.625,
+    "close": 8.7083330154,
+    "volume": 5400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,16,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.0,
+    "high": 9.0749998093,
+    "low": 8.8999996185,
+    "close": 9.0500001907,
+    "volume": 1320.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,08,19,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.8083333969,
+    "high": 9.1666669846,
+    "low": 8.8083333969,
+    "close": 9.1666669846,
+    "volume": 1320.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,20,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.108332634,
+    "high": 9.2583332062,
+    "low": 9.108332634,
+    "close": 9.2583332062,
+    "volume": 2640.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,21,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.2583332062,
+    "high": 9.2583332062,
+    "low": 9.0050001144,
+    "close": 9.2583332062,
+    "volume": 1080.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,22,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.1583328247,
+    "high": 9.1583328247,
+    "low": 9.1583328247,
+    "close": 9.1583328247,
+    "volume": 480.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,23,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.1166667938,
+    "high": 9.9916667938,
+    "low": 8.9416666031,
+    "close": 9.5833330154,
+    "volume": 53880.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,26,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.2083330154,
+    "high": 9.2083330154,
+    "low": 8.3333330154,
+    "close": 8.75,
+    "volume": 49560.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,08,27,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.0833330154,
+    "high": 9.0833330154,
+    "low": 7.75,
+    "close": 8.5833330154,
+    "volume": 3240.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,28,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.5333328247,
+    "high": 8.5333328247,
+    "low": 8.3374996185,
+    "close": 8.3374996185,
+    "volume": 1440.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,29,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.5416669846,
+    "high": 8.7749996185,
+    "low": 8.3999996185,
+    "close": 8.5500001907,
+    "volume": 9480.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,30,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.375,
+    "high": 8.75,
+    "low": 8.375,
+    "close": 8.75,
+    "volume": 3120.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,03,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.4083328247,
+    "high": 9.0833330154,
+    "low": 8.4083328247,
+    "close": 8.4499998093,
+    "volume": 3360.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,04,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.7583332062,
+    "high": 9.1333332062,
+    "low": 8.7583332062,
+    "close": 8.9291667938,
+    "volume": 600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,05,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.8833332062,
+    "high": 9.1033334732,
+    "low": 8.7808332443,
+    "close": 8.9750003815,
+    "volume": 5520.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,06,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.016667366,
+    "high": 9.233332634,
+    "low": 8.7583332062,
+    "close": 9.0416669846,
+    "volume": 14760.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,09,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.233332634,
+    "high": 9.233332634,
+    "low": 8.3333330154,
+    "close": 8.3333330154,
+    "volume": 17040.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,09,10,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3416671753,
+    "high": 8.5666666031,
+    "low": 7.7916669846,
+    "close": 7.7916669846,
+    "volume": 5880.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,11,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.6666669846,
+    "high": 8.3333330154,
+    "low": 7.0933327675,
+    "close": 7.1916670799,
+    "volume": 12840.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,12,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.5416669846,
+    "high": 7.9208331108,
+    "low": 7.2833328247,
+    "close": 7.2833328247,
+    "volume": 5880.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,13,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.9166669846,
+    "high": 7.9166669846,
+    "low": 7.1166667938,
+    "close": 7.1416668892,
+    "volume": 3360.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,16,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.5,
+    "high": 7.7733330727,
+    "low": 6.8083329201,
+    "close": 7.0416669846,
+    "volume": 10920.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,17,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.4250001907,
+    "high": 8.0749998093,
+    "low": 7.4250001907,
+    "close": 7.8833332062,
+    "volume": 15600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,18,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3333330154,
+    "high": 8.4041671753,
+    "low": 8.0416669846,
+    "close": 8.0833330154,
+    "volume": 21360.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,19,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3166666031,
+    "high": 8.6499996185,
+    "low": 7.5999999046,
+    "close": 7.6525001526,
+    "volume": 32400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,20,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.6583328247,
+    "high": 8.6583328247,
+    "low": 7.7833328247,
+    "close": 8.516667366,
+    "volume": 100920.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,23,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.75,
+    "high": 8.75,
+    "low": 8.0083332062,
+    "close": 8.5749998093,
+    "volume": 3600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,24,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.5641670227,
+    "high": 8.6666669846,
+    "low": 8.2416667938,
+    "close": 8.641667366,
+    "volume": 6840.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,25,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.4708328247,
+    "high": 8.5833330154,
+    "low": 8.2250003815,
+    "close": 8.5666666031,
+    "volume": 9120.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,26,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.2416667938,
+    "high": 8.5833330154,
+    "low": 7.8516669273,
+    "close": 8.2083330154,
+    "volume": 15360.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,27,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.1166667938,
+    "high": 8.4816665649,
+    "low": 7.9666671753,
+    "close": 8.3333330154,
+    "volume": 9240.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,09,30,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.5416669846,
+    "high": 8.5416669846,
+    "low": 8.1666669846,
+    "close": 8.2583332062,
+    "volume": 8520.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,01,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3333330154,
+    "high": 8.3333330154,
+    "low": 8.1999998093,
+    "close": 8.1999998093,
+    "volume": 1080.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,10,02,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3249998093,
+    "high": 8.3249998093,
+    "low": 8.3166666031,
+    "close": 8.3166666031,
+    "volume": 1800.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,10,03,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.1991672516,
+    "high": 8.25,
+    "low": 8.1991672516,
+    "close": 8.2433328629,
+    "volume": 1800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,04,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3333330154,
+    "high": 8.3333330154,
+    "low": 8.0500001907,
+    "close": 8.3066673279,
+    "volume": 6000.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,10,07,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3333330154,
+    "high": 8.4416666031,
+    "low": 8.25,
+    "close": 8.2833328247,
+    "volume": 14160.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,08,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.5225000381,
+    "high": 8.5225000381,
+    "low": 7.9583330154,
+    "close": 8.1999998093,
+    "volume": 4800.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,10,09,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.5333328247,
+    "high": 8.5333328247,
+    "low": 8.1166667938,
+    "close": 8.125,
+    "volume": 6000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,10,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.25,
+    "high": 8.25,
+    "low": 8.25,
+    "close": 8.25,
+    "volume": 720.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,11,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.1333332062,
+    "high": 8.2233333588,
+    "low": 7.8708329201,
+    "close": 8.125,
+    "volume": 1440.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,10,14,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3516674042,
+    "high": 8.3966665268,
+    "low": 8.0083332062,
+    "close": 8.3416671753,
+    "volume": 10800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,15,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.1166667938,
+    "high": 8.4166669846,
+    "low": 8.0008325577,
+    "close": 8.266667366,
+    "volume": 3720.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,16,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3333330154,
+    "high": 8.4250001907,
+    "low": 7.6500000954,
+    "close": 8.4250001907,
+    "volume": 1560.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,17,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3249998093,
+    "high": 8.5083332062,
+    "low": 8.3249998093,
+    "close": 8.5083332062,
+    "volume": 3000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,18,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3000001907,
+    "high": 8.5083332062,
+    "low": 8.2916669846,
+    "close": 8.4916667938,
+    "volume": 2760.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,21,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.2416667938,
+    "high": 8.5,
+    "low": 8.1499996185,
+    "close": 8.5,
+    "volume": 1440.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,22,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.4916667938,
+    "high": 8.5,
+    "low": 8.3416671753,
+    "close": 8.4416666031,
+    "volume": 960.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,23,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3166666031,
+    "high": 8.4341669083,
+    "low": 8.125,
+    "close": 8.3125,
+    "volume": 8160.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,10,24,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.2916669846,
+    "high": 8.2916669846,
+    "low": 7.8625001907,
+    "close": 8.0833330154,
+    "volume": 11760.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,25,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.5500001907,
+    "high": 8.125,
+    "low": 7.5333328247,
+    "close": 8.125,
+    "volume": 3000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,28,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.6166667938,
+    "high": 8.125,
+    "low": 7.6166667938,
+    "close": 8.125,
+    "volume": 2280.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,29,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.4616670609,
+    "high": 8.4750003815,
+    "low": 7.6166667938,
+    "close": 8.125,
+    "volume": 6000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,30,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.1458330154,
+    "high": 8.2708330154,
+    "low": 7.7083330154,
+    "close": 7.75,
+    "volume": 8760.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,31,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.5999999046,
+    "high": 7.9166669846,
+    "low": 7.5749998093,
+    "close": 7.6083331108,
+    "volume": 1920.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,01,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.1666669846,
+    "high": 8.1666669846,
+    "low": 7.9000000954,
+    "close": 7.9000000954,
+    "volume": 720.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,04,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.375,
+    "high": 8.375,
+    "low": 7.625,
+    "close": 7.7416667938,
+    "volume": 45240.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,05,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.7750000954,
+    "high": 8.1916666031,
+    "low": 7.5,
+    "close": 7.7583332062,
+    "volume": 96360.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,06,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.0416669846,
+    "high": 8.1916666031,
+    "low": 7.5749998093,
+    "close": 7.7666668892,
+    "volume": 12960.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,07,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.9124999046,
+    "high": 8.233332634,
+    "low": 7.5916671753,
+    "close": 7.9583330154,
+    "volume": 4920.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,08,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.233332634,
+    "high": 8.233332634,
+    "low": 7.5083332062,
+    "close": 7.5416669846,
+    "volume": 24360.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,11,11,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.233332634,
+    "high": 8.233332634,
+    "low": 7.5083332062,
+    "close": 7.5749998093,
+    "volume": 19440.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,12,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.7166671753,
+    "high": 8.0,
+    "low": 7.6999998093,
+    "close": 7.9791669846,
+    "volume": 15720.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,11,13,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.8499999046,
+    "high": 8.1558332443,
+    "low": 7.8333330154,
+    "close": 8.1558332443,
+    "volume": 1080.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,14,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.045832634,
+    "high": 8.141667366,
+    "low": 7.7666668892,
+    "close": 7.8333330154,
+    "volume": 2880.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,15,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.2224998474,
+    "high": 8.2224998474,
+    "low": 7.5,
+    "close": 7.6416668892,
+    "volume": 4680.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,18,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.1033334732,
+    "high": 8.1033334732,
+    "low": 8.1033334732,
+    "close": 8.1033334732,
+    "volume": 600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,19,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.0775003433,
+    "high": 8.0775003433,
+    "low": 7.0916671753,
+    "close": 7.4166669846,
+    "volume": 112080.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,11,20,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.4250001907,
+    "high": 7.75,
+    "low": 7.2750000954,
+    "close": 7.7416667938,
+    "volume": 10680.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,21,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.5,
+    "high": 7.8499999046,
+    "low": 7.5,
+    "close": 7.8416671753,
+    "volume": 1080.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,22,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.0366668701,
+    "high": 8.0366668701,
+    "low": 7.75,
+    "close": 7.75,
+    "volume": 4800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,25,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.9666671753,
+    "high": 8.0749998093,
+    "low": 7.5,
+    "close": 7.5749998093,
+    "volume": 13680.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,26,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.5,
+    "high": 7.9416670799,
+    "low": 7.5,
+    "close": 7.9208331108,
+    "volume": 8280.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,27,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.75,
+    "high": 7.75,
+    "low": 7.75,
+    "close": 7.75,
+    "volume": 1200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,29,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.016667366,
+    "high": 8.016667366,
+    "low": 7.6500000954,
+    "close": 7.6500000954,
+    "volume": 1800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,02,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.5083332062,
+    "high": 7.9499998093,
+    "low": 7.5083332062,
+    "close": 7.7666668892,
+    "volume": 28680.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,03,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.6916670799,
+    "high": 7.8166670799,
+    "low": 7.5166668892,
+    "close": 7.7750000954,
+    "volume": 7560.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,04,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.7249999046,
+    "high": 8.375,
+    "low": 7.7249999046,
+    "close": 8.2083330154,
+    "volume": 18480.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,05,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.016667366,
+    "high": 8.1999998093,
+    "low": 7.5883331299,
+    "close": 7.9375,
+    "volume": 1680.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,06,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.5716671944,
+    "high": 8.2291669846,
+    "low": 7.5716671944,
+    "close": 8.2291669846,
+    "volume": 1440.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,09,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3666667938,
+    "high": 8.3666667938,
+    "low": 7.9083328247,
+    "close": 7.9083328247,
+    "volume": 9000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,10,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.6499996185,
+    "high": 13.25,
+    "low": 8.5,
+    "close": 11.5100002289,
+    "volume": 297700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,11,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 11.1999998093,
+    "high": 11.1999998093,
+    "low": 10.0,
+    "close": 10.3599996567,
+    "volume": 25400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,12,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.4600000381,
+    "high": 10.5200004578,
+    "low": 9.3500003815,
+    "close": 9.3599996567,
+    "volume": 31300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,13,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.3500003815,
+    "high": 9.7589998245,
+    "low": 9.3000001907,
+    "close": 9.7589998245,
+    "volume": 4800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,16,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.1999998093,
+    "high": 9.7600002289,
+    "low": 8.5100002289,
+    "close": 8.779999733,
+    "volume": 18900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,17,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.640999794,
+    "high": 9.1999998093,
+    "low": 8.640999794,
+    "close": 9.1890001297,
+    "volume": 21100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,18,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.8999996185,
+    "high": 9.1800003052,
+    "low": 8.7980003357,
+    "close": 8.8100004196,
+    "volume": 8200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,19,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.8299999237,
+    "high": 9.2720003128,
+    "low": 8.7390003204,
+    "close": 8.9320001602,
+    "volume": 11000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,20,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.8000001907,
+    "high": 9.1319999695,
+    "low": 8.7449998856,
+    "close": 9.1000003815,
+    "volume": 13200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,23,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.5970001221,
+    "high": 8.9110002518,
+    "low": 8.5970001221,
+    "close": 8.9110002518,
+    "volume": 3100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,24,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.6000003815,
+    "high": 8.779999733,
+    "low": 8.5100002289,
+    "close": 8.779999733,
+    "volume": 2700.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,12,26,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.5,
+    "high": 8.6000003815,
+    "low": 8.2700004578,
+    "close": 8.5399999619,
+    "volume": 6700.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,12,27,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.2700004578,
+    "high": 8.3809995651,
+    "low": 7.5700001717,
+    "close": 8.0959997177,
+    "volume": 12500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,30,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.6799998283,
+    "high": 8.0,
+    "low": 7.5489997864,
+    "close": 7.9899997711,
+    "volume": 18000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,31,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.6999998093,
+    "high": 7.993999958,
+    "low": 7.6999998093,
+    "close": 7.993999958,
+    "volume": 6000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,02,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.75,
+    "high": 8.1000003815,
+    "low": 7.2649998665,
+    "close": 8.1000003815,
+    "volume": 5200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,03,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.5500001907,
+    "high": 7.9159998894,
+    "low": 7.5500001907,
+    "close": 7.9159998894,
+    "volume": 3200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,06,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.6300001144,
+    "high": 7.7750000954,
+    "low": 7.3099999428,
+    "close": 7.5749998093,
+    "volume": 14300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,07,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.3499999046,
+    "high": 7.5900001526,
+    "low": 6.0500001907,
+    "close": 6.8400001526,
+    "volume": 15000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,08,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.5,
+    "high": 6.8740000725,
+    "low": 6.3299999237,
+    "close": 6.8699998856,
+    "volume": 10200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,10,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.3000001907,
+    "high": 6.5700001717,
+    "low": 5.75,
+    "close": 5.8420000076,
+    "volume": 33400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,13,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.8899998665,
+    "high": 6.1999998093,
+    "low": 5.2290000916,
+    "close": 5.9850001335,
+    "volume": 70600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,14,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.0700001717,
+    "high": 6.4499998093,
+    "low": 5.8000001907,
+    "close": 5.9899997711,
+    "volume": 45700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,15,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.1100001335,
+    "high": 6.2199997902,
+    "low": 5.9099998474,
+    "close": 6.2199997902,
+    "volume": 4100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,16,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.0720000267,
+    "high": 6.4800000191,
+    "low": 6.0,
+    "close": 6.0500001907,
+    "volume": 21400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,17,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.0599999428,
+    "high": 6.1399998665,
+    "low": 5.1500000954,
+    "close": 5.5469999313,
+    "volume": 46000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,21,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.7399997711,
+    "high": 6.2899999619,
+    "low": 5.4000000954,
+    "close": 5.4099998474,
+    "volume": 53600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,22,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.5549998283,
+    "high": 5.8800001144,
+    "low": 5.0100002289,
+    "close": 5.125,
+    "volume": 34300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,23,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.0,
+    "high": 5.0,
+    "low": 4.0900001526,
+    "close": 4.2150001526,
+    "volume": 60500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,24,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 4.1500000954,
+    "high": 4.1999998093,
+    "low": 3.9500000477,
+    "close": 4.0300002098,
+    "volume": 47900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,27,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 4.1900000572,
+    "high": 4.3350000381,
+    "low": 3.7699999809,
+    "close": 4.0300002098,
+    "volume": 33300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,28,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 4.0300002098,
+    "high": 4.0300002098,
+    "low": 3.7599999905,
+    "close": 3.7699999809,
+    "volume": 25000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,29,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 3.7999999523,
+    "high": 3.9300000668,
+    "low": 3.6199998856,
+    "close": 3.6400001049,
+    "volume": 25000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,30,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 3.6400001049,
+    "high": 4.0500001907,
+    "low": 3.6400001049,
+    "close": 3.7200000286,
+    "volume": 56400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,31,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 3.7999999523,
+    "high": 4.1350002289,
+    "low": 3.7999999523,
+    "close": 3.9900000095,
+    "volume": 48800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,03,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 4.0,
+    "high": 4.5120000839,
+    "low": 3.8299999237,
+    "close": 4.5100002289,
+    "volume": 50200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,04,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 4.9299998283,
+    "high": 5.1479997635,
+    "low": 4.3600001335,
+    "close": 4.6999998093,
+    "volume": 47600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,05,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 4.8200001717,
+    "high": 5.8870000839,
+    "low": 4.5840001106,
+    "close": 5.7899999619,
+    "volume": 19200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,06,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.8800001144,
+    "high": 9.75,
+    "low": 5.7899999619,
+    "close": 6.7800002098,
+    "volume": 381900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,07,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.6399998665,
+    "high": 8.0260000229,
+    "low": 6.5430002213,
+    "close": 7.9499998093,
+    "volume": 63900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,10,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.5,
+    "high": 8.5,
+    "low": 5.4000000954,
+    "close": 6.2699999809,
+    "volume": 61100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,11,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.3000001907,
+    "high": 6.8600001335,
+    "low": 5.9299998283,
+    "close": 6.7899999619,
+    "volume": 28000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,12,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.5900001526,
+    "high": 6.9899997711,
+    "low": 6.2699999809,
+    "close": 6.5999999046,
+    "volume": 18900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,13,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.4600000381,
+    "high": 7.5,
+    "low": 6.4029998779,
+    "close": 7.3499999046,
+    "volume": 22200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,14,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.3499999046,
+    "high": 7.3499999046,
+    "low": 7.0,
+    "close": 7.1300001144,
+    "volume": 7000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,18,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.3200001717,
+    "high": 7.5999999046,
+    "low": 6.9800000191,
+    "close": 7.2800002098,
+    "volume": 14900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,19,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.3000001907,
+    "high": 7.8699998856,
+    "low": 6.6199998856,
+    "close": 6.8600001335,
+    "volume": 11900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,20,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.7100000381,
+    "high": 7.1999998093,
+    "low": 6.7100000381,
+    "close": 6.8600001335,
+    "volume": 8900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,21,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.0799999237,
+    "high": 7.5,
+    "low": 7.0050001144,
+    "close": 7.0799999237,
+    "volume": 4800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,24,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.8800001144,
+    "high": 7.4899997711,
+    "low": 6.8800001144,
+    "close": 7.1900000572,
+    "volume": 6400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,25,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.1999998093,
+    "high": 7.4800000191,
+    "low": 6.9000000954,
+    "close": 7.2300000191,
+    "volume": 6400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,26,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.9600000381,
+    "high": 7.4899997711,
+    "low": 6.9600000381,
+    "close": 7.3499999046,
+    "volume": 4300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,27,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.0399999619,
+    "high": 7.5,
+    "low": 7.0399999619,
+    "close": 7.2300000191,
+    "volume": 14800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,28,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.2800002098,
+    "high": 7.8499999046,
+    "low": 7.2600002289,
+    "close": 7.8400001526,
+    "volume": 7200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,03,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.7300000191,
+    "high": 7.75,
+    "low": 7.3899998665,
+    "close": 7.6199998856,
+    "volume": 6300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,04,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.2100000381,
+    "high": 7.8499999046,
+    "low": 7.1399998665,
+    "close": 7.5100002289,
+    "volume": 7800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,05,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.6399998665,
+    "high": 8.3599996567,
+    "low": 7.5069999695,
+    "close": 8.029999733,
+    "volume": 16300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,06,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.7600002289,
+    "high": 8.25,
+    "low": 7.6849999428,
+    "close": 8.029999733,
+    "volume": 6600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,07,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.0,
+    "high": 8.5600004196,
+    "low": 7.9070000648,
+    "close": 8.3500003815,
+    "volume": 12400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,10,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3500003815,
+    "high": 8.3500003815,
+    "low": 7.5,
+    "close": 7.9899997711,
+    "volume": 16600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,11,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.9400000572,
+    "high": 8.9300003052,
+    "low": 7.9400000572,
+    "close": 8.4099998474,
+    "volume": 13900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,12,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3999996185,
+    "high": 8.7460002899,
+    "low": 8.3999996185,
+    "close": 8.4899997711,
+    "volume": 4300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,13,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.6700000763,
+    "high": 8.8000001907,
+    "low": 8.25,
+    "close": 8.25,
+    "volume": 5200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,14,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.7600002289,
+    "high": 8.7600002289,
+    "low": 8.373000145,
+    "close": 8.4300003052,
+    "volume": 4800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,17,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.1700000763,
+    "high": 8.75,
+    "low": 8.1700000763,
+    "close": 8.75,
+    "volume": 4800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,18,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.6780004501,
+    "high": 8.7299995422,
+    "low": 8.25,
+    "close": 8.5500001907,
+    "volume": 9800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,19,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3500003815,
+    "high": 8.7600002289,
+    "low": 8.3000001907,
+    "close": 8.5799999237,
+    "volume": 9000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,20,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.529999733,
+    "high": 8.6599998474,
+    "low": 8.2139997482,
+    "close": 8.3999996185,
+    "volume": 10500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,21,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.1999998093,
+    "high": 8.5,
+    "low": 8.1599998474,
+    "close": 8.3000001907,
+    "volume": 14600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,24,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.1099996567,
+    "high": 8.6599998474,
+    "low": 8.1099996567,
+    "close": 8.3199996948,
+    "volume": 8000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,25,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.0600004196,
+    "high": 8.8699998856,
+    "low": 7.6999998093,
+    "close": 8.5200004578,
+    "volume": 25800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,26,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.5,
+    "high": 8.9200000763,
+    "low": 8.2100000381,
+    "close": 8.9200000763,
+    "volume": 11300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,27,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.8999996185,
+    "high": 8.9200000763,
+    "low": 8.4600000381,
+    "close": 8.4600000381,
+    "volume": 7100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,28,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3599996567,
+    "high": 8.7100000381,
+    "low": 8.3599996567,
+    "close": 8.4099998474,
+    "volume": 8800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,31,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3999996185,
+    "high": 8.7399997711,
+    "low": 8.3999996185,
+    "close": 8.720000267,
+    "volume": 6600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,01,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.625,
+    "high": 8.75,
+    "low": 8.25,
+    "close": 8.3599996567,
+    "volume": 15100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,02,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.25,
+    "high": 8.595000267,
+    "low": 8.25,
+    "close": 8.5200004578,
+    "volume": 5600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,03,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.6000003815,
+    "high": 8.6000003815,
+    "low": 7.4800000191,
+    "close": 7.9180002213,
+    "volume": 4400.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,04,04,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3009996414,
+    "high": 8.4399995804,
+    "low": 7.625,
+    "close": 7.75,
+    "volume": 9300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,07,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.5300002098,
+    "high": 8.0,
+    "low": 7.5199999809,
+    "close": 7.7100000381,
+    "volume": 4500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,08,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.9899997711,
+    "high": 8.0,
+    "low": 7.8309998512,
+    "close": 7.9899997711,
+    "volume": 15200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,09,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.9499998093,
+    "high": 8.279999733,
+    "low": 7.7199997902,
+    "close": 8.279999733,
+    "volume": 10800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,10,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.8899998665,
+    "high": 8.4799995422,
+    "low": 7.8550000191,
+    "close": 8.220000267,
+    "volume": 6300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,11,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.25,
+    "high": 8.4899997711,
+    "low": 8.1499996185,
+    "close": 8.3649997711,
+    "volume": 17600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,14,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.1800003052,
+    "high": 8.2880001068,
+    "low": 8.1199998856,
+    "close": 8.1700000763,
+    "volume": 18100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,15,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.25,
+    "high": 8.3999996185,
+    "low": 8.1499996185,
+    "close": 8.3999996185,
+    "volume": 6800.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,04,16,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3549995422,
+    "high": 8.4399995804,
+    "low": 8.2600002289,
+    "close": 8.3489999771,
+    "volume": 10300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,17,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3199996948,
+    "high": 8.404999733,
+    "low": 8.25,
+    "close": 8.3900003433,
+    "volume": 20500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,21,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.3100004196,
+    "high": 8.3100004196,
+    "low": 7.5700001717,
+    "close": 7.5700001717,
+    "volume": 9100.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,04,22,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.5700001717,
+    "high": 8.0699996948,
+    "low": 7.5700001717,
+    "close": 8.0,
+    "volume": 10600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,23,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.9590001106,
+    "high": 7.9590001106,
+    "low": 7.5300002098,
+    "close": 7.6300001144,
+    "volume": 3100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,24,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.8000001907,
+    "high": 7.9699997902,
+    "low": 7.8000001907,
+    "close": 7.8600001335,
+    "volume": 2900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,25,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.9899997711,
+    "high": 7.9899997711,
+    "low": 6.9499998093,
+    "close": 7.1500000954,
+    "volume": 24500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,28,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.0,
+    "high": 7.1700000763,
+    "low": 6.9899997711,
+    "close": 7.1700000763,
+    "volume": 5500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,29,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.1900000572,
+    "high": 7.1900000572,
+    "low": 6.5199999809,
+    "close": 6.5999999046,
+    "volume": 9500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,30,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.4000000954,
+    "high": 6.4000000954,
+    "low": 5.6599998474,
+    "close": 6.0,
+    "volume": 9000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,01,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.1599998474,
+    "high": 6.3099999428,
+    "low": 5.5700001717,
+    "close": 5.8299999237,
+    "volume": 7000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,02,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.5100002289,
+    "high": 7.9200000763,
+    "low": 5.5100002289,
+    "close": 6.7399997711,
+    "volume": 8700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,05,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.9000000954,
+    "high": 6.9000000954,
+    "low": 6.507999897,
+    "close": 6.5300002098,
+    "volume": 10800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,06,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.3299999237,
+    "high": 7.2300000191,
+    "low": 6.3299999237,
+    "close": 7.0100002289,
+    "volume": 34900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,07,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.0,
+    "high": 7.5999999046,
+    "low": 6.75,
+    "close": 7.1799998283,
+    "volume": 50400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,08,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.1999998093,
+    "high": 8.0,
+    "low": 6.4800000191,
+    "close": 7.6900000572,
+    "volume": 84700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,09,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.9699997902,
+    "high": 7.9800000191,
+    "low": 7.1700000763,
+    "close": 7.7800002098,
+    "volume": 8700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,12,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.9899997711,
+    "high": 8.7899999619,
+    "low": 7.4600000381,
+    "close": 7.8200001717,
+    "volume": 29300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,13,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.7899999619,
+    "high": 8.0799999237,
+    "low": 7.4050002098,
+    "close": 7.7800002098,
+    "volume": 18300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,14,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.5599999428,
+    "high": 7.5900001526,
+    "low": 7.2600002289,
+    "close": 7.2600002289,
+    "volume": 6600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,15,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.1500000954,
+    "high": 7.3600001335,
+    "low": 7.0199999809,
+    "close": 7.1500000954,
+    "volume": 8000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,16,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.5,
+    "high": 7.5430002213,
+    "low": 6.6799998283,
+    "close": 7.1100001335,
+    "volume": 8600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,19,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.0,
+    "high": 7.0,
+    "low": 6.3000001907,
+    "close": 6.9200000763,
+    "volume": 5200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,20,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.8000001907,
+    "high": 7.3899998665,
+    "low": 6.8000001907,
+    "close": 7.3800001144,
+    "volume": 2800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,21,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.9000000954,
+    "high": 7.0100002289,
+    "low": 6.8429999352,
+    "close": 7.0100002289,
+    "volume": 2600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,22,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.8800001144,
+    "high": 6.8899998665,
+    "low": 6.8800001144,
+    "close": 6.8899998665,
+    "volume": 2300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,23,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.7100000381,
+    "high": 7.3000001907,
+    "low": 6.7100000381,
+    "close": 7.0,
+    "volume": 6500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,27,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.5500001907,
+    "high": 7.0,
+    "low": 6.5500001907,
+    "close": 6.5799999237,
+    "volume": 5400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,28,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.5199999809,
+    "high": 6.9600000381,
+    "low": 6.2800002098,
+    "close": 6.2800002098,
+    "volume": 7000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,29,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.4000000954,
+    "high": 6.9600000381,
+    "low": 6.3899998665,
+    "close": 6.3899998665,
+    "volume": 4500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,30,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.3099999428,
+    "high": 7.0,
+    "low": 6.3099999428,
+    "close": 7.0,
+    "volume": 4400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,02,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.4600000381,
+    "high": 6.9000000954,
+    "low": 5.9400000572,
+    "close": 6.9000000954,
+    "volume": 4100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,03,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.6999998093,
+    "high": 6.7300000191,
+    "low": 6.5399999619,
+    "close": 6.5399999619,
+    "volume": 2700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,04,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.4899997711,
+    "high": 7.0,
+    "low": 6.4899997711,
+    "close": 6.8600001335,
+    "volume": 15300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,05,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.5300002098,
+    "high": 6.9600000381,
+    "low": 6.3499999046,
+    "close": 6.9600000381,
+    "volume": 2100.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,06,06,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.0,
+    "high": 7.0,
+    "low": 6.6999998093,
+    "close": 6.6999998093,
+    "volume": 5800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,09,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.75,
+    "high": 6.75,
+    "low": 6.5819997787,
+    "close": 6.6999998093,
+    "volume": 2500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,10,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.5399999619,
+    "high": 6.6999998093,
+    "low": 6.5399999619,
+    "close": 6.6999998093,
+    "volume": 1400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,11,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.5300002098,
+    "high": 6.5300002098,
+    "low": 6.1999998093,
+    "close": 6.1999998093,
+    "volume": 7000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,12,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.9349999428,
+    "high": 6.1640000343,
+    "low": 5.5900001526,
+    "close": 5.5900001526,
+    "volume": 2300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,13,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.5,
+    "high": 5.6900000572,
+    "low": 5.3499999046,
+    "close": 5.3800001144,
+    "volume": 4500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,16,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.3600001335,
+    "high": 5.4200000763,
+    "low": 5.2699999809,
+    "close": 5.2699999809,
+    "volume": 1000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,17,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.1999998093,
+    "high": 6.1900000572,
+    "low": 4.9800000191,
+    "close": 5.4000000954,
+    "volume": 7300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,18,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.4000000954,
+    "high": 7.2199997902,
+    "low": 5.3000001907,
+    "close": 5.8200001717,
+    "volume": 69600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,20,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.8299999237,
+    "high": 6.6399998665,
+    "low": 5.5050001144,
+    "close": 5.5700001717,
+    "volume": 13800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,23,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.5100002289,
+    "high": 5.9499998093,
+    "low": 5.2399997711,
+    "close": 5.2399997711,
+    "volume": 5100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,24,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.1399998665,
+    "high": 5.6399998665,
+    "low": 4.8099999428,
+    "close": 5.2100000381,
+    "volume": 4500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,25,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.4499998093,
+    "high": 6.7649998665,
+    "low": 5.0300002098,
+    "close": 5.9559998512,
+    "volume": 223600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,26,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.0500001907,
+    "high": 6.4000000954,
+    "low": 5.4000000954,
+    "close": 5.6999998093,
+    "volume": 139900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,27,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.0,
+    "high": 6.4239997864,
+    "low": 5.6500000954,
+    "close": 5.7399997711,
+    "volume": 14700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,30,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.8070001602,
+    "high": 6.0799999237,
+    "low": 5.7550001144,
+    "close": 5.8899998665,
+    "volume": 6300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,01,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.7600002289,
+    "high": 5.8540000916,
+    "low": 5.7600002289,
+    "close": 5.7600002289,
+    "volume": 1200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,02,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.9739999771,
+    "high": 6.4600000381,
+    "low": 5.6300001144,
+    "close": 5.6999998093,
+    "volume": 11800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,03,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.1399998665,
+    "high": 6.1399998665,
+    "low": 5.6399998665,
+    "close": 5.75,
+    "volume": 4800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,07,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.75,
+    "high": 6.1999998093,
+    "low": 5.4000000954,
+    "close": 5.8099999428,
+    "volume": 10900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,08,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.75,
+    "high": 6.1900000572,
+    "low": 5.7090001106,
+    "close": 5.8099999428,
+    "volume": 6200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,09,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.6999998093,
+    "high": 6.4899997711,
+    "low": 5.6900000572,
+    "close": 6.3099999428,
+    "volume": 9300.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,07,10,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.638999939,
+    "high": 6.3550000191,
+    "low": 5.638999939,
+    "close": 6.2600002289,
+    "volume": 19700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,11,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 5.8099999428,
+    "high": 6.1630001068,
+    "low": 5.7600002289,
+    "close": 6.0339999199,
+    "volume": 5100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,14,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.0599999428,
+    "high": 6.3400001526,
+    "low": 5.9400000572,
+    "close": 5.9400000572,
+    "volume": 1600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,15,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.0,
+    "high": 6.25,
+    "low": 6.0,
+    "close": 6.25,
+    "volume": 3300.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,07,16,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.3699998856,
+    "high": 6.5,
+    "low": 6.25,
+    "close": 6.2800002098,
+    "volume": 5000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,17,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.5,
+    "high": 8.3900003433,
+    "low": 6.5,
+    "close": 7.625,
+    "volume": 37600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,18,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.4000000954,
+    "high": 7.6199998856,
+    "low": 7.0999999046,
+    "close": 7.6199998856,
+    "volume": 10000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,21,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.4400000572,
+    "high": 8.1599998474,
+    "low": 7.2600002289,
+    "close": 7.9000000954,
+    "volume": 18600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,22,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.625,
+    "high": 7.9000000954,
+    "low": 7.5,
+    "close": 7.5,
+    "volume": 7300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,23,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.4499998093,
+    "high": 7.9000000954,
+    "low": 7.0749998093,
+    "close": 7.4899997711,
+    "volume": 7700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,24,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.2399997711,
+    "high": 7.6999998093,
+    "low": 7.2049999237,
+    "close": 7.2300000191,
+    "volume": 6600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,25,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.6750001907,
+    "high": 7.6750001907,
+    "low": 7.5999999046,
+    "close": 7.6199998856,
+    "volume": 5400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,28,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.5300002098,
+    "high": 7.5300002098,
+    "low": 7.0500001907,
+    "close": 7.4899997711,
+    "volume": 11700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,29,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.2350001335,
+    "high": 7.4299998283,
+    "low": 7.2350001335,
+    "close": 7.4299998283,
+    "volume": 1800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,30,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.4000000954,
+    "high": 7.6100001335,
+    "low": 7.0399999619,
+    "close": 7.6100001335,
+    "volume": 3400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,31,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.0500001907,
+    "high": 7.5799999237,
+    "low": 6.8379998207,
+    "close": 7.0799999237,
+    "volume": 6100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,01,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.0,
+    "high": 7.3699998856,
+    "low": 7.0,
+    "close": 7.25,
+    "volume": 3100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,04,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.25,
+    "high": 7.3000001907,
+    "low": 7.1050000191,
+    "close": 7.1050000191,
+    "volume": 13000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,05,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.0999999046,
+    "high": 7.0999999046,
+    "low": 7.0,
+    "close": 7.0,
+    "volume": 2700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,06,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.0,
+    "high": 7.132999897,
+    "low": 6.0,
+    "close": 6.4200000763,
+    "volume": 13100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,07,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.25,
+    "high": 6.6300001144,
+    "low": 6.1999998093,
+    "close": 6.2199997902,
+    "volume": 3200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,08,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.3010001183,
+    "high": 6.7849998474,
+    "low": 6.3010001183,
+    "close": 6.7849998474,
+    "volume": 2300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,11,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.4699997902,
+    "high": 6.4699997902,
+    "low": 6.1999998093,
+    "close": 6.2600002289,
+    "volume": 6000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,12,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.0700001717,
+    "high": 6.4499998093,
+    "low": 6.0300002098,
+    "close": 6.1050000191,
+    "volume": 7100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,13,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.1999998093,
+    "high": 6.4650001526,
+    "low": 6.1300001144,
+    "close": 6.4200000763,
+    "volume": 5100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,14,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.1100001335,
+    "high": 7.1500000954,
+    "low": 6.1100001335,
+    "close": 6.8249998093,
+    "volume": 3000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,15,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.3499999046,
+    "high": 6.6399998665,
+    "low": 6.2930002213,
+    "close": 6.6399998665,
+    "volume": 1700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,18,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.1599998474,
+    "high": 7.1199998856,
+    "low": 6.1599998474,
+    "close": 6.9499998093,
+    "volume": 3400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,19,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.7399997711,
+    "high": 6.7399997711,
+    "low": 6.1399998665,
+    "close": 6.3400001526,
+    "volume": 6100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,20,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.25,
+    "high": 6.4650001526,
+    "low": 6.0529999733,
+    "close": 6.3000001907,
+    "volume": 4800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,21,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.5999999046,
+    "high": 6.9000000954,
+    "low": 6.4400000572,
+    "close": 6.8699998856,
+    "volume": 3400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,22,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.3499999046,
+    "high": 6.9099998474,
+    "low": 6.3499999046,
+    "close": 6.9099998474,
+    "volume": 1900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,25,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.7399997711,
+    "high": 6.9470000267,
+    "low": 6.5399999619,
+    "close": 6.9470000267,
+    "volume": 4800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,26,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.1500000954,
+    "high": 7.5,
+    "low": 7.0599999428,
+    "close": 7.4400000572,
+    "volume": 10800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,27,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.1999998093,
+    "high": 7.4899997711,
+    "low": 7.0999999046,
+    "close": 7.1199998856,
+    "volume": 6900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,28,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.7249999046,
+    "high": 7.75,
+    "low": 7.0799999237,
+    "close": 7.3299999237,
+    "volume": 3700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,29,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.3039999008,
+    "high": 7.3249998093,
+    "low": 7.3039999008,
+    "close": 7.3249998093,
+    "volume": 1800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,02,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.8800001144,
+    "high": 7.4800000191,
+    "low": 6.7100000381,
+    "close": 7.4600000381,
+    "volume": 5600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,03,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.0599999428,
+    "high": 7.3000001907,
+    "low": 6.6999998093,
+    "close": 7.0999999046,
+    "volume": 9600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,04,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.8000001907,
+    "high": 7.0500001907,
+    "low": 6.4219999313,
+    "close": 7.0500001907,
+    "volume": 14300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,05,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.6199998856,
+    "high": 6.8099999428,
+    "low": 6.1459999084,
+    "close": 6.3899998665,
+    "volume": 12200.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,08,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 6.4800000191,
+    "high": 8.0,
+    "low": 6.2220001221,
+    "close": 8.0,
+    "volume": 49900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,09,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.9029998779,
+    "high": 8.4899997711,
+    "low": 7.6209998131,
+    "close": 7.9899997711,
+    "volume": 73400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,10,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 7.7100000381,
+    "high": 9.5349998474,
+    "low": 7.4800000191,
+    "close": 9.0,
+    "volume": 48200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,11,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.720000267,
+    "high": 9.0500001907,
+    "low": 7.4699997902,
+    "close": 8.9200000763,
+    "volume": 32500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,12,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 8.8199996948,
+    "high": 10.4899997711,
+    "low": 8.2049999237,
+    "close": 9.8999996185,
+    "volume": 35700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,15,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 9.9300003052,
+    "high": 10.8000001907,
+    "low": 8.6199998856,
+    "close": 10.5200004578,
+    "volume": 78300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,16,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.7299995422,
+    "high": 11.5559997559,
+    "low": 10.1199998856,
+    "close": 11.4899997711,
+    "volume": 53000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,17,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 11.4899997711,
+    "high": 14.7600002289,
+    "low": 11.1000003815,
+    "close": 13.8400001526,
+    "volume": 152100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,18,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 13.9399995804,
+    "high": 16.3449993134,
+    "low": 10.220000267,
+    "close": 13.470000267,
+    "volume": 356500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,19,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 12.7100000381,
+    "high": 15.0,
+    "low": 12.7100000381,
+    "close": 14.9899997711,
+    "volume": 567700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,22,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 15.0,
+    "high": 15.0,
+    "low": 14.279999733,
+    "close": 14.8400001526,
+    "volume": 91600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,23,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 14.5500001907,
+    "high": 14.7299995422,
+    "low": 13.3100004196,
+    "close": 13.4399995804,
+    "volume": 98500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,24,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 13.1899995804,
+    "high": 13.7700004578,
+    "low": 11.470000267,
+    "close": 11.970000267,
+    "volume": 31100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,25,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 11.7299995422,
+    "high": 12.0670003891,
+    "low": 11.4399995804,
+    "close": 11.9200000763,
+    "volume": 15000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,26,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 11.6899995804,
+    "high": 11.6899995804,
+    "low": 10.5850000381,
+    "close": 11.4099998474,
+    "volume": 20200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,29,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 11.4799995422,
+    "high": 12.0,
+    "low": 10.2740001678,
+    "close": 10.4499998093,
+    "volume": 73500.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,09,30,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.279999733,
+    "high": 11.3699998856,
+    "low": 10.220000267,
+    "close": 11.0200004578,
+    "volume": 97900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 11.0500001907,
+    "high": 11.720000267,
+    "low": 10.9420003891,
+    "close": 11.6099996567,
+    "volume": 22700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 11.9899997711,
+    "high": 11.9899997711,
+    "low": 11.1800003052,
+    "close": 11.1800003052,
+    "volume": 16700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 11.5,
+    "high": 12.0699996948,
+    "low": 11.5,
+    "close": 11.8000001907,
+    "volume": 22600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 12.4899997711,
+    "high": 13.3900003433,
+    "low": 12.154999733,
+    "close": 12.9099998474,
+    "volume": 63300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,07,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 13.029999733,
+    "high": 13.3699998856,
+    "low": 12.0530004501,
+    "close": 12.720000267,
+    "volume": 32800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 12.9899997711,
+    "high": 13.0,
+    "low": 12.2790002823,
+    "close": 12.8400001526,
+    "volume": 25000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 12.9799995422,
+    "high": 12.9799995422,
+    "low": 12.3299999237,
+    "close": 12.7600002289,
+    "volume": 43100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 12.7600002289,
+    "high": 12.8699998856,
+    "low": 12.5200004578,
+    "close": 12.6499996185,
+    "volume": 18000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 12.6499996185,
+    "high": 13.0,
+    "low": 12.0100002289,
+    "close": 12.5799999237,
+    "volume": 10800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,14,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 12.3800001144,
+    "high": 13.1300001144,
+    "low": 12.0970001221,
+    "close": 12.5699996948,
+    "volume": 30900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 12.7899999619,
+    "high": 13.3000001907,
+    "low": 11.8699998856,
+    "close": 12.1800003052,
+    "volume": 15400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 11.75,
+    "high": 12.0600004196,
+    "low": 10.2299995422,
+    "close": 10.470000267,
+    "volume": 71000.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.5900001526,
+    "high": 11.0600004196,
+    "low": 10.1800003052,
+    "close": 10.3800001144,
+    "volume": 21400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 11.2600002289,
+    "high": 11.529999733,
+    "low": 9.0,
+    "close": 9.4600000381,
+    "volume": 83200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.3999996185,
+    "high": 12.0,
+    "low": 9.4099998474,
+    "close": 11.3900003433,
+    "volume": 103500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 11.3100004196,
+    "high": 11.4200000763,
+    "low": 10.7100000381,
+    "close": 10.9300003052,
+    "volume": 30900.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.5900001526,
+    "high": 12.4499998093,
+    "low": 10.5900001526,
+    "close": 12.0200004578,
+    "volume": 66800.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 12.0200004578,
+    "high": 12.0200004578,
+    "low": 10.25,
+    "close": 10.6000003815,
+    "volume": 34800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.5,
+    "high": 10.5209999084,
+    "low": 9.8100004196,
+    "close": 10.3000001907,
+    "volume": 17200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.0,
+    "high": 11.0469999313,
+    "low": 10.0,
+    "close": 10.3900003433,
+    "volume": 81000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.5100002289,
+    "high": 11.1219997406,
+    "low": 10.2299995422,
+    "close": 10.7299995422,
+    "volume": 31800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.5200004578,
+    "high": 11.0450000763,
+    "low": 10.2600002289,
+    "close": 10.8900003433,
+    "volume": 7100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,31,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.720000267,
+    "high": 11.0,
+    "low": 10.5,
+    "close": 10.8800001144,
+    "volume": 7200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,03,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 10.9899997711,
+    "high": 11.8900003433,
+    "low": 10.5889997482,
+    "close": 11.4799995422,
+    "volume": 24300.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,11,04,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 11.4899997711,
+    "high": 12.6800003052,
+    "low": 11.4899997711,
+    "close": 12.3299999237,
+    "volume": 43700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,05,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 11.9600000381,
+    "high": 12.7899999619,
+    "low": 11.8999996185,
+    "close": 12.7899999619,
+    "volume": 34000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,06,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 12.6899995804,
+    "high": 13.4499998093,
+    "low": 12.6260004044,
+    "close": 13.3999996185,
+    "volume": 64800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,07,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 13.3699998856,
+    "high": 14.5,
+    "low": 13.0,
+    "close": 14.5,
+    "volume": 52100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,10,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 14.0799999237,
+    "high": 14.3999996185,
+    "low": 13.75,
+    "close": 13.8999996185,
+    "volume": 52400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,11,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 13.8900003433,
+    "high": 14.5,
+    "low": 13.1000003815,
+    "close": 13.3199996948,
+    "volume": 71300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,12,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 13.3800001144,
+    "high": 13.6599998474,
+    "low": 11.4799995422,
+    "close": 12.1400003433,
+    "volume": 44100.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,13,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 12.1999998093,
+    "high": 12.5050001144,
+    "low": 11.9180002213,
+    "close": 12.220000267,
+    "volume": 16800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,14,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 11.970000267,
+    "high": 12.4399995804,
+    "low": 11.4259996414,
+    "close": 11.8100004196,
+    "volume": 28700.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 11.6499996185,
+    "high": 12.220000267,
+    "low": 11.3800001144,
+    "close": 11.9300003052,
+    "volume": 17100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,18,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 12.1099996567,
+    "high": 14.3839998245,
+    "low": 11.9499998093,
+    "close": 13.3900003433,
+    "volume": 43800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,19,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 13.3900003433,
+    "high": 13.5,
+    "low": 12.4399995804,
+    "close": 13.3400001526,
+    "volume": 26300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,20,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 13.3100004196,
+    "high": 13.7399997711,
+    "low": 12.6999998093,
+    "close": 12.7100000381,
+    "volume": 12500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,21,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 12.6400003433,
+    "high": 12.9899997711,
+    "low": 12.2100000381,
+    "close": 12.2100000381,
+    "volume": 17200.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,11,24,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 12.2100000381,
+    "high": 13.75,
+    "low": 12.0760002136,
+    "close": 13.3000001907,
+    "volume": 97600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,25,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 13.2100000381,
+    "high": 15.5,
+    "low": 12.8299999237,
+    "close": 14.3000001907,
+    "volume": 121400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,26,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 14.1000003815,
+    "high": 18.8500003815,
+    "low": 14.0900001526,
+    "close": 16.4799995422,
+    "volume": 113000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,28,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 16.2999992371,
+    "high": 22.5900001526,
+    "low": 16.2999992371,
+    "close": 20.4200000763,
+    "volume": 126600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,01,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 20.6650009155,
+    "high": 20.8199996948,
+    "low": 16.5720005035,
+    "close": 17.2700004578,
+    "volume": 112600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,02,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 17.1399993896,
+    "high": 29.0200004578,
+    "low": 17.1399993896,
+    "close": 20.7999992371,
+    "volume": 732100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,03,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 21.0,
+    "high": 24.0,
+    "low": 17.5,
+    "close": 18.4799995422,
+    "volume": 346100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,04,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 17.5400009155,
+    "high": 21.1000003815,
+    "low": 17.5119991302,
+    "close": 19.6499996185,
+    "volume": 132300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,05,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 19.8799991608,
+    "high": 22.0,
+    "low": 19.0680007935,
+    "close": 20.1000003815,
+    "volume": 112900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,08,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 20.8899993896,
+    "high": 20.9500007629,
+    "low": 19.1599998474,
+    "close": 19.5900001526,
+    "volume": 62000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,09,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 19.6900005341,
+    "high": 20.8999996185,
+    "low": 18.2999992371,
+    "close": 18.7000007629,
+    "volume": 81500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,10,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 18.5499992371,
+    "high": 19.3700008392,
+    "low": 16.5100002289,
+    "close": 16.9300003052,
+    "volume": 168300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,11,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 16.9300003052,
+    "high": 17.5,
+    "low": 11.8599996567,
+    "close": 13.2700004578,
+    "volume": 243400.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,12,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 13.1599998474,
+    "high": 13.6800003052,
+    "low": 10.2700004578,
+    "close": 11.25,
+    "volume": 114200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,15,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 11.5100002289,
+    "high": 13.3699998856,
+    "low": 11.5100002289,
+    "close": 12.5150003433,
+    "volume": 153200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,16,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 12.0600004196,
+    "high": 12.3920001984,
+    "low": 11.5450000763,
+    "close": 12.0,
+    "volume": 116000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,17,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 12.0200004578,
+    "high": 14.3699998856,
+    "low": 11.7749996185,
+    "close": 12.470000267,
+    "volume": 129900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,18,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 12.3699998856,
+    "high": 15.6400003433,
+    "low": 12.279999733,
+    "close": 15.029999733,
+    "volume": 200300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,19,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 15.1099996567,
+    "high": 18.3700008392,
+    "low": 14.279999733,
+    "close": 18.0200004578,
+    "volume": 1697400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,22,00,00,00,000000",
+    "ticker": "FBYD",
+    "open": 17.5,
+    "high": 18.6898994446,
+    "low": 15.5799999237,
+    "close": 18.3199996948,
+    "volume": 202697.0,
+    "wedge_status": "none"
+  }
+]

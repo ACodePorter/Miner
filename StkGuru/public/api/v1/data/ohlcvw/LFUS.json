@@ -7488,5 +7488,15 @@
     "close": 255.0,
     "volume": 325634.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,22,00,00,00,000000",
+    "ticker": "LFUS",
+    "open": 252.3800048828,
+    "high": 259.6499938965,
+    "low": 252.3800048828,
+    "close": 256.25,
+    "volume": 120873.0,
+    "wedge_status": "none"
   }
 ]

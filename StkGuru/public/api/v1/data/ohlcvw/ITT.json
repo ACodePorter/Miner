@@ -7488,5 +7488,15 @@
     "close": 176.5,
     "volume": 658343.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,22,00,00,00,000000",
+    "ticker": "ITT",
+    "open": 177.0,
+    "high": 178.0249938965,
+    "low": 175.6799926758,
+    "close": 177.3300018311,
+    "volume": 532963.0,
+    "wedge_status": "pop"
   }
 ]

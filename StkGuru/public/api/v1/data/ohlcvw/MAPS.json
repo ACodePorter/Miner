@@ -7488,5 +7488,15 @@
     "close": 0.9309999943,
     "volume": 2676647.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,22,00,00,00,000000",
+    "ticker": "MAPS",
+    "open": 0.9599999785,
+    "high": 0.9599999785,
+    "low": 0.888100028,
+    "close": 0.9017000198,
+    "volume": 1388402.0,
+    "wedge_status": "none"
   }
 ]

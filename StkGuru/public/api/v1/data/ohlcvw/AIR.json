@@ -7488,5 +7488,15 @@
     "close": 82.7099990845,
     "volume": 354578.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,12,22,00,00,00,000000",
+    "ticker": "AIR",
+    "open": 83.6299972534,
+    "high": 87.4550018311,
+    "low": 83.0,
+    "close": 86.1800003052,
+    "volume": 285988.0,
+    "wedge_status": "none"
   }
 ]

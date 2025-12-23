@@ -7488,5 +7488,15 @@
     "close": 9.0900001526,
     "volume": 3625947.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,22,00,00,00,000000",
+    "ticker": "AVAH",
+    "open": 9.0900001526,
+    "high": 9.154999733,
+    "low": 8.9300003052,
+    "close": 8.9300003052,
+    "volume": 651281.0,
+    "wedge_status": "drop"
   }
 ]
