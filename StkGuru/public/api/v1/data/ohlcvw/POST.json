@@ -7498,5 +7498,15 @@
     "close": 101.0,
     "volume": 554634.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,23,00,00,00,000000",
+    "ticker": "POST",
+    "open": 101.1600036621,
+    "high": 101.4199981689,
+    "low": 99.75,
+    "close": 100.7099990845,
+    "volume": 512208.0,
+    "wedge_status": "none"
   }
 ]

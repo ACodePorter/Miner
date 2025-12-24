@@ -7498,5 +7498,15 @@
     "close": 73.5,
     "volume": 42026.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,23,00,00,00,000000",
+    "ticker": "JBSS",
+    "open": 73.125,
+    "high": 73.125,
+    "low": 71.8700027466,
+    "close": 71.8899993896,
+    "volume": 29423.0,
+    "wedge_status": "drop"
   }
 ]

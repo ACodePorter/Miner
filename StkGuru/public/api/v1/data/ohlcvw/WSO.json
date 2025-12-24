@@ -7498,5 +7498,15 @@
     "close": 347.25,
     "volume": 370089.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,23,00,00,00,000000",
+    "ticker": "WSO",
+    "open": 347.9400024414,
+    "high": 348.0,
+    "low": 341.4750061035,
+    "close": 345.7600097656,
+    "volume": 160527.0,
+    "wedge_status": "drop"
   }
 ]

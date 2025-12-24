@@ -4268,5 +4268,15 @@
     "close": 48.5,
     "volume": 1270970.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,23,00,00,00,000000",
+    "ticker": "AHR",
+    "open": 48.5099983215,
+    "high": 48.6699981689,
+    "low": 47.9799995422,
+    "close": 48.3499984741,
+    "volume": 1126159.0,
+    "wedge_status": "none"
   }
 ]

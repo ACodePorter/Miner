@@ -908,5 +908,15 @@
     "close": 21.5,
     "volume": 107120.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,23,00,00,00,000000",
+    "ticker": "ASIC",
+    "open": 21.4500007629,
+    "high": 21.5200004578,
+    "low": 20.9899997711,
+    "close": 21.1900005341,
+    "volume": 81130.0,
+    "wedge_status": "none"
   }
 ]

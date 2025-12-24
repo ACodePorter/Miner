@@ -7498,5 +7498,15 @@
     "close": 9.4200000763,
     "volume": 163373.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,23,00,00,00,000000",
+    "ticker": "ANIK",
+    "open": 9.4200000763,
+    "high": 9.5061998367,
+    "low": 9.3699998856,
+    "close": 9.3900003433,
+    "volume": 148167.0,
+    "wedge_status": "none"
   }
 ]

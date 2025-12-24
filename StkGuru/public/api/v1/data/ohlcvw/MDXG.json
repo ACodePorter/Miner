@@ -7498,5 +7498,15 @@
     "close": 7.0399999619,
     "volume": 509024.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,23,00,00,00,000000",
+    "ticker": "MDXG",
+    "open": 7.0,
+    "high": 7.0399999619,
+    "low": 6.9099998474,
+    "close": 7.0,
+    "volume": 458012.0,
+    "wedge_status": "drop"
   }
 ]
