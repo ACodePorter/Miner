@@ -7508,5 +7508,15 @@
     "close": 198.5,
     "volume": 1335815.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,24,00,00,00,000000",
+    "ticker": "TER",
+    "open": 198.5,
+    "high": 199.5899963379,
+    "low": 197.2899932861,
+    "close": 198.5299987793,
+    "volume": 705457.0,
+    "wedge_status": "none"
   }
 ]

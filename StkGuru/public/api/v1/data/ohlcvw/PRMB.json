@@ -7508,5 +7508,15 @@
     "close": 16.3600006104,
     "volume": 2722622.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,24,00,00,00,000000",
+    "ticker": "PRMB",
+    "open": 16.2800006866,
+    "high": 16.5249996185,
+    "low": 16.2749996185,
+    "close": 16.5,
+    "volume": 1971423.0,
+    "wedge_status": "none"
   }
 ]

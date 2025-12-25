@@ -7508,5 +7508,15 @@
     "close": 9.5600004196,
     "volume": 724635.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,24,00,00,00,000000",
+    "ticker": "EXPI",
+    "open": 9.5500001907,
+    "high": 9.5900001526,
+    "low": 9.4630002975,
+    "close": 9.5200004578,
+    "volume": 389428.0,
+    "wedge_status": "none"
   }
 ]

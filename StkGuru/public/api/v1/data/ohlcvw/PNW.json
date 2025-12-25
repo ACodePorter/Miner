@@ -7508,5 +7508,15 @@
     "close": 88.0299987793,
     "volume": 601883.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,24,00,00,00,000000",
+    "ticker": "PNW",
+    "open": 88.3300018311,
+    "high": 88.4700012207,
+    "low": 88.0,
+    "close": 88.3600006104,
+    "volume": 294721.0,
+    "wedge_status": "pop"
   }
 ]

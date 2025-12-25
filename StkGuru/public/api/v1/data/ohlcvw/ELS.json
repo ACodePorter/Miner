@@ -7508,5 +7508,15 @@
     "close": 61.4099998474,
     "volume": 865418.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,24,00,00,00,000000",
+    "ticker": "ELS",
+    "open": 61.4199981689,
+    "high": 62.0,
+    "low": 61.4049987793,
+    "close": 61.7900009155,
+    "volume": 438255.0,
+    "wedge_status": "pop"
   }
 ]

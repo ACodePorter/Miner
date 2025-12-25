@@ -7508,5 +7508,15 @@
     "close": 36.5,
     "volume": 1118782.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,24,00,00,00,000000",
+    "ticker": "YOU",
+    "open": 36.5,
+    "high": 36.5649986267,
+    "low": 36.1599998474,
+    "close": 36.2000007629,
+    "volume": 630207.0,
+    "wedge_status": "none"
   }
 ]

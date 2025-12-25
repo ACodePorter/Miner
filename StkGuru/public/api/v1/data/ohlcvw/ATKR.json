@@ -7508,5 +7508,15 @@
     "close": 65.0,
     "volume": 255269.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,24,00,00,00,000000",
+    "ticker": "ATKR",
+    "open": 65.1600036621,
+    "high": 65.4899978638,
+    "low": 64.8600006104,
+    "close": 65.1100006104,
+    "volume": 100320.0,
+    "wedge_status": "none"
   }
 ]

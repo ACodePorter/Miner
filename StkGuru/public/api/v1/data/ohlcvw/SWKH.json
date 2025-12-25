@@ -7508,5 +7508,15 @@
     "close": 17.0200004578,
     "volume": 7553.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,24,00,00,00,000000",
+    "ticker": "SWKH",
+    "open": 17.1599998474,
+    "high": 17.1599998474,
+    "low": 17.1599998474,
+    "close": 17.1599998474,
+    "volume": 1641.0,
+    "wedge_status": "none"
   }
 ]

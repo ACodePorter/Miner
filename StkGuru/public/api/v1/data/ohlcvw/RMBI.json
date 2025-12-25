@@ -7508,5 +7508,15 @@
     "close": 13.9899997711,
     "volume": 6740.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,24,00,00,00,000000",
+    "ticker": "RMBI",
+    "open": 13.9799995422,
+    "high": 14.0399999619,
+    "low": 13.970000267,
+    "close": 13.9799995422,
+    "volume": 5903.0,
+    "wedge_status": "drop"
   }
 ]

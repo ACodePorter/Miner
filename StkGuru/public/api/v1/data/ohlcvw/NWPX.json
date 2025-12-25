@@ -7508,5 +7508,15 @@
     "close": 64.5999984741,
     "volume": 54949.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,24,00,00,00,000000",
+    "ticker": "NWPX",
+    "open": 64.5,
+    "high": 65.3050003052,
+    "low": 64.25,
+    "close": 64.6999969482,
+    "volume": 25670.0,
+    "wedge_status": "none"
   }
 ]
