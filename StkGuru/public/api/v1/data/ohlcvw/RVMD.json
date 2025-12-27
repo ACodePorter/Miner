@@ -7508,5 +7508,15 @@
     "close": 81.1900024414,
     "volume": 1354484.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,26,00,00,00,000000",
+    "ticker": "RVMD",
+    "open": 81.2200012207,
+    "high": 81.5761032104,
+    "low": 80.2200012207,
+    "close": 80.75,
+    "volume": 1065713.0,
+    "wedge_status": "none"
   }
 ]

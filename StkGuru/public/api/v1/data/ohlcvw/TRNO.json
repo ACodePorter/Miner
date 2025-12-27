@@ -7508,5 +7508,15 @@
     "close": 60.5,
     "volume": 255546.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,26,00,00,00,000000",
+    "ticker": "TRNO",
+    "open": 60.5999984741,
+    "high": 61.0200004578,
+    "low": 59.9300003052,
+    "close": 60.2799987793,
+    "volume": 169145.0,
+    "wedge_status": "none"
   }
 ]
