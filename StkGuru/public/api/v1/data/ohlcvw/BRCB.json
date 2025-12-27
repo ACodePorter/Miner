@@ -288,5 +288,15 @@
     "close": 23.3400001526,
     "volume": 127324.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,26,00,00,00,000000",
+    "ticker": "BRCB",
+    "open": 22.8299999237,
+    "high": 23.6700000763,
+    "low": 22.8299999237,
+    "close": 23.5,
+    "volume": 311857.0,
+    "wedge_status": "none"
   }
 ]

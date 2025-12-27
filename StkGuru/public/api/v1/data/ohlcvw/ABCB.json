@@ -7508,5 +7508,15 @@
     "close": 76.5899963379,
     "volume": 207448.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,26,00,00,00,000000",
+    "ticker": "ABCB",
+    "open": 76.3399963379,
+    "high": 76.6449966431,
+    "low": 75.8099975586,
+    "close": 76.0,
+    "volume": 222535.0,
+    "wedge_status": "drop"
   }
 ]

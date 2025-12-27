@@ -7508,5 +7508,15 @@
     "close": 28.2999992371,
     "volume": 392330.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,26,00,00,00,000000",
+    "ticker": "EYE",
+    "open": 28.0900001526,
+    "high": 28.3050003052,
+    "low": 27.7800006866,
+    "close": 28.0,
+    "volume": 591957.0,
+    "wedge_status": "drop"
   }
 ]
