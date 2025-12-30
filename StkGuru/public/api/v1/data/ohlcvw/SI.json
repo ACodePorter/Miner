@@ -598,5 +598,15 @@
     "close": 15.25,
     "volume": 62361.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,29,00,00,00,000000",
+    "ticker": "SI",
+    "open": 15.3000001907,
+    "high": 15.3699998856,
+    "low": 14.7770004272,
+    "close": 15.279999733,
+    "volume": 14700.0,
+    "wedge_status": "none"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 64.2099990845,
     "volume": 169539.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,29,00,00,00,000000",
+    "ticker": "BLKB",
+    "open": 64.0,
+    "high": 64.5999984741,
+    "low": 63.8199996948,
+    "close": 64.3000030518,
+    "volume": 228025.0,
+    "wedge_status": "none"
   }
 ]

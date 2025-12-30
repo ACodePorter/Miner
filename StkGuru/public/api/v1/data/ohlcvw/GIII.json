@@ -7488,5 +7488,15 @@
     "close": 30.4200000763,
     "volume": 245629.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,29,00,00,00,000000",
+    "ticker": "GIII",
+    "open": 30.25,
+    "high": 30.7099990845,
+    "low": 29.5100002289,
+    "close": 29.8700008392,
+    "volume": 383167.0,
+    "wedge_status": "drop"
   }
 ]

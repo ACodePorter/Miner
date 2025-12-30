@@ -7488,5 +7488,15 @@
     "close": 30.1000003815,
     "volume": 43311.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,29,00,00,00,000000",
+    "ticker": "GIC",
+    "open": 30.0400009155,
+    "high": 30.0949993134,
+    "low": 29.75,
+    "close": 29.9899997711,
+    "volume": 79958.0,
+    "wedge_status": "none"
   }
 ]

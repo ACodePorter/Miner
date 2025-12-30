@@ -7488,5 +7488,15 @@
     "close": 30.1200008392,
     "volume": 50300.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,29,00,00,00,000000",
+    "ticker": "COFS",
+    "open": 30.2399997711,
+    "high": 31.0,
+    "low": 29.7513999939,
+    "close": 29.8700008392,
+    "volume": 78740.0,
+    "wedge_status": "none"
   }
 ]

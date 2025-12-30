@@ -7488,5 +7488,15 @@
     "close": 10.25,
     "volume": 1066009.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,29,00,00,00,000000",
+    "ticker": "AHCO",
+    "open": 10.2700004578,
+    "high": 10.2700004578,
+    "low": 10.1300001144,
+    "close": 10.1700000763,
+    "volume": 829577.0,
+    "wedge_status": "none"
   }
 ]

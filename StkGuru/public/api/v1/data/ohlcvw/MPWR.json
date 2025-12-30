@@ -7488,5 +7488,15 @@
     "close": 946.3200073242,
     "volume": 221497.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,29,00,00,00,000000",
+    "ticker": "MPWR",
+    "open": 938.0,
+    "high": 949.2399902344,
+    "low": 929.2600097656,
+    "close": 930.0399780273,
+    "volume": 445656.0,
+    "wedge_status": "drop"
   }
 ]

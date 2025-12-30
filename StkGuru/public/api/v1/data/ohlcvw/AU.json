@@ -7488,5 +7488,15 @@
     "close": 91.25,
     "volume": 819827.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,29,00,00,00,000000",
+    "ticker": "AU",
+    "open": 86.25,
+    "high": 87.179901123,
+    "low": 83.7900009155,
+    "close": 84.9400024414,
+    "volume": 2656170.0,
+    "wedge_status": "drop"
   }
 ]
