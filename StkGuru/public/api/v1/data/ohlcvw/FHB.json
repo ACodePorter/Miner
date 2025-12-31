@@ -7498,5 +7498,15 @@
     "close": 25.75,
     "volume": 731076.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,30,00,00,00,000000",
+    "ticker": "FHB",
+    "open": 25.75,
+    "high": 25.75,
+    "low": 25.5599994659,
+    "close": 25.5799999237,
+    "volume": 697809.0,
+    "wedge_status": "none"
   }
 ]

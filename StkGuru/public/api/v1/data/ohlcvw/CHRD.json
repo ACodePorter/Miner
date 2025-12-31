@@ -7498,5 +7498,15 @@
     "close": 91.2900009155,
     "volume": 612994.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,30,00,00,00,000000",
+    "ticker": "CHRD",
+    "open": 92.0,
+    "high": 93.5400009155,
+    "low": 91.9599990845,
+    "close": 93.3499984741,
+    "volume": 554863.0,
+    "wedge_status": "pop"
   }
 ]

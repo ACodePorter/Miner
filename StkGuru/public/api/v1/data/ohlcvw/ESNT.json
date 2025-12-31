@@ -7498,5 +7498,15 @@
     "close": 65.75,
     "volume": 230301.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,30,00,00,00,000000",
+    "ticker": "ESNT",
+    "open": 65.7699966431,
+    "high": 65.8249969482,
+    "low": 65.4199981689,
+    "close": 65.6800003052,
+    "volume": 223012.0,
+    "wedge_status": "none"
   }
 ]
