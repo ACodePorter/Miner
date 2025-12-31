@@ -7498,5 +7498,15 @@
     "close": 48.4000015259,
     "volume": 93200.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,30,00,00,00,000000",
+    "ticker": "MBWM",
+    "open": 48.5999984741,
+    "high": 48.5999984741,
+    "low": 47.5699996948,
+    "close": 48.0,
+    "volume": 80034.0,
+    "wedge_status": "drop"
   }
 ]

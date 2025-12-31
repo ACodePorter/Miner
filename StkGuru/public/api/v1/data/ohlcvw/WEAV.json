@@ -7498,5 +7498,15 @@
     "close": 7.2100000381,
     "volume": 918000.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,30,00,00,00,000000",
+    "ticker": "WEAV",
+    "open": 7.0399999619,
+    "high": 7.3699998856,
+    "low": 6.9604997635,
+    "close": 7.2699999809,
+    "volume": 1209772.0,
+    "wedge_status": "none"
   }
 ]

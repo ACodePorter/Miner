@@ -7498,5 +7498,15 @@
     "close": 41.5,
     "volume": 1804300.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,30,00,00,00,000000",
+    "ticker": "TERN",
+    "open": 41.2099990845,
+    "high": 41.5,
+    "low": 39.9599990845,
+    "close": 40.5900001526,
+    "volume": 1595757.0,
+    "wedge_status": "none"
   }
 ]

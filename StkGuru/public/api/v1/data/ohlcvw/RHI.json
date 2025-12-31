@@ -7498,5 +7498,15 @@
     "close": 27.6100006104,
     "volume": 1040581.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,30,00,00,00,000000",
+    "ticker": "RHI",
+    "open": 27.5499992371,
+    "high": 27.8999996185,
+    "low": 27.4200992584,
+    "close": 27.5,
+    "volume": 896444.0,
+    "wedge_status": "none"
   }
 ]

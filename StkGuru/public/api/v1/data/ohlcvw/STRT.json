@@ -7498,5 +7498,15 @@
     "close": 77.4800033569,
     "volume": 47800.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,30,00,00,00,000000",
+    "ticker": "STRT",
+    "open": 77.5,
+    "high": 79.25,
+    "low": 77.0400009155,
+    "close": 77.1500015259,
+    "volume": 36582.0,
+    "wedge_status": "none"
   }
 ]

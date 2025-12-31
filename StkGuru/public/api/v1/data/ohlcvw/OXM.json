@@ -7498,5 +7498,15 @@
     "close": 33.75,
     "volume": 431200.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,30,00,00,00,000000",
+    "ticker": "OXM",
+    "open": 33.6500015259,
+    "high": 33.8800010681,
+    "low": 33.2700004578,
+    "close": 33.5999984741,
+    "volume": 202392.0,
+    "wedge_status": "none"
   }
 ]

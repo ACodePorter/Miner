@@ -7498,5 +7498,15 @@
     "close": 19.5900001526,
     "volume": 307300.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,30,00,00,00,000000",
+    "ticker": "OCFC",
+    "open": 19.5,
+    "high": 19.5,
+    "low": 17.4400005341,
+    "close": 18.2849998474,
+    "volume": 2645234.0,
+    "wedge_status": "none"
   }
 ]

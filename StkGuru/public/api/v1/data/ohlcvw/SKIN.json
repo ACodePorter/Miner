@@ -7498,5 +7498,15 @@
     "close": 1.4400000572,
     "volume": 422600.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,30,00,00,00,000000",
+    "ticker": "SKIN",
+    "open": 1.4400000572,
+    "high": 1.4450000525,
+    "low": 1.4099999666,
+    "close": 1.4299999475,
+    "volume": 301112.0,
+    "wedge_status": "none"
   }
 ]
