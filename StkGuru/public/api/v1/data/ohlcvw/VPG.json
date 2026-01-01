@@ -7508,5 +7508,15 @@
     "close": 38.9300003052,
     "volume": 151706.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,31,00,00,00,000000",
+    "ticker": "VPG",
+    "open": 39.2200012207,
+    "high": 39.2200012207,
+    "low": 37.6699981689,
+    "close": 38.5,
+    "volume": 255998.0,
+    "wedge_status": "none"
   }
 ]

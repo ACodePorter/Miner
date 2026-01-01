@@ -7508,5 +7508,15 @@
     "close": 5.6599998474,
     "volume": 1454735.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,31,00,00,00,000000",
+    "ticker": "TSHA",
+    "open": 5.6599998474,
+    "high": 5.6799998283,
+    "low": 5.4699997902,
+    "close": 5.5,
+    "volume": 2686495.0,
+    "wedge_status": "none"
   }
 ]

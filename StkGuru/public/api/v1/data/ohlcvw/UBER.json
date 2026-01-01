@@ -7508,5 +7508,15 @@
     "close": 82.1200027466,
     "volume": 8214956.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,31,00,00,00,000000",
+    "ticker": "UBER",
+    "open": 82.0,
+    "high": 82.5449981689,
+    "low": 81.4199981689,
+    "close": 81.7099990845,
+    "volume": 6445029.0,
+    "wedge_status": "none"
   }
 ]

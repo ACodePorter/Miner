@@ -7508,5 +7508,15 @@
     "close": 19.0,
     "volume": 1421554.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,31,00,00,00,000000",
+    "ticker": "WSC",
+    "open": 18.9699993134,
+    "high": 19.1000003815,
+    "low": 18.6900005341,
+    "close": 18.8299999237,
+    "volume": 1685541.0,
+    "wedge_status": "none"
   }
 ]
