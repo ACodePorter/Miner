@@ -7508,5 +7508,15 @@
     "close": 31.5,
     "volume": 333208.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,31,00,00,00,000000",
+    "ticker": "AVNT",
+    "open": 31.4099998474,
+    "high": 31.4899997711,
+    "low": 31.0900001526,
+    "close": 31.2399997711,
+    "volume": 525815.0,
+    "wedge_status": "none"
   }
 ]
