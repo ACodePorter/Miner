@@ -7508,5 +7508,15 @@
     "close": 120.9400024414,
     "volume": 1974693.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,31,00,00,00,000000",
+    "ticker": "JCI",
+    "open": 121.0,
+    "high": 121.1500015259,
+    "low": 119.6699981689,
+    "close": 119.75,
+    "volume": 1750568.0,
+    "wedge_status": "none"
   }
 ]

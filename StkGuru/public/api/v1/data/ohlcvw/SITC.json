@@ -7508,5 +7508,15 @@
     "close": 6.4299998283,
     "volume": 788012.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,31,00,00,00,000000",
+    "ticker": "SITC",
+    "open": 6.4299998283,
+    "high": 6.4600000381,
+    "low": 6.3600001335,
+    "close": 6.4200000763,
+    "volume": 625774.0,
+    "wedge_status": "none"
   }
 ]

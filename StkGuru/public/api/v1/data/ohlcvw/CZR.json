@@ -7508,5 +7508,15 @@
     "close": 23.5200004578,
     "volume": 3960743.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,31,00,00,00,000000",
+    "ticker": "CZR",
+    "open": 23.5,
+    "high": 23.9099998474,
+    "low": 23.2950000763,
+    "close": 23.3899993896,
+    "volume": 3430351.0,
+    "wedge_status": "none"
   }
 ]

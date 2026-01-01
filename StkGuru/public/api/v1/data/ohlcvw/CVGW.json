@@ -7508,5 +7508,15 @@
     "close": 21.1700000763,
     "volume": 160342.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,31,00,00,00,000000",
+    "ticker": "CVGW",
+    "open": 21.2099990845,
+    "high": 21.7600002289,
+    "low": 21.2099990845,
+    "close": 21.75,
+    "volume": 287791.0,
+    "wedge_status": "none"
   }
 ]

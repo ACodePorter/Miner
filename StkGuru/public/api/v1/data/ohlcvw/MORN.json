@@ -7508,5 +7508,15 @@
     "close": 218.0,
     "volume": 250417.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,31,00,00,00,000000",
+    "ticker": "MORN",
+    "open": 217.2200012207,
+    "high": 219.5,
+    "low": 216.0050048828,
+    "close": 217.3099975586,
+    "volume": 344733.0,
+    "wedge_status": "none"
   }
 ]

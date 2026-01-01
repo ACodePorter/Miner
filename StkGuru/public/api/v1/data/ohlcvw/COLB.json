@@ -7508,5 +7508,15 @@
     "close": 28.25,
     "volume": 1757729.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,31,00,00,00,000000",
+    "ticker": "COLB",
+    "open": 28.2600002289,
+    "high": 28.2999992371,
+    "low": 27.8999996185,
+    "close": 27.9500007629,
+    "volume": 1391332.0,
+    "wedge_status": "none"
   }
 ]

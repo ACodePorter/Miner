@@ -7508,5 +7508,15 @@
     "close": 13.220000267,
     "volume": 16405044.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,31,00,00,00,000000",
+    "ticker": "JOBY",
+    "open": 13.25,
+    "high": 13.3350000381,
+    "low": 12.9899997711,
+    "close": 13.1999998093,
+    "volume": 13939218.0,
+    "wedge_status": "none"
   }
 ]

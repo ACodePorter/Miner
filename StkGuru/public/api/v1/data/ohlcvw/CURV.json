@@ -7508,5 +7508,15 @@
     "close": 0.9761000276,
     "volume": 405937.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,31,00,00,00,000000",
+    "ticker": "CURV",
+    "open": 0.9750000238,
+    "high": 1.0449999571,
+    "low": 0.9609000087,
+    "close": 0.978399992,
+    "volume": 320264.0,
+    "wedge_status": "none"
   }
 ]

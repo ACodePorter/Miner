@@ -7508,5 +7508,15 @@
     "close": 133.2599945068,
     "volume": 93983.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,31,00,00,00,000000",
+    "ticker": "PFSI",
+    "open": 133.0,
+    "high": 133.3200073242,
+    "low": 131.6900024414,
+    "close": 131.8399963379,
+    "volume": 164869.0,
+    "wedge_status": "drop"
   }
 ]

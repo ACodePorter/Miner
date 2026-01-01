@@ -7508,5 +7508,15 @@
     "close": 32.3199996948,
     "volume": 4594.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,31,00,00,00,000000",
+    "ticker": "HWBK",
+    "open": 32.5,
+    "high": 35.6800003052,
+    "low": 32.0299987793,
+    "close": 34.8800010681,
+    "volume": 20933.0,
+    "wedge_status": "none"
   }
 ]
