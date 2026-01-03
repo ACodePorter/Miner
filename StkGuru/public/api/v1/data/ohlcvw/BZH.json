@@ -7508,5 +7508,15 @@
     "close": 20.2700004578,
     "volume": 276042.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,02,00,00,00,000000",
+    "ticker": "BZH",
+    "open": 20.25,
+    "high": 20.4799995422,
+    "low": 19.9874000549,
+    "close": 20.25,
+    "volume": 503548.0,
+    "wedge_status": "none"
   }
 ]

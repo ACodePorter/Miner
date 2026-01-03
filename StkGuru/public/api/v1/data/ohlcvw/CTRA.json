@@ -7508,5 +7508,15 @@
     "close": 26.3199996948,
     "volume": 6790548.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,02,00,00,00,000000",
+    "ticker": "CTRA",
+    "open": 26.25,
+    "high": 26.7000007629,
+    "low": 26.0300006866,
+    "close": 26.6000003815,
+    "volume": 5484760.0,
+    "wedge_status": "none"
   }
 ]

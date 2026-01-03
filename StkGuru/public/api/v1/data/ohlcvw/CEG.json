@@ -7508,5 +7508,15 @@
     "close": 353.2699890137,
     "volume": 1147084.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,02,00,00,00,000000",
+    "ticker": "CEG",
+    "open": 358.0,
+    "high": 373.2300109863,
+    "low": 358.0,
+    "close": 366.25,
+    "volume": 2272995.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 29.8899993896,
     "volume": 16005060.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,02,00,00,00,000000",
+    "ticker": "CMCSA",
+    "open": 29.8850002289,
+    "high": 29.9475002289,
+    "low": 29.375,
+    "close": 29.5400009155,
+    "volume": 22101016.0,
+    "wedge_status": "none"
   }
 ]
