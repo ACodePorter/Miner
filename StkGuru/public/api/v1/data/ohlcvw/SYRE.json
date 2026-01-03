@@ -1,15 +1,5 @@
 [
   {
-    "trade_date": "2023,01,04,00,00,00,000000",
-    "ticker": "SYRE",
-    "open": 11.0,
-    "high": 11.25,
-    "low": 10.0,
-    "close": 11.1000003815,
-    "volume": 28332.0,
-    "wedge_status": "none"
-  },
-  {
     "trade_date": "2023,01,05,00,00,00,000000",
     "ticker": "SYRE",
     "open": 11.25,
@@ -7508,5 +7498,15 @@
     "close": 32.7599983215,
     "volume": 503218.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,02,00,00,00,000000",
+    "ticker": "SYRE",
+    "open": 32.7599983215,
+    "high": 33.3100013733,
+    "low": 30.1499996185,
+    "close": 30.5799999237,
+    "volume": 791823.0,
+    "wedge_status": "drop"
   }
 ]
