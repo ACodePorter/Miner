@@ -7508,5 +7508,15 @@
     "close": 18.0100002289,
     "volume": 120523.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,02,00,00,00,000000",
+    "ticker": "EBF",
+    "open": 18.0100002289,
+    "high": 18.1800003052,
+    "low": 17.7950000763,
+    "close": 18.0,
+    "volume": 134388.0,
+    "wedge_status": "drop"
   }
 ]

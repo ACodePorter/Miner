@@ -7508,5 +7508,15 @@
     "close": 104.0,
     "volume": 515555.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,02,00,00,00,000000",
+    "ticker": "RPM",
+    "open": 104.1699981689,
+    "high": 105.0,
+    "low": 103.0149993896,
+    "close": 103.7600021362,
+    "volume": 1083010.0,
+    "wedge_status": "none"
   }
 ]

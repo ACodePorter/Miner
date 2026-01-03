@@ -7508,5 +7508,15 @@
     "close": 170.8300018311,
     "volume": 85430.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,02,00,00,00,000000",
+    "ticker": "FCN",
+    "open": 169.8699951172,
+    "high": 170.75,
+    "low": 167.5,
+    "close": 170.2799987793,
+    "volume": 134851.0,
+    "wedge_status": "none"
   }
 ]

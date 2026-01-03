@@ -7508,5 +7508,15 @@
     "close": 401.299987793,
     "volume": 288589.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,02,00,00,00,000000",
+    "ticker": "HUBS",
+    "open": 399.0,
+    "high": 401.6000061035,
+    "low": 375.4899902344,
+    "close": 382.2300109863,
+    "volume": 599760.0,
+    "wedge_status": "drop"
   }
 ]

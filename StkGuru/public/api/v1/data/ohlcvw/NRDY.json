@@ -7508,5 +7508,15 @@
     "close": 1.0399999619,
     "volume": 1232616.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,02,00,00,00,000000",
+    "ticker": "NRDY",
+    "open": 1.0399999619,
+    "high": 1.0800000429,
+    "low": 1.0099999905,
+    "close": 1.0199999809,
+    "volume": 863553.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 86.3199996948,
     "volume": 342381.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,02,00,00,00,000000",
+    "ticker": "MMS",
+    "open": 87.25,
+    "high": 87.9700012207,
+    "low": 85.7799987793,
+    "close": 86.4700012207,
+    "volume": 544788.0,
+    "wedge_status": "none"
   }
 ]

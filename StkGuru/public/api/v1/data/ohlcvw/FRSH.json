@@ -7508,5 +7508,15 @@
     "close": 12.25,
     "volume": 2132736.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,02,00,00,00,000000",
+    "ticker": "FRSH",
+    "open": 12.2600002289,
+    "high": 12.3249998093,
+    "low": 11.4744997025,
+    "close": 11.6000003815,
+    "volume": 3351127.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 38.5,
     "volume": 135101.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,02,00,00,00,000000",
+    "ticker": "MOFG",
+    "open": 38.6100006104,
+    "high": 38.8050003052,
+    "low": 37.6699981689,
+    "close": 38.0699996948,
+    "volume": 137587.0,
+    "wedge_status": "none"
   }
 ]
