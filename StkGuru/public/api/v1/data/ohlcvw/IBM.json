@@ -7488,5 +7488,15 @@
     "close": 291.5,
     "volume": 3404111.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,05,00,00,00,000000",
+    "ticker": "IBM",
+    "open": 295.7699890137,
+    "high": 299.1900024414,
+    "low": 294.25,
+    "close": 294.9700012207,
+    "volume": 3259383.0,
+    "wedge_status": "none"
   }
 ]

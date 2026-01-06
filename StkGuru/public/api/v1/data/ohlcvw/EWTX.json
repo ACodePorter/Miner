@@ -7488,5 +7488,15 @@
     "close": 23.75,
     "volume": 981488.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,05,00,00,00,000000",
+    "ticker": "EWTX",
+    "open": 23.6399993896,
+    "high": 23.8700008392,
+    "low": 22.9799995422,
+    "close": 23.5699996948,
+    "volume": 977842.0,
+    "wedge_status": "drop"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 178.3500061035,
     "volume": 852255.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,05,00,00,00,000000",
+    "ticker": "JKHY",
+    "open": 178.0,
+    "high": 182.4900054932,
+    "low": 176.4799957275,
+    "close": 181.4600067139,
+    "volume": 586671.0,
+    "wedge_status": "none"
   }
 ]

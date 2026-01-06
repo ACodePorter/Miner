@@ -7488,5 +7488,15 @@
     "close": 25.9400005341,
     "volume": 1530098.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,05,00,00,00,000000",
+    "ticker": "ESI",
+    "open": 25.8500003815,
+    "high": 26.8400001526,
+    "low": 25.8299999237,
+    "close": 26.5,
+    "volume": 1246628.0,
+    "wedge_status": "none"
   }
 ]

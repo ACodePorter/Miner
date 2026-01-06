@@ -7488,5 +7488,15 @@
     "close": 35.4000015259,
     "volume": 1628341.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,05,00,00,00,000000",
+    "ticker": "CUBE",
+    "open": 35.2799987793,
+    "high": 35.875,
+    "low": 35.0900001526,
+    "close": 35.5,
+    "volume": 1941886.0,
+    "wedge_status": "none"
   }
 ]

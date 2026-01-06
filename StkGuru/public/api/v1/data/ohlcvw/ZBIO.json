@@ -2828,5 +2828,15 @@
     "close": 34.5,
     "volume": 199012.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,05,00,00,00,000000",
+    "ticker": "ZBIO",
+    "open": 16.7700004578,
+    "high": 17.5,
+    "low": 13.5,
+    "close": 16.6100006104,
+    "volume": 8034133.0,
+    "wedge_status": "none"
   }
 ]

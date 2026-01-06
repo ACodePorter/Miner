@@ -7488,5 +7488,15 @@
     "close": 15.25,
     "volume": 105341.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,05,00,00,00,000000",
+    "ticker": "MCS",
+    "open": 15.1599998474,
+    "high": 15.4149999619,
+    "low": 15.1000003815,
+    "close": 15.2299995422,
+    "volume": 134303.0,
+    "wedge_status": "none"
   }
 ]

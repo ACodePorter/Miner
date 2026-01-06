@@ -7488,5 +7488,15 @@
     "close": 8.6099996567,
     "volume": 480581.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,05,00,00,00,000000",
+    "ticker": "BNED",
+    "open": 8.779999733,
+    "high": 8.779999733,
+    "low": 8.0473003387,
+    "close": 8.1800003052,
+    "volume": 714644.0,
+    "wedge_status": "none"
   }
 ]

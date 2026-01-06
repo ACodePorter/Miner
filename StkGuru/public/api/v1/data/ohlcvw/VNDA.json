@@ -7488,5 +7488,15 @@
     "close": 8.25,
     "volume": 4909532.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,05,00,00,00,000000",
+    "ticker": "VNDA",
+    "open": 8.3000001907,
+    "high": 8.4799995422,
+    "low": 7.8550000191,
+    "close": 7.8699998856,
+    "volume": 3000489.0,
+    "wedge_status": "none"
   }
 ]

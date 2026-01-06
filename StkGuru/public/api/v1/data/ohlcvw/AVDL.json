@@ -7488,5 +7488,15 @@
     "close": 21.5200004578,
     "volume": 1063902.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,05,00,00,00,000000",
+    "ticker": "AVDL",
+    "open": 21.4899997711,
+    "high": 21.5200004578,
+    "low": 21.4549999237,
+    "close": 21.5,
+    "volume": 1027410.0,
+    "wedge_status": "none"
   }
 ]

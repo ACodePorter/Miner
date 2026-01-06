@@ -7488,5 +7488,15 @@
     "close": 41.2099990845,
     "volume": 1428080.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,05,00,00,00,000000",
+    "ticker": "EXLS",
+    "open": 41.0999984741,
+    "high": 42.25,
+    "low": 40.7141990662,
+    "close": 42.0099983215,
+    "volume": 1292893.0,
+    "wedge_status": "none"
   }
 ]
