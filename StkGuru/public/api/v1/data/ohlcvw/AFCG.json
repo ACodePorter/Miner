@@ -7498,5 +7498,15 @@
     "close": 3.0299999714,
     "volume": 238865.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2026,01,06,00,00,00,000000",
+    "ticker": "AFCG",
+    "open": 2.8599998951,
+    "high": 3.0,
+    "low": 2.8499999046,
+    "close": 2.9300000668,
+    "volume": 120236.0,
+    "wedge_status": "none"
   }
 ]

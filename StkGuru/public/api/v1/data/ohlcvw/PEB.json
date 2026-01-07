@@ -7498,5 +7498,15 @@
     "close": 11.5699996948,
     "volume": 1592201.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,06,00,00,00,000000",
+    "ticker": "PEB",
+    "open": 11.5,
+    "high": 11.8299999237,
+    "low": 11.0399999619,
+    "close": 11.8299999237,
+    "volume": 2024206.0,
+    "wedge_status": "none"
   }
 ]

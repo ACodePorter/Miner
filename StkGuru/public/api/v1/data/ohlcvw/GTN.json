@@ -7498,5 +7498,15 @@
     "close": 4.9099998474,
     "volume": 605636.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,06,00,00,00,000000",
+    "ticker": "GTN",
+    "open": 4.7800002098,
+    "high": 4.8654999733,
+    "low": 4.75,
+    "close": 4.7800002098,
+    "volume": 636596.0,
+    "wedge_status": "drop"
   }
 ]

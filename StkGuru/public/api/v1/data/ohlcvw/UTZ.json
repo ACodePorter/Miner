@@ -7498,5 +7498,15 @@
     "close": 9.8299999237,
     "volume": 1260252.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,06,00,00,00,000000",
+    "ticker": "UTZ",
+    "open": 10.25,
+    "high": 10.0264997482,
+    "low": 9.8199996948,
+    "close": 9.8400001526,
+    "volume": 1051975.0,
+    "wedge_status": "none"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 12.25,
     "volume": 654399.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,06,00,00,00,000000",
+    "ticker": "CARS",
+    "open": 11.9899997711,
+    "high": 12.5850000381,
+    "low": 12.0200004578,
+    "close": 12.5799999237,
+    "volume": 541444.0,
+    "wedge_status": "none"
   }
 ]
