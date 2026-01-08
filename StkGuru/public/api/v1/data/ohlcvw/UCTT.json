@@ -7508,5 +7508,15 @@
     "close": 31.75,
     "volume": 1196424.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,07,00,00,00,000000",
+    "ticker": "UCTT",
+    "open": 31.5100002289,
+    "high": 33.8699989319,
+    "low": 31.2199993134,
+    "close": 33.4399986267,
+    "volume": 1510421.0,
+    "wedge_status": "none"
   }
 ]

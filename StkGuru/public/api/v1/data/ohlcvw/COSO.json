@@ -1228,5 +1228,15 @@
     "close": 23.0,
     "volume": 35034.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,07,00,00,00,000000",
+    "ticker": "COSO",
+    "open": 23.0,
+    "high": 23.4400005341,
+    "low": 22.8099994659,
+    "close": 23.0300006866,
+    "volume": 36519.0,
+    "wedge_status": "none"
   }
 ]

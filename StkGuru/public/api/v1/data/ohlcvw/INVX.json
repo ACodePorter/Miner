@@ -7508,5 +7508,15 @@
     "close": 23.0300006866,
     "volume": 267958.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,07,00,00,00,000000",
+    "ticker": "INVX",
+    "open": 23.0300006866,
+    "high": 23.125,
+    "low": 22.4799995422,
+    "close": 22.6000003815,
+    "volume": 160884.0,
+    "wedge_status": "none"
   }
 ]

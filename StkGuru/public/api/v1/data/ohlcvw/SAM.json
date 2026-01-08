@@ -7508,5 +7508,15 @@
     "close": 202.0700073242,
     "volume": 112857.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,07,00,00,00,000000",
+    "ticker": "SAM",
+    "open": 203.1000061035,
+    "high": 205.25,
+    "low": 202.0,
+    "close": 204.5,
+    "volume": 121090.0,
+    "wedge_status": "none"
   }
 ]

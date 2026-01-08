@@ -7508,5 +7508,15 @@
     "close": 23.5,
     "volume": 3158861.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,07,00,00,00,000000",
+    "ticker": "BRBR",
+    "open": 23.7299995422,
+    "high": 24.0300006866,
+    "low": 22.9699993134,
+    "close": 23.0499992371,
+    "volume": 2919863.0,
+    "wedge_status": "none"
   }
 ]

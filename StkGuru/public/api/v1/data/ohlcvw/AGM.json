@@ -7508,5 +7508,15 @@
     "close": 176.3099975586,
     "volume": 123924.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,07,00,00,00,000000",
+    "ticker": "AGM",
+    "open": 175.75,
+    "high": 176.2449951172,
+    "low": 171.2664031982,
+    "close": 174.5,
+    "volume": 107157.0,
+    "wedge_status": "none"
   }
 ]

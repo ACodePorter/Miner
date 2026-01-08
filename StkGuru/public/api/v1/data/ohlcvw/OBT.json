@@ -7508,5 +7508,15 @@
     "close": 28.9599990845,
     "volume": 30769.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,07,00,00,00,000000",
+    "ticker": "OBT",
+    "open": 29.1800003052,
+    "high": 29.1800003052,
+    "low": 28.3500003815,
+    "close": 28.75,
+    "volume": 32564.0,
+    "wedge_status": "none"
   }
 ]

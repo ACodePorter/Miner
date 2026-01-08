@@ -7508,5 +7508,15 @@
     "close": 43.3100013733,
     "volume": 72435.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,07,00,00,00,000000",
+    "ticker": "HTB",
+    "open": 42.5,
+    "high": 43.7299995422,
+    "low": 42.5,
+    "close": 43.1599998474,
+    "volume": 61157.0,
+    "wedge_status": "drop"
   }
 ]

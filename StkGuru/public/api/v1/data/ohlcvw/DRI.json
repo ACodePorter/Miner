@@ -7508,5 +7508,15 @@
     "close": 200.25,
     "volume": 1967557.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,07,00,00,00,000000",
+    "ticker": "DRI",
+    "open": 201.1699981689,
+    "high": 203.25,
+    "low": 199.3800048828,
+    "close": 199.7700042725,
+    "volume": 2033856.0,
+    "wedge_status": "none"
   }
 ]
