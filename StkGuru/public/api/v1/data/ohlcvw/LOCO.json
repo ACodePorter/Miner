@@ -7508,5 +7508,15 @@
     "close": 10.720000267,
     "volume": 229686.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,08,00,00,00,000000",
+    "ticker": "LOCO",
+    "open": 10.6599998474,
+    "high": 11.0,
+    "low": 10.6599998474,
+    "close": 10.9499998093,
+    "volume": 195251.0,
+    "wedge_status": "pop"
   }
 ]

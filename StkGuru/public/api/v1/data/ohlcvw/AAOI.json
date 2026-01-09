@@ -7508,5 +7508,15 @@
     "close": 38.0550003052,
     "volume": 3795877.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,08,00,00,00,000000",
+    "ticker": "AAOI",
+    "open": 37.9099998474,
+    "high": 38.0,
+    "low": 31.6700000763,
+    "close": 33.0099983215,
+    "volume": 8538157.0,
+    "wedge_status": "drop"
   }
 ]

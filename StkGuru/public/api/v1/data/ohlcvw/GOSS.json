@@ -7508,5 +7508,15 @@
     "close": 2.4100000858,
     "volume": 6805780.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,08,00,00,00,000000",
+    "ticker": "GOSS",
+    "open": 2.3499999046,
+    "high": 2.5399999619,
+    "low": 2.3499999046,
+    "close": 2.5,
+    "volume": 7107063.0,
+    "wedge_status": "none"
   }
 ]

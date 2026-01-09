@@ -7508,5 +7508,15 @@
     "close": 26.0,
     "volume": 894404.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,08,00,00,00,000000",
+    "ticker": "PCRX",
+    "open": 25.8700008392,
+    "high": 26.3549995422,
+    "low": 25.5200004578,
+    "close": 26.0200004578,
+    "volume": 822678.0,
+    "wedge_status": "none"
   }
 ]

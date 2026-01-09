@@ -7508,5 +7508,15 @@
     "close": 30.75,
     "volume": 705581.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,08,00,00,00,000000",
+    "ticker": "AMSC",
+    "open": 30.7999992371,
+    "high": 31.0499992371,
+    "low": 29.9500007629,
+    "close": 30.5799999237,
+    "volume": 691990.0,
+    "wedge_status": "none"
   }
 ]

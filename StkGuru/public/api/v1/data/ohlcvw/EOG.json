@@ -7508,5 +7508,15 @@
     "close": 102.5500030518,
     "volume": 3103980.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,08,00,00,00,000000",
+    "ticker": "EOG",
+    "open": 102.5,
+    "high": 106.8199996948,
+    "low": 102.5,
+    "close": 105.5699996948,
+    "volume": 3979521.0,
+    "wedge_status": "none"
   }
 ]

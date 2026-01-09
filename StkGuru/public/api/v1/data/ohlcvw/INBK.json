@@ -7508,5 +7508,15 @@
     "close": 20.7099990845,
     "volume": 48425.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,08,00,00,00,000000",
+    "ticker": "INBK",
+    "open": 21.1949996948,
+    "high": 21.7000007629,
+    "low": 20.25,
+    "close": 21.5900001526,
+    "volume": 65896.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 25.2199993134,
     "volume": 173683.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,08,00,00,00,000000",
+    "ticker": "MEG",
+    "open": 25.1700000763,
+    "high": 25.9500007629,
+    "low": 25.1700000763,
+    "close": 25.75,
+    "volume": 175371.0,
+    "wedge_status": "none"
   }
 ]
