@@ -7508,5 +7508,15 @@
     "close": 34.0,
     "volume": 549025.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,08,00,00,00,000000",
+    "ticker": "SDRL",
+    "open": 34.0,
+    "high": 35.0699996948,
+    "low": 33.9599990845,
+    "close": 35.0600013733,
+    "volume": 480205.0,
+    "wedge_status": "none"
   }
 ]
