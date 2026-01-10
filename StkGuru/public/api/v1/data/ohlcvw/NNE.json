@@ -3748,5 +3748,15 @@
     "close": 33.0499992371,
     "volume": 1752787.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,09,00,00,00,000000",
+    "ticker": "NNE",
+    "open": 35.0,
+    "high": 35.9000015259,
+    "low": 31.7800006866,
+    "close": 32.0099983215,
+    "volume": 3525661.0,
+    "wedge_status": "none"
   }
 ]

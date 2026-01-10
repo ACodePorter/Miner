@@ -7508,5 +7508,15 @@
     "close": 120.0,
     "volume": 2638684.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,09,00,00,00,000000",
+    "ticker": "MOD",
+    "open": 120.0,
+    "high": 127.6299972534,
+    "low": 119.7949981689,
+    "close": 125.1399993896,
+    "volume": 2243001.0,
+    "wedge_status": "none"
   }
 ]

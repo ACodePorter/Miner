@@ -7508,5 +7508,15 @@
     "close": 64.7200012207,
     "volume": 75761.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,09,00,00,00,000000",
+    "ticker": "SRCE",
+    "open": 64.5,
+    "high": 65.3099975586,
+    "low": 63.7599983215,
+    "close": 63.7599983215,
+    "volume": 89499.0,
+    "wedge_status": "none"
   }
 ]

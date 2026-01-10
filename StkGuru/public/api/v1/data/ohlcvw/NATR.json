@@ -7508,5 +7508,15 @@
     "close": 22.0,
     "volume": 97445.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2026,01,09,00,00,00,000000",
+    "ticker": "NATR",
+    "open": 22.0,
+    "high": 22.0750007629,
+    "low": 21.4435005188,
+    "close": 21.7299995422,
+    "volume": 55871.0,
+    "wedge_status": "none"
   }
 ]

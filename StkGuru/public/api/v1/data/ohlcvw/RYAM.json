@@ -7508,5 +7508,15 @@
     "close": 7.5,
     "volume": 628792.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,09,00,00,00,000000",
+    "ticker": "RYAM",
+    "open": 7.5500001907,
+    "high": 7.5999999046,
+    "low": 7.2199997902,
+    "close": 7.3400001526,
+    "volume": 856019.0,
+    "wedge_status": "none"
   }
 ]

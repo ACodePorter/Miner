@@ -5908,5 +5908,15 @@
     "close": 10.0,
     "volume": 780076.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,09,00,00,00,000000",
+    "ticker": "SVV",
+    "open": 10.0600004196,
+    "high": 10.1300001144,
+    "low": 9.7399997711,
+    "close": 9.9200000763,
+    "volume": 572663.0,
+    "wedge_status": "none"
   }
 ]

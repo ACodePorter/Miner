@@ -7508,5 +7508,15 @@
     "close": 22.5,
     "volume": 1189114.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,09,00,00,00,000000",
+    "ticker": "TNDM",
+    "open": 23.0300006866,
+    "high": 23.1049995422,
+    "low": 20.2849998474,
+    "close": 21.7000007629,
+    "volume": 2378494.0,
+    "wedge_status": "drop"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 21.3899993896,
     "volume": 1526625.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,09,00,00,00,000000",
+    "ticker": "SNDX",
+    "open": 21.3799991608,
+    "high": 21.5949993134,
+    "low": 20.9099998474,
+    "close": 21.0,
+    "volume": 1041971.0,
+    "wedge_status": "none"
   }
 ]
