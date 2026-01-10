@@ -1248,5 +1248,15 @@
     "close": 37.2200012207,
     "volume": 277742.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,09,00,00,00,000000",
+    "ticker": "AHL",
+    "open": 37.2200012207,
+    "high": 37.3549995422,
+    "low": 37.2200012207,
+    "close": 37.25,
+    "volume": 150532.0,
+    "wedge_status": "none"
   }
 ]

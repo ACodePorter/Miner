@@ -7508,5 +7508,15 @@
     "close": 100.0,
     "volume": 82974.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,09,00,00,00,000000",
+    "ticker": "IRMD",
+    "open": 100.3450012207,
+    "high": 100.3870010376,
+    "low": 98.7799987793,
+    "close": 98.9499969482,
+    "volume": 75409.0,
+    "wedge_status": "none"
   }
 ]

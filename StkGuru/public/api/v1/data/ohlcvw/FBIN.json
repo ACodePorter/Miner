@@ -7508,5 +7508,15 @@
     "close": 55.0,
     "volume": 2120187.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,09,00,00,00,000000",
+    "ticker": "FBIN",
+    "open": 55.8800010681,
+    "high": 58.3899993896,
+    "low": 54.8800010681,
+    "close": 58.1399993896,
+    "volume": 2434561.0,
+    "wedge_status": "none"
   }
 ]
