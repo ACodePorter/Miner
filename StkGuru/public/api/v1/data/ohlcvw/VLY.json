@@ -7488,5 +7488,15 @@
     "close": 12.0,
     "volume": 8034759.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,12,00,00,00,000000",
+    "ticker": "VLY",
+    "open": 11.8520002365,
+    "high": 11.9099998474,
+    "low": 11.6700000763,
+    "close": 11.75,
+    "volume": 5068074.0,
+    "wedge_status": "none"
   }
 ]

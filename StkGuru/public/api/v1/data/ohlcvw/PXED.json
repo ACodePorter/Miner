@@ -198,5 +198,15 @@
     "close": 31.6800003052,
     "volume": 131218.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,12,00,00,00,000000",
+    "ticker": "PXED",
+    "open": 31.5300006866,
+    "high": 33.4500007629,
+    "low": 31.25,
+    "close": 33.4500007629,
+    "volume": 65466.0,
+    "wedge_status": "pop"
   }
 ]

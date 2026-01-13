@@ -7488,5 +7488,15 @@
     "close": 54.75,
     "volume": 224560.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,12,00,00,00,000000",
+    "ticker": "CBZ",
+    "open": 53.5999984741,
+    "high": 54.7400016785,
+    "low": 53.2449989319,
+    "close": 54.2400016785,
+    "volume": 385442.0,
+    "wedge_status": "none"
   }
 ]

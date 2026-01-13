@@ -7488,5 +7488,15 @@
     "close": 64.75,
     "volume": 210227.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,12,00,00,00,000000",
+    "ticker": "SPB",
+    "open": 64.6800003052,
+    "high": 64.8000030518,
+    "low": 62.8699989319,
+    "close": 63.2000007629,
+    "volume": 206749.0,
+    "wedge_status": "none"
   }
 ]

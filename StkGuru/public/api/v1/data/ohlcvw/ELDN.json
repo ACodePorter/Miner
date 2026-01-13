@@ -7488,5 +7488,15 @@
     "close": 1.7300000191,
     "volume": 491410.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,12,00,00,00,000000",
+    "ticker": "ELDN",
+    "open": 1.7100000381,
+    "high": 1.9198999405,
+    "low": 1.7100000381,
+    "close": 1.9099999666,
+    "volume": 1242611.0,
+    "wedge_status": "none"
   }
 ]

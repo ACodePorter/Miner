@@ -7488,5 +7488,15 @@
     "close": 507.75,
     "volume": 326783.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,12,00,00,00,000000",
+    "ticker": "AMP",
+    "open": 500.0,
+    "high": 512.25,
+    "low": 500.1799926758,
+    "close": 510.3599853516,
+    "volume": 347104.0,
+    "wedge_status": "none"
   }
 ]

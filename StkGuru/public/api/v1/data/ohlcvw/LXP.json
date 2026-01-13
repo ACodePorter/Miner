@@ -7488,5 +7488,15 @@
     "close": 50.0699996948,
     "volume": 445302.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,12,00,00,00,000000",
+    "ticker": "LXP",
+    "open": 50.2000007629,
+    "high": 50.3546981812,
+    "low": 49.8800010681,
+    "close": 50.25,
+    "volume": 258148.0,
+    "wedge_status": "none"
   }
 ]

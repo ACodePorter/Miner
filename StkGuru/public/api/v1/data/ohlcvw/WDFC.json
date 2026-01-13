@@ -7488,5 +7488,15 @@
     "close": 190.0,
     "volume": 838283.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,12,00,00,00,000000",
+    "ticker": "WDFC",
+    "open": 183.5749969482,
+    "high": 196.4423065186,
+    "low": 188.7599945068,
+    "close": 191.6900024414,
+    "volume": 474152.0,
+    "wedge_status": "none"
   }
 ]

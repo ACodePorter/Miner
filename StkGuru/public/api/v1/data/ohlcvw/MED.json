@@ -7488,5 +7488,15 @@
     "close": 11.4200000763,
     "volume": 232449.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,12,00,00,00,000000",
+    "ticker": "MED",
+    "open": 11.4399995804,
+    "high": 11.75,
+    "low": 11.3199996948,
+    "close": 11.6899995804,
+    "volume": 191872.0,
+    "wedge_status": "none"
   }
 ]
