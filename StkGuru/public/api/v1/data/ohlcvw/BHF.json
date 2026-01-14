@@ -7498,5 +7498,15 @@
     "close": 64.3700027466,
     "volume": 547396.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,13,00,00,00,000000",
+    "ticker": "BHF",
+    "open": 64.4300003052,
+    "high": 64.4899978638,
+    "low": 63.8499984741,
+    "close": 64.0,
+    "volume": 1235252.0,
+    "wedge_status": "none"
   }
 ]

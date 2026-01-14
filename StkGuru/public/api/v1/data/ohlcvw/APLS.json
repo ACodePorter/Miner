@@ -7498,5 +7498,15 @@
     "close": 23.2000007629,
     "volume": 5258279.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,13,00,00,00,000000",
+    "ticker": "APLS",
+    "open": 22.7999992371,
+    "high": 23.0932998657,
+    "low": 21.125,
+    "close": 21.3299999237,
+    "volume": 4025112.0,
+    "wedge_status": "none"
   }
 ]

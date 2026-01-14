@@ -7498,5 +7498,15 @@
     "close": 10.5,
     "volume": 791314.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,13,00,00,00,000000",
+    "ticker": "ECVT",
+    "open": 10.5699996948,
+    "high": 10.6300001144,
+    "low": 10.4949998856,
+    "close": 10.6199998856,
+    "volume": 856683.0,
+    "wedge_status": "none"
   }
 ]
