@@ -7498,5 +7498,15 @@
     "close": 1.3600000143,
     "volume": 836956.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,13,00,00,00,000000",
+    "ticker": "MXCT",
+    "open": 1.3700000048,
+    "high": 1.3926999569,
+    "low": 1.2999999523,
+    "close": 1.3099999428,
+    "volume": 580837.0,
+    "wedge_status": "none"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 52.2900009155,
     "volume": 20177.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,13,00,00,00,000000",
+    "ticker": "SFST",
+    "open": 52.5,
+    "high": 52.7999992371,
+    "low": 52.0099983215,
+    "close": 52.6599998474,
+    "volume": 35668.0,
+    "wedge_status": "none"
   }
 ]

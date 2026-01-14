@@ -7498,5 +7498,15 @@
     "close": 20.3999996185,
     "volume": 1918590.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,13,00,00,00,000000",
+    "ticker": "UPWK",
+    "open": 20.5699996948,
+    "high": 20.5916004181,
+    "low": 19.6599998474,
+    "close": 20.25,
+    "volume": 1910581.0,
+    "wedge_status": "drop"
   }
 ]

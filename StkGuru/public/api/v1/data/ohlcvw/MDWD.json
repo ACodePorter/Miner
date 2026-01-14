@@ -7498,5 +7498,15 @@
     "close": 17.2299995422,
     "volume": 252290.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,13,00,00,00,000000",
+    "ticker": "MDWD",
+    "open": 17.3999996185,
+    "high": 17.3999996185,
+    "low": 16.3199996948,
+    "close": 16.5,
+    "volume": 147062.0,
+    "wedge_status": "none"
   }
 ]

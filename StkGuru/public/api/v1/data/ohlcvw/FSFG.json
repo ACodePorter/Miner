@@ -7498,5 +7498,15 @@
     "close": 32.0,
     "volume": 4985.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,13,00,00,00,000000",
+    "ticker": "FSFG",
+    "open": 31.8199996948,
+    "high": 31.8500003815,
+    "low": 31.5100002289,
+    "close": 31.5100002289,
+    "volume": 4196.0,
+    "wedge_status": "none"
   }
 ]
