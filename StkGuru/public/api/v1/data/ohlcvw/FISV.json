@@ -7498,5 +7498,15 @@
     "close": 66.75,
     "volume": 6675948.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,14,00,00,00,000000",
+    "ticker": "FISV",
+    "open": 66.6149978638,
+    "high": 67.5100021362,
+    "low": 66.4199981689,
+    "close": 67.5,
+    "volume": 11940117.0,
+    "wedge_status": "none"
   }
 ]

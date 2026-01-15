@@ -7508,5 +7508,15 @@
     "close": 10.5,
     "volume": 1319080.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,14,00,00,00,000000",
+    "ticker": "AMPL",
+    "open": 10.9200000763,
+    "high": 10.5450000763,
+    "low": 10.0500001907,
+    "close": 10.2299995422,
+    "volume": 899559.0,
+    "wedge_status": "none"
   }
 ]

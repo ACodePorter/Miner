@@ -7508,5 +7508,15 @@
     "close": 124.3600006104,
     "volume": 360534.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,14,00,00,00,000000",
+    "ticker": "BPOP",
+    "open": 126.5,
+    "high": 126.2200012207,
+    "low": 123.7900009155,
+    "close": 126.2099990845,
+    "volume": 270117.0,
+    "wedge_status": "none"
   }
 ]

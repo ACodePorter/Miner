@@ -7508,5 +7508,15 @@
     "close": 7.25,
     "volume": 1107250.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,14,00,00,00,000000",
+    "ticker": "CXM",
+    "open": 7.1999998093,
+    "high": 7.2449998856,
+    "low": 7.0349998474,
+    "close": 7.1199998856,
+    "volume": 1765066.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 28.6000003815,
     "volume": 52156317.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,14,00,00,00,000000",
+    "ticker": "SMCI",
+    "open": 28.2600002289,
+    "high": 28.75,
+    "low": 27.75,
+    "close": 28.2700004578,
+    "volume": 24119617.0,
+    "wedge_status": "none"
   }
 ]

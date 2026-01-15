@@ -7508,5 +7508,15 @@
     "close": 37.7200012207,
     "volume": 2568.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,14,00,00,00,000000",
+    "ticker": "VALU",
+    "open": 37.7849998474,
+    "high": 37.9199981689,
+    "low": 37.2000007629,
+    "close": 37.2000007629,
+    "volume": 858.0,
+    "wedge_status": "none"
   }
 ]
