@@ -7518,5 +7518,15 @@
     "close": 40.4399986267,
     "volume": 108665.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,15,00,00,00,000000",
+    "ticker": "FMBH",
+    "open": 40.6300010681,
+    "high": 41.5750007629,
+    "low": 40.6199989319,
+    "close": 41.5,
+    "volume": 99433.0,
+    "wedge_status": "none"
   }
 ]

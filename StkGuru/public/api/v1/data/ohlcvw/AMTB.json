@@ -7518,5 +7518,15 @@
     "close": 20.4699993134,
     "volume": 125339.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,15,00,00,00,000000",
+    "ticker": "AMTB",
+    "open": 20.4500007629,
+    "high": 21.1499996185,
+    "low": 20.6499996185,
+    "close": 21.0,
+    "volume": 146008.0,
+    "wedge_status": "none"
   }
 ]

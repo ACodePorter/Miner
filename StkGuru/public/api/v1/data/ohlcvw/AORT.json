@@ -7518,5 +7518,15 @@
     "close": 42.5,
     "volume": 369421.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,15,00,00,00,000000",
+    "ticker": "AORT",
+    "open": 42.6100006104,
+    "high": 43.5999984741,
+    "low": 42.3501014709,
+    "close": 43.2900009155,
+    "volume": 222743.0,
+    "wedge_status": "none"
   }
 ]

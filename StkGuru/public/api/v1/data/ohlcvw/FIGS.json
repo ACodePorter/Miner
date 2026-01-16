@@ -7518,5 +7518,15 @@
     "close": 12.3000001907,
     "volume": 2503712.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,15,00,00,00,000000",
+    "ticker": "FIGS",
+    "open": 12.3500003815,
+    "high": 12.5,
+    "low": 12.2700004578,
+    "close": 12.3299999237,
+    "volume": 1121846.0,
+    "wedge_status": "none"
   }
 ]

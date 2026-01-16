@@ -7518,5 +7518,15 @@
     "close": 8.25,
     "volume": 3718566.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2026,01,15,00,00,00,000000",
+    "ticker": "ADT",
+    "open": 8.25,
+    "high": 8.3199996948,
+    "low": 8.2150001526,
+    "close": 8.279999733,
+    "volume": 3784120.0,
+    "wedge_status": "none"
   }
 ]

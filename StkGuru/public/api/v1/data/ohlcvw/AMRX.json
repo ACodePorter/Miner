@@ -7518,5 +7518,15 @@
     "close": 13.25,
     "volume": 1323516.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,15,00,00,00,000000",
+    "ticker": "AMRX",
+    "open": 12.9499998093,
+    "high": 13.2449998856,
+    "low": 12.8999996185,
+    "close": 13.1899995804,
+    "volume": 1275934.0,
+    "wedge_status": "none"
   }
 ]
