@@ -7518,5 +7518,15 @@
     "close": 60.7599983215,
     "volume": 34277.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2026,01,15,00,00,00,000000",
+    "ticker": "SMBC",
+    "open": 61.25,
+    "high": 62.5800018311,
+    "low": 61.25,
+    "close": 62.25,
+    "volume": 39602.0,
+    "wedge_status": "none"
   }
 ]

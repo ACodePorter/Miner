@@ -7518,5 +7518,15 @@
     "close": 33.25,
     "volume": 235865.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,15,00,00,00,000000",
+    "ticker": "MBUU",
+    "open": 32.5950012207,
+    "high": 34.4399986267,
+    "low": 33.0649986267,
+    "close": 34.0400009155,
+    "volume": 127588.0,
+    "wedge_status": "none"
   }
 ]

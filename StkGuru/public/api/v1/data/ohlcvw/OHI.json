@@ -7518,5 +7518,15 @@
     "close": 44.2999992371,
     "volume": 2177675.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,15,00,00,00,000000",
+    "ticker": "OHI",
+    "open": 44.5,
+    "high": 44.9049987793,
+    "low": 44.3100013733,
+    "close": 44.4799995422,
+    "volume": 1581843.0,
+    "wedge_status": "none"
   }
 ]

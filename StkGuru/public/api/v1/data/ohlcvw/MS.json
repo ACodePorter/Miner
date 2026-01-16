@@ -7518,5 +7518,15 @@
     "close": 180.7799987793,
     "volume": 8418995.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,15,00,00,00,000000",
+    "ticker": "MS",
+    "open": 181.0,
+    "high": 192.1600036621,
+    "low": 181.0,
+    "close": 191.2299957275,
+    "volume": 10162244.0,
+    "wedge_status": "none"
   }
 ]

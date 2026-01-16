@@ -7518,5 +7518,15 @@
     "close": 51.8800010681,
     "volume": 462671.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,15,00,00,00,000000",
+    "ticker": "LAZ",
+    "open": 52.5,
+    "high": 53.75,
+    "low": 52.1899986267,
+    "close": 53.75,
+    "volume": 680614.0,
+    "wedge_status": "none"
   }
 ]

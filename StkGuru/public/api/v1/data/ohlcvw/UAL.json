@@ -7518,5 +7518,15 @@
     "close": 110.75,
     "volume": 5000720.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,15,00,00,00,000000",
+    "ticker": "UAL",
+    "open": 113.5,
+    "high": 116.0599975586,
+    "low": 111.7600021362,
+    "close": 116.0199966431,
+    "volume": 4443812.0,
+    "wedge_status": "none"
   }
 ]

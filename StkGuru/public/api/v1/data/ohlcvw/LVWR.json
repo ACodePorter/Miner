@@ -7518,5 +7518,15 @@
     "close": 3.1800000668,
     "volume": 50289.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,15,00,00,00,000000",
+    "ticker": "LVWR",
+    "open": 3.1700000763,
+    "high": 3.2000000477,
+    "low": 2.9600000381,
+    "close": 2.9600000381,
+    "volume": 56559.0,
+    "wedge_status": "none"
   }
 ]
