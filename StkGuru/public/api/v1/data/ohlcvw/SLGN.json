@@ -7518,5 +7518,15 @@
     "close": 42.75,
     "volume": 682995.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,16,00,00,00,000000",
+    "ticker": "SLGN",
+    "open": 42.6699981689,
+    "high": 42.9300003052,
+    "low": 42.4099998474,
+    "close": 42.8600006104,
+    "volume": 405599.0,
+    "wedge_status": "none"
   }
 ]

@@ -7518,5 +7518,15 @@
     "close": 155.2299957275,
     "volume": 355465.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,16,00,00,00,000000",
+    "ticker": "ENVA",
+    "open": 156.0,
+    "high": 159.0599975586,
+    "low": 155.6000061035,
+    "close": 156.8699951172,
+    "volume": 205790.0,
+    "wedge_status": "none"
   }
 ]

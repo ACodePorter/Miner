@@ -7518,5 +7518,15 @@
     "close": 7.0,
     "volume": 156810.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2026,01,16,00,00,00,000000",
+    "ticker": "CLDT",
+    "open": 6.9600000381,
+    "high": 7.0300002098,
+    "low": 6.8800001144,
+    "close": 6.9099998474,
+    "volume": 181066.0,
+    "wedge_status": "none"
   }
 ]

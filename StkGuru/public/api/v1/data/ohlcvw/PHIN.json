@@ -5928,5 +5928,15 @@
     "close": 70.1200027466,
     "volume": 307855.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,16,00,00,00,000000",
+    "ticker": "PHIN",
+    "open": 70.5,
+    "high": 70.7399978638,
+    "low": 69.0599975586,
+    "close": 69.3499984741,
+    "volume": 231730.0,
+    "wedge_status": "none"
   }
 ]

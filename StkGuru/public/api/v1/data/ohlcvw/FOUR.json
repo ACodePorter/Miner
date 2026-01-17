@@ -7518,5 +7518,15 @@
     "close": 65.9100036621,
     "volume": 1589206.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,16,00,00,00,000000",
+    "ticker": "FOUR",
+    "open": 63.9099998474,
+    "high": 65.75,
+    "low": 63.2900009155,
+    "close": 64.4100036621,
+    "volume": 1558047.0,
+    "wedge_status": "drop"
   }
 ]

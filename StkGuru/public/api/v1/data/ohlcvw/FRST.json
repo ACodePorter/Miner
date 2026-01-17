@@ -7518,5 +7518,15 @@
     "close": 13.75,
     "volume": 98106.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,16,00,00,00,000000",
+    "ticker": "FRST",
+    "open": 13.375,
+    "high": 13.8500003815,
+    "low": 13.6000003815,
+    "close": 13.7299995422,
+    "volume": 73556.0,
+    "wedge_status": "none"
   }
 ]

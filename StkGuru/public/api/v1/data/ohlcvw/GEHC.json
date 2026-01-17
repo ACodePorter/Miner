@@ -7288,5 +7288,15 @@
     "close": 82.5100021362,
     "volume": 5058989.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,16,00,00,00,000000",
+    "ticker": "GEHC",
+    "open": 84.7942962646,
+    "high": 82.6999969482,
+    "low": 81.1500015259,
+    "close": 81.75,
+    "volume": 5411243.0,
+    "wedge_status": "none"
   }
 ]
