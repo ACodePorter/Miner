@@ -7498,5 +7498,15 @@
     "close": 100.5,
     "volume": 784516.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,20,00,00,00,000000",
+    "ticker": "EHC",
+    "open": 99.9000015259,
+    "high": 100.9449996948,
+    "low": 98.6600036621,
+    "close": 98.8300018311,
+    "volume": 776472.0,
+    "wedge_status": "none"
   }
 ]

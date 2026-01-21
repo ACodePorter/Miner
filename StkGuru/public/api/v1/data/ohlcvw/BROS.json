@@ -7498,5 +7498,15 @@
     "close": 62.1500015259,
     "volume": 3445094.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,20,00,00,00,000000",
+    "ticker": "BROS",
+    "open": 61.1699981689,
+    "high": 63.75,
+    "low": 61.2000007629,
+    "close": 61.4099998474,
+    "volume": 2606209.0,
+    "wedge_status": "drop"
   }
 ]

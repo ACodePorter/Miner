@@ -7498,5 +7498,15 @@
     "close": 11.220000267,
     "volume": 2907623.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,20,00,00,00,000000",
+    "ticker": "PD",
+    "open": 11.0,
+    "high": 11.2399997711,
+    "low": 10.9300003052,
+    "close": 10.970000267,
+    "volume": 2178339.0,
+    "wedge_status": "none"
   }
 ]

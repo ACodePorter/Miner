@@ -7498,5 +7498,15 @@
     "close": 79.4100036621,
     "volume": 1436417.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,20,00,00,00,000000",
+    "ticker": "LMND",
+    "open": 76.0500030518,
+    "high": 80.6779022217,
+    "low": 76.0,
+    "close": 78.2399978638,
+    "volume": 1354080.0,
+    "wedge_status": "drop"
   }
 ]

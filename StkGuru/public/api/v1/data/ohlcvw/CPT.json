@@ -7498,5 +7498,15 @@
     "close": 109.5,
     "volume": 570599.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,20,00,00,00,000000",
+    "ticker": "CPT",
+    "open": 108.5999984741,
+    "high": 108.8905029297,
+    "low": 106.8249969482,
+    "close": 107.25,
+    "volume": 786398.0,
+    "wedge_status": "drop"
   }
 ]

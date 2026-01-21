@@ -7498,5 +7498,15 @@
     "close": 4.0399999619,
     "volume": 431085.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,20,00,00,00,000000",
+    "ticker": "EWCZ",
+    "open": 4.0,
+    "high": 4.0199999809,
+    "low": 3.7049999237,
+    "close": 3.8299999237,
+    "volume": 487476.0,
+    "wedge_status": "drop"
   }
 ]

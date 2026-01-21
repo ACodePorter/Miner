@@ -7498,5 +7498,15 @@
     "close": 123.2699966431,
     "volume": 4759795.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,20,00,00,00,000000",
+    "ticker": "SATS",
+    "open": 122.0400009155,
+    "high": 128.0899963379,
+    "low": 121.0,
+    "close": 122.0,
+    "volume": 6318078.0,
+    "wedge_status": "none"
   }
 ]

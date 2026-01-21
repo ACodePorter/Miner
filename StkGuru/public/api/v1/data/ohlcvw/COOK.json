@@ -7498,5 +7498,15 @@
     "close": 1.1100000143,
     "volume": 316782.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,20,00,00,00,000000",
+    "ticker": "COOK",
+    "open": 1.0599999428,
+    "high": 1.0700000525,
+    "low": 1.0249999762,
+    "close": 1.0299999714,
+    "volume": 242613.0,
+    "wedge_status": "none"
   }
 ]

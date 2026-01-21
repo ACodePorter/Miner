@@ -7498,5 +7498,15 @@
     "close": 61.7700004578,
     "volume": 2024463.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,20,00,00,00,000000",
+    "ticker": "ETSY",
+    "open": 60.0,
+    "high": 61.1800003052,
+    "low": 58.8250007629,
+    "close": 58.9300003052,
+    "volume": 2985048.0,
+    "wedge_status": "drop"
   }
 ]

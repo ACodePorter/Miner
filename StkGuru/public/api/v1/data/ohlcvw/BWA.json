@@ -7498,5 +7498,15 @@
     "close": 47.1899986267,
     "volume": 1773643.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,20,00,00,00,000000",
+    "ticker": "BWA",
+    "open": 46.5,
+    "high": 46.9599990845,
+    "low": 46.2999992371,
+    "close": 46.5400009155,
+    "volume": 1172843.0,
+    "wedge_status": "drop"
   }
 ]

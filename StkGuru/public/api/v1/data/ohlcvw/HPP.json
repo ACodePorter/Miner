@@ -7498,5 +7498,15 @@
     "close": 9.9600000381,
     "volume": 618407.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,20,00,00,00,000000",
+    "ticker": "HPP",
+    "open": 9.7100000381,
+    "high": 9.75,
+    "low": 9.1350002289,
+    "close": 9.25,
+    "volume": 1234039.0,
+    "wedge_status": "none"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 3.7200000286,
     "volume": 73750.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,20,00,00,00,000000",
+    "ticker": "CLPR",
+    "open": 3.6500000954,
+    "high": 3.6700000763,
+    "low": 3.6150000095,
+    "close": 3.6300001144,
+    "volume": 50283.0,
+    "wedge_status": "drop"
   }
 ]

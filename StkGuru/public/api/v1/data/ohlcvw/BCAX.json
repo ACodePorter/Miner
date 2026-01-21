@@ -2928,5 +2928,15 @@
     "close": 16.75,
     "volume": 453927.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,20,00,00,00,000000",
+    "ticker": "BCAX",
+    "open": 16.3449993134,
+    "high": 17.1900005341,
+    "low": 15.7600002289,
+    "close": 16.7199993134,
+    "volume": 555220.0,
+    "wedge_status": "none"
   }
 ]

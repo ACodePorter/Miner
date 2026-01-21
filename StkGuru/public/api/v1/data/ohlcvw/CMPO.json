@@ -7498,5 +7498,15 @@
     "close": 25.1200008392,
     "volume": 2035732.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,20,00,00,00,000000",
+    "ticker": "CMPO",
+    "open": 24.8700008392,
+    "high": 26.3199996948,
+    "low": 24.2800006866,
+    "close": 26.0,
+    "volume": 4665382.0,
+    "wedge_status": "none"
   }
 ]

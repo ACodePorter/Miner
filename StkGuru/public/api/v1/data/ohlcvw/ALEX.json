@@ -7498,5 +7498,15 @@
     "close": 20.8500003815,
     "volume": 656254.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,20,00,00,00,000000",
+    "ticker": "ALEX",
+    "open": 20.8199996948,
+    "high": 20.8299999237,
+    "low": 20.75,
+    "close": 20.75,
+    "volume": 359483.0,
+    "wedge_status": "none"
   }
 ]
