@@ -7508,5 +7508,15 @@
     "close": 244.8099975586,
     "volume": 90440.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,21,00,00,00,000000",
+    "ticker": "ABG",
+    "open": 246.75,
+    "high": 253.9900054932,
+    "low": 246.3650054932,
+    "close": 253.75,
+    "volume": 149274.0,
+    "wedge_status": "none"
   }
 ]

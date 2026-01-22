@@ -7508,5 +7508,15 @@
     "close": 31.3600006104,
     "volume": 46599.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,21,00,00,00,000000",
+    "ticker": "BFS",
+    "open": 31.4300003052,
+    "high": 31.8099994659,
+    "low": 31.25,
+    "close": 31.8099994659,
+    "volume": 57013.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 5.9200000763,
     "volume": 509259.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,21,00,00,00,000000",
+    "ticker": "BRSP",
+    "open": 5.9299998283,
+    "high": 6.0149998665,
+    "low": 5.875,
+    "close": 6.0,
+    "volume": 503541.0,
+    "wedge_status": "none"
   }
 ]

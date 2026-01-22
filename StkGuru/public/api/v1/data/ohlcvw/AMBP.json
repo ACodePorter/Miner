@@ -7508,5 +7508,15 @@
     "close": 4.1199998856,
     "volume": 779158.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,21,00,00,00,000000",
+    "ticker": "AMBP",
+    "open": 4.1500000954,
+    "high": 4.3049998283,
+    "low": 4.1449999809,
+    "close": 4.2899999619,
+    "volume": 1394664.0,
+    "wedge_status": "none"
   }
 ]

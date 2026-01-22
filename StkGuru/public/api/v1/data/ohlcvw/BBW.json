@@ -7508,5 +7508,15 @@
     "close": 65.0,
     "volume": 400129.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,21,00,00,00,000000",
+    "ticker": "BBW",
+    "open": 65.6699981689,
+    "high": 65.8300018311,
+    "low": 63.2400016785,
+    "close": 65.3600006104,
+    "volume": 422550.0,
+    "wedge_status": "none"
   }
 ]
