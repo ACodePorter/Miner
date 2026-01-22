@@ -7508,5 +7508,15 @@
     "close": 10.4200000763,
     "volume": 1617665.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,21,00,00,00,000000",
+    "ticker": "TRVI",
+    "open": 10.5,
+    "high": 10.7349996567,
+    "low": 10.2150001526,
+    "close": 10.3000001907,
+    "volume": 1004535.0,
+    "wedge_status": "none"
   }
 ]

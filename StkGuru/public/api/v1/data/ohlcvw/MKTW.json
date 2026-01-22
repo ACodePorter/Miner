@@ -7508,5 +7508,15 @@
     "close": 15.7100000381,
     "volume": 6245.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,21,00,00,00,000000",
+    "ticker": "MKTW",
+    "open": 15.7749996185,
+    "high": 16.0499992371,
+    "low": 15.6275997162,
+    "close": 16.0499992371,
+    "volume": 6625.0,
+    "wedge_status": "none"
   }
 ]

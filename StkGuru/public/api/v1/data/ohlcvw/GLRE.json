@@ -7508,5 +7508,15 @@
     "close": 13.4600000381,
     "volume": 147583.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,21,00,00,00,000000",
+    "ticker": "GLRE",
+    "open": 13.4300003052,
+    "high": 13.5249996185,
+    "low": 13.2600002289,
+    "close": 13.5,
+    "volume": 152176.0,
+    "wedge_status": "none"
   }
 ]
