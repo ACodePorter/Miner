@@ -7508,5 +7508,15 @@
     "close": 89.5,
     "volume": 555449.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,22,00,00,00,000000",
+    "ticker": "TTC",
+    "open": 89.6299972534,
+    "high": 90.4899978638,
+    "low": 89.2600021362,
+    "close": 90.4899978638,
+    "volume": 606827.0,
+    "wedge_status": "none"
   }
 ]
