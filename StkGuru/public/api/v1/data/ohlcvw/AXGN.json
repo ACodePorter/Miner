@@ -7508,5 +7508,15 @@
     "close": 33.0099983215,
     "volume": 594056.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,22,00,00,00,000000",
+    "ticker": "AXGN",
+    "open": 32.0999984741,
+    "high": 33.25,
+    "low": 31.5,
+    "close": 32.0,
+    "volume": 3229320.0,
+    "wedge_status": "none"
   }
 ]

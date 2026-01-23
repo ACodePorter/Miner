@@ -7508,5 +7508,15 @@
     "close": 12.0,
     "volume": 173266.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,22,00,00,00,000000",
+    "ticker": "OOMA",
+    "open": 12.1000003815,
+    "high": 12.3399000168,
+    "low": 12.0500001907,
+    "close": 12.1599998474,
+    "volume": 114534.0,
+    "wedge_status": "none"
   }
 ]
