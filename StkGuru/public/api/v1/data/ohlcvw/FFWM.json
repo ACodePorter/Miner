@@ -7508,5 +7508,15 @@
     "close": 6.3899998665,
     "volume": 1696216.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,23,00,00,00,000000",
+    "ticker": "FFWM",
+    "open": 6.3600001335,
+    "high": 6.3299999237,
+    "low": 6.0,
+    "close": 6.0100002289,
+    "volume": 814941.0,
+    "wedge_status": "drop"
   }
 ]

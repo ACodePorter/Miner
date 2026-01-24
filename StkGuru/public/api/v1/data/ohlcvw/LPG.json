@@ -7508,5 +7508,15 @@
     "close": 28.0599994659,
     "volume": 500812.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,23,00,00,00,000000",
+    "ticker": "LPG",
+    "open": 28.0599994659,
+    "high": 28.3400001526,
+    "low": 27.5,
+    "close": 27.5200004578,
+    "volume": 401963.0,
+    "wedge_status": "none"
   }
 ]

@@ -2668,5 +2668,15 @@
     "close": 21.3199996948,
     "volume": 505289.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,23,00,00,00,000000",
+    "ticker": "INGM",
+    "open": 21.25,
+    "high": 21.3799991608,
+    "low": 20.8600006104,
+    "close": 21.0100002289,
+    "volume": 257678.0,
+    "wedge_status": "none"
   }
 ]

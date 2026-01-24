@@ -7508,5 +7508,15 @@
     "close": 15.75,
     "volume": 2012112.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,23,00,00,00,000000",
+    "ticker": "GLDD",
+    "open": 15.6300001144,
+    "high": 15.8299999237,
+    "low": 15.3800001144,
+    "close": 15.4099998474,
+    "volume": 965423.0,
+    "wedge_status": "none"
   }
 ]

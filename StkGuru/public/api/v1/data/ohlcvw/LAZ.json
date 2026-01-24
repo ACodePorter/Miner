@@ -7508,5 +7508,15 @@
     "close": 53.1300010681,
     "volume": 431087.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,23,00,00,00,000000",
+    "ticker": "LAZ",
+    "open": 52.75,
+    "high": 52.8499984741,
+    "low": 50.9700012207,
+    "close": 51.3699989319,
+    "volume": 413568.0,
+    "wedge_status": "drop"
   }
 ]

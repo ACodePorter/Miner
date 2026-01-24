@@ -7508,5 +7508,15 @@
     "close": 4.5300002098,
     "volume": 2979805.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,23,00,00,00,000000",
+    "ticker": "ACRS",
+    "open": 4.5199999809,
+    "high": 4.8400001526,
+    "low": 4.3850002289,
+    "close": 4.5,
+    "volume": 2538619.0,
+    "wedge_status": "none"
   }
 ]

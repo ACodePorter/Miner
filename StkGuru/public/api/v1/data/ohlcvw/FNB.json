@@ -7508,5 +7508,15 @@
     "close": 18.0,
     "volume": 4684122.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,23,00,00,00,000000",
+    "ticker": "FNB",
+    "open": 17.8999996185,
+    "high": 17.9099998474,
+    "low": 17.0900001526,
+    "close": 17.1100006104,
+    "volume": 4865799.0,
+    "wedge_status": "drop"
   }
 ]

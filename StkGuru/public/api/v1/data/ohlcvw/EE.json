@@ -7508,5 +7508,15 @@
     "close": 35.0,
     "volume": 506284.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,23,00,00,00,000000",
+    "ticker": "EE",
+    "open": 35.3499984741,
+    "high": 36.0750007629,
+    "low": 35.0614013672,
+    "close": 36.0600013733,
+    "volume": 330382.0,
+    "wedge_status": "none"
   }
 ]

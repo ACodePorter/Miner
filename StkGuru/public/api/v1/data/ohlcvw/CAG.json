@@ -7508,5 +7508,15 @@
     "close": 17.4699993134,
     "volume": 9985423.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,23,00,00,00,000000",
+    "ticker": "CAG",
+    "open": 17.4599990845,
+    "high": 17.5849990845,
+    "low": 17.2900009155,
+    "close": 17.5,
+    "volume": 7985598.0,
+    "wedge_status": "none"
   }
 ]
