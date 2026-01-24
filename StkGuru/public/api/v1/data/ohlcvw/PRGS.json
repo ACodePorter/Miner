@@ -7508,5 +7508,15 @@
     "close": 42.75,
     "volume": 1416244.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,23,00,00,00,000000",
+    "ticker": "PRGS",
+    "open": 42.75,
+    "high": 43.4300003052,
+    "low": 42.3499984741,
+    "close": 42.4300003052,
+    "volume": 947864.0,
+    "wedge_status": "none"
   }
 ]

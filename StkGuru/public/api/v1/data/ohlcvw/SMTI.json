@@ -7508,5 +7508,15 @@
     "close": 22.25,
     "volume": 47792.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,23,00,00,00,000000",
+    "ticker": "SMTI",
+    "open": 21.7999992371,
+    "high": 22.9776992798,
+    "low": 21.2399997711,
+    "close": 21.75,
+    "volume": 91231.0,
+    "wedge_status": "none"
   }
 ]

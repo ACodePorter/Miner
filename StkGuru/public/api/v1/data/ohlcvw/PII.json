@@ -7508,5 +7508,15 @@
     "close": 70.9199981689,
     "volume": 481381.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,23,00,00,00,000000",
+    "ticker": "PII",
+    "open": 70.8099975586,
+    "high": 70.75,
+    "low": 68.9400024414,
+    "close": 69.0899963379,
+    "volume": 475381.0,
+    "wedge_status": "drop"
   }
 ]

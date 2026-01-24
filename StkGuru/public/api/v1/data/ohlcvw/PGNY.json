@@ -7508,5 +7508,15 @@
     "close": 25.0,
     "volume": 1430075.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,23,00,00,00,000000",
+    "ticker": "PGNY",
+    "open": 25.0,
+    "high": 25.3500003815,
+    "low": 24.6499996185,
+    "close": 25.2199993134,
+    "volume": 1767472.0,
+    "wedge_status": "none"
   }
 ]
