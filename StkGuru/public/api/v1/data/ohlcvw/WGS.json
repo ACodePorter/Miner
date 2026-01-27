@@ -7488,5 +7488,15 @@
     "close": 101.3499984741,
     "volume": 573710.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,26,00,00,00,000000",
+    "ticker": "WGS",
+    "open": 101.0,
+    "high": 106.5800018311,
+    "low": 98.75,
+    "close": 104.8799972534,
+    "volume": 388889.0,
+    "wedge_status": "none"
   }
 ]

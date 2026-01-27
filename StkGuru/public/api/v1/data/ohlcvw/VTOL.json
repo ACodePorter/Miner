@@ -7488,5 +7488,15 @@
     "close": 43.75,
     "volume": 300684.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,26,00,00,00,000000",
+    "ticker": "VTOL",
+    "open": 44.2099990845,
+    "high": 45.2799987793,
+    "low": 43.7700004578,
+    "close": 44.2000007629,
+    "volume": 250787.0,
+    "wedge_status": "none"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 32.3499984741,
     "volume": 337720.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,26,00,00,00,000000",
+    "ticker": "VECO",
+    "open": 32.1800003052,
+    "high": 32.5999984741,
+    "low": 31.5,
+    "close": 31.5799999237,
+    "volume": 531016.0,
+    "wedge_status": "drop"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 20.2700004578,
     "volume": 12829.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,26,00,00,00,000000",
+    "ticker": "JMSB",
+    "open": 20.2000007629,
+    "high": 20.9549999237,
+    "low": 19.8050003052,
+    "close": 20.0,
+    "volume": 11358.0,
+    "wedge_status": "drop"
   }
 ]

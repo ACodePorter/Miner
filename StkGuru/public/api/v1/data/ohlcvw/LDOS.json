@@ -7488,5 +7488,15 @@
     "close": 191.2299957275,
     "volume": 479992.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,26,00,00,00,000000",
+    "ticker": "LDOS",
+    "open": 193.0,
+    "high": 191.9199981689,
+    "low": 185.9900054932,
+    "close": 189.5,
+    "volume": 675240.0,
+    "wedge_status": "none"
   }
 ]

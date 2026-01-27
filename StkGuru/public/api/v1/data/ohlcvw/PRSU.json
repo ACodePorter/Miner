@@ -7488,5 +7488,15 @@
     "close": 35.25,
     "volume": 157339.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,26,00,00,00,000000",
+    "ticker": "PRSU",
+    "open": 35.5,
+    "high": 35.9150009155,
+    "low": 34.4249992371,
+    "close": 34.8199996948,
+    "volume": 306086.0,
+    "wedge_status": "none"
   }
 ]

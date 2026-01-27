@@ -7488,5 +7488,15 @@
     "close": 9.6300001144,
     "volume": 16952.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,26,00,00,00,000000",
+    "ticker": "MPX",
+    "open": 9.5699996948,
+    "high": 9.5249996185,
+    "low": 9.25,
+    "close": 9.25,
+    "volume": 26694.0,
+    "wedge_status": "none"
   }
 ]

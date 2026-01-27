@@ -7488,5 +7488,15 @@
     "close": 231.1499938965,
     "volume": 158731.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,26,00,00,00,000000",
+    "ticker": "AMR",
+    "open": 233.0,
+    "high": 234.375,
+    "low": 212.7599945068,
+    "close": 213.8800048828,
+    "volume": 378066.0,
+    "wedge_status": "drop"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 254.0200042725,
     "volume": 969097.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,26,00,00,00,000000",
+    "ticker": "FERG",
+    "open": 253.2299957275,
+    "high": 255.4799957275,
+    "low": 252.5,
+    "close": 254.5,
+    "volume": 1124101.0,
+    "wedge_status": "none"
   }
 ]

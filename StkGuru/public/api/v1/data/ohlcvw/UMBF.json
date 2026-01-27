@@ -7488,5 +7488,15 @@
     "close": 123.1600036621,
     "volume": 553015.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,26,00,00,00,000000",
+    "ticker": "UMBF",
+    "open": 123.3399963379,
+    "high": 124.3949966431,
+    "low": 121.6299972534,
+    "close": 122.5,
+    "volume": 516427.0,
+    "wedge_status": "none"
   }
 ]

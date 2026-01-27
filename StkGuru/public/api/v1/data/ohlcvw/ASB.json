@@ -7488,5 +7488,15 @@
     "close": 26.4400005341,
     "volume": 3066747.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,26,00,00,00,000000",
+    "ticker": "ASB",
+    "open": 26.5,
+    "high": 26.9599990845,
+    "low": 26.3150005341,
+    "close": 26.9599990845,
+    "volume": 1888327.0,
+    "wedge_status": "none"
   }
 ]

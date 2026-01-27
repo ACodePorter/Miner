@@ -5908,5 +5908,15 @@
     "close": 70.0199966431,
     "volume": 4152693.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,26,00,00,00,000000",
+    "ticker": "APGE",
+    "open": 70.0,
+    "high": 70.6399993896,
+    "low": 68.5049972534,
+    "close": 70.0199966431,
+    "volume": 803463.0,
+    "wedge_status": "none"
   }
 ]

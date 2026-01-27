@@ -7488,5 +7488,15 @@
     "close": 12.0,
     "volume": 759695.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,26,00,00,00,000000",
+    "ticker": "WTTR",
+    "open": 12.1499996185,
+    "high": 12.2398996353,
+    "low": 11.7349996567,
+    "close": 11.7399997711,
+    "volume": 585225.0,
+    "wedge_status": "none"
   }
 ]

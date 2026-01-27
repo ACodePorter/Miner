@@ -7488,5 +7488,15 @@
     "close": 15.9200000763,
     "volume": 319389.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,26,00,00,00,000000",
+    "ticker": "CMRE",
+    "open": 16.0,
+    "high": 16.3400001526,
+    "low": 15.9000997543,
+    "close": 16.1399993896,
+    "volume": 359404.0,
+    "wedge_status": "pop"
   }
 ]

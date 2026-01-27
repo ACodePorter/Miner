@@ -7488,5 +7488,15 @@
     "close": 13.3299999237,
     "volume": 10363389.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,26,00,00,00,000000",
+    "ticker": "COMP",
+    "open": 13.5,
+    "high": 13.9549999237,
+    "low": 13.3800001144,
+    "close": 13.5799999237,
+    "volume": 17682166.0,
+    "wedge_status": "none"
   }
 ]

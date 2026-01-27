@@ -7488,5 +7488,15 @@
     "close": 50.0,
     "volume": 962851.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,26,00,00,00,000000",
+    "ticker": "RYAN",
+    "open": 50.25,
+    "high": 50.8199996948,
+    "low": 49.8899993896,
+    "close": 50.2200012207,
+    "volume": 811119.0,
+    "wedge_status": "none"
   }
 ]

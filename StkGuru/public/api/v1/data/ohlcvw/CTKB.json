@@ -7488,5 +7488,15 @@
     "close": 5.2699999809,
     "volume": 667521.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,26,00,00,00,000000",
+    "ticker": "CTKB",
+    "open": 5.25,
+    "high": 5.2899999619,
+    "low": 5.1350002289,
+    "close": 5.1999998093,
+    "volume": 685216.0,
+    "wedge_status": "none"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 8.6099996567,
     "volume": 32530979.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,26,00,00,00,000000",
+    "ticker": "ACHR",
+    "open": 8.5649995804,
+    "high": 8.6300001144,
+    "low": 8.0,
+    "close": 8.029999733,
+    "volume": 29549671.0,
+    "wedge_status": "drop"
   }
 ]

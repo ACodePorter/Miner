@@ -7488,5 +7488,15 @@
     "close": 47.4300003052,
     "volume": 750692.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,26,00,00,00,000000",
+    "ticker": "YETI",
+    "open": 47.5,
+    "high": 48.2700004578,
+    "low": 47.4665985107,
+    "close": 47.5,
+    "volume": 893857.0,
+    "wedge_status": "none"
   }
 ]
