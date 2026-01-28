@@ -7498,5 +7498,15 @@
     "close": 142.5800018311,
     "volume": 115227.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2026,01,27,00,00,00,000000",
+    "ticker": "WRLD",
+    "open": 126.5,
+    "high": 126.5,
+    "low": 110.0,
+    "close": 117.5100021362,
+    "volume": 183798.0,
+    "wedge_status": "drop"
   }
 ]

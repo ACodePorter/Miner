@@ -7498,5 +7498,15 @@
     "close": 82.5,
     "volume": 1097922.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,27,00,00,00,000000",
+    "ticker": "QRVO",
+    "open": 82.3199996948,
+    "high": 83.5800018311,
+    "low": 81.6100006104,
+    "close": 82.8099975586,
+    "volume": 1741091.0,
+    "wedge_status": "pop"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 7.7100000381,
     "volume": 408634.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,27,00,00,00,000000",
+    "ticker": "KRNY",
+    "open": 7.7199997902,
+    "high": 7.7699999809,
+    "low": 7.6050000191,
+    "close": 7.6599998474,
+    "volume": 349698.0,
+    "wedge_status": "none"
   }
 ]

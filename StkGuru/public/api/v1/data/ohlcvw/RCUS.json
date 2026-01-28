@@ -7498,5 +7498,15 @@
     "close": 22.4799995422,
     "volume": 755345.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,27,00,00,00,000000",
+    "ticker": "RCUS",
+    "open": 22.5,
+    "high": 23.0750007629,
+    "low": 22.25,
+    "close": 22.9899997711,
+    "volume": 554288.0,
+    "wedge_status": "pop"
   }
 ]

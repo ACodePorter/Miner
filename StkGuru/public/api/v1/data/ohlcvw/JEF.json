@@ -7498,5 +7498,15 @@
     "close": 62.9700012207,
     "volume": 943204.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,27,00,00,00,000000",
+    "ticker": "JEF",
+    "open": 63.0,
+    "high": 63.5,
+    "low": 62.125,
+    "close": 62.2299995422,
+    "volume": 756088.0,
+    "wedge_status": "drop"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 76.25,
     "volume": 120032.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,27,00,00,00,000000",
+    "ticker": "GHM",
+    "open": 74.1100006104,
+    "high": 75.9798965454,
+    "low": 67.6999969482,
+    "close": 70.5400009155,
+    "volume": 152007.0,
+    "wedge_status": "drop"
   }
 ]

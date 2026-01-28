@@ -7498,5 +7498,15 @@
     "close": 89.4899978638,
     "volume": 1701272.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,27,00,00,00,000000",
+    "ticker": "HCC",
+    "open": 90.5,
+    "high": 93.0,
+    "low": 90.4588012695,
+    "close": 92.3799972534,
+    "volume": 860348.0,
+    "wedge_status": "none"
   }
 ]

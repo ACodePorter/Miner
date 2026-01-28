@@ -7498,5 +7498,15 @@
     "close": 33.25,
     "volume": 615926.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,27,00,00,00,000000",
+    "ticker": "RDN",
+    "open": 33.5,
+    "high": 33.2400016785,
+    "low": 32.8293991089,
+    "close": 33.0499992371,
+    "volume": 478335.0,
+    "wedge_status": "none"
   }
 ]

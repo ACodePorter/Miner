@@ -7498,5 +7498,15 @@
     "close": 48.0099983215,
     "volume": 98098.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,27,00,00,00,000000",
+    "ticker": "IDT",
+    "open": 48.0,
+    "high": 48.3600006104,
+    "low": 47.5299987793,
+    "close": 48.3600006104,
+    "volume": 97957.0,
+    "wedge_status": "none"
   }
 ]

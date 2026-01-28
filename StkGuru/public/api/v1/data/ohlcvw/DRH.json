@@ -7498,5 +7498,15 @@
     "close": 9.4499998093,
     "volume": 3329434.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,27,00,00,00,000000",
+    "ticker": "DRH",
+    "open": 9.4499998093,
+    "high": 9.4600000381,
+    "low": 9.1445999146,
+    "close": 9.25,
+    "volume": 6674156.0,
+    "wedge_status": "drop"
   }
 ]

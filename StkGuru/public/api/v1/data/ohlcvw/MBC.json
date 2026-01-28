@@ -7388,5 +7388,15 @@
     "close": 12.1199998856,
     "volume": 1002805.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,27,00,00,00,000000",
+    "ticker": "MBC",
+    "open": 12.0,
+    "high": 12.0500001907,
+    "low": 11.8900003433,
+    "close": 12.0200004578,
+    "volume": 1101031.0,
+    "wedge_status": "none"
   }
 ]
