@@ -7508,5 +7508,15 @@
     "close": 58.6500015259,
     "volume": 850912.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,28,00,00,00,000000",
+    "ticker": "INOD",
+    "open": 59.75,
+    "high": 61.9898986816,
+    "low": 55.3433990479,
+    "close": 55.8400001526,
+    "volume": 1127153.0,
+    "wedge_status": "none"
   }
 ]

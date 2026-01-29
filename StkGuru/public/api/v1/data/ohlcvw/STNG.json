@@ -7508,5 +7508,15 @@
     "close": 60.0,
     "volume": 711553.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,28,00,00,00,000000",
+    "ticker": "STNG",
+    "open": 60.5,
+    "high": 62.5,
+    "low": 60.375,
+    "close": 62.5,
+    "volume": 924287.0,
+    "wedge_status": "none"
   }
 ]

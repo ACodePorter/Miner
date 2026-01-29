@@ -7508,5 +7508,15 @@
     "close": 1.5199999809,
     "volume": 1163861.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,28,00,00,00,000000",
+    "ticker": "SLQT",
+    "open": 1.5399999619,
+    "high": 1.5635000467,
+    "low": 1.4700000286,
+    "close": 1.4900000095,
+    "volume": 728907.0,
+    "wedge_status": "none"
   }
 ]

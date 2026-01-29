@@ -1,13 +1,14 @@
 [
   {
     "date": "20250128",
-    "total": 105,
+    "total": 106,
     "pop": [
       "AUB",
       "BULL",
       "BVS",
       "CNS",
       "CZFS",
+      "DFTX",
       "EVC",
       "FLUT",
       "HRTG",
@@ -111,12 +112,12 @@
       "WLLBW",
       "WSO"
     ],
-    "pop_pct": 0.257,
-    "drop_pct": 0.743
+    "pop_pct": 0.264,
+    "drop_pct": 0.736
   },
   {
     "date": "20250129",
-    "total": 164,
+    "total": 165,
     "pop": [
       "ABNB",
       "ACA",
@@ -171,6 +172,7 @@
       "BXP",
       "CADE",
       "CALX",
+      "CALY",
       "CCS",
       "CDNA",
       "CLBK",
@@ -285,8 +287,8 @@
       "XEL",
       "XRX"
     ],
-    "pop_pct": 0.183,
-    "drop_pct": 0.817
+    "pop_pct": 0.182,
+    "drop_pct": 0.818
   },
   {
     "date": "20250130",
@@ -454,7 +456,7 @@
   },
   {
     "date": "20250131",
-    "total": 211,
+    "total": 213,
     "pop": [
       "ACNT",
       "AMLX",
@@ -521,6 +523,7 @@
       "BZH",
       "CAH",
       "CALM",
+      "CALY",
       "CE",
       "CHD",
       "CL",
@@ -538,6 +541,7 @@
       "DAKT",
       "DAWN",
       "DECK",
+      "DFTX",
       "DHI",
       "DINO",
       "ECG",
@@ -670,8 +674,8 @@
       "ZIMV",
       "ZVIA"
     ],
-    "pop_pct": 0.137,
-    "drop_pct": 0.863
+    "pop_pct": 0.136,
+    "drop_pct": 0.864
   },
   {
     "date": "20250203",
@@ -1805,7 +1809,7 @@
   },
   {
     "date": "20250210",
-    "total": 203,
+    "total": 204,
     "pop": [
       "AAOI",
       "ACNT",
@@ -1927,6 +1931,7 @@
       "FULT",
       "GMRE",
       "GOGO",
+      "GPGI",
       "HCI",
       "HFWA",
       "HIG",
@@ -2013,8 +2018,8 @@
       "XPEL",
       "ZION"
     ],
-    "pop_pct": 0.246,
-    "drop_pct": 0.754
+    "pop_pct": 0.245,
+    "drop_pct": 0.755
   },
   {
     "date": "20250211",
@@ -3464,7 +3469,7 @@
   },
   {
     "date": "20250221",
-    "total": 446,
+    "total": 447,
     "pop": [
       "AGIO",
       "ANGI",
@@ -3595,6 +3600,7 @@
       "DBD",
       "DDD",
       "DDS",
+      "DFTX",
       "DH",
       "DHC",
       "DHT",
@@ -4079,7 +4085,7 @@
   },
   {
     "date": "20250225",
-    "total": 161,
+    "total": 162,
     "pop": [
       "AES",
       "ALL",
@@ -4167,6 +4173,7 @@
       "FPI",
       "FUBO",
       "FWONA",
+      "GPGI",
       "HIMS",
       "HIW",
       "HRTX",
@@ -4245,8 +4252,8 @@
       "ZETA",
       "ZEUS"
     ],
-    "pop_pct": 0.23,
-    "drop_pct": 0.77
+    "pop_pct": 0.228,
+    "drop_pct": 0.772
   },
   {
     "date": "20250226",
@@ -4761,7 +4768,7 @@
   },
   {
     "date": "20250303",
-    "total": 251,
+    "total": 252,
     "pop": [
       "BHRB",
       "BIIB",
@@ -4878,6 +4885,7 @@
       "FWRG",
       "GGG",
       "GOSS",
+      "GPGI",
       "GRBK",
       "GT",
       "GTLS",
@@ -6604,7 +6612,7 @@
   },
   {
     "date": "20250319",
-    "total": 238,
+    "total": 239,
     "pop": [
       "AAOI",
       "ABUS",
@@ -6644,6 +6652,7 @@
       "BVS",
       "BWFG",
       "CALX",
+      "CALY",
       "CARE",
       "CASY",
       "CBAN",
@@ -6847,8 +6856,8 @@
       "TBRG",
       "WDFC"
     ],
-    "pop_pct": 0.899,
-    "drop_pct": 0.101
+    "pop_pct": 0.9,
+    "drop_pct": 0.1
   },
   {
     "date": "20250320",
@@ -8742,7 +8751,7 @@
   },
   {
     "date": "20250403",
-    "total": 832,
+    "total": 833,
     "pop": [
       "QSR"
     ],
@@ -8859,6 +8868,7 @@
       "C",
       "CACC",
       "CAL",
+      "CALY",
       "CASH",
       "CASS",
       "CBAN",
@@ -11077,12 +11087,13 @@
   },
   {
     "date": "20250421",
-    "total": 175,
+    "total": 176,
     "pop": [
       "AMRK",
       "ATLO",
       "BJRI",
       "BRCC",
+      "CALY",
       "CCB",
       "CZWI",
       "DOLE",
@@ -11257,12 +11268,12 @@
       "YOU",
       "ZS"
     ],
-    "pop_pct": 0.137,
-    "drop_pct": 0.863
+    "pop_pct": 0.142,
+    "drop_pct": 0.858
   },
   {
     "date": "20250422",
-    "total": 357,
+    "total": 358,
     "pop": [
       "ABM",
       "ABR",
@@ -11362,6 +11373,7 @@
       "DCTH",
       "DFH",
       "DFIN",
+      "DFTX",
       "DHI",
       "DINO",
       "DNB",
@@ -14029,7 +14041,7 @@
   },
   {
     "date": "20250509",
-    "total": 131,
+    "total": 132,
     "pop": [
       "AHCO",
       "AIZ",
@@ -14097,6 +14109,7 @@
       "CTLP",
       "CVRX",
       "DCGO",
+      "DFTX",
       "DMRC",
       "DXPE",
       "ECBK",
@@ -14165,8 +14178,8 @@
       "ZEUS",
       "ZIP"
     ],
-    "pop_pct": 0.282,
-    "drop_pct": 0.718
+    "pop_pct": 0.28,
+    "drop_pct": 0.72
   },
   {
     "date": "20250512",
@@ -14292,7 +14305,7 @@
   },
   {
     "date": "20250513",
-    "total": 86,
+    "total": 87,
     "pop": [
       "ACR",
       "DMAC",
@@ -14322,6 +14335,7 @@
       "BCO",
       "BNL",
       "BRSL",
+      "CALY",
       "CHRS",
       "CNC",
       "CRNX",
@@ -14383,8 +14397,8 @@
       "VLGEA",
       "XENE"
     ],
-    "pop_pct": 0.163,
-    "drop_pct": 0.837
+    "pop_pct": 0.161,
+    "drop_pct": 0.839
   },
   {
     "date": "20250514",
@@ -14746,7 +14760,7 @@
   },
   {
     "date": "20250519",
-    "total": 104,
+    "total": 105,
     "pop": [
       "AARD",
       "ADC",
@@ -14799,6 +14813,7 @@
       "BOOM",
       "BRSL",
       "BSET",
+      "CALY",
       "CAVA",
       "CDXS",
       "CIVI",
@@ -14855,8 +14870,8 @@
       "Z",
       "ZEUS"
     ],
-    "pop_pct": 0.394,
-    "drop_pct": 0.606
+    "pop_pct": 0.39,
+    "drop_pct": 0.61
   },
   {
     "date": "20250520",
@@ -14980,7 +14995,7 @@
   },
   {
     "date": "20250521",
-    "total": 502,
+    "total": 503,
     "pop": [
       "BFIN",
       "NXXT"
@@ -15066,6 +15081,7 @@
       "CACC",
       "CADE",
       "CAL",
+      "CALY",
       "CASH",
       "CBRE",
       "CBSH",
@@ -18096,7 +18112,7 @@
   },
   {
     "date": "20250612",
-    "total": 168,
+    "total": 169,
     "pop": [
       "AEP",
       "ATO",
@@ -18176,6 +18192,7 @@
       "CXM",
       "DCTH",
       "DEC",
+      "DFTX",
       "DMRC",
       "EMN",
       "EPAC",
@@ -18269,12 +18286,12 @@
       "XOMA",
       "YMAB"
     ],
-    "pop_pct": 0.19,
-    "drop_pct": 0.81
+    "pop_pct": 0.189,
+    "drop_pct": 0.811
   },
   {
     "date": "20250613",
-    "total": 502,
+    "total": 503,
     "pop": [
       "AWK",
       "HUM",
@@ -18413,6 +18430,7 @@
       "DD",
       "DE",
       "DELL",
+      "DFTX",
       "DKS",
       "DSGN",
       "DT",
@@ -19917,7 +19935,7 @@
   },
   {
     "date": "20250625",
-    "total": 272,
+    "total": 273,
     "pop": [
       "AAPL",
       "DGICA",
@@ -20002,6 +20020,7 @@
       "DAN",
       "DAY",
       "DCOM",
+      "DFTX",
       "DLR",
       "DNOW",
       "DOLE",
@@ -21874,7 +21893,7 @@
   },
   {
     "date": "20250711",
-    "total": 264,
+    "total": 265,
     "pop": [
       "CDRE",
       "CHEF",
@@ -21998,6 +22017,7 @@
       "GILD",
       "GNL",
       "GOCO",
+      "GPGI",
       "GPN",
       "GRPN",
       "HCA",
@@ -24471,7 +24491,7 @@
   },
   {
     "date": "20250725",
-    "total": 184,
+    "total": 185,
     "pop": [
       "AFL",
       "AFRI",
@@ -24580,6 +24600,7 @@
       "FTLF",
       "FYBR",
       "GMRE",
+      "GPGI",
       "GTN",
       "HBCP",
       "HMN",
@@ -24660,8 +24681,8 @@
       "ZVRA",
       "ZYME"
     ],
-    "pop_pct": 0.304,
-    "drop_pct": 0.696
+    "pop_pct": 0.303,
+    "drop_pct": 0.697
   },
   {
     "date": "20250728",
@@ -25725,7 +25746,7 @@
   },
   {
     "date": "20250801",
-    "total": 255,
+    "total": 257,
     "pop": [
       "AVA",
       "DGX",
@@ -25772,6 +25793,7 @@
       "BTSG",
       "CADE",
       "CADL",
+      "CALY",
       "CART",
       "CBL",
       "CCL",
@@ -25793,6 +25815,7 @@
       "DCI",
       "DELL",
       "DERM",
+      "DFTX",
       "DINO",
       "DNB",
       "DNOW",
@@ -25985,8 +26008,8 @@
       "XYZ",
       "YOU"
     ],
-    "pop_pct": 0.024,
-    "drop_pct": 0.976
+    "pop_pct": 0.023,
+    "drop_pct": 0.977
   },
   {
     "date": "20250804",
@@ -26204,7 +26227,7 @@
   },
   {
     "date": "20250806",
-    "total": 163,
+    "total": 164,
     "pop": [
       "AKBA",
       "ALRM",
@@ -26214,6 +26237,7 @@
       "CROX",
       "EEX",
       "GETY",
+      "GPGI",
       "HHH",
       "HOG",
       "HTH",
@@ -26372,8 +26396,8 @@
       "WLLBW",
       "WMB"
     ],
-    "pop_pct": 0.178,
-    "drop_pct": 0.822
+    "pop_pct": 0.183,
+    "drop_pct": 0.817
   },
   {
     "date": "20250807",
@@ -26592,7 +26616,7 @@
   },
   {
     "date": "20250808",
-    "total": 149,
+    "total": 150,
     "pop": [
       "ADP",
       "AROC",
@@ -26650,6 +26674,7 @@
       "BLND",
       "BMRN",
       "BRX",
+      "CALY",
       "CCI",
       "CLX",
       "CMBT",
@@ -26746,8 +26771,8 @@
       "YELP",
       "ZBIO"
     ],
-    "pop_pct": 0.262,
-    "drop_pct": 0.738
+    "pop_pct": 0.26,
+    "drop_pct": 0.74
   },
   {
     "date": "20250811",
@@ -27072,7 +27097,7 @@
   },
   {
     "date": "20250813",
-    "total": 140,
+    "total": 141,
     "pop": [
       "AIN",
       "AMBC",
@@ -27087,6 +27112,7 @@
       "BRT",
       "BTBT",
       "BZAI",
+      "CALY",
       "CASH",
       "CCRN",
       "CDP",
@@ -27217,8 +27243,8 @@
       "WM",
       "ZVRA"
     ],
-    "pop_pct": 0.829,
-    "drop_pct": 0.171
+    "pop_pct": 0.83,
+    "drop_pct": 0.17
   },
   {
     "date": "20250814",
@@ -28960,7 +28986,7 @@
   },
   {
     "date": "20250829",
-    "total": 133,
+    "total": 134,
     "pop": [
       "ACN",
       "AGO",
@@ -29033,6 +29059,7 @@
       "CYTK",
       "DCGO",
       "DELL",
+      "DFTX",
       "DHIL",
       "DOMO",
       "DRUG",
@@ -29098,12 +29125,12 @@
       "XPO",
       "ZBIO"
     ],
-    "pop_pct": 0.331,
-    "drop_pct": 0.669
+    "pop_pct": 0.328,
+    "drop_pct": 0.672
   },
   {
     "date": "20250902",
-    "total": 265,
+    "total": 266,
     "pop": [
       "AGIO",
       "AR",
@@ -29168,6 +29195,7 @@
       "BSET",
       "CAG",
       "CAL",
+      "CALY",
       "CARS",
       "CBRL",
       "CCRD",
@@ -29982,12 +30010,13 @@
   },
   {
     "date": "20250909",
-    "total": 202,
+    "total": 203,
     "pop": [
       "ACLX",
       "BAX",
       "BGC",
       "CAH",
+      "DFTX",
       "ESOA",
       "GWRS",
       "HBB",
@@ -30189,8 +30218,8 @@
       "YEXT",
       "ZIP"
     ],
-    "pop_pct": 0.099,
-    "drop_pct": 0.901
+    "pop_pct": 0.103,
+    "drop_pct": 0.897
   },
   {
     "date": "20250910",
@@ -30769,7 +30798,7 @@
   },
   {
     "date": "20250915",
-    "total": 195,
+    "total": 196,
     "pop": [
       "ABSI",
       "ACTG",
@@ -30782,6 +30811,7 @@
       "CMRC",
       "CRCL",
       "CVGW",
+      "DFTX",
       "DJT",
       "ERAS",
       "FLNC",
@@ -30969,8 +30999,8 @@
       "WTFC",
       "YORW"
     ],
-    "pop_pct": 0.215,
-    "drop_pct": 0.785
+    "pop_pct": 0.219,
+    "drop_pct": 0.781
   },
   {
     "date": "20250916",
@@ -31357,7 +31387,7 @@
   },
   {
     "date": "20250918",
-    "total": 81,
+    "total": 82,
     "pop": [
       "ACAD",
       "ACNT",
@@ -31415,6 +31445,7 @@
       "CTRI",
       "CUBE",
       "DECK",
+      "DFTX",
       "DOW",
       "EVRG",
       "FLOC",
@@ -31443,12 +31474,12 @@
       "WLK",
       "YUM"
     ],
-    "pop_pct": 0.444,
-    "drop_pct": 0.556
+    "pop_pct": 0.439,
+    "drop_pct": 0.561
   },
   {
     "date": "20250919",
-    "total": 335,
+    "total": 336,
     "pop": [
       "ABR",
       "ACHC",
@@ -31528,6 +31559,7 @@
       "BVS",
       "BY",
       "BZH",
+      "CALY",
       "CASS",
       "CBL",
       "CBNK",
@@ -31788,8 +31820,8 @@
       "XPRO",
       "ZEUS"
     ],
-    "pop_pct": 0.075,
-    "drop_pct": 0.925
+    "pop_pct": 0.074,
+    "drop_pct": 0.926
   },
   {
     "date": "20250922",
@@ -32822,7 +32854,7 @@
   },
   {
     "date": "20250926",
-    "total": 149,
+    "total": 150,
     "pop": [
       "ACRS",
       "APGE",
@@ -32831,6 +32863,7 @@
       "ASUR",
       "BCBP",
       "BG",
+      "CALY",
       "CHCO",
       "CHRD",
       "CIVI",
@@ -32976,8 +33009,8 @@
       "WNEB",
       "XP"
     ],
-    "pop_pct": 0.544,
-    "drop_pct": 0.456
+    "pop_pct": 0.547,
+    "drop_pct": 0.453
   },
   {
     "date": "20250929",
@@ -34028,7 +34061,7 @@
   },
   {
     "date": "20251006",
-    "total": 173,
+    "total": 174,
     "pop": [
       "ACTG",
       "AGCO",
@@ -34134,6 +34167,7 @@
       "GNL",
       "GNW",
       "GOLD",
+      "GPGI",
       "GPI",
       "GTX",
       "GVA",
@@ -34206,8 +34240,8 @@
       "YUM",
       "ZION"
     ],
-    "pop_pct": 0.208,
-    "drop_pct": 0.792
+    "pop_pct": 0.207,
+    "drop_pct": 0.793
   },
   {
     "date": "20251007",
@@ -34847,7 +34881,7 @@
   },
   {
     "date": "20251010",
-    "total": 452,
+    "total": 453,
     "pop": [
       "DGX",
       "JKHY",
@@ -35028,6 +35062,7 @@
       "GLSI",
       "GMED",
       "GOLF",
+      "GPGI",
       "GPN",
       "GPOR",
       "GRMN",
@@ -35617,7 +35652,7 @@
   },
   {
     "date": "20251016",
-    "total": 312,
+    "total": 313,
     "pop": [
       "ADI",
       "AGCO",
@@ -35765,6 +35800,7 @@
       "GFS",
       "GL",
       "GNW",
+      "GPGI",
       "GPN",
       "GPOR",
       "GSBC",
@@ -35934,8 +35970,8 @@
       "XYL",
       "ZWS"
     ],
-    "pop_pct": 0.103,
-    "drop_pct": 0.897
+    "pop_pct": 0.102,
+    "drop_pct": 0.898
   },
   {
     "date": "20251017",
@@ -38212,7 +38248,7 @@
   },
   {
     "date": "20251103",
-    "total": 158,
+    "total": 159,
     "pop": [
       "CB",
       "CECO",
@@ -38284,6 +38320,7 @@
       "CRI",
       "CRL",
       "DD",
+      "DFTX",
       "DOW",
       "DY",
       "EL",
@@ -38375,8 +38412,8 @@
       "ZGN",
       "ZIP"
     ],
-    "pop_pct": 0.165,
-    "drop_pct": 0.835
+    "pop_pct": 0.164,
+    "drop_pct": 0.836
   },
   {
     "date": "20251104",
@@ -39656,7 +39693,7 @@
   },
   {
     "date": "20251113",
-    "total": 254,
+    "total": 255,
     "pop": [
       "ADC",
       "ALNY",
@@ -39786,6 +39823,7 @@
       "GE",
       "GHM",
       "GLW",
+      "GPGI",
       "HAYW",
       "HCSG",
       "HEI",
@@ -39915,8 +39953,8 @@
       "ZION",
       "ZWS"
     ],
-    "pop_pct": 0.154,
-    "drop_pct": 0.846
+    "pop_pct": 0.153,
+    "drop_pct": 0.847
   },
   {
     "date": "20251114",
@@ -40597,7 +40635,7 @@
   },
   {
     "date": "20251119",
-    "total": 152,
+    "total": 153,
     "pop": [
       "AM",
       "ATRC",
@@ -40654,6 +40692,7 @@
       "BNL",
       "BORR",
       "BRY",
+      "CALY",
       "CARS",
       "CASS",
       "CLB",
@@ -40754,8 +40793,8 @@
       "XPRO",
       "YOU"
     ],
-    "pop_pct": 0.145,
-    "drop_pct": 0.855
+    "pop_pct": 0.144,
+    "drop_pct": 0.856
   },
   {
     "date": "20251120",
@@ -41508,7 +41547,7 @@
   },
   {
     "date": "20251128",
-    "total": 131,
+    "total": 132,
     "pop": [
       "ACMR",
       "ADT",
@@ -41564,6 +41603,7 @@
       "GEO",
       "GLSI",
       "GOOD",
+      "GPGI",
       "GPK",
       "GPRE",
       "HIMS",
@@ -41644,8 +41684,8 @@
       "PAHC",
       "UNM"
     ],
-    "pop_pct": 0.931,
-    "drop_pct": 0.069
+    "pop_pct": 0.932,
+    "drop_pct": 0.068
   },
   {
     "date": "20251201",
@@ -41811,7 +41851,7 @@
   },
   {
     "date": "20251202",
-    "total": 164,
+    "total": 165,
     "pop": [
       "ACCO",
       "AIG",
@@ -41834,6 +41874,7 @@
       "DSGR",
       "EGHT",
       "GLW",
+      "GPGI",
       "HLIT",
       "HOOD",
       "ICHR",
@@ -41980,8 +42021,8 @@
       "WTW",
       "YUM"
     ],
-    "pop_pct": 0.299,
-    "drop_pct": 0.701
+    "pop_pct": 0.303,
+    "drop_pct": 0.697
   },
   {
     "date": "20251203",
@@ -42435,7 +42476,7 @@
   },
   {
     "date": "20251208",
-    "total": 154,
+    "total": 155,
     "pop": [
       "BBWI",
       "BLMN",
@@ -42490,6 +42531,7 @@
       "BWA",
       "BZH",
       "CACI",
+      "CALY",
       "CBFV",
       "CC",
       "CCK",
@@ -42594,8 +42636,8 @@
       "WST",
       "ZG"
     ],
-    "pop_pct": 0.169,
-    "drop_pct": 0.831
+    "pop_pct": 0.168,
+    "drop_pct": 0.832
   },
   {
     "date": "20251209",
@@ -43046,7 +43088,7 @@
   },
   {
     "date": "20251215",
-    "total": 161,
+    "total": 163,
     "pop": [
       "AIRJ",
       "AKR",
@@ -43122,6 +43164,7 @@
       "CTLP",
       "CURI",
       "CXDO",
+      "DFTX",
       "DLB",
       "DMRC",
       "DNTH",
@@ -43134,6 +43177,7 @@
       "FIX",
       "FRPH",
       "GFS",
+      "GPGI",
       "GTM",
       "HCA",
       "HSHP",
@@ -43212,8 +43256,8 @@
       "ZIP",
       "ZVIA"
     ],
-    "pop_pct": 0.224,
-    "drop_pct": 0.776
+    "pop_pct": 0.221,
+    "drop_pct": 0.779
   },
   {
     "date": "20251216",
@@ -43416,7 +43460,7 @@
   },
   {
     "date": "20251217",
-    "total": 187,
+    "total": 188,
     "pop": [
       "ACI",
       "AMSF",
@@ -43495,6 +43539,7 @@
       "CTOS",
       "CTS",
       "CXDO",
+      "DFTX",
       "DHI",
       "DMAC",
       "DSGN",
@@ -43608,8 +43653,8 @@
       "XNCR",
       "ZWS"
     ],
-    "pop_pct": 0.182,
-    "drop_pct": 0.818
+    "pop_pct": 0.181,
+    "drop_pct": 0.819
   },
   {
     "date": "20251218",
@@ -45267,7 +45312,7 @@
   },
   {
     "date": "20251231",
-    "total": 370,
+    "total": 371,
     "pop": [
       "ANIK",
       "BLX",
@@ -45330,6 +45375,7 @@
       "BROS",
       "BSRR",
       "CAL",
+      "CALY",
       "CARL",
       "CARR",
       "CASY",
@@ -48770,10 +48816,312 @@
   },
   {
     "date": "20260128",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 300,
+    "pop": [
+      "ACT",
+      "BHF",
+      "BIIB",
+      "BSX",
+      "CAI",
+      "DAY",
+      "GBFH",
+      "GRDN",
+      "KLTR",
+      "MEC",
+      "MRVL",
+      "NEXT",
+      "VRSN"
+    ],
+    "drop": [
+      "AARD",
+      "ACTG",
+      "ADC",
+      "AGM",
+      "AIN",
+      "AIRO",
+      "ALAB",
+      "AOS",
+      "APH",
+      "ARE",
+      "ARMK",
+      "ARWR",
+      "ASGN",
+      "ASPN",
+      "ASTE",
+      "ATNI",
+      "ATR",
+      "AVY",
+      "AXON",
+      "BANC",
+      "BATRK",
+      "BCC",
+      "BDX",
+      "BEAM",
+      "BFST",
+      "BJ",
+      "BMY",
+      "BNL",
+      "BRBR",
+      "BRX",
+      "BUSE",
+      "BZAI",
+      "CADL",
+      "CALX",
+      "CARE",
+      "CARL",
+      "CBOE",
+      "CBU",
+      "CCNE",
+      "CDP",
+      "CDZI",
+      "CERS",
+      "CERT",
+      "CFR",
+      "CGNX",
+      "CHCT",
+      "CHH",
+      "CLDX",
+      "CLFD",
+      "CLPR",
+      "CMG",
+      "CNR",
+      "COSO",
+      "CPT",
+      "CRNX",
+      "CRS",
+      "CSTL",
+      "CTLP",
+      "CTSH",
+      "CVNA",
+      "CWT",
+      "CXDO",
+      "DDD",
+      "DHR",
+      "DJT",
+      "DOC",
+      "DOX",
+      "DRVN",
+      "EA",
+      "EAT",
+      "EEX",
+      "ELF",
+      "ELS",
+      "EQR",
+      "ESQ",
+      "ETD",
+      "EVR",
+      "EWCZ",
+      "EXR",
+      "FBIZ",
+      "FCFS",
+      "FCPT",
+      "FELE",
+      "FENC",
+      "FFIC",
+      "FFWM",
+      "FHN",
+      "FMAO",
+      "FMNB",
+      "FNB",
+      "FND",
+      "FNLC",
+      "FNWD",
+      "FRME",
+      "FRPH",
+      "FRST",
+      "FSFG",
+      "FSUN",
+      "FTRE",
+      "FVR",
+      "FXNC",
+      "GCO",
+      "GD",
+      "GERN",
+      "GH",
+      "GHC",
+      "GLPI",
+      "GLUE",
+      "GMED",
+      "GNTX",
+      "GRAL",
+      "GTY",
+      "GWRS",
+      "HAFC",
+      "HAYW",
+      "HBNC",
+      "HBT",
+      "HFWA",
+      "HOMB",
+      "HRTX",
+      "HST",
+      "HTO",
+      "HWM",
+      "HXL",
+      "HZO",
+      "IBEX",
+      "ICFI",
+      "IMXI",
+      "INBK",
+      "INCY",
+      "IP",
+      "IRMD",
+      "ITIC",
+      "ITT",
+      "IVT",
+      "JAMF",
+      "JAZZ",
+      "JCAP",
+      "JOUT",
+      "JYNT",
+      "KMB",
+      "KRMD",
+      "KW",
+      "LADR",
+      "LC",
+      "LEA",
+      "LENZ",
+      "LGIH",
+      "LILA",
+      "LKFN",
+      "LKQ",
+      "LMB",
+      "LNKB",
+      "LNT",
+      "LPRO",
+      "LTC",
+      "LUCD",
+      "MBCN",
+      "MBIN",
+      "MBWM",
+      "MEDP",
+      "MNPR",
+      "MRK",
+      "MS",
+      "MSA",
+      "MTUS",
+      "MUR",
+      "MYPS",
+      "NBHC",
+      "NBTB",
+      "NC",
+      "NECB",
+      "NGS",
+      "NIQ",
+      "NPB",
+      "NSA",
+      "NSC",
+      "NSP",
+      "NTRA",
+      "NUS",
+      "NUVL",
+      "NWE",
+      "OABI",
+      "OFLX",
+      "OLN",
+      "OLPX",
+      "OMDA",
+      "ONIT",
+      "OSK",
+      "OTIS",
+      "OUT",
+      "PAL",
+      "PB",
+      "PCYO",
+      "PDEX",
+      "PECO",
+      "PFIS",
+      "PH",
+      "PINE",
+      "PKE",
+      "PNR",
+      "QRVO",
+      "QXO",
+      "RBB",
+      "RBKB",
+      "RCKT",
+      "RCKY",
+      "RCUS",
+      "REAL",
+      "RF",
+      "RJF",
+      "ROG",
+      "RUSHB",
+      "RYI",
+      "SAMG",
+      "SENEA",
+      "SFBC",
+      "SFST",
+      "SHC",
+      "SLM",
+      "SLVM",
+      "SMID",
+      "SN",
+      "SNFCA",
+      "SPB",
+      "SPHR",
+      "SPOK",
+      "SPSC",
+      "SPXC",
+      "SRCE",
+      "SRPT",
+      "SSD",
+      "ST",
+      "STAG",
+      "SUI",
+      "SVCO",
+      "SWIM",
+      "SWK",
+      "SWKH",
+      "SWKS",
+      "SWX",
+      "SXC",
+      "SYBT",
+      "TCBK",
+      "TECH",
+      "TEL",
+      "TGTX",
+      "THFF",
+      "THO",
+      "TITN",
+      "TMO",
+      "TNGX",
+      "TRC",
+      "TRNO",
+      "TTEC",
+      "TXRH",
+      "TXT",
+      "UDR",
+      "UE",
+      "UPS",
+      "UPWK",
+      "UTZ",
+      "UVSP",
+      "VABK",
+      "VFC",
+      "VICI",
+      "VOYA",
+      "VRNS",
+      "VSTS",
+      "W",
+      "WEAV",
+      "WEX",
+      "WHG",
+      "WHR",
+      "WMT",
+      "WSBC",
+      "WSBF",
+      "WTFC",
+      "WTTR",
+      "XERS",
+      "XHR",
+      "XRAY",
+      "YUM",
+      "ZEUS",
+      "ZSPC",
+      "ZVRA",
+      "ZWS"
+    ],
+    "pop_pct": 0.043,
+    "drop_pct": 0.957
   }
 ]

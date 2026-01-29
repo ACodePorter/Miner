@@ -7508,5 +7508,15 @@
     "close": 6.0999999046,
     "volume": 361816.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,28,00,00,00,000000",
+    "ticker": "CADL",
+    "open": 6.0900001526,
+    "high": 6.1350002289,
+    "low": 5.6999998093,
+    "close": 5.7399997711,
+    "volume": 587883.0,
+    "wedge_status": "drop"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 498.5899963379,
     "volume": 565907.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2026,01,28,00,00,00,000000",
+    "ticker": "FN",
+    "open": 502.9700012207,
+    "high": 519.0,
+    "low": 484.1700134277,
+    "close": 501.0,
+    "volume": 521226.0,
+    "wedge_status": "none"
   }
 ]

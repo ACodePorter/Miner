@@ -7508,5 +7508,15 @@
     "close": 21.25,
     "volume": 1371901.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,28,00,00,00,000000",
+    "ticker": "DNLI",
+    "open": 21.4300003052,
+    "high": 21.8099994659,
+    "low": 20.3600006104,
+    "close": 20.8400001526,
+    "volume": 2603681.0,
+    "wedge_status": "none"
   }
 ]

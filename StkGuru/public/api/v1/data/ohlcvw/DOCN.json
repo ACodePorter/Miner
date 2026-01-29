@@ -7508,5 +7508,15 @@
     "close": 60.25,
     "volume": 5918499.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,28,00,00,00,000000",
+    "ticker": "DOCN",
+    "open": 60.7400016785,
+    "high": 61.5250015259,
+    "low": 57.8843002319,
+    "close": 60.2400016785,
+    "volume": 5680795.0,
+    "wedge_status": "none"
   }
 ]
