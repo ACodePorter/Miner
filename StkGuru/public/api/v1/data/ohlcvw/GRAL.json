@@ -3638,5 +3638,15 @@
     "close": 101.0,
     "volume": 1036291.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,29,00,00,00,000000",
+    "ticker": "GRAL",
+    "open": 99.7699966431,
+    "high": 102.5599975586,
+    "low": 97.6252975464,
+    "close": 100.9800033569,
+    "volume": 689266.0,
+    "wedge_status": "none"
   }
 ]

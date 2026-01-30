@@ -7508,5 +7508,15 @@
     "close": 153.75,
     "volume": 93797.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,29,00,00,00,000000",
+    "ticker": "HWKN",
+    "open": 149.2899932861,
+    "high": 149.2899932861,
+    "low": 135.6799926758,
+    "close": 139.7400054932,
+    "volume": 570526.0,
+    "wedge_status": "drop"
   }
 ]
