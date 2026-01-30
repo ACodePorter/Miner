@@ -5828,5 +5828,15 @@
     "close": 119.8399963379,
     "volume": 1433288.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,01,29,00,00,00,000000",
+    "ticker": "SN",
+    "open": 120.0,
+    "high": 121.0,
+    "low": 116.5699996948,
+    "close": 119.3499984741,
+    "volume": 1486342.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 90.7399978638,
     "volume": 1440522.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,29,00,00,00,000000",
+    "ticker": "OKTA",
+    "open": 89.25,
+    "high": 89.2600021362,
+    "low": 84.0,
+    "close": 85.6900024414,
+    "volume": 3693981.0,
+    "wedge_status": "drop"
   }
 ]
