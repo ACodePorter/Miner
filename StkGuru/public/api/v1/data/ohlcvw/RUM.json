@@ -7508,5 +7508,15 @@
     "close": 6.0,
     "volume": 2190085.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,30,00,00,00,000000",
+    "ticker": "RUM",
+    "open": 5.8899998665,
+    "high": 5.9600000381,
+    "low": 5.5399999619,
+    "close": 5.6900000572,
+    "volume": 2483489.0,
+    "wedge_status": "none"
   }
 ]

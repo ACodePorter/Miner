@@ -7508,5 +7508,15 @@
     "close": 58.5,
     "volume": 168385.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,30,00,00,00,000000",
+    "ticker": "TRNS",
+    "open": 58.4900016785,
+    "high": 61.4500007629,
+    "low": 57.8899993896,
+    "close": 60.3100013733,
+    "volume": 134956.0,
+    "wedge_status": "none"
   }
 ]

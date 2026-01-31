@@ -7508,5 +7508,15 @@
     "close": 430.0,
     "volume": 140363.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,30,00,00,00,000000",
+    "ticker": "CHE",
+    "open": 430.0,
+    "high": 432.375,
+    "low": 421.0700073242,
+    "close": 427.3500061035,
+    "volume": 234748.0,
+    "wedge_status": "none"
   }
 ]

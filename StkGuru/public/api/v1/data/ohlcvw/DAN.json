@@ -7508,5 +7508,15 @@
     "close": 29.0,
     "volume": 882250.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,30,00,00,00,000000",
+    "ticker": "DAN",
+    "open": 28.4300003052,
+    "high": 29.0100002289,
+    "low": 28.3700008392,
+    "close": 28.8999996185,
+    "volume": 725062.0,
+    "wedge_status": "none"
   }
 ]
