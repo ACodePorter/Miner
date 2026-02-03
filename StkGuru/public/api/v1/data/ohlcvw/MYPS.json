@@ -7488,5 +7488,15 @@
     "close": 0.6345000267,
     "volume": 495650.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,02,00,00,00,000000",
+    "ticker": "MYPS",
+    "open": 0.6068000197,
+    "high": 0.6281999946,
+    "low": 0.5839999914,
+    "close": 0.5900999904,
+    "volume": 305316.0,
+    "wedge_status": "none"
   }
 ]

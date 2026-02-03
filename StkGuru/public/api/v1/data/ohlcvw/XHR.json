@@ -7488,5 +7488,15 @@
     "close": 14.75,
     "volume": 371786.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,02,00,00,00,000000",
+    "ticker": "XHR",
+    "open": 14.8199996948,
+    "high": 15.0500001907,
+    "low": 14.845000267,
+    "close": 14.9099998474,
+    "volume": 427204.0,
+    "wedge_status": "none"
   }
 ]

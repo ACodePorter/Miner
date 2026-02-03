@@ -7488,5 +7488,15 @@
     "close": 163.25,
     "volume": 162633.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,02,00,00,00,000000",
+    "ticker": "VRTS",
+    "open": 162.5299987793,
+    "high": 166.0800018311,
+    "low": 162.0010070801,
+    "close": 162.3200073242,
+    "volume": 75588.0,
+    "wedge_status": "none"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 93.5500030518,
     "volume": 719803.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,02,00,00,00,000000",
+    "ticker": "PNW",
+    "open": 92.8799972534,
+    "high": 93.3249969482,
+    "low": 91.25,
+    "close": 91.6999969482,
+    "volume": 747658.0,
+    "wedge_status": "drop"
   }
 ]

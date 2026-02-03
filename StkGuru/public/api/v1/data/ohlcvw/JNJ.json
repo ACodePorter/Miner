@@ -7488,5 +7488,15 @@
     "close": 227.2400054932,
     "volume": 6760401.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,02,00,00,00,000000",
+    "ticker": "JNJ",
+    "open": 228.3200073242,
+    "high": 231.1900024414,
+    "low": 227.25,
+    "close": 230.75,
+    "volume": 5883889.0,
+    "wedge_status": "none"
   }
 ]

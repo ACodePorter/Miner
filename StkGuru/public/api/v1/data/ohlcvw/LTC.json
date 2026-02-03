@@ -7488,5 +7488,15 @@
     "close": 36.4700012207,
     "volume": 647668.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,02,00,00,00,000000",
+    "ticker": "LTC",
+    "open": 36.5,
+    "high": 36.6498985291,
+    "low": 36.1300010681,
+    "close": 36.1399993896,
+    "volume": 214682.0,
+    "wedge_status": "none"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 5.7100000381,
     "volume": 154966.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,02,00,00,00,000000",
+    "ticker": "FHTX",
+    "open": 5.6300001144,
+    "high": 5.9825000763,
+    "low": 5.7055001259,
+    "close": 5.8499999046,
+    "volume": 147100.0,
+    "wedge_status": "none"
   }
 ]

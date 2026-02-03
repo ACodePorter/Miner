@@ -7488,5 +7488,15 @@
     "close": 11.25,
     "volume": 5434506.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,02,00,00,00,000000",
+    "ticker": "PAGS",
+    "open": 11.1700000763,
+    "high": 11.5399999619,
+    "low": 11.1700000763,
+    "close": 11.4399995804,
+    "volume": 3420342.0,
+    "wedge_status": "none"
   }
 ]

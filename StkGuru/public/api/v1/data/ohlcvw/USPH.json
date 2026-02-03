@@ -7488,5 +7488,15 @@
     "close": 83.8700027466,
     "volume": 143940.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,02,00,00,00,000000",
+    "ticker": "USPH",
+    "open": 83.75,
+    "high": 85.3113021851,
+    "low": 82.1883010864,
+    "close": 83.6600036621,
+    "volume": 276233.0,
+    "wedge_status": "drop"
   }
 ]

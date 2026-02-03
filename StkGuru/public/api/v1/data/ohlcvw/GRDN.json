@@ -2928,5 +2928,15 @@
     "close": 30.2000007629,
     "volume": 203614.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,02,00,00,00,000000",
+    "ticker": "GRDN",
+    "open": 29.9799995422,
+    "high": 32.5,
+    "low": 29.4349994659,
+    "close": 32.3699989319,
+    "volume": 185330.0,
+    "wedge_status": "none"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 45.25,
     "volume": 328628.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,02,00,00,00,000000",
+    "ticker": "THR",
+    "open": 45.6800003052,
+    "high": 48.0800018311,
+    "low": 45.6800003052,
+    "close": 47.1199989319,
+    "volume": 433748.0,
+    "wedge_status": "none"
   }
 ]

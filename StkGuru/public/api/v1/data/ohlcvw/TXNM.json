@@ -7488,5 +7488,15 @@
     "close": 58.9199981689,
     "volume": 558256.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,02,00,00,00,000000",
+    "ticker": "TXNM",
+    "open": 59.0,
+    "high": 59.0400009155,
+    "low": 58.7099990845,
+    "close": 58.7400016785,
+    "volume": 1060699.0,
+    "wedge_status": "none"
   }
 ]

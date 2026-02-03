@@ -7488,5 +7488,15 @@
     "close": 215.0,
     "volume": 128690.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,02,00,00,00,000000",
+    "ticker": "UNF",
+    "open": 215.0,
+    "high": 218.0,
+    "low": 208.0200042725,
+    "close": 208.0200042725,
+    "volume": 87499.0,
+    "wedge_status": "none"
   }
 ]

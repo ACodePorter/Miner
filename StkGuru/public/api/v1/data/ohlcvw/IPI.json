@@ -7488,5 +7488,15 @@
     "close": 32.8400001526,
     "volume": 134575.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,02,00,00,00,000000",
+    "ticker": "IPI",
+    "open": 32.9599990845,
+    "high": 33.0099983215,
+    "low": 32.3400993347,
+    "close": 32.75,
+    "volume": 85420.0,
+    "wedge_status": "none"
   }
 ]
