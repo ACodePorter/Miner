@@ -7488,5 +7488,15 @@
     "close": 144.1100006104,
     "volume": 9892720.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,02,00,00,00,000000",
+    "ticker": "APH",
+    "open": 144.0,
+    "high": 148.5099945068,
+    "low": 144.0,
+    "close": 144.9550018311,
+    "volume": 8453354.0,
+    "wedge_status": "none"
   }
 ]

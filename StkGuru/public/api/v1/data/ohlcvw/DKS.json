@@ -7488,5 +7488,15 @@
     "close": 201.9850006104,
     "volume": 891962.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,02,00,00,00,000000",
+    "ticker": "DKS",
+    "open": 202.0,
+    "high": 205.0,
+    "low": 198.625,
+    "close": 203.0,
+    "volume": 1328941.0,
+    "wedge_status": "none"
   }
 ]

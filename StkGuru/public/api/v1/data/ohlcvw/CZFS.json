@@ -7488,5 +7488,15 @@
     "close": 63.25,
     "volume": 26773.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,02,00,00,00,000000",
+    "ticker": "CZFS",
+    "open": 57.6599998474,
+    "high": 65.3600006104,
+    "low": 62.6500015259,
+    "close": 65.3600006104,
+    "volume": 19990.0,
+    "wedge_status": "none"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 50.3100013733,
     "volume": 313210.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2026,02,02,00,00,00,000000",
+    "ticker": "BLBD",
+    "open": 49.25,
+    "high": 51.2550010681,
+    "low": 49.5800018311,
+    "close": 51.0600013733,
+    "volume": 350700.0,
+    "wedge_status": "none"
   }
 ]
