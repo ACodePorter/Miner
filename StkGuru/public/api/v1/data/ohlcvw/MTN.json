@@ -7498,5 +7498,15 @@
     "close": 130.5,
     "volume": 604517.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,03,00,00,00,000000",
+    "ticker": "MTN",
+    "open": 130.0,
+    "high": 132.5899963379,
+    "low": 126.1549987793,
+    "close": 128.3500061035,
+    "volume": 777857.0,
+    "wedge_status": "none"
   }
 ]

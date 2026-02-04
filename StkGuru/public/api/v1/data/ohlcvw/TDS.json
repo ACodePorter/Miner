@@ -7498,5 +7498,15 @@
     "close": 45.4000015259,
     "volume": 595579.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,03,00,00,00,000000",
+    "ticker": "TDS",
+    "open": 45.5,
+    "high": 46.3499984741,
+    "low": 45.5,
+    "close": 46.0999984741,
+    "volume": 728824.0,
+    "wedge_status": "none"
   }
 ]

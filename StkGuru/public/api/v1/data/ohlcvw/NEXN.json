@@ -7498,5 +7498,15 @@
     "close": 6.2100000381,
     "volume": 284745.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,03,00,00,00,000000",
+    "ticker": "NEXN",
+    "open": 6.1599998474,
+    "high": 6.1599998474,
+    "low": 5.5999999046,
+    "close": 5.7199997902,
+    "volume": 572227.0,
+    "wedge_status": "none"
   }
 ]

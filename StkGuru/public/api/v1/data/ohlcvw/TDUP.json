@@ -7498,5 +7498,15 @@
     "close": 5.0,
     "volume": 1339139.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,03,00,00,00,000000",
+    "ticker": "TDUP",
+    "open": 4.9800000191,
+    "high": 5.0199999809,
+    "low": 4.8299999237,
+    "close": 5.0,
+    "volume": 1790655.0,
+    "wedge_status": "none"
   }
 ]
