@@ -7498,5 +7498,15 @@
     "close": 6.9899997711,
     "volume": 723706.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,03,00,00,00,000000",
+    "ticker": "JBI",
+    "open": 6.9600000381,
+    "high": 7.0799999237,
+    "low": 6.5650000572,
+    "close": 6.75,
+    "volume": 1724599.0,
+    "wedge_status": "drop"
   }
 ]

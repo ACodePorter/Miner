@@ -7498,5 +7498,15 @@
     "close": 30.2099990845,
     "volume": 506540.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,03,00,00,00,000000",
+    "ticker": "EVTC",
+    "open": 29.8600006104,
+    "high": 30.0,
+    "low": 28.1299991608,
+    "close": 28.4899997711,
+    "volume": 329174.0,
+    "wedge_status": "drop"
   }
 ]

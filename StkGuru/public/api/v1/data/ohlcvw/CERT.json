@@ -7498,5 +7498,15 @@
     "close": 8.3000001907,
     "volume": 2137603.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,03,00,00,00,000000",
+    "ticker": "CERT",
+    "open": 8.3199996948,
+    "high": 8.4449996948,
+    "low": 7.4899997711,
+    "close": 7.75,
+    "volume": 4526262.0,
+    "wedge_status": "none"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 109.4749984741,
     "volume": 9315525.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,03,00,00,00,000000",
+    "ticker": "ABT",
+    "open": 107.0,
+    "high": 109.1149978638,
+    "low": 106.25,
+    "close": 109.0,
+    "volume": 10206421.0,
+    "wedge_status": "none"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 85.5,
     "volume": 2851745.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,03,00,00,00,000000",
+    "ticker": "FWONK",
+    "open": 85.1399993896,
+    "high": 85.8300018311,
+    "low": 82.9000015259,
+    "close": 85.7699966431,
+    "volume": 1937857.0,
+    "wedge_status": "none"
   }
 ]

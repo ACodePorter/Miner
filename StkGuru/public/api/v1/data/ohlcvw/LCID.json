@@ -7498,5 +7498,15 @@
     "close": 10.2899999619,
     "volume": 7968748.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,03,00,00,00,000000",
+    "ticker": "LCID",
+    "open": 10.3000001907,
+    "high": 10.6153001785,
+    "low": 10.1599998474,
+    "close": 10.5,
+    "volume": 8149850.0,
+    "wedge_status": "none"
   }
 ]

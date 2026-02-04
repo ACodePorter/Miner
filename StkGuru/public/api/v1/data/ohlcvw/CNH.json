@@ -7498,5 +7498,15 @@
     "close": 10.9600000381,
     "volume": 6763642.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,03,00,00,00,000000",
+    "ticker": "CNH",
+    "open": 10.9600000381,
+    "high": 11.25,
+    "low": 10.9399995804,
+    "close": 11.220000267,
+    "volume": 8776346.0,
+    "wedge_status": "none"
   }
 ]
