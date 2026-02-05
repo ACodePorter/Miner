@@ -7508,5 +7508,15 @@
     "close": 31.25,
     "volume": 465503.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,04,00,00,00,000000",
+    "ticker": "PRDO",
+    "open": 31.2299995422,
+    "high": 31.75,
+    "low": 30.8649997711,
+    "close": 31.4400005341,
+    "volume": 303934.0,
+    "wedge_status": "none"
   }
 ]

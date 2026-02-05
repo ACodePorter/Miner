@@ -7508,5 +7508,15 @@
     "close": 75.5199966431,
     "volume": 1087040.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,04,00,00,00,000000",
+    "ticker": "VOYA",
+    "open": 68.7549972534,
+    "high": 73.4800033569,
+    "low": 68.3050003052,
+    "close": 72.75,
+    "volume": 3096386.0,
+    "wedge_status": "none"
   }
 ]

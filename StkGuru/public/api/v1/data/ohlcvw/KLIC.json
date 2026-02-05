@@ -7508,5 +7508,15 @@
     "close": 57.2000007629,
     "volume": 693213.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,04,00,00,00,000000",
+    "ticker": "KLIC",
+    "open": 56.9300003052,
+    "high": 58.75,
+    "low": 54.3699989319,
+    "close": 55.6699981689,
+    "volume": 999807.0,
+    "wedge_status": "drop"
   }
 ]

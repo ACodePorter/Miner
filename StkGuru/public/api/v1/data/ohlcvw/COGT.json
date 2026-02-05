@@ -7508,5 +7508,15 @@
     "close": 37.2799987793,
     "volume": 990369.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,04,00,00,00,000000",
+    "ticker": "COGT",
+    "open": 37.3300018311,
+    "high": 37.5,
+    "low": 35.5,
+    "close": 36.8499984741,
+    "volume": 1362604.0,
+    "wedge_status": "none"
   }
 ]
