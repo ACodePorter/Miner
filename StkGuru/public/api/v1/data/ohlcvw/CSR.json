@@ -7508,5 +7508,15 @@
     "close": 64.0,
     "volume": 42466.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,05,00,00,00,000000",
+    "ticker": "CSR",
+    "open": 64.3399963379,
+    "high": 64.4800033569,
+    "low": 63.7599983215,
+    "close": 64.2699966431,
+    "volume": 83355.0,
+    "wedge_status": "none"
   }
 ]

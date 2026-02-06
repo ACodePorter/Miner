@@ -7508,5 +7508,15 @@
     "close": 9.5500001907,
     "volume": 355455.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,05,00,00,00,000000",
+    "ticker": "EGAN",
+    "open": 9.5100002289,
+    "high": 10.0100002289,
+    "low": 9.2203998566,
+    "close": 9.3999996185,
+    "volume": 245566.0,
+    "wedge_status": "none"
   }
 ]

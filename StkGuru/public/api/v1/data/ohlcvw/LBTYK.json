@@ -7508,5 +7508,15 @@
     "close": 11.3100004196,
     "volume": 857100.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,05,00,00,00,000000",
+    "ticker": "LBTYK",
+    "open": 11.3000001907,
+    "high": 11.3400001526,
+    "low": 11.1199998856,
+    "close": 11.25,
+    "volume": 564914.0,
+    "wedge_status": "none"
   }
 ]

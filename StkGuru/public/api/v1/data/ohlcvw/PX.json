@@ -7508,5 +7508,15 @@
     "close": 10.5,
     "volume": 755779.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,05,00,00,00,000000",
+    "ticker": "PX",
+    "open": 10.4799995422,
+    "high": 10.4399995804,
+    "low": 9.7899999619,
+    "close": 9.8599996567,
+    "volume": 726349.0,
+    "wedge_status": "none"
   }
 ]

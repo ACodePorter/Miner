@@ -7508,5 +7508,15 @@
     "close": 9.5,
     "volume": 2030993.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,05,00,00,00,000000",
+    "ticker": "BUR",
+    "open": 9.3900003433,
+    "high": 9.4598999023,
+    "low": 8.8249998093,
+    "close": 8.8500003815,
+    "volume": 1947609.0,
+    "wedge_status": "none"
   }
 ]

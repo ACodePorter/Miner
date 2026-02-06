@@ -7508,5 +7508,15 @@
     "close": 10.0,
     "volume": 227646.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,05,00,00,00,000000",
+    "ticker": "DSGN",
+    "open": 9.6660003662,
+    "high": 10.2399997711,
+    "low": 9.5364999771,
+    "close": 9.9499998093,
+    "volume": 269276.0,
+    "wedge_status": "drop"
   }
 ]

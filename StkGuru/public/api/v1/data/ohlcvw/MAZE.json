@@ -2098,5 +2098,15 @@
     "close": 48.1399993896,
     "volume": 588230.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,05,00,00,00,000000",
+    "ticker": "MAZE",
+    "open": 46.7000007629,
+    "high": 49.25,
+    "low": 42.1699981689,
+    "close": 43.9500007629,
+    "volume": 952793.0,
+    "wedge_status": "drop"
   }
 ]

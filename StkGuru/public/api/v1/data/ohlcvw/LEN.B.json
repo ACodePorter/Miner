@@ -7508,5 +7508,15 @@
     "close": 107.5,
     "volume": 72536.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,05,00,00,00,000000",
+    "ticker": "LEN.B",
+    "open": 106.7600021362,
+    "high": 108.5999984741,
+    "low": 106.1200027466,
+    "close": 106.4599990845,
+    "volume": 54314.0,
+    "wedge_status": "none"
   }
 ]
