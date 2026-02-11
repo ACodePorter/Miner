@@ -3278,5 +3278,35 @@
     "close": 4.3200001717,
     "volume": 77764.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "ACTU",
+    "open": 4.3899998665,
+    "high": 4.5250000954,
+    "low": 4.3200001717,
+    "close": 4.4099998474,
+    "volume": 22100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "ACTU",
+    "open": 4.4000000954,
+    "high": 4.4000000954,
+    "low": 4.1700000763,
+    "close": 4.25,
+    "volume": 18600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "ACTU",
+    "open": 4.2899999619,
+    "high": 4.3850002289,
+    "low": 4.220099926,
+    "close": 4.2699999809,
+    "volume": 20900.0,
+    "wedge_status": "none"
   }
 ]

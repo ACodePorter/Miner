@@ -7478,5 +7478,35 @@
     "close": 79.6299972534,
     "volume": 579417.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "MMSI",
+    "open": 80.6200027466,
+    "high": 82.6600036621,
+    "low": 79.9499969482,
+    "close": 82.5,
+    "volume": 842200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "MMSI",
+    "open": 82.1100006104,
+    "high": 82.1100006104,
+    "low": 80.4599990845,
+    "close": 80.8300018311,
+    "volume": 426200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "MMSI",
+    "open": 81.25,
+    "high": 82.9199981689,
+    "low": 81.25,
+    "close": 82.2200012207,
+    "volume": 550667.0,
+    "wedge_status": "pop"
   }
 ]

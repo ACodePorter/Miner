@@ -7478,5 +7478,35 @@
     "close": 41.25,
     "volume": 1267262.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "RNST",
+    "open": 41.5,
+    "high": 42.1100006104,
+    "low": 41.2099990845,
+    "close": 41.7999992371,
+    "volume": 688600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "RNST",
+    "open": 41.6399993896,
+    "high": 41.75,
+    "low": 41.0,
+    "close": 41.3100013733,
+    "volume": 574400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "RNST",
+    "open": 41.4000015259,
+    "high": 41.4799995422,
+    "low": 40.8400001526,
+    "close": 41.1899986267,
+    "volume": 761538.0,
+    "wedge_status": "none"
   }
 ]

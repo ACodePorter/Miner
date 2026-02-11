@@ -7478,5 +7478,35 @@
     "close": 1.4500000477,
     "volume": 362893.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "LUNG",
+    "open": 1.4800000191,
+    "high": 1.5099999905,
+    "low": 1.4500000477,
+    "close": 1.5,
+    "volume": 348700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "LUNG",
+    "open": 1.4900000095,
+    "high": 1.5499999523,
+    "low": 1.4349999428,
+    "close": 1.5399999619,
+    "volume": 318500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "LUNG",
+    "open": 1.5399999619,
+    "high": 1.5549999475,
+    "low": 1.4500000477,
+    "close": 1.4500000477,
+    "volume": 347427.0,
+    "wedge_status": "none"
   }
 ]

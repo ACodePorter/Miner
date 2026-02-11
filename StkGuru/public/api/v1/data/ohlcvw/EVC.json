@@ -7478,5 +7478,35 @@
     "close": 2.9000000954,
     "volume": 284381.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "EVC",
+    "open": 2.9200000763,
+    "high": 3.0,
+    "low": 2.9200000763,
+    "close": 2.9400000572,
+    "volume": 149900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "EVC",
+    "open": 2.9100000858,
+    "high": 3.0999999046,
+    "low": 2.9100000858,
+    "close": 3.0499999523,
+    "volume": 213000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "EVC",
+    "open": 3.0599999428,
+    "high": 3.125,
+    "low": 3.0550000668,
+    "close": 3.0899999142,
+    "volume": 122127.0,
+    "wedge_status": "none"
   }
 ]

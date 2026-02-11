@@ -7478,5 +7478,35 @@
     "close": 17.0599994659,
     "volume": 10462.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "MLP",
+    "open": 17.0699996948,
+    "high": 17.6900005341,
+    "low": 16.9899997711,
+    "close": 17.1200008392,
+    "volume": 24100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "MLP",
+    "open": 17.25,
+    "high": 17.25,
+    "low": 16.9500007629,
+    "close": 16.9599990845,
+    "volume": 19800.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "MLP",
+    "open": 17.0,
+    "high": 17.0550003052,
+    "low": 16.9099998474,
+    "close": 16.9099998474,
+    "volume": 9720.0,
+    "wedge_status": "none"
   }
 ]

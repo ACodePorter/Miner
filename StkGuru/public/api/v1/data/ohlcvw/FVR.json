@@ -2928,5 +2928,35 @@
     "close": 16.5499992371,
     "volume": 202379.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "FVR",
+    "open": 16.75,
+    "high": 16.75,
+    "low": 16.5,
+    "close": 16.5400009155,
+    "volume": 116300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "FVR",
+    "open": 16.6700000763,
+    "high": 16.6700000763,
+    "low": 16.1499996185,
+    "close": 16.2000007629,
+    "volume": 72000.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "FVR",
+    "open": 16.2999992371,
+    "high": 16.8299999237,
+    "low": 16.1499996185,
+    "close": 16.6800003052,
+    "volume": 195479.0,
+    "wedge_status": "none"
   }
 ]

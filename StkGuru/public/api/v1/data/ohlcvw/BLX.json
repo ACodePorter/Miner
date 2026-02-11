@@ -7478,5 +7478,35 @@
     "close": 49.0,
     "volume": 150930.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "BLX",
+    "open": 49.25,
+    "high": 49.7799987793,
+    "low": 48.5499992371,
+    "close": 48.9199981689,
+    "volume": 173800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "BLX",
+    "open": 49.1399993896,
+    "high": 49.4000015259,
+    "low": 48.7999992371,
+    "close": 49.2200012207,
+    "volume": 112000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "BLX",
+    "open": 49.1199989319,
+    "high": 49.75,
+    "low": 49.0500984192,
+    "close": 49.6800003052,
+    "volume": 52492.0,
+    "wedge_status": "none"
   }
 ]

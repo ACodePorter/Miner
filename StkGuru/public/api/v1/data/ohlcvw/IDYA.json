@@ -7478,5 +7478,35 @@
     "close": 31.7700004578,
     "volume": 623469.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "IDYA",
+    "open": 32.6800003052,
+    "high": 33.0,
+    "low": 31.8549995422,
+    "close": 32.1699981689,
+    "volume": 985300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "IDYA",
+    "open": 32.1549987793,
+    "high": 32.6399993896,
+    "low": 31.8099994659,
+    "close": 32.3899993896,
+    "volume": 630100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "IDYA",
+    "open": 32.3899993896,
+    "high": 33.625,
+    "low": 31.8999996185,
+    "close": 33.25,
+    "volume": 1015856.0,
+    "wedge_status": "none"
   }
 ]

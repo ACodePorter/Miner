@@ -7478,5 +7478,35 @@
     "close": 7.3800001144,
     "volume": 4614430.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "CERT",
+    "open": 7.3899998665,
+    "high": 7.5,
+    "low": 7.1599998474,
+    "close": 7.2300000191,
+    "volume": 5112600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "CERT",
+    "open": 7.2600002289,
+    "high": 7.2600002289,
+    "low": 6.9650001526,
+    "close": 7.1700000763,
+    "volume": 2927400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "CERT",
+    "open": 7.1999998093,
+    "high": 7.2849998474,
+    "low": 6.9299998283,
+    "close": 7.0,
+    "volume": 2438893.0,
+    "wedge_status": "none"
   }
 ]

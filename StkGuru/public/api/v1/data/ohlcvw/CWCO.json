@@ -7478,5 +7478,35 @@
     "close": 36.5999984741,
     "volume": 73794.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "CWCO",
+    "open": 36.7599983215,
+    "high": 37.0800018311,
+    "low": 36.5400009155,
+    "close": 37.0299987793,
+    "volume": 92200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "CWCO",
+    "open": 37.0,
+    "high": 37.0,
+    "low": 35.8899993896,
+    "close": 36.5200004578,
+    "volume": 45500.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "CWCO",
+    "open": 36.6500015259,
+    "high": 37.7999992371,
+    "low": 36.5800018311,
+    "close": 37.5099983215,
+    "volume": 78759.0,
+    "wedge_status": "none"
   }
 ]

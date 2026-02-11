@@ -7478,5 +7478,35 @@
     "close": 0.9926999807,
     "volume": 431420.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "NRDY",
+    "open": 0.9900000095,
+    "high": 1.0599999428,
+    "low": 0.9900000095,
+    "close": 1.0399999619,
+    "volume": 364300.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "NRDY",
+    "open": 1.0299999714,
+    "high": 1.0399999619,
+    "low": 1.0,
+    "close": 1.0,
+    "volume": 458700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "NRDY",
+    "open": 0.9900000095,
+    "high": 1.1000000238,
+    "low": 0.9901000261,
+    "close": 1.0599999428,
+    "volume": 1943728.0,
+    "wedge_status": "none"
   }
 ]

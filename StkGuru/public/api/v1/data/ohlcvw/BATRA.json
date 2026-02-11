@@ -7478,5 +7478,35 @@
     "close": 43.75,
     "volume": 179046.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "BATRA",
+    "open": 43.9300003052,
+    "high": 44.5499992371,
+    "low": 43.2599983215,
+    "close": 43.4199981689,
+    "volume": 98200.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "BATRA",
+    "open": 43.7799987793,
+    "high": 44.0,
+    "low": 43.0400009155,
+    "close": 44.0,
+    "volume": 52200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "BATRA",
+    "open": 44.2999992371,
+    "high": 45.75,
+    "low": 44.2999992371,
+    "close": 45.5699996948,
+    "volume": 72293.0,
+    "wedge_status": "none"
   }
 ]

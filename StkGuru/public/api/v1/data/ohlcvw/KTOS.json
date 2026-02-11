@@ -7478,5 +7478,35 @@
     "close": 85.25,
     "volume": 3519645.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "KTOS",
+    "open": 89.0999984741,
+    "high": 94.6699981689,
+    "low": 88.0,
+    "close": 94.4100036621,
+    "volume": 4227000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "KTOS",
+    "open": 94.5999984741,
+    "high": 99.7799987793,
+    "low": 93.1999969482,
+    "close": 98.8099975586,
+    "volume": 2970600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "KTOS",
+    "open": 99.0,
+    "high": 99.5,
+    "low": 93.2099990845,
+    "close": 93.4800033569,
+    "volume": 1995038.0,
+    "wedge_status": "none"
   }
 ]

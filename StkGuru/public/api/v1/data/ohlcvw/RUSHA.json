@@ -7478,5 +7478,35 @@
     "close": 72.0,
     "volume": 727564.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "RUSHA",
+    "open": 72.5,
+    "high": 73.7600021362,
+    "low": 72.0899963379,
+    "close": 72.6399993896,
+    "volume": 467500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "RUSHA",
+    "open": 72.8700027466,
+    "high": 73.2600021362,
+    "low": 70.8700027466,
+    "close": 71.0400009155,
+    "volume": 431500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "RUSHA",
+    "open": 71.5,
+    "high": 72.0800018311,
+    "low": 70.6999969482,
+    "close": 71.5599975586,
+    "volume": 527994.0,
+    "wedge_status": "none"
   }
 ]

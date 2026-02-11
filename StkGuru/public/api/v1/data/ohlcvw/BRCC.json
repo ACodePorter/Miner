@@ -7478,5 +7478,35 @@
     "close": 0.7400000095,
     "volume": 1281264.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "BRCC",
+    "open": 0.800999999,
+    "high": 0.8280000091,
+    "low": 0.75,
+    "close": 0.8259999752,
+    "volume": 863700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "BRCC",
+    "open": 0.8159999847,
+    "high": 0.8399999738,
+    "low": 0.7649999857,
+    "close": 0.8180000186,
+    "volume": 781200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "BRCC",
+    "open": 0.8299999833,
+    "high": 0.8389999866,
+    "low": 0.7616000175,
+    "close": 0.7645000219,
+    "volume": 833722.0,
+    "wedge_status": "none"
   }
 ]

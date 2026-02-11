@@ -7478,5 +7478,35 @@
     "close": 205.2200012207,
     "volume": 2759339.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "SLAB",
+    "open": 205.8099975586,
+    "high": 208.8399963379,
+    "low": 205.5299987793,
+    "close": 206.5,
+    "volume": 1745400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "SLAB",
+    "open": 208.0,
+    "high": 208.0,
+    "low": 204.8399963379,
+    "close": 205.4100036621,
+    "volume": 1526200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "SLAB",
+    "open": 206.0,
+    "high": 207.2899932861,
+    "low": 205.8699951172,
+    "close": 206.4199981689,
+    "volume": 1252727.0,
+    "wedge_status": "none"
   }
 ]

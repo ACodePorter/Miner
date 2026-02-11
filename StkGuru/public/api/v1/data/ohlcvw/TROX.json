@@ -7478,5 +7478,35 @@
     "close": 6.9099998474,
     "volume": 4849704.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "TROX",
+    "open": 7.0,
+    "high": 7.5900001526,
+    "low": 7.0,
+    "close": 7.4600000381,
+    "volume": 3598300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "TROX",
+    "open": 7.4600000381,
+    "high": 7.7100000381,
+    "low": 7.2699999809,
+    "close": 7.4800000191,
+    "volume": 2334200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "TROX",
+    "open": 7.5700001717,
+    "high": 8.1049995422,
+    "low": 7.5222997665,
+    "close": 7.8600001335,
+    "volume": 5199006.0,
+    "wedge_status": "none"
   }
 ]

@@ -7478,5 +7478,35 @@
     "close": 6.75,
     "volume": 53703.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "SMHI",
+    "open": 6.7800002098,
+    "high": 7.2600002289,
+    "low": 6.7600002289,
+    "close": 7.1599998474,
+    "volume": 130100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "SMHI",
+    "open": 7.1599998474,
+    "high": 7.3000001907,
+    "low": 7.0399999619,
+    "close": 7.1900000572,
+    "volume": 103700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "SMHI",
+    "open": 7.1799998283,
+    "high": 7.5399999619,
+    "low": 7.0149998665,
+    "close": 7.2600002289,
+    "volume": 125980.0,
+    "wedge_status": "none"
   }
 ]

@@ -7478,5 +7478,35 @@
     "close": 6.5300002098,
     "volume": 470727.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "SSTI",
+    "open": 6.7100000381,
+    "high": 7.1799998283,
+    "low": 6.5300002098,
+    "close": 7.0,
+    "volume": 408700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "SSTI",
+    "open": 6.9899997711,
+    "high": 7.1100001335,
+    "low": 6.7350001335,
+    "close": 7.0100002289,
+    "volume": 112000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "SSTI",
+    "open": 7.1500000954,
+    "high": 7.4099998474,
+    "low": 7.0650000572,
+    "close": 7.3000001907,
+    "volume": 119928.0,
+    "wedge_status": "none"
   }
 ]

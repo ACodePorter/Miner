@@ -7478,5 +7478,35 @@
     "close": 4.8499999046,
     "volume": 13285.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "EEX",
+    "open": 4.8600001335,
+    "high": 5.0199999809,
+    "low": 4.8350000381,
+    "close": 4.9200000763,
+    "volume": 41100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "EEX",
+    "open": 4.9000000954,
+    "high": 4.9499998093,
+    "low": 4.8499999046,
+    "close": 4.8600001335,
+    "volume": 37900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "EEX",
+    "open": 4.8899998665,
+    "high": 5.0,
+    "low": 4.8400001526,
+    "close": 4.8600001335,
+    "volume": 59106.0,
+    "wedge_status": "none"
   }
 ]

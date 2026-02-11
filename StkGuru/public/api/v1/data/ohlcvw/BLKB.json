@@ -7478,5 +7478,35 @@
     "close": 46.2900009155,
     "volume": 460784.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "BLKB",
+    "open": 46.9099998474,
+    "high": 48.0,
+    "low": 45.8100013733,
+    "close": 47.4799995422,
+    "volume": 551600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "BLKB",
+    "open": 47.0200004578,
+    "high": 48.7200012207,
+    "low": 46.0299987793,
+    "close": 48.25,
+    "volume": 808800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "BLKB",
+    "open": 51.5,
+    "high": 53.25,
+    "low": 45.7099990845,
+    "close": 47.6800003052,
+    "volume": 1142241.0,
+    "wedge_status": "none"
   }
 ]

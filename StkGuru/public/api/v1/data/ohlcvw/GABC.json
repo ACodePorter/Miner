@@ -7478,5 +7478,35 @@
     "close": 44.3199996948,
     "volume": 147812.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "GABC",
+    "open": 44.7799987793,
+    "high": 45.0,
+    "low": 44.2900009155,
+    "close": 44.3699989319,
+    "volume": 150300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "GABC",
+    "open": 44.2000007629,
+    "high": 44.5299987793,
+    "low": 43.8899993896,
+    "close": 44.0999984741,
+    "volume": 113100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "GABC",
+    "open": 43.8899993896,
+    "high": 44.0900001526,
+    "low": 43.0,
+    "close": 43.2599983215,
+    "volume": 94601.0,
+    "wedge_status": "none"
   }
 ]

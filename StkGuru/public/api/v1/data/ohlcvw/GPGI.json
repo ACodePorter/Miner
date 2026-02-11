@@ -7478,5 +7478,35 @@
     "close": 23.0499992371,
     "volume": 2500521.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "GPGI",
+    "open": 23.6100006104,
+    "high": 25.25,
+    "low": 23.5049991608,
+    "close": 24.4599990845,
+    "volume": 2737300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "GPGI",
+    "open": 24.5100002289,
+    "high": 25.4899997711,
+    "low": 24.0,
+    "close": 25.3199996948,
+    "volume": 1790900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "GPGI",
+    "open": 25.5,
+    "high": 25.6499996185,
+    "low": 24.8099994659,
+    "close": 24.8500003815,
+    "volume": 1983163.0,
+    "wedge_status": "none"
   }
 ]

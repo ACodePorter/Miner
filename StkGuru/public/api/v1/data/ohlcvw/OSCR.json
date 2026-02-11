@@ -7478,5 +7478,35 @@
     "close": 12.5100002289,
     "volume": 7837294.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "OSCR",
+    "open": 11.8900003433,
+    "high": 12.5,
+    "low": 11.8500003815,
+    "close": 12.2399997711,
+    "volume": 11131300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "OSCR",
+    "open": 12.0,
+    "high": 12.7700004578,
+    "low": 11.8599996567,
+    "close": 12.6599998474,
+    "volume": 15605300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "OSCR",
+    "open": 13.5,
+    "high": 14.369600296,
+    "low": 12.8112001419,
+    "close": 12.8800001144,
+    "volume": 26489679.0,
+    "wedge_status": "none"
   }
 ]

@@ -7478,5 +7478,35 @@
     "close": 7.3499999046,
     "volume": 31232850.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "SOUN",
+    "open": 7.6300001144,
+    "high": 8.7600002289,
+    "low": 7.5539999008,
+    "close": 8.5600004196,
+    "volume": 31456600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "SOUN",
+    "open": 8.4099998474,
+    "high": 8.9399995804,
+    "low": 8.3299999237,
+    "close": 8.8100004196,
+    "volume": 24494400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "SOUN",
+    "open": 8.8199996948,
+    "high": 9.0,
+    "low": 8.2299995422,
+    "close": 8.25,
+    "volume": 24114203.0,
+    "wedge_status": "none"
   }
 ]

@@ -7478,5 +7478,35 @@
     "close": 64.6399993896,
     "volume": 3232009.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "ARWR",
+    "open": 65.5,
+    "high": 68.4400024414,
+    "low": 63.4599990845,
+    "close": 64.5199966431,
+    "volume": 24090400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "ARWR",
+    "open": 64.6699981689,
+    "high": 65.0920028687,
+    "low": 61.4500007629,
+    "close": 62.6399993896,
+    "volume": 5837600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "ARWR",
+    "open": 62.6800003052,
+    "high": 64.0,
+    "low": 62.0,
+    "close": 62.9199981689,
+    "volume": 1973460.0,
+    "wedge_status": "none"
   }
 ]

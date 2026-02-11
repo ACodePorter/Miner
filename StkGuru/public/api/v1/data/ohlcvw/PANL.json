@@ -7478,5 +7478,35 @@
     "close": 8.0699996948,
     "volume": 770820.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "PANL",
+    "open": 8.0,
+    "high": 8.7250003815,
+    "low": 7.9899997711,
+    "close": 8.7100000381,
+    "volume": 755100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "PANL",
+    "open": 8.7700004578,
+    "high": 9.0200004578,
+    "low": 8.5100002289,
+    "close": 8.8699998856,
+    "volume": 721600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "PANL",
+    "open": 8.7600002289,
+    "high": 8.875,
+    "low": 8.5401000977,
+    "close": 8.8299999237,
+    "volume": 637122.0,
+    "wedge_status": "none"
   }
 ]

@@ -7478,5 +7478,35 @@
     "close": 2.3199999332,
     "volume": 431216.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "ATOM",
+    "open": 2.4100000858,
+    "high": 2.625,
+    "low": 2.3800001144,
+    "close": 2.5699999332,
+    "volume": 448000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "ATOM",
+    "open": 2.5599999428,
+    "high": 2.5750000477,
+    "low": 2.4700000286,
+    "close": 2.5199999809,
+    "volume": 297400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "ATOM",
+    "open": 2.5299999714,
+    "high": 2.5899999142,
+    "low": 2.4249999523,
+    "close": 2.4600000381,
+    "volume": 297613.0,
+    "wedge_status": "none"
   }
 ]

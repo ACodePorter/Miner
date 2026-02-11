@@ -7478,5 +7478,35 @@
     "close": 0.6661000252,
     "volume": 25387956.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "BYND",
+    "open": 0.6890000105,
+    "high": 0.7429999709,
+    "low": 0.6840000153,
+    "close": 0.7289999723,
+    "volume": 31004000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "BYND",
+    "open": 0.75,
+    "high": 0.7699999809,
+    "low": 0.7110000253,
+    "close": 0.7699999809,
+    "volume": 24066800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "BYND",
+    "open": 0.7671999931,
+    "high": 0.8199999928,
+    "low": 0.75,
+    "close": 0.75,
+    "volume": 37381546.0,
+    "wedge_status": "none"
   }
 ]

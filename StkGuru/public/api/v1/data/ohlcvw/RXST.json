@@ -7478,5 +7478,35 @@
     "close": 7.8200001717,
     "volume": 1839704.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "RXST",
+    "open": 7.9400000572,
+    "high": 8.5399999619,
+    "low": 7.7899999619,
+    "close": 8.3900003433,
+    "volume": 2121100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "RXST",
+    "open": 8.3400001526,
+    "high": 8.3400001526,
+    "low": 8.0100002289,
+    "close": 8.2600002289,
+    "volume": 711300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "RXST",
+    "open": 8.2600002289,
+    "high": 8.5,
+    "low": 8.1800003052,
+    "close": 8.2100000381,
+    "volume": 439828.0,
+    "wedge_status": "none"
   }
 ]

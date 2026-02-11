@@ -7478,5 +7478,35 @@
     "close": 11.25,
     "volume": 564914.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "LBTYK",
+    "open": 11.3199996948,
+    "high": 11.6899995804,
+    "low": 11.3199996948,
+    "close": 11.6400003433,
+    "volume": 1022400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "LBTYK",
+    "open": 11.5399999619,
+    "high": 11.7600002289,
+    "low": 11.5,
+    "close": 11.6700000763,
+    "volume": 1089100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "LBTYK",
+    "open": 11.6599998474,
+    "high": 11.720000267,
+    "low": 11.5649995804,
+    "close": 11.5900001526,
+    "volume": 771635.0,
+    "wedge_status": "none"
   }
 ]

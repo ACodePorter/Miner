@@ -7478,5 +7478,35 @@
     "close": 8.25,
     "volume": 200074.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "MPX",
+    "open": 8.1499996185,
+    "high": 8.4499998093,
+    "low": 8.1499996185,
+    "close": 8.220000267,
+    "volume": 91500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "MPX",
+    "open": 8.4099998474,
+    "high": 8.4099998474,
+    "low": 8.0799999237,
+    "close": 8.0799999237,
+    "volume": 205600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "MPX",
+    "open": 8.0200004578,
+    "high": 8.220000267,
+    "low": 8.0,
+    "close": 8.0,
+    "volume": 102961.0,
+    "wedge_status": "none"
   }
 ]

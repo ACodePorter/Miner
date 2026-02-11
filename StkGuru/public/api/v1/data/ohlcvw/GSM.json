@@ -7478,5 +7478,35 @@
     "close": 4.8899998665,
     "volume": 951176.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "GSM",
+    "open": 5.0,
+    "high": 5.2300000191,
+    "low": 4.9400000572,
+    "close": 5.1599998474,
+    "volume": 815900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "GSM",
+    "open": 5.1500000954,
+    "high": 5.1999998093,
+    "low": 5.0,
+    "close": 5.1700000763,
+    "volume": 1048700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "GSM",
+    "open": 5.1700000763,
+    "high": 5.4400000572,
+    "low": 5.0749998093,
+    "close": 5.3299999237,
+    "volume": 1472372.0,
+    "wedge_status": "none"
   }
 ]

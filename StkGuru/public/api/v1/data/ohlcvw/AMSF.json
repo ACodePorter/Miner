@@ -7478,5 +7478,35 @@
     "close": 39.7299995422,
     "volume": 155628.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "AMSF",
+    "open": 39.8400001526,
+    "high": 40.2700004578,
+    "low": 39.0,
+    "close": 39.1899986267,
+    "volume": 166100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "AMSF",
+    "open": 39.0,
+    "high": 39.25,
+    "low": 37.5800018311,
+    "close": 37.7400016785,
+    "volume": 240000.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "AMSF",
+    "open": 37.7099990845,
+    "high": 38.6090011597,
+    "low": 37.5750007629,
+    "close": 38.4799995422,
+    "volume": 120719.0,
+    "wedge_status": "none"
   }
 ]

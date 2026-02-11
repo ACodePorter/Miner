@@ -7478,5 +7478,35 @@
     "close": 11.25,
     "volume": 282968.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "ACIC",
+    "open": 11.2700004578,
+    "high": 11.3800001144,
+    "low": 11.2600002289,
+    "close": 11.3100004196,
+    "volume": 246300.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "ACIC",
+    "open": 11.3299999237,
+    "high": 11.3299999237,
+    "low": 10.9399995804,
+    "close": 10.9799995422,
+    "volume": 204900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "ACIC",
+    "open": 11.0,
+    "high": 11.2299995422,
+    "low": 11.0,
+    "close": 11.1400003433,
+    "volume": 228453.0,
+    "wedge_status": "none"
   }
 ]

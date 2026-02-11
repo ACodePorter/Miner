@@ -7478,5 +7478,35 @@
     "close": 1.3500000238,
     "volume": 438159.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "KLTR",
+    "open": 1.3600000143,
+    "high": 1.4099999666,
+    "low": 1.3550000191,
+    "close": 1.3899999857,
+    "volume": 214200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "KLTR",
+    "open": 1.3999999762,
+    "high": 1.4650000334,
+    "low": 1.375,
+    "close": 1.4299999475,
+    "volume": 324500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "KLTR",
+    "open": 1.4299999475,
+    "high": 1.5199999809,
+    "low": 1.410400033,
+    "close": 1.4600000381,
+    "volume": 301840.0,
+    "wedge_status": "none"
   }
 ]

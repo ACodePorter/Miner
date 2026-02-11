@@ -7478,5 +7478,35 @@
     "close": 0.8862000108,
     "volume": 4024180.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "HUMA",
+    "open": 0.9279999733,
+    "high": 0.9580000043,
+    "low": 0.90200001,
+    "close": 0.9380000234,
+    "volume": 2435600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "HUMA",
+    "open": 1.0199999809,
+    "high": 1.2899999619,
+    "low": 1.0,
+    "close": 1.2200000286,
+    "volume": 26871400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "HUMA",
+    "open": 1.25,
+    "high": 1.2899999619,
+    "low": 1.0399999619,
+    "close": 1.0499999523,
+    "volume": 13082973.0,
+    "wedge_status": "none"
   }
 ]

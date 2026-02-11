@@ -7478,5 +7478,35 @@
     "close": 8.5500001907,
     "volume": 352196.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "BNED",
+    "open": 8.7700004578,
+    "high": 9.0500001907,
+    "low": 8.75,
+    "close": 8.9600000381,
+    "volume": 248900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "BNED",
+    "open": 8.8699998856,
+    "high": 8.9099998474,
+    "low": 8.5699996948,
+    "close": 8.6800003052,
+    "volume": 333700.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "BNED",
+    "open": 8.6499996185,
+    "high": 8.8549995422,
+    "low": 8.6199998856,
+    "close": 8.6300001144,
+    "volume": 201968.0,
+    "wedge_status": "none"
   }
 ]

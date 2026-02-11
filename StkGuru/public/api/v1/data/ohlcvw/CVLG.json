@@ -7478,5 +7478,35 @@
     "close": 28.8099994659,
     "volume": 127193.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "CVLG",
+    "open": 28.8099994659,
+    "high": 29.3500003815,
+    "low": 28.75,
+    "close": 29.1100006104,
+    "volume": 152900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "CVLG",
+    "open": 29.0,
+    "high": 29.0,
+    "low": 28.3700008392,
+    "close": 28.6000003815,
+    "volume": 195300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "CVLG",
+    "open": 28.3799991608,
+    "high": 29.7399997711,
+    "low": 28.3150005341,
+    "close": 29.2399997711,
+    "volume": 212403.0,
+    "wedge_status": "none"
   }
 ]

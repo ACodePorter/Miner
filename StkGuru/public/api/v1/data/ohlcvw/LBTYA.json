@@ -7478,5 +7478,35 @@
     "close": 11.2600002289,
     "volume": 2780247.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "LBTYA",
+    "open": 11.5,
+    "high": 11.8000001907,
+    "low": 11.3199996948,
+    "close": 11.75,
+    "volume": 5545600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "LBTYA",
+    "open": 11.6899995804,
+    "high": 11.8299999237,
+    "low": 11.470000267,
+    "close": 11.6099996567,
+    "volume": 4071100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "LBTYA",
+    "open": 11.6199998856,
+    "high": 11.7049999237,
+    "low": 11.5100002289,
+    "close": 11.5600004196,
+    "volume": 2719786.0,
+    "wedge_status": "none"
   }
 ]

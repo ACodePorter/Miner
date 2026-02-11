@@ -7478,5 +7478,35 @@
     "close": 86.4800033569,
     "volume": 52968.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "GEF.B",
+    "open": 87.3099975586,
+    "high": 88.0,
+    "low": 87.3099975586,
+    "close": 87.7600021362,
+    "volume": 18300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "GEF.B",
+    "open": 88.3799972534,
+    "high": 88.6800003052,
+    "low": 85.5599975586,
+    "close": 85.9400024414,
+    "volume": 13900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "GEF.B",
+    "open": 86.5999984741,
+    "high": 87.8600006104,
+    "low": 86.5,
+    "close": 87.4800033569,
+    "volume": 15717.0,
+    "wedge_status": "none"
   }
 ]

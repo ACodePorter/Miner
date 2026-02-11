@@ -7478,5 +7478,35 @@
     "close": 54.4599990845,
     "volume": 941552.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "LAZ",
+    "open": 54.9618845525,
+    "high": 56.4883291217,
+    "low": 54.4464615636,
+    "close": 56.2999992371,
+    "volume": 970200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "LAZ",
+    "open": 56.1100006104,
+    "high": 57.7799987793,
+    "low": 55.9199981689,
+    "close": 57.0,
+    "volume": 776500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "LAZ",
+    "open": 57.0,
+    "high": 58.75,
+    "low": 56.1100006104,
+    "close": 56.9700012207,
+    "volume": 854361.0,
+    "wedge_status": "none"
   }
 ]

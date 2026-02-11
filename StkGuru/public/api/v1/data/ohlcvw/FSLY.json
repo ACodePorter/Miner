@@ -7478,5 +7478,35 @@
     "close": 7.9600000381,
     "volume": 3288901.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "FSLY",
+    "open": 8.0500001907,
+    "high": 8.595000267,
+    "low": 8.0,
+    "close": 8.5699996948,
+    "volume": 3635300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "FSLY",
+    "open": 8.4899997711,
+    "high": 9.109000206,
+    "low": 8.220000267,
+    "close": 8.720000267,
+    "volume": 4300400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "FSLY",
+    "open": 8.7600002289,
+    "high": 9.2349996567,
+    "low": 8.7600002289,
+    "close": 9.0900001526,
+    "volume": 3501758.0,
+    "wedge_status": "none"
   }
 ]

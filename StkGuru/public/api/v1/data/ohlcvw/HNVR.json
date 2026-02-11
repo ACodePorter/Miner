@@ -7478,5 +7478,35 @@
     "close": 23.3999996185,
     "volume": 16951.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "HNVR",
+    "open": 23.6100006104,
+    "high": 23.6149997711,
+    "low": 23.25,
+    "close": 23.3600006104,
+    "volume": 13700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "HNVR",
+    "open": 23.4300003052,
+    "high": 23.4300003052,
+    "low": 23.25,
+    "close": 23.2700004578,
+    "volume": 7400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "HNVR",
+    "open": 23.5,
+    "high": 23.5,
+    "low": 23.1000003815,
+    "close": 23.1000003815,
+    "volume": 7957.0,
+    "wedge_status": "none"
   }
 ]

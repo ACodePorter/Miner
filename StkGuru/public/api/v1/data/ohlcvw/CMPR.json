@@ -7478,5 +7478,35 @@
     "close": 73.5800018311,
     "volume": 162696.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "CMPR",
+    "open": 74.25,
+    "high": 76.3499984741,
+    "low": 71.1200027466,
+    "close": 75.6399993896,
+    "volume": 92200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "CMPR",
+    "open": 75.0,
+    "high": 77.0500030518,
+    "low": 72.4599990845,
+    "close": 76.9700012207,
+    "volume": 184500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "CMPR",
+    "open": 77.2300033569,
+    "high": 78.8199996948,
+    "low": 76.1699981689,
+    "close": 76.3300018311,
+    "volume": 79899.0,
+    "wedge_status": "drop"
   }
 ]

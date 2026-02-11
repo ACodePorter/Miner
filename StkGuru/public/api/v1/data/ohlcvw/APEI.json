@@ -7478,5 +7478,35 @@
     "close": 44.2799987793,
     "volume": 355258.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "APEI",
+    "open": 44.5,
+    "high": 45.6899986267,
+    "low": 44.3499984741,
+    "close": 44.8899993896,
+    "volume": 266800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "APEI",
+    "open": 44.7999992371,
+    "high": 45.5,
+    "low": 43.0800018311,
+    "close": 44.1500015259,
+    "volume": 166900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "APEI",
+    "open": 44.4199981689,
+    "high": 44.7299995422,
+    "low": 43.3501014709,
+    "close": 43.75,
+    "volume": 151140.0,
+    "wedge_status": "none"
   }
 ]

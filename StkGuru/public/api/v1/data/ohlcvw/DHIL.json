@@ -7478,5 +7478,35 @@
     "close": 170.7599945068,
     "volume": 16213.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "DHIL",
+    "open": 171.0,
+    "high": 171.0,
+    "low": 170.6900024414,
+    "close": 171.0,
+    "volume": 17100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "DHIL",
+    "open": 171.0,
+    "high": 171.1600036621,
+    "low": 170.9299926758,
+    "close": 171.0,
+    "volume": 11000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "DHIL",
+    "open": 170.9299926758,
+    "high": 171.3300018311,
+    "low": 170.9299926758,
+    "close": 171.0,
+    "volume": 10549.0,
+    "wedge_status": "none"
   }
 ]

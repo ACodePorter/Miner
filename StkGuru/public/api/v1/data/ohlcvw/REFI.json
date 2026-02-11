@@ -7478,5 +7478,35 @@
     "close": 12.0900001526,
     "volume": 150260.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "REFI",
+    "open": 12.1999998093,
+    "high": 12.2309999466,
+    "low": 12.0100002289,
+    "close": 12.1000003815,
+    "volume": 160800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "REFI",
+    "open": 12.0799999237,
+    "high": 12.1599998474,
+    "low": 11.8000001907,
+    "close": 11.9799995422,
+    "volume": 298800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "REFI",
+    "open": 12.0,
+    "high": 12.1199998856,
+    "low": 11.9650001526,
+    "close": 12.0,
+    "volume": 76875.0,
+    "wedge_status": "none"
   }
 ]

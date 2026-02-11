@@ -7478,5 +7478,35 @@
     "close": 40.2299995422,
     "volume": 124151.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "AMAL",
+    "open": 40.7000007629,
+    "high": 41.3499984741,
+    "low": 40.3699989319,
+    "close": 41.25,
+    "volume": 196500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "AMAL",
+    "open": 41.25,
+    "high": 42.6599998474,
+    "low": 40.9000015259,
+    "close": 41.9099998474,
+    "volume": 185900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "AMAL",
+    "open": 41.75,
+    "high": 41.9500007629,
+    "low": 40.6100006104,
+    "close": 41.1199989319,
+    "volume": 177322.0,
+    "wedge_status": "none"
   }
 ]

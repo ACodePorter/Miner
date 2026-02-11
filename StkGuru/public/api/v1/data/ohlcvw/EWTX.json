@@ -7478,5 +7478,35 @@
     "close": 27.1900005341,
     "volume": 805059.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "EWTX",
+    "open": 28.0599994659,
+    "high": 29.5100002289,
+    "low": 27.7800006866,
+    "close": 29.1000003815,
+    "volume": 918300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "EWTX",
+    "open": 29.2299995422,
+    "high": 30.5699996948,
+    "low": 28.3299999237,
+    "close": 30.25,
+    "volume": 909300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "EWTX",
+    "open": 30.25,
+    "high": 31.2600002289,
+    "low": 29.8999996185,
+    "close": 31.0,
+    "volume": 880894.0,
+    "wedge_status": "none"
   }
 ]

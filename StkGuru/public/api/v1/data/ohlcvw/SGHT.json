@@ -7478,5 +7478,35 @@
     "close": 5.6900000572,
     "volume": 285225.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "SGHT",
+    "open": 5.8299999237,
+    "high": 5.9899997711,
+    "low": 5.5999999046,
+    "close": 5.8699998856,
+    "volume": 152600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "SGHT",
+    "open": 5.8299999237,
+    "high": 6.1500000954,
+    "low": 5.4600000381,
+    "close": 5.9400000572,
+    "volume": 119700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "SGHT",
+    "open": 5.9099998474,
+    "high": 6.0700001717,
+    "low": 5.75,
+    "close": 5.7699999809,
+    "volume": 148643.0,
+    "wedge_status": "none"
   }
 ]

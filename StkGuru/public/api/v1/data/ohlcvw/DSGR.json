@@ -7478,5 +7478,35 @@
     "close": 29.6200008392,
     "volume": 108607.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "DSGR",
+    "open": 29.9599990845,
+    "high": 30.9899997711,
+    "low": 28.9099998474,
+    "close": 30.8600006104,
+    "volume": 172600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "DSGR",
+    "open": 30.9200000763,
+    "high": 32.0,
+    "low": 30.4099998474,
+    "close": 30.4099998474,
+    "volume": 98600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "DSGR",
+    "open": 30.5,
+    "high": 30.9750003815,
+    "low": 30.1450004578,
+    "close": 30.8099994659,
+    "volume": 130608.0,
+    "wedge_status": "none"
   }
 ]

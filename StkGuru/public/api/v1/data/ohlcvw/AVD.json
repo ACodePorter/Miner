@@ -7478,5 +7478,35 @@
     "close": 5.0,
     "volume": 158196.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "AVD",
+    "open": 5.0300002098,
+    "high": 5.0300002098,
+    "low": 4.9099998474,
+    "close": 4.9899997711,
+    "volume": 117700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "AVD",
+    "open": 4.9400000572,
+    "high": 5.0199999809,
+    "low": 4.8899998665,
+    "close": 4.9299998283,
+    "volume": 170100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "AVD",
+    "open": 4.9499998093,
+    "high": 5.0199999809,
+    "low": 4.9299998283,
+    "close": 5.0,
+    "volume": 145448.0,
+    "wedge_status": "none"
   }
 ]

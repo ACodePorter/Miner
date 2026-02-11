@@ -7478,5 +7478,35 @@
     "close": 37.5800018311,
     "volume": 769568.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "CWEN",
+    "open": 38.0,
+    "high": 38.7099990845,
+    "low": 38.0,
+    "close": 38.6399993896,
+    "volume": 922200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "CWEN",
+    "open": 38.5499992371,
+    "high": 39.5,
+    "low": 38.4399986267,
+    "close": 39.0800018311,
+    "volume": 1187400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "CWEN",
+    "open": 39.2299995422,
+    "high": 39.3100013733,
+    "low": 38.5,
+    "close": 39.1899986267,
+    "volume": 592127.0,
+    "wedge_status": "none"
   }
 ]

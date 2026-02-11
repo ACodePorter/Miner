@@ -7478,5 +7478,35 @@
     "close": 44.5,
     "volume": 74714.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "CTRN",
+    "open": 45.4500007629,
+    "high": 46.8199996948,
+    "low": 44.5099983215,
+    "close": 44.8499984741,
+    "volume": 84800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "CTRN",
+    "open": 45.0400009155,
+    "high": 45.8199996948,
+    "low": 44.3699989319,
+    "close": 44.8899993896,
+    "volume": 51100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "CTRN",
+    "open": 45.25,
+    "high": 47.0274009705,
+    "low": 44.7700004578,
+    "close": 45.4449996948,
+    "volume": 70510.0,
+    "wedge_status": "none"
   }
 ]

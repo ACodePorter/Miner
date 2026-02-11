@@ -7478,5 +7478,35 @@
     "close": 10.75,
     "volume": 2727223.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "PUMP",
+    "open": 10.7700004578,
+    "high": 11.3999996185,
+    "low": 10.75,
+    "close": 11.2399997711,
+    "volume": 2908400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "PUMP",
+    "open": 11.25,
+    "high": 11.7899999619,
+    "low": 11.1000003815,
+    "close": 11.5600004196,
+    "volume": 2532800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "PUMP",
+    "open": 11.6400003433,
+    "high": 11.6149997711,
+    "low": 10.8373003006,
+    "close": 11.1400003433,
+    "volume": 2282732.0,
+    "wedge_status": "none"
   }
 ]

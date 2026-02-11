@@ -7478,5 +7478,35 @@
     "close": 677.9099731445,
     "volume": 450171.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "ULTA",
+    "open": 681.2700195312,
+    "high": 692.5999755859,
+    "low": 677.4749755859,
+    "close": 690.3699951172,
+    "volume": 430979.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "ULTA",
+    "open": 690.0,
+    "high": 700.8099975586,
+    "low": 689.0,
+    "close": 696.25,
+    "volume": 559600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "ULTA",
+    "open": 696.25,
+    "high": 697.3900146484,
+    "low": 678.1599731445,
+    "close": 679.2800292969,
+    "volume": 419264.0,
+    "wedge_status": "none"
   }
 ]

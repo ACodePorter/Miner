@@ -7478,5 +7478,35 @@
     "close": 4.5,
     "volume": 1109051.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "CTKB",
+    "open": 4.5300002098,
+    "high": 4.6199998856,
+    "low": 4.3499999046,
+    "close": 4.4699997902,
+    "volume": 2915600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "CTKB",
+    "open": 4.4800000191,
+    "high": 4.5100002289,
+    "low": 4.3400001526,
+    "close": 4.4600000381,
+    "volume": 919700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "CTKB",
+    "open": 4.4400000572,
+    "high": 4.4899997711,
+    "low": 4.3099999428,
+    "close": 4.3099999428,
+    "volume": 573909.0,
+    "wedge_status": "none"
   }
 ]

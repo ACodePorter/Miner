@@ -7478,5 +7478,35 @@
     "close": 84.9700012207,
     "volume": 282046.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "CCB",
+    "open": 85.9499969482,
+    "high": 90.0,
+    "low": 85.5,
+    "close": 87.9400024414,
+    "volume": 156300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "CCB",
+    "open": 88.3000030518,
+    "high": 90.0,
+    "low": 86.8799972534,
+    "close": 87.3099975586,
+    "volume": 185700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "CCB",
+    "open": 87.3300018311,
+    "high": 88.1299972534,
+    "low": 86.3199996948,
+    "close": 87.8399963379,
+    "volume": 185219.0,
+    "wedge_status": "none"
   }
 ]
