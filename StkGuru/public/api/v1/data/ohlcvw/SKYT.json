@@ -7508,5 +7508,15 @@
     "close": 30.0,
     "volume": 1796255.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,11,00,00,00,000000",
+    "ticker": "SKYT",
+    "open": 30.5300006866,
+    "high": 30.6998996735,
+    "low": 29.1100006104,
+    "close": 29.3999996185,
+    "volume": 1193078.0,
+    "wedge_status": "none"
   }
 ]

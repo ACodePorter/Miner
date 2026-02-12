@@ -7508,5 +7508,15 @@
     "close": 3.7200000286,
     "volume": 141914.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,11,00,00,00,000000",
+    "ticker": "FF",
+    "open": 3.7200000286,
+    "high": 3.7799999714,
+    "low": 3.663599968,
+    "close": 3.75,
+    "volume": 107497.0,
+    "wedge_status": "none"
   }
 ]

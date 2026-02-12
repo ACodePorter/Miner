@@ -7508,5 +7508,15 @@
     "close": 16.0100002289,
     "volume": 23030.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2026,02,11,00,00,00,000000",
+    "ticker": "BSET",
+    "open": 16.1900005341,
+    "high": 16.2714004517,
+    "low": 15.75,
+    "close": 15.7600002289,
+    "volume": 19346.0,
+    "wedge_status": "none"
   }
 ]

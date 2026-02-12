@@ -7508,5 +7508,15 @@
     "close": 645.5,
     "volume": 185883.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,11,00,00,00,000000",
+    "ticker": "CW",
+    "open": 655.0,
+    "high": 662.9799804688,
+    "low": 633.25,
+    "close": 634.25,
+    "volume": 312003.0,
+    "wedge_status": "drop"
   }
 ]

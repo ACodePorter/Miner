@@ -7508,5 +7508,15 @@
     "close": 20.25,
     "volume": 13733446.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2026,02,11,00,00,00,000000",
+    "ticker": "RKT",
+    "open": 19.75,
+    "high": 19.8125,
+    "low": 18.25,
+    "close": 18.5900001526,
+    "volume": 41743934.0,
+    "wedge_status": "drop"
   }
 ]

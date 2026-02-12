@@ -7508,5 +7508,15 @@
     "close": 31.0,
     "volume": 32756.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,11,00,00,00,000000",
+    "ticker": "NWFL",
+    "open": 31.0100002289,
+    "high": 31.5699996948,
+    "low": 31.0100002289,
+    "close": 31.1499996185,
+    "volume": 25978.0,
+    "wedge_status": "none"
   }
 ]

@@ -7508,5 +7508,15 @@
     "close": 4.0,
     "volume": 169919.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,11,00,00,00,000000",
+    "ticker": "RCEL",
+    "open": 4.0199999809,
+    "high": 4.0199999809,
+    "low": 3.7799999714,
+    "close": 3.8399999142,
+    "volume": 105236.0,
+    "wedge_status": "none"
   }
 ]

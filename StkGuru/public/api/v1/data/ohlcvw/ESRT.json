@@ -7508,5 +7508,15 @@
     "close": 6.8000001907,
     "volume": 933669.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,11,00,00,00,000000",
+    "ticker": "ESRT",
+    "open": 6.8499999046,
+    "high": 6.9099998474,
+    "low": 6.3249998093,
+    "close": 6.3800001144,
+    "volume": 1692809.0,
+    "wedge_status": "drop"
   }
 ]
