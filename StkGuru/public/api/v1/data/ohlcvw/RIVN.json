@@ -7508,5 +7508,15 @@
     "close": 14.7600002289,
     "volume": 27042412.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,12,00,00,00,000000",
+    "ticker": "RIVN",
+    "open": 14.7600002289,
+    "high": 14.8299999237,
+    "low": 13.9399995804,
+    "close": 14.0,
+    "volume": 27750951.0,
+    "wedge_status": "none"
   }
 ]

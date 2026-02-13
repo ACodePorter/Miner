@@ -7508,5 +7508,15 @@
     "close": 30.0,
     "volume": 2551692.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,12,00,00,00,000000",
+    "ticker": "NSP",
+    "open": 29.5599994659,
+    "high": 30.0559005737,
+    "low": 25.7099990845,
+    "close": 25.9200000763,
+    "volume": 1720052.0,
+    "wedge_status": "none"
   }
 ]

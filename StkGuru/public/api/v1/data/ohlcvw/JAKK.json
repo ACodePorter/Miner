@@ -7508,5 +7508,15 @@
     "close": 17.9400005341,
     "volume": 102281.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,12,00,00,00,000000",
+    "ticker": "JAKK",
+    "open": 18.0,
+    "high": 18.1763000488,
+    "low": 17.2299995422,
+    "close": 17.6000003815,
+    "volume": 184076.0,
+    "wedge_status": "none"
   }
 ]

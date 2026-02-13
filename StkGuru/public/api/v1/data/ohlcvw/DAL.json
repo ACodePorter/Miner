@@ -7508,5 +7508,15 @@
     "close": 71.4199981689,
     "volume": 9279727.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,12,00,00,00,000000",
+    "ticker": "DAL",
+    "open": 72.0,
+    "high": 72.6050033569,
+    "low": 67.7300033569,
+    "close": 69.5,
+    "volume": 8871209.0,
+    "wedge_status": "drop"
   }
 ]

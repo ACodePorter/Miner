@@ -7508,5 +7508,15 @@
     "close": 38.5,
     "volume": 1830811.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,12,00,00,00,000000",
+    "ticker": "LNC",
+    "open": 41.3400001526,
+    "high": 41.9199981689,
+    "low": 39.8499984741,
+    "close": 40.6699981689,
+    "volume": 3613430.0,
+    "wedge_status": "none"
   }
 ]

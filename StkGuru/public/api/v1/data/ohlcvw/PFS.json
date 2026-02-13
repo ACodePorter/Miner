@@ -7508,5 +7508,15 @@
     "close": 23.25,
     "volume": 433916.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,12,00,00,00,000000",
+    "ticker": "PFS",
+    "open": 23.4799995422,
+    "high": 23.5499992371,
+    "low": 22.5799999237,
+    "close": 22.9799995422,
+    "volume": 494530.0,
+    "wedge_status": "none"
   }
 ]

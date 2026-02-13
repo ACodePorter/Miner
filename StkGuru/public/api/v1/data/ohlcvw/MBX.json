@@ -3098,5 +3098,15 @@
     "close": 35.0,
     "volume": 499322.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,12,00,00,00,000000",
+    "ticker": "MBX",
+    "open": 35.7000007629,
+    "high": 38.8600006104,
+    "low": 34.7099990845,
+    "close": 38.0,
+    "volume": 520101.0,
+    "wedge_status": "none"
   }
 ]

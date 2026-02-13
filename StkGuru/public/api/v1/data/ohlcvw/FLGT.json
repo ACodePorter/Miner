@@ -7508,5 +7508,15 @@
     "close": 23.0,
     "volume": 191905.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,12,00,00,00,000000",
+    "ticker": "FLGT",
+    "open": 23.1399993896,
+    "high": 23.4599990845,
+    "low": 22.3899993896,
+    "close": 22.9699993134,
+    "volume": 263340.0,
+    "wedge_status": "none"
   }
 ]
