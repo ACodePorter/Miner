@@ -7508,5 +7508,15 @@
     "close": 3.2200000286,
     "volume": 492684.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,13,00,00,00,000000",
+    "ticker": "CLAR",
+    "open": 3.25,
+    "high": 3.4700000286,
+    "low": 3.2300000191,
+    "close": 3.3599998951,
+    "volume": 178764.0,
+    "wedge_status": "none"
   }
 ]

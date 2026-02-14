@@ -7508,5 +7508,15 @@
     "close": 42.0499992371,
     "volume": 8839.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,13,00,00,00,000000",
+    "ticker": "FSBW",
+    "open": 42.1599998474,
+    "high": 42.4089012146,
+    "low": 42.0800018311,
+    "close": 42.0800018311,
+    "volume": 4564.0,
+    "wedge_status": "none"
   }
 ]

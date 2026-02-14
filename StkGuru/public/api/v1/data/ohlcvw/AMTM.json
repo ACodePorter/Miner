@@ -3038,5 +3038,15 @@
     "close": 30.0699996948,
     "volume": 2214091.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,13,00,00,00,000000",
+    "ticker": "AMTM",
+    "open": 30.2000007629,
+    "high": 31.4099998474,
+    "low": 29.6823997498,
+    "close": 31.0,
+    "volume": 1628747.0,
+    "wedge_status": "none"
   }
 ]

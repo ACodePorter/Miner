@@ -7508,5 +7508,15 @@
     "close": 14.8199996948,
     "volume": 5047839.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,13,00,00,00,000000",
+    "ticker": "CALY",
+    "open": 13.2600002289,
+    "high": 13.25,
+    "low": 12.2600002289,
+    "close": 12.5900001526,
+    "volume": 9235387.0,
+    "wedge_status": "drop"
   }
 ]

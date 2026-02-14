@@ -968,5 +968,15 @@
     "close": 14.3100004196,
     "volume": 4076989.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,13,00,00,00,000000",
+    "ticker": "MH",
+    "open": 14.5,
+    "high": 14.8389997482,
+    "low": 13.6700000763,
+    "close": 13.6700000763,
+    "volume": 790315.0,
+    "wedge_status": "none"
   }
 ]

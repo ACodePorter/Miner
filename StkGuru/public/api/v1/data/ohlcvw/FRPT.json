@@ -7508,5 +7508,15 @@
     "close": 67.8899993896,
     "volume": 871722.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,13,00,00,00,000000",
+    "ticker": "FRPT",
+    "open": 69.25,
+    "high": 69.5800018311,
+    "low": 66.3199996948,
+    "close": 67.7200012207,
+    "volume": 958708.0,
+    "wedge_status": "none"
   }
 ]

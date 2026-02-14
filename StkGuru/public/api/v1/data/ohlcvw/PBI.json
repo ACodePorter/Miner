@@ -7508,5 +7508,15 @@
     "close": 10.1700000763,
     "volume": 2231969.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,13,00,00,00,000000",
+    "ticker": "PBI",
+    "open": 10.25,
+    "high": 10.3551998138,
+    "low": 10.1300001144,
+    "close": 10.25,
+    "volume": 1539726.0,
+    "wedge_status": "none"
   }
 ]
