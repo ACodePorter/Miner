@@ -48329,7 +48329,7 @@
   },
   {
     "date": "20260217",
-    "total": 121,
+    "total": 134,
     "pop": [
       "AAT",
       "ABUS",
@@ -48368,7 +48368,10 @@
       "SARO",
       "SKWD",
       "THG",
-      "VKTX"
+      "TRDA",
+      "VKTX",
+      "VSCO",
+      "VSEC"
     ],
     "drop": [
       "AHL",
@@ -48445,17 +48448,27 @@
       "SLVM",
       "STC",
       "STNE",
+      "SYNA",
+      "TDAY",
+      "TECX",
       "TSCO",
       "TSN",
+      "UMBF",
       "VFC",
+      "VHI",
       "VMC",
       "VMI",
+      "VOXR",
       "WEX",
+      "WKC",
+      "WTI",
+      "XPEL",
+      "XPOF",
       "XRAY",
       "ZM",
       "ZTS"
     ],
-    "pop_pct": 0.314,
-    "drop_pct": 0.686
+    "pop_pct": 0.306,
+    "drop_pct": 0.694
   }
 ]
