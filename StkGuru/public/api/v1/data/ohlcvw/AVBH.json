@@ -7488,5 +7488,15 @@
     "close": 30.0,
     "volume": 42757.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,17,00,00,00,000000",
+    "ticker": "AVBH",
+    "open": 30.1000003815,
+    "high": 30.8299999237,
+    "low": 29.9899997711,
+    "close": 30.0599994659,
+    "volume": 73993.0,
+    "wedge_status": "none"
   }
 ]

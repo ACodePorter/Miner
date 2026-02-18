@@ -7488,5 +7488,15 @@
     "close": 7.5300002098,
     "volume": 6264087.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,17,00,00,00,000000",
+    "ticker": "ORC",
+    "open": 7.5300002098,
+    "high": 7.5500001907,
+    "low": 7.3800001144,
+    "close": 7.5,
+    "volume": 5588222.0,
+    "wedge_status": "none"
   }
 ]

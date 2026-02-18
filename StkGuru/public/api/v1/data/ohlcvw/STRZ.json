@@ -1508,5 +1508,15 @@
     "close": 8.7899999619,
     "volume": 99171.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,17,00,00,00,000000",
+    "ticker": "STRZ",
+    "open": 8.7600002289,
+    "high": 9.220000267,
+    "low": 8.6300001144,
+    "close": 9.0100002289,
+    "volume": 70232.0,
+    "wedge_status": "none"
   }
 ]

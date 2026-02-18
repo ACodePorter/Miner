@@ -7488,5 +7488,15 @@
     "close": 69.3899993896,
     "volume": 308632.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,17,00,00,00,000000",
+    "ticker": "STC",
+    "open": 70.1100006104,
+    "high": 70.75,
+    "low": 68.7600021362,
+    "close": 69.1999969482,
+    "volume": 120977.0,
+    "wedge_status": "drop"
   }
 ]

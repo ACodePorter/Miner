@@ -7488,5 +7488,15 @@
     "close": 93.0299987793,
     "volume": 1538981.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,17,00,00,00,000000",
+    "ticker": "SXT",
+    "open": 90.5100021362,
+    "high": 95.0299987793,
+    "low": 90.0,
+    "close": 92.3899993896,
+    "volume": 490121.0,
+    "wedge_status": "none"
   }
 ]

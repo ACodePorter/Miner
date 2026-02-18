@@ -7488,5 +7488,15 @@
     "close": 68.5,
     "volume": 688001.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,17,00,00,00,000000",
+    "ticker": "ACLX",
+    "open": 68.7300033569,
+    "high": 70.7899017334,
+    "low": 68.4899978638,
+    "close": 70.1999969482,
+    "volume": 853645.0,
+    "wedge_status": "pop"
   }
 ]

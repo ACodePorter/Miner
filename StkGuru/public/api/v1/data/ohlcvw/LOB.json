@@ -7488,5 +7488,15 @@
     "close": 40.5400009155,
     "volume": 182434.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,17,00,00,00,000000",
+    "ticker": "LOB",
+    "open": 40.5,
+    "high": 41.2900009155,
+    "low": 40.0699996948,
+    "close": 40.75,
+    "volume": 151062.0,
+    "wedge_status": "none"
   }
 ]

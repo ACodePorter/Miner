@@ -7488,5 +7488,15 @@
     "close": 82.1500015259,
     "volume": 215906.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,17,00,00,00,000000",
+    "ticker": "HHH",
+    "open": 82.5,
+    "high": 82.8899993896,
+    "low": 81.3500976562,
+    "close": 82.7600021362,
+    "volume": 166400.0,
+    "wedge_status": "pop"
   }
 ]

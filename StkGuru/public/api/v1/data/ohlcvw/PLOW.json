@@ -7488,5 +7488,15 @@
     "close": 42.25,
     "volume": 131295.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,17,00,00,00,000000",
+    "ticker": "PLOW",
+    "open": 42.2599983215,
+    "high": 42.6899986267,
+    "low": 41.5900001526,
+    "close": 42.4599990845,
+    "volume": 157414.0,
+    "wedge_status": "none"
   }
 ]

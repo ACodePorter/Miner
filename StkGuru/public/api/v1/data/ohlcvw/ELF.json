@@ -7488,5 +7488,15 @@
     "close": 81.5,
     "volume": 2628743.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2026,02,17,00,00,00,000000",
+    "ticker": "ELF",
+    "open": 83.1299972534,
+    "high": 88.5500030518,
+    "low": 83.125,
+    "close": 87.2799987793,
+    "volume": 2905971.0,
+    "wedge_status": "none"
   }
 ]

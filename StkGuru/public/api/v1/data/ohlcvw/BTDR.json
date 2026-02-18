@@ -7488,5 +7488,15 @@
     "close": 10.0799999237,
     "volume": 5685600.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,17,00,00,00,000000",
+    "ticker": "BTDR",
+    "open": 10.0,
+    "high": 10.0699996948,
+    "low": 9.4650001526,
+    "close": 9.4799995422,
+    "volume": 6039876.0,
+    "wedge_status": "none"
   }
 ]
