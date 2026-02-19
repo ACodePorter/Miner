@@ -7498,5 +7498,15 @@
     "close": 85.4000015259,
     "volume": 826575.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,18,00,00,00,000000",
+    "ticker": "SYNA",
+    "open": 85.8600006104,
+    "high": 86.8499984741,
+    "low": 84.25,
+    "close": 84.7600021362,
+    "volume": 606769.0,
+    "wedge_status": "none"
   }
 ]

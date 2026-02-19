@@ -7498,5 +7498,15 @@
     "close": 50.8499984741,
     "volume": 728498.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,18,00,00,00,000000",
+    "ticker": "GBCI",
+    "open": 50.5,
+    "high": 51.6899986267,
+    "low": 50.1599998474,
+    "close": 50.2900009155,
+    "volume": 663909.0,
+    "wedge_status": "drop"
   }
 ]

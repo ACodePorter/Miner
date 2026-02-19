@@ -7498,5 +7498,15 @@
     "close": 18.0200004578,
     "volume": 443528.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,18,00,00,00,000000",
+    "ticker": "CHCT",
+    "open": 17.75,
+    "high": 18.0300006866,
+    "low": 17.0499992371,
+    "close": 17.25,
+    "volume": 496551.0,
+    "wedge_status": "drop"
   }
 ]

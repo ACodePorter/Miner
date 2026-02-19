@@ -7498,5 +7498,15 @@
     "close": 15.5500001907,
     "volume": 226311.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,18,00,00,00,000000",
+    "ticker": "IMXI",
+    "open": 15.5500001907,
+    "high": 15.5600004196,
+    "low": 15.5,
+    "close": 15.5100002289,
+    "volume": 396575.0,
+    "wedge_status": "drop"
   }
 ]

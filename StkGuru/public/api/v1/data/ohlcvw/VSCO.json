@@ -7498,5 +7498,15 @@
     "close": 60.3600006104,
     "volume": 1242784.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2026,02,18,00,00,00,000000",
+    "ticker": "VSCO",
+    "open": 59.0,
+    "high": 62.9799995422,
+    "low": 58.900100708,
+    "close": 62.3300018311,
+    "volume": 1952683.0,
+    "wedge_status": "none"
   }
 ]

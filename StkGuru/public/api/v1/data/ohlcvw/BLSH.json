@@ -848,5 +848,15 @@
     "close": 32.0,
     "volume": 1680027.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,18,00,00,00,000000",
+    "ticker": "BLSH",
+    "open": 32.0400009155,
+    "high": 32.6899986267,
+    "low": 31.3600006104,
+    "close": 31.8500003815,
+    "volume": 1100830.0,
+    "wedge_status": "none"
   }
 ]

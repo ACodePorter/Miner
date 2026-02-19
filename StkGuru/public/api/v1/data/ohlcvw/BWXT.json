@@ -7498,5 +7498,15 @@
     "close": 201.0899963379,
     "volume": 444571.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2026,02,18,00,00,00,000000",
+    "ticker": "BWXT",
+    "open": 203.2599945068,
+    "high": 206.0,
+    "low": 200.0,
+    "close": 202.25,
+    "volume": 446698.0,
+    "wedge_status": "none"
   }
 ]

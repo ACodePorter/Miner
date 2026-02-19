@@ -3598,5 +3598,15 @@
     "close": 33.5299987793,
     "volume": 41268.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,18,00,00,00,000000",
+    "ticker": "GBFH",
+    "open": 33.5,
+    "high": 33.5099983215,
+    "low": 32.1100006104,
+    "close": 32.4599990845,
+    "volume": 36541.0,
+    "wedge_status": "drop"
   }
 ]

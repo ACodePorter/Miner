@@ -380,7 +380,7 @@
   },
   {
     "date": "20250220",
-    "total": 284,
+    "total": 285,
     "pop": [
       "AA",
       "AMH",
@@ -606,6 +606,7 @@
       "REX",
       "RF",
       "RGCO",
+      "RPC",
       "RTX",
       "RUSHA",
       "RUSHB",
@@ -669,8 +670,8 @@
       "ZM",
       "ZYME"
     ],
-    "pop_pct": 0.085,
-    "drop_pct": 0.915
+    "pop_pct": 0.084,
+    "drop_pct": 0.916
   },
   {
     "date": "20250221",
@@ -4388,7 +4389,7 @@
   },
   {
     "date": "20250324",
-    "total": 321,
+    "total": 322,
     "pop": [
       "AAOI",
       "AAP",
@@ -4613,6 +4614,7 @@
       "RGTI",
       "RKLB",
       "ROL",
+      "RPC",
       "RVMD",
       "RYTM",
       "S",
@@ -5956,7 +5958,7 @@
   },
   {
     "date": "20250403",
-    "total": 833,
+    "total": 834,
     "pop": [
       "QSR"
     ],
@@ -6592,6 +6594,7 @@
       "RNGR",
       "ROAD",
       "ROP",
+      "RPC",
       "RRBI",
       "RRX",
       "RS",
@@ -8036,7 +8039,7 @@
   },
   {
     "date": "20250417",
-    "total": 246,
+    "total": 247,
     "pop": [
       "ACM",
       "AEE",
@@ -8213,6 +8216,7 @@
       "RLAY",
       "RNR",
       "ROIV",
+      "RPC",
       "RUN",
       "RXRX",
       "RZLV",
@@ -8287,8 +8291,8 @@
       "VLGEA",
       "VRNS"
     ],
-    "pop_pct": 0.89,
-    "drop_pct": 0.11
+    "pop_pct": 0.891,
+    "drop_pct": 0.109
   },
   {
     "date": "20250421",
@@ -9017,7 +9021,7 @@
   },
   {
     "date": "20250424",
-    "total": 246,
+    "total": 247,
     "pop": [
       "ACIW",
       "ADCT",
@@ -9168,6 +9172,7 @@
       "RBB",
       "REGN",
       "ROP",
+      "RPC",
       "RSVR",
       "SAFT",
       "SANA",
@@ -9268,8 +9273,8 @@
       "WNS",
       "WTW"
     ],
-    "pop_pct": 0.825,
-    "drop_pct": 0.175
+    "pop_pct": 0.826,
+    "drop_pct": 0.174
   },
   {
     "date": "20250425",
@@ -12202,7 +12207,7 @@
   },
   {
     "date": "20250521",
-    "total": 503,
+    "total": 504,
     "pop": [
       "BFIN",
       "NXXT"
@@ -12578,6 +12583,7 @@
       "RLJ",
       "RMR",
       "RNG",
+      "RPC",
       "RR",
       "RSI",
       "RUSHA",
@@ -40674,7 +40680,7 @@
   },
   {
     "date": "20251217",
-    "total": 188,
+    "total": 189,
     "pop": [
       "ACI",
       "AMSF",
@@ -40835,6 +40841,7 @@
       "RMR",
       "RNAC",
       "ROK",
+      "RPC",
       "RXO",
       "SEE",
       "SGI",
@@ -40867,8 +40874,8 @@
       "XNCR",
       "ZWS"
     ],
-    "pop_pct": 0.181,
-    "drop_pct": 0.819
+    "pop_pct": 0.18,
+    "drop_pct": 0.82
   },
   {
     "date": "20251218",
@@ -42228,7 +42235,7 @@
   },
   {
     "date": "20251230",
-    "total": 288,
+    "total": 289,
     "pop": [
       "ADC",
       "ADP",
@@ -42456,6 +42463,7 @@
       "RGP",
       "ROIV",
       "RPAY",
+      "RPC",
       "RRBI",
       "RUSHA",
       "RUSHB",
@@ -42521,8 +42529,8 @@
       "ZBIO",
       "ZWS"
     ],
-    "pop_pct": 0.177,
-    "drop_pct": 0.823
+    "pop_pct": 0.176,
+    "drop_pct": 0.824
   },
   {
     "date": "20251231",
@@ -46877,7 +46885,7 @@
   },
   {
     "date": "20260203",
-    "total": 162,
+    "total": 163,
     "pop": [
       "ABCB",
       "ADMA",
@@ -47012,6 +47020,7 @@
       "RES",
       "RMBS",
       "RMD",
+      "RPC",
       "RSG",
       "S",
       "SEAT",
@@ -47044,8 +47053,8 @@
       "XYL",
       "ZM"
     ],
-    "pop_pct": 0.154,
-    "drop_pct": 0.846
+    "pop_pct": 0.153,
+    "drop_pct": 0.847
   },
   {
     "date": "20260204",
@@ -47656,7 +47665,7 @@
   },
   {
     "date": "20260210",
-    "total": 124,
+    "total": 125,
     "pop": [
       "ABR",
       "ACEL",
@@ -47698,6 +47707,7 @@
       "PTC",
       "PX",
       "RKT",
+      "RPC",
       "SATS",
       "SIRI",
       "SUI",
@@ -47785,8 +47795,8 @@
       "XYL",
       "ZEUS"
     ],
-    "pop_pct": 0.387,
-    "drop_pct": 0.613
+    "pop_pct": 0.392,
+    "drop_pct": 0.608
   },
   {
     "date": "20260211",
@@ -47977,7 +47987,7 @@
   },
   {
     "date": "20260212",
-    "total": 230,
+    "total": 231,
     "pop": [
       "AOMR",
       "APGE",
@@ -48164,6 +48174,7 @@
       "REX",
       "RMD",
       "ROL",
+      "RPC",
       "RRR",
       "RXO",
       "RYI",
@@ -48473,10 +48484,184 @@
   },
   {
     "date": "20260218",
-    "total": 0,
-    "pop": [],
-    "drop": [],
-    "pop_pct": 0.0,
-    "drop_pct": 0.0
+    "total": 172,
+    "pop": [
+      "AAMI",
+      "ABEO",
+      "ABT",
+      "ACEL",
+      "AOUT",
+      "AVGO",
+      "BE",
+      "BHF",
+      "BLK",
+      "BYD",
+      "CAL",
+      "CALX",
+      "CDE",
+      "CDNA",
+      "CLPT",
+      "CMG",
+      "CNC",
+      "CRD.A",
+      "CRDO",
+      "DAVE",
+      "DRS",
+      "EQH",
+      "ESS",
+      "FSLR",
+      "GH",
+      "GM",
+      "GS",
+      "HMN",
+      "HOG",
+      "ICUI",
+      "IHRT",
+      "INCY",
+      "INGM",
+      "JXN",
+      "LOCO",
+      "LOPE",
+      "LOVE",
+      "LVS",
+      "MAA",
+      "MBUU",
+      "NTLA",
+      "ORIC",
+      "OSIS",
+      "PNR",
+      "PRM",
+      "QSR",
+      "RES",
+      "RIOT",
+      "RRR",
+      "RUN",
+      "RXO",
+      "SATS",
+      "SSP",
+      "TMDX",
+      "TXG",
+      "URI",
+      "VOYA",
+      "WD",
+      "WST",
+      "YOU",
+      "ZTS"
+    ],
+    "drop": [
+      "ACLS",
+      "ACRE",
+      "ADAM",
+      "ALCO",
+      "AMSF",
+      "ARI",
+      "BA",
+      "BCC",
+      "BIPC",
+      "BPRN",
+      "BWFG",
+      "BXMT",
+      "CAG",
+      "CBU",
+      "CCBG",
+      "CHCT",
+      "CINF",
+      "CIVB",
+      "CMC",
+      "COCO",
+      "COHU",
+      "CWBC",
+      "CZFS",
+      "CZWI",
+      "DINO",
+      "DNTH",
+      "DSGN",
+      "EAT",
+      "ESQ",
+      "EYE",
+      "FBIZ",
+      "FBLA",
+      "FDBC",
+      "FFIN",
+      "FFWM",
+      "FIBK",
+      "FLG",
+      "FMNB",
+      "FRST",
+      "FSUN",
+      "FVR",
+      "GBCI",
+      "GBFH",
+      "GCBC",
+      "GIC",
+      "GPGI",
+      "GWRS",
+      "HALO",
+      "HBCP",
+      "HRMY",
+      "HTB",
+      "HVT",
+      "HWBK",
+      "IMXI",
+      "ITIC",
+      "KAI",
+      "KINS",
+      "KMTS",
+      "KRRO",
+      "LGIH",
+      "LILA",
+      "LILAK",
+      "LKFN",
+      "MAZE",
+      "MCHB",
+      "MCY",
+      "MDV",
+      "MGEE",
+      "MLM",
+      "MMM",
+      "MNTK",
+      "MVBF",
+      "NBTB",
+      "NGVC",
+      "NLOP",
+      "NMIH",
+      "NREF",
+      "OPBK",
+      "ORA",
+      "PBF",
+      "PDLB",
+      "PLMR",
+      "PLPC",
+      "POR",
+      "RCL",
+      "RGCO",
+      "RLI",
+      "ROCK",
+      "RS",
+      "RSG",
+      "SBC",
+      "SIGA",
+      "SIGI",
+      "SNFCA",
+      "SRBK",
+      "STAG",
+      "STRS",
+      "SVV",
+      "SYBT",
+      "TCBK",
+      "TDS",
+      "TG",
+      "TIPT",
+      "UCB",
+      "UGI",
+      "UNTY",
+      "VECO",
+      "VRM",
+      "WALD",
+      "WY",
+      "ZBRA"
+    ],
+    "pop_pct": 0.355,
+    "drop_pct": 0.645
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 234.25,
     "volume": 1244152.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,18,00,00,00,000000",
+    "ticker": "THC",
+    "open": 234.6000061035,
+    "high": 234.6000061035,
+    "low": 229.0200042725,
+    "close": 231.75,
+    "volume": 781498.0,
+    "wedge_status": "none"
   }
 ]

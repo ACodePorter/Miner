@@ -7498,5 +7498,15 @@
     "close": 64.3899993896,
     "volume": 3241864.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,18,00,00,00,000000",
+    "ticker": "CFG",
+    "open": 64.5,
+    "high": 65.6399993896,
+    "low": 64.4000015259,
+    "close": 65.0400009155,
+    "volume": 4215315.0,
+    "wedge_status": "none"
   }
 ]

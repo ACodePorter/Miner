@@ -7498,5 +7498,15 @@
     "close": 264.9599914551,
     "volume": 8715.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,18,00,00,00,000000",
+    "ticker": "ITIC",
+    "open": 264.9599914551,
+    "high": 264.9599914551,
+    "low": 231.5,
+    "close": 232.4100036621,
+    "volume": 27576.0,
+    "wedge_status": "drop"
   }
 ]

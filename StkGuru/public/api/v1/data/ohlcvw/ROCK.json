@@ -7498,5 +7498,15 @@
     "close": 53.3499984741,
     "volume": 184716.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,18,00,00,00,000000",
+    "ticker": "ROCK",
+    "open": 53.3499984741,
+    "high": 54.75,
+    "low": 52.8899993896,
+    "close": 52.8899993896,
+    "volume": 151591.0,
+    "wedge_status": "drop"
   }
 ]
