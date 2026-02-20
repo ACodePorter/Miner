@@ -7508,5 +7508,15 @@
     "close": 21.0,
     "volume": 432230.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,20,00,00,00,000000",
+    "ticker": "TECX",
+    "open": 20.9500007629,
+    "high": 21.7275009155,
+    "low": 20.5149993896,
+    "close": 21.3700008392,
+    "volume": 248311.0,
+    "wedge_status": "none"
   }
 ]
