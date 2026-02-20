@@ -7508,5 +7508,15 @@
     "close": 13.0900001526,
     "volume": 357734.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,19,00,00,00,000000",
+    "ticker": "ORN",
+    "open": 13.0,
+    "high": 13.5600004196,
+    "low": 13.0050001144,
+    "close": 13.5,
+    "volume": 304634.0,
+    "wedge_status": "none"
   }
 ]

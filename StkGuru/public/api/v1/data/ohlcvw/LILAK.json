@@ -7508,5 +7508,15 @@
     "close": 7.8299999237,
     "volume": 774011.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,19,00,00,00,000000",
+    "ticker": "LILAK",
+    "open": 7.9200000763,
+    "high": 8.8000001907,
+    "low": 7.5100002289,
+    "close": 8.0799999237,
+    "volume": 2135700.0,
+    "wedge_status": "none"
   }
 ]

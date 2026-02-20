@@ -7508,5 +7508,15 @@
     "close": 158.9900054932,
     "volume": 298155.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,19,00,00,00,000000",
+    "ticker": "WEX",
+    "open": 156.5,
+    "high": 156.4100036621,
+    "low": 153.125,
+    "close": 154.7200012207,
+    "volume": 238271.0,
+    "wedge_status": "drop"
   }
 ]

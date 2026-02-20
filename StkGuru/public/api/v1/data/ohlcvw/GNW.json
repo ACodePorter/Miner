@@ -7508,5 +7508,15 @@
     "close": 8.8599996567,
     "volume": 2145314.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,19,00,00,00,000000",
+    "ticker": "GNW",
+    "open": 8.8699998856,
+    "high": 8.875,
+    "low": 8.6999998093,
+    "close": 8.779999733,
+    "volume": 2540078.0,
+    "wedge_status": "drop"
   }
 ]

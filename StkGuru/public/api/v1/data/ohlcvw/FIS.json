@@ -7508,5 +7508,15 @@
     "close": 48.5800018311,
     "volume": 4124826.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,19,00,00,00,000000",
+    "ticker": "FIS",
+    "open": 48.2099990845,
+    "high": 49.0200004578,
+    "low": 48.0400009155,
+    "close": 49.0,
+    "volume": 2847530.0,
+    "wedge_status": "none"
   }
 ]
