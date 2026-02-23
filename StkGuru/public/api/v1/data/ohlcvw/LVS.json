@@ -7488,5 +7488,15 @@
     "close": 58.0099983215,
     "volume": 2360805.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,23,00,00,00,000000",
+    "ticker": "LVS",
+    "open": 57.7299995422,
+    "high": 58.0,
+    "low": 55.0400009155,
+    "close": 55.7200012207,
+    "volume": 4610325.0,
+    "wedge_status": "drop"
   }
 ]

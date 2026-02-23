@@ -7488,5 +7488,15 @@
     "close": 332.6499938965,
     "volume": 16328571.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,23,00,00,00,000000",
+    "ticker": "AVGO",
+    "open": 332.25,
+    "high": 338.5,
+    "low": 325.3200073242,
+    "close": 330.3399963379,
+    "volume": 14898111.0,
+    "wedge_status": "drop"
   }
 ]

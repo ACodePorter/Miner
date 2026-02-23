@@ -7488,5 +7488,15 @@
     "close": 7.6399998665,
     "volume": 70000.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,23,00,00,00,000000",
+    "ticker": "RSVR",
+    "open": 7.5999999046,
+    "high": 7.5999999046,
+    "low": 7.4400000572,
+    "close": 7.4800000191,
+    "volume": 60838.0,
+    "wedge_status": "drop"
   }
 ]

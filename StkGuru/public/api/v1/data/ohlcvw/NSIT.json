@@ -7488,5 +7488,15 @@
     "close": 85.5,
     "volume": 496823.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,23,00,00,00,000000",
+    "ticker": "NSIT",
+    "open": 85.4800033569,
+    "high": 87.5899963379,
+    "low": 82.6750030518,
+    "close": 82.9700012207,
+    "volume": 483590.0,
+    "wedge_status": "drop"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 54.25,
     "volume": 26157.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,23,00,00,00,000000",
+    "ticker": "UNTY",
+    "open": 54.1899986267,
+    "high": 54.6949996948,
+    "low": 51.5600013733,
+    "close": 52.0999984741,
+    "volume": 40880.0,
+    "wedge_status": "drop"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 76.6900024414,
     "volume": 4679930.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,23,00,00,00,000000",
+    "ticker": "CVS",
+    "open": 76.0199966431,
+    "high": 77.7850036621,
+    "low": 75.6999969482,
+    "close": 77.0,
+    "volume": 4698719.0,
+    "wedge_status": "none"
   }
 ]

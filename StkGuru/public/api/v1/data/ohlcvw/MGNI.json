@@ -7488,5 +7488,15 @@
     "close": 12.2299995422,
     "volume": 1331012.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,23,00,00,00,000000",
+    "ticker": "MGNI",
+    "open": 12.2299995422,
+    "high": 12.2299995422,
+    "low": 11.25,
+    "close": 11.3199996948,
+    "volume": 2607445.0,
+    "wedge_status": "none"
   }
 ]
