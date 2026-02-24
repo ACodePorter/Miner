@@ -688,5 +688,15 @@
     "close": 30.2150001526,
     "volume": 4239765.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,24,00,00,00,000000",
+    "ticker": "FIGR",
+    "open": 29.9500007629,
+    "high": 30.3600006104,
+    "low": 28.6800003052,
+    "close": 29.75,
+    "volume": 4000139.0,
+    "wedge_status": "none"
   }
 ]

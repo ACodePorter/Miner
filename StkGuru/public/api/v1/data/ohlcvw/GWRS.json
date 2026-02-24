@@ -7498,5 +7498,15 @@
     "close": 8.8800001144,
     "volume": 30714.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,24,00,00,00,000000",
+    "ticker": "GWRS",
+    "open": 8.8999996185,
+    "high": 8.9998998642,
+    "low": 8.845000267,
+    "close": 8.9799995422,
+    "volume": 22057.0,
+    "wedge_status": "none"
   }
 ]

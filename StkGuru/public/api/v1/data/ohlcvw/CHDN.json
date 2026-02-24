@@ -7498,5 +7498,15 @@
     "close": 94.0,
     "volume": 1045638.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,24,00,00,00,000000",
+    "ticker": "CHDN",
+    "open": 93.8499984741,
+    "high": 96.3150024414,
+    "low": 93.5500030518,
+    "close": 96.1900024414,
+    "volume": 1237813.0,
+    "wedge_status": "pop"
   }
 ]

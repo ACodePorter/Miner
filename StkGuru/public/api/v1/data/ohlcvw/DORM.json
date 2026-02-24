@@ -7498,5 +7498,15 @@
     "close": 127.5,
     "volume": 283921.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,24,00,00,00,000000",
+    "ticker": "DORM",
+    "open": 128.1100006104,
+    "high": 130.599899292,
+    "low": 126.1399993896,
+    "close": 126.4000015259,
+    "volume": 117580.0,
+    "wedge_status": "none"
   }
 ]

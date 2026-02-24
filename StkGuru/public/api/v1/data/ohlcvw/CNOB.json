@@ -7498,5 +7498,15 @@
     "close": 26.8299999237,
     "volume": 354966.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,24,00,00,00,000000",
+    "ticker": "CNOB",
+    "open": 26.7900009155,
+    "high": 26.9699993134,
+    "low": 26.5,
+    "close": 26.8400001526,
+    "volume": 240775.0,
+    "wedge_status": "none"
   }
 ]
