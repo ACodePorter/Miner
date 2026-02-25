@@ -7508,5 +7508,15 @@
     "close": 1.1499999762,
     "volume": 1237297.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,25,00,00,00,000000",
+    "ticker": "LAB",
+    "open": 1.1699999571,
+    "high": 1.25,
+    "low": 1.1499999762,
+    "close": 1.1699999571,
+    "volume": 1788925.0,
+    "wedge_status": "none"
   }
 ]

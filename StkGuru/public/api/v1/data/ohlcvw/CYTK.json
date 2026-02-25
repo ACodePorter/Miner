@@ -7508,5 +7508,15 @@
     "close": 70.0999984741,
     "volume": 1938428.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,25,00,00,00,000000",
+    "ticker": "CYTK",
+    "open": 68.1200027466,
+    "high": 69.2750015259,
+    "low": 62.0,
+    "close": 62.8899993896,
+    "volume": 5037138.0,
+    "wedge_status": "drop"
   }
 ]
