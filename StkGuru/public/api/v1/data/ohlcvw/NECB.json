@@ -7508,5 +7508,15 @@
     "close": 24.5,
     "volume": 42940.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,26,00,00,00,000000",
+    "ticker": "NECB",
+    "open": 24.6200008392,
+    "high": 24.7900009155,
+    "low": 24.3600006104,
+    "close": 24.5200004578,
+    "volume": 33938.0,
+    "wedge_status": "none"
   }
 ]

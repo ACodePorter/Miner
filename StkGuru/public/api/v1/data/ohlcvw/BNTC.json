@@ -7508,5 +7508,15 @@
     "close": 11.0,
     "volume": 80284.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,26,00,00,00,000000",
+    "ticker": "BNTC",
+    "open": 10.9799995422,
+    "high": 11.2150001526,
+    "low": 10.6499996185,
+    "close": 11.1899995804,
+    "volume": 74283.0,
+    "wedge_status": "none"
   }
 ]

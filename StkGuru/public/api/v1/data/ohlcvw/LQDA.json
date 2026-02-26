@@ -7508,5 +7508,15 @@
     "close": 30.0,
     "volume": 4806839.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,26,00,00,00,000000",
+    "ticker": "LQDA",
+    "open": 30.2600002289,
+    "high": 31.0,
+    "low": 29.1154994965,
+    "close": 30.7900009155,
+    "volume": 2135897.0,
+    "wedge_status": "none"
   }
 ]

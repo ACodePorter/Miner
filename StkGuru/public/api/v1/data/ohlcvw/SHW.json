@@ -7508,5 +7508,15 @@
     "close": 357.25,
     "volume": 997044.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,26,00,00,00,000000",
+    "ticker": "SHW",
+    "open": 359.7399902344,
+    "high": 361.7799987793,
+    "low": 354.5899963379,
+    "close": 360.5,
+    "volume": 804650.0,
+    "wedge_status": "none"
   }
 ]
