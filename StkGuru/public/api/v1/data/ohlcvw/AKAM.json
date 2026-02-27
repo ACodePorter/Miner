@@ -7508,5 +7508,15 @@
     "close": 99.9000015259,
     "volume": 2814416.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,27,00,00,00,000000",
+    "ticker": "AKAM",
+    "open": 98.75,
+    "high": 99.5100021362,
+    "low": 96.9196014404,
+    "close": 98.3899993896,
+    "volume": 4226436.0,
+    "wedge_status": "drop"
   }
 ]

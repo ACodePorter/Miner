@@ -7508,5 +7508,15 @@
     "close": 3.7899999619,
     "volume": 71003.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,27,00,00,00,000000",
+    "ticker": "KGEI",
+    "open": 3.9119999409,
+    "high": 3.9200000763,
+    "low": 3.7200000286,
+    "close": 3.8199999332,
+    "volume": 104442.0,
+    "wedge_status": "none"
   }
 ]

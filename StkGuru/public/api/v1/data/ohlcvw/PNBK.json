@@ -7508,5 +7508,15 @@
     "close": 1.2999999523,
     "volume": 272363.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,27,00,00,00,000000",
+    "ticker": "PNBK",
+    "open": 1.2799999714,
+    "high": 1.3099000454,
+    "low": 1.25,
+    "close": 1.25,
+    "volume": 177352.0,
+    "wedge_status": "none"
   }
 ]

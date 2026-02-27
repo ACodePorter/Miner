@@ -7508,5 +7508,15 @@
     "close": 13.5,
     "volume": 1025844.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,27,00,00,00,000000",
+    "ticker": "ORIC",
+    "open": 12.8800001144,
+    "high": 13.7299995422,
+    "low": 12.8509998322,
+    "close": 13.4499998093,
+    "volume": 814562.0,
+    "wedge_status": "none"
   }
 ]

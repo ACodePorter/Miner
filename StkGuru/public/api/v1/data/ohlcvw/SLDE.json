@@ -1298,5 +1298,15 @@
     "close": 19.5499992371,
     "volume": 3222370.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,27,00,00,00,000000",
+    "ticker": "SLDE",
+    "open": 19.6800003052,
+    "high": 19.6800003052,
+    "low": 18.5300006866,
+    "close": 19.0,
+    "volume": 2378183.0,
+    "wedge_status": "none"
   }
 ]

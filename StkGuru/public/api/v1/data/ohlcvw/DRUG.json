@@ -7508,5 +7508,15 @@
     "close": 85.5,
     "volume": 96610.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,27,00,00,00,000000",
+    "ticker": "DRUG",
+    "open": 84.25,
+    "high": 86.125,
+    "low": 81.3399963379,
+    "close": 83.8199996948,
+    "volume": 54040.0,
+    "wedge_status": "none"
   }
 ]
