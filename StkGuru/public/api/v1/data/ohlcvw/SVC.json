@@ -7488,5 +7488,15 @@
     "close": 2.2999999523,
     "volume": 3218011.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,02,00,00,00,000000",
+    "ticker": "SVC",
+    "open": 2.1519999504,
+    "high": 2.2799999714,
+    "low": 2.1519999504,
+    "close": 2.25,
+    "volume": 1331836.0,
+    "wedge_status": "none"
   }
 ]

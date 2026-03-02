@@ -7488,5 +7488,15 @@
     "close": 28.1700000763,
     "volume": 62150268.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,03,02,00,00,00,000000",
+    "ticker": "WBD",
+    "open": 28.0599994659,
+    "high": 28.5,
+    "low": 28.0100002289,
+    "close": 28.5,
+    "volume": 33410715.0,
+    "wedge_status": "none"
   }
 ]

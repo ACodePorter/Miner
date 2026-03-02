@@ -7488,5 +7488,15 @@
     "close": 13.2600002289,
     "volume": 2434002.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,02,00,00,00,000000",
+    "ticker": "AEVA",
+    "open": 12.5100002289,
+    "high": 15.2657003403,
+    "low": 12.5100002289,
+    "close": 14.5,
+    "volume": 2632214.0,
+    "wedge_status": "none"
   }
 ]

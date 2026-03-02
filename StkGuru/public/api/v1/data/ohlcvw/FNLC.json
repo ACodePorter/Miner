@@ -7488,5 +7488,15 @@
     "close": 27.6499996185,
     "volume": 18060.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,03,02,00,00,00,000000",
+    "ticker": "FNLC",
+    "open": 27.1200008392,
+    "high": 28.5,
+    "low": 27.0,
+    "close": 28.2199993134,
+    "volume": 17160.0,
+    "wedge_status": "none"
   }
 ]
