@@ -7498,5 +7498,15 @@
     "close": 30.7000007629,
     "volume": 3856545.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,03,00,00,00,000000",
+    "ticker": "CFLT",
+    "open": 30.6800003052,
+    "high": 30.7700004578,
+    "low": 30.6700000763,
+    "close": 30.75,
+    "volume": 11966831.0,
+    "wedge_status": "none"
   }
 ]

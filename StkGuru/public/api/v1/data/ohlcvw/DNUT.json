@@ -7498,5 +7498,15 @@
     "close": 3.5,
     "volume": 2842726.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,03,00,00,00,000000",
+    "ticker": "DNUT",
+    "open": 3.3900001049,
+    "high": 3.5450000763,
+    "low": 3.3399999142,
+    "close": 3.5299999714,
+    "volume": 3009538.0,
+    "wedge_status": "none"
   }
 ]

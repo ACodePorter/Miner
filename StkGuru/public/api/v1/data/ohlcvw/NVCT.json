@@ -7498,5 +7498,15 @@
     "close": 9.0399999619,
     "volume": 45413.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,03,00,00,00,000000",
+    "ticker": "NVCT",
+    "open": 8.8900003433,
+    "high": 8.9799995422,
+    "low": 8.6288003922,
+    "close": 8.7100000381,
+    "volume": 42128.0,
+    "wedge_status": "drop"
   }
 ]

@@ -7498,5 +7498,15 @@
     "close": 44.6699981689,
     "volume": 643841.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,03,00,00,00,000000",
+    "ticker": "NSSC",
+    "open": 43.5099983215,
+    "high": 43.625,
+    "low": 42.2099990845,
+    "close": 43.2299995422,
+    "volume": 406967.0,
+    "wedge_status": "drop"
   }
 ]
