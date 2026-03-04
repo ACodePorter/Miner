@@ -7508,5 +7508,15 @@
     "close": 243.5500030518,
     "volume": 292554.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,04,00,00,00,000000",
+    "ticker": "NXST",
+    "open": 243.5500030518,
+    "high": 245.75,
+    "low": 240.75,
+    "close": 245.5299987793,
+    "volume": 292830.0,
+    "wedge_status": "none"
   }
 ]

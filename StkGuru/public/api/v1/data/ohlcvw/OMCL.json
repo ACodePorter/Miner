@@ -7508,5 +7508,15 @@
     "close": 40.7999992371,
     "volume": 352182.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,04,00,00,00,000000",
+    "ticker": "OMCL",
+    "open": 41.3400001526,
+    "high": 41.9500007629,
+    "low": 41.0,
+    "close": 41.5299987793,
+    "volume": 422078.0,
+    "wedge_status": "pop"
   }
 ]

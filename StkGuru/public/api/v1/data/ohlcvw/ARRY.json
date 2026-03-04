@@ -7508,5 +7508,15 @@
     "close": 7.5,
     "volume": 5480285.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,04,00,00,00,000000",
+    "ticker": "ARRY",
+    "open": 7.5300002098,
+    "high": 7.758600235,
+    "low": 7.1700000763,
+    "close": 7.3099999428,
+    "volume": 8593275.0,
+    "wedge_status": "none"
   }
 ]

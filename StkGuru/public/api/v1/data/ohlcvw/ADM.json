@@ -7508,5 +7508,15 @@
     "close": 67.9800033569,
     "volume": 2125718.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,04,00,00,00,000000",
+    "ticker": "ADM",
+    "open": 68.3000030518,
+    "high": 68.5,
+    "low": 66.7200012207,
+    "close": 67.2099990845,
+    "volume": 1801158.0,
+    "wedge_status": "drop"
   }
 ]

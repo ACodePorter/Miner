@@ -7508,5 +7508,15 @@
     "close": 108.25,
     "volume": 97088.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,04,00,00,00,000000",
+    "ticker": "MGRC",
+    "open": 108.6600036621,
+    "high": 111.1924972534,
+    "low": 106.9309997559,
+    "close": 111.0999984741,
+    "volume": 160639.0,
+    "wedge_status": "none"
   }
 ]
