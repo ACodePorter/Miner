@@ -7508,5 +7508,15 @@
     "close": 477.8900146484,
     "volume": 905577.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,05,00,00,00,000000",
+    "ticker": "VRTX",
+    "open": 476.6400146484,
+    "high": 480.0,
+    "low": 457.0,
+    "close": 460.8200073242,
+    "volume": 1027806.0,
+    "wedge_status": "drop"
   }
 ]

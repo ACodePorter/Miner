@@ -7508,5 +7508,15 @@
     "close": 6.1399998665,
     "volume": 569204.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,05,00,00,00,000000",
+    "ticker": "SLDB",
+    "open": 5.9400000572,
+    "high": 5.9899997711,
+    "low": 5.523900032,
+    "close": 5.6100001335,
+    "volume": 1139726.0,
+    "wedge_status": "drop"
   }
 ]

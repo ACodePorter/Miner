@@ -7508,5 +7508,15 @@
     "close": 4.2899999619,
     "volume": 1481997.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2026,03,05,00,00,00,000000",
+    "ticker": "APPS",
+    "open": 4.25,
+    "high": 4.4092001915,
+    "low": 4.1750001907,
+    "close": 4.25,
+    "volume": 1920135.0,
+    "wedge_status": "none"
   }
 ]

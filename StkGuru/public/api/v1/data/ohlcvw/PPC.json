@@ -7508,5 +7508,15 @@
     "close": 41.4500007629,
     "volume": 649653.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,05,00,00,00,000000",
+    "ticker": "PPC",
+    "open": 41.2099990845,
+    "high": 41.4199981689,
+    "low": 40.7099990845,
+    "close": 40.75,
+    "volume": 737700.0,
+    "wedge_status": "none"
   }
 ]
