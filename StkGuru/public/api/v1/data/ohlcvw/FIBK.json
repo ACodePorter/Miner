@@ -7508,5 +7508,15 @@
     "close": 35.0,
     "volume": 1197187.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,06,00,00,00,000000",
+    "ticker": "FIBK",
+    "open": 33.8499984741,
+    "high": 34.4500007629,
+    "low": 33.2350006104,
+    "close": 34.1899986267,
+    "volume": 889751.0,
+    "wedge_status": "none"
   }
 ]

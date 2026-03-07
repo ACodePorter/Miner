@@ -7508,5 +7508,15 @@
     "close": 87.0800018311,
     "volume": 1048320.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,03,06,00,00,00,000000",
+    "ticker": "SMTC",
+    "open": 83.75,
+    "high": 87.5599975586,
+    "low": 81.7399978638,
+    "close": 82.0199966431,
+    "volume": 1451979.0,
+    "wedge_status": "none"
   }
 ]

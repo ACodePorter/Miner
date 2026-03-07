@@ -7508,5 +7508,15 @@
     "close": 99.7099990845,
     "volume": 208231.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,03,06,00,00,00,000000",
+    "ticker": "ARCB",
+    "open": 96.5,
+    "high": 96.5,
+    "low": 91.9199981689,
+    "close": 93.2799987793,
+    "volume": 286413.0,
+    "wedge_status": "none"
   }
 ]
