@@ -7488,5 +7488,15 @@
     "close": 17.0599994659,
     "volume": 2134147.0,
     "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2026,03,09,00,00,00,000000",
+    "ticker": "ALKT",
+    "open": 16.6700000763,
+    "high": 17.6299991608,
+    "low": 16.2900009155,
+    "close": 17.5,
+    "volume": 2572365.0,
+    "wedge_status": "none"
   }
 ]

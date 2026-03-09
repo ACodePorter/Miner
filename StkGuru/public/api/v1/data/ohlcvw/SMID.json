@@ -7488,5 +7488,15 @@
     "close": 35.4000015259,
     "volume": 4804.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,03,09,00,00,00,000000",
+    "ticker": "SMID",
+    "open": 34.8619995117,
+    "high": 34.8619995117,
+    "low": 33.6136016846,
+    "close": 34.5400009155,
+    "volume": 5878.0,
+    "wedge_status": "none"
   }
 ]

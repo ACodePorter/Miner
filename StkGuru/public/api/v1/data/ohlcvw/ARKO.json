@@ -7488,5 +7488,15 @@
     "close": 6.0399999619,
     "volume": 585224.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,03,09,00,00,00,000000",
+    "ticker": "ARKO",
+    "open": 6.0599999428,
+    "high": 6.0599999428,
+    "low": 5.6700000763,
+    "close": 5.8899998665,
+    "volume": 496763.0,
+    "wedge_status": "none"
   }
 ]

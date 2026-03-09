@@ -7488,5 +7488,15 @@
     "close": 12.7399997711,
     "volume": 5005480.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,03,09,00,00,00,000000",
+    "ticker": "XRAY",
+    "open": 12.5,
+    "high": 12.835100174,
+    "low": 12.1400003433,
+    "close": 12.8000001907,
+    "volume": 3561510.0,
+    "wedge_status": "none"
   }
 ]
