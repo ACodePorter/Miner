@@ -7448,5 +7448,15 @@
     "close": 46.2599983215,
     "volume": 504965.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,03,10,00,00,00,000000",
+    "ticker": "SKWD",
+    "open": 45.7999992371,
+    "high": 46.5950012207,
+    "low": 45.5,
+    "close": 46.2900009155,
+    "volume": 343799.0,
+    "wedge_status": "none"
   }
 ]

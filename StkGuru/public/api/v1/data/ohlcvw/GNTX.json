@@ -7498,5 +7498,15 @@
     "close": 21.75,
     "volume": 2048048.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,10,00,00,00,000000",
+    "ticker": "GNTX",
+    "open": 21.8099994659,
+    "high": 22.0049991608,
+    "low": 21.5149993896,
+    "close": 21.5799999237,
+    "volume": 2343160.0,
+    "wedge_status": "none"
   }
 ]
