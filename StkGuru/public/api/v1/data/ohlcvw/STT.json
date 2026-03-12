@@ -7508,5 +7508,15 @@
     "close": 126.0,
     "volume": 3382400.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,12,00,00,00,000000",
+    "ticker": "STT",
+    "open": 123.3300018311,
+    "high": 123.875,
+    "low": 121.2099990845,
+    "close": 123.2099990845,
+    "volume": 2045254.0,
+    "wedge_status": "none"
   }
 ]

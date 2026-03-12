@@ -7508,5 +7508,15 @@
     "close": 11.0399999619,
     "volume": 211200.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,12,00,00,00,000000",
+    "ticker": "ANGO",
+    "open": 11.0,
+    "high": 11.0,
+    "low": 10.6400003433,
+    "close": 10.7100000381,
+    "volume": 320577.0,
+    "wedge_status": "drop"
   }
 ]

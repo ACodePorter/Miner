@@ -7508,5 +7508,15 @@
     "close": 6.7899999619,
     "volume": 219000.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,12,00,00,00,000000",
+    "ticker": "CXDO",
+    "open": 6.7100000381,
+    "high": 6.8200001717,
+    "low": 6.4450001717,
+    "close": 6.4800000191,
+    "volume": 161268.0,
+    "wedge_status": "drop"
   }
 ]

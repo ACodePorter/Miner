@@ -7508,5 +7508,15 @@
     "close": 11.1400003433,
     "volume": 238100.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,03,12,00,00,00,000000",
+    "ticker": "ACIC",
+    "open": 11.0850000381,
+    "high": 11.375,
+    "low": 11.0200004578,
+    "close": 11.3000001907,
+    "volume": 169713.0,
+    "wedge_status": "none"
   }
 ]
