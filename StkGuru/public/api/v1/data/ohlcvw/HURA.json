@@ -1,15 +1,5 @@
 [
   {
-    "trade_date": "2023,03,13,00,00,00,000000",
-    "ticker": "HURA",
-    "open": 104.3000030518,
-    "high": 111.3000030518,
-    "low": 101.5,
-    "close": 108.5,
-    "volume": 300.0,
-    "wedge_status": "none"
-  },
-  {
     "trade_date": "2023,03,14,00,00,00,000000",
     "ticker": "HURA",
     "open": 108.5,
@@ -7507,6 +7497,16 @@
     "low": 1.6729999781,
     "close": 1.7999999523,
     "volume": 737976.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,11,00,00,00,000000",
+    "ticker": "HURA",
+    "open": 1.8300000429,
+    "high": 2.1500000954,
+    "low": 1.8200000525,
+    "close": 2.0,
+    "volume": 2275449.0,
     "wedge_status": "none"
   }
 ]

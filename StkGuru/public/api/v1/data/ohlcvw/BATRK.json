@@ -1,15 +1,5 @@
 [
   {
-    "trade_date": "2023,03,13,00,00,00,000000",
-    "ticker": "BATRK",
-    "open": 32.1100006104,
-    "high": 32.5,
-    "low": 31.4899997711,
-    "close": 31.5,
-    "volume": 289900.0,
-    "wedge_status": "none"
-  },
-  {
     "trade_date": "2023,03,14,00,00,00,000000",
     "ticker": "BATRK",
     "open": 31.9500007629,
@@ -7508,5 +7498,15 @@
     "close": 43.3600006104,
     "volume": 311202.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,11,00,00,00,000000",
+    "ticker": "BATRK",
+    "open": 43.2700004578,
+    "high": 43.5200004578,
+    "low": 42.875,
+    "close": 42.9599990845,
+    "volume": 273700.0,
+    "wedge_status": "drop"
   }
 ]

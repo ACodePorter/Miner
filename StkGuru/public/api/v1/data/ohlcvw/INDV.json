@@ -1,15 +1,5 @@
 [
   {
-    "trade_date": "2023,03,13,00,00,00,000000",
-    "ticker": "INDV",
-    "open": 17.75,
-    "high": 17.75,
-    "low": 17.75,
-    "close": 17.75,
-    "volume": 500.0,
-    "wedge_status": "none"
-  },
-  {
     "trade_date": "2023,03,14,00,00,00,000000",
     "ticker": "INDV",
     "open": 17.75,
@@ -7507,6 +7497,16 @@
     "low": 30.8700008392,
     "close": 33.3400001526,
     "volume": 4344826.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,11,00,00,00,000000",
+    "ticker": "INDV",
+    "open": 32.9799995422,
+    "high": 35.3400001526,
+    "low": 32.2400016785,
+    "close": 32.8300018311,
+    "volume": 3578800.0,
     "wedge_status": "none"
   }
 ]

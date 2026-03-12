@@ -1,15 +1,5 @@
 [
   {
-    "trade_date": "2023,03,13,00,00,00,000000",
-    "ticker": "FSTR",
-    "open": 12.3699998856,
-    "high": 12.75,
-    "low": 12.220000267,
-    "close": 12.220000267,
-    "volume": 30100.0,
-    "wedge_status": "drop"
-  },
-  {
     "trade_date": "2023,03,14,00,00,00,000000",
     "ticker": "FSTR",
     "open": 12.5,
@@ -7507,6 +7497,16 @@
     "low": 28.3649997711,
     "close": 28.5,
     "volume": 22043.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,11,00,00,00,000000",
+    "ticker": "FSTR",
+    "open": 28.3999996185,
+    "high": 28.8799991608,
+    "low": 27.8400001526,
+    "close": 28.0,
+    "volume": 18200.0,
     "wedge_status": "none"
   }
 ]

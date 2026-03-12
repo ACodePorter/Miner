@@ -1,15 +1,5 @@
 [
   {
-    "trade_date": "2023,03,13,00,00,00,000000",
-    "ticker": "NUTX",
-    "open": 178.5,
-    "high": 189.0,
-    "low": 174.0,
-    "close": 181.5,
-    "volume": 7097.0,
-    "wedge_status": "none"
-  },
-  {
     "trade_date": "2023,03,14,00,00,00,000000",
     "ticker": "NUTX",
     "open": 184.5,
@@ -7507,6 +7497,16 @@
     "low": 94.5000991821,
     "close": 96.7799987793,
     "volume": 176862.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,11,00,00,00,000000",
+    "ticker": "NUTX",
+    "open": 95.1299972534,
+    "high": 96.9499969482,
+    "low": 86.9449996948,
+    "close": 90.4899978638,
+    "volume": 181513.0,
     "wedge_status": "none"
   }
 ]
