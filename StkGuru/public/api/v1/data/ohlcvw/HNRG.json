@@ -7508,5 +7508,15 @@
     "close": 19.3299999237,
     "volume": 814354.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,13,00,00,00,000000",
+    "ticker": "HNRG",
+    "open": 17.4249992371,
+    "high": 18.5,
+    "low": 15.910900116,
+    "close": 17.1000003815,
+    "volume": 2471488.0,
+    "wedge_status": "drop"
   }
 ]
