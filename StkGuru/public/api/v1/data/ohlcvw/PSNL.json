@@ -1,25 +1,5 @@
 [
   {
-    "trade_date": "2023,03,17,00,00,00,000000",
-    "ticker": "PSNL",
-    "open": 2.8299999237,
-    "high": 2.9500000477,
-    "low": 2.6300001144,
-    "close": 2.7300000191,
-    "volume": 436500.0,
-    "wedge_status": "none"
-  },
-  {
-    "trade_date": "2023,03,20,00,00,00,000000",
-    "ticker": "PSNL",
-    "open": 2.7300000191,
-    "high": 2.75,
-    "low": 2.5,
-    "close": 2.6800000668,
-    "volume": 345200.0,
-    "wedge_status": "none"
-  },
-  {
     "trade_date": "2023,03,21,00,00,00,000000",
     "ticker": "PSNL",
     "open": 2.75,

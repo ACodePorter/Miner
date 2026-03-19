@@ -1,25 +1,5 @@
 [
   {
-    "trade_date": "2023,03,17,00,00,00,000000",
-    "ticker": "INV",
-    "open": 10.2600002289,
-    "high": 10.2700004578,
-    "low": 10.25,
-    "close": 10.25,
-    "volume": 1500.0,
-    "wedge_status": "drop"
-  },
-  {
-    "trade_date": "2023,03,20,00,00,00,000000",
-    "ticker": "INV",
-    "open": 10.2399997711,
-    "high": 10.25,
-    "low": 10.2399997711,
-    "close": 10.25,
-    "volume": 50200.0,
-    "wedge_status": "drop"
-  },
-  {
     "trade_date": "2023,03,21,00,00,00,000000",
     "ticker": "INV",
     "open": 10.25,
