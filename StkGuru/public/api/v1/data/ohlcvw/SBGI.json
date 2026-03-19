@@ -7508,5 +7508,15 @@
     "close": 13.2100000381,
     "volume": 505000.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,19,00,00,00,000000",
+    "ticker": "SBGI",
+    "open": 13.1099996567,
+    "high": 13.4395999908,
+    "low": 12.9099998474,
+    "close": 13.25,
+    "volume": 427762.0,
+    "wedge_status": "none"
   }
 ]
