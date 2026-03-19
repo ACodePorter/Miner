@@ -7478,5 +7478,35 @@
     "close": 158.9499969482,
     "volume": 3670853.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,16,00,00,00,000000",
+    "ticker": "VST",
+    "open": 161.0,
+    "high": 163.5,
+    "low": 160.1100006104,
+    "close": 161.9900054932,
+    "volume": 2775200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,17,00,00,00,000000",
+    "ticker": "VST",
+    "open": 162.8099975586,
+    "high": 165.4600067139,
+    "low": 162.1199951172,
+    "close": 164.3300018311,
+    "volume": 2065300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,18,00,00,00,000000",
+    "ticker": "VST",
+    "open": 165.75,
+    "high": 173.0,
+    "low": 165.5,
+    "close": 170.1199951172,
+    "volume": 3681700.0,
+    "wedge_status": "none"
   }
 ]

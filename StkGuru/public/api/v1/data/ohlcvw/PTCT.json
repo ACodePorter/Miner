@@ -7478,5 +7478,35 @@
     "close": 64.4899978638,
     "volume": 595948.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,16,00,00,00,000000",
+    "ticker": "PTCT",
+    "open": 64.7799987793,
+    "high": 67.1699981689,
+    "low": 64.6999969482,
+    "close": 66.7099990845,
+    "volume": 1205700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,17,00,00,00,000000",
+    "ticker": "PTCT",
+    "open": 67.0999984741,
+    "high": 68.8700027466,
+    "low": 66.75,
+    "close": 67.4499969482,
+    "volume": 1445100.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2026,03,18,00,00,00,000000",
+    "ticker": "PTCT",
+    "open": 66.9599990845,
+    "high": 67.625,
+    "low": 65.5699996948,
+    "close": 67.0,
+    "volume": 1699000.0,
+    "wedge_status": "none"
   }
 ]

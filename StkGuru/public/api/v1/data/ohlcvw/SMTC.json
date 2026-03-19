@@ -7478,5 +7478,35 @@
     "close": 84.8499984741,
     "volume": 1587884.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,16,00,00,00,000000",
+    "ticker": "SMTC",
+    "open": 86.0,
+    "high": 89.4800033569,
+    "low": 85.1699981689,
+    "close": 89.0,
+    "volume": 2849800.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2026,03,17,00,00,00,000000",
+    "ticker": "SMTC",
+    "open": 83.25,
+    "high": 86.8799972534,
+    "low": 78.5,
+    "close": 79.2099990845,
+    "volume": 5308600.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,03,18,00,00,00,000000",
+    "ticker": "SMTC",
+    "open": 80.8700027466,
+    "high": 80.8700027466,
+    "low": 73.1100006104,
+    "close": 73.3700027466,
+    "volume": 4761600.0,
+    "wedge_status": "none"
   }
 ]

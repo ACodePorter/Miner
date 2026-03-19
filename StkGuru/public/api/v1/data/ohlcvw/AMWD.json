@@ -7478,5 +7478,35 @@
     "close": 39.5,
     "volume": 190672.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,16,00,00,00,000000",
+    "ticker": "AMWD",
+    "open": 40.2400016785,
+    "high": 40.75,
+    "low": 39.4599990845,
+    "close": 39.5099983215,
+    "volume": 151300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,17,00,00,00,000000",
+    "ticker": "AMWD",
+    "open": 39.7200012207,
+    "high": 40.6100006104,
+    "low": 39.4799995422,
+    "close": 40.0200004578,
+    "volume": 167400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,18,00,00,00,000000",
+    "ticker": "AMWD",
+    "open": 39.5600013733,
+    "high": 39.9300003052,
+    "low": 37.5,
+    "close": 37.5600013733,
+    "volume": 335300.0,
+    "wedge_status": "none"
   }
 ]

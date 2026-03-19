@@ -7478,5 +7478,35 @@
     "close": 76.2699966431,
     "volume": 41556.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,16,00,00,00,000000",
+    "ticker": "JBSS",
+    "open": 76.9000015259,
+    "high": 77.0299987793,
+    "low": 76.0,
+    "close": 76.4000015259,
+    "volume": 38500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,17,00,00,00,000000",
+    "ticker": "JBSS",
+    "open": 75.5299987793,
+    "high": 77.0,
+    "low": 75.5,
+    "close": 76.1200027466,
+    "volume": 53000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,18,00,00,00,000000",
+    "ticker": "JBSS",
+    "open": 76.1600036621,
+    "high": 76.75,
+    "low": 75.0299987793,
+    "close": 75.4000015259,
+    "volume": 60200.0,
+    "wedge_status": "none"
   }
 ]

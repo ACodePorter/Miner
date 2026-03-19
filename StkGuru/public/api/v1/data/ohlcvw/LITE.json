@@ -7478,5 +7478,35 @@
     "close": 622.5,
     "volume": 3824432.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,16,00,00,00,000000",
+    "ticker": "LITE",
+    "open": 656.0,
+    "high": 672.9899902344,
+    "low": 607.2700195312,
+    "close": 624.8400268555,
+    "volume": 5036600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,17,00,00,00,000000",
+    "ticker": "LITE",
+    "open": 597.0,
+    "high": 669.9000244141,
+    "low": 573.7299804688,
+    "close": 649.5599975586,
+    "volume": 9003700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,18,00,00,00,000000",
+    "ticker": "LITE",
+    "open": 709.1500244141,
+    "high": 743.8599853516,
+    "low": 696.0,
+    "close": 700.8099975586,
+    "volume": 9600500.0,
+    "wedge_status": "none"
   }
 ]

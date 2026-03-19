@@ -7478,5 +7478,35 @@
     "close": 1.4600000381,
     "volume": 541020.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,16,00,00,00,000000",
+    "ticker": "TMCI",
+    "open": 1.4800000191,
+    "high": 1.5,
+    "low": 1.4199999571,
+    "close": 1.4199999571,
+    "volume": 411100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,17,00,00,00,000000",
+    "ticker": "TMCI",
+    "open": 1.4199999571,
+    "high": 1.5099999905,
+    "low": 1.4199999571,
+    "close": 1.4600000381,
+    "volume": 401900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,18,00,00,00,000000",
+    "ticker": "TMCI",
+    "open": 1.4299999475,
+    "high": 1.4299999475,
+    "low": 1.3450000286,
+    "close": 1.3500000238,
+    "volume": 398700.0,
+    "wedge_status": "none"
   }
 ]

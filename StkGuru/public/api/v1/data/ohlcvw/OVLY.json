@@ -7478,5 +7478,35 @@
     "close": 31.75,
     "volume": 21661.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,16,00,00,00,000000",
+    "ticker": "OVLY",
+    "open": 32.0,
+    "high": 32.2999992371,
+    "low": 32.0,
+    "close": 32.0099983215,
+    "volume": 16200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,17,00,00,00,000000",
+    "ticker": "OVLY",
+    "open": 32.4000015259,
+    "high": 32.5099983215,
+    "low": 31.8799991608,
+    "close": 31.9799995422,
+    "volume": 12800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,18,00,00,00,000000",
+    "ticker": "OVLY",
+    "open": 31.6900005341,
+    "high": 32.0999984741,
+    "low": 31.1200008392,
+    "close": 31.1200008392,
+    "volume": 31600.0,
+    "wedge_status": "none"
   }
 ]

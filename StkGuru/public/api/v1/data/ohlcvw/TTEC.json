@@ -7478,5 +7478,35 @@
     "close": 3.0,
     "volume": 794308.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,16,00,00,00,000000",
+    "ticker": "TTEC",
+    "open": 3.0799999237,
+    "high": 3.4400000572,
+    "low": 3.0099999905,
+    "close": 3.2599999905,
+    "volume": 1565500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,17,00,00,00,000000",
+    "ticker": "TTEC",
+    "open": 3.2999999523,
+    "high": 3.4500000477,
+    "low": 3.1400001049,
+    "close": 3.3699998856,
+    "volume": 1092300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,18,00,00,00,000000",
+    "ticker": "TTEC",
+    "open": 3.4800000191,
+    "high": 3.4800000191,
+    "low": 3.0399999619,
+    "close": 3.0499999523,
+    "volume": 871200.0,
+    "wedge_status": "none"
   }
 ]

@@ -7478,5 +7478,35 @@
     "close": 42.9399986267,
     "volume": 8348.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,16,00,00,00,000000",
+    "ticker": "FDBC",
+    "open": 43.0,
+    "high": 43.5800018311,
+    "low": 43.0,
+    "close": 43.5800018311,
+    "volume": 3600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,17,00,00,00,000000",
+    "ticker": "FDBC",
+    "open": 43.75,
+    "high": 43.75,
+    "low": 43.25,
+    "close": 43.4000015259,
+    "volume": 14800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,18,00,00,00,000000",
+    "ticker": "FDBC",
+    "open": 42.8699989319,
+    "high": 43.75,
+    "low": 42.5,
+    "close": 43.6399993896,
+    "volume": 20200.0,
+    "wedge_status": "none"
   }
 ]

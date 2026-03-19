@@ -7478,5 +7478,35 @@
     "close": 1.8799999952,
     "volume": 119743.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,16,00,00,00,000000",
+    "ticker": "VGAS",
+    "open": 1.9800000191,
+    "high": 2.1099998951,
+    "low": 1.9400000572,
+    "close": 1.9600000381,
+    "volume": 75500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,17,00,00,00,000000",
+    "ticker": "VGAS",
+    "open": 1.9099999666,
+    "high": 1.9349999428,
+    "low": 1.7599999905,
+    "close": 1.8200000525,
+    "volume": 135900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,18,00,00,00,000000",
+    "ticker": "VGAS",
+    "open": 1.8200000525,
+    "high": 1.8500000238,
+    "low": 1.75,
+    "close": 1.7699999809,
+    "volume": 35300.0,
+    "wedge_status": "none"
   }
 ]

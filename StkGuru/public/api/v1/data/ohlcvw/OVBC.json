@@ -7478,5 +7478,35 @@
     "close": 41.2000007629,
     "volume": 8892.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,16,00,00,00,000000",
+    "ticker": "OVBC",
+    "open": 41.5699996948,
+    "high": 42.0900001526,
+    "low": 41.4500007629,
+    "close": 41.8699989319,
+    "volume": 9100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,17,00,00,00,000000",
+    "ticker": "OVBC",
+    "open": 43.0,
+    "high": 43.0,
+    "low": 41.0,
+    "close": 41.5400009155,
+    "volume": 11100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,18,00,00,00,000000",
+    "ticker": "OVBC",
+    "open": 41.2700004578,
+    "high": 43.2599983215,
+    "low": 39.8899993896,
+    "close": 40.5499992371,
+    "volume": 15500.0,
+    "wedge_status": "none"
   }
 ]

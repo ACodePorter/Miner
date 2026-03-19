@@ -7478,5 +7478,35 @@
     "close": 9.8500003815,
     "volume": 258952.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,16,00,00,00,000000",
+    "ticker": "LNSR",
+    "open": 9.75,
+    "high": 10.5399999619,
+    "low": 9.1000003815,
+    "close": 10.2600002289,
+    "volume": 227200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,17,00,00,00,000000",
+    "ticker": "LNSR",
+    "open": 7.4749999046,
+    "high": 7.5,
+    "low": 6.6999998093,
+    "close": 6.8899998665,
+    "volume": 1467500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,18,00,00,00,000000",
+    "ticker": "LNSR",
+    "open": 7.2600002289,
+    "high": 7.3049998283,
+    "low": 6.5549998283,
+    "close": 6.5799999237,
+    "volume": 455800.0,
+    "wedge_status": "none"
   }
 ]

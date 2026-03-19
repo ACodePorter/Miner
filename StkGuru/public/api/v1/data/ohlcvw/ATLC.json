@@ -7478,5 +7478,35 @@
     "close": 47.9599990845,
     "volume": 123924.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,16,00,00,00,000000",
+    "ticker": "ATLC",
+    "open": 48.9599990845,
+    "high": 50.7400016785,
+    "low": 47.5,
+    "close": 48.9300003052,
+    "volume": 96800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,17,00,00,00,000000",
+    "ticker": "ATLC",
+    "open": 50.3400001526,
+    "high": 54.3400001526,
+    "low": 50.1500015259,
+    "close": 53.8600006104,
+    "volume": 94700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,18,00,00,00,000000",
+    "ticker": "ATLC",
+    "open": 53.2599983215,
+    "high": 54.1599998474,
+    "low": 52.5,
+    "close": 53.0200004578,
+    "volume": 61400.0,
+    "wedge_status": "none"
   }
 ]

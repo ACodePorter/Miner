@@ -7478,5 +7478,35 @@
     "close": 7.25,
     "volume": 262528.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,16,00,00,00,000000",
+    "ticker": "KRNY",
+    "open": 7.2899999619,
+    "high": 7.3400001526,
+    "low": 7.1900000572,
+    "close": 7.1999998093,
+    "volume": 278500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,17,00,00,00,000000",
+    "ticker": "KRNY",
+    "open": 7.2399997711,
+    "high": 7.3099999428,
+    "low": 7.1100001335,
+    "close": 7.1700000763,
+    "volume": 390500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,18,00,00,00,000000",
+    "ticker": "KRNY",
+    "open": 7.1500000954,
+    "high": 7.2100000381,
+    "low": 7.0,
+    "close": 7.0199999809,
+    "volume": 329300.0,
+    "wedge_status": "none"
   }
 ]

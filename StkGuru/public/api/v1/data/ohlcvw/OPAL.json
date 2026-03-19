@@ -7478,5 +7478,35 @@
     "close": 2.1400001049,
     "volume": 378938.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,16,00,00,00,000000",
+    "ticker": "OPAL",
+    "open": 2.2799999714,
+    "high": 2.8499999046,
+    "low": 2.2100000381,
+    "close": 2.7300000191,
+    "volume": 1221200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,17,00,00,00,000000",
+    "ticker": "OPAL",
+    "open": 2.7300000191,
+    "high": 2.753000021,
+    "low": 2.4400000572,
+    "close": 2.4400000572,
+    "volume": 481500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,18,00,00,00,000000",
+    "ticker": "OPAL",
+    "open": 2.4100000858,
+    "high": 2.4900000095,
+    "low": 2.3499999046,
+    "close": 2.375,
+    "volume": 196300.0,
+    "wedge_status": "none"
   }
 ]

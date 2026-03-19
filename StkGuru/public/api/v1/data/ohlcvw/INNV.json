@@ -7478,5 +7478,35 @@
     "close": 8.3900003433,
     "volume": 180250.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,16,00,00,00,000000",
+    "ticker": "INNV",
+    "open": 8.5,
+    "high": 8.8999996185,
+    "low": 8.5,
+    "close": 8.7299995422,
+    "volume": 327200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,17,00,00,00,000000",
+    "ticker": "INNV",
+    "open": 8.8100004196,
+    "high": 9.029999733,
+    "low": 8.5100002289,
+    "close": 8.5200004578,
+    "volume": 334700.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,03,18,00,00,00,000000",
+    "ticker": "INNV",
+    "open": 8.5500001907,
+    "high": 8.7100000381,
+    "low": 8.1599998474,
+    "close": 8.2399997711,
+    "volume": 340900.0,
+    "wedge_status": "none"
   }
 ]

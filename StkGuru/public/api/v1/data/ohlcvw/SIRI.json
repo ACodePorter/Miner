@@ -7478,5 +7478,35 @@
     "close": 21.9899997711,
     "volume": 3139008.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,16,00,00,00,000000",
+    "ticker": "SIRI",
+    "open": 22.0100002289,
+    "high": 22.5,
+    "low": 21.9500007629,
+    "close": 22.3999996185,
+    "volume": 3212300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,17,00,00,00,000000",
+    "ticker": "SIRI",
+    "open": 22.5,
+    "high": 22.9799995422,
+    "low": 22.4099998474,
+    "close": 22.6299991608,
+    "volume": 3699400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,18,00,00,00,000000",
+    "ticker": "SIRI",
+    "open": 22.5,
+    "high": 22.8799991608,
+    "low": 22.3999996185,
+    "close": 22.4799995422,
+    "volume": 2769400.0,
+    "wedge_status": "none"
   }
 ]

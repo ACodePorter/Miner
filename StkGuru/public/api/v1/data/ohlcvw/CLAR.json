@@ -7478,5 +7478,35 @@
     "close": 2.7750000954,
     "volume": 320696.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,16,00,00,00,000000",
+    "ticker": "CLAR",
+    "open": 2.7899999619,
+    "high": 2.9100000858,
+    "low": 2.7799999714,
+    "close": 2.8199999332,
+    "volume": 268300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,17,00,00,00,000000",
+    "ticker": "CLAR",
+    "open": 2.8299999237,
+    "high": 2.8499999046,
+    "low": 2.6900000572,
+    "close": 2.6900000572,
+    "volume": 252300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,18,00,00,00,000000",
+    "ticker": "CLAR",
+    "open": 2.6900000572,
+    "high": 2.75,
+    "low": 2.6400001049,
+    "close": 2.6600000858,
+    "volume": 255300.0,
+    "wedge_status": "none"
   }
 ]

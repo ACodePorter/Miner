@@ -7478,5 +7478,35 @@
     "close": 133.7100067139,
     "volume": 399117.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,16,00,00,00,000000",
+    "ticker": "CRUS",
+    "open": 136.5099945068,
+    "high": 138.0,
+    "low": 135.0,
+    "close": 135.2200012207,
+    "volume": 492400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,17,00,00,00,000000",
+    "ticker": "CRUS",
+    "open": 136.0,
+    "high": 139.0,
+    "low": 134.9100036621,
+    "close": 135.8699951172,
+    "volume": 355600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,18,00,00,00,000000",
+    "ticker": "CRUS",
+    "open": 135.6999969482,
+    "high": 136.8999938965,
+    "low": 133.5,
+    "close": 134.0099945068,
+    "volume": 376500.0,
+    "wedge_status": "none"
   }
 ]

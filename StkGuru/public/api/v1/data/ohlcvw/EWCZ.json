@@ -7478,5 +7478,35 @@
     "close": 5.75,
     "volume": 598521.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,16,00,00,00,000000",
+    "ticker": "EWCZ",
+    "open": 5.75,
+    "high": 5.7600002289,
+    "low": 5.75,
+    "close": 5.75,
+    "volume": 271800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,17,00,00,00,000000",
+    "ticker": "EWCZ",
+    "open": 5.75,
+    "high": 5.7699999809,
+    "low": 5.75,
+    "close": 5.7600002289,
+    "volume": 422600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,18,00,00,00,000000",
+    "ticker": "EWCZ",
+    "open": 5.7600002289,
+    "high": 5.7699999809,
+    "low": 5.75,
+    "close": 5.7600002289,
+    "volume": 450000.0,
+    "wedge_status": "none"
   }
 ]
