@@ -7508,5 +7508,15 @@
     "close": 13.5600004196,
     "volume": 1919411.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,20,00,00,00,000000",
+    "ticker": "SHC",
+    "open": 13.5200004578,
+    "high": 13.6149997711,
+    "low": 13.3699998856,
+    "close": 13.5,
+    "volume": 4744349.0,
+    "wedge_status": "none"
   }
 ]
