@@ -7498,5 +7498,15 @@
     "close": 1.6200000048,
     "volume": 78158.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,03,24,00,00,00,000000",
+    "ticker": "VGAS",
+    "open": 1.6100000143,
+    "high": 1.9400000572,
+    "low": 1.5199999809,
+    "close": 1.7899999619,
+    "volume": 213496.0,
+    "wedge_status": "none"
   }
 ]

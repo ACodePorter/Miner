@@ -2328,5 +2328,15 @@
     "close": 4.0650000572,
     "volume": 207923.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,24,00,00,00,000000",
+    "ticker": "AARD",
+    "open": 4.0,
+    "high": 4.0949997902,
+    "low": 3.5499999523,
+    "close": 3.7699999809,
+    "volume": 461903.0,
+    "wedge_status": "none"
   }
 ]

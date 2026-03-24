@@ -7498,5 +7498,15 @@
     "close": 5.6100001335,
     "volume": 2127252.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,24,00,00,00,000000",
+    "ticker": "XERS",
+    "open": 5.5399999619,
+    "high": 5.5399999619,
+    "low": 5.25,
+    "close": 5.2899999619,
+    "volume": 1890325.0,
+    "wedge_status": "none"
   }
 ]

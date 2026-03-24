@@ -7498,5 +7498,15 @@
     "close": 5.5700001717,
     "volume": 481239.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,24,00,00,00,000000",
+    "ticker": "AVIR",
+    "open": 5.5100002289,
+    "high": 5.5399999619,
+    "low": 5.0500001907,
+    "close": 5.3299999237,
+    "volume": 673311.0,
+    "wedge_status": "drop"
   }
 ]
