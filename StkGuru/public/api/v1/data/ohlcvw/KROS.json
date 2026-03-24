@@ -7488,5 +7488,15 @@
     "close": 10.9600000381,
     "volume": 1729013.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,23,00,00,00,000000",
+    "ticker": "KROS",
+    "open": 11.0,
+    "high": 11.2749996185,
+    "low": 10.7100000381,
+    "close": 11.2399997711,
+    "volume": 455617.0,
+    "wedge_status": "none"
   }
 ]

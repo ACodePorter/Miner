@@ -3158,5 +3158,15 @@
     "close": 18.5,
     "volume": 309087.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,23,00,00,00,000000",
+    "ticker": "CBLL",
+    "open": 18.8299999237,
+    "high": 19.2199993134,
+    "low": 18.6100006104,
+    "close": 19.0,
+    "volume": 187677.0,
+    "wedge_status": "pop"
   }
 ]

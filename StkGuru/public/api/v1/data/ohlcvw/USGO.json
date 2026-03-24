@@ -1,0 +1,6892 @@
+[
+  {
+    "trade_date": "2023,06,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.6099996567,
+    "high": 13.0,
+    "low": 12.529999733,
+    "close": 13.0,
+    "volume": 26600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.1099996567,
+    "high": 13.8000001907,
+    "low": 12.75,
+    "close": 13.5,
+    "volume": 22500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,27,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.5,
+    "high": 13.5,
+    "low": 12.8900003433,
+    "close": 12.8900003433,
+    "volume": 21800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,28,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.9799995422,
+    "high": 13.1730003357,
+    "low": 12.8000001907,
+    "close": 12.8000001907,
+    "volume": 13100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,29,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.7600002289,
+    "high": 12.8000001907,
+    "low": 12.5100002289,
+    "close": 12.5100002289,
+    "volume": 7700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,06,30,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.8900003433,
+    "high": 13.6499996185,
+    "low": 12.8900003433,
+    "close": 12.998000145,
+    "volume": 50000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.9399995804,
+    "high": 13.1999998093,
+    "low": 12.9399995804,
+    "close": 13.1999998093,
+    "volume": 6900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.1999998093,
+    "high": 13.1999998093,
+    "low": 12.75,
+    "close": 12.7899999619,
+    "volume": 14400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.7700004578,
+    "high": 12.7700004578,
+    "low": 12.5,
+    "close": 12.6599998474,
+    "volume": 10000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,07,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.6599998474,
+    "high": 12.6599998474,
+    "low": 12.1470003128,
+    "close": 12.4499998093,
+    "volume": 21700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.3999996185,
+    "high": 12.845000267,
+    "low": 12.3229999542,
+    "close": 12.6400003433,
+    "volume": 26100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.7600002289,
+    "high": 12.970000267,
+    "low": 12.3599996567,
+    "close": 12.4350004196,
+    "volume": 24400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.7399997711,
+    "high": 12.75,
+    "low": 12.5,
+    "close": 12.5399999619,
+    "volume": 11100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.4399995804,
+    "high": 12.4499998093,
+    "low": 11.8000001907,
+    "close": 12.2100000381,
+    "volume": 29400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,14,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.0100002289,
+    "high": 12.2100000381,
+    "low": 11.8999996185,
+    "close": 11.8999996185,
+    "volume": 9700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.4200000763,
+    "high": 13.8400001526,
+    "low": 12.3100004196,
+    "close": 13.4200000763,
+    "volume": 82300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.6000003815,
+    "high": 13.9750003815,
+    "low": 13.1499996185,
+    "close": 13.3299999237,
+    "volume": 48900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,19,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.1700000763,
+    "high": 13.5389995575,
+    "low": 13.0100002289,
+    "close": 13.1400003433,
+    "volume": 15600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.9200000763,
+    "high": 13.3199996948,
+    "low": 12.8299999237,
+    "close": 13.0399999619,
+    "volume": 8700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,21,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.0249996185,
+    "high": 13.1000003815,
+    "low": 12.9399995804,
+    "close": 12.9600000381,
+    "volume": 7100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.0100002289,
+    "high": 13.25,
+    "low": 12.3100004196,
+    "close": 12.3100004196,
+    "volume": 26900.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,07,25,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.3400001526,
+    "high": 12.5,
+    "low": 12.0399999619,
+    "close": 12.1899995804,
+    "volume": 13600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.1000003815,
+    "high": 12.4200000763,
+    "low": 12.029999733,
+    "close": 12.029999733,
+    "volume": 10800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,27,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.4899997711,
+    "high": 12.4899997711,
+    "low": 11.8999996185,
+    "close": 12.0900001526,
+    "volume": 22900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,28,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.0900001526,
+    "high": 12.25,
+    "low": 11.8999996185,
+    "close": 12.25,
+    "volume": 12600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,07,31,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.1099996567,
+    "high": 12.1499996185,
+    "low": 11.9399995804,
+    "close": 11.9600000381,
+    "volume": 15400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,01,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.8999996185,
+    "high": 11.9200000763,
+    "low": 11.5900001526,
+    "close": 11.7100000381,
+    "volume": 24300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,02,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.5100002289,
+    "high": 11.7440004349,
+    "low": 11.3020000458,
+    "close": 11.3199996948,
+    "volume": 12600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.2700004578,
+    "high": 11.3100004196,
+    "low": 11.1099996567,
+    "close": 11.3000001907,
+    "volume": 19300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,04,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.3100004196,
+    "high": 11.3800001144,
+    "low": 11.2399997711,
+    "close": 11.25,
+    "volume": 4300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,07,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.1199998856,
+    "high": 11.2550001144,
+    "low": 10.8299999237,
+    "close": 11.1999998093,
+    "volume": 19000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,08,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.8100004196,
+    "high": 11.1780004501,
+    "low": 10.8100004196,
+    "close": 10.8900003433,
+    "volume": 8400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,09,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.8100004196,
+    "high": 11.0,
+    "low": 10.779999733,
+    "close": 10.9899997711,
+    "volume": 18900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.9799995422,
+    "high": 11.0,
+    "low": 10.8000001907,
+    "close": 10.8299999237,
+    "volume": 10800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.7299995422,
+    "high": 10.8000001907,
+    "low": 10.1000003815,
+    "close": 10.6300001144,
+    "volume": 28600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,14,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.4600000381,
+    "high": 10.6300001144,
+    "low": 10.1000003815,
+    "close": 10.3299999237,
+    "volume": 13300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,15,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.1099996567,
+    "high": 10.3800001144,
+    "low": 10.0,
+    "close": 10.0,
+    "volume": 14900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,16,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.0,
+    "high": 10.1000003815,
+    "low": 9.5500001907,
+    "close": 9.5699996948,
+    "volume": 23700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.6899995804,
+    "high": 9.9200000763,
+    "low": 9.5699996948,
+    "close": 9.7600002289,
+    "volume": 13900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.1300001144,
+    "high": 10.1339998245,
+    "low": 9.6899995804,
+    "close": 9.8699998856,
+    "volume": 7200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,21,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.8699998856,
+    "high": 10.0050001144,
+    "low": 9.8100004196,
+    "close": 9.9099998474,
+    "volume": 5500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,22,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.9200000763,
+    "high": 10.2600002289,
+    "low": 9.5699996948,
+    "close": 9.5699996948,
+    "volume": 5900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.8199996948,
+    "high": 9.9499998093,
+    "low": 9.6099996567,
+    "close": 9.6700000763,
+    "volume": 9100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.7100000381,
+    "high": 9.7690000534,
+    "low": 9.3900003433,
+    "close": 9.5799999237,
+    "volume": 10500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,25,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.6099996567,
+    "high": 9.6899995804,
+    "low": 9.2919998169,
+    "close": 9.3299999237,
+    "volume": 8700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,28,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.2899999619,
+    "high": 9.5799999237,
+    "low": 9.2899999619,
+    "close": 9.3299999237,
+    "volume": 9400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,29,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.3199996948,
+    "high": 9.5,
+    "low": 9.3199996948,
+    "close": 9.3699998856,
+    "volume": 6400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,30,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.4499998093,
+    "high": 10.0500001907,
+    "low": 9.3360004425,
+    "close": 10.0200004578,
+    "volume": 16600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,08,31,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.0200004578,
+    "high": 10.1850004196,
+    "low": 9.6999998093,
+    "close": 9.9799995422,
+    "volume": 6300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,01,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.720000267,
+    "high": 10.1700000763,
+    "low": 9.6899995804,
+    "close": 10.029999733,
+    "volume": 7600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.9300003052,
+    "high": 9.9300003052,
+    "low": 9.5600004196,
+    "close": 9.7899999619,
+    "volume": 6600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.7700004578,
+    "high": 9.9899997711,
+    "low": 9.6800003052,
+    "close": 9.9099998474,
+    "volume": 3100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,07,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.5799999237,
+    "high": 9.875,
+    "low": 9.2100000381,
+    "close": 9.220000267,
+    "volume": 13100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,08,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.4449996948,
+    "high": 9.5200004578,
+    "low": 9.1490001678,
+    "close": 9.1999998093,
+    "volume": 6600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.3199996948,
+    "high": 9.3199996948,
+    "low": 9.0,
+    "close": 9.0,
+    "volume": 4800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.0100002289,
+    "high": 9.029999733,
+    "low": 8.220000267,
+    "close": 8.8000001907,
+    "volume": 25700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.6300001144,
+    "high": 8.8920001984,
+    "low": 8.0799999237,
+    "close": 8.0799999237,
+    "volume": 14600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,14,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.1199998856,
+    "high": 8.4799995422,
+    "low": 8.1199998856,
+    "close": 8.1700000763,
+    "volume": 8500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,15,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.3800001144,
+    "high": 8.470000267,
+    "low": 8.1499996185,
+    "close": 8.1499996185,
+    "volume": 16900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.1499996185,
+    "high": 8.1499996185,
+    "low": 7.5399999619,
+    "close": 7.7600002289,
+    "volume": 19900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,19,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.6199998856,
+    "high": 7.7199997902,
+    "low": 7.1100001335,
+    "close": 7.1799998283,
+    "volume": 19400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.0100002289,
+    "high": 7.3499999046,
+    "low": 6.9499998093,
+    "close": 7.0149998665,
+    "volume": 14000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,21,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.9000000954,
+    "high": 7.2020001411,
+    "low": 6.4499998093,
+    "close": 7.1900000572,
+    "volume": 24500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,22,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.1700000763,
+    "high": 7.8699998856,
+    "low": 7.1700000763,
+    "close": 7.8000001907,
+    "volume": 9400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,25,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.8899998665,
+    "high": 8.6499996185,
+    "low": 7.7350001335,
+    "close": 8.5500001907,
+    "volume": 11900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.5399999619,
+    "high": 9.1000003815,
+    "low": 8.3199996948,
+    "close": 8.5100002289,
+    "volume": 29500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,27,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.5100002289,
+    "high": 9.25,
+    "low": 8.4949998856,
+    "close": 8.9200000763,
+    "volume": 34400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,28,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.8199996948,
+    "high": 9.1999998093,
+    "low": 8.3350000381,
+    "close": 8.6199998856,
+    "volume": 35600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,09,29,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.5699996948,
+    "high": 8.7299995422,
+    "low": 7.9899997711,
+    "close": 7.9899997711,
+    "volume": 17500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,02,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.0,
+    "high": 8.3900003433,
+    "low": 7.9450001717,
+    "close": 7.9600000381,
+    "volume": 12400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.013999939,
+    "high": 8.2899999619,
+    "low": 7.5599999428,
+    "close": 7.5999999046,
+    "volume": 7100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,04,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.736000061,
+    "high": 7.736000061,
+    "low": 7.3720002174,
+    "close": 7.5,
+    "volume": 2200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.2800002098,
+    "high": 7.9800000191,
+    "low": 7.2800002098,
+    "close": 7.3899998665,
+    "volume": 9600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.3899998665,
+    "high": 8.6680002213,
+    "low": 7.3499999046,
+    "close": 8.1899995804,
+    "volume": 24900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,09,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.1199998856,
+    "high": 8.4180002213,
+    "low": 8.0,
+    "close": 8.0900001526,
+    "volume": 8600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.0900001526,
+    "high": 8.3999996185,
+    "low": 7.3600001335,
+    "close": 7.9499998093,
+    "volume": 17600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.5700001717,
+    "high": 8.1400003433,
+    "low": 7.5,
+    "close": 7.8499999046,
+    "volume": 11000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.0600004196,
+    "high": 8.0600004196,
+    "low": 7.75,
+    "close": 7.8499999046,
+    "volume": 6200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.9099998474,
+    "high": 8.0450000763,
+    "low": 7.5999999046,
+    "close": 7.7979998589,
+    "volume": 8700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,16,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.8000001907,
+    "high": 7.8600001335,
+    "low": 7.4099998474,
+    "close": 7.4899997711,
+    "volume": 10400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.75,
+    "high": 7.75,
+    "low": 7.4800000191,
+    "close": 7.4800000191,
+    "volume": 3800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.2600002289,
+    "high": 7.7399997711,
+    "low": 7.2600002289,
+    "close": 7.4899997711,
+    "volume": 2000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,19,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.2600002289,
+    "high": 7.3800001144,
+    "low": 7.1999998093,
+    "close": 7.2589998245,
+    "volume": 5500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.0,
+    "high": 7.2600002289,
+    "low": 6.5199999809,
+    "close": 7.0770001411,
+    "volume": 24000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.6599998474,
+    "high": 6.7899999619,
+    "low": 6.25,
+    "close": 6.25,
+    "volume": 10900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.25,
+    "high": 6.7399997711,
+    "low": 6.25,
+    "close": 6.2800002098,
+    "volume": 6300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,25,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.2899999619,
+    "high": 6.3000001907,
+    "low": 5.5549998283,
+    "close": 5.8000001907,
+    "volume": 8500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.5,
+    "high": 5.9990000725,
+    "low": 5.5,
+    "close": 5.5859999657,
+    "volume": 16400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,27,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.7800002098,
+    "high": 6.0,
+    "low": 5.5,
+    "close": 5.7800002098,
+    "volume": 11500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,30,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.9899997711,
+    "high": 6.0,
+    "low": 5.6199998856,
+    "close": 5.6199998856,
+    "volume": 8500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,10,31,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.6500000954,
+    "high": 5.8000001907,
+    "low": 4.9099998474,
+    "close": 4.9400000572,
+    "volume": 15500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,01,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.3499999046,
+    "high": 5.3499999046,
+    "low": 4.9600000381,
+    "close": 5.1570000648,
+    "volume": 4200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,02,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.2800002098,
+    "high": 5.756000042,
+    "low": 5.0900001526,
+    "close": 5.4899997711,
+    "volume": 6200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.7899999619,
+    "high": 6.0100002289,
+    "low": 5.4899997711,
+    "close": 5.5999999046,
+    "volume": 11600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.5999999046,
+    "high": 5.9899997711,
+    "low": 5.5999999046,
+    "close": 5.6999998093,
+    "volume": 3500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,07,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.1500000954,
+    "high": 6.1599998474,
+    "low": 5.5399999619,
+    "close": 5.6999998093,
+    "volume": 3800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,08,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.8319997787,
+    "high": 5.9889998436,
+    "low": 5.7680001259,
+    "close": 5.7800002098,
+    "volume": 3200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,09,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.8699998856,
+    "high": 5.8699998856,
+    "low": 5.5999999046,
+    "close": 5.75,
+    "volume": 2000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.9149999619,
+    "high": 6.1300001144,
+    "low": 5.75,
+    "close": 5.9499998093,
+    "volume": 5600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.9899997711,
+    "high": 6.1199998856,
+    "low": 5.7600002289,
+    "close": 6.0029997826,
+    "volume": 5900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,14,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0599999428,
+    "high": 6.103000164,
+    "low": 5.8000001907,
+    "close": 5.8099999428,
+    "volume": 10900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,15,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.75,
+    "high": 6.0999999046,
+    "low": 5.6100001335,
+    "close": 6.0999999046,
+    "volume": 15400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,16,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.9000000954,
+    "high": 6.1700000763,
+    "low": 5.9000000954,
+    "close": 5.9000000954,
+    "volume": 6200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.9000000954,
+    "high": 6.0999999046,
+    "low": 5.9000000954,
+    "close": 6.0999999046,
+    "volume": 9000.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2023,11,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0500001907,
+    "high": 6.1929998398,
+    "low": 6.0500001907,
+    "close": 6.1849999428,
+    "volume": 4500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,21,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.1999998093,
+    "high": 6.5,
+    "low": 6.1100001335,
+    "close": 6.5,
+    "volume": 7200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,22,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.6500000954,
+    "high": 6.8400001526,
+    "low": 6.5199999809,
+    "close": 6.8400001526,
+    "volume": 16700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.9299998283,
+    "high": 7.0,
+    "low": 6.5500001907,
+    "close": 6.7919998169,
+    "volume": 8100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,27,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.9200000763,
+    "high": 6.9800000191,
+    "low": 6.6500000954,
+    "close": 6.8400001526,
+    "volume": 6200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,28,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.9699997902,
+    "high": 8.1969995499,
+    "low": 6.9600000381,
+    "close": 7.6999998093,
+    "volume": 33200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,29,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.75,
+    "high": 8.0699996948,
+    "low": 7.75,
+    "close": 7.9349999428,
+    "volume": 14200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,11,30,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.1400003433,
+    "high": 8.1400003433,
+    "low": 7.2199997902,
+    "close": 7.6539998055,
+    "volume": 9700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,01,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.0999999046,
+    "high": 7.6399998665,
+    "low": 7.0,
+    "close": 7.3499999046,
+    "volume": 24000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,04,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.2399997711,
+    "high": 7.2399997711,
+    "low": 6.9699997902,
+    "close": 7.0,
+    "volume": 8100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.8499999046,
+    "high": 6.8949999809,
+    "low": 6.75,
+    "close": 6.8949999809,
+    "volume": 11800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.9000000954,
+    "high": 7.4800000191,
+    "low": 6.9000000954,
+    "close": 6.9000000954,
+    "volume": 12100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,07,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.25,
+    "high": 7.2919998169,
+    "low": 6.9200000763,
+    "close": 7.0,
+    "volume": 5100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,08,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.9800000191,
+    "high": 7.75,
+    "low": 6.9000000954,
+    "close": 7.5999999046,
+    "volume": 8600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.6799998283,
+    "high": 7.9299998283,
+    "low": 7.5999999046,
+    "close": 7.7899999619,
+    "volume": 10900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.5999999046,
+    "high": 7.5999999046,
+    "low": 7.0,
+    "close": 7.0100002289,
+    "volume": 6000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.0199999809,
+    "high": 7.0199999809,
+    "low": 6.75,
+    "close": 6.8800001144,
+    "volume": 11400.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,12,14,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.9400000572,
+    "high": 7.2600002289,
+    "low": 6.9400000572,
+    "close": 7.0599999428,
+    "volume": 5400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,15,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.0599999428,
+    "high": 7.4800000191,
+    "low": 7.0,
+    "close": 7.4800000191,
+    "volume": 6100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.5,
+    "high": 7.7699999809,
+    "low": 7.0250000954,
+    "close": 7.6550002098,
+    "volume": 10000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,19,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.6449999809,
+    "high": 7.7300000191,
+    "low": 7.0999999046,
+    "close": 7.6510000229,
+    "volume": 7600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.1100001335,
+    "high": 7.3949999809,
+    "low": 7.0,
+    "close": 7.1300001144,
+    "volume": 11400.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2023,12,21,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.0399999619,
+    "high": 7.3449997902,
+    "low": 7.0399999619,
+    "close": 7.1900000572,
+    "volume": 3700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,22,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.3899998665,
+    "high": 7.5749998093,
+    "low": 7.1999998093,
+    "close": 7.5409998894,
+    "volume": 5800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.3600001335,
+    "high": 7.5250000954,
+    "low": 7.3600001335,
+    "close": 7.4000000954,
+    "volume": 2400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,27,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.4099998474,
+    "high": 7.75,
+    "low": 7.4000000954,
+    "close": 7.5399999619,
+    "volume": 5700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,28,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.75,
+    "high": 7.75,
+    "low": 7.6750001907,
+    "close": 7.7300000191,
+    "volume": 2500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2023,12,29,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.1199998856,
+    "high": 7.5749998093,
+    "low": 7.1199998856,
+    "close": 7.3049998283,
+    "volume": 6500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,02,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.5,
+    "high": 7.5799999237,
+    "low": 7.2140002251,
+    "close": 7.368999958,
+    "volume": 4400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.0700001717,
+    "high": 7.1700000763,
+    "low": 7.0,
+    "close": 7.0,
+    "volume": 3700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,04,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.0999999046,
+    "high": 7.0999999046,
+    "low": 7.0999999046,
+    "close": 7.0999999046,
+    "volume": 1400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.0799999237,
+    "high": 7.1589999199,
+    "low": 7.0,
+    "close": 7.0,
+    "volume": 3700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,08,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.0,
+    "high": 7.0799999237,
+    "low": 7.0,
+    "close": 7.0,
+    "volume": 7200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,09,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.1449999809,
+    "high": 7.1449999809,
+    "low": 7.0399999619,
+    "close": 7.0679998398,
+    "volume": 2800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.0100002289,
+    "high": 7.0199999809,
+    "low": 7.0,
+    "close": 7.0,
+    "volume": 4800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.0980000496,
+    "high": 7.0980000496,
+    "low": 7.0,
+    "close": 7.0,
+    "volume": 9800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.0,
+    "high": 7.0549998283,
+    "low": 7.0,
+    "close": 7.0549998283,
+    "volume": 3400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,16,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.0,
+    "high": 7.0549998283,
+    "low": 7.0,
+    "close": 7.0,
+    "volume": 3000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.0,
+    "high": 7.0,
+    "low": 6.75,
+    "close": 6.75,
+    "volume": 3500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.8210000992,
+    "high": 6.8210000992,
+    "low": 6.2300000191,
+    "close": 6.2969999313,
+    "volume": 5400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,19,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.4499998093,
+    "high": 6.4499998093,
+    "low": 6.3220000267,
+    "close": 6.3220000267,
+    "volume": 2200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,22,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.3400001526,
+    "high": 6.3499999046,
+    "low": 5.6999998093,
+    "close": 6.1799998283,
+    "volume": 4800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0,
+    "high": 6.1700000763,
+    "low": 5.5599999428,
+    "close": 5.6900000572,
+    "volume": 5700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.7199997902,
+    "high": 5.7399997711,
+    "low": 5.3600001335,
+    "close": 5.5,
+    "volume": 4400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,25,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.5,
+    "high": 5.9000000954,
+    "low": 5.5,
+    "close": 5.5,
+    "volume": 2900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.4499998093,
+    "high": 5.9650001526,
+    "low": 5.4499998093,
+    "close": 5.8140001297,
+    "volume": 7400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,29,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.75,
+    "high": 5.75,
+    "low": 5.6059999466,
+    "close": 5.7300000191,
+    "volume": 1800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,30,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.5999999046,
+    "high": 5.9510002136,
+    "low": 5.5999999046,
+    "close": 5.75,
+    "volume": 3100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,01,31,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.7699999809,
+    "high": 6.2800002098,
+    "low": 5.7699999809,
+    "close": 6.1799998283,
+    "volume": 5500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,01,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.1799998283,
+    "high": 6.1799998283,
+    "low": 6.0,
+    "close": 6.0440001488,
+    "volume": 8800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,02,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.2800002098,
+    "high": 6.3299999237,
+    "low": 6.1100001335,
+    "close": 6.2300000191,
+    "volume": 3000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.1999998093,
+    "high": 6.2090001106,
+    "low": 6.0,
+    "close": 6.0,
+    "volume": 3300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.1900000572,
+    "high": 6.2100000381,
+    "low": 6.0599999428,
+    "close": 6.0599999428,
+    "volume": 4400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,07,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0599999428,
+    "high": 6.0599999428,
+    "low": 6.0349998474,
+    "close": 6.0349998474,
+    "volume": 1700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,08,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0,
+    "high": 6.0300002098,
+    "low": 6.0,
+    "close": 6.0,
+    "volume": 3600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,09,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0,
+    "high": 6.0,
+    "low": 5.5,
+    "close": 5.5599999428,
+    "volume": 9300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.5500001907,
+    "high": 5.5599999428,
+    "low": 5.5,
+    "close": 5.5,
+    "volume": 5600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.4899997711,
+    "high": 5.4899997711,
+    "low": 5.1999998093,
+    "close": 5.3000001907,
+    "volume": 7500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,14,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.3099999428,
+    "high": 5.4899997711,
+    "low": 5.3099999428,
+    "close": 5.4359998703,
+    "volume": 6700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,15,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.4800000191,
+    "high": 5.5500001907,
+    "low": 5.4299998283,
+    "close": 5.5500001907,
+    "volume": 6600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,16,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.5500001907,
+    "high": 5.8699998856,
+    "low": 5.5500001907,
+    "close": 5.8680000305,
+    "volume": 6600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.7899999619,
+    "high": 5.8800001144,
+    "low": 5.6719999313,
+    "close": 5.8600001335,
+    "volume": 3700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,21,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.7750000954,
+    "high": 6.0149998665,
+    "low": 5.6999998093,
+    "close": 5.8400001526,
+    "volume": 8600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,22,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.6900000572,
+    "high": 5.9000000954,
+    "low": 5.6700000763,
+    "close": 5.6799998283,
+    "volume": 8900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.6100001335,
+    "high": 5.75,
+    "low": 5.5500001907,
+    "close": 5.6020002365,
+    "volume": 6400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.5999999046,
+    "high": 5.5999999046,
+    "low": 5.25,
+    "close": 5.25,
+    "volume": 13200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,27,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.2199997902,
+    "high": 5.5900001526,
+    "low": 5.2199997902,
+    "close": 5.5659999847,
+    "volume": 4300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,28,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.4099998474,
+    "high": 5.4759998322,
+    "low": 5.2300000191,
+    "close": 5.2300000191,
+    "volume": 5200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,02,29,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.2600002289,
+    "high": 5.7810001373,
+    "low": 5.2600002289,
+    "close": 5.2699999809,
+    "volume": 4800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,01,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.4809999466,
+    "high": 5.6900000572,
+    "low": 5.3099999428,
+    "close": 5.4010000229,
+    "volume": 6800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,04,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.4099998474,
+    "high": 5.75,
+    "low": 5.4099998474,
+    "close": 5.6560001373,
+    "volume": 4600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.3299999237,
+    "high": 5.8499999046,
+    "low": 5.3299999237,
+    "close": 5.5100002289,
+    "volume": 10900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.8400001526,
+    "high": 5.8400001526,
+    "low": 5.5500001907,
+    "close": 5.75,
+    "volume": 5100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,07,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.756000042,
+    "high": 5.8400001526,
+    "low": 5.75,
+    "close": 5.7600002289,
+    "volume": 6300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,08,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.75,
+    "high": 5.8499999046,
+    "low": 5.5199999809,
+    "close": 5.8039999008,
+    "volume": 10000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.8000001907,
+    "high": 5.8499999046,
+    "low": 5.75,
+    "close": 5.8359999657,
+    "volume": 10600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.8400001526,
+    "high": 5.8499999046,
+    "low": 5.5999999046,
+    "close": 5.617000103,
+    "volume": 9400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.6300001144,
+    "high": 5.6500000954,
+    "low": 5.5,
+    "close": 5.5,
+    "volume": 7600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,14,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.4099998474,
+    "high": 5.7199997902,
+    "low": 5.0100002289,
+    "close": 5.0999999046,
+    "volume": 9800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,15,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.0599999428,
+    "high": 5.2399997711,
+    "low": 5.0599999428,
+    "close": 5.2399997711,
+    "volume": 3300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.1599998474,
+    "high": 5.5500001907,
+    "low": 5.1500000954,
+    "close": 5.4899997711,
+    "volume": 8400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,19,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.25,
+    "high": 5.5640001297,
+    "low": 5.25,
+    "close": 5.25,
+    "volume": 2900.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,03,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.25,
+    "high": 5.6259999275,
+    "low": 5.25,
+    "close": 5.4499998093,
+    "volume": 3300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,21,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.4549999237,
+    "high": 5.4949998856,
+    "low": 5.2750000954,
+    "close": 5.2750000954,
+    "volume": 3700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,22,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.3000001907,
+    "high": 5.6999998093,
+    "low": 5.3000001907,
+    "close": 5.5999999046,
+    "volume": 1100.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,03,25,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.5999999046,
+    "high": 5.5999999046,
+    "low": 5.25,
+    "close": 5.3000001907,
+    "volume": 3600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.2600002289,
+    "high": 5.6999998093,
+    "low": 5.2600002289,
+    "close": 5.3020000458,
+    "volume": 3300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,03,27,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.25,
+    "high": 5.5,
+    "low": 5.25,
+    "close": 5.5,
+    "volume": 1800.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,03,28,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.2899999619,
+    "high": 5.4619998932,
+    "low": 5.2899999619,
+    "close": 5.4600000381,
+    "volume": 3300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,01,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.5399999619,
+    "high": 6.2199997902,
+    "low": 5.4000000954,
+    "close": 5.9699997902,
+    "volume": 18100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,02,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0,
+    "high": 6.9899997711,
+    "low": 6.0,
+    "close": 6.6900000572,
+    "volume": 12900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.6999998093,
+    "high": 7.0799999237,
+    "low": 6.5789999962,
+    "close": 7.0799999237,
+    "volume": 12600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,04,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.75,
+    "high": 7.0999999046,
+    "low": 6.25,
+    "close": 6.5199999809,
+    "volume": 12800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0,
+    "high": 6.9000000954,
+    "low": 6.0,
+    "close": 6.6300001144,
+    "volume": 20900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,08,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.1700000763,
+    "high": 7.4800000191,
+    "low": 6.5999999046,
+    "close": 7.1799998283,
+    "volume": 27100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,09,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.2199997902,
+    "high": 7.25,
+    "low": 6.75,
+    "close": 7.0,
+    "volume": 7100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.0199999809,
+    "high": 7.1550002098,
+    "low": 7.0,
+    "close": 7.0199999809,
+    "volume": 8500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.1750001907,
+    "high": 7.2839999199,
+    "low": 7.0,
+    "close": 7.0100002289,
+    "volume": 6600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.0,
+    "high": 7.4800000191,
+    "low": 7.0,
+    "close": 7.0300002098,
+    "volume": 22400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,15,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.0900001526,
+    "high": 7.3600001335,
+    "low": 7.0,
+    "close": 7.0100002289,
+    "volume": 4800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,16,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.0900001526,
+    "high": 7.1500000954,
+    "low": 7.0,
+    "close": 7.1500000954,
+    "volume": 6100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.0089998245,
+    "high": 7.3899998665,
+    "low": 6.8699998856,
+    "close": 6.9000000954,
+    "volume": 24200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.7600002289,
+    "high": 7.1599998474,
+    "low": 6.7100000381,
+    "close": 6.7100000381,
+    "volume": 2600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,19,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.4499998093,
+    "high": 6.6999998093,
+    "low": 5.8200001717,
+    "close": 5.8400001526,
+    "volume": 8700.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,04,22,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.3400001526,
+    "high": 6.2100000381,
+    "low": 5.1799998283,
+    "close": 5.6900000572,
+    "volume": 6100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.5,
+    "high": 5.9800000191,
+    "low": 5.5,
+    "close": 5.9800000191,
+    "volume": 2800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.9099998474,
+    "high": 6.0050001144,
+    "low": 5.5300002098,
+    "close": 5.7950000763,
+    "volume": 2300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,25,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.6599998474,
+    "high": 6.5999999046,
+    "low": 5.6599998474,
+    "close": 6.1999998093,
+    "volume": 6900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.1999998093,
+    "high": 6.4600000381,
+    "low": 6.1999998093,
+    "close": 6.2899999619,
+    "volume": 1800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,04,29,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0500001907,
+    "high": 6.0500001907,
+    "low": 6.0399999619,
+    "close": 6.0500001907,
+    "volume": 4200.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,04,30,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0500001907,
+    "high": 6.1979999542,
+    "low": 5.7100000381,
+    "close": 5.7100000381,
+    "volume": 4000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,01,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.8299999237,
+    "high": 5.8299999237,
+    "low": 5.8299999237,
+    "close": 5.8299999237,
+    "volume": 400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,02,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0300002098,
+    "high": 6.138999939,
+    "low": 6.0300002098,
+    "close": 6.0900001526,
+    "volume": 1200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0,
+    "high": 6.3299999237,
+    "low": 5.6599998474,
+    "close": 5.8699998856,
+    "volume": 5000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0599999428,
+    "high": 6.0599999428,
+    "low": 5.5500001907,
+    "close": 5.5500001907,
+    "volume": 23000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,07,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.6050000191,
+    "high": 5.9099998474,
+    "low": 5.6050000191,
+    "close": 5.6799998283,
+    "volume": 1400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,08,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.6100001335,
+    "high": 6.0,
+    "low": 5.6100001335,
+    "close": 5.7309999466,
+    "volume": 1300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,09,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.8400001526,
+    "high": 5.8400001526,
+    "low": 5.5999999046,
+    "close": 5.5999999046,
+    "volume": 1900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.5999999046,
+    "high": 6.0300002098,
+    "low": 5.3000001907,
+    "close": 5.3090000153,
+    "volume": 42800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.3639998436,
+    "high": 5.7249999046,
+    "low": 5.3639998436,
+    "close": 5.7249999046,
+    "volume": 2100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,14,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.6220002174,
+    "high": 5.6999998093,
+    "low": 5.3299999237,
+    "close": 5.3299999237,
+    "volume": 5400.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,05,15,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.3200001717,
+    "high": 5.6799998283,
+    "low": 5.3200001717,
+    "close": 5.5900001526,
+    "volume": 2300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,16,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.5999999046,
+    "high": 5.5999999046,
+    "low": 5.4169998169,
+    "close": 5.4169998169,
+    "volume": 1900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.4000000954,
+    "high": 5.4600000381,
+    "low": 5.2399997711,
+    "close": 5.3400001526,
+    "volume": 9900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.4699997902,
+    "high": 5.4699997902,
+    "low": 5.1799998283,
+    "close": 5.256000042,
+    "volume": 6900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,21,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.3499999046,
+    "high": 5.5679998398,
+    "low": 5.3499999046,
+    "close": 5.5,
+    "volume": 10000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,22,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.6399998665,
+    "high": 5.9899997711,
+    "low": 5.6300001144,
+    "close": 5.9479999542,
+    "volume": 4700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0,
+    "high": 6.0,
+    "low": 5.75,
+    "close": 5.7540001869,
+    "volume": 11800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.8600001335,
+    "high": 6.8400001526,
+    "low": 5.8600001335,
+    "close": 6.4699997902,
+    "volume": 74700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,28,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.5700001717,
+    "high": 6.9299998283,
+    "low": 6.0920000076,
+    "close": 6.6199998856,
+    "volume": 54100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,29,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.6900000572,
+    "high": 6.75,
+    "low": 6.0199999809,
+    "close": 6.3299999237,
+    "volume": 19900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,30,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.2800002098,
+    "high": 6.2800002098,
+    "low": 6.0300002098,
+    "close": 6.0349998474,
+    "volume": 2600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,05,31,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0399999619,
+    "high": 6.3400001526,
+    "low": 6.0399999619,
+    "close": 6.0799999237,
+    "volume": 8600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.1999998093,
+    "high": 6.1999998093,
+    "low": 6.0999999046,
+    "close": 6.1500000954,
+    "volume": 4300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,04,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.2140002251,
+    "high": 6.3499999046,
+    "low": 6.1500000954,
+    "close": 6.1750001907,
+    "volume": 4900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.5799999237,
+    "high": 6.5799999237,
+    "low": 6.1500000954,
+    "close": 6.1510000229,
+    "volume": 11200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.1500000954,
+    "high": 6.3400001526,
+    "low": 6.1500000954,
+    "close": 6.3249998093,
+    "volume": 5600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,07,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.3200001717,
+    "high": 6.3200001717,
+    "low": 6.1500000954,
+    "close": 6.1599998474,
+    "volume": 4900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.1500000954,
+    "high": 6.3660001755,
+    "low": 6.1500000954,
+    "close": 6.1900000572,
+    "volume": 5300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.1900000572,
+    "high": 6.3150000572,
+    "low": 6.1500000954,
+    "close": 6.1500000954,
+    "volume": 16600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.3400001526,
+    "high": 6.3600001335,
+    "low": 6.1599998474,
+    "close": 6.2300000191,
+    "volume": 1300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.2899999619,
+    "high": 6.2899999619,
+    "low": 6.1500000954,
+    "close": 6.1500000954,
+    "volume": 6400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,14,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.25,
+    "high": 6.25,
+    "low": 6.1500000954,
+    "close": 6.1500000954,
+    "volume": 2800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.1500000954,
+    "high": 6.4899997711,
+    "low": 6.1500000954,
+    "close": 6.1799998283,
+    "volume": 3100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.2059998512,
+    "high": 6.2059998512,
+    "low": 6.0,
+    "close": 6.0,
+    "volume": 2700.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,06,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0,
+    "high": 6.2800002098,
+    "low": 5.9099998474,
+    "close": 5.9650001526,
+    "volume": 6500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,21,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.9000000954,
+    "high": 5.9699997902,
+    "low": 5.8060002327,
+    "close": 5.9699997902,
+    "volume": 14900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0,
+    "high": 6.0,
+    "low": 5.9099998474,
+    "close": 5.9510002136,
+    "volume": 1600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,25,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.8000001907,
+    "high": 5.8000001907,
+    "low": 5.8000001907,
+    "close": 5.8000001907,
+    "volume": 1600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.8949999809,
+    "high": 5.8949999809,
+    "low": 5.75,
+    "close": 5.75,
+    "volume": 3100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,27,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.9699997902,
+    "high": 6.3400001526,
+    "low": 5.7800002098,
+    "close": 5.7800002098,
+    "volume": 6500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,06,28,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.8000001907,
+    "high": 6.3400001526,
+    "low": 5.8000001907,
+    "close": 6.3400001526,
+    "volume": 2700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,01,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.3400001526,
+    "high": 6.3400001526,
+    "low": 5.9439997673,
+    "close": 6.0900001526,
+    "volume": 4900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,02,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.9699997902,
+    "high": 5.9699997902,
+    "low": 5.7509999275,
+    "close": 5.8270001411,
+    "volume": 4600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.8499999046,
+    "high": 6.0900001526,
+    "low": 5.8499999046,
+    "close": 6.0900001526,
+    "volume": 600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.1199998856,
+    "high": 6.1199998856,
+    "low": 5.8000001907,
+    "close": 6.0,
+    "volume": 2900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,08,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.3099999428,
+    "high": 6.3099999428,
+    "low": 5.8000001907,
+    "close": 5.8000001907,
+    "volume": 5000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,09,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.8499999046,
+    "high": 5.9499998093,
+    "low": 5.6999998093,
+    "close": 5.8550000191,
+    "volume": 11200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.7729997635,
+    "high": 5.8499999046,
+    "low": 5.7199997902,
+    "close": 5.8400001526,
+    "volume": 5200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.75,
+    "high": 6.5999999046,
+    "low": 5.75,
+    "close": 6.1100001335,
+    "volume": 82100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0999999046,
+    "high": 6.4050002098,
+    "low": 6.0999999046,
+    "close": 6.0999999046,
+    "volume": 14600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,15,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0999999046,
+    "high": 6.257999897,
+    "low": 6.0999999046,
+    "close": 6.0999999046,
+    "volume": 8800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,16,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.1100001335,
+    "high": 6.3800001144,
+    "low": 6.0999999046,
+    "close": 6.25,
+    "volume": 10900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.25,
+    "high": 6.25,
+    "low": 6.0999999046,
+    "close": 6.1100001335,
+    "volume": 5300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.1100001335,
+    "high": 6.1750001907,
+    "low": 6.0999999046,
+    "close": 6.1100001335,
+    "volume": 3700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,19,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.2100000381,
+    "high": 6.5399999619,
+    "low": 6.0999999046,
+    "close": 6.1199998856,
+    "volume": 18800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,22,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.1999998093,
+    "high": 6.5460000038,
+    "low": 6.0999999046,
+    "close": 6.0999999046,
+    "volume": 26200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.1100001335,
+    "high": 6.1100001335,
+    "low": 6.1100001335,
+    "close": 6.1100001335,
+    "volume": 1000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0999999046,
+    "high": 6.1680002213,
+    "low": 6.0999999046,
+    "close": 6.1199998856,
+    "volume": 9700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,25,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0999999046,
+    "high": 6.1550002098,
+    "low": 6.0999999046,
+    "close": 6.1100001335,
+    "volume": 3300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.25,
+    "high": 6.3400001526,
+    "low": 6.0999999046,
+    "close": 6.0999999046,
+    "volume": 15600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,29,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0999999046,
+    "high": 6.111000061,
+    "low": 6.0999999046,
+    "close": 6.0999999046,
+    "volume": 5200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,07,30,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.1199998856,
+    "high": 6.4200000763,
+    "low": 6.1199998856,
+    "close": 6.2950000763,
+    "volume": 4100.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2024,07,31,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.1999998093,
+    "high": 6.2100000381,
+    "low": 6.1100001335,
+    "close": 6.1659998894,
+    "volume": 3000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,01,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.2600002289,
+    "high": 6.2600002289,
+    "low": 6.0999999046,
+    "close": 6.0999999046,
+    "volume": 3000.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,08,02,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.1100001335,
+    "high": 6.4099998474,
+    "low": 6.0,
+    "close": 6.0,
+    "volume": 7300.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,08,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.6399998665,
+    "high": 5.8099999428,
+    "low": 5.3070001602,
+    "close": 5.6100001335,
+    "volume": 13800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.6999998093,
+    "high": 5.8249998093,
+    "low": 5.6599998474,
+    "close": 5.765999794,
+    "volume": 5700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,07,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.6999998093,
+    "high": 5.8350000381,
+    "low": 5.3600001335,
+    "close": 5.3600001335,
+    "volume": 9600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,08,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.3000001907,
+    "high": 5.7399997711,
+    "low": 5.1799998283,
+    "close": 5.1799998283,
+    "volume": 12800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,09,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.2300000191,
+    "high": 5.2300000191,
+    "low": 5.0199999809,
+    "close": 5.0199999809,
+    "volume": 4600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.1300001144,
+    "high": 5.1399998665,
+    "low": 5.0799999237,
+    "close": 5.1399998665,
+    "volume": 1300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.0999999046,
+    "high": 5.1100001335,
+    "low": 5.0770001411,
+    "close": 5.0799999237,
+    "volume": 9400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,14,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.0900001526,
+    "high": 5.3499999046,
+    "low": 5.0900001526,
+    "close": 5.25,
+    "volume": 12800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,15,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.1999998093,
+    "high": 5.1999998093,
+    "low": 5.1939997673,
+    "close": 5.1939997673,
+    "volume": 700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,16,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.1500000954,
+    "high": 5.2899999619,
+    "low": 5.1500000954,
+    "close": 5.2259998322,
+    "volume": 7600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,19,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.1599998474,
+    "high": 5.3000001907,
+    "low": 5.1500000954,
+    "close": 5.1700000763,
+    "volume": 10900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.1500000954,
+    "high": 5.1999998093,
+    "low": 5.1500000954,
+    "close": 5.1999998093,
+    "volume": 4000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,21,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.1500000954,
+    "high": 5.1750001907,
+    "low": 5.1500000954,
+    "close": 5.1500000954,
+    "volume": 3700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,22,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.3099999428,
+    "high": 5.3499999046,
+    "low": 5.1500000954,
+    "close": 5.1599998474,
+    "volume": 9700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.1999998093,
+    "high": 5.2249999046,
+    "low": 5.1500000954,
+    "close": 5.1999998093,
+    "volume": 9100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.1799998283,
+    "high": 5.3200001717,
+    "low": 5.1500000954,
+    "close": 5.3200001717,
+    "volume": 900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,27,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.2449998856,
+    "high": 5.271999836,
+    "low": 5.1500000954,
+    "close": 5.1500000954,
+    "volume": 1600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,28,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.0999999046,
+    "high": 5.1690001488,
+    "low": 5.0999999046,
+    "close": 5.1069998741,
+    "volume": 7500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,29,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.263999939,
+    "high": 5.2649998665,
+    "low": 5.263999939,
+    "close": 5.2649998665,
+    "volume": 1000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,08,30,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.6999998093,
+    "high": 5.6999998093,
+    "low": 5.1199998856,
+    "close": 5.2899999619,
+    "volume": 1800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.4400000572,
+    "high": 5.4400000572,
+    "low": 5.0,
+    "close": 5.0960001945,
+    "volume": 3000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,04,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.4200000763,
+    "high": 5.4200000763,
+    "low": 5.0,
+    "close": 5.0900001526,
+    "volume": 10700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.2199997902,
+    "high": 5.2399997711,
+    "low": 5.0130000114,
+    "close": 5.0799999237,
+    "volume": 10400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.0,
+    "high": 5.3499999046,
+    "low": 5.0,
+    "close": 5.1700000763,
+    "volume": 15300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,09,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.3410000801,
+    "high": 5.3410000801,
+    "low": 5.1799998283,
+    "close": 5.2090001106,
+    "volume": 1600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.3200001717,
+    "high": 5.640999794,
+    "low": 5.25,
+    "close": 5.251999855,
+    "volume": 15400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.3000001907,
+    "high": 5.4499998093,
+    "low": 5.25,
+    "close": 5.4499998093,
+    "volume": 13100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.4099998474,
+    "high": 5.5,
+    "low": 5.2899999619,
+    "close": 5.3899998665,
+    "volume": 14300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.6799998283,
+    "high": 5.6999998093,
+    "low": 5.25,
+    "close": 5.6500000954,
+    "volume": 16000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,16,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.6999998093,
+    "high": 5.7699999809,
+    "low": 5.6500000954,
+    "close": 5.6500000954,
+    "volume": 11500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.6500000954,
+    "high": 5.9299998283,
+    "low": 5.6500000954,
+    "close": 5.7620000839,
+    "volume": 17400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.9050002098,
+    "high": 6.0799999237,
+    "low": 5.8000001907,
+    "close": 5.8200001717,
+    "volume": 6900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,19,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.9200000763,
+    "high": 6.0399999619,
+    "low": 5.9000000954,
+    "close": 5.9000000954,
+    "volume": 1300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.8499999046,
+    "high": 5.8499999046,
+    "low": 5.6500000954,
+    "close": 5.6599998474,
+    "volume": 16900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.6500000954,
+    "high": 5.8499999046,
+    "low": 5.6500000954,
+    "close": 5.6900000572,
+    "volume": 6300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.6900000572,
+    "high": 5.7699999809,
+    "low": 5.6500000954,
+    "close": 5.6500000954,
+    "volume": 2500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,25,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.8000001907,
+    "high": 5.8400001526,
+    "low": 5.6999998093,
+    "close": 5.6999998093,
+    "volume": 1400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 5.6999998093,
+    "high": 5.8499999046,
+    "low": 5.6999998093,
+    "close": 5.8000001907,
+    "volume": 7200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,27,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.0050001144,
+    "high": 6.0130000114,
+    "low": 5.7199997902,
+    "close": 5.7199997902,
+    "volume": 10500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,09,30,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 6.7300000191,
+    "high": 9.3400001526,
+    "low": 6.2600002289,
+    "close": 8.1999998093,
+    "volume": 338100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,01,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.5900001526,
+    "high": 11.1499996185,
+    "low": 7.3210000992,
+    "close": 8.3999996185,
+    "volume": 402100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,02,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.3500003815,
+    "high": 8.6899995804,
+    "low": 7.4600000381,
+    "close": 8.220000267,
+    "volume": 68800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.279999733,
+    "high": 9.5799999237,
+    "low": 8.279999733,
+    "close": 9.5699996948,
+    "volume": 64500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,04,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.5100002289,
+    "high": 10.5,
+    "low": 9.5100002289,
+    "close": 10.3500003815,
+    "volume": 108800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,07,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.529999733,
+    "high": 14.0959997177,
+    "low": 11.2250003815,
+    "close": 13.0,
+    "volume": 452000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,08,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 14.1899995804,
+    "high": 14.4600000381,
+    "low": 11.279999733,
+    "close": 12.4600000381,
+    "volume": 278200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,09,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.6400003433,
+    "high": 12.8000001907,
+    "low": 11.0799999237,
+    "close": 12.0,
+    "volume": 138500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.4499998093,
+    "high": 12.6000003815,
+    "low": 11.2100000381,
+    "close": 11.5,
+    "volume": 112400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.3900003433,
+    "high": 11.8409996033,
+    "low": 9.8999996185,
+    "close": 10.3800001144,
+    "volume": 154000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,14,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.3000001907,
+    "high": 10.7100000381,
+    "low": 9.6000003815,
+    "close": 10.0399999619,
+    "volume": 52000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,15,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.8999996185,
+    "high": 10.3400001526,
+    "low": 9.5100002289,
+    "close": 9.6000003815,
+    "volume": 65300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,16,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.6000003815,
+    "high": 10.0,
+    "low": 9.0600004196,
+    "close": 9.8999996185,
+    "volume": 45100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.9899997711,
+    "high": 10.9099998474,
+    "low": 9.6099996567,
+    "close": 9.9600000381,
+    "volume": 92500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.8599996567,
+    "high": 10.5600004196,
+    "low": 9.8000001907,
+    "close": 10.5,
+    "volume": 46400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,21,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.0,
+    "high": 11.0,
+    "low": 9.8400001526,
+    "close": 10.0900001526,
+    "volume": 29700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,22,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.0900001526,
+    "high": 10.6450004578,
+    "low": 9.9379997253,
+    "close": 10.3999996185,
+    "volume": 41200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.4300003052,
+    "high": 10.9899997711,
+    "low": 10.0100002289,
+    "close": 10.220000267,
+    "volume": 17400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.5500001907,
+    "high": 11.0,
+    "low": 9.75,
+    "close": 10.1199998856,
+    "volume": 62200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,25,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.0100002289,
+    "high": 10.4499998093,
+    "low": 10.0100002289,
+    "close": 10.3999996185,
+    "volume": 21000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,28,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.3599996567,
+    "high": 10.5290002823,
+    "low": 10.0500001907,
+    "close": 10.0500001907,
+    "volume": 28600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,29,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.1199998856,
+    "high": 10.1199998856,
+    "low": 9.2299995422,
+    "close": 9.4399995804,
+    "volume": 35100.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,10,30,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.25,
+    "high": 9.3660001755,
+    "low": 8.8800001144,
+    "close": 9.029999733,
+    "volume": 32300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,10,31,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.0900001526,
+    "high": 9.1499996185,
+    "low": 8.142999649,
+    "close": 9.1400003433,
+    "volume": 44400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,01,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.220000267,
+    "high": 9.220000267,
+    "low": 8.5,
+    "close": 8.8599996567,
+    "volume": 87000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,04,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.8900003433,
+    "high": 9.0399999619,
+    "low": 8.8000001907,
+    "close": 8.8999996185,
+    "volume": 8500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.9499998093,
+    "high": 8.9499998093,
+    "low": 8.6000003815,
+    "close": 8.7399997711,
+    "volume": 39300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.6000003815,
+    "high": 8.656999588,
+    "low": 8.0129995346,
+    "close": 8.1700000763,
+    "volume": 37400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,07,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.1700000763,
+    "high": 10.1000003815,
+    "low": 8.1700000763,
+    "close": 9.9799995422,
+    "volume": 137600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,08,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.9399995804,
+    "high": 9.9799995422,
+    "low": 9.3070001602,
+    "close": 9.8699998856,
+    "volume": 25100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.7399997711,
+    "high": 10.4899997711,
+    "low": 9.5900001526,
+    "close": 10.1400003433,
+    "volume": 53000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.1400003433,
+    "high": 10.1400003433,
+    "low": 8.7399997711,
+    "close": 9.529999733,
+    "volume": 70100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.3699998856,
+    "high": 9.6780004501,
+    "low": 8.3500003815,
+    "close": 8.6800003052,
+    "volume": 24100.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,11,14,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.7899999619,
+    "high": 8.7899999619,
+    "low": 7.6599998474,
+    "close": 8.5,
+    "volume": 40500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,15,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.3199996948,
+    "high": 8.5799999237,
+    "low": 8.25,
+    "close": 8.25,
+    "volume": 10800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.0,
+    "high": 12.3100004196,
+    "low": 8.6599998474,
+    "close": 10.3800001144,
+    "volume": 338300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,19,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.8500003815,
+    "high": 11.0500001907,
+    "low": 9.75,
+    "close": 10.1300001144,
+    "volume": 77000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.1599998474,
+    "high": 10.4600000381,
+    "low": 9.8140001297,
+    "close": 10.4499998093,
+    "volume": 44400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,21,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.4799995422,
+    "high": 10.4799995422,
+    "low": 9.5200004578,
+    "close": 10.1199998856,
+    "volume": 38500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,22,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.25,
+    "high": 11.1999998093,
+    "low": 10.1099996567,
+    "close": 11.1999998093,
+    "volume": 54400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,25,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.8900003433,
+    "high": 12.8260002136,
+    "low": 11.3500003815,
+    "close": 11.9799995422,
+    "volume": 186700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.0900001526,
+    "high": 13.1599998474,
+    "low": 11.9899997711,
+    "close": 12.8699998856,
+    "volume": 96700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,27,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.0,
+    "high": 13.1999998093,
+    "low": 12.1300001144,
+    "close": 12.6899995804,
+    "volume": 41500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,11,29,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.7600002289,
+    "high": 12.7600002289,
+    "low": 11.5,
+    "close": 12.1199998856,
+    "volume": 52600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,02,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.3100004196,
+    "high": 12.5050001144,
+    "low": 11.7749996185,
+    "close": 12.1300001144,
+    "volume": 44100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.279999733,
+    "high": 13.0,
+    "low": 12.220000267,
+    "close": 12.6000003815,
+    "volume": 76000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,04,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.9899997711,
+    "high": 13.0,
+    "low": 11.0100002289,
+    "close": 11.4499998093,
+    "volume": 95600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.3000001907,
+    "high": 11.9300003052,
+    "low": 11.0200004578,
+    "close": 11.3800001144,
+    "volume": 62600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.1999998093,
+    "high": 11.1999998093,
+    "low": 10.6499996185,
+    "close": 10.8400001526,
+    "volume": 39200.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,12,09,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.6199998856,
+    "high": 11.6499996185,
+    "low": 10.6099996567,
+    "close": 10.8199996948,
+    "volume": 62100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.8999996185,
+    "high": 11.1949996948,
+    "low": 10.5,
+    "close": 10.5,
+    "volume": 40300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.5799999237,
+    "high": 10.7849998474,
+    "low": 10.1800003052,
+    "close": 10.3800001144,
+    "volume": 30500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.3299999237,
+    "high": 11.3999996185,
+    "low": 10.25,
+    "close": 11.029999733,
+    "volume": 38700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.0500001907,
+    "high": 11.0500001907,
+    "low": 10.1999998093,
+    "close": 10.4899997711,
+    "volume": 31400.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2024,12,16,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.2600002289,
+    "high": 10.4300003052,
+    "low": 9.0,
+    "close": 9.2100000381,
+    "volume": 35200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.2100000381,
+    "high": 9.5,
+    "low": 8.8000001907,
+    "close": 8.9300003052,
+    "volume": 27000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.8599996567,
+    "high": 9.0649995804,
+    "low": 8.529999733,
+    "close": 8.6000003815,
+    "volume": 22400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,19,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.4799995422,
+    "high": 8.9250001907,
+    "low": 8.0,
+    "close": 8.7399997711,
+    "volume": 30800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.6099996567,
+    "high": 8.6999998093,
+    "low": 8.3199996948,
+    "close": 8.3199996948,
+    "volume": 20100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.3000001907,
+    "high": 8.9600000381,
+    "low": 8.1999998093,
+    "close": 8.5100002289,
+    "volume": 28200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.6000003815,
+    "high": 8.9300003052,
+    "low": 8.6000003815,
+    "close": 8.6770000458,
+    "volume": 6500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.6400003433,
+    "high": 9.1000003815,
+    "low": 8.5,
+    "close": 8.6899995804,
+    "volume": 23500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,27,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.5100002289,
+    "high": 9.0799999237,
+    "low": 8.5100002289,
+    "close": 8.6199998856,
+    "volume": 10000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,30,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.529999733,
+    "high": 8.8699998856,
+    "low": 8.5,
+    "close": 8.6800003052,
+    "volume": 13500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2024,12,31,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.5,
+    "high": 8.8400001526,
+    "low": 8.5,
+    "close": 8.6099996567,
+    "volume": 25900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,02,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.5100002289,
+    "high": 9.1999998093,
+    "low": 8.5100002289,
+    "close": 8.8299999237,
+    "volume": 14600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.8000001907,
+    "high": 9.6099996567,
+    "low": 8.75,
+    "close": 9.0600004196,
+    "volume": 31500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.1899995804,
+    "high": 9.4399995804,
+    "low": 8.1000003815,
+    "close": 8.220000267,
+    "volume": 45400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,07,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.3900003433,
+    "high": 8.3900003433,
+    "low": 7.7600002289,
+    "close": 7.8000001907,
+    "volume": 25700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,08,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.6799998283,
+    "high": 7.7490000725,
+    "low": 7.2600002289,
+    "close": 7.3400001526,
+    "volume": 20000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.8000001907,
+    "high": 8.3699998856,
+    "low": 7.4000000954,
+    "close": 8.25,
+    "volume": 30000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.2399997711,
+    "high": 8.2399997711,
+    "low": 7.75,
+    "close": 7.8299999237,
+    "volume": 18600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,14,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.75,
+    "high": 8.8000001907,
+    "low": 7.75,
+    "close": 8.1999998093,
+    "volume": 15600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,15,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.3400001526,
+    "high": 8.6599998474,
+    "low": 8.029999733,
+    "close": 8.5200004578,
+    "volume": 24300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,16,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.4499998093,
+    "high": 9.029999733,
+    "low": 8.4499998093,
+    "close": 9.029999733,
+    "volume": 9200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.9799995422,
+    "high": 9.6899995804,
+    "low": 8.5500001907,
+    "close": 9.6899995804,
+    "volume": 30100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,21,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.7700004578,
+    "high": 9.9899997711,
+    "low": 9.0,
+    "close": 9.3699998856,
+    "volume": 18100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,22,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.220000267,
+    "high": 9.5,
+    "low": 8.6599998474,
+    "close": 8.8400001526,
+    "volume": 13800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.8400001526,
+    "high": 9.2530002594,
+    "low": 8.3999996185,
+    "close": 8.9289999008,
+    "volume": 13000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.0,
+    "high": 9.1400003433,
+    "low": 8.6999998093,
+    "close": 9.1400003433,
+    "volume": 21700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,27,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.7299995422,
+    "high": 9.0469999313,
+    "low": 8.25,
+    "close": 8.7700004578,
+    "volume": 17300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,28,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.5100002289,
+    "high": 9.0900001526,
+    "low": 8.4759998322,
+    "close": 8.9099998474,
+    "volume": 11600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,29,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.8999996185,
+    "high": 9.1899995804,
+    "low": 8.8699998856,
+    "close": 9.1800003052,
+    "volume": 7400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,30,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.1800003052,
+    "high": 9.3859996796,
+    "low": 9.0500001907,
+    "close": 9.3500003815,
+    "volume": 9900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,01,31,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.1000003815,
+    "high": 9.2899999619,
+    "low": 8.8999996185,
+    "close": 9.2600002289,
+    "volume": 13100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.9899997711,
+    "high": 12.3000001907,
+    "low": 10.9099998474,
+    "close": 10.9200000763,
+    "volume": 327800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,04,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.25,
+    "high": 11.6000003815,
+    "low": 10.3000001907,
+    "close": 10.6700000763,
+    "volume": 174700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.8299999237,
+    "high": 11.5900001526,
+    "low": 10.75,
+    "close": 10.8999996185,
+    "volume": 53500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.2299995422,
+    "high": 11.2690000534,
+    "low": 10.0100002289,
+    "close": 10.0200004578,
+    "volume": 54500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,07,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.1499996185,
+    "high": 11.029999733,
+    "low": 10.0399999619,
+    "close": 10.0399999619,
+    "volume": 47200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.1000003815,
+    "high": 12.25,
+    "low": 10.8000001907,
+    "close": 10.8100004196,
+    "volume": 131000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.9899997711,
+    "high": 13.25,
+    "low": 11.1199998856,
+    "close": 12.5900001526,
+    "volume": 225200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.6800003052,
+    "high": 12.75,
+    "low": 11.0,
+    "close": 11.6700000763,
+    "volume": 102900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.8000001907,
+    "high": 12.1999998093,
+    "low": 11.75,
+    "close": 12.1800003052,
+    "volume": 40000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,14,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.029999733,
+    "high": 12.4709997177,
+    "low": 11.5,
+    "close": 11.6000003815,
+    "volume": 64700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.9799995422,
+    "high": 12.0,
+    "low": 11.5600004196,
+    "close": 11.8999996185,
+    "volume": 105200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,19,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.0500001907,
+    "high": 12.3500003815,
+    "low": 11.9099998474,
+    "close": 12.2100000381,
+    "volume": 182800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.3900003433,
+    "high": 12.3900003433,
+    "low": 11.5100002289,
+    "close": 11.779999733,
+    "volume": 81900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,21,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.8199996948,
+    "high": 12.029999733,
+    "low": 11.5,
+    "close": 11.6800003052,
+    "volume": 63400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.3599996567,
+    "high": 11.7229995728,
+    "low": 11.0,
+    "close": 11.25,
+    "volume": 43000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,25,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.0,
+    "high": 11.3900003433,
+    "low": 10.4530000687,
+    "close": 10.6800003052,
+    "volume": 55500.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,02,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.6800003052,
+    "high": 11.2620000839,
+    "low": 10.6300001144,
+    "close": 11.1999998093,
+    "volume": 15400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,02,27,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.1999998093,
+    "high": 11.1999998093,
+    "low": 10.4499998093,
+    "close": 10.7299995422,
+    "volume": 31400.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,02,28,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.6199998856,
+    "high": 10.6949996948,
+    "low": 10.1000003815,
+    "close": 10.3800001144,
+    "volume": 35900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.3199996948,
+    "high": 10.5550003052,
+    "low": 10.1300001144,
+    "close": 10.1300001144,
+    "volume": 34200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,04,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.2100000381,
+    "high": 10.2100000381,
+    "low": 9.5539999008,
+    "close": 10.1199998856,
+    "volume": 54500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.0100002289,
+    "high": 10.3389997482,
+    "low": 9.4499998093,
+    "close": 9.8299999237,
+    "volume": 44300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.6599998474,
+    "high": 10.1999998093,
+    "low": 9.6599998474,
+    "close": 9.7700004578,
+    "volume": 24700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,07,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.9799995422,
+    "high": 9.9799995422,
+    "low": 8.8380002975,
+    "close": 9.1700000763,
+    "volume": 56700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.8900003433,
+    "high": 9.0450000763,
+    "low": 8.5,
+    "close": 8.7100000381,
+    "volume": 47900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.8299999237,
+    "high": 8.875,
+    "low": 8.0249996185,
+    "close": 8.220000267,
+    "volume": 45600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.4300003052,
+    "high": 9.0,
+    "low": 8.4300003052,
+    "close": 8.8100004196,
+    "volume": 48300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.8999996185,
+    "high": 9.1639995575,
+    "low": 8.6999998093,
+    "close": 8.8199996948,
+    "volume": 31100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,14,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.779999733,
+    "high": 9.970000267,
+    "low": 8.779999733,
+    "close": 9.779999733,
+    "volume": 34200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.7899999619,
+    "high": 10.4200000763,
+    "low": 9.75,
+    "close": 10.220000267,
+    "volume": 44500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.3900003433,
+    "high": 10.3900003433,
+    "low": 9.4250001907,
+    "close": 9.8199996948,
+    "volume": 44800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,19,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.6599998474,
+    "high": 10.25,
+    "low": 9.5,
+    "close": 9.9499998093,
+    "volume": 40700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.7600002289,
+    "high": 10.1999998093,
+    "low": 9.75,
+    "close": 10.1700000763,
+    "volume": 21900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,21,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.1999998093,
+    "high": 10.1999998093,
+    "low": 9.8900003433,
+    "close": 9.9099998474,
+    "volume": 17400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.0500001907,
+    "high": 10.4899997711,
+    "low": 10.0100002289,
+    "close": 10.25,
+    "volume": 31300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,25,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.3699998856,
+    "high": 10.6990003586,
+    "low": 10.1400003433,
+    "close": 10.4399995804,
+    "volume": 24000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.25,
+    "high": 10.4799995422,
+    "low": 9.2069997787,
+    "close": 9.3999996185,
+    "volume": 36300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,27,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.4499998093,
+    "high": 10.3809995651,
+    "low": 9.0200004578,
+    "close": 9.5500001907,
+    "volume": 26800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,28,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.6099996567,
+    "high": 9.8039999008,
+    "low": 9.1499996185,
+    "close": 9.1499996185,
+    "volume": 29400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,03,31,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.6000003815,
+    "high": 10.1999998093,
+    "low": 9.3999996185,
+    "close": 9.8000001907,
+    "volume": 26900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,01,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.8000001907,
+    "high": 9.8999996185,
+    "low": 8.7600002289,
+    "close": 8.9600000381,
+    "volume": 63300.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,04,02,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.8500003815,
+    "high": 9.3100004196,
+    "low": 8.7919998169,
+    "close": 9.3100004196,
+    "volume": 48700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.9399995804,
+    "high": 9.3400001526,
+    "low": 8.5500001907,
+    "close": 8.8900003433,
+    "volume": 83200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,04,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.9499998093,
+    "high": 9.1300001144,
+    "low": 8.6750001907,
+    "close": 9.1300001144,
+    "volume": 85600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,07,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.7100000381,
+    "high": 9.3500003815,
+    "low": 8.7100000381,
+    "close": 8.8299999237,
+    "volume": 31300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,08,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.2700004578,
+    "high": 9.2700004578,
+    "low": 8.0749998093,
+    "close": 8.3599996567,
+    "volume": 62800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,09,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.3999996185,
+    "high": 9.5,
+    "low": 8.1750001907,
+    "close": 9.3599996567,
+    "volume": 73100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.3699998856,
+    "high": 10.0200004578,
+    "low": 9.3149995804,
+    "close": 9.7399997711,
+    "volume": 27500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.8999996185,
+    "high": 10.3699998856,
+    "low": 9.5329999924,
+    "close": 10.0600004196,
+    "volume": 34800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,14,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.3900003433,
+    "high": 10.6800003052,
+    "low": 9.9449996948,
+    "close": 10.5,
+    "volume": 45500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,15,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.3999996185,
+    "high": 10.9799995422,
+    "low": 10.3400001526,
+    "close": 10.9499998093,
+    "volume": 30100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,16,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.6099996567,
+    "high": 11.0399999619,
+    "low": 10.6099996567,
+    "close": 10.8000001907,
+    "volume": 35900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.8500003815,
+    "high": 10.9600000381,
+    "low": 10.1049995422,
+    "close": 10.470000267,
+    "volume": 21800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,21,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.5100002289,
+    "high": 10.7100000381,
+    "low": 10.0600004196,
+    "close": 10.25,
+    "volume": 23100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,22,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.2299995422,
+    "high": 10.4519996643,
+    "low": 9.6999998093,
+    "close": 10.1499996185,
+    "volume": 24100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.0500001907,
+    "high": 10.6999998093,
+    "low": 9.8000001907,
+    "close": 10.0900001526,
+    "volume": 16700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.3199996948,
+    "high": 10.8999996185,
+    "low": 10.1999998093,
+    "close": 10.4499998093,
+    "volume": 19900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,25,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.4300003052,
+    "high": 10.7569999695,
+    "low": 10.0,
+    "close": 10.3900003433,
+    "volume": 14100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,28,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.2899999619,
+    "high": 10.5480003357,
+    "low": 9.9399995804,
+    "close": 9.9600000381,
+    "volume": 13500.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,04,29,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.9499998093,
+    "high": 10.0200004578,
+    "low": 9.1800003052,
+    "close": 9.970000267,
+    "volume": 34400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,04,30,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.6999998093,
+    "high": 9.9799995422,
+    "low": 9.404999733,
+    "close": 9.6400003433,
+    "volume": 16100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,01,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.4799995422,
+    "high": 9.654999733,
+    "low": 9.3999996185,
+    "close": 9.3999996185,
+    "volume": 8600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,02,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.3299999237,
+    "high": 9.6499996185,
+    "low": 9.0799999237,
+    "close": 9.4200000763,
+    "volume": 20200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.5100002289,
+    "high": 9.6000003815,
+    "low": 9.0600004196,
+    "close": 9.3000001907,
+    "volume": 10700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.5699996948,
+    "high": 9.7899999619,
+    "low": 9.0,
+    "close": 9.6800003052,
+    "volume": 27700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,07,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.9099998474,
+    "high": 10.0249996185,
+    "low": 9.6000003815,
+    "close": 9.6000003815,
+    "volume": 20500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,08,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.6000003815,
+    "high": 9.6499996185,
+    "low": 9.1599998474,
+    "close": 9.3999996185,
+    "volume": 13600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,09,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.4600000381,
+    "high": 9.9899997711,
+    "low": 9.2150001526,
+    "close": 9.9799995422,
+    "volume": 15700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.3999996185,
+    "high": 10.779999733,
+    "low": 10.0500001907,
+    "close": 10.5,
+    "volume": 82200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.7399997711,
+    "high": 10.7399997711,
+    "low": 10.1899995804,
+    "close": 10.2100000381,
+    "volume": 23500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,14,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.0900001526,
+    "high": 10.3579998016,
+    "low": 9.2600002289,
+    "close": 9.4600000381,
+    "volume": 24000.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,05,15,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.3299999237,
+    "high": 9.720000267,
+    "low": 9.3299999237,
+    "close": 9.5500001907,
+    "volume": 11300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,16,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.720000267,
+    "high": 10.0,
+    "low": 9.6000003815,
+    "close": 9.8299999237,
+    "volume": 11200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,19,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.7299995422,
+    "high": 9.982000351,
+    "low": 9.7299995422,
+    "close": 9.7899999619,
+    "volume": 5200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.8500003815,
+    "high": 9.876999855,
+    "low": 9.3100004196,
+    "close": 9.3699998856,
+    "volume": 11300.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,05,21,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.3199996948,
+    "high": 9.5979995728,
+    "low": 9.1999998093,
+    "close": 9.25,
+    "volume": 11500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,22,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.1999998093,
+    "high": 9.4340000153,
+    "low": 8.6400003433,
+    "close": 8.8199996948,
+    "volume": 26600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.7899999619,
+    "high": 9.8400001526,
+    "low": 8.7899999619,
+    "close": 9.8299999237,
+    "volume": 26500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,27,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.9899997711,
+    "high": 10.0,
+    "low": 9.5600004196,
+    "close": 9.6599998474,
+    "volume": 11600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,28,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.6599998474,
+    "high": 9.9180002213,
+    "low": 9.3229999542,
+    "close": 9.6350002289,
+    "volume": 15600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,29,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.7399997711,
+    "high": 9.7860002518,
+    "low": 9.2899999619,
+    "close": 9.5,
+    "volume": 8800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,05,30,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.25,
+    "high": 9.6899995804,
+    "low": 9.0340003967,
+    "close": 9.0600004196,
+    "volume": 10300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,02,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.5699996948,
+    "high": 9.7899999619,
+    "low": 9.4499998093,
+    "close": 9.6499996185,
+    "volume": 32300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.6800003052,
+    "high": 9.8699998856,
+    "low": 9.5500001907,
+    "close": 9.6000003815,
+    "volume": 18500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,04,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.4300003052,
+    "high": 9.720000267,
+    "low": 9.4300003052,
+    "close": 9.4799995422,
+    "volume": 30000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.6000003815,
+    "high": 9.8199996948,
+    "low": 9.3999996185,
+    "close": 9.4849996567,
+    "volume": 32400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.5,
+    "high": 9.5600004196,
+    "low": 9.1999998093,
+    "close": 9.1999998093,
+    "volume": 22400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,09,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.6000003815,
+    "high": 10.0,
+    "low": 9.6000003815,
+    "close": 9.720000267,
+    "volume": 77400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.9300003052,
+    "high": 10.0,
+    "low": 9.5550003052,
+    "close": 9.6400003433,
+    "volume": 21900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.779999733,
+    "high": 10.0,
+    "low": 9.5500001907,
+    "close": 9.6800003052,
+    "volume": 15800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.720000267,
+    "high": 9.9600000381,
+    "low": 9.6199998856,
+    "close": 9.6350002289,
+    "volume": 13500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.5100002289,
+    "high": 10.0,
+    "low": 9.5,
+    "close": 9.781999588,
+    "volume": 61300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,16,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.9899997711,
+    "high": 10.1499996185,
+    "low": 9.8500003815,
+    "close": 9.8999996185,
+    "volume": 28700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.8900003433,
+    "high": 10.0600004196,
+    "low": 9.8100004196,
+    "close": 9.8400001526,
+    "volume": 17100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.9200000763,
+    "high": 9.9600000381,
+    "low": 9.8000001907,
+    "close": 9.8400001526,
+    "volume": 21800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.9399995804,
+    "high": 9.9600000381,
+    "low": 9.3999996185,
+    "close": 9.5900001526,
+    "volume": 29500.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,06,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.6000003815,
+    "high": 9.8400001526,
+    "low": 9.4099998474,
+    "close": 9.6899995804,
+    "volume": 14400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.5799999237,
+    "high": 9.6999998093,
+    "low": 8.6040000916,
+    "close": 9.3999996185,
+    "volume": 61900.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,06,25,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.3199996948,
+    "high": 9.3800001144,
+    "low": 9.0900001526,
+    "close": 9.1599998474,
+    "volume": 18800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.1400003433,
+    "high": 9.1719999313,
+    "low": 8.8500003815,
+    "close": 8.8500003815,
+    "volume": 33700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,27,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.8100004196,
+    "high": 8.8100004196,
+    "low": 8.4020004272,
+    "close": 8.6199998856,
+    "volume": 185600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,06,30,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.5200004578,
+    "high": 8.7469997406,
+    "low": 8.1999998093,
+    "close": 8.1999998093,
+    "volume": 37300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,01,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.220000267,
+    "high": 8.7449998856,
+    "low": 8.0909996033,
+    "close": 8.3549995422,
+    "volume": 21900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,02,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.4300003052,
+    "high": 8.779999733,
+    "low": 8.4300003052,
+    "close": 8.6400003433,
+    "volume": 15800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.6400003433,
+    "high": 8.7329998016,
+    "low": 8.4799995422,
+    "close": 8.5,
+    "volume": 8300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,07,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.4300003052,
+    "high": 8.8479995728,
+    "low": 8.3000001907,
+    "close": 8.529999733,
+    "volume": 16800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,08,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.5799999237,
+    "high": 8.8350000381,
+    "low": 8.2399997711,
+    "close": 8.2399997711,
+    "volume": 27100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,09,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.2100000381,
+    "high": 8.6149997711,
+    "low": 8.0399999619,
+    "close": 8.25,
+    "volume": 20400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.220000267,
+    "high": 8.220000267,
+    "low": 7.7699999809,
+    "close": 7.8899998665,
+    "volume": 36700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.9099998474,
+    "high": 7.9200000763,
+    "low": 7.4200000763,
+    "close": 7.4200000763,
+    "volume": 29800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,14,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.5100002289,
+    "high": 8.3310003281,
+    "low": 7.4200000763,
+    "close": 8.1999998093,
+    "volume": 152800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,15,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.3500003815,
+    "high": 9.1999998093,
+    "low": 8.3299999237,
+    "close": 8.75,
+    "volume": 93300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,16,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.8400001526,
+    "high": 8.8800001144,
+    "low": 8.6999998093,
+    "close": 8.7849998474,
+    "volume": 29000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.7700004578,
+    "high": 8.9499998093,
+    "low": 8.6899995804,
+    "close": 8.8599996567,
+    "volume": 16000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.8999996185,
+    "high": 8.9499998093,
+    "low": 8.7550001144,
+    "close": 8.8100004196,
+    "volume": 19400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,21,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.8100004196,
+    "high": 9.0769996643,
+    "low": 8.7910003662,
+    "close": 8.8599996567,
+    "volume": 20900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,22,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.8599996567,
+    "high": 9.0399999619,
+    "low": 8.8599996567,
+    "close": 8.970000267,
+    "volume": 18400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.9600000381,
+    "high": 9.1140003204,
+    "low": 8.6499996185,
+    "close": 8.75,
+    "volume": 10600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.6099996567,
+    "high": 8.6999998093,
+    "low": 8.3999996185,
+    "close": 8.3999996185,
+    "volume": 13000.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,07,25,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.3699998856,
+    "high": 8.5740003586,
+    "low": 8.1800003052,
+    "close": 8.2899999619,
+    "volume": 14400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,28,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.5500001907,
+    "high": 8.5500001907,
+    "low": 8.1999998093,
+    "close": 8.3000001907,
+    "volume": 20600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,29,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.2399997711,
+    "high": 8.5249996185,
+    "low": 8.0600004196,
+    "close": 8.0799999237,
+    "volume": 14000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,30,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.1199998856,
+    "high": 8.4499998093,
+    "low": 7.75,
+    "close": 7.8800001144,
+    "volume": 19000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,07,31,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.8800001144,
+    "high": 8.25,
+    "low": 7.75,
+    "close": 7.75,
+    "volume": 17800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,01,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.8000001907,
+    "high": 8.1199998856,
+    "low": 7.5999999046,
+    "close": 7.7600002289,
+    "volume": 22400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,04,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.8200001717,
+    "high": 8.3599996567,
+    "low": 7.7899999619,
+    "close": 8.2600002289,
+    "volume": 93900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.8680000305,
+    "high": 8.4099998474,
+    "low": 7.8680000305,
+    "close": 8.0,
+    "volume": 21300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.0699996948,
+    "high": 8.1700000763,
+    "low": 7.8899998665,
+    "close": 7.9499998093,
+    "volume": 22600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,07,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.9000000954,
+    "high": 8.2279996872,
+    "low": 7.7800002098,
+    "close": 7.7800002098,
+    "volume": 14400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,08,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.7899999619,
+    "high": 8.2100000381,
+    "low": 7.7800002098,
+    "close": 8.0100002289,
+    "volume": 9600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.0500001907,
+    "high": 8.0900001526,
+    "low": 7.7699999809,
+    "close": 7.8600001335,
+    "volume": 25900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.9000000954,
+    "high": 7.9050002098,
+    "low": 7.5700001717,
+    "close": 7.8800001144,
+    "volume": 22400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.8099999428,
+    "high": 7.9499998093,
+    "low": 7.6999998093,
+    "close": 7.7300000191,
+    "volume": 19400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,14,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.75,
+    "high": 7.9000000954,
+    "low": 7.5580000877,
+    "close": 7.9000000954,
+    "volume": 39600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,15,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.9299998283,
+    "high": 7.9499998093,
+    "low": 7.8000001907,
+    "close": 7.8899998665,
+    "volume": 16100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.8000001907,
+    "high": 7.8270001411,
+    "low": 7.6100001335,
+    "close": 7.6399998665,
+    "volume": 12900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,19,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.6999998093,
+    "high": 7.8299999237,
+    "low": 7.5900001526,
+    "close": 7.7049999237,
+    "volume": 14500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.8800001144,
+    "high": 7.8800001144,
+    "low": 7.5999999046,
+    "close": 7.8099999428,
+    "volume": 8500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,21,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.7899999619,
+    "high": 8.1000003815,
+    "low": 7.6999998093,
+    "close": 7.9699997902,
+    "volume": 83800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,22,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 7.9299998283,
+    "high": 8.2899999619,
+    "low": 7.9299998283,
+    "close": 8.1000003815,
+    "volume": 203300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,25,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.029999733,
+    "high": 8.5799999237,
+    "low": 8.0,
+    "close": 8.5100002289,
+    "volume": 198800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.6199998856,
+    "high": 9.0399999619,
+    "low": 8.3999996185,
+    "close": 9.0200004578,
+    "volume": 150800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,27,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.1499996185,
+    "high": 9.1999998093,
+    "low": 8.3199996948,
+    "close": 8.6599998474,
+    "volume": 142600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,28,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.7600002289,
+    "high": 9.5500001907,
+    "low": 8.5100002289,
+    "close": 9.3199996948,
+    "volume": 138300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,08,29,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.3999996185,
+    "high": 9.75,
+    "low": 8.8599996567,
+    "close": 9.25,
+    "volume": 275800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,02,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.1499996185,
+    "high": 9.2250003815,
+    "low": 8.7349996567,
+    "close": 8.7849998474,
+    "volume": 89600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.2700004578,
+    "high": 8.7460002899,
+    "low": 8.2700004578,
+    "close": 8.4849996567,
+    "volume": 46900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,04,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.5900001526,
+    "high": 9.1199998856,
+    "low": 8.5900001526,
+    "close": 9.1199998856,
+    "volume": 48200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.1099996567,
+    "high": 9.2600002289,
+    "low": 8.8299999237,
+    "close": 9.0450000763,
+    "volume": 31800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,08,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.1999998093,
+    "high": 9.5699996948,
+    "low": 9.1999998093,
+    "close": 9.3800001144,
+    "volume": 66600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,09,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.3100004196,
+    "high": 9.6800003052,
+    "low": 8.8199996948,
+    "close": 8.9799995422,
+    "volume": 30800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.9399995804,
+    "high": 9.1879997253,
+    "low": 8.8800001144,
+    "close": 9.1300001144,
+    "volume": 15000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.0399999619,
+    "high": 9.4499998093,
+    "low": 9.0249996185,
+    "close": 9.3299999237,
+    "volume": 30000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.3800001144,
+    "high": 9.8000001907,
+    "low": 9.3800001144,
+    "close": 9.5699996948,
+    "volume": 27200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,15,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.7100000381,
+    "high": 9.75,
+    "low": 9.2700004578,
+    "close": 9.4499998093,
+    "volume": 32100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,16,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.4799995422,
+    "high": 9.7449998856,
+    "low": 9.029999733,
+    "close": 9.4399995804,
+    "volume": 45700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.3400001526,
+    "high": 9.6300001144,
+    "low": 9.1520004272,
+    "close": 9.3400001526,
+    "volume": 19000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.3500003815,
+    "high": 9.3999996185,
+    "low": 9.0920000076,
+    "close": 9.2299995422,
+    "volume": 19500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,19,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.2299995422,
+    "high": 9.4670000076,
+    "low": 9.0,
+    "close": 9.2100000381,
+    "volume": 34400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,22,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.8199996948,
+    "high": 12.3999996185,
+    "low": 9.6899995804,
+    "close": 11.8000001907,
+    "volume": 444400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.0,
+    "high": 12.3999996185,
+    "low": 11.2700004578,
+    "close": 12.220000267,
+    "volume": 137600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.1199998856,
+    "high": 12.8500003815,
+    "low": 11.5,
+    "close": 12.8500003815,
+    "volume": 177900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,25,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.8599996567,
+    "high": 13.6000003815,
+    "low": 12.5500001907,
+    "close": 13.1199998856,
+    "volume": 235800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.6599998474,
+    "high": 13.6599998474,
+    "low": 12.8500003815,
+    "close": 13.220000267,
+    "volume": 81000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,29,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.5,
+    "high": 13.6300001144,
+    "low": 11.3500003815,
+    "close": 12.6400003433,
+    "volume": 196900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,09,30,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.6999998093,
+    "high": 13.0,
+    "low": 12.470000267,
+    "close": 12.8549995422,
+    "volume": 54900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,01,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.6099996567,
+    "high": 12.8500003815,
+    "low": 12.2899999619,
+    "close": 12.6099996567,
+    "volume": 182300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,02,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.5900001526,
+    "high": 13.3599996567,
+    "low": 12.1999998093,
+    "close": 13.1499996185,
+    "volume": 167900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.3500003815,
+    "high": 13.6000003815,
+    "low": 13.029999733,
+    "close": 13.4799995422,
+    "volume": 138000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.3999996185,
+    "high": 13.7299995422,
+    "low": 13.0850000381,
+    "close": 13.3599996567,
+    "volume": 181600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,07,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.4499998093,
+    "high": 14.4399995804,
+    "low": 13.4499998093,
+    "close": 14.3800001144,
+    "volume": 182400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,08,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 14.4099998474,
+    "high": 14.9289999008,
+    "low": 13.6140003204,
+    "close": 13.970000267,
+    "volume": 160300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,09,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.9899997711,
+    "high": 14.3170003891,
+    "low": 13.6199998856,
+    "close": 13.7100000381,
+    "volume": 133900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 14.0100002289,
+    "high": 14.0799999237,
+    "low": 13.25,
+    "close": 13.375,
+    "volume": 73600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.6999998093,
+    "high": 14.0869998932,
+    "low": 13.5240001678,
+    "close": 13.6499996185,
+    "volume": 70300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,14,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.970000267,
+    "high": 14.75,
+    "low": 13.7700004578,
+    "close": 14.5,
+    "volume": 228700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,15,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 14.8100004196,
+    "high": 14.8999996185,
+    "low": 14.0640001297,
+    "close": 14.3599996567,
+    "volume": 99400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,16,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 14.5,
+    "high": 14.529999733,
+    "low": 13.5100002289,
+    "close": 13.6400003433,
+    "volume": 142400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.3999996185,
+    "high": 13.5799999237,
+    "low": 12.7399997711,
+    "close": 12.779999733,
+    "volume": 118600.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.1300001144,
+    "high": 13.5450000763,
+    "low": 12.8330001831,
+    "close": 12.9799995422,
+    "volume": 138100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,21,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.7600002289,
+    "high": 12.7899999619,
+    "low": 12.279999733,
+    "close": 12.5349998474,
+    "volume": 81400.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,22,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.5699996948,
+    "high": 13.6999998093,
+    "low": 12.5399999619,
+    "close": 13.0,
+    "volume": 306300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 14.029999733,
+    "high": 14.3000001907,
+    "low": 13.4300003052,
+    "close": 13.5,
+    "volume": 152000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.4899997711,
+    "high": 13.6560001373,
+    "low": 13.1499996185,
+    "close": 13.3000001907,
+    "volume": 86600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,27,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.3000001907,
+    "high": 13.579000473,
+    "low": 12.0600004196,
+    "close": 12.2100000381,
+    "volume": 126700.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,10,28,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.1000003815,
+    "high": 12.1800003052,
+    "low": 11.6599998474,
+    "close": 11.6599998474,
+    "volume": 83100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,29,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.7700004578,
+    "high": 12.0850000381,
+    "low": 11.2100000381,
+    "close": 11.529999733,
+    "volume": 64900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,30,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.4899997711,
+    "high": 11.7049999237,
+    "low": 11.3000001907,
+    "close": 11.6499996185,
+    "volume": 58300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,10,31,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.6199998856,
+    "high": 11.7100000381,
+    "low": 11.470000267,
+    "close": 11.5500001907,
+    "volume": 32300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.470000267,
+    "high": 11.5249996185,
+    "low": 11.013999939,
+    "close": 11.1999998093,
+    "volume": 62800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,04,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.029999733,
+    "high": 11.3170003891,
+    "low": 10.720000267,
+    "close": 10.75,
+    "volume": 35300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.7600002289,
+    "high": 10.9399995804,
+    "low": 10.1400003433,
+    "close": 10.1700000763,
+    "volume": 98000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.2100000381,
+    "high": 10.4499998093,
+    "low": 10.0399999619,
+    "close": 10.1899995804,
+    "volume": 56600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,07,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.1999998093,
+    "high": 10.6120004654,
+    "low": 10.0699996948,
+    "close": 10.2550001144,
+    "volume": 53500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.5,
+    "high": 10.9899997711,
+    "low": 10.1400003433,
+    "close": 10.279999733,
+    "volume": 90900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.4399995804,
+    "high": 10.4399995804,
+    "low": 10.1520004272,
+    "close": 10.2100000381,
+    "volume": 30900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.3000001907,
+    "high": 10.6599998474,
+    "low": 10.25,
+    "close": 10.5900001526,
+    "volume": 85500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.1999998093,
+    "high": 11.1999998093,
+    "low": 9.720000267,
+    "close": 9.7899999619,
+    "volume": 72900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,14,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.6000003815,
+    "high": 9.6800003052,
+    "low": 9.1300001144,
+    "close": 9.1300001144,
+    "volume": 56200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.25,
+    "high": 9.779999733,
+    "low": 9.1649999619,
+    "close": 9.3100004196,
+    "volume": 29700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.1999998093,
+    "high": 9.5100002289,
+    "low": 9.125,
+    "close": 9.3400001526,
+    "volume": 38900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,19,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.4799995422,
+    "high": 9.779999733,
+    "low": 9.3400001526,
+    "close": 9.3500003815,
+    "volume": 56500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.5200004578,
+    "high": 10.0220003128,
+    "low": 9.0100002289,
+    "close": 9.0399999619,
+    "volume": 37500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,21,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.029999733,
+    "high": 9.3999996185,
+    "low": 8.8199996948,
+    "close": 9.0,
+    "volume": 46500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.0,
+    "high": 9.4099998474,
+    "low": 9.0,
+    "close": 9.3100004196,
+    "volume": 19100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,25,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.2600002289,
+    "high": 9.5100002289,
+    "low": 9.1899995804,
+    "close": 9.3900003433,
+    "volume": 32000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.4600000381,
+    "high": 9.7100000381,
+    "low": 9.4600000381,
+    "close": 9.6899995804,
+    "volume": 27700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,11,28,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.75,
+    "high": 10.0749998093,
+    "low": 9.6400003433,
+    "close": 9.8699998856,
+    "volume": 34600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,01,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.8800001144,
+    "high": 10.0900001526,
+    "low": 9.6300001144,
+    "close": 9.6800003052,
+    "volume": 30400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,02,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.6300001144,
+    "high": 9.8500003815,
+    "low": 9.5,
+    "close": 9.779999733,
+    "volume": 32400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.9600000381,
+    "high": 10.4499998093,
+    "low": 9.8500003815,
+    "close": 10.2899999619,
+    "volume": 34800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,04,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.2899999619,
+    "high": 10.6199998856,
+    "low": 10.0520000458,
+    "close": 10.3999996185,
+    "volume": 32500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.5,
+    "high": 10.6199998856,
+    "low": 10.0550003052,
+    "close": 10.1499996185,
+    "volume": 48900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,08,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.2299995422,
+    "high": 10.2299995422,
+    "low": 9.8249998093,
+    "close": 9.8800001144,
+    "volume": 34700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,09,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.8400001526,
+    "high": 10.0850000381,
+    "low": 9.6000003815,
+    "close": 9.9300003052,
+    "volume": 41400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.9600000381,
+    "high": 10.0799999237,
+    "low": 9.6999998093,
+    "close": 9.9650001526,
+    "volume": 35400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.0,
+    "high": 10.3999996185,
+    "low": 9.9099998474,
+    "close": 10.3100004196,
+    "volume": 27300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.9799995422,
+    "high": 10.3400001526,
+    "low": 9.6199998856,
+    "close": 9.8950004578,
+    "volume": 46700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,15,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.8199996948,
+    "high": 9.8900003433,
+    "low": 9.3999996185,
+    "close": 9.3999996185,
+    "volume": 32900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,16,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.3599996567,
+    "high": 10.1300001144,
+    "low": 9.3599996567,
+    "close": 10.0399999619,
+    "volume": 29700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.1499996185,
+    "high": 10.5,
+    "low": 9.6499996185,
+    "close": 9.720000267,
+    "volume": 87400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.7399997711,
+    "high": 10.2399997711,
+    "low": 9.5,
+    "close": 9.7600002289,
+    "volume": 29100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,19,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.7600002289,
+    "high": 9.9899997711,
+    "low": 9.5399999619,
+    "close": 9.7600002289,
+    "volume": 83700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,22,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.7399997711,
+    "high": 10.0559997559,
+    "low": 9.5,
+    "close": 9.6199998856,
+    "volume": 54300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.6899995804,
+    "high": 9.9899997711,
+    "low": 9.5200004578,
+    "close": 9.5900001526,
+    "volume": 47800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.6999998093,
+    "high": 9.9300003052,
+    "low": 9.5260000229,
+    "close": 9.6300001144,
+    "volume": 22100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.7100000381,
+    "high": 10.029999733,
+    "low": 9.5,
+    "close": 10.0200004578,
+    "volume": 52500.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2025,12,29,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.7399997711,
+    "high": 9.9549999237,
+    "low": 9.0069999695,
+    "close": 9.029999733,
+    "volume": 75900.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2025,12,30,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.1599998474,
+    "high": 9.5249996185,
+    "low": 8.970000267,
+    "close": 9.0,
+    "volume": 58500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2025,12,31,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.9600000381,
+    "high": 9.2460002899,
+    "low": 8.6400003433,
+    "close": 8.8199996948,
+    "volume": 32000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,02,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.8199996948,
+    "high": 8.9499998093,
+    "low": 8.6499996185,
+    "close": 8.779999733,
+    "volume": 32500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 8.8000001907,
+    "high": 9.4399995804,
+    "low": 8.8000001907,
+    "close": 9.2600002289,
+    "volume": 35900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.2899999619,
+    "high": 9.654999733,
+    "low": 9.1700000763,
+    "close": 9.5699996948,
+    "volume": 47100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,07,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.4399995804,
+    "high": 9.4600000381,
+    "low": 9.0100002289,
+    "close": 9.345000267,
+    "volume": 23600.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,08,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.3500003815,
+    "high": 9.4499998093,
+    "low": 9.1049995422,
+    "close": 9.3000001907,
+    "volume": 15900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,09,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.2700004578,
+    "high": 9.4549999237,
+    "low": 9.1199998856,
+    "close": 9.3000001907,
+    "volume": 36700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.5799999237,
+    "high": 9.8900003433,
+    "low": 9.3159999847,
+    "close": 9.7299995422,
+    "volume": 59400.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2026,01,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 9.8699998856,
+    "high": 11.0,
+    "low": 9.6330003738,
+    "close": 10.6850004196,
+    "volume": 161500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,14,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.8500003815,
+    "high": 11.5799999237,
+    "low": 10.5900001526,
+    "close": 11.3500003815,
+    "volume": 79000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,15,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.3800001144,
+    "high": 11.9799995422,
+    "low": 11.1999998093,
+    "close": 11.220000267,
+    "volume": 93300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,16,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.220000267,
+    "high": 11.6099996567,
+    "low": 10.7899999619,
+    "close": 11.4799995422,
+    "volume": 78000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.6199998856,
+    "high": 13.1000003815,
+    "low": 11.6000003815,
+    "close": 12.970000267,
+    "volume": 141100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,21,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 14.0500001907,
+    "high": 14.779999733,
+    "low": 13.7399997711,
+    "close": 14.1999998093,
+    "volume": 437100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,22,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 14.25,
+    "high": 14.25,
+    "low": 13.25,
+    "close": 13.9600000381,
+    "volume": 244500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 14.0100002289,
+    "high": 16.0,
+    "low": 13.1300001144,
+    "close": 15.8299999237,
+    "volume": 238200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 17.2600002289,
+    "high": 17.9799995422,
+    "low": 15.5399999619,
+    "close": 15.6300001144,
+    "volume": 380500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,27,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 15.5399999619,
+    "high": 15.7250003815,
+    "low": 14.029999733,
+    "close": 14.75,
+    "volume": 199700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,28,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 15.1999998093,
+    "high": 15.5,
+    "low": 14.7700004578,
+    "close": 14.8299999237,
+    "volume": 90300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,29,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 15.2299995422,
+    "high": 15.2299995422,
+    "low": 14.279999733,
+    "close": 14.7899999619,
+    "volume": 126100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,01,30,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 14.0699996948,
+    "high": 14.5900001526,
+    "low": 13.0810003281,
+    "close": 13.4350004196,
+    "volume": 202700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,02,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.3100004196,
+    "high": 13.6099996567,
+    "low": 12.8100004196,
+    "close": 12.8299999237,
+    "volume": 90000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.5100002289,
+    "high": 14.5,
+    "low": 12.9499998093,
+    "close": 13.5200004578,
+    "volume": 101700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,04,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.7899999619,
+    "high": 13.8999996185,
+    "low": 12.3520002365,
+    "close": 12.5699996948,
+    "volume": 117800.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.1999998093,
+    "high": 12.8420000076,
+    "low": 11.3000001907,
+    "close": 11.4899997711,
+    "volume": 157900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.5500001907,
+    "high": 12.5699996948,
+    "low": 11.3100004196,
+    "close": 12.529999733,
+    "volume": 125000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,09,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.6300001144,
+    "high": 12.8999996185,
+    "low": 11.8500003815,
+    "close": 12.6599998474,
+    "volume": 68100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.6599998474,
+    "high": 12.6599998474,
+    "low": 11.4099998474,
+    "close": 11.4499998093,
+    "volume": 62700.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,02,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.8199996948,
+    "high": 11.9899997711,
+    "low": 11.1700000763,
+    "close": 11.9600000381,
+    "volume": 55500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.6999998093,
+    "high": 11.970000267,
+    "low": 11.1099996567,
+    "close": 11.2150001526,
+    "volume": 70800.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.3500003815,
+    "high": 12.0,
+    "low": 11.2449998856,
+    "close": 11.6700000763,
+    "volume": 52900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.529999733,
+    "high": 11.529999733,
+    "low": 10.8299999237,
+    "close": 10.9350004196,
+    "volume": 52500.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.8999996185,
+    "high": 11.1999998093,
+    "low": 10.7100000381,
+    "close": 10.8599996567,
+    "volume": 36200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,19,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.6599998474,
+    "high": 11.0,
+    "low": 10.3000001907,
+    "close": 10.8950004578,
+    "volume": 36700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.9399995804,
+    "high": 11.2399997711,
+    "low": 10.6999998093,
+    "close": 10.970000267,
+    "volume": 41000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.0200004578,
+    "high": 11.5900001526,
+    "low": 11.0200004578,
+    "close": 11.220000267,
+    "volume": 55700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,24,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.1300001144,
+    "high": 11.6599998474,
+    "low": 10.9799995422,
+    "close": 11.3199996948,
+    "volume": 50400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,25,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.5699996948,
+    "high": 12.0,
+    "low": 11.3299999237,
+    "close": 11.75,
+    "volume": 43300.0,
+    "wedge_status": "pop"
+  },
+  {
+    "trade_date": "2026,02,26,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.7299995422,
+    "high": 11.9499998093,
+    "low": 11.25,
+    "close": 11.75,
+    "volume": 39200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,02,27,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.6999998093,
+    "high": 12.0600004196,
+    "low": 11.404999733,
+    "close": 12.0450000763,
+    "volume": 62300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,02,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.3999996185,
+    "high": 15.9429998398,
+    "low": 13.0900001526,
+    "close": 14.5399999619,
+    "volume": 819400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,03,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 14.0500001907,
+    "high": 14.5249996185,
+    "low": 13.1499996185,
+    "close": 13.5050001144,
+    "volume": 180200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,04,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.7600002289,
+    "high": 14.0600004196,
+    "low": 13.3149995804,
+    "close": 13.7100000381,
+    "volume": 94700.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,05,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.6999998093,
+    "high": 13.6999998093,
+    "low": 12.75,
+    "close": 13.1499996185,
+    "volume": 105900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,06,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.7299995422,
+    "high": 13.5830001831,
+    "low": 12.6300001144,
+    "close": 13.0399999619,
+    "volume": 52900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,09,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.6999998093,
+    "high": 13.6199998856,
+    "low": 12.6499996185,
+    "close": 13.3800001144,
+    "volume": 68000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,10,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.5200004578,
+    "high": 14.8900003433,
+    "low": 13.5200004578,
+    "close": 13.8599996567,
+    "volume": 117400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,11,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.7700004578,
+    "high": 13.8000001907,
+    "low": 13.0699996948,
+    "close": 13.5699996948,
+    "volume": 82100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,12,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 13.4499998093,
+    "high": 13.4499998093,
+    "low": 12.7399997711,
+    "close": 12.7399997711,
+    "volume": 48300.0,
+    "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,03,13,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.7399997711,
+    "high": 13.0,
+    "low": 11.3299999237,
+    "close": 11.5799999237,
+    "volume": 185100.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,16,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.8599996567,
+    "high": 12.7899999619,
+    "low": 11.8500003815,
+    "close": 12.4499998093,
+    "volume": 83200.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,17,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 12.4899997711,
+    "high": 12.4899997711,
+    "low": 11.8999996185,
+    "close": 12.0699996948,
+    "volume": 50900.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,18,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 11.7399997711,
+    "high": 11.7899999619,
+    "low": 11.0600004196,
+    "close": 11.1499996185,
+    "volume": 63000.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,19,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.6199998856,
+    "high": 11.1499996185,
+    "low": 10.1999998093,
+    "close": 10.9399995804,
+    "volume": 123400.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,20,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.9499998093,
+    "high": 11.4779996872,
+    "low": 10.1300001144,
+    "close": 10.6199998856,
+    "volume": 189300.0,
+    "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,23,00,00,00,000000",
+    "ticker": "USGO",
+    "open": 10.6999998093,
+    "high": 11.6099996567,
+    "low": 10.6000003815,
+    "close": 11.1999998093,
+    "volume": 119852.0,
+    "wedge_status": "none"
+  }
+]

@@ -7488,5 +7488,15 @@
     "close": 401.6099853516,
     "volume": 747543.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,03,23,00,00,00,000000",
+    "ticker": "STRL",
+    "open": 413.0,
+    "high": 435.0,
+    "low": 412.9400024414,
+    "close": 422.549987793,
+    "volume": 369975.0,
+    "wedge_status": "none"
   }
 ]

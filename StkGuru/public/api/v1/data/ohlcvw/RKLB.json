@@ -7488,5 +7488,15 @@
     "close": 67.2300033569,
     "volume": 32657810.0,
     "wedge_status": "drop"
+  },
+  {
+    "trade_date": "2026,03,23,00,00,00,000000",
+    "ticker": "RKLB",
+    "open": 68.0220031738,
+    "high": 69.4499969482,
+    "low": 66.0599975586,
+    "close": 68.0,
+    "volume": 22944289.0,
+    "wedge_status": "none"
   }
 ]

@@ -7488,5 +7488,15 @@
     "close": 24.4699993134,
     "volume": 48312.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,23,00,00,00,000000",
+    "ticker": "MYFW",
+    "open": 25.0,
+    "high": 25.0,
+    "low": 24.2999992371,
+    "close": 24.7199993134,
+    "volume": 34934.0,
+    "wedge_status": "pop"
   }
 ]
