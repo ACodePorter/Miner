@@ -7508,5 +7508,15 @@
     "close": 95.0,
     "volume": 1962615.0,
     "wedge_status": "none"
+  },
+  {
+    "trade_date": "2026,03,25,00,00,00,000000",
+    "ticker": "SRE",
+    "open": 95.6800003052,
+    "high": 95.9499969482,
+    "low": 94.4499969482,
+    "close": 95.3199996948,
+    "volume": 3128409.0,
+    "wedge_status": "none"
   }
 ]
